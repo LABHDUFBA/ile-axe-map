@@ -40,8 +40,8 @@
     .footer { position:fixed; z-index:2; bottom:18px; left:20px; display:flex; flex-wrap:wrap; gap:5px; max-width:calc(100vw - 40px); color:rgba(240,230,210,.55); font-size:11px; text-shadow:0 1px 5px #1a0f0a; }
     .footer a { color:rgba(240,230,210,.78); text-decoration:none; transition:color .2s; }
     .footer a:hover { color:var(--color-gold); }
-    .marker { width:14px; height:14px; border:2px solid rgba(255,248,237,.92); border-radius:50%; background:var(--marker-color); box-shadow:0 2px 8px rgba(0,0,0,.5),0 0 0 3px color-mix(in srgb,var(--marker-color) 15%,transparent); cursor:pointer; transition:transform .2s,box-shadow .2s; }
-    .marker:hover, .marker.is-active { box-shadow:0 3px 10px rgba(0,0,0,.6),0 0 0 6px color-mix(in srgb,var(--marker-color) 25%,transparent); transform:scale(1.3); }
+    .marker { width:14px; height:14px; border:2px solid rgba(255,248,237,.92); border-radius:50%; background:var(--marker-color); box-shadow:0 2px 8px rgba(0,0,0,.5),0 0 0 3px color-mix(in srgb,var(--marker-color) 15%,transparent); cursor:pointer; }
+    .marker:hover, .marker.is-active { box-shadow:0 3px 10px rgba(0,0,0,.6),0 0 0 6px color-mix(in srgb,var(--marker-color) 25%,transparent); }
     .maplibregl-marker { z-index:1; }
     .maplibregl-popup { pointer-events:none; }
     .maplibregl-popup-content { min-width:180px; padding:10px 12px; border:1px solid rgba(232,168,56,.3); border-radius:10px; background:rgba(26,15,10,.95); box-shadow:0 12px 28px rgba(0,0,0,.35); color:var(--color-parchment); font-family:"Hanken Grotesk",sans-serif; }
