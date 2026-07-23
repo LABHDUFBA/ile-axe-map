@@ -40,8 +40,8 @@
     .footer { position:fixed; z-index:2; bottom:18px; left:20px; display:flex; flex-wrap:wrap; gap:5px; max-width:calc(100vw - 40px); color:rgba(240,230,210,.55); font-size:11px; text-shadow:0 1px 5px #1a0f0a; }
     .footer a { color:rgba(240,230,210,.78); text-decoration:none; transition:color .2s; }
     .footer a:hover { color:var(--color-gold); }
-    .marker { width:15px; height:15px; border:2px solid rgba(255,248,237,.92); border-radius:50% 50% 50% 0; background:var(--marker-color); box-shadow:0 3px 10px rgba(0,0,0,.48),0 0 0 4px color-mix(in srgb,var(--marker-color) 18%,transparent); cursor:pointer; transform:rotate(-45deg); transition:transform .2s,box-shadow .2s; }
-    .marker:hover, .marker.is-active { box-shadow:0 4px 13px rgba(0,0,0,.58),0 0 0 7px color-mix(in srgb,var(--marker-color) 24%,transparent); transform:rotate(-45deg) scale(1.25); }
+    .marker { width:14px; height:14px; border:2px solid rgba(255,248,237,.92); border-radius:50%; background:var(--marker-color); box-shadow:0 2px 8px rgba(0,0,0,.5),0 0 0 3px color-mix(in srgb,var(--marker-color) 15%,transparent); cursor:pointer; transition:transform .2s,box-shadow .2s; }
+    .marker:hover, .marker.is-active { box-shadow:0 3px 10px rgba(0,0,0,.6),0 0 0 6px color-mix(in srgb,var(--marker-color) 25%,transparent); transform:scale(1.3); }
     .maplibregl-marker { z-index:1; }
     .maplibregl-popup { pointer-events:none; }
     .maplibregl-popup-content { min-width:180px; padding:10px 12px; border:1px solid rgba(232,168,56,.3); border-radius:10px; background:rgba(26,15,10,.95); box-shadow:0 12px 28px rgba(0,0,0,.35); color:var(--color-parchment); font-family:"Hanken Grotesk",sans-serif; }
@@ -128,13 +128,13 @@
     function addMarkers() {
       features.forEach(feature => {
         const [lng,lat] = feature.geometry.coordinates; const element = document.createElement('button'); element.type='button'; element.className='marker'; element.style.setProperty('--marker-color', colors[feature.properties._nacao]); element.setAttribute('aria-label', feature.properties.name || 'Terreiro');
-        const marker = new maplibregl.Marker({ element, anchor:'bottom' }).setLngLat([lng,lat]).addTo(map);
+        const marker = new maplibregl.Marker({ element, anchor:'center' }).setLngLat([lng,lat]).addTo(map);
         element.addEventListener('mouseenter', () => showTooltip(feature)); element.addEventListener('mouseleave', () => { if (popup) popup.remove(); }); element.addEventListener('focus', () => showTooltip(feature)); element.addEventListener('blur', () => { if (popup) popup.remove(); }); element.addEventListener('click', () => showDetail(feature, element));
         markers.push({ feature, element, marker });
       });
     }
     function updateMarkers() { markers.forEach(item => { const visible = active.has(item.feature.properties._nacao); item.element.parentElement.style.display = visible ? '' : 'none'; }); $('stats').textContent = `${markers.filter(item => active.has(item.feature.properties._nacao)).length} terreiros mapeados`; }
-    function showTooltip(feature) { if (popup) popup.remove(); const p = feature.properties; popup = new maplibregl.Popup({ closeButton:false, closeOnClick:false, offset:14 }).setLngLat(feature.geometry.coordinates).setHTML(`<div class="tooltip-name">${escapeHtml(p.name || 'Terreiro sem nome')}</div><div class="tooltip-meta">${escapeHtml(p._nacao)}</div>`).addTo(map); }
+    function showTooltip(feature) { if (popup) popup.remove(); const p = feature.properties; popup = new maplibregl.Popup({ closeButton:false, closeOnClick:false, offset:18 }).setLngLat(feature.geometry.coordinates).setHTML(`<div class="tooltip-name">${escapeHtml(p.name || 'Terreiro sem nome')}</div><div class="tooltip-meta">${escapeHtml(p._nacao)}</div>`).addTo(map); }
     function showDetail(feature, element) {
       if (popup) popup.remove(); if (selectedMarker) selectedMarker.classList.remove('is-active'); selectedMarker = element; element.classList.add('is-active');
       const p = feature.properties, [lng,lat] = feature.geometry.coordinates; $('detail-nacao').textContent = p._nacao; $('detail-title').textContent = p.name || 'Terreiro sem nome';
