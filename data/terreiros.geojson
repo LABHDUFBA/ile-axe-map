@@ -94,40 +94,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -38.9514303,
-          -13.8932267
-        ]
-      },
-      "properties": {
-        "amenity": "restaurant",
-        "check_date": "2023-11-03",
-        "cuisine": "regional",
-        "name": "Terreiro",
-        "osm_id": 11308693001,
-        "osm_type": "node"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -40.0887681,
-          -12.1975898
-        ]
-      },
-      "properties": {
-        "name": "Lagoa do Terreiro",
-        "place": "hamlet",
-        "osm_id": 12294377201,
-        "osm_type": "node"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -38.5303934,
           -12.7800497
         ]
@@ -726,22 +692,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -39.0442859,
-          -12.5991611
-        ]
-      },
-      "properties": {
-        "name": "Pousada Oxumaré",
-        "tourism": "hotel",
-        "osm_id": 2731672694,
-        "osm_type": "node"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -38.5046977,
           -12.9843705
         ]
@@ -790,41 +740,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -38.0059061,
-          -12.5770435
-        ]
-      },
-      "properties": {
-        "addr:street": "Beco da Maria Helena",
-        "name": "Pousada Oxumaré",
-        "survey:date": "2023-04-23",
-        "tourism": "hotel",
-        "osm_id": 4108821605,
-        "osm_type": "node"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -38.4298433,
-          -12.9337288
-        ]
-      },
-      "properties": {
-        "addr:street": "Rua Hugo Meijon",
-        "amenity": "bar",
-        "name": "Barraca do Geraldo de Oxossi",
-        "osm_id": 4969186401,
-        "osm_type": "node"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -38.3562577,
           -12.9358352
         ]
@@ -833,63 +748,6 @@
         "amenity": "place_of_worship",
         "name": "Axé Abassá de Ogum",
         "osm_id": 7039440647,
-        "osm_type": "node"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -38.0037275,
-          -12.5773158
-        ]
-      },
-      "properties": {
-        "name": "Pousada Ogum Marinho",
-        "survey:date": "2023-04-22",
-        "tourism": "guest_house",
-        "osm_id": 10832139806,
-        "osm_type": "node"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -38.3602647,
-          -12.9459657
-        ]
-      },
-      "properties": {
-        "access": "yes",
-        "addr:city": "Salvador",
-        "addr:street": "Ladeira do Abaeté",
-        "addr:suburb": "Itapuã",
-        "artist_name": "Márcia Magno",
-        "denomination": "ketu",
-        "historic": "monument",
-        "material": "bronze",
-        "name": "Monumento Mãe Gilda de Ogum",
-        "religion": "candomblé",
-        "wheelchair": "yes",
-        "osm_id": 11024062590,
-        "osm_type": "node"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -38.4701503,
-          -12.8953267
-        ]
-      },
-      "properties": {
-        "name": "Cachoeira de Oxumarê",
-        "osm_id": 11428692222,
         "osm_type": "node"
       }
     },
