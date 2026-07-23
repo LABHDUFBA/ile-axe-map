@@ -1,265 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Um atlas aberto dos terreiros de candomblé da Bahia.">
   <title>Ilê Axé Map — Terreiros de Candomblé da Bahia</title>
-  <meta name="description" content="Mapa interativo dos terreiros de candomblé (ilê axé) da Bahia. Dados abertos do OpenStreetMap.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Georgia', 'Times New Roman', serif; background: #0a0a0a; color: #e8e0d0; overflow: hidden; }
-    #map { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-    /* Sidebar */
-    #sidebar {
-      position: absolute; top: 0; left: 0; width: 380px; height: 100vh;
-      background: rgba(15, 12, 8, 0.95); backdrop-filter: blur(10px);
-      border-right: 1px solid #3a2f20; z-index: 10; overflow-y: auto;
-      transform: translateX(-380px); transition: transform 0.3s ease;
-    }
-    #sidebar.open { transform: translateX(0); }
-    #sidebar-content { padding: 24px; }
-    #sidebar-content h2 { font-size: 1.4em; color: #d4a843; margin-bottom: 8px; }
-    #sidebar-content .nacao { font-size: 0.85em; color: #8b7355; margin-bottom: 12px; }
-    #sidebar-content .info-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #2a2520; font-size: 0.9em; }
-    #sidebar-content .info-row .label { color: #8b7355; }
-    #sidebar-content .info-row .value { color: #e8e0d0; text-align: right; max-width: 220px; }
-    #sidebar-content .close-btn { position: absolute; top: 16px; right: 16px; cursor: pointer; color: #8b7355; font-size: 1.5em; }
-
-    /* Header panel */
-    #header {
-      position: absolute; top: 20px; left: 20px; z-index: 5;
-      max-width: 420px; pointer-events: none;
-    }
-    #header .title { font-size: 2.2em; font-weight: bold; color: #d4a843; text-shadow: 2px 2px 8px rgba(0,0,0,0.8); letter-spacing: 1px; }
-    #header .subtitle { font-size: 1.1em; color: #c8b890; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); margin-top: 4px; }
-    #header .stats { font-size: 0.85em; color: #8b7355; margin-top: 8px; }
-
-    /* Filter panel */
-    #filters {
-      position: absolute; top: 20px; right: 20px; z-index: 5;
-      background: rgba(15, 12, 8, 0.9); backdrop-filter: blur(10px);
-      border: 1px solid #3a2f20; border-radius: 8px; padding: 16px;
-      pointer-events: auto; max-width: 220px;
-    }
-    #filters h3 { font-size: 0.9em; color: #d4a843; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
-    .filter-btn {
-      display: inline-block; padding: 4px 12px; margin: 3px;
-      background: transparent; border: 1px solid #3a2f20; border-radius: 16px;
-      color: #8b7355; font-size: 0.8em; cursor: pointer; transition: all 0.2s;
-      font-family: inherit;
-    }
-    .filter-btn.active { background: #3a2f20; color: #d4a843; border-color: #d4a843; }
-    .filter-btn:hover { color: #d4a843; border-color: #d4a843; }
-
-    /* Footer */
-    #footer {
-      position: absolute; bottom: 12px; left: 20px; z-index: 5;
-      font-size: 0.75em; color: #5a4a35;
-    }
-    #footer a { color: #8b7355; text-decoration: none; }
-    #footer a:hover { color: #d4a843; }
-
-    /* Marker popup */
-    .maplibregl-popup-content {
-      background: rgba(15, 12, 8, 0.95) !important; color: #e8e0d0 !important;
-      border-radius: 8px; border: 1px solid #3a2f20; padding: 12px 16px;
-      font-family: 'Georgia', serif;
-    }
-    .maplibregl-popup-anchor-top .maplibregl-popup-tip { border-bottom-color: rgba(15,12,8,0.95) !important; }
-    .maplibregl-popup-anchor-bottom .maplibregl-popup-tip { border-top-color: rgba(15,12,8,0.95) !important; }
-    .maplibregl-popup h3 { color: #d4a843; font-size: 1em; margin-bottom: 4px; }
-    .maplibregl-popup .popup-info { font-size: 0.8em; color: #8b7355; }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-      #header { max-width: 90%; }
-      #header .title { font-size: 1.5em; }
-      #filters { max-width: 180px; top: auto; bottom: 50px; right: 10px; }
-      #sidebar { width: 100%; }
+    :root { --color-night:#1a0f0a; --color-parchment:#f0e6d2; --color-cream:#fff8ed; --color-brass:#c4700f; --color-gold:#e8a838; --color-accent:#8b2c1c; --glass:rgba(26,15,10,.88); --line:rgba(240,230,210,.14); }
+    * { box-sizing:border-box; }
+    html, body, #map { width:100%; height:100%; margin:0; }
+    body { overflow:hidden; background:var(--color-night); color:var(--color-parchment); font-family:"Hanken Grotesk",sans-serif; }
+    button, a { -webkit-tap-highlight-color:transparent; }
+    #map { position:fixed; inset:0; cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M14 2c4 5.3 7 9 7 13a7 7 0 1 1-14 0c0-4 3-7.7 7-13Z' fill='%23e8a838' stroke='%231a0f0a' stroke-width='2'/%3E%3Ccircle cx='14' cy='15' r='2.2' fill='%231a0f0a'/%3E%3C/svg%3E") 14 26, crosshair; }
+    .panel { background:var(--glass); border:1px solid var(--line); box-shadow:0 18px 55px rgba(0,0,0,.32); backdrop-filter:blur(20px) saturate(125%); -webkit-backdrop-filter:blur(20px) saturate(125%); }
+    .atlas { position:fixed; z-index:2; top:20px; left:20px; width:min(372px,calc(100vw - 40px)); border-radius:18px; padding:23px 22px 20px; }
+    .eyebrow { display:flex; align-items:center; gap:8px; margin-bottom:8px; color:var(--color-gold); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+    .eyebrow::before { width:22px; height:1px; background:currentColor; content:""; }
+    h1 { margin:0; color:var(--color-gold); font-family:Fraunces,Georgia,serif; font-size:clamp(28px,4vw,38px); font-weight:600; letter-spacing:.055em; line-height:.98; }
+    .subtitle { margin:10px 0 0; color:rgba(240,230,210,.74); font-size:14px; letter-spacing:.015em; }
+    .stat { display:inline-flex; align-items:center; gap:7px; margin-top:17px; color:rgba(240,230,210,.58); font-size:12px; }
+    .stat::before { width:6px; height:6px; border-radius:50%; background:var(--color-gold); box-shadow:0 0 0 4px rgba(232,168,56,.12); content:""; }
+    .filter-title { display:flex; justify-content:space-between; align-items:center; margin:22px 0 10px; padding-top:17px; border-top:1px solid var(--line); color:rgba(240,230,210,.58); font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    .filter-reset { appearance:none; padding:0; border:0; background:none; color:var(--color-gold); cursor:pointer; font:inherit; font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
+    .filter-reset:hover { color:var(--color-cream); }
+    .filters { display:flex; flex-wrap:wrap; gap:7px; }
+    .filter { appearance:none; display:inline-flex; align-items:center; gap:7px; min-height:31px; padding:6px 10px; border:1px solid rgba(240,230,210,.2); border-radius:999px; background:rgba(255,248,237,.04); color:rgba(240,230,210,.72); cursor:pointer; font:600 11px/1 "Hanken Grotesk",sans-serif; transition:background .2s,border-color .2s,color .2s,transform .2s; }
+    .filter:hover { border-color:rgba(232,168,56,.65); color:var(--color-cream); transform:translateY(-1px); }
+    .filter[aria-pressed="true"] { border-color:var(--filter-color); background:color-mix(in srgb,var(--filter-color) 20%,transparent); color:var(--color-cream); }
+    .filter-dot { width:7px; height:7px; border-radius:50%; background:var(--filter-color); box-shadow:0 0 0 2px rgba(255,255,255,.08); }
+    .top-actions { position:fixed; z-index:2; top:20px; right:20px; display:flex; gap:8px; }
+    .action { display:grid; width:42px; height:42px; place-items:center; border:1px solid var(--line); border-radius:12px; background:var(--glass); box-shadow:0 10px 30px rgba(0,0,0,.22); color:var(--color-parchment); cursor:pointer; font:700 11px/1 "Hanken Grotesk",sans-serif; letter-spacing:.04em; backdrop-filter:blur(16px); transition:border-color .2s,color .2s,transform .2s; }
+    .action:hover { border-color:rgba(232,168,56,.7); color:var(--color-gold); transform:translateY(-1px); }
+    .action[aria-pressed="true"] { color:var(--color-gold); }
+    .footer { position:fixed; z-index:2; bottom:18px; left:20px; display:flex; flex-wrap:wrap; gap:5px; max-width:calc(100vw - 40px); color:rgba(240,230,210,.55); font-size:11px; text-shadow:0 1px 5px #1a0f0a; }
+    .footer a { color:rgba(240,230,210,.78); text-decoration:none; transition:color .2s; }
+    .footer a:hover { color:var(--color-gold); }
+    .marker { width:15px; height:15px; border:2px solid rgba(255,248,237,.92); border-radius:50% 50% 50% 0; background:var(--marker-color); box-shadow:0 3px 10px rgba(0,0,0,.48),0 0 0 4px color-mix(in srgb,var(--marker-color) 18%,transparent); cursor:pointer; transform:rotate(-45deg); transition:transform .2s,box-shadow .2s; }
+    .marker:hover, .marker.is-active { box-shadow:0 4px 13px rgba(0,0,0,.58),0 0 0 7px color-mix(in srgb,var(--marker-color) 24%,transparent); transform:rotate(-45deg) scale(1.25); }
+    .maplibregl-marker { z-index:1; }
+    .maplibregl-popup { pointer-events:none; }
+    .maplibregl-popup-content { min-width:180px; padding:10px 12px; border:1px solid rgba(232,168,56,.3); border-radius:10px; background:rgba(26,15,10,.95); box-shadow:0 12px 28px rgba(0,0,0,.35); color:var(--color-parchment); font-family:"Hanken Grotesk",sans-serif; }
+    .maplibregl-popup-tip { border-top-color:rgba(26,15,10,.95)!important; border-bottom-color:rgba(26,15,10,.95)!important; }
+    .tooltip-name { color:var(--color-cream); font-size:12px; font-weight:700; line-height:1.25; }
+    .tooltip-meta { margin-top:3px; color:var(--color-gold); font-size:10px; letter-spacing:.08em; text-transform:uppercase; }
+    .detail { position:fixed; z-index:4; top:20px; bottom:20px; left:20px; display:flex; width:min(392px,calc(100vw - 40px)); flex-direction:column; overflow:hidden; border-radius:18px; transform:translateX(calc(-100% - 28px)); transition:transform .42s cubic-bezier(.22,1,.36,1); }
+    .detail.open { transform:translateX(0); }
+    .detail-head { flex:none; padding:25px 54px 20px 22px; border-bottom:1px solid var(--line); }
+    .detail-nacao { color:var(--color-gold); font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    .detail h2 { margin:8px 0 0; color:var(--color-cream); font-family:Fraunces,Georgia,serif; font-size:27px; font-weight:600; line-height:1.14; }
+    .close { position:absolute; top:15px; right:15px; display:grid; width:32px; height:32px; place-items:center; border:1px solid var(--line); border-radius:9px; background:rgba(255,248,237,.05); color:var(--color-parchment); cursor:pointer; font-size:20px; line-height:1; transition:color .2s,border-color .2s; }
+    .close:hover { border-color:var(--color-gold); color:var(--color-gold); }
+    .detail-body { overflow:auto; padding:10px 22px 22px; scrollbar-color:rgba(232,168,56,.45) transparent; }
+    .info { display:grid; grid-template-columns:108px 1fr; gap:12px; padding:12px 0; border-bottom:1px solid rgba(240,230,210,.1); font-size:13px; line-height:1.35; }
+    .info-label { color:rgba(240,230,210,.48); font-size:10px; font-weight:700; letter-spacing:.11em; text-transform:uppercase; }
+    .info-value { color:var(--color-parchment); overflow-wrap:anywhere; text-align:right; }
+    .detail-link { display:flex; align-items:center; justify-content:space-between; margin-top:19px; padding:13px 14px; border:1px solid rgba(232,168,56,.55); border-radius:10px; color:var(--color-gold); text-decoration:none; font-size:12px; font-weight:700; transition:background .2s,color .2s; }
+    .detail-link:hover { background:var(--color-gold); color:var(--color-night); }
+    .maplibregl-ctrl-group { overflow:hidden; border:1px solid var(--line)!important; border-radius:11px!important; background:var(--glass)!important; box-shadow:0 8px 24px rgba(0,0,0,.25)!important; backdrop-filter:blur(12px); }
+    .maplibregl-ctrl-group button { width:34px!important; height:34px!important; background-color:transparent!important; }
+    .maplibregl-ctrl-group button span { filter:invert(87%) sepia(17%) saturate(525%) hue-rotate(346deg) brightness(98%); }
+    .maplibregl-ctrl-attrib { max-width:calc(100vw - 32px); background:rgba(26,15,10,.74)!important; color:rgba(240,230,210,.65)!important; font:10px "Hanken Grotesk",sans-serif!important; }
+    .maplibregl-ctrl-attrib a { color:var(--color-parchment)!important; }
+    @media (max-width:720px) {
+      .atlas { top:12px; left:12px; width:calc(100vw - 24px); padding:17px 17px 14px; border-radius:15px; }
+      .eyebrow { margin-bottom:6px; font-size:9px; }.subtitle { margin-top:7px; font-size:12px; }.stat { margin-top:11px; font-size:11px; }
+      .filter-title { margin-top:14px; padding-top:12px; }.filters { gap:5px; }.filter { min-height:27px; padding:5px 8px; font-size:10px; }
+      .top-actions { top:23px; right:23px; }.top-actions .action:not(.language) { display:none; }.action { width:32px; height:32px; border-radius:9px; font-size:10px; }
+      .footer { bottom:31px; left:14px; font-size:10px; }.footer span { display:none; }
+      .detail { top:auto; right:0; bottom:0; left:0; width:100%; max-height:76vh; border-radius:19px 19px 0 0; transform:translateY(calc(100% + 15px)); }.detail.open { transform:translateY(0); }
+      .detail-head { padding:20px 52px 16px 20px; }.detail-head::before { position:absolute; top:8px; left:calc(50% - 21px); width:42px; height:4px; border-radius:4px; background:rgba(240,230,210,.22); content:""; }.detail h2 { font-size:23px; }.detail-body { padding:8px 20px 22px; }.info { grid-template-columns:90px 1fr; }
+      .maplibregl-ctrl-bottom-right { right:10px!important; bottom:10px!important; }.maplibregl-ctrl-bottom-left { left:10px!important; bottom:10px!important; }.maplibregl-ctrl-attrib { display:none; }
     }
   </style>
 </head>
 <body>
-  <div id="map"></div>
-
-  <div id="header">
-    <div class="title">ILÊ AXÉ MAP</div>
-    <div class="subtitle">Terreiros de Candomblé da Bahia</div>
-    <div class="stats" id="stats">Carregando...</div>
-  </div>
-
-  <div id="filters">
-    <h3>Nação</h3>
-    <div id="filter-buttons"></div>
-  </div>
-
-  <div id="sidebar">
-    <div id="sidebar-content"></div>
-  </div>
-
-  <div id="footer">
-    Dados: <a href="https://www.openstreetmap.org" target="_blank">OpenStreetMap</a> ·
-    <a href="https://github.com/LABHDUFBA/terreiro-map" target="_blank">LABHD/UFBA</a> ·
-    <a href="data/terreiros.geojson" download>Download GeoJSON</a>
-  </div>
-
+  <main aria-label="Mapa de terreiros de candomblé da Bahia">
+    <div id="map" aria-label="Mapa interativo"></div>
+    <section class="atlas panel" aria-labelledby="site-title">
+      <div class="eyebrow">Atlas aberto</div>
+      <h1 id="site-title">ILÊ AXÉ MAP</h1>
+      <p class="subtitle">Terreiros de Candomblé da Bahia</p>
+      <div class="stat" id="stats" aria-live="polite">Carregando terreiros…</div>
+      <div class="filter-title"><span>Filtrar por nação</span><button class="filter-reset" id="reset-filters" type="button">Todas</button></div>
+      <div class="filters" id="filters" aria-label="Filtros por nação"></div>
+    </section>
+    <div class="top-actions" aria-label="Opções do mapa"><button class="action language" id="language" type="button" aria-pressed="true" aria-label="Alternar idioma">PT</button><button class="action" type="button" aria-label="Modo escuro ativo" title="Modo escuro">◐</button></div>
+    <aside class="detail panel" id="detail" aria-live="polite" aria-label="Detalhes do terreiro">
+      <button class="close" id="close-detail" type="button" aria-label="Fechar detalhes">×</button>
+      <div class="detail-head"><div class="detail-nacao" id="detail-nacao"></div><h2 id="detail-title"></h2></div>
+      <div class="detail-body" id="detail-fields"></div>
+    </aside>
+    <footer class="footer"><span>Dados:</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a><span>·</span><a href="https://github.com/LABHDUFBA" target="_blank" rel="noopener">LABHD/UFBA</a><span>·</span><a href="data/terreiros.geojson" download>Download GeoJSON</a></footer>
+  </main>
   <script>
-    // ============ MAP ============
-    const map = new maplibregl.Map({
-      container: 'map',
-      style: {
-        version: 8,
-        sources: {
-          'osm': {
-            type: 'raster',
-            tiles: ['https://a.tile.openstreetmap.org/{z}/{x}/{y}.png'],
-            tileSize: 256,
-            attribution: '© OpenStreetMap'
-          }
-        },
-        layers: [{ id: 'osm', type: 'raster', source: 'osm' }]
-      },
-      center: [-38.5, -12.9],
-      zoom: 10
-    });
-
-    // Dark overlay
-    map.on('load', () => {
-      map.addSource('dark-overlay', {
-        type: 'geojson',
-        data: { type: 'Feature', geometry: { type: 'Polygon', coordinates: [[[-180,-90],[-180,90],[180,90],[180,-90],[-180,-90]]] } }
+    const colors = { Ketu:'#e8a838', Angola:'#c4700f', Jeje:'#8b2c1c', 'Candomblé':'#d4841a', 'Matriz Africana':'#a0522d', Outro:'#7a6a5a' };
+    const categoryOrder = ['Ketu','Angola','Jeje','Candomblé','Matriz Africana','Outro'];
+    const map = new maplibregl.Map({ container:'map', style:'https://tiles.openfreemap.org/styles/dark', center:[-38.50,-12.97], zoom:8.1, attributionControl:true });
+    map.addControl(new maplibregl.NavigationControl({ showCompass:false }), 'bottom-right');
+    map.addControl(new maplibregl.ScaleControl({ maxWidth:110, unit:'metric' }), 'bottom-right');
+    let features = [], markers = [], active = new Set(), popup, selectedMarker;
+    const $ = id => document.getElementById(id);
+    const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+    function classify(properties) {
+      const text = [properties.religion,properties.denomination,properties.name].filter(Boolean).join(' ').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+      if (/(\bketu\b|\bnago\b|alaketu)/.test(text)) return 'Ketu';
+      if (/\bangola\b/.test(text)) return 'Angola';
+      if (/\bjeje\b/.test(text)) return 'Jeje';
+      if (/(matriz|african)/.test(text)) return 'Matriz Africana';
+      if (/(candombl|umbanda|batuque|xango)/.test(text)) return 'Candomblé';
+      return 'Outro';
+    }
+    function buildFilters() {
+      const holder = $('filters'); holder.innerHTML = '';
+      categoryOrder.filter(category => features.some(f => f.properties._nacao === category)).forEach(category => {
+        active.add(category);
+        const button = document.createElement('button'); button.type='button'; button.className='filter'; button.style.setProperty('--filter-color',colors[category]); button.setAttribute('aria-pressed','true');
+        button.innerHTML = `<span class="filter-dot"></span>${category}`;
+        button.addEventListener('click', () => { const enabled = !active.has(category); enabled ? active.add(category) : active.delete(category); button.setAttribute('aria-pressed',String(enabled)); updateMarkers(); });
+        holder.appendChild(button);
       });
-    });
-
-    // ============ DATA ============
-    let allFeatures = [];
-    let activeFilters = new Set();
-
-    map.on('load', async () => {
-      const resp = await fetch('data/terreiros.geojson');
-      const data = await resp.json();
-      allFeatures = data.features;
-
-      // Classificar nação
-      allFeatures.forEach(f => {
-        const p = f.properties;
-        let nacao = 'Outro';
-        const rel = (p.religion || '').toLowerCase();
-        const den = (p.denomination || '').toLowerCase();
-        const name = (p.name || '').toLowerCase();
-        if (rel.includes('angola') || den.includes('angola')) nacao = 'Angola';
-        else if (rel.includes('ketu') || den.includes('ketu') || den.includes('alaketo')) nacao = 'Ketu';
-        else if (rel.includes('jeje') || den.includes('jeje')) nacao = 'Jeje';
-        else if (rel.includes('candombl') || den.includes('candombl')) nacao = 'Candomblé';
-        else if (rel.includes('afro') || rel.includes('matriz')) nacao = 'Matriz Africana';
-        f.properties._nacao = nacao;
-      });
-
-      // Stats
-      document.getElementById('stats').textContent = `${allFeatures.length} terreiros mapeados`;
-
-      // Build filters
-      const nacoes = [...new Set(allFeatures.map(f => f.properties._nacao))].sort();
-      const fb = document.getElementById('filter-buttons');
-      nacoes.forEach(n => {
-        const btn = document.createElement('button');
-        btn.className = 'filter-btn active';
-        btn.textContent = n;
-        btn.onclick = () => {
-          if (activeFilters.has(n)) { activeFilters.delete(n); btn.classList.remove('active'); }
-          else { activeFilters.add(n); btn.classList.add('active'); }
-          updateMarkers();
-        };
-        activeFilters.add(n);
-        fb.appendChild(btn);
-      });
-
-      addMarkers();
-    });
-
-    // ============ MARKERS ============
-    const markers = [];
-
+    }
     function addMarkers() {
-      const colors = {
-        'Ketu': '#d4a843', 'Angola': '#c45838', 'Jeje': '#6b8e23',
-        'Candomblé': '#cd853f', 'Matriz Africana': '#daa520', 'Outro': '#8b7355'
-      };
-
-      allFeatures.forEach(f => {
-        const nacao = f.properties._nacao;
-        const color = colors[nacao] || '#8b7355';
-        const el = document.createElement('div');
-        el.style.width = '12px'; el.style.height = '12px';
-        el.style.borderRadius = '50%';
-        el.style.background = color;
-        el.style.border = '2px solid rgba(255,255,255,0.4)';
-        el.style.cursor = 'pointer';
-        el._feature = f;
-
-        const marker = new maplibregl.Marker(el)
-          .setLngLat(f.geometry.coordinates)
-          .addTo(map);
-
-        el.addEventListener('click', () => showSidebar(f));
-        el.addEventListener('mouseenter', () => showPopup(f, el));
-        markers.push({ marker, nacao, el });
+      features.forEach(feature => {
+        const [lng,lat] = feature.geometry.coordinates; const element = document.createElement('button'); element.type='button'; element.className='marker'; element.style.setProperty('--marker-color', colors[feature.properties._nacao]); element.setAttribute('aria-label', feature.properties.name || 'Terreiro');
+        const marker = new maplibregl.Marker({ element, anchor:'bottom' }).setLngLat([lng,lat]).addTo(map);
+        element.addEventListener('mouseenter', () => showTooltip(feature)); element.addEventListener('mouseleave', () => { if (popup) popup.remove(); }); element.addEventListener('focus', () => showTooltip(feature)); element.addEventListener('blur', () => { if (popup) popup.remove(); }); element.addEventListener('click', () => showDetail(feature, element));
+        markers.push({ feature, element, marker });
       });
     }
-
-    function updateMarkers() {
-      markers.forEach(m => {
-        const show = activeFilters.has(m.nacao);
-        m.el.style.display = show ? 'block' : 'none';
-      });
+    function updateMarkers() { markers.forEach(item => { const visible = active.has(item.feature.properties._nacao); item.element.parentElement.style.display = visible ? '' : 'none'; }); $('stats').textContent = `${markers.filter(item => active.has(item.feature.properties._nacao)).length} terreiros mapeados`; }
+    function showTooltip(feature) { if (popup) popup.remove(); const p = feature.properties; popup = new maplibregl.Popup({ closeButton:false, closeOnClick:false, offset:14 }).setLngLat(feature.geometry.coordinates).setHTML(`<div class="tooltip-name">${escapeHtml(p.name || 'Terreiro sem nome')}</div><div class="tooltip-meta">${escapeHtml(p._nacao)}</div>`).addTo(map); }
+    function showDetail(feature, element) {
+      if (popup) popup.remove(); if (selectedMarker) selectedMarker.classList.remove('is-active'); selectedMarker = element; element.classList.add('is-active');
+      const p = feature.properties, [lng,lat] = feature.geometry.coordinates; $('detail-nacao').textContent = p._nacao; $('detail-title').textContent = p.name || 'Terreiro sem nome';
+      const fields = [['religion','Religião'],['denomination','Denominação'],['amenity','Tipo'],['addr:street','Rua'],['addr:housenumber','Número'],['addr:suburb','Bairro'],['addr:city','Cidade'],['addr:postcode','CEP'],['phone','Telefone'],['start_date','Fundação']];
+      const rows = fields.filter(([key]) => p[key] && !/^n[aã]o informado/i.test(String(p[key]))).map(([key,label]) => `<div class="info"><div class="info-label">${label}</div><div class="info-value">${escapeHtml(p[key])}</div></div>`);
+      rows.push(`<div class="info"><div class="info-label">Coordenadas</div><div class="info-value">${lat.toFixed(6)}, ${lng.toFixed(6)}</div></div>`);
+      $('detail-fields').innerHTML = rows.join('') + `<a class="detail-link" href="https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=18/${lat}/${lng}" target="_blank" rel="noopener">Ver no OpenStreetMap <span>↗</span></a>`;
+      $('detail').classList.add('open'); map.easeTo({ center:[lng,lat], zoom:Math.max(map.getZoom(),13), duration:700, essential:true });
     }
-
-    // ============ POPUP ============
-    let currentPopup = null;
-    function showPopup(f, el) {
-      if (currentPopup) currentPopup.remove();
-      const p = f.properties;
-      const html = `<h3>${p.name || 'Terreiro'}</h3><div class="popup-info">${p._nacao}${p.religion ? ' · ' + p.religion : ''}</div>`;
-      currentPopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 12 })
-        .setHTML(html)
-        .setLngLat(f.geometry.coordinates)
-        .addTo(map);
-    }
-
-    // ============ SIDEBAR ============
-    function showSidebar(f) {
-      const p = f.properties;
-      const content = document.getElementById('sidebar-content');
-      const rows = [];
-      const fields = [
-        ['name', 'Nome'], ['_nacao', 'Nação'], ['religion', 'Religião'],
-        ['denomination', 'Denominação'], ['amenity', 'Tipo'],
-        ['addr:street', 'Rua'], ['addr:housenumber', 'Número'],
-        ['addr:suburb', 'Bairro'], ['addr:city', 'Cidade'],
-        ['addr:postcode', 'CEP'], ['phone', 'Telefone'],
-        ['start_date', 'Fundação'], ['osm_id', 'OSM ID']
-      ];
-      fields.forEach(([key, label]) => {
-        if (p[key] && p[key] !== 'Não Informado' && p[key] !== 'Não Informada') {
-          rows.push(`<div class="info-row"><span class="label">${label}</span><span class="value">${p[key]}</span></div>`);
-        }
-      });
-      const lat = f.geometry.coordinates[1].toFixed(6);
-      const lon = f.geometry.coordinates[0].toFixed(6);
-      rows.push(`<div class="info-row"><span class="label">Coordenadas</span><span class="value">${lat}, ${lon}</span></div>`);
-
-      content.innerHTML = `
-        <span class="close-btn" onclick="document.getElementById('sidebar').classList.remove('open')">✕</span>
-        <h2>${p.name || 'Terreiro'}</h2>
-        <div class="nacao">${p._nacao || ''}</div>
-        ${rows.join('')}
-        <div style="margin-top:16px"><a href="https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=18/${lat}/${lon}" target="_blank" style="color:#d4a843;font-size:0.85em">Ver no OpenStreetMap →</a></div>
-      `;
-      document.getElementById('sidebar').classList.add('open');
-    }
+    function closeDetail() { $('detail').classList.remove('open'); if (selectedMarker) selectedMarker.classList.remove('is-active'); selectedMarker = null; }
+    $('close-detail').addEventListener('click', closeDetail); $('reset-filters').addEventListener('click', () => { active = new Set(categoryOrder.filter(c => features.some(f => f.properties._nacao === c))); document.querySelectorAll('.filter').forEach(button => button.setAttribute('aria-pressed','true')); updateMarkers(); });
+    $('language').addEventListener('click', () => { const button=$('language'), english=button.textContent === 'EN'; button.textContent=english?'PT':'EN'; button.setAttribute('aria-pressed',String(!english)); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeDetail(); });
+    map.on('load', async () => { try { const response = await fetch('data/terreiros.geojson'); if (!response.ok) throw new Error(response.status); const data = await response.json(); features = data.features.filter(f => f.geometry && f.geometry.type === 'Point' && Array.isArray(f.geometry.coordinates)).map(f => ({ ...f, properties:{ ...(f.properties || {}), _nacao:classify(f.properties || {}) } })); buildFilters(); addMarkers(); updateMarkers(); const bounds = new maplibregl.LngLatBounds(); features.forEach(f => bounds.extend(f.geometry.coordinates)); if (!bounds.isEmpty()) map.fitBounds(bounds,{ padding:{ top:110,right:70,bottom:90,left:420 }, maxZoom:11, duration:0 }); } catch (error) { console.error('Erro ao carregar os dados:', error); $('stats').textContent = 'Não foi possível carregar os dados'; } });
   </script>
 </body>
 </html>
