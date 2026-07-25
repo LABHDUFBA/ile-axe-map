@@ -404,7 +404,7 @@
         } else {
           activeNacao.clear();
         }
-        nacaoBody.querySelectorAll('.filter-opt[data-cat]').forEach(opt => { opt.checkbox.checked = checked; });
+        nacaoBody.querySelectorAll('.filter-opt[data-cat]').forEach(opt => { var cb = opt.querySelector('input[type=checkbox]'); if (cb) cb.checked = checked; });
         updateMarkers(); updateList();
       });
       allNacao.el.classList.add('filter-opt--all');
@@ -445,7 +445,7 @@
         } else {
           activeFonte.clear();
         }
-        fonteBody.querySelectorAll('.filter-opt[data-fonte]').forEach(opt => { opt.checkbox.checked = checked; });
+        fonteBody.querySelectorAll('.filter-opt[data-fonte]').forEach(opt => { var cb = opt.querySelector('input[type=checkbox]'); if (cb) cb.checked = checked; });
         updateMarkers(); updateList();
       });
       allFonte.el.classList.add('filter-opt--all');
@@ -487,7 +487,10 @@
 
     function syncAllCheckbox(allOpt, body, attr) {
       const opts = body.querySelectorAll('.filter-opt[data-' + attr + ']');
-      const allChecked = Array.from(opts).every(o => o.checkbox.checked);
+      const allChecked = Array.from(opts).every(o => {
+        var cb = o.querySelector('input[type=checkbox]');
+        return cb && cb.checked;
+      });
       allOpt.checkbox.checked = allChecked;
     }
 
