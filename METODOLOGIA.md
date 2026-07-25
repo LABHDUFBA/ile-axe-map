@@ -2,8 +2,8 @@
 
 ## Mapeamento de Terreiros de Candomblé da Bahia
 
-**Projeto:** LABHD/UFBA — Terreiro Map  
-**Data da coleta:** 25 de julho de 2026  
+**Versão:** v1.1  
+**Data:** 25 de julho de 2026
 **Repositório:** [github.com/LABHDUFBA/terreiro-map](https://github.com/LABHDUFBA/terreiro-map)  
 **Mapa interativo:** [labhdufba.github.io/terreiro-map](https://labhdufba.github.io/terreiro-map/)  
 **Responsável:** Leonardo Fernandes Nascimento (leofn@ufba.br)
@@ -182,6 +182,19 @@ Cada registro mantém o campo `fonte` indicando sua origem (`osm`, `google`, `ce
 5. **Sensibilidade dos dados:** Terreiros são espaços religiosos que enfrentam intolerância e violência. A disponibilização pública de endereços e coordenadas deve ser ponderada. Este projeto, vinculado ao LABHD/UFBA, tem finalidade acadêmica e de preservação da memória.
 
 6. **Erros de OCR:** A extração da lista SEFAZ foi feita via OCR visual do PDF cartográfico. Nomes podem conter erros de transcrição. Recomenda-se conferência com o documento original.
+
+7. **Outliers de georreferenciamento:** Dos 1.924 registros georreferenciados, 36 (1,9%) possuem coordenadas fora do retângulo envoltório da Bahia (lng −46,7 a −37,3; lat −18,4 a −8,5). A inspeção revelou duas causas principais:
+
+   - **Colisão de nomes no Google Places API:** terreiros com nomes comuns (ex.: "Casa de Oxum", "Ilê Axé") retornaram lugares homônimos em outros estados (MT, GO, TO), gerando coordenadas fora da Bahia. Esta é a causa majoritária (~30 dos 36 casos).
+   - **Lat/lng trocados:** alguns registros apresentam latitude e longitude invertidas, projetando pontos da Bahia no Atlântico Sul ou em outras regiões.
+
+   Adicionalmente, ~12 registros dentro do bbox da Bahia têm nomes que sugerem estabelecimentos não religiosos (pet shops, lojas de artigos religiosos, fabricantes) — falsos positivos da busca textual do Google Places.
+
+   **Ação tomada:** todos os registros receberam campo `geo_status` (`in_bahia`, `out_of_bahia`, `no_coords`) no GeoJSON e no JSON completo. Os 36 outliers permanecem no dataset mas são flaggados; o enquadramento inicial do mapa (`fitBounds`) considera apenas `in_bahia`. O painel de detalhe exibe aviso "Fora da Bahia" para outliers.
+
+   **Recomendação:** revisão manual dos 36 outliers para re-georreferenciamento ou remoção. Correção no pipeline `collect_osm.py` / `collect_google.py` para validar coordenadas contra o limite municipal do IBGE antes da inserção.
+
+8. **Dívida técnica — clustering:** A versão atual usa marcadores DOM individuais (`maplibregl.Marker`) que não escalam bem com densidade. Em zoom baixo, ~1.900 pontos sobrepostos geram overplotting. A solução adequada é migrar para `GeoJSON source` + `cluster: true` do MapLibre GL, renderizando círculos agregados em zoom baixo e marcadores individuais em zoom alto. Planejado para v1.2.
 
 ---
 

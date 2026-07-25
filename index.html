@@ -11,16 +11,16 @@
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
   <script>
-    // Inject commit hash and dataset version
-    const DATASET_VERSION = 'v1.0';
+    const DATASET_VERSION = 'v1.1';
     const DATASET_DATE = '2026-07-25';
     const DATASET_TOTAL = 2158;
     const DATASET_GEO = 1924;
+    const DATASET_IN_BAHIA = 1888;
+    const DATASET_OUT_OF_BAHIA = 36;
   </script>
   <style>
     /* === Paleta: cal, índigo do pano da costa, dendê/barro === */
     :root {
-      /* Light mode (default) */
       --bg: #FAF7F2;
       --bg-panel: rgba(250,247,242,.96);
       --bg-elevated: #FFF;
@@ -29,19 +29,15 @@
       --text-faint: #B8AFA5;
       --border: #E7E0D6;
       --border-strong: #D4CBBE;
-      --accent: #29405B;         /* índigo pano da costa */
+      --accent: #29405B;
       --accent-hover: #1E3247;
       --accent-soft: rgba(41,64,91,.08);
-      --warm: #A8460F;           /* dendê/barro para texto */
-      --warm-fill: #D9762B;      /* dendê para preenchimento/marcador */
-      --marker-n: #29405B;       /* índigo = neutro/default */
-      --marker-active: #A8460F;  /* barro = realce do filtrado */
-      --marker-dim: #C4BCB0;     /* cal cinza = não-filtrado */
+      --warm: #A8460F;
       --radius: 8px;
       --radius-sm: 5px;
       --topbar-h: 96px;
-    --topbar-row1-h: 48px;
-    --topbar-row2-h: 48px;
+      --topbar-row1-h: 48px;
+      --topbar-row2-h: 48px;
       --rail-w: 380px;
       --font-display: Fraunces, Georgia, serif;
       --font-body: "Hanken Grotesk", system-ui, sans-serif;
@@ -64,16 +60,11 @@
         --accent-hover: #7A9BC0;
         --accent-soft: rgba(91,123,160,.12);
         --warm: #D9762B;
-        --warm-fill: #D9762B;
-        --marker-n: #5B7BA0;
-        --marker-active: #D9762B;
-        --marker-dim: #3A3631;
         --shadow: 0 1px 3px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.2);
         --shadow-lg: 0 4px 24px rgba(0,0,0,.35);
       }
     }
 
-    /* Manual override class */
     [data-theme="light"] { color-scheme: light; }
     [data-theme="dark"] {
       color-scheme: dark;
@@ -81,8 +72,7 @@
       --text: #F2EDE4; --text-muted: #8A8177; --text-faint: #5C544A;
       --border: #2A2724; --border-strong: #3A3631;
       --accent: #5B7BA0; --accent-hover: #7A9BC0; --accent-soft: rgba(91,123,160,.12);
-      --warm: #D9762B; --warm-fill: #D9762B;
-      --marker-n: #5B7BA0; --marker-active: #D9762B; --marker-dim: #3A3631;
+      --warm: #D9762B;
       --shadow: 0 1px 3px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.2);
       --shadow-lg: 0 4px 24px rgba(0,0,0,.35);
     }
@@ -97,7 +87,6 @@
     }
     button, a { -webkit-tap-highlight-color: transparent; color: inherit; }
 
-    /* === Map === */
     #map { position: fixed; inset: 0; }
 
     /* === Topbar — 2 rows === */
@@ -185,9 +174,7 @@
       font: 400 13px/1 var(--font-body);
       transition: border-color .15s;
     }
-    .rail__search input:focus {
-      outline: none; border-color: var(--accent);
-    }
+    .rail__search input:focus { outline: none; border-color: var(--accent); }
     .rail__search input::placeholder { color: var(--text-faint); }
 
     .rail__list {
@@ -209,7 +196,7 @@
     }
     .rail-item__dot {
       width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
-      background: var(--item-color, var(--marker-n));
+      background: var(--item-color, #8A8177);
     }
     .rail-item__body { flex: 1; min-width: 0; }
     .rail-item__name {
@@ -229,14 +216,13 @@
       padding: 40px 24px; text-align: center; color: var(--text-faint); font-size: 13px;
     }
 
-    /* Rail viewport label */
     .rail__viewport-label {
       padding: 8px 16px 4px; font-size: 10px; font-weight: 700;
       letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint);
       display: flex; justify-content: space-between; align-items: center;
     }
 
-    /* === Detail panel (replaces list in rail) === */
+    /* === Detail panel === */
     .detail {
       position: fixed; z-index: 6; top: var(--topbar-h); bottom: 0; left: 0;
       width: var(--rail-w); background: var(--bg-panel);
@@ -247,18 +233,9 @@
       backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     }
     .detail.open { transform: translateX(0); }
-    .detail__head {
-      flex: none; padding: 20px 48px 16px 20px;
-      border-bottom: 1px solid var(--border);
-    }
-    .detail__nacao {
-      font-size: 10px; font-weight: 700; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--warm);
-    }
-    .detail__title {
-      font-family: var(--font-display); font-size: 24px; font-weight: 600;
-      line-height: 1.15; color: var(--text); margin-top: 6px;
-    }
+    .detail__head { flex: none; padding: 20px 48px 16px 20px; border-bottom: 1px solid var(--border); }
+    .detail__nacao { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--warm); }
+    .detail__title { font-family: var(--font-display); font-size: 24px; font-weight: 600; line-height: 1.15; color: var(--text); margin-top: 6px; }
     .detail__close {
       position: absolute; top: 14px; right: 14px;
       width: 32px; height: 32px; display: grid; place-items: center;
@@ -268,43 +245,20 @@
       transition: border-color .15s, color .15s;
     }
     .detail__close:hover { border-color: var(--accent); color: var(--accent); }
-    .detail__body {
-      flex: 1; overflow-y: auto; padding: 0 20px 24px;
-      scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent;
-    }
+    .detail__body { flex: 1; overflow-y: auto; padding: 0 20px 24px; scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
     .detail__body::-webkit-scrollbar { width: 6px; }
     .detail__body::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
-
-    .detail__photo {
-      width: 100%; border-radius: var(--radius); border: 1px solid var(--border);
-      object-fit: cover; max-height: 240px; margin: 14px 0 18px;
-    }
-    .info-row {
-      display: grid; grid-template-columns: 100px 1fr; gap: 12px;
-      padding: 11px 0; border-bottom: 1px solid var(--border);
-      font-size: 13px;
-    }
-    .info-row__label {
-      font-size: 10px; font-weight: 700; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--text-faint);
-    }
-    .info-row__value {
-      color: var(--text); text-align: right; overflow-wrap: anywhere;
-    }
-    .detail__link {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-top: 16px; padding: 11px 14px;
-      border: 1px solid var(--accent); border-radius: var(--radius-sm);
-      color: var(--accent); text-decoration: none;
-      font-size: 12px; font-weight: 600;
-      transition: background .15s, color .15s;
-    }
+    .detail__photo { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); object-fit: cover; max-height: 240px; margin: 14px 0 18px; }
+    .info-row { display: grid; grid-template-columns: 100px 1fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+    .info-row__label { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); }
+    .info-row__value { color: var(--text); text-align: right; overflow-wrap: anywhere; }
+    .detail__link { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding: 11px 14px; border: 1px solid var(--accent); border-radius: var(--radius-sm); color: var(--accent); text-decoration: none; font-size: 12px; font-weight: 600; transition: background .15s, color .15s; }
     .detail__link:hover { background: var(--accent); color: var(--bg-elevated); }
     .detail__link + .detail__link { margin-top: 8px; }
     .detail__link--warm { border-color: var(--warm); color: var(--warm); }
     .detail__link--warm:hover { background: var(--warm); color: var(--bg-elevated); }
 
-    /* === Info panel (slide-over from right) === */
+    /* === Info panel === */
     .info-panel {
       position: fixed; z-index: 7; top: var(--topbar-h); right: 0; bottom: 0;
       width: 360px; background: var(--bg-panel);
@@ -315,48 +269,23 @@
       backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     }
     .info-panel.open { transform: translateX(0); }
-    .info-panel__head {
-      flex: none; padding: 20px 48px 16px 20px;
-      border-bottom: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .info-panel__title {
-      font-family: var(--font-display); font-size: 18px; font-weight: 600;
-      color: var(--text);
-    }
-    .info-panel__body {
-      flex: 1; overflow-y: auto; padding: 16px 20px 24px;
-      font-size: 13px; line-height: 1.55; color: var(--text);
-      scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent;
-    }
-    .info-panel__body h3 {
-      font-size: 11px; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--text-faint);
-      margin: 20px 0 8px;
-    }
+    .info-panel__head { flex: none; padding: 20px 48px 16px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .info-panel__title { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--text); }
+    .info-panel__body { flex: 1; overflow-y: auto; padding: 16px 20px 24px; font-size: 13px; line-height: 1.55; color: var(--text); scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
+    .info-panel__body h3 { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); margin: 20px 0 8px; }
     .info-panel__body h3:first-child { margin-top: 0; }
     .info-panel__body p { color: var(--text-muted); margin-bottom: 8px; }
     .info-panel__body a { color: var(--accent); text-decoration: none; }
     .info-panel__body a:hover { text-decoration: underline; }
-    .info-panel__body dl {
-      display: grid; grid-template-columns: auto 1fr; gap: 4px 12px;
-      margin: 8px 0;
-    }
+    .info-panel__body dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 8px 0; }
     .info-panel__body dt { font-weight: 600; color: var(--text); font-size: 12px; }
     .info-panel__body dd { color: var(--text-muted); font-size: 12px; }
-    .info-panel__close {
-      position: absolute; top: 14px; right: 14px;
-      width: 32px; height: 32px; display: grid; place-items: center;
-      border: 1px solid var(--border); border-radius: var(--radius-sm);
-      background: var(--bg-elevated); color: var(--text-muted);
-      cursor: pointer; font-size: 18px;
-    }
+    .info-panel__close { position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elevated); color: var(--text-muted); cursor: pointer; font-size: 18px; }
 
     /* === Map markers === */
     .marker {
-      width: 14px; height: 14px; border-radius: 50%;
+      width: 12px; height: 12px; border-radius: 50%;
       border: 2px solid var(--bg-elevated);
-      background: var(--marker-n);
       box-shadow: 0 1px 4px rgba(0,0,0,.25);
       cursor: pointer;
       transition: transform .15s, box-shadow .15s;
@@ -366,76 +295,39 @@
       box-shadow: 0 2px 8px rgba(0,0,0,.35), 0 0 0 4px var(--accent-soft);
     }
     .marker.is-dim {
-      background: var(--marker-dim);
-      opacity: .4;
-      transform: scale(.8);
+      opacity: .3;
+      transform: scale(.7);
     }
     .marker.is-highlighted {
-      background: var(--marker-active);
       border-color: var(--bg-elevated);
-      box-shadow: 0 1px 6px rgba(0,0,0,.3), 0 0 0 3px rgba(168,70,15,.2);
-      transform: scale(1.2);
+      box-shadow: 0 1px 6px rgba(0,0,0,.3), 0 0 0 3px rgba(0,0,0,.15);
+      transform: scale(1.3);
     }
 
     /* Cluster circles */
     .cluster {
       display: grid; place-items: center;
-      width: 34px; height: 34px; border-radius: 50%;
+      width: 36px; height: 36px; border-radius: 50%;
       background: var(--accent-soft); border: 2px solid var(--accent);
-      color: var(--accent); font: 700 12px/1 var(--font-body);
+      color: var(--accent); font: 700 13px/1 var(--font-body);
       cursor: pointer;
     }
     .cluster:hover { background: var(--accent); color: var(--bg-elevated); }
 
     /* === MapLibre overrides === */
-    .maplibregl-popup-content {
-      min-width: 160px; padding: 8px 10px;
-      border-radius: var(--radius-sm);
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      color: var(--text); font-family: var(--font-body);
-    }
-    .maplibregl-popup-tip {
-      border-top-color: var(--bg-elevated)!important;
-      border-bottom-color: var(--bg-elevated)!important;
-    }
-    .maplibregl-ctrl-group {
-      border: 1px solid var(--border)!important;
-      border-radius: var(--radius-sm)!important;
-      background: var(--bg-elevated)!important;
-      box-shadow: var(--shadow)!important;
-      overflow: hidden;
-    }
-    .maplibregl-ctrl-group button {
-      width: 32px!important; height: 32px!important;
-      background: transparent!important;
-    }
+    .maplibregl-popup-content { min-width: 160px; padding: 8px 10px; border-radius: var(--radius-sm); background: var(--bg-elevated); border: 1px solid var(--border); box-shadow: var(--shadow); color: var(--text); font-family: var(--font-body); }
+    .maplibregl-popup-tip { border-top-color: var(--bg-elevated)!important; border-bottom-color: var(--bg-elevated)!important; }
+    .maplibregl-ctrl-group { border: 1px solid var(--border)!important; border-radius: var(--radius-sm)!important; background: var(--bg-elevated)!important; box-shadow: var(--shadow)!important; overflow: hidden; }
+    .maplibregl-ctrl-group button { width: 32px!important; height: 32px!important; background: transparent!important; }
     .maplibregl-ctrl-group button + button { border-top: 1px solid var(--border)!important; }
-    .maplibregl-ctrl-attrib {
-      background: var(--bg-panel)!important;
-      color: var(--text-muted)!important;
-      font: 10px var(--font-body)!important;
-      border-radius: var(--radius-sm) 0 0 0;
-    }
+    .maplibregl-ctrl-attrib { background: var(--bg-panel)!important; color: var(--text-muted)!important; font: 10px var(--font-body)!important; border-radius: var(--radius-sm) 0 0 0; }
     .maplibregl-ctrl-attrib a { color: var(--accent)!important; }
 
-    /* === Skeleton loading === */
-    .skeleton {
-      padding: 12px 16px;
-    }
-    .skeleton__line {
-      height: 14px; border-radius: 4px;
-      background: linear-gradient(90deg, var(--border) 25%, var(--border-strong) 50%, var(--border) 75%);
-      background-size: 200% 100%;
-      animation: shimmer 1.5s infinite;
-      margin-bottom: 8px;
-    }
+    /* === Skeleton === */
+    .skeleton { padding: 12px 16px; }
+    .skeleton__line { height: 14px; border-radius: 4px; background: linear-gradient(90deg, var(--border) 25%, var(--border-strong) 50%, var(--border) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; margin-bottom: 8px; }
     .skeleton__line:last-child { width: 60%; }
-    @keyframes shimmer {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
-    }
+    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 
     /* === Mobile === */
     @media (max-width: 768px) {
@@ -458,6 +350,7 @@
         content: ""; position: absolute; top: 8px; left: calc(50% - 20px);
         width: 40px; height: 4px; border-radius: 4px;
         background: var(--border-strong); cursor: pointer;
+        z-index: 10;
       }
 
       .detail {
@@ -480,19 +373,14 @@
       .info-panel.open { transform: translateX(0); }
     }
 
-    /* === Reduced motion === */
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: .01ms!important;
-        transition-duration: .01ms!important;
-      }
+      *, *::before, *::after { animation-duration: .01ms!important; transition-duration: .01ms!important; }
     }
   </style>
 </head>
 <body>
   <div id="map" role="application" aria-label="Mapa de terreiros"></div>
 
-  <!-- Topbar — 2 rows -->
   <header class="topbar">
     <div class="topbar__row1">
       <div class="topbar__title">Ilê Axé <span>Map</span></div>
@@ -507,7 +395,6 @@
     </div>
   </header>
 
-  <!-- Left rail: list -->
   <aside class="rail" id="rail" aria-label="Lista de terreiros">
     <div class="rail__search">
       <input type="text" id="search" placeholder="Buscar terreiro…" aria-label="Buscar">
@@ -526,7 +413,6 @@
     </div>
   </aside>
 
-  <!-- Detail panel (slides over rail) -->
   <aside class="detail" id="detail" aria-live="polite" aria-label="Detalhes">
     <button class="detail__close" id="detail-close" type="button" aria-label="Fechar">×</button>
     <div class="detail__head">
@@ -536,7 +422,6 @@
     <div class="detail__body" id="detail-body"></div>
   </aside>
 
-  <!-- Info panel (slide-over from right) -->
   <aside class="info-panel" id="info-panel" aria-label="Sobre o projeto">
     <button class="info-panel__close" id="info-close" type="button" aria-label="Fechar">×</button>
     <div class="info-panel__head">
@@ -548,10 +433,12 @@
 
       <h3>Dataset</h3>
       <dl>
-        <dt>Versão</dt><dd id="info-version">v1.0</dd>
+        <dt>Versão</dt><dd id="info-version">v1.1</dd>
         <dt>Extração</dt><dd id="info-date">2026-07-25</dd>
         <dt>Total</dt><dd id="info-total">2.158 únicos</dd>
         <dt>Georreferenciados</dt><dd id="info-geo">1.924</dd>
+        <dt>Na Bahia</dt><dd>1.888</dd>
+        <dt>Fora da Bahia</dt><dd>36 (ver Metodologia §5)</dd>
       </dl>
 
       <h3>Fontes</h3>
@@ -585,13 +472,34 @@
     </div>
   </aside>
 
-  <!-- MapLibre controls -->
   <script>
-    const colors = {
-      Ketu: '#29405B', Angola: '#C2490F', Jeje: '#4A7C3A',
-      'Candomblé': '#D9762B', 'Matriz Africana': '#7A5C8A',
-      Umbanda: '#2B8E7B', Outro: '#8A8177'
+    /*
+     * Okabe-Ito palette (Wong, Nature Methods 2011) — DCV-safe for 7 categories.
+     * Mapped to nações: each hue distinguishable under deuteranopia/protanopia.
+     */
+    const colorsLight = {
+      Ketu: '#0072B2',              // blue
+      Angola: '#D55E00',            // vermillion (not orange — distinct from Candomblé)
+      Jeje: '#009E73',              // bluish-green
+      'Candomblé': '#E69F00',       // orange (distinct from Angola vermillion)
+      'Matriz Africana': '#CC79A7', // reddish-purple
+      Umbanda: '#56B4E9',           // sky-blue
+      Outro: '#999999'              // grey
     };
+    const colorsDark = {
+      Ketu: '#56B4E9',              // sky-blue (brighter for dark bg)
+      Angola: '#E69F00',            // orange
+      Jeje: '#009E73',              // bluish-green
+      'Candomblé': '#F0E442',       // yellow (high contrast on dark)
+      'Matriz Africana': '#CC79A7', // reddish-purple
+      Umbanda: '#0072B2',           // blue
+      Outro: '#777777'              // grey
+    };
+    function getColors() {
+      const dark = (themeOverride === 'dark') ||
+        (!themeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      return dark ? colorsDark : colorsLight;
+    }
     const categoryOrder = ['Ketu','Angola','Jeje','Candomblé','Matriz Africana','Umbanda','Outro'];
     const fonteLabels = {
       'osm': 'OpenStreetMap', 'google': 'Google Places',
@@ -655,6 +563,7 @@
 
     function buildChips() {
       const holder = $('chips'); holder.innerHTML = '';
+      const colors = getColors();
       categoryOrder.filter(cat => features.some(f => f.properties._nacao === cat)).forEach(cat => {
         activeFilters.add(cat);
         const count = features.filter(f => f.properties._nacao === cat).length;
@@ -665,13 +574,11 @@
         chip.innerHTML = '<span class="chip__dot"></span>' + cat + ' <span class="chip__count">' + count + '</span>';
         chip.addEventListener('click', () => {
           highlightedNacao = (highlightedNacao === cat) ? null : cat;
-          // When a nation is highlighted, dim others
           if (highlightedNacao) {
             activeFilters = new Set([cat]);
             document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', 'false'));
             chip.setAttribute('aria-pressed', 'true');
           } else {
-            // Re-enable all
             activeFilters = new Set(categoryOrder.filter(c => features.some(f => f.properties._nacao === c)));
             document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', 'true'));
           }
@@ -681,13 +588,21 @@
       });
     }
 
+    // BUG 3 FIX: clearMarkers() removes all markers before re-adding
+    function clearMarkers() {
+      markers.forEach(item => item.marker.remove());
+      markers = [];
+    }
+
     function addMarkers() {
+      const colors = getColors();
       features.forEach(feature => {
         const [lng, lat] = feature.geometry.coordinates;
         const el = document.createElement('button');
         el.type = 'button'; el.className = 'marker';
         el.setAttribute('aria-label', getName(feature.properties));
-        el.style.setProperty('--marker-n', colors[feature.properties._nacao] || colors['Outro']);
+        // Use inline background color from theme-appropriate palette
+        el.style.background = colors[feature.properties._nacao] || colors['Outro'];
         const marker = new maplibregl.Marker({ element: el, anchor: 'center' }).setLngLat([lng, lat]).addTo(map);
         el.addEventListener('mouseenter', () => showTooltip(feature));
         el.addEventListener('mouseleave', () => { if (popup) popup.remove(); });
@@ -704,7 +619,6 @@
         const parent = item.element.parentElement;
         if (parent) parent.style.display = inFilter ? '' : 'none';
 
-        // Highlight/dim logic
         if (highlightedNacao) {
           if (nacao === highlightedNacao) {
             item.element.classList.add('is-highlighted');
@@ -743,7 +657,6 @@
       $('detail-title').textContent = getName(p);
 
       let html = '';
-      // Photo
       if (p.foto_thumb) {
         let src = p.foto_thumb;
         if (src.indexOf('terreiros.ceao.ufba.br/_FT/pq/') !== -1) {
@@ -753,7 +666,6 @@
         html += '<img class="detail__photo" src="' + escapeHtml(src) + '" alt="' + escapeHtml(getName(p)) + '" loading="lazy" onerror="this.style.display=\'none\'">';
       }
 
-      // Fields with dedup
       var seen = {};
       var fields = [
         ['lideranca','Liderança'],['nacao','Nação'],['regente','Orixá Regente'],
@@ -776,6 +688,9 @@
       });
       html += '<div class="info-row"><div class="info-row__label">Coordenadas</div><div class="info-row__value">' + lat.toFixed(6) + ', ' + lng.toFixed(6) + '</div></div>';
       if (p.fonte) html += '<div class="info-row"><div class="info-row__label">Fonte</div><div class="info-row__value">' + escapeHtml(fonteLabels[p.fonte] || p.fonte) + '</div></div>';
+      if (p.geo_status === 'out_of_bahia') {
+        html += '<div class="info-row"><div class="info-row__label">Geo Status</div><div class="info-row__value" style="color:var(--warm)">Fora da Bahia — ver Metodologia §5</div></div>';
+      }
 
       html += '<a class="detail__link" href="https://www.openstreetmap.org/?mlat=' + lat + '&mlon=' + lng + '#map=18/' + lat + '/' + lng + '" target="_blank" rel="noopener">Ver no OpenStreetMap ↗</a>';
       if (p.ceao_id) {
@@ -796,14 +711,12 @@
       selectedMarker = null;
     }
 
-    // === List logic ===
     function getVisibleFeatures() {
       return features.filter(f => activeFilters.has(f.properties._nacao));
     }
 
     function updateList() {
       const all = getVisibleFeatures();
-      // Filter by search
       let filtered = all;
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
@@ -817,7 +730,6 @@
         });
       }
 
-      // Filter by viewport if zoom > 10
       let inViewport = filtered;
       const viewportLabel = $('viewport-label');
       if (map.getZoom() > 10) {
@@ -844,6 +756,7 @@
         holder.innerHTML = '<div class="rail__empty">Nenhum terreiro encontrado</div>';
         return;
       }
+      const colors = getColors();
       var html = '';
       items.forEach(function(f) {
         var p = f.properties;
@@ -868,7 +781,6 @@
       });
       holder.innerHTML = html;
 
-      // Click handlers
       holder.querySelectorAll('.rail-item').forEach(function(item, idx) {
         item.addEventListener('click', function() {
           if (idx < listSubset.length) {
@@ -887,14 +799,29 @@
       updateList();
     });
 
+    // BUG 3 FIX: clearMarkers before re-adding on theme toggle
     $('theme-btn').addEventListener('click', function() {
       const isDark = (themeOverride === 'dark') ||
         (!themeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches);
       themeOverride = isDark ? 'light' : 'dark';
       applyTheme();
+      clearMarkers();           // remove old markers + reset array
       map.setStyle(mapStyle());
-      // Re-add markers after style change
-      map.once('styledata', function() { addMarkers(); updateMarkers(); });
+      map.once('styledata', function() {
+        addMarkers();            // re-add with new theme colors
+        updateMarkers();
+        // Re-apply chip colors for new theme
+        const colors = getColors();
+        document.querySelectorAll('.chip').forEach(chip => {
+          var text = chip.textContent.trim().split(' ')[0];
+          // Find matching category
+          categoryOrder.forEach(cat => {
+            if (cat === text || text.startsWith(cat.slice(0,5))) {
+              chip.style.setProperty('--chip-color', colors[cat]);
+            }
+          });
+        });
+      });
     });
 
     $('lang-btn').addEventListener('click', function() {
@@ -903,12 +830,8 @@
       $('lang-btn').setAttribute('aria-pressed', String(!en));
     });
 
-    $('info-btn').addEventListener('click', function() {
-      $('info-panel').classList.toggle('open');
-    });
-    $('info-close').addEventListener('click', function() {
-      $('info-panel').classList.remove('open');
-    });
+    $('info-btn').addEventListener('click', function() { $('info-panel').classList.toggle('open'); });
+    $('info-close').addEventListener('click', function() { $('info-panel').classList.remove('open'); });
 
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
@@ -917,7 +840,14 @@
       }
     });
 
-    // Update list on map move (debounced)
+    // BUG 1 FIX: Bottom sheet expand/collapse handler (mobile)
+    $('rail').addEventListener('click', function(e) {
+      // Only toggle if click is on the ::before handle area (top 16px of rail on mobile)
+      if (window.innerWidth <= 768 && e.clientY - this.getBoundingClientRect().top < 20) {
+        this.classList.toggle('expanded');
+      }
+    });
+
     var moveTimer = null;
     map.on('moveend', function() {
       if (moveTimer) clearTimeout(moveTimer);
@@ -940,18 +870,24 @@
         updateMarkers();
         updateList();
 
-        // Fit bounds to Bahia only (filter outliers outside BA)
+        // BUG 2 FIX: Correct Bahia bbox + responsive padding
+        // Bahia: lng -46.7 to -37.3, lat -18.4 to -8.5
         const baBounds = new maplibregl.LngLatBounds();
         features.forEach(f => {
           const [lng, lat] = f.geometry.coordinates;
-          // Bahia approx: lng -41.5 to -37, lat -18.5 to -8
-          if (lng >= -41.5 && lng <= -37 && lat >= -18.5 && lat <= -8) {
+          if (lng >= -46.7 && lng <= -37.3 && lat >= -18.4 && lat <= -8.5) {
             baBounds.extend(f.geometry.coordinates);
           }
         });
         if (!baBounds.isEmpty()) {
+          const isMobile = window.innerWidth <= 768;
           map.fitBounds(baBounds, {
-            padding: { top: 110, right: 70, bottom: 70, left: 420 },
+            padding: {
+              top: 110,
+              right: 70,
+              bottom: isMobile ? 200 : 70,
+              left: isMobile ? 20 : 420
+            },
             maxZoom: 12, duration: reduceMotion ? 0 : 800
           });
         }
