@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .leaf { fill: #33582F; }
+    @media (prefers-color-scheme: dark) { .leaf { fill: #567F49; } }
+  </style>
+  <path class="leaf" fill-rule="nonzero" d="M9 21 C10.5 32 12.5 45 14 55 L23 55 C21.5 45 17.5 32 9 21 Z M23 55 C22.5 42 24 22 32 6 C40 22 41.5 42 41 55 Z M41 55 L50 55 C51.5 45 53.5 32 55 21 C46.5 32 42.5 45 41 55 Z M11 53 L53 53 L53 60 L11 60 Z"/>
+</svg>

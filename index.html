@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="description" content="Atlas aberto de terreiros de candomblé da Bahia.">
   <title>Ilê Axé Map — Terreiros de Candomblé da Bahia</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,6 +24,7 @@
       --border: #D8D0C5; --border-strong: #BDB3A6;
       --accent: #29405B; --accent-hover: #1E3247; --accent-soft: rgba(41,64,91,.10);
       --warm: #A8460F;
+      --brand-leaf: #33582F;
       --radius: 8px; --radius-sm: 5px;
       --topbar-h: 52px;
       --rail-w: 340px;
@@ -38,6 +40,7 @@
         --border: #454D57; --border-strong: #626D79;
         --accent: #9ABCE3; --accent-hover: #B4D0EE; --accent-soft: rgba(154,188,227,.14);
         --warm: #F2A15C;
+        --brand-leaf: #567F49;
         --shadow: 0 1px 3px rgba(0,0,0,.28), 0 4px 16px rgba(0,0,0,.18);
         --shadow-lg: 0 4px 24px rgba(0,0,0,.3);
       }
@@ -49,6 +52,7 @@
       --border: #454D57; --border-strong: #626D79;
       --accent: #9ABCE3; --accent-hover: #B4D0EE; --accent-soft: rgba(154,188,227,.14);
       --warm: #F2A15C;
+      --brand-leaf: #567F49;
     }
     [data-theme="dark"] body { background: var(--bg); }
 
@@ -67,6 +71,13 @@
     }
     .topbar__title { font-family: var(--font-display); font-size: 18px; font-weight: 600; letter-spacing: .02em; white-space: nowrap; }
     .topbar__title span { color: var(--warm); }
+    .topbar__brand { display: flex; align-items: center; gap: 8px; flex: none; }
+    .topbar__brand-icon { display: block; width: 30px; height: 30px; flex: none; overflow: visible; }
+    .topbar__brand-icon .leaf {
+      fill: var(--brand-leaf); stroke: #D9B23B; stroke-width: 6;
+      paint-order: stroke; stroke-linejoin: round;
+    }
+    .topbar__brand-icon .base { fill: #C2490F; }
     .topbar__labhd {
       display: flex; align-items: center; justify-content: center; flex: none;
       width: 34px; height: 34px; border-radius: var(--radius-sm);
@@ -269,7 +280,15 @@
     <a class="topbar__labhd" href="https://labhdufba.github.io/" target="_blank" rel="noopener" aria-label="Laboratório de Humanidades Digitais da UFBA">
       <img src="assets/labhd-logo.webp" alt="LABHD/UFBA">
     </a>
-    <div class="topbar__title">Ilê Axé <span>Map</span></div>
+    <div class="topbar__brand">
+      <svg class="topbar__brand-icon" viewBox="0 0 64 64" width="30" height="30" aria-hidden="true" focusable="false">
+        <path class="leaf" d="M16 58 C14.5 44 12 31 10 19 C18.5 30 23 44 25 58 Z"/>
+        <path class="leaf" d="M48 58 C49.5 44 52 31 54 19 C45.5 30 41 44 39 58 Z"/>
+        <path class="leaf" d="M25 58 C24 42 25.5 22 32 6 C38.5 22 40 42 39 58 Z"/>
+        <rect class="base" x="13" y="58" width="38" height="4.5" rx="2.25"/>
+      </svg>
+      <div class="topbar__title">Ilê Axé <span>Map</span></div>
+    </div>
     <div class="topbar__count" id="count-badge" aria-live="polite">—</div>
     <div class="topbar__spacer"></div>
     <button class="topbar__btn" id="theme-btn" type="button" aria-label="Alternar tema" title="Tema">◐</button>
