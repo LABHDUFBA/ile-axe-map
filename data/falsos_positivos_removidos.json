@@ -1,0 +1,2500 @@
+{
+  "removidos": [
+    {
+      "nome": "Monumento Mãe Gilda de Ogum",
+      "fonte": "osm",
+      "razao": "KW: monumento"
+    },
+    {
+      "nome": "Riachao do Jacuipe/Ba.",
+      "fonte": "google",
+      "razao": "KW: riachao do jacuipe"
+    },
+    {
+      "nome": "PREFEITURA DE ITAJU DO COLÔNIA",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Poço Halley",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Praia de Lençóis",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Hotel de Lençóis",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Poço do Diabo",
+      "fonte": "google",
+      "razao": "KW: poço do diabo"
+    },
+    {
+      "nome": "Lençóis Trekking - Chapada Diamantina",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Cachoeira do Sossego",
+      "fonte": "google",
+      "razao": "KW: cachoeira do"
+    },
+    {
+      "nome": "Lençóis Airport - Coronel Horácio de Matos-SBLE",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Hotel Canto das Águas",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Beco dos Encantos - Nova Viçosa",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Ilha Coroa Vermelha",
+      "fonte": "google",
+      "razao": "KW: ilha coroa"
+    },
+    {
+      "nome": "Praia em Nova Viçosa",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Cabana Oxe - Barraca de Praia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "São José da vitória",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "City of New Várzea",
+      "fonte": "google",
+      "razao": "KW: city of"
+    },
+    {
+      "nome": "Varzea do poço BAHIA",
+      "fonte": "google",
+      "razao": "KW: varzea do poço"
+    },
+    {
+      "nome": "Xique xique bahia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Grande Rio Hotel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Igreja Universal",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Centro Espírita Obreiros do Porvir",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Centro Espírita Recanto de Luz",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Centro Espírita Seareiros Da Luz",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Quilombo Zizi de Zeca",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Candombá Restaurante",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Lar Espírita Maria De Nazaré - LEMANA",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Hotel Jurema",
+      "fonte": "google",
+      "razao": "KW: hotel"
+    },
+    {
+      "nome": "Igreja do Evangelho Quadrangular",
+      "fonte": "google",
+      "razao": "KW: igreja do evangelho"
+    },
+    {
+      "nome": "Fucabase",
+      "fonte": "google",
+      "razao": "Município BA"
+    },
+    {
+      "nome": "Aldeia Filhos de Tupinambá",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Tope",
+      "fonte": "google",
+      "razao": "KW: casa de tope"
+    },
+    {
+      "nome": "Prefeitura Municipal de São Felipe",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "casa do pé da cajá!",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Prefeitura de Teodoro Sampaio",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "mar grande, vera cruz",
+      "fonte": "google",
+      "razao": "KW: mar grande"
+    },
+    {
+      "nome": "Mercadinho Santos (Casa do Geladão)",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casas Bahia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Oração Irmãos em Cristo",
+      "fonte": "google",
+      "razao": "KW: casa de oração irm"
+    },
+    {
+      "nome": "Loteria Elinoel de Faro Santos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Atacadão - Alagoinhas",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Loja Maçônica 25 Dezembro",
+      "fonte": "google",
+      "razao": "KW: maçônica"
+    },
+    {
+      "nome": "Hospital Alagoinhas",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa da Paz Igreja do Santo Daime",
+      "fonte": "google",
+      "razao": "KW: casa da paz igreja"
+    },
+    {
+      "nome": "La Casa de Pastel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Antônio",
+      "fonte": "google",
+      "razao": "KW: casa de antônio"
+    },
+    {
+      "nome": "Casa Triunfante - Artigos Religiosos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Santos Divino",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "São Miguel Arcanjo ️ - Artigos Religiosos em Barreiras",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Comunidade Casa de Oração",
+      "fonte": "google",
+      "razao": "KW: casa de oração"
+    },
+    {
+      "nome": "Enxovais Monte Santo",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Belmonte Lighthouse",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Praia de Belmonte",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Abrigo Sao Vicente De Paulo",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Loja Maçônica União e Sigilo",
+      "fonte": "google",
+      "razao": "KW: maçônica"
+    },
+    {
+      "nome": "Casa da construção - Material de construção, Elétrico, Hidráulico e Tintas",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa das Telhas - Madeireira e Material de Construção",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Hotel São Lázaro - Brumado",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Padaria União Santos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Buerarema",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Fazenda Espelho D'água",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Park History Castro Alves",
+      "fonte": "google",
+      "razao": "KW: park history"
+    },
+    {
+      "nome": "House Of House And Chain Waterfall - Museum",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Hostel Casa de Avany",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Church of the Third Order of Mount Carmel",
+      "fonte": "google",
+      "razao": "KW: church of the third"
+    },
+    {
+      "nome": "Casa do Morro",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Convento Santo Antônio",
+      "fonte": "google",
+      "razao": "KW: convento"
+    },
+    {
+      "nome": "Casa de Mãe",
+      "fonte": "google",
+      "razao": "KW: casa de mãe"
+    },
+    {
+      "nome": "Diocesan Center John Paul II",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Gilmara Santos CASA",
+      "fonte": "google",
+      "razao": "KW: gilmara santos"
+    },
+    {
+      "nome": "CASA DE CECÍLIA",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Sitio Histórico Governador Paulo Souto",
+      "fonte": "google",
+      "razao": "KW: sitio histórico"
+    },
+    {
+      "nome": "Casa de Júlia",
+      "fonte": "google",
+      "razao": "KW: casa de júlia"
+    },
+    {
+      "nome": "Santuário Nossa Senhora das Candeias",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Pneus Ibiapina",
+      "fonte": "google",
+      "razao": "KW: casa de pneu"
+    },
+    {
+      "nome": "PAX SANTOS",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Parish Our Lady of Candeias",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Frios Vitória",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa De Jaci QG #CoisadeAurea",
+      "fonte": "google",
+      "razao": "KW: casa de jaci"
+    },
+    {
+      "nome": "Rosangela",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "HOSPITAL MUNICIPAL DE CANDEIAS",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Restaurante Casa Delivery",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Co-Catedral Santo Antônio",
+      "fonte": "google",
+      "razao": "KW: co-catedral"
+    },
+    {
+      "nome": "Casa próximo comercial Santos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Mascarenhas",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa 27 - Centro de Castro Alves",
+      "fonte": "google",
+      "razao": "KW: casa 27"
+    },
+    {
+      "nome": "Conceição do Jacuípe ba",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Paróquia Nossa Senhora da Conceição do Jacuípe",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Congregação Cristã no Brasil - Fazenda Oitizeiro",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Pousada Bella Casa",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Oliveira",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Meat House",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "O Sabor_ Casa de Queijos & Frios",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Projeto Social Coração de Maria",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Mariense Caixa Aqui",
+      "fonte": "google",
+      "razao": "KW: caixa aqui"
+    },
+    {
+      "nome": "Santa Casa de Misericórdia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa das Embalagens",
+      "fonte": "google",
+      "razao": "KW: casa das embalagens"
+    },
+    {
+      "nome": "São João de Cruz das Almas",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Loja Reino de Ayrà e Osun",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Bichinhos de Casa | Pet Shop - Dias d'Ávila",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Do Tempero",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "IGREJA CASA DE ORAÇÃO TABERNACULO SANTO",
+      "fonte": "google",
+      "razao": "KW: casa de oração"
+    },
+    {
+      "nome": "Casa Lotérica Santos Dumont",
+      "fonte": "google",
+      "razao": "KW: casa lotérica"
+    },
+    {
+      "nome": "Casa Popular",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Quintal de Casa | Choperia e Petiscaria",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Campo Santo Cemitério Parque",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa das Bebidas",
+      "fonte": "google",
+      "razao": "KW: casa das bebidas"
+    },
+    {
+      "nome": "Sabor da Casa",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "San Antonio house",
+      "fonte": "google",
+      "razao": "KW: san antonio house"
+    },
+    {
+      "nome": "Prefeitura Municipal de Floresta azul",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa do Adubo Gandu - Fertilizantes e Defensivos",
+      "fonte": "google",
+      "razao": "KW: casa do adubo"
+    },
+    {
+      "nome": "Pousada HS",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Memorial Casa De Dona Dedé",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Nossa Casa Church",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Aeroporto Municipal de Guanambi - Isaac Moura Rocha",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa do Led",
+      "fonte": "google",
+      "razao": "KW: casa do led"
+    },
+    {
+      "nome": "Comercial Santos Dumont",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Rações JVN",
+      "fonte": "google",
+      "razao": "KW: casa de rações"
+    },
+    {
+      "nome": "Casa de Carnes Premium Grill",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Pousada Bandeirante",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Carne Premium",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "SAC Municipal de Guanambi",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Hotel Sul Bahia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "University Center From Guanambi",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "LUAR",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Supermercado Santos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Flour House",
+      "fonte": "google",
+      "razao": "KW: flour house"
+    },
+    {
+      "nome": "Casa do Som Brasil",
+      "fonte": "google",
+      "razao": "KW: casa do som"
+    },
+    {
+      "nome": "Casa Worship Ilhéus",
+      "fonte": "google",
+      "razao": "KW: casa worship"
+    },
+    {
+      "nome": "Residência Fazenda Santo Antônio",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Terminal Rodoviário de Ilhéus",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "San Francisco Church",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "BRUNO SANTOS - Corretor e Avaliador de Imóveis",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "San Sebastian Cathedral",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Vini Áudio Tec – Instalação de Som em Ilhéus e região",
+      "fonte": "google",
+      "razao": "KW: vini áudio"
+    },
+    {
+      "nome": "Hospital São José",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Design",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Cida",
+      "fonte": "google",
+      "razao": "KW: casa de cida"
+    },
+    {
+      "nome": "Hotel Rio De Contas",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Adriana Imobiliária",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Igreja de Sant'Ana",
+      "fonte": "google",
+      "razao": "KW: igreja de sant"
+    },
+    {
+      "nome": "Igreja Matriz Senhora Sant'Ana",
+      "fonte": "google",
+      "razao": "KW: igreja matriz"
+    },
+    {
+      "nome": "Loteria Sonho Real Santos 2000",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa De Apoio Santa Dulce Dos Pobres",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa do Pintor",
+      "fonte": "google",
+      "razao": "KW: casa do pintor"
+    },
+    {
+      "nome": "Casa De Oração Maria De Nazaré",
+      "fonte": "google",
+      "razao": "KW: casa de oração maria"
+    },
+    {
+      "nome": "Casa do Cimento",
+      "fonte": "google",
+      "razao": "KW: casa do cimento"
+    },
+    {
+      "nome": "Casa do Construtor - Aluguel de Equipamentos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa dos Radiadores",
+      "fonte": "google",
+      "razao": "KW: casa dos radiadores"
+    },
+    {
+      "nome": "Roman Catholic Diocese of Irecê",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Comercial Carvalho",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Ideal Veículos e Casa do Parabrisa",
+      "fonte": "google",
+      "razao": "KW: casa do parabrisa"
+    },
+    {
+      "nome": "Eletrosantos Electronic Components",
+      "fonte": "google",
+      "razao": "KW: eletrosantos"
+    },
+    {
+      "nome": "casa da pessoa mais bonita do mundo",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "CEMITÉRIO CAMPO SANTO",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Do Vergalhão",
+      "fonte": "google",
+      "razao": "KW: casa do vergalhão"
+    },
+    {
+      "nome": "CASA & CONSTRUÇÃO",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Praça Santo Antônio",
+      "fonte": "google",
+      "razao": "KW: praça"
+    },
+    {
+      "nome": "CASA DE COSTURA",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Residencial Casa Da Praia Itacaré",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Arcádia Aluguel de Temporada Itacaré Bahia - 22 Hóspedes, Piscina, 5 Suítes, Churrasqueira | Vacation Home Villa Rental",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Flor Itacaré - aluguel temporada",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Fluir Espaço Cultural e Bar",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Abade - Itacaré",
+      "fonte": "google",
+      "razao": "KW: casa abade"
+    },
+    {
+      "nome": "Pousada Casa Mineira",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Pousada Zazá",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Condomínio Villas de São José",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Júnior Andrade",
+      "fonte": "google",
+      "razao": "KW: casa júnior andrade"
+    },
+    {
+      "nome": "Casa de cultura Junot Matos de Santana",
+      "fonte": "google",
+      "razao": "KW: casa de cultura"
+    },
+    {
+      "nome": "Bazar Santo Antonio",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "CASA DE CARNES SANTOS",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Paróquia Nossa Senhora do Rosário de Itapitanga",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Isaque santos",
+      "fonte": "google",
+      "razao": "KW: casa de isaque"
+    },
+    {
+      "nome": "Casa Tobias",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Matrix Square",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Alto do Cruzeiro",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "City of Jacobina",
+      "fonte": "google",
+      "razao": "KW: city of"
+    },
+    {
+      "nome": "Loteamento Morro do Ouro",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Fogos Santo Antônio",
+      "fonte": "google",
+      "razao": "KW: casa de fogos"
+    },
+    {
+      "nome": "Santa Casa de Jequié",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Vila Temão",
+      "fonte": "google",
+      "razao": "KW: vila temão"
+    },
+    {
+      "nome": "João Dourado",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa De Apoio Chorrochó-Bahia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Verde",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Nova",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Diocesan Cathedral of Our Lady of caves",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "CASA DE APOIO PILÃO ARCADO",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa do Queijo e Frios",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Mateus",
+      "fonte": "google",
+      "razao": "KW: casa de mateus"
+    },
+    {
+      "nome": "Casa do Bolsa Família",
+      "fonte": "google",
+      "razao": "KW: casa do bol"
+    },
+    {
+      "nome": "loja São Bento Fabricante de Artigos Religiosos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Defensoria Pública do Estado da Bahia",
+      "fonte": "google",
+      "razao": "KW: defensoria"
+    },
+    {
+      "nome": "Tok Essências e Ervas",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Palácio das Artes e Essências - Parque Shopping Bahia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa do Construtor Lauro de Freitas/BA - Aluguel de Equipamentos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Atacadão - Lauro de Freitas Caji",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Dez",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Pousada Casa de Charme Lençóis",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Serra Do Salto em Licínio de Almeida BA",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Luz da Vida Artigos Religiosos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa da Ferramenta",
+      "fonte": "google",
+      "razao": "KW: casa da ferramenta"
+    },
+    {
+      "nome": "Chapel St. Anthony",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "CASA DO INSTALADOR",
+      "fonte": "google",
+      "razao": "KW: casa do instalador"
+    },
+    {
+      "nome": "Casa Neia Santos Clínica de Estética - Bahia",
+      "fonte": "google",
+      "razao": "KW: casa neia"
+    },
+    {
+      "nome": "Mercadona Mercado Da Dona De Casa",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Hotel Saint Louis",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Rota de Casa Adega e Distribuidora de Bebidas",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Efatá Casa de Carnes",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa do Crochê e cia e Tiane Variedades",
+      "fonte": "google",
+      "razao": "KW: casa do crochê"
+    },
+    {
+      "nome": "Comunidade Católica Divino Espírito Santo",
+      "fonte": "google",
+      "razao": "KW: comunidade católica"
+    },
+    {
+      "nome": "Casas Baiana",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Bianca filha",
+      "fonte": "google",
+      "razao": "KW: casa de bianca"
+    },
+    {
+      "nome": "Casa Do Bolo",
+      "fonte": "google",
+      "razao": "KW: casa do bol"
+    },
+    {
+      "nome": "Matriz Paróquia Nossa Senhora Aparecida",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Madre de Deus - Ba",
+      "fonte": "google",
+      "razao": "KW: madre de deus"
+    },
+    {
+      "nome": "Mother Of God Of Orla",
+      "fonte": "google",
+      "razao": "KW: orla"
+    },
+    {
+      "nome": "Terminal Marítimo de Madre de Deus",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Água Mineral J.Santos",
+      "fonte": "google",
+      "razao": "KW: água mineral"
+    },
+    {
+      "nome": "Hotel Beira Mar",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Pousada Vitória",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Funeraria Deus Conosco",
+      "fonte": "google",
+      "razao": "KW: funeraria"
+    },
+    {
+      "nome": "Capela de Santo Antônio da Aldeia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Paroquial de Maragogipe",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Mariano",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Santo Mascote Pet Shop",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Mata de São João",
+      "fonte": "google",
+      "razao": "KW: mata de são joão"
+    },
+    {
+      "nome": "Serra Da Santa Cruz Preservada - Monte Santo",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Santuário da Santa Cruz de Monte Santo",
+      "fonte": "google",
+      "razao": "KW: santuário da santa cruz"
+    },
+    {
+      "nome": "Museu do Sertão, Monte Santo - BA.",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de residência",
+      "fonte": "google",
+      "razao": "KW: casa de residência"
+    },
+    {
+      "nome": "Capela Da Serra",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "serapião",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa De Atendimento Ao Turista",
+      "fonte": "google",
+      "razao": "KW: casa de atendimento"
+    },
+    {
+      "nome": "restaurante casa nordestina",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa da Pizza Três Irmãos",
+      "fonte": "google",
+      "razao": "KW: casa da pizza"
+    },
+    {
+      "nome": "Lira",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "MADEIREIRA SOUSA E MATERIAL DE CONSTRUÇÃO",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Vasconcelos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Morro do Chapéu",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "UNIVERSAL CHURCH",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa di Vó - hospedagem e condução turística",
+      "fonte": "google",
+      "razao": "KW: casa di vó"
+    },
+    {
+      "nome": "Pousada Santo Antônio",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Villa Matilde - Casas de Temporada",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Pousada Recanto da Chapada",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Branca Hotel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Cultura Rio Fundo",
+      "fonte": "google",
+      "razao": "KW: casa de cultura"
+    },
+    {
+      "nome": "Casa de dona Maria",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "City of New Ibiá",
+      "fonte": "google",
+      "razao": "KW: city of"
+    },
+    {
+      "nome": "Ruínas da Igreja Nova",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Secretaria Paroquial Nossa Senhora Mãe de Deus e dos Homens",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Paratinga Sucesso",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Igreja Matriz de Santo Antônio",
+      "fonte": "google",
+      "razao": "KW: igreja matriz"
+    },
+    {
+      "nome": "Bate Papo Restaurante e Eventos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Pé de Serra",
+      "fonte": "google",
+      "razao": "KW: pé de serra"
+    },
+    {
+      "nome": "Igreja Matriz Nossa Senhora da Conceição",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Maison Piatã",
+      "fonte": "google",
+      "razao": "KW: maison"
+    },
+    {
+      "nome": "Igreja Da Antiga Pilão Arcado",
+      "fonte": "google",
+      "razao": "KW: igreja da antiga"
+    },
+    {
+      "nome": "Piraí do Norte",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "ponto novo Bahia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Santo Hostel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "CASA BATEIA",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Bahia de Todos os Santos - Entire Place",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de caçula",
+      "fonte": "google",
+      "razao": "KW: casa de caçula"
+    },
+    {
+      "nome": "Quijingue",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Rafael Jambeiro",
+      "fonte": "google",
+      "razao": "KW: rafael jambeiro"
+    },
+    {
+      "nome": "St. Antônio de Pádua Parish",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Espaço Católico Sagrada Família",
+      "fonte": "google",
+      "razao": "KW: espaço católico"
+    },
+    {
+      "nome": "Pousada Santos Ribeira Do Pombal",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de plantas Dulce & Maria",
+      "fonte": "google",
+      "razao": "KW: casa de plantas"
+    },
+    {
+      "nome": "Centro Espírita Irmão Salustiano",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Santos & Santos | Advogados Associados",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Campo Senhora Santana",
+      "fonte": "google",
+      "razao": "KW: casa de campo"
+    },
+    {
+      "nome": "Fazenda Vaccaro - Hospedagem camponesa em Rio de Contas BA",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Igreja de Senhora Sant'Ana",
+      "fonte": "google",
+      "razao": "KW: igreja de senhora"
+    },
+    {
+      "nome": "Santa Casa Misericórdia Ruy Barbosa",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Fundação Casa de Rui Barbosa",
+      "fonte": "google",
+      "razao": "KW: fundação"
+    },
+    {
+      "nome": "Diocese de Ruy Barbosa",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "A Casa do Espanto",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa do Carnaval da Bahia",
+      "fonte": "google",
+      "razao": "KW: casa do carnaval"
+    },
+    {
+      "nome": "Foundation Casa de Jorge Amado",
+      "fonte": "google",
+      "razao": "KW: casa de jorge amado"
+    },
+    {
+      "nome": "Ateliê Casa 9",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "a Casa do Rio Vermelho",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Santa Casa da Bahia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Artesanatos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Vila de Santo André",
+      "fonte": "google",
+      "razao": "KW: vila de santo andré"
+    },
+    {
+      "nome": "Fundação Espírita Casa de Jesus",
+      "fonte": "google",
+      "razao": "KW: fundação"
+    },
+    {
+      "nome": "Praia de Santo Antônio - Santa Cruz Cabrália",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Balsa Cabrália - Santo André",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Balsa de Santo André x Cabrália",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Mirante centro historico",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Cacau Bahia",
+      "fonte": "google",
+      "razao": "KW: casa cacau"
+    },
+    {
+      "nome": "Atacadão Santos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Santa Maria da Vitória",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa de Júnior e Zene",
+      "fonte": "google",
+      "razao": "KW: casa de júnior"
+    },
+    {
+      "nome": "Hotel Fazenda Casa Forte",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa das Antenas",
+      "fonte": "google",
+      "razao": "KW: casa das antenas"
+    },
+    {
+      "nome": "Hotel Casa Grande",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Shop St. Anthony",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Mais Fácil | Santo Antônio de Jesus",
+      "fonte": "google",
+      "razao": "KW: casa mais fácil"
+    },
+    {
+      "nome": "Hospital Santo Antônio",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa das Sandálias",
+      "fonte": "google",
+      "razao": "KW: casa das sandálias"
+    },
+    {
+      "nome": "Pousada Lua de Pedra",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Funerária Santo Antônio",
+      "fonte": "google",
+      "razao": "KW: funerária"
+    },
+    {
+      "nome": "Basílica do Senhor do Bonfim",
+      "fonte": "google",
+      "razao": "KW: basílica"
+    },
+    {
+      "nome": "Hospital Municipal Dom Antonio Monteiro",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "OAB-BA Ordem dos Advogados do Brasil Subseção Senhor do Bonfim",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Loteamento Colinas de Bonfim",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Loja Verdes Mares Senhor do Bonfim",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Sento Sé",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Serra Dourada",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "City of Serra Preta",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Ramalho - Móveis e Eletrodomésticos",
+      "fonte": "google",
+      "razao": "KW: casa ramalho"
+    },
+    {
+      "nome": "Catedral Senhora Santana - Serrinha",
+      "fonte": "google",
+      "razao": "KW: catedral senhora"
+    },
+    {
+      "nome": "Shopping Serrinha",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Lar da Serenidade - Casa para idosos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa da Fruta Verdura",
+      "fonte": "google",
+      "razao": "KW: casa da fruta"
+    },
+    {
+      "nome": "Casa de retiro Monte Ascenção",
+      "fonte": "google",
+      "razao": "KW: casa de retiro"
+    },
+    {
+      "nome": "Simões Filho Bahia",
+      "fonte": "google",
+      "razao": "KW: simões filho"
+    },
+    {
+      "nome": "Prefeitura Municipal de Sítio do Mato",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Igreja Católica",
+      "fonte": "google",
+      "razao": "KW: igreja católica"
+    },
+    {
+      "nome": "Prefeitura Municipal de Sátiro Dias",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "São Desidério",
+      "fonte": "google",
+      "razao": "KW: são desidério"
+    },
+    {
+      "nome": "Prefeitura Municipal de São Domingos - Bahia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Igreja e Convento de Santo Antônio",
+      "fonte": "google",
+      "razao": "KW: igreja e convento"
+    },
+    {
+      "nome": "Santa Casa De São Felix",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Prefeitura Municipal de São Gabriel - Bahia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Matecol - São Miguel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Câmara Municipal de Tabocas do Brejo Velho",
+      "fonte": "google",
+      "razao": "KW: câmara municipal"
+    },
+    {
+      "nome": "Tanhaçu",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Tanquinho, Bahia",
+      "fonte": "google",
+      "razao": "KW: tanquinho"
+    },
+    {
+      "nome": "Monte De Tanquinho",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Tapiramutá",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "CASA TUCANO",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Pousada San Filé",
+      "fonte": "google",
+      "razao": "KW: pousada"
+    },
+    {
+      "nome": "Honório Pousada",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Pousada Pé De Arruda",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Hotel do Jorro",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Caldas Palace Hotel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Uauá",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Varejão São Roque",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Umburanas - Bahia",
+      "fonte": "google",
+      "razao": "KW: umburanas"
+    },
+    {
+      "nome": "Casa Valença",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Nossa Senhora Aparecida",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa Mais Fácil | Valença 01",
+      "fonte": "google",
+      "razao": "KW: casa mais fácil"
+    },
+    {
+      "nome": "Atacadão - Valença",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "CASA DE VELAS JARDIM DE CIMA",
+      "fonte": "google",
+      "razao": "KW: casa de velas"
+    },
+    {
+      "nome": "Casa de Antônia Fernandes Santos Silva década 1930",
+      "fonte": "google",
+      "razao": "KW: casa de antônia"
+    },
+    {
+      "nome": "Cantinho do Cristão",
+      "fonte": "google",
+      "razao": "KW: cantinho do cristão"
+    },
+    {
+      "nome": "Monument To Indian",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Casa da Sopa",
+      "fonte": "google",
+      "razao": "KW: casa da sopa"
+    },
+    {
+      "nome": "Pousada Varzeana",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Gruta de Nossa Senhora da Soledade",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Bar elite Ibirapuã",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Centro Espírita Irmandade Universalista",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Centro Espírita \"O Caminho\"",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "CENTRO ESPÍRITA JOVELINO CONCEIÇÃO - ITORORÓ - BA",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Grupo Espírita Cruzada do Bem",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Ceak",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Centro Espírita Lar de Amor Anjo Gabriel",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Secal - Sociedade Espírita Caminho de Luz",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Centro Kardecista \"Nosso Lar\"",
+      "fonte": "google",
+      "razao": "KW: centro kardecista"
+    },
+    {
+      "nome": "Casa Espírita Francisco Cândido Xavier - CEFRAN",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Escola Municipal Manoel Fidelis Da Silva",
+      "fonte": "google",
+      "razao": "KW: escola municipal"
+    },
+    {
+      "nome": "Congregação Cristã no Brasil - Central - QUADRA 20",
+      "fonte": "google",
+      "razao": "KW: congregação cristã"
+    },
+    {
+      "nome": "Centro Espírita Jesus Nosso Mestre",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Fundação Chico Xavier",
+      "fonte": "google",
+      "razao": "KW: fundação"
+    },
+    {
+      "nome": "Centro Espírita Coroa de Luz",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Centro Espírita Deus Cristo e Caridade",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Sítio Raio de Luz - Aldeia Pena Verde",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Barbearia Deleão",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Centro Espírita Pena Branca Nossa Casa da Prece",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Conceição da Feira Prefecture",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Itaparica - Praia do Forte",
+      "fonte": "google",
+      "razao": "KW: praia"
+    },
+    {
+      "nome": "Orla de Itaparica",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Playa De Itaparica",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Fonte da Bica",
+      "fonte": "google",
+      "razao": "KW: fonte da bica"
+    },
+    {
+      "nome": "Coroa do Limo",
+      "fonte": "google",
+      "razao": "KW: coroa do limo"
+    },
+    {
+      "nome": "Pousada Eclipse",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Marina Itaparíca",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Hotel Rio Acarai",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "VLT - Parada Ilha de São João",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Ilha 9 Coworking",
+      "fonte": "google",
+      "razao": "KW: ilha 9"
+    },
+    {
+      "nome": "Condomínio Ilha de Bali",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Alagoinhas ba",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Ilha de Santorini",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Condomínio Ilha de Capri Alagoinhas",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Residencial Ilha de Ibiza",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Saubara",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Orla de São Francisco do Conde",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Terminal Fluvial de Valença",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Estacionamento Deu Onda",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Hotel SESI Valença",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Ilha Grande",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Passarela Ilha Do Jegue",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Terminal Rodoviário de Itabuna",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Shopping Jequitibá",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Comunidade Ilha Verde",
+      "fonte": "google",
+      "razao": "KW: ilha verde"
+    },
+    {
+      "nome": "Ilhéus Airport",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Jorge Amado Airport",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Cabana Ilha De Ilhéus",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Ilhéus Hotel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Ilha do Frade",
+      "fonte": "google",
+      "razao": "KW: ilha do frade"
+    },
+    {
+      "nome": "Porto Seco de Ilhéus",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Mirante da Piedade",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Ilha Pedra de Ilhéus",
+      "fonte": "google",
+      "razao": "KW: ilha pedra"
+    },
+    {
+      "nome": "Ayla Praia Hotel Centro Porto Seguro",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Pousada Tapuia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Porto Seguro Praia Resort All Inclusive",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Safe Harbor Lighthouse",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Condomínio Ilha Bela",
+      "fonte": "google",
+      "razao": "KW: ilha bela"
+    },
+    {
+      "nome": "Vitória da conquista bahia",
+      "fonte": "google",
+      "razao": "KW: vitória da conquista bahia"
+    },
+    {
+      "nome": "Residencial Ilha di Capri",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Cristo de Mário Cravo",
+      "fonte": "google",
+      "razao": "KW: cristo de mário"
+    },
+    {
+      "nome": "Lord Pousada & Restaurante",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Ilha Lesbos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Teixeirinha",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Ilha society fest",
+      "fonte": "google",
+      "razao": "KW: ilha society"
+    },
+    {
+      "nome": "Ilha das Corredeiras",
+      "fonte": "google",
+      "razao": "KW: ilha das corredeiras"
+    },
+    {
+      "nome": "Divisa de Estados: Pernambuco / Bahia",
+      "fonte": "google",
+      "razao": "KW: divisa de estados"
+    },
+    {
+      "nome": "Ilha Nossa Senhora",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Orla II - Juazeiro",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Ilha do Urubu - Paulo Afonso Bahia - Brasil",
+      "fonte": "google",
+      "razao": "KW: ilha do urubu"
+    },
+    {
+      "nome": "Lago de Paulo Afonso",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Site iGuanambi",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Nicó Palace Hotel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Ilha do Ouro Condomínio Residence",
+      "fonte": "google",
+      "razao": "KW: ilha do ouro"
+    },
+    {
+      "nome": "Quilombo Erê",
+      "fonte": "google",
+      "razao": "KW: quilombo erê"
+    },
+    {
+      "nome": "Senhor do Bonfim Ba",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Maior Sanfona do Mundo",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Prefeitura Municipal de Senhor do Bonfim",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Gruta da Ressurreição",
+      "fonte": "google",
+      "razao": "KW: gruta da"
+    },
+    {
+      "nome": "Tempero Da Ilha",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Luis Eduardo Magalhaes Airport",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Hotel Columbia Luís Eduardo Magalhães",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Porto Center Hotel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Pak Suítes Hotel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Spring Island Lagoon",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "IEL Eunápolis",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Raio do Sol - Artigos Africanos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Igreja Messiânica Mundial do Brasil",
+      "fonte": "google",
+      "razao": "KW: igreja messiânica"
+    },
+    {
+      "nome": "Afro-Brazilian Museum UFBA",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Cultural Afro Brazilian Museum",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Foundation Terra Mirim",
+      "fonte": "google",
+      "razao": "KW: foundation"
+    },
+    {
+      "nome": "Centro Cultural da Irmandade de Nossa Senhora da Boa Morte",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Taize Community Alagoinhas",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Centro de Espiritualidade Santa Tereza (Diocese de Serrinha)",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Centro Espírita Consolação dos Aflitos",
+      "fonte": "google",
+      "razao": "KW: espírita"
+    },
+    {
+      "nome": "Gruta De Belém",
+      "fonte": "google",
+      "razao": "KW: gruta de"
+    },
+    {
+      "nome": "TerLuz",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Massapê Artesanato de Raiz",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Embasa, Santo Amaro",
+      "fonte": "google",
+      "razao": "KW: embasa"
+    },
+    {
+      "nome": "ADESA - Assembleia de Deus em Santo Amaro",
+      "fonte": "google",
+      "razao": "KW: assembleia de deus"
+    },
+    {
+      "nome": "Fazenda Cassinum",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Muritiba-Ba",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Culture Center",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Alagoinhas Prefecture",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Absa Locações",
+      "fonte": "google",
+      "razao": "KW: absa loc"
+    },
+    {
+      "nome": "ABSA Limpa fossa",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "EMBASA - Unidade Regional de Santo Antônio de Jesus",
+      "fonte": "google",
+      "razao": "KW: embasa"
+    },
+    {
+      "nome": "Praça do Bosque",
+      "fonte": "google",
+      "razao": "KW: praça"
+    },
+    {
+      "nome": "City of Amargosa",
+      "fonte": "google",
+      "razao": "KW: city of"
+    },
+    {
+      "nome": "CÂMARA MUNICIPAL DE SÃO FRANCISCO DO CONDE",
+      "fonte": "google",
+      "razao": "KW: câmara municipal"
+    },
+    {
+      "nome": "Serra do Abiá",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "ESTRELA DALVA CENTRO HOTEL",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Kûara Hotel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Eco Bahia Hotel Porto Seguro",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Balsa de Arraial d'Ajuda x Porto Seguro, Atendimento ao Turista, Reclamações e Sugestões, Gastronômica, Mercado",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Portal Beach Hotel - Rede Soberano",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Aysú Trancoso Hotel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "High City (historic city)",
+      "fonte": "google",
+      "razao": "KW: high city"
+    },
+    {
+      "nome": "Arraial d'Ajuda Eco Resort",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Resort Arcobaleno All Inclusive",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Passarela do Descobrimento, do Álcool, da Cultura, Atendimento ao Turista, Reclamações e Sugestões, Gastronômicas e Mercado",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Village Mutá Apart Hotel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Porto Seguro Airport",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Ceasa Juazeiro",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Bethany Community Center",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Hotel Portal Guanambi",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Do Sahy mission",
+      "fonte": "google",
+      "razao": "KW: do sahy mission"
+    },
+    {
+      "nome": "EMBASA - Unidade Regional de Senhor do Bonfim",
+      "fonte": "google",
+      "razao": "KW: embasa"
+    },
+    {
+      "nome": "Casa Pedacinho do Morro",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Santuário Lapa Hotel",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Hotel Conceito",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Inpasa - Unidade Luís Eduardo Magalhães",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Eunapolis-BA",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Eunapolis Bahia",
+      "fonte": "google",
+      "razao": "KW: eunapolis bahia"
+    },
+    {
+      "nome": "Agazetabahia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Department of Social Services",
+      "fonte": "google",
+      "razao": "KW: department of social"
+    },
+    {
+      "nome": "Kasabella Acabamentos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "IGREJA BATISTA CANAA - EUNAPOLIS",
+      "fonte": "google",
+      "razao": "KW: igreja batista"
+    },
+    {
+      "nome": "Lazo Industria de Cosméticos",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Inove Oftalmologia",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Enersol Brasil | Energia Solar | Lauro de Freitas",
+      "fonte": "google",
+      "razao": "KW: enersol"
+    },
+    {
+      "nome": "Shopping Center Candeias",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "JUNIOR SOM",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "ENTRONCAMENTO",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "Cachoeira do Villa Rial",
+      "fonte": "google",
+      "razao": "Lista FP scan"
+    },
+    {
+      "nome": "IBGE - Cachoeira",
+      "fonte": "google",
+      "razao": "KW: ibge"
+    }
+  ],
+  "total": 499
+}
