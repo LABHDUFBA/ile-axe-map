@@ -1,0 +1,47 @@
+{
+  "versao": "2.0",
+  "criterio": "CEAO completo como fonte primária; Google, OSM e SEFAZ preservados como complementares",
+  "total_registros": 2102,
+  "total_georreferenciados": 1868,
+  "fontes": {
+    "ceao": 1155,
+    "google": 693,
+    "osm": 20,
+    "sefaz": 234
+  },
+  "fontes_georreferenciadas": {
+    "ceao": 1155,
+    "google": 693,
+    "osm": 20
+  },
+  "classificacao_mapa": {
+    "Ketu": 807,
+    "Não informado": 616,
+    "Angola": 293,
+    "Umbanda": 74,
+    "Jeje": 34,
+    "Outras declarações": 23,
+    "Candomblé": 21
+  },
+  "reconciliacao_ceao": {
+    "extraidos": 1155,
+    "representados": 1155,
+    "ids_unicos": 1155,
+    "presentes_na_v1": 682,
+    "adicionados_na_v2": 473,
+    "ausentes": 0
+  },
+  "seguranca": {
+    "v1_preservada": true,
+    "arquivos_v2": [
+      "terreiros_all_sources_v2.json",
+      "terreiros_v2.geojson"
+    ]
+  },
+  "revisao_humana": {
+    "arquivo": "revisao_humana_nacao_v2.csv",
+    "amostra": 220,
+    "status": "pendente",
+    "criterio": "todas as Outras declarações, todos os rótulos compostos e amostra de até 10 registros por categoria"
+  }
+}
