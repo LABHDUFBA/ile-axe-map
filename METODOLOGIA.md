@@ -239,10 +239,50 @@ terreiro-map/
 
 ---
 
-## 8. Como Citar
+## 8. Reprodutibilidade
 
-> FONSECA, Leonardo N. **Mapeamento de Terreiros de Candomblé da Bahia.** LABHD/UFBA, 2026. Disponível em: https://labhdufba.github.io/terreiro-map/. Acesso em: [data].
+| Item | Valor |
+|---|---|
+| **Versão do dataset** | v1.0 |
+| **Data de extração** | 25 de julho de 2026 |
+| **Commit hash** | Disponível em `git log` do repositório |
+| **Repositório** | [github.com/LABHDUFBA/terreiro-map](https://github.com/LABHDUFBA/terreiro-map) |
+| **GeoJSON** | `data/terreiros.geojson` (1.924 features) |
+| **JSON completo** | `data/terreiros_all_sources.json` (2.158 registros) |
+| **DOI** | Pendente (Zenodo — a ser registrado) |
+
+O dataset é versionado. Cada release do repositório corresponde a uma versão do mapa. Para citar uma versão específica, indique o commit hash ou tag de release.
 
 ---
 
-*Nota elaborada em 25 de julho de 2026.*
+## 9. Consentimento e Precisão Locacional
+
+Terreiros de candomblé e outros espaços religiosos afro-brasileiros são alvo recorrente de intolerância e violência religiosa no Brasil. Os dados consolidados neste projeto são de **fontes públicas** (CEAO/UFBA, OpenStreetMap, Google Places, SEFAZ/Salvador), mas a agregação em uma interface consultável reduz o custo de coleta para agentes com má intenção.
+
+### Decisão atual (v1.0)
+
+Na versão atual, todas as coordenadas são precisas. Esta decisão baseia-se no fato de que:
+
+1. Os dados do CEAO e do OSM já são publicamente acessíveis individualmente.
+2. O mapa SEFAZ é documento público da Prefeitura de Salvador.
+3. O Google Places retorna resultados de busca pública.
+
+### Plano futuro (v2.0)
+
+Uma camada de consentimento está em desenvolvimento, com os seguintes critérios propostos:
+
+- **Terreiros tombados** (IPHAN, SPAC): coordenadas precisas, por serem patrimônio cultural protegido.
+- **Terreiros com presença pública prévia** (site próprio, Google Business, OSM editado pela casa): coordenadas precisas.
+- **Terreiros sem presença pública prévia e não tombados**: jitter de aproximadamente 200 metros ou agregação por setor censitário, mediante consentimento ou até que a casa manifeste preferência.
+
+Esta é uma decisão de projeto, não de design. Condiciona o layout do mapa e será implementada em versão futura.
+
+---
+
+## 10. Como Citar
+
+> FONSECA, Leonardo N. **Mapeamento de Terreiros de Candomblé da Bahia.** v1.0. LABHD/UFBA, 2026. Disponível em: https://labhdufba.github.io/terreiro-map/. Acesso em: [data].
+
+---
+
+*Nota elaborada em 25 de julho de 2026. Última atualização: 25 de julho de 2026.*
