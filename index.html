@@ -395,8 +395,10 @@
       const nacaoBody = nacaoGroup.querySelector('.filter-group__body');
 
       // Select-all checkbox
-      const allNacao = makeCheckbox('all-nacao', 'Todas', null, true, () => {
-        const checked = allNacao.checkbox.checked;
+      const allNacaoCbId = 'all-nacao';
+      const allNacao = makeCheckbox(allNacaoCbId, 'Todas', null, true, function() {
+        var cb = document.getElementById(allNacaoCbId);
+        var checked = cb.checked;
         if (checked) {
           activeNacao = new Set(categoryOrder.filter(c => features.some(f => f.properties._nacao === c)));
         } else {
@@ -411,8 +413,10 @@
       categoryOrder.filter(cat => features.some(f => f.properties._nacao === cat)).forEach(cat => {
         activeNacao.add(cat);
         const count = features.filter(f => f.properties._nacao === cat).length;
-        const opt = makeCheckbox('nac-' + cat, cat, colors[cat], true, () => {
-          if (opt.checkbox.checked) activeNacao.add(cat);
+        const cbId = 'nac-' + cat;
+        const opt = makeCheckbox(cbId, cat, colors[cat], true, function() {
+          var cb = document.getElementById(cbId);
+          if (cb.checked) activeNacao.add(cat);
           else activeNacao.delete(cat);
           syncAllCheckbox(allNacao, nacaoBody, 'cat');
           updateMarkers(); updateList();
@@ -432,8 +436,10 @@
       fonteGroup.innerHTML = '<div class="filter-group__title">Fonte</div><div class="filter-group__body"></div>';
       const fonteBody = fonteGroup.querySelector('.filter-group__body');
 
-      const allFonte = makeCheckbox('all-fonte', 'Todas', null, true, () => {
-        const checked = allFonte.checkbox.checked;
+      const allFonteCbId = 'all-fonte';
+      const allFonte = makeCheckbox(allFonteCbId, 'Todas', null, true, function() {
+        var cb = document.getElementById(allFonteCbId);
+        var checked = cb.checked;
         if (checked) {
           activeFonte = new Set(fonteOrder.filter(f => features.some(feat => getFonteLabel(feat.properties) === f)));
         } else {
@@ -448,8 +454,10 @@
       fonteOrder.filter(f => features.some(feat => getFonteLabel(feat.properties) === f)).forEach(fnt => {
         activeFonte.add(fnt);
         const count = features.filter(f => getFonteLabel(f.properties) === fnt).length;
-        const opt = makeCheckbox('fonte-' + fnt, fnt, fonteColors[fnt], true, () => {
-          if (opt.checkbox.checked) activeFonte.add(fnt);
+        const cbId = 'fonte-' + fnt;
+        const opt = makeCheckbox(cbId, fnt, fonteColors[fnt], true, function() {
+          var cb = document.getElementById(cbId);
+          if (cb.checked) activeFonte.add(fnt);
           else activeFonte.delete(fnt);
           syncAllCheckbox(allFonte, fonteBody, 'fonte');
           updateMarkers(); updateList();
