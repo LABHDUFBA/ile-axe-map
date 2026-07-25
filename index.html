@@ -498,8 +498,7 @@
         const nacao = item.feature.properties._nacao;
         const fonte = getFonteLabel(item.feature.properties);
         const show = activeNacao.has(nacao) && activeFonte.has(fonte);
-        const parent = item.element.parentElement;
-        if (parent) parent.style.display = show ? '' : 'none';
+        item.element.style.display = show ? '' : 'none';
         if (show) visible++;
       });
       $('count-badge').textContent = visible.toLocaleString('pt-BR') + ' terreiros';
