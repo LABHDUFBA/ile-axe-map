@@ -2638,32 +2638,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Ilê Axé - São Paulo Artigos Religiosos",
-      "lat": -23.6694852,
-      "lng": -46.64846060000001,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Cupecê, 3849 - Jardim Jabaquara, São Paulo - SP, 04365-001, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 668,
-      "geo_status": "out_of_bahia"
-    },
-    {
-      "nome": "Axé Ilê Obá",
-      "lat": -23.6602478,
-      "lng": -46.6363309,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Azor Silva, 77 - Vila Fachini, São Paulo - SP, 04326-010, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 79,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Casa de umbanda omolokô Pai Zé Pedro das cachoeiras",
       "lat": -12.1569012,
       "lng": -44.9862556,
@@ -3140,19 +3114,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Ilê Axé Efon Locy Ijefa",
-      "lat": -22.7815978,
-      "lng": -45.1758673,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Parte Baixa - R. Três, 173 - Chácaras Agricolas Beira Rio, Guaratinguetá - SP, 12517-620, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 10,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Ilê axé odê ofun Nzambi",
       "lat": -14.0670494,
       "lng": -39.6399267,
@@ -3242,19 +3203,6 @@
       "rating": 3.4,
       "reviews": 7,
       "geo_status": "in_bahia"
-    },
-    {
-      "nome": "Ilê Iyeiyeo Axé Odé Inlé",
-      "lat": -24.1230004,
-      "lng": -46.7831731,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Cel. Joaquim Branco - Jardim Aguapeu, Itanhaém - SP, 11740-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 41,
-      "geo_status": "out_of_bahia"
     },
     {
       "nome": "Ilê axé Iyá okun",
@@ -3478,19 +3426,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Ilê Axé Jitaloyá",
-      "lat": -5.6375687,
-      "lng": -35.4218397,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. José Pachêco Dantas, 103, Ceará-Mirim - RN, 59570-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 8,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Ilê Axé Opô Aganju",
       "lat": -12.8993759,
       "lng": -38.3120044,
@@ -3673,19 +3608,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Yle Axé Pilão Odara - Terreiro de Candomblé no Baronesa, São Benedito, Santa Luzia",
-      "lat": -19.7889222,
-      "lng": -43.9155082,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Gov. Israel Pinheiro, 237 - Baronesa, Santa Luzia - MG, 33170-060, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 23,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Ilê Axé Ajagun",
       "lat": -12.3847116,
       "lng": -41.7975846,
@@ -3822,19 +3744,6 @@
       "rating": 5,
       "reviews": 1,
       "geo_status": "in_bahia"
-    },
-    {
-      "nome": "Ilê Axé Zé do Coco da Bahia",
-      "lat": -23.5328277,
-      "lng": -46.6532355,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Barra Funda, 89 - Barra Funda, São Paulo - SP, 01152-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.6,
-      "reviews": 41,
-      "geo_status": "out_of_bahia"
     },
     {
       "nome": "ILÊ AXÉ YBÁ OROMIM",
@@ -4267,19 +4176,6 @@
       "rating": 4.9,
       "reviews": 2221,
       "geo_status": "in_bahia"
-    },
-    {
-      "nome": "Templo de Umbanda Bom Jesus da Lapa",
-      "lat": -21.4678,
-      "lng": -49.9391119,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "José Augusto Teixeira Pupo 170, Avanhandava - SP, 16360-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "out_of_bahia"
     },
     {
       "nome": "Bom jesus da Lapa Ba",
@@ -5121,19 +5017,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Terreiro de Umbanda Sagrada Oxum dos Sete Caminhos e Egbe Oni já Omo Omim",
-      "lat": -24.193158,
-      "lng": -46.8070415,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Piratininga, 571 - Praia dos Sonhos, Itanhaém - SP, 11746-062, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 18,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Terreiro Tuntum Olukotun 1850",
       "lat": -12.9059121,
       "lng": -38.6650407,
@@ -5509,19 +5392,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Tenda de Umbanda Baiano Zé do coco",
-      "lat": -21.4789765,
-      "lng": -49.2202441,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Guatapará, 135 - Novo Horizonte, SP, 14960-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Terreiro candomble pai junior de megê",
       "lat": -9.3776327,
       "lng": -38.2254866,
@@ -5572,19 +5442,6 @@
       "rating": null,
       "reviews": null,
       "geo_status": "in_bahia"
-    },
-    {
-      "nome": "Terreiro de umbanda casa do caminho",
-      "lat": -20.1556842,
-      "lng": -40.1936661,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Waldomiro Alves, 43 - São Pedro ( Jacaraípe, Serra - ES, 29175-801, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 13,
-      "geo_status": "out_of_bahia"
     },
     {
       "nome": "Terreiro de Umbanda Pedra da Serra",
@@ -6256,19 +6113,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Ile asé orisá d’ewi",
-      "lat": -15.6408511,
-      "lng": -47.8296206,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "AR 06 Área especial nº 2 - Setor Oeste Sobradinho II, Brasília - DF, 73060-600, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.9,
-      "reviews": 8,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Terreiro Angurusena Dya N'zambi",
       "lat": -12.6268463,
       "lng": -38.6781514,
@@ -6319,19 +6163,6 @@
       "rating": 4.7,
       "reviews": 14,
       "geo_status": "in_bahia"
-    },
-    {
-      "nome": "Obatalá Axé",
-      "lat": -23.5677276,
-      "lng": -46.6952,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Teodoro Sampaio, 2887 - Pinheiros, São Paulo - SP, 05405-250, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 432,
-      "geo_status": "out_of_bahia"
     },
     {
       "nome": "ARTIGOS RELIGIOSOS ALTO DO OGUM",
@@ -6587,19 +6418,6 @@
       "rating": 5,
       "reviews": 4,
       "geo_status": "in_bahia"
-    },
-    {
-      "nome": "Ilê Axé Oxum - Mãe Edna",
-      "lat": -15.670548,
-      "lng": -56.1957969,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Tv. C, 144-240 - Parque do Sabia, Várzea Grande - MT, 78152-064, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.9,
-      "reviews": 23,
-      "geo_status": "out_of_bahia"
     },
     {
       "nome": "Terreiro nzo muki kaiala",
@@ -7068,19 +6886,6 @@
       "rating": 4.4,
       "reviews": 14,
       "geo_status": "in_bahia"
-    },
-    {
-      "nome": "Casa Das 7 Encruzilhadas",
-      "lat": -5.7437416,
-      "lng": -35.2772557,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Maranguape, 3525 - Nossa Sra. da Apresentação, Natal - RN, 59115-692, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "out_of_bahia"
     },
     {
       "nome": "Casa do Preto Velho",
@@ -7629,32 +7434,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "CASA SÃO JORGE (ORIXÁS)",
-      "lat": -7.2096007,
-      "lng": -39.3182238,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. São Bernardo, 179 - Centro, Juazeiro do Norte - CE, 63010-201, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 3.3,
-      "reviews": 27,
-      "geo_status": "out_of_bahia"
-    },
-    {
-      "nome": "Arca do Divino",
-      "lat": -7.199399999999999,
-      "lng": -39.316669,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. da Matriz, 136 - Centro, Juazeiro do Norte - CE, 63010-040, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.4,
-      "reviews": 25,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Espaço de Eventos Monte Santo",
       "lat": -9.433013599999999,
       "lng": -40.5144943,
@@ -7915,19 +7694,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Casa São Pedro",
-      "lat": -23.5236129,
-      "lng": -46.806061,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. dos Autonomistas, 6161 - Quitaúna, Osasco - SP, 06194-050, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.3,
-      "reviews": 6089,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Lojas B Móveis - Roupeiros, Armários, Cozinhas, Colchões, Sofás, Camas",
       "lat": -10.0151773,
       "lng": -37.8945924,
@@ -8043,19 +7809,6 @@
       "rating": null,
       "reviews": null,
       "geo_status": "in_bahia"
-    },
-    {
-      "nome": "Rui Barbosa’s House",
-      "lat": -22.5041599,
-      "lng": -43.1767342,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Ipiranga, 405 - Centro, Petrópolis - RJ, 25610-150, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.4,
-      "reviews": 62,
-      "geo_status": "out_of_bahia"
     },
     {
       "nome": "Casa das Histórias de Salvador",
@@ -8240,19 +7993,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Loja Casa do Santo Dom Aquino",
-      "lat": -15.6060674,
-      "lng": -56.09636570000001,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Dom Bosco, 375 - Dom Aquino, Cuiabá - MT, 78015-180, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 123,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Sítio do Quinto",
       "lat": -10.3651688,
       "lng": -38.2033808,
@@ -8279,19 +8019,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Casa de Santo São Sebastião",
-      "lat": -22.5031467,
-      "lng": -44.0915334,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Paulo de Frontin, N°1015 - Aterrado, Volta Redonda - RJ, 27295-580, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 16,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Luzes de Aruanda",
       "lat": -17.5385604,
       "lng": -39.7486109,
@@ -8303,19 +8030,6 @@
       "rating": 4.4,
       "reviews": 22,
       "geo_status": "in_bahia"
-    },
-    {
-      "nome": "Casa do Tucano",
-      "lat": -23.9866448,
-      "lng": -46.1879313,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Quatro, 85 - Tortuga, Guarujá - SP, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 8,
-      "geo_status": "out_of_bahia"
     },
     {
       "nome": "Umburana de Dionísio",
@@ -8625,19 +8339,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Centro de Umbanda Caboclo Pena Verde e Pai Cipriano da Bahia",
-      "lat": -22.4857538,
-      "lng": -43.8442236,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Dois, 126 - Cantão, Barra do Piraí - RJ, 27150-530, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Remanso BA",
       "lat": -9.61961,
       "lng": -42.0841857,
@@ -8740,19 +8441,6 @@
       "rating": 5,
       "reviews": 3,
       "geo_status": "in_bahia"
-    },
-    {
-      "nome": "Centro de Umbanda Raio do SOL",
-      "lat": -15.9266744,
-      "lng": -47.7738545,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Núcleo Rural Morro da Cruz - São Sebastião, Brasília - DF, 71693-500, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 11,
-      "geo_status": "out_of_bahia"
     },
     {
       "nome": "Comunidade Caxuté",
@@ -10302,19 +9990,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Ilê Axé Oxum Tunji",
-      "lat": -7.1997731,
-      "lng": -39.275496,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Min. Colombo de Sousa - Pedrinhas, Juazeiro do Norte - CE, 63018-050, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 19,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Associação Lapense de Umbanda e Candomblé",
       "lat": -13.2467498,
       "lng": -43.41755759999999,
@@ -10427,19 +10102,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Terreiro de Umbanda Seara Filhos da Luz",
-      "lat": -7.201415299999999,
-      "lng": -39.3093024,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Pedro Cruz Sampaio, 209 - Juvêncio Santana, Juazeiro do Norte - CE, 63016-165, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 6,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "Federação cultural de umbanda ogum e xangô",
       "lat": -14.191043,
       "lng": -41.6508974,
@@ -10531,19 +10193,6 @@
       "geo_status": "in_bahia"
     },
     {
-      "nome": "Abassá de Oyá",
-      "lat": -23.4492715,
-      "lng": -51.98159709999999,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Pion - Av. Pioneiro Antônio Ruíz Saldanha, 2200 - Parque Itaipu, Maringá - PR, 87065-290, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.9,
-      "reviews": 45,
-      "geo_status": "out_of_bahia"
-    },
-    {
       "nome": "ABASSÁ DE YGICIDANLOYÁ",
       "lat": -14.7905979,
       "lng": -39.0539277,
@@ -10633,45 +10282,6 @@
       "rating": 4.8,
       "reviews": 10,
       "geo_status": "in_bahia"
-    },
-    {
-      "nome": "Abassá Oxum Oxossi",
-      "lat": -23.5111478,
-      "lng": -46.5338831,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Lúcio Paim, 124 - Cangaiba, São Paulo - SP, 03732-010, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 43,
-      "geo_status": "out_of_bahia"
-    },
-    {
-      "nome": "Abassa Orum Ybo Yeyeponda",
-      "lat": -9.929241099999999,
-      "lng": -67.8302559,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Rio de Janeiro, 116 - Tancredo Neves, Rio Branco - AC, 69921-714, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 9,
-      "geo_status": "out_of_bahia"
-    },
-    {
-      "nome": "Abassá de Oxum Apará Axé Omolokô Casa Pai José",
-      "lat": -15.5330925,
-      "lng": -47.315285,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Rua Santa Luzia, 265 - Bairro Nordeste, Formosa - GO, 73807-400, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 21,
-      "geo_status": "out_of_bahia"
     },
     {
       "nome": "Sac De Senhor Do Bonfim",

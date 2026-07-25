@@ -3475,42 +3475,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -46.64846060000001,
-          -23.6694852
-        ]
-      },
-      "properties": {
-        "nome": "Ilê Axé - São Paulo Artigos Religiosos",
-        "fonte": "google",
-        "endereco": "Av. Cupecê, 3849 - Jardim Jabaquara, São Paulo - SP, 04365-001, Brazil",
-        "rating": 4.7,
-        "reviews": 668,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -46.6363309,
-          -23.6602478
-        ]
-      },
-      "properties": {
-        "nome": "Axé Ilê Obá",
-        "fonte": "google",
-        "endereco": "R. Azor Silva, 77 - Vila Fachini, São Paulo - SP, 04326-010, Brazil",
-        "rating": 4.8,
-        "reviews": 79,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -44.9862556,
           -12.1569012
         ]
@@ -4154,24 +4118,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -45.1758673,
-          -22.7815978
-        ]
-      },
-      "properties": {
-        "nome": "Ilê Axé Efon Locy Ijefa",
-        "fonte": "google",
-        "endereco": "Parte Baixa - R. Três, 173 - Chácaras Agricolas Beira Rio, Guaratinguetá - SP, 12517-620, Brazil",
-        "rating": 5,
-        "reviews": 10,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -39.6399267,
           -14.0670494
         ]
@@ -4289,24 +4235,6 @@
         "rating": 3.4,
         "reviews": 7,
         "geo_status": "in_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -46.7831731,
-          -24.1230004
-        ]
-      },
-      "properties": {
-        "nome": "Ilê Iyeiyeo Axé Odé Inlé",
-        "fonte": "google",
-        "endereco": "R. Cel. Joaquim Branco - Jardim Aguapeu, Itanhaém - SP, 11740-000, Brazil",
-        "rating": 5,
-        "reviews": 41,
-        "geo_status": "out_of_bahia"
       }
     },
     {
@@ -4618,24 +4546,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -35.4218397,
-          -5.6375687
-        ]
-      },
-      "properties": {
-        "nome": "Ilê Axé Jitaloyá",
-        "fonte": "google",
-        "endereco": "R. José Pachêco Dantas, 103, Ceará-Mirim - RN, 59570-000, Brazil",
-        "rating": 5,
-        "reviews": 8,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -38.3120044,
           -12.8993759
         ]
@@ -4880,24 +4790,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -43.9155082,
-          -19.7889222
-        ]
-      },
-      "properties": {
-        "nome": "Yle Axé Pilão Odara - Terreiro de Candomblé no Baronesa, São Benedito, Santa Luzia",
-        "fonte": "google",
-        "endereco": "R. Gov. Israel Pinheiro, 237 - Baronesa, Santa Luzia - MG, 33170-060, Brazil",
-        "rating": 4.5,
-        "reviews": 23,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -41.7975846,
           -12.3847116
         ]
@@ -5074,24 +4966,6 @@
         "rating": 5,
         "reviews": 1,
         "geo_status": "in_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -46.6532355,
-          -23.5328277
-        ]
-      },
-      "properties": {
-        "nome": "Ilê Axé Zé do Coco da Bahia",
-        "fonte": "google",
-        "endereco": "R. Barra Funda, 89 - Barra Funda, São Paulo - SP, 01152-000, Brazil",
-        "rating": 4.6,
-        "reviews": 41,
-        "geo_status": "out_of_bahia"
       }
     },
     {
@@ -5684,24 +5558,6 @@
         "rating": 4.9,
         "reviews": 2221,
         "geo_status": "in_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -49.9391119,
-          -21.4678
-        ]
-      },
-      "properties": {
-        "nome": "Templo de Umbanda Bom Jesus da Lapa",
-        "fonte": "google",
-        "endereco": "José Augusto Teixeira Pupo 170, Avanhandava - SP, 16360-000, Brazil",
-        "rating": 5,
-        "reviews": 1,
-        "geo_status": "out_of_bahia"
       }
     },
     {
@@ -6852,24 +6708,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -46.8070415,
-          -24.193158
-        ]
-      },
-      "properties": {
-        "nome": "Terreiro de Umbanda Sagrada Oxum dos Sete Caminhos e Egbe Oni já Omo Omim",
-        "fonte": "google",
-        "endereco": "R. Piratininga, 571 - Praia dos Sonhos, Itanhaém - SP, 11746-062, Brazil",
-        "rating": 5,
-        "reviews": 18,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -38.6650407,
           -12.9059121
         ]
@@ -7381,22 +7219,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -49.2202441,
-          -21.4789765
-        ]
-      },
-      "properties": {
-        "nome": "Tenda de Umbanda Baiano Zé do coco",
-        "fonte": "google",
-        "endereco": "R. Guatapará, 135 - Novo Horizonte, SP, 14960-000, Brazil",
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -38.2254866,
           -9.3776327
         ]
@@ -7458,24 +7280,6 @@
         "fonte": "google",
         "endereco": "R. William de Jesus, 425 - Cardeal Brandão Vilela, Paulo Afonso - BA, 48610-640, Brazil",
         "geo_status": "in_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -40.1936661,
-          -20.1556842
-        ]
-      },
-      "properties": {
-        "nome": "Terreiro de umbanda casa do caminho",
-        "fonte": "google",
-        "endereco": "R. Waldomiro Alves, 43 - São Pedro ( Jacaraípe, Serra - ES, 29175-801, Brazil",
-        "rating": 5,
-        "reviews": 13,
-        "geo_status": "out_of_bahia"
       }
     },
     {
@@ -8383,24 +8187,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -47.8296206,
-          -15.6408511
-        ]
-      },
-      "properties": {
-        "nome": "Ile asé orisá d’ewi",
-        "fonte": "google",
-        "endereco": "AR 06 Área especial nº 2 - Setor Oeste Sobradinho II, Brasília - DF, 73060-600, Brazil",
-        "rating": 4.9,
-        "reviews": 8,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -38.6781514,
           -12.6268463
         ]
@@ -8462,24 +8248,6 @@
         "rating": 4.7,
         "reviews": 14,
         "geo_status": "in_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -46.6952,
-          -23.5677276
-        ]
-      },
-      "properties": {
-        "nome": "Obatalá Axé",
-        "fonte": "google",
-        "endereco": "R. Teodoro Sampaio, 2887 - Pinheiros, São Paulo - SP, 05405-250, Brazil",
-        "rating": 4.7,
-        "reviews": 432,
-        "geo_status": "out_of_bahia"
       }
     },
     {
@@ -8826,24 +8594,6 @@
         "rating": 5,
         "reviews": 4,
         "geo_status": "in_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -56.1957969,
-          -15.670548
-        ]
-      },
-      "properties": {
-        "nome": "Ilê Axé Oxum - Mãe Edna",
-        "fonte": "google",
-        "endereco": "Tv. C, 144-240 - Parque do Sabia, Várzea Grande - MT, 78152-064, Brazil",
-        "rating": 4.9,
-        "reviews": 23,
-        "geo_status": "out_of_bahia"
       }
     },
     {
@@ -9476,24 +9226,6 @@
         "rating": 4.4,
         "reviews": 14,
         "geo_status": "in_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -35.2772557,
-          -5.7437416
-        ]
-      },
-      "properties": {
-        "nome": "Casa Das 7 Encruzilhadas",
-        "fonte": "google",
-        "endereco": "Av. Maranguape, 3525 - Nossa Sra. da Apresentação, Natal - RN, 59115-692, Brazil",
-        "rating": 5,
-        "reviews": 1,
-        "geo_status": "out_of_bahia"
       }
     },
     {
@@ -10247,42 +9979,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -39.3182238,
-          -7.2096007
-        ]
-      },
-      "properties": {
-        "nome": "CASA SÃO JORGE (ORIXÁS)",
-        "fonte": "google",
-        "endereco": "R. São Bernardo, 179 - Centro, Juazeiro do Norte - CE, 63010-201, Brazil",
-        "rating": 3.3,
-        "reviews": 27,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -39.316669,
-          -7.199399999999999
-        ]
-      },
-      "properties": {
-        "nome": "Arca do Divino",
-        "fonte": "google",
-        "endereco": "R. da Matriz, 136 - Centro, Juazeiro do Norte - CE, 63010-040, Brazil",
-        "rating": 4.4,
-        "reviews": 25,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -40.5144943,
           -9.433013599999999
         ]
@@ -10641,24 +10337,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -46.806061,
-          -23.5236129
-        ]
-      },
-      "properties": {
-        "nome": "Casa São Pedro",
-        "fonte": "google",
-        "endereco": "Av. dos Autonomistas, 6161 - Quitaúna, Osasco - SP, 06194-050, Brazil",
-        "rating": 4.3,
-        "reviews": 6089,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -37.8945924,
           -10.0151773
         ]
@@ -10812,24 +10490,6 @@
         "fonte": "google",
         "endereco": "Rio de Contas, State of Bahia, 46170-000, Brazil",
         "geo_status": "in_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.1767342,
-          -22.5041599
-        ]
-      },
-      "properties": {
-        "nome": "Rui Barbosa’s House",
-        "fonte": "google",
-        "endereco": "Av. Ipiranga, 405 - Centro, Petrópolis - RJ, 25610-150, Brazil",
-        "rating": 4.4,
-        "reviews": 62,
-        "geo_status": "out_of_bahia"
       }
     },
     {
@@ -11087,24 +10747,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.09636570000001,
-          -15.6060674
-        ]
-      },
-      "properties": {
-        "nome": "Loja Casa do Santo Dom Aquino",
-        "fonte": "google",
-        "endereco": "Av. Dom Bosco, 375 - Dom Aquino, Cuiabá - MT, 78015-180, Brazil",
-        "rating": 5,
-        "reviews": 123,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -38.2033808,
           -10.3651688
         ]
@@ -11139,24 +10781,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -44.0915334,
-          -22.5031467
-        ]
-      },
-      "properties": {
-        "nome": "Casa de Santo São Sebastião",
-        "fonte": "google",
-        "endereco": "Av. Paulo de Frontin, N°1015 - Aterrado, Volta Redonda - RJ, 27295-580, Brazil",
-        "rating": 5,
-        "reviews": 16,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -39.7486109,
           -17.5385604
         ]
@@ -11168,24 +10792,6 @@
         "rating": 4.4,
         "reviews": 22,
         "geo_status": "in_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -46.1879313,
-          -23.9866448
-        ]
-      },
-      "properties": {
-        "nome": "Casa do Tucano",
-        "fonte": "google",
-        "endereco": "R. Quatro, 85 - Tortuga, Guarujá - SP, Brazil",
-        "rating": 5,
-        "reviews": 8,
-        "geo_status": "out_of_bahia"
       }
     },
     {
@@ -11616,22 +11222,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -43.8442236,
-          -22.4857538
-        ]
-      },
-      "properties": {
-        "nome": "Centro de Umbanda Caboclo Pena Verde e Pai Cipriano da Bahia",
-        "fonte": "google",
-        "endereco": "R. Dois, 126 - Cantão, Barra do Piraí - RJ, 27150-530, Brazil",
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -42.0841857,
           -9.61961
         ]
@@ -11767,24 +11357,6 @@
         "rating": 5,
         "reviews": 3,
         "geo_status": "in_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -47.7738545,
-          -15.9266744
-        ]
-      },
-      "properties": {
-        "nome": "Centro de Umbanda Raio do SOL",
-        "fonte": "google",
-        "endereco": "Núcleo Rural Morro da Cruz - São Sebastião, Brasília - DF, 71693-500, Brazil",
-        "rating": 5,
-        "reviews": 11,
-        "geo_status": "out_of_bahia"
       }
     },
     {
@@ -13874,24 +13446,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -39.275496,
-          -7.1997731
-        ]
-      },
-      "properties": {
-        "nome": "Ilê Axé Oxum Tunji",
-        "fonte": "google",
-        "endereco": "R. Min. Colombo de Sousa - Pedrinhas, Juazeiro do Norte - CE, 63018-050, Brazil",
-        "rating": 5,
-        "reviews": 19,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -43.41755759999999,
           -13.2467498
         ]
@@ -14045,24 +13599,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -39.3093024,
-          -7.201415299999999
-        ]
-      },
-      "properties": {
-        "nome": "Terreiro de Umbanda Seara Filhos da Luz",
-        "fonte": "google",
-        "endereco": "R. Pedro Cruz Sampaio, 209 - Juvêncio Santana, Juazeiro do Norte - CE, 63016-165, Brazil",
-        "rating": 4.7,
-        "reviews": 6,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -41.6508974,
           -14.191043
         ]
@@ -14185,24 +13721,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -51.98159709999999,
-          -23.4492715
-        ]
-      },
-      "properties": {
-        "nome": "Abassá de Oyá",
-        "fonte": "google",
-        "endereco": "Av. Pion - Av. Pioneiro Antônio Ruíz Saldanha, 2200 - Parque Itaipu, Maringá - PR, 87065-290, Brazil",
-        "rating": 4.9,
-        "reviews": 45,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -39.0539277,
           -14.7905979
         ]
@@ -14318,60 +13836,6 @@
         "rating": 4.8,
         "reviews": 10,
         "geo_status": "in_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -46.5338831,
-          -23.5111478
-        ]
-      },
-      "properties": {
-        "nome": "Abassá Oxum Oxossi",
-        "fonte": "google",
-        "endereco": "R. Lúcio Paim, 124 - Cangaiba, São Paulo - SP, 03732-010, Brazil",
-        "rating": 5,
-        "reviews": 43,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.8302559,
-          -9.929241099999999
-        ]
-      },
-      "properties": {
-        "nome": "Abassa Orum Ybo Yeyeponda",
-        "fonte": "google",
-        "endereco": "R. Rio de Janeiro, 116 - Tancredo Neves, Rio Branco - AC, 69921-714, Brazil",
-        "rating": 5,
-        "reviews": 9,
-        "geo_status": "out_of_bahia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -47.315285,
-          -15.5330925
-        ]
-      },
-      "properties": {
-        "nome": "Abassá de Oxum Apará Axé Omolokô Casa Pai José",
-        "fonte": "google",
-        "endereco": "Rua Santa Luzia, 265 - Bairro Nordeste, Formosa - GO, 73807-400, Brazil",
-        "rating": 4.8,
-        "reviews": 21,
-        "geo_status": "out_of_bahia"
       }
     },
     {
