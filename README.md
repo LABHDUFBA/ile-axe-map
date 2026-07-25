@@ -1,24 +1,47 @@
 # Ilê Axé Map — Terreiros de Candomblé da Bahia
 
-Mapa interativo dos terreiros de candomblé (ilê axé) da Bahia, construído com dados abertos do OpenStreetMap.
+Mapa interativo de terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia.
+
+## Dataset v2.0
+
+- **Fonte primária:** CEAO/UFBA, com os 1.155 registros extraídos e georreferenciados.
+- **Fontes complementares:** Google Places (693), OpenStreetMap (20) e SEMUR/SEFAZ Salvador (234 sem coordenadas).
+- **Total:** 2.102 registros, dos quais 1.868 aparecem no mapa.
+- A v1 permanece preservada; a interface carrega `data/terreiros_v2.geojson`.
+
+Os totais representam registros preservados por fonte e não devem ser interpretados automaticamente como entidades únicas entre fontes.
+
+## Estrutura principal
+
+```text
+├── index.html
+├── metodologia.html
+├── data/
+│   ├── terreiros_v2.geojson
+│   ├── terreiros_all_sources_v2.json
+│   ├── auditoria_v2.json
+│   ├── revisao_humana_nacao_v2.csv
+│   └── ceao/terreiros_ceao_complete.json
+├── scripts/
+│   ├── build_v2.py
+│   └── collect_osm.py
+└── tests/test_build_v2.py
+```
+
+## Regerar e validar
+
+```bash
+python3 scripts/build_v2.py
+python3 -m unittest discover -s tests -v
+```
 
 ## Stack
-- **Mapa**: MapLibre GL JS + OpenStreetMap tiles (dark theme)
-- **Dados**: OpenStreetMap (Overpass API)
-- **Hospedagem**: GitHub Pages
 
-## Estrutura
-```
-├── index.html          # Site estático
-├── data/
-│   └── terreiros.geojson  # Dados dos terreiros
-└── scripts/
-    └── collect_osm.py  # Script de coleta
-```
+- MapLibre GL JS 4.7.1
+- OpenFreeMap
+- HTML, CSS e JavaScript sem build
+- GitHub Pages
 
-## Fontes de dados
-- OpenStreetMap — tags: `amenity=place_of_worship`, `religion=candomblé`, nomes com "terreiro", "ilê axé", etc.
-- Futuramente: Google Maps Places API (complementar)
+## Responsabilidade
 
-## LABHD/UFBA
-Laboratório de Humanidades Digitais da Universidade Federal da Bahia.
+Leonardo Fernandes Nascimento — Laboratório de Humanidades Digitais da Universidade Federal da Bahia (LABHD/UFBA).

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
   <script>
-    const DATASET_VERSION = 'v1.3';
+    const DATASET_VERSION = 'v2.0';
     const DATASET_DATE = '2026-07-25';
   </script>
   <style>
@@ -231,8 +231,10 @@
     .info-panel__close { position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elevated); color: var(--text-muted); cursor: pointer; font-size: 18px; }
 
     /* === Markers === */
-    .marker { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--bg-elevated); box-shadow: 0 1px 4px rgba(0,0,0,.25); cursor: pointer; transition: transform .15s; }
-    .marker:hover, .marker.is-active { transform: scale(1.4); box-shadow: 0 2px 8px rgba(0,0,0,.35), 0 0 0 4px var(--accent-soft); }
+    .marker { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--bg-elevated); box-shadow: 0 1px 4px rgba(0,0,0,.25); cursor: pointer; transition: box-shadow .15s, opacity .15s; }
+    .marker:hover, .marker.is-active { box-shadow: 0 2px 8px rgba(0,0,0,.35), 0 0 0 4px var(--accent-soft); }
+    .marker--unknown { width: 10px; height: 10px; background: transparent!important; border-color: #8A8177; opacity: .68; }
+    .marker--unknown:hover, .marker--unknown.is-active { opacity: 1; }
 
     /* === MapLibre overrides === */
     .maplibregl-popup-content { min-width: 160px; padding: 8px 10px; border-radius: var(--radius-sm); background: var(--bg-elevated); border: 1px solid var(--border); box-shadow: var(--shadow); font-family: var(--font-body); }
@@ -324,22 +326,22 @@
       <p>Atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia.</p>
       <h3>Dataset</h3>
       <dl>
-        <dt>Versão</dt><dd>v1.3</dd>
+        <dt>Versão</dt><dd>v2.0</dd>
         <dt>Extração</dt><dd>2026-07-25</dd>
-        <dt>Total</dt><dd>1.629 únicos</dd>
-        <dt>Georreferenciados</dt><dd>1.395</dd>
+        <dt>Total</dt><dd>2.102 registros</dd>
+        <dt>Georreferenciados</dt><dd>1.868</dd>
       </dl>
       <h3>Fontes</h3>
       <p>
-        <a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a> — 682 terreiros<br>
+        <a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a> — 1.155 terreiros<br>
         OSM + Google Places — 713 lugares<br>
         SEFAZ/Salvador (SEMUR 2020) — 234 registros
       </p>
       <h3>Metodologia</h3>
       <p>
         <a href="metodologia.html" target="_blank">Nota técnico-metodológica</a><br>
-        <a href="data/terreiros.geojson" download>Download GeoJSON</a><br>
-        <a href="data/terreiros_all_sources.json" download>Dataset completo (JSON)</a>
+        <a href="data/terreiros_v2.geojson" download>Download GeoJSON</a><br>
+        <a href="data/terreiros_all_sources_v2.json" download>Dataset completo (JSON)</a>
       </p>
       <h3>Código</h3>
       <p>
@@ -358,9 +360,10 @@
     const colors = {
       Ketu: '#0072B2', Angola: '#D55E00', Jeje: '#009E73',
       'Candomblé': '#E69F00', 'Matriz Africana': '#CC79A7',
-      Umbanda: '#56B4E9', Outro: '#999999'
+      Umbanda: '#56B4E9', 'Outras declarações': '#6F4E7C',
+      'Não informado': '#999999'
     };
-    const categoryOrder = ['Ketu','Angola','Jeje','Candomblé','Matriz Africana','Umbanda','Outro'];
+    const categoryOrder = ['Ketu','Angola','Jeje','Candomblé','Matriz Africana','Umbanda','Outras declarações','Não informado'];
     const fonteMap = { 'osm': 'OSM+Google', 'google': 'OSM+Google', 'ceao': 'CEAO/UFBA', 'sefaz': 'SEFAZ/Salvador' };
     const fonteOrder = ['CEAO/UFBA', 'OSM+Google', 'SEFAZ/Salvador'];
     const fonteColors = { 'CEAO/UFBA': '#0072B2', 'OSM+Google': '#009E73', 'SEFAZ/Salvador': '#E69F00' };
@@ -395,24 +398,25 @@
     const escapeHtml = v => String(v ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 
     function classify(p) {
+      if (p.nacao_categoria) return p.nacao_categoria;
       if (p.nacao) {
         const n = p.nacao.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-        if (/(ketu|nago|alaketu)/.test(n)) return 'Ketu';
+        if (/(keto|ketu|nago|alaketo|alaketu)/.test(n)) return 'Ketu';
         if (/angola/.test(n)) return 'Angola';
         if (/jeje/.test(n)) return 'Jeje';
         if (/umbanda/.test(n)) return 'Umbanda';
         if (/candombl/.test(n)) return 'Candomblé';
-        if (/(matriz|african)/.test(n)) return 'Matriz Africana';
-        return 'Outro';
+        if (/matriz\s+african|african/.test(n)) return 'Matriz Africana';
+        return 'Outras declarações';
       }
       const text = [p.religion, p.denomination, p.name, p.nome, p.amenity].filter(Boolean).join(' ').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-      if (/(ketu|nago|alaketu)/.test(text)) return 'Ketu';
+      if (/(keto|ketu|nago|alaketo|alaketu)/.test(text)) return 'Ketu';
       if (/angola/.test(text)) return 'Angola';
       if (/jeje/.test(text)) return 'Jeje';
       if (/umbanda/.test(text)) return 'Umbanda';
-      if (/(matriz|african)/.test(text)) return 'Matriz Africana';
+      if (/matriz\s+african|african/.test(text)) return 'Matriz Africana';
       if (/(candombl|batuque|xango)/.test(text)) return 'Candomblé';
-      return 'Outro';
+      return 'Não informado';
     }
 
     function getName(p) { return p.nome || p.name || p.title || 'Terreiro sem nome'; }
@@ -546,7 +550,8 @@
         const el = document.createElement('button');
         el.type = 'button'; el.className = 'marker';
         el.setAttribute('aria-label', getName(feature.properties));
-        el.style.background = colors[feature.properties._nacao] || colors['Outro'];
+        el.style.background = colors[feature.properties._nacao] || colors['Não informado'];
+        el.classList.toggle('marker--unknown', feature.properties._nacao === 'Não informado');
         const marker = new maplibregl.Marker({ element: el, anchor: 'center' }).setLngLat([lng, lat]).addTo(map);
         el.addEventListener('mouseenter', () => showTooltip(feature));
         el.addEventListener('mouseleave', () => { if (popup) popup.remove(); });
@@ -654,7 +659,7 @@
           if (src.indexOf('terreiros.ceao.ufba.br/_FT/pq/') !== -1) { var m = src.match(/\/pq\/(\d+)\./); if (m) src = 'data/ceao/fotos/' + m[1] + '_thumb.jpg'; }
           photo = '<img class="rail-item__photo" src="' + escapeHtml(src) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">';
         }
-        html += '<div class="rail-item" style="--item-color:' + (colors[p._nacao] || colors['Outro']) + '"><div class="rail-item__dot"></div><div class="rail-item__body"><div class="rail-item__name">' + name + '</div><div class="rail-item__meta">' + meta + '</div></div>' + photo + '</div>';
+        html += '<div class="rail-item" style="--item-color:' + (colors[p._nacao] || colors['Não informado']) + '"><div class="rail-item__dot"></div><div class="rail-item__body"><div class="rail-item__name">' + name + '</div><div class="rail-item__meta">' + meta + '</div></div>' + photo + '</div>';
       });
       holder.innerHTML = html;
       holder.querySelectorAll('.rail-item').forEach(function(item, idx) {
@@ -676,7 +681,7 @@
       themeOverride = isDark ? 'light' : 'dark';
       applyTheme(); map.setStyle(mapStyle());
       map.once('styledata', function() {
-        markers.forEach(item => { item.element.style.background = colors[item.feature.properties._nacao] || colors['Outro']; });
+        markers.forEach(item => { item.element.style.background = colors[item.feature.properties._nacao] || colors['Não informado']; });
         updateMarkers();
       });
     });
@@ -696,7 +701,7 @@
     // === Load ===
     map.on('load', async function() {
       try {
-        const response = await fetch('data/terreiros.geojson');
+        const response = await fetch('data/terreiros_v2.geojson');
         if (!response.ok) throw new Error(response.status);
         const data = await response.json();
         features = data.features
