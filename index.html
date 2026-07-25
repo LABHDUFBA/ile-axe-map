@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
   <script>
-    const DATASET_VERSION = 'v2.0';
+    const DATASET_VERSION = 'v2.1';
     const DATASET_DATE = '2026-07-25';
   </script>
   <style>
@@ -326,10 +326,11 @@
       <p>Atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia.</p>
       <h3>Dataset</h3>
       <dl>
-        <dt>Versão</dt><dd>v2.0</dd>
+        <dt>Versão</dt><dd>v2.1</dd>
         <dt>Extração</dt><dd>2026-07-25</dd>
         <dt>Total</dt><dd>2.102 registros</dd>
         <dt>Georreferenciados</dt><dd>1.868</dd>
+        <dt>Nações</dt><dd>49 declarações do CEAO</dd>
       </dl>
       <h3>Fontes</h3>
       <p>
@@ -356,14 +357,20 @@
   </aside>
 
   <script>
-    /* Okabe-Ito — constância categórica (mesma cor em light/dark) */
-    const colors = {
-      Ketu: '#0072B2', Angola: '#D55E00', Jeje: '#009E73',
-      'Candomblé': '#E69F00', 'Matriz Africana': '#CC79A7',
-      Umbanda: '#56B4E9', 'Outras declarações': '#6F4E7C',
+    /* Rótulos literais do CEAO; cores não representam macrogrupos analíticos. */
+    const nationColors = {
+      'Keto': '#0072B2', 'Angola': '#D55E00', 'Jêje': '#009E73',
+      'Umbanda': '#56B4E9', 'Ijexá': '#E69F00', 'Alaketo': '#CC79A7',
       'Não informado': '#999999'
     };
-    const categoryOrder = ['Ketu','Angola','Jeje','Candomblé','Matriz Africana','Umbanda','Outras declarações','Não informado'];
+    const nationPalette = ['#0072B2','#D55E00','#009E73','#E69F00','#CC79A7','#56B4E9','#6F4E7C','#8C564B'];
+    let categoryOrder = [];
+    function nationColor(category) {
+      if (nationColors[category]) return nationColors[category];
+      let hash = 0;
+      for (let i = 0; i < category.length; i++) hash = ((hash << 5) - hash + category.charCodeAt(i)) | 0;
+      return nationPalette[Math.abs(hash) % nationPalette.length];
+    }
     const fonteMap = { 'osm': 'OSM+Google', 'google': 'OSM+Google', 'ceao': 'CEAO/UFBA', 'sefaz': 'SEFAZ/Salvador' };
     const fonteOrder = ['CEAO/UFBA', 'OSM+Google', 'SEFAZ/Salvador'];
     const fonteColors = { 'CEAO/UFBA': '#0072B2', 'OSM+Google': '#009E73', 'SEFAZ/Salvador': '#E69F00' };
@@ -399,24 +406,8 @@
 
     function classify(p) {
       if (p.nacao_categoria) return p.nacao_categoria;
-      if (p.nacao) {
-        const n = p.nacao.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-        if (/(keto|ketu|nago|alaketo|alaketu)/.test(n)) return 'Ketu';
-        if (/angola/.test(n)) return 'Angola';
-        if (/jeje/.test(n)) return 'Jeje';
-        if (/umbanda/.test(n)) return 'Umbanda';
-        if (/candombl/.test(n)) return 'Candomblé';
-        if (/matriz\s+african|african/.test(n)) return 'Matriz Africana';
-        return 'Outras declarações';
-      }
-      const text = [p.religion, p.denomination, p.name, p.nome, p.amenity].filter(Boolean).join(' ').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-      if (/(keto|ketu|nago|alaketo|alaketu)/.test(text)) return 'Ketu';
-      if (/angola/.test(text)) return 'Angola';
-      if (/jeje/.test(text)) return 'Jeje';
-      if (/umbanda/.test(text)) return 'Umbanda';
-      if (/matriz\s+african|african/.test(text)) return 'Matriz Africana';
-      if (/(candombl|batuque|xango)/.test(text)) return 'Candomblé';
-      return 'Não informado';
+      const declared = String(p.nacao || '').trim().replace(/\s+/g, ' ');
+      return declared && !/^n[aã]o informado$/i.test(declared) ? declared : 'Não informado';
     }
 
     function getName(p) { return p.nome || p.name || p.title || 'Terreiro sem nome'; }
@@ -426,6 +417,16 @@
     function buildFilters() {
       const holder = $('filters');
       holder.innerHTML = '';
+      const categoryCounts = new Map();
+      features.forEach(f => {
+        const category = f.properties._nacao;
+        categoryCounts.set(category, (categoryCounts.get(category) || 0) + 1);
+      });
+      categoryOrder = [...categoryCounts.keys()].sort((a, b) => {
+        if (a === 'Não informado') return 1;
+        if (b === 'Não informado') return -1;
+        return categoryCounts.get(b) - categoryCounts.get(a) || a.localeCompare(b, 'pt-BR');
+      });
 
       // --- Nação ---
       const nacaoGroup = document.createElement('div');
@@ -435,11 +436,11 @@
 
       // Select-all checkbox
       const allNacaoCbId = 'all-nacao';
-      const allNacao = makeCheckbox(allNacaoCbId, 'Todas', null, true, function() {
+      const allNacao = makeCheckbox(allNacaoCbId, 'Selecionar todas', null, true, function() {
         var cb = document.getElementById(allNacaoCbId);
         var checked = cb.checked;
         if (checked) {
-          activeNacao = new Set(categoryOrder.filter(c => features.some(f => f.properties._nacao === c)));
+          activeNacao = new Set(categoryOrder);
         } else {
           activeNacao.clear();
         }
@@ -449,11 +450,11 @@
       allNacao.el.classList.add('filter-opt--all');
       nacaoBody.appendChild(allNacao.el);
 
-      categoryOrder.filter(cat => features.some(f => f.properties._nacao === cat)).forEach(cat => {
+      categoryOrder.forEach((cat, index) => {
         activeNacao.add(cat);
-        const count = features.filter(f => f.properties._nacao === cat).length;
-        const cbId = 'nac-' + cat;
-        const opt = makeCheckbox(cbId, cat, colors[cat], true, function() {
+        const count = categoryCounts.get(cat);
+        const cbId = 'nac-' + index;
+        const opt = makeCheckbox(cbId, cat, nationColor(cat), true, function() {
           var cb = document.getElementById(cbId);
           if (cb.checked) activeNacao.add(cat);
           else activeNacao.delete(cat);
@@ -528,7 +529,7 @@
       cb.type = 'checkbox'; cb.id = id; cb.checked = checked;
       let dot = '';
       if (color) dot = '<span class="filter-opt__dot" style="background:' + color + '"></span>';
-      el.innerHTML = dot + '<span class="filter-opt__label">' + label + '</span>';
+      el.innerHTML = dot + '<span class="filter-opt__label">' + escapeHtml(label) + '</span>';
       el.insertBefore(cb, el.firstChild);
       cb.addEventListener('change', onChange);
       return { el, checkbox: cb };
@@ -550,7 +551,7 @@
         const el = document.createElement('button');
         el.type = 'button'; el.className = 'marker';
         el.setAttribute('aria-label', getName(feature.properties));
-        el.style.background = colors[feature.properties._nacao] || colors['Não informado'];
+        el.style.background = nationColor(feature.properties._nacao);
         el.classList.toggle('marker--unknown', feature.properties._nacao === 'Não informado');
         const marker = new maplibregl.Marker({ element: el, anchor: 'center' }).setLngLat([lng, lat]).addTo(map);
         el.addEventListener('mouseenter', () => showTooltip(feature));
@@ -659,7 +660,7 @@
           if (src.indexOf('terreiros.ceao.ufba.br/_FT/pq/') !== -1) { var m = src.match(/\/pq\/(\d+)\./); if (m) src = 'data/ceao/fotos/' + m[1] + '_thumb.jpg'; }
           photo = '<img class="rail-item__photo" src="' + escapeHtml(src) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">';
         }
-        html += '<div class="rail-item" style="--item-color:' + (colors[p._nacao] || colors['Não informado']) + '"><div class="rail-item__dot"></div><div class="rail-item__body"><div class="rail-item__name">' + name + '</div><div class="rail-item__meta">' + meta + '</div></div>' + photo + '</div>';
+        html += '<div class="rail-item" style="--item-color:' + nationColor(p._nacao) + '"><div class="rail-item__dot"></div><div class="rail-item__body"><div class="rail-item__name">' + name + '</div><div class="rail-item__meta">' + meta + '</div></div>' + photo + '</div>';
       });
       holder.innerHTML = html;
       holder.querySelectorAll('.rail-item').forEach(function(item, idx) {
@@ -681,7 +682,7 @@
       themeOverride = isDark ? 'light' : 'dark';
       applyTheme(); map.setStyle(mapStyle());
       map.once('styledata', function() {
-        markers.forEach(item => { item.element.style.background = colors[item.feature.properties._nacao] || colors['Não informado']; });
+        markers.forEach(item => { item.element.style.background = nationColor(item.feature.properties._nacao); });
         updateMarkers();
       });
     });

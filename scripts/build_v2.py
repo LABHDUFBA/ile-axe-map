@@ -6,48 +6,22 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-import re
-import unicodedata
 from collections import Counter
 from pathlib import Path
 from typing import Any
 
 
-COMPONENT_PATTERNS = [
-    ("Ketu", r"\b(?:keto|ketu|alaketo|alaketu|nago)\b"),
-    ("Angola", r"\bangola\b"),
-    ("Jeje", r"\bjeje\b"),
-    ("Umbanda", r"\bumbanda\b"),
-    ("Candomblé", r"\bcandombl[eé]?\b|\bbatuque\b|\bxango\b"),
-    ("Matriz Africana", r"\bmatriz\s+african[ao]?\b|\bafrican[ao]?\b"),
-    ("Ijexá", r"\bijexa\b"),
-    ("Bantu", r"\bbantu\b"),
-    ("Caboclo", r"\bcaboclo\b"),
-    ("Vodum", r"\bvodum\b"),
-    ("Savalu", r"\bsavalu\b"),
-    ("Paketan", r"\bpaketan\b"),
-    ("Tapa", r"\btapa\b"),
-    ("Giro", r"\bgiro\b"),
-    ("Mina", r"\bmina\b"),
-]
-MAP_CATEGORIES = ("Ketu", "Angola", "Jeje", "Umbanda", "Candomblé", "Matriz Africana")
-
-
-def normalize_text(value: Any) -> str:
-    text = unicodedata.normalize("NFD", str(value or "").lower())
-    text = "".join(char for char in text if unicodedata.category(char) != "Mn")
-    return re.sub(r"[^a-z0-9]+", " ", text).strip()
-
-
 def classify_nation(raw_nation: Any) -> dict[str, Any]:
     original = str(raw_nation).strip() if raw_nation is not None else ""
-    normalized = normalize_text(original)
-    normalized = re.sub(
-        r"\b(keto|ketu)(tapa|giro|caboclo|angola|jeje|ijexa)\b",
-        r"\1 \2",
-        normalized,
-    )
-    missing = not normalized or normalized in {"nao informado", "nao informada", "sem informacao"}
+    display = " ".join(original.split())
+    missing = not display or display.casefold() in {
+        "não informado",
+        "nao informado",
+        "não informada",
+        "nao informada",
+        "sem informação",
+        "sem informacao",
+    }
 
     if missing:
         return {
@@ -55,42 +29,20 @@ def classify_nation(raw_nation: Any) -> dict[str, Any]:
             "nacao_componentes": [],
             "nacao_primaria": None,
             "nacao_categoria": "Não informado",
-            "metodo_classificacao": "ausente-v2",
+            "metodo_classificacao": "ausente-v2.1",
         }
 
-    matches = []
-    for component, pattern in COMPONENT_PATTERNS:
-        match = re.search(pattern, normalized)
-        if match:
-            matches.append((match.start(), component))
-    components = [component for _, component in sorted(matches)]
-
-    category = next((item for item in MAP_CATEGORIES if item in components), "Outras declarações")
     return {
         "nacao_original": original,
-        "nacao_componentes": components,
+        "nacao_componentes": [],
         "nacao_primaria": None,
-        "nacao_categoria": category,
-        "metodo_classificacao": "declarado+tokenizacao-v2",
+        "nacao_categoria": display,
+        "metodo_classificacao": "declarado-literal-v2.1",
     }
 
 
 def classify_record(record: dict[str, Any]) -> dict[str, Any]:
-    declared = classify_nation(record.get("nacao"))
-    if declared["nacao_categoria"] != "Não informado":
-        return declared
-
-    text = " ".join(
-        str(record.get(key) or "")
-        for key in ("religion", "denomination", "nome", "name", "amenity")
-    )
-    inferred = classify_nation(text)
-    if inferred["nacao_categoria"] in MAP_CATEGORIES:
-        inferred["nacao_original"] = record.get("nacao") or None
-        inferred["nacao_primaria"] = None
-        inferred["metodo_classificacao"] = "inferido_texto-v2"
-        return inferred
-    return declared
+    return classify_nation(record.get("nacao"))
 
 
 def valid_coordinates(record: dict[str, Any]) -> bool:
@@ -143,11 +95,6 @@ def to_feature(record: dict[str, Any]) -> dict[str, Any]:
 def build_human_review(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
     mappable = [record for record in records if valid_coordinates(record)]
     selected: dict[int, dict[str, Any]] = {}
-
-    for index, record in enumerate(mappable):
-        components = record.get("nacao_componentes") or []
-        if record.get("nacao_categoria") == "Outras declarações" or len(components) > 1:
-            selected[index] = record
 
     for category in Counter(record["nacao_categoria"] for record in mappable):
         added = 0
@@ -212,7 +159,7 @@ def build_v2(ceao_path: Path, current_path: Path, output_dir: Path) -> dict[str,
     review_rows = build_human_review(records)
 
     audit = {
-        "versao": "2.0",
+        "versao": "2.1",
         "criterio": "CEAO completo como fonte primária; Google, OSM e SEFAZ preservados como complementares",
         "total_registros": len(records),
         "total_georreferenciados": len(features),
@@ -235,7 +182,7 @@ def build_v2(ceao_path: Path, current_path: Path, output_dir: Path) -> dict[str,
             "arquivo": "revisao_humana_nacao_v2.csv",
             "amostra": len(review_rows),
             "status": "pendente",
-            "criterio": "todas as Outras declarações, todos os rótulos compostos e amostra de até 10 registros por categoria",
+            "criterio": "amostra de até 10 registros por declaração literal de nação",
         },
     }
 
@@ -243,7 +190,7 @@ def build_v2(ceao_path: Path, current_path: Path, output_dir: Path) -> dict[str,
     all_sources = {
         "metadata": {
             **current.get("metadata", {}),
-            "versao": "2.0",
+            "versao": "2.1",
             "total_registros": len(records),
             "total_georreferenciados": len(features),
             "fonte_primaria": "CEAO/UFBA",
@@ -254,7 +201,7 @@ def build_v2(ceao_path: Path, current_path: Path, output_dir: Path) -> dict[str,
     geojson = {
         "type": "FeatureCollection",
         "metadata": {
-            "versao": "2.0",
+            "versao": "2.1",
             "total": len(features),
             "fonte_primaria": "CEAO/UFBA",
             "fontes": dict(sorted(mapped_source_counts.items())),
