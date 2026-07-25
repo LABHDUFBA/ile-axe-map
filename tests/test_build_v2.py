@@ -11,15 +11,16 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class NationClassificationTests(unittest.TestCase):
-    def test_keto_variant_is_classified_as_ketu(self):
+    def test_keto_is_preserved_as_declared(self):
         result = classify_nation("Keto")
-        self.assertEqual(result["nacao_categoria"], "Ketu")
-        self.assertEqual(result["nacao_componentes"], ["Ketu"])
+        self.assertEqual(result["nacao_categoria"], "Keto")
+        self.assertEqual(result["nacao_componentes"], [])
 
-    def test_composite_nation_preserves_all_components(self):
+    def test_composite_nation_is_not_split_or_prioritized(self):
         result = classify_nation("Keto Angola")
         self.assertEqual(result["nacao_original"], "Keto Angola")
-        self.assertEqual(result["nacao_componentes"], ["Ketu", "Angola"])
+        self.assertEqual(result["nacao_categoria"], "Keto Angola")
+        self.assertEqual(result["nacao_componentes"], [])
         self.assertIsNone(result["nacao_primaria"])
 
     def test_missing_nation_is_not_called_other(self):
@@ -27,18 +28,22 @@ class NationClassificationTests(unittest.TestCase):
         self.assertEqual(result["nacao_categoria"], "Não informado")
         self.assertEqual(result["nacao_componentes"], [])
 
-    def test_unmapped_declared_nation_is_preserved(self):
-        result = classify_nation("Ijexá")
-        self.assertEqual(result["nacao_original"], "Ijexá")
-        self.assertEqual(result["nacao_categoria"], "Outras declarações")
+    def test_alaketo_is_not_agglutinated_with_keto(self):
+        self.assertEqual(classify_nation("Alaketo")["nacao_categoria"], "Alaketo")
+        self.assertEqual(classify_nation("Keto")["nacao_categoria"], "Keto")
 
-    def test_concatenated_keto_qualifier_is_tokenized(self):
+    def test_concatenated_label_is_preserved(self):
         result = classify_nation("KetoTapa")
-        self.assertEqual(result["nacao_componentes"], ["Ketu", "Tapa"])
-        self.assertEqual(result["nacao_categoria"], "Ketu")
+        self.assertEqual(result["nacao_componentes"], [])
+        self.assertEqual(result["nacao_categoria"], "KetoTapa")
 
-    def test_generic_matriz_in_name_does_not_mean_african_tradition(self):
-        result = classify_record({"nome": "Central de Adubos - Matriz Juazeiro"})
+    def test_only_repeated_whitespace_is_cleaned_for_display(self):
+        result = classify_nation("  Keto   Angola  ")
+        self.assertEqual(result["nacao_original"], "Keto   Angola")
+        self.assertEqual(result["nacao_categoria"], "Keto Angola")
+
+    def test_missing_declaration_is_not_inferred_from_name(self):
+        result = classify_record({"nome": "Ilê Keto Angola"})
         self.assertEqual(result["nacao_categoria"], "Não informado")
 
 
@@ -72,6 +77,16 @@ class BuildV2Tests(unittest.TestCase):
                 sum(f["properties"]["fonte"] == "ceao" for f in geojson["features"]),
                 1155,
             )
+            categories = [
+                f["properties"]["nacao_categoria"]
+                for f in geojson["features"]
+                if f["properties"]["fonte"] == "ceao"
+            ]
+            self.assertIn("Keto", categories)
+            self.assertIn("Alaketo", categories)
+            self.assertIn("KetoTapa", categories)
+            self.assertNotIn("Ketu", categories)
+            self.assertEqual(categories.count("Não informado"), 3)
 
             review_path = Path(tmp) / "revisao_humana_nacao_v2.csv"
             self.assertTrue(review_path.exists())
@@ -79,10 +94,7 @@ class BuildV2Tests(unittest.TestCase):
                 review_rows = list(csv.DictReader(handle))
             self.assertTrue(review_rows)
             self.assertTrue(all(row["status_revisao"] == "pendente" for row in review_rows))
-            self.assertEqual(
-                sum(row["nacao_categoria"] == "Outras declarações" for row in review_rows),
-                result["audit"]["classificacao_mapa"]["Outras declarações"],
-            )
+            self.assertTrue(all(row["nacao_componentes"] == "[]" for row in review_rows))
 
     def test_build_does_not_overwrite_v1_artifacts(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -106,21 +118,27 @@ class SiteIntegrationTests(unittest.TestCase):
         self.assertIn("fetch('data/terreiros_v2.geojson')", html)
         self.assertIn("p.nacao_categoria", html)
         self.assertIn("Não informado", html)
+        self.assertIn("nationColor", html)
+        self.assertIn("categoryCounts", html)
+        self.assertNotIn("const categoryOrder = ['Ketu'", html)
         self.assertNotIn("transition: transform .15s", html)
-        self.assertNotIn("(matriz|african)", html)
+        self.assertNotIn("keto|ketu|nago|alaketo|alaketu", html)
 
     def test_about_panel_reports_v2_reconciliation(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn("v2.0", html)
+        self.assertIn("v2.1", html)
         self.assertIn("1.155 terreiros", html)
         self.assertIn("2.102 registros", html)
         self.assertIn("1.868", html)
+        self.assertIn("49 declarações do CEAO", html)
 
     def test_methodology_documents_ceao_reconciliation(self):
         methodology = (ROOT / "metodologia.html").read_text(encoding="utf-8")
-        self.assertIn("versão 2.0", methodology)
+        self.assertIn("versão 2.1", methodology)
         self.assertIn("473 registros CEAO", methodology)
         self.assertIn("data/terreiros_v2.geojson", methodology)
+        self.assertIn("não converte Keto em Ketu", methodology)
+        self.assertIn("nomes de estabelecimentos não são usados para inferir", methodology)
         self.assertNotIn("Parte dessas ocorrências foi agregada", methodology)
 
 
