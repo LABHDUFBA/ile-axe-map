@@ -238,11 +238,19 @@
       .topbar__title { font-size: 15px; }
       .topbar__count { display: none; }
       .topbar__btn:not(.info-btn) { display: none; }
-      .rail { width: 100%; top: auto; bottom: 0; height: auto; max-height: 75vh; border-right: none; border-top: 1px solid var(--border); border-radius: 16px 16px 0 0; transform: translateY(calc(100% - 48px)); }
+      .rail { width: 100%; top: auto; bottom: 0; height: auto; max-height: 75vh; border-right: none; border-top: 1px solid var(--border); border-radius: 16px 16px 0 0; transform: translateY(calc(100% - 52px)); }
       .rail.expanded { transform: translateY(0); }
-      .rail__handle { display: block; position: absolute; top: 0; left: 0; right: 0; height: 20px; background: transparent; border: none; cursor: pointer; z-index: 10; }
-      .rail__handle::after { content: ""; position: absolute; top: 8px; left: calc(50% - 20px); width: 40px; height: 4px; border-radius: 4px; background: var(--border-strong); }
-      .rail__handle[aria-expanded="true"]::after { transform: rotate(180deg); }
+      .rail__handle {
+        display: flex; position: relative; flex: none; width: 100%; height: 52px;
+        align-items: center; justify-content: center; gap: 8px; padding: 8px 16px 0;
+        background: var(--bg-panel); color: var(--text); border: none;
+        border-bottom: 1px solid var(--border); border-radius: 16px 16px 0 0;
+        cursor: pointer; z-index: 10; touch-action: manipulation;
+        font: 700 13px/1 var(--font-body);
+      }
+      .rail__handle::before { content: ""; position: absolute; top: 7px; left: calc(50% - 18px); width: 36px; height: 4px; border-radius: 4px; background: var(--border-strong); }
+      .rail__handle-icon { font-size: 15px; transition: transform .2s; }
+      .rail__handle[aria-expanded="true"] .rail__handle-icon { transform: rotate(180deg); }
       .filters { max-height: 200px; }
       .detail { width: 100%; top: auto; bottom: 0; height: 75vh; border-right: none; border-top: 1px solid var(--border); border-radius: 16px 16px 0 0; transform: translateY(100%); }
       .detail.open { transform: translateY(0); }
@@ -269,7 +277,9 @@
   </header>
 
   <aside class="rail" id="rail" aria-label="Lista de terreiros">
-    <button class="rail__handle" id="rail-handle" type="button" aria-expanded="false" aria-label="Expandir lista"></button>
+    <button class="rail__handle" id="rail-handle" type="button" aria-expanded="false" aria-label="Abrir filtros e lista">
+      <span>Filtros e lista</span><span class="rail__handle-icon" aria-hidden="true">⌃</span>
+    </button>
     <div class="rail__search">
       <input type="text" id="search" placeholder="Buscar terreiro…" aria-label="Buscar">
     </div>
@@ -664,6 +674,7 @@
     $('rail-handle').addEventListener('click', function() {
       const exp = $('rail').classList.toggle('expanded');
       this.setAttribute('aria-expanded', String(exp));
+      this.setAttribute('aria-label', exp ? 'Fechar filtros e lista' : 'Abrir filtros e lista');
     });
     $('search').addEventListener('click', function(e) { e.stopPropagation(); });
 
