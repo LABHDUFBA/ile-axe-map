@@ -67,6 +67,12 @@
     }
     .topbar__title { font-family: var(--font-display); font-size: 18px; font-weight: 600; letter-spacing: .02em; white-space: nowrap; }
     .topbar__title span { color: var(--warm); }
+    .topbar__labhd {
+      display: flex; align-items: center; justify-content: center; flex: none;
+      width: 34px; height: 34px; border-radius: var(--radius-sm);
+      overflow: hidden; text-decoration: none;
+    }
+    .topbar__labhd img { display: block; width: 34px; height: 34px; object-fit: contain; }
     .topbar__count { font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 3px 10px; border-radius: 99px; background: var(--accent-soft); white-space: nowrap; }
     .topbar__spacer { flex: 1; }
     .topbar__btn {
@@ -248,6 +254,9 @@
   <div id="map" role="application" aria-label="Mapa de terreiros"></div>
 
   <header class="topbar">
+    <a class="topbar__labhd" href="https://labhdufba.github.io/" target="_blank" rel="noopener" aria-label="Laboratório de Humanidades Digitais da UFBA">
+      <img src="assets/labhd-logo.webp" alt="LABHD/UFBA">
+    </a>
     <div class="topbar__title">Ilê Axé <span>Map</span></div>
     <div class="topbar__count" id="count-badge" aria-live="polite">—</div>
     <div class="topbar__spacer"></div>
