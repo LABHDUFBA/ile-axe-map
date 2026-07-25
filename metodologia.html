@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nota técnico-metodológica do Ilê Axé Map, atlas digital de terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia.">
+  <meta name="color-scheme" content="light dark">
+  <title>Metodologia | Ilê Axé Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    (() => {
+      const saved = localStorage.getItem('ile-axe-theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #faf7f2; --surface: #fff; --text: #1c1917;
+      --muted: #6f675f; --faint: #786f67;
+      --border: #e7e0d6; --border-strong: #d4cbbe;
+      --accent: #29405b; --accent-hover: #1e3247;
+      --accent-soft: rgba(41,64,91,.08);
+      --warm: #a8460f; --warm-soft: rgba(168,70,15,.07);
+      --radius: 8px; --header-h: 60px;
+      --display: Fraunces, Georgia, serif;
+      --body: "Hanken Grotesk", system-ui, sans-serif;
+      --shadow: 0 1px 3px rgba(28,25,23,.08), 0 4px 16px rgba(28,25,23,.05);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --bg: #14120f; --surface: #1e1b18; --text: #f2ede4;
+        --muted: #b6ada2; --faint: #8a8177;
+        --border: #2a2724; --border-strong: #3a3631;
+        --accent: #7a9bc0; --accent-hover: #9cb8d6;
+        --accent-soft: rgba(91,123,160,.14);
+        --warm: #e58a46; --warm-soft: rgba(217,118,43,.1);
+        --shadow: 0 1px 3px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.2);
+      }
+    }
+    [data-theme="light"] {
+      color-scheme: light;
+      --bg: #faf7f2; --surface: #fff; --text: #1c1917;
+      --muted: #6f675f; --faint: #786f67;
+      --border: #e7e0d6; --border-strong: #d4cbbe;
+      --accent: #29405b; --accent-hover: #1e3247;
+      --accent-soft: rgba(41,64,91,.08);
+      --warm: #a8460f; --warm-soft: rgba(168,70,15,.07);
+      --shadow: 0 1px 3px rgba(28,25,23,.08), 0 4px 16px rgba(28,25,23,.05);
+    }
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #14120f; --surface: #1e1b18; --text: #f2ede4;
+      --muted: #b6ada2; --faint: #8a8177;
+      --border: #2a2724; --border-strong: #3a3631;
+      --accent: #7a9bc0; --accent-hover: #9cb8d6;
+      --accent-soft: rgba(91,123,160,.14);
+      --warm: #e58a46; --warm-soft: rgba(217,118,43,.1);
+      --shadow: 0 1px 3px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.2);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 28px); }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.7 var(--body); -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-underline-offset: .18em; }
+    a:hover { color: var(--accent-hover); }
+    a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3px solid var(--warm); outline-offset: 3px; }
+    .skip-link { position: fixed; z-index: 100; top: 8px; left: 8px; transform: translateY(-160%); padding: 8px 12px; border-radius: 5px; background: var(--text); color: var(--bg); text-decoration: none; }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header { position: sticky; z-index: 20; top: 0; height: var(--header-h); border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(12px); }
+    .site-header__inner { max-width: 1180px; height: 100%; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 16px; }
+    .brand { font: 600 19px/1 var(--display); letter-spacing: .02em; color: var(--text); text-decoration: none; white-space: nowrap; }
+    .brand span { color: var(--warm); }
+    .header-rule { width: 1px; height: 22px; background: var(--border-strong); }
+    .header-section { color: var(--faint); font-size: 13px; font-weight: 600; }
+    .header-spacer { flex: 1; }
+    .map-link, .theme-button { min-height: 38px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--muted); font: 600 13px/1 var(--body); }
+    .map-link { display: inline-flex; align-items: center; gap: 7px; padding: 0 12px; text-decoration: none; }
+    .theme-button { width: 38px; display: grid; place-items: center; cursor: pointer; font-size: 15px; }
+    .map-link:hover, .theme-button:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hero { border-bottom: 1px solid var(--border); }
+    .hero__inner { max-width: 1180px; margin: 0 auto; padding: 72px 24px 64px; }
+    .eyebrow { margin: 0 0 16px; color: var(--warm); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .hero h1 { max-width: 780px; margin: 0; font: 600 clamp(42px,6vw,68px)/1.02 var(--display); letter-spacing: -.025em; text-wrap: balance; }
+    .hero__subtitle { max-width: 860px; margin: 18px 0 0; color: var(--muted); font: 500 clamp(21px,3vw,29px)/1.35 var(--display); text-wrap: pretty; }
+    .document-meta { margin-top: 30px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+    .document-meta p { margin: 0; }
+    .document-meta strong { color: var(--text); font-weight: 600; }
+    .reading-note { max-width: 930px; margin: 36px 0 0; padding: 22px 24px; border: 1px solid color-mix(in srgb, var(--warm) 28%, var(--border)); border-radius: var(--radius); background: var(--warm-soft); color: var(--muted); }
+    .reading-note p { margin: 0; }
+    .reading-note strong { color: var(--text); }
+
+    .page-layout { max-width: 1180px; margin: 0 auto; padding: 64px 24px 96px; display: grid; grid-template-columns: 230px minmax(0,780px); gap: 72px; align-items: start; }
+    .toc { position: sticky; top: calc(var(--header-h) + 28px); max-height: calc(100vh - var(--header-h) - 56px); overflow: auto; padding-right: 12px; scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
+    .toc__label { margin: 0 0 14px; color: var(--faint); font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .toc-list { margin: 0; padding: 0; list-style: none; }
+    .toc-list li + li { margin-top: 4px; }
+    .toc-list a { display: block; padding: 6px 8px; border-radius: 5px; color: var(--muted); font-size: 13px; line-height: 1.35; text-decoration: none; transition: color .15s, background .15s; }
+    .toc-list a:hover, .toc-list a.is-active { background: var(--accent-soft); color: var(--accent); }
+    .mobile-toc { display: none; margin: 0 0 40px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+    .mobile-toc summary { min-height: 48px; padding: 11px 14px; cursor: pointer; color: var(--accent); font-weight: 700; }
+    .mobile-toc-list { margin: 0; padding: 0 14px 14px 34px; }
+    .mobile-toc-list li + li { margin-top: 5px; }
+    .mobile-toc-list a { color: var(--muted); font-size: 14px; }
+
+    .document { min-width: 0; }
+    .document > h2 { margin: 0 0 22px; padding-top: 58px; border-top: 1px solid var(--border); font: 600 clamp(28px,4vw,38px)/1.18 var(--display); letter-spacing: -.015em; text-wrap: balance; }
+    .document > h2:first-child { padding-top: 0; border-top: 0; }
+    .document h3 { margin: 42px 0 14px; font-size: 19px; line-height: 1.35; }
+    .document p { margin: 0 0 18px; color: var(--muted); text-wrap: pretty; }
+    .document strong { color: var(--text); font-weight: 650; }
+    .document ul, .document ol { margin: 0 0 22px; padding-left: 24px; color: var(--muted); }
+    .document li { padding-left: 5px; }
+    .document li + li { margin-top: 7px; }
+    .document li::marker { color: var(--warm); font-weight: 700; }
+    .document hr { height: 1px; margin: 56px 0 0; border: 0; background: var(--border); }
+    .document blockquote { margin: 24px 0; padding: 18px 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+    .document blockquote p:last-child { margin-bottom: 0; }
+    code { padding: .13em .38em; border: 1px solid var(--border); border-radius: 4px; background: var(--accent-soft); color: var(--text); font: 500 .88em/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; overflow-wrap: anywhere; }
+    pre { overflow: auto; margin: 0 0 24px; padding: 18px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+    pre code { padding: 0; border: 0; background: transparent; }
+    .table-wrap { max-width: 100%; overflow-x: auto; margin: 26px 0 34px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+    .table-wrap code { white-space: nowrap; overflow-wrap: normal; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 14px; line-height: 1.45; }
+    th, td { padding: 12px 14px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { color: var(--text); background: var(--accent-soft); font-size: 12px; font-weight: 700; letter-spacing: .025em; }
+    td { color: var(--muted); }
+    tr:last-child td { border-bottom: 0; }
+
+    .page-footer { border-top: 1px solid var(--border); }
+    .page-footer__inner { max-width: 1180px; margin: 0 auto; padding: 28px 24px 36px; display: flex; justify-content: space-between; gap: 20px; color: var(--faint); font-size: 13px; }
+    .page-footer a { color: var(--muted); }
+
+    @media (max-width: 900px) {
+      .page-layout { display: block; max-width: 820px; }
+      .toc { display: none; }
+      .mobile-toc { display: block; }
+      .hero__inner { padding-top: 54px; }
+    }
+    @media (max-width: 600px) {
+      :root { --header-h: 56px; }
+      .site-header__inner, .hero__inner, .page-layout, .page-footer__inner { padding-left: 18px; padding-right: 18px; }
+      .header-rule, .header-section { display: none; }
+      .map-link { width: 40px; padding: 0; justify-content: center; font-size: 0; }
+      .map-link span { font-size: 18px; }
+      .hero__inner { padding-top: 44px; padding-bottom: 46px; }
+      .hero h1 { font-size: 41px; }
+      .reading-note { padding: 18px; }
+      .page-layout { padding-top: 36px; padding-bottom: 70px; }
+      .document > h2 { padding-top: 44px; font-size: 29px; }
+      .document h3 { margin-top: 34px; }
+      .page-footer__inner { flex-direction: column; }
+    }
+    @media print {
+      .site-header, .toc, .mobile-toc, .page-footer { display: none; }
+      .hero, .page-layout { max-width: none; padding: 0; border: 0; }
+      .hero__inner { max-width: none; padding: 0 0 28px; }
+      .page-layout { display: block; }
+      .document { max-width: none; }
+      .document > h2 { break-after: avoid; }
+      .table-wrap { overflow: visible; box-shadow: none; }
+      a { color: inherit; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="./" aria-label="Ilê Axé Map, página inicial">Ilê Axé <span>Map</span></a>
+      <span class="header-rule" aria-hidden="true"></span>
+      <span class="header-section">Metodologia</span>
+      <span class="header-spacer"></span>
+      <a class="map-link" href="./"><span aria-hidden="true">←</span> Voltar ao mapa</a>
+      <button class="theme-button" id="theme-button" type="button" aria-label="Alternar tema" title="Alternar tema">◐</button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="document-title">
+      <div class="hero__inner">
+        <p class="eyebrow">Documentação · conjunto de dados v1.3</p>
+        <h1 id="document-title">Nota técnico-metodológica</h1>
+        <p class="hero__subtitle">Ilê Axé Map — Terreiros de Candomblé e espaços religiosos afro-brasileiros da Bahia</p>
+        <div class="document-meta"><p><strong>Versão do conjunto de dados:</strong> 1.3<br/>
+<strong>Data de extração e integração:</strong> 25 de julho de 2026<br/>
+<strong>Responsabilidade:</strong> Leonardo Fernandes Nascimento — Laboratório de Humanidades Digitais da Universidade Federal da Bahia (LABHD/UFBA)<br/>
+<strong>Repositório:</strong> <a href="https://github.com/LABHDUFBA/terreiro-map">https://github.com/LABHDUFBA/terreiro-map</a><br/>
+<strong>Mapa:</strong> <a href="https://labhdufba.github.io/terreiro-map/">https://labhdufba.github.io/terreiro-map/</a></p></div>
+        <div class="reading-note">
+<p><strong>Nota de leitura.</strong> O Ilê Axé Map não constitui um censo, um cadastro oficial nem um inventário exaustivo das comunidades religiosas afro-brasileiras da Bahia. Trata-se de uma infraestrutura cartográfica de pesquisa que integra registros oriundos de fontes públicas heterogêneas. Cada ponto representa um <strong>registro consolidado</strong>, com diferentes graus de completude e validação — não a certificação definitiva da existência, da identidade religiosa ou da situação atual de uma comunidade.</p>
+</div>
+      </div>
+    </section>
+
+    <div class="page-layout">
+      <aside class="toc" aria-label="Sumário da metodologia">
+        <p class="toc__label">Nesta página</p>
+        <ol class="toc-list"><li><a href="#1-finalidade-e-escopo">1. Finalidade e escopo</a></li><li><a href="#2-sintese-quantitativa-da-versao-13">2. Síntese quantitativa da versão 1.3</a></li><li><a href="#3-fontes-e-procedimentos-de-aquisicao">3. Fontes e procedimentos de aquisição</a></li><li><a href="#4-normalizacao-integracao-e-deduplicacao">4. Normalização, integração e deduplicação</a></li><li><a href="#5-controle-de-qualidade-e-falsos-positivos">5. Controle de qualidade e falsos positivos</a></li><li><a href="#6-georreferenciamento-e-controle-territorial">6. Georreferenciamento e controle territorial</a></li><li><a href="#7-categorias-de-navegacao">7. Categorias de navegação</a></li><li><a href="#8-etica-seguranca-e-governanca-dos-dados">8. Ética, segurança e governança dos dados</a></li><li><a href="#9-reprodutibilidade-e-artefatos-publicos">9. Reprodutibilidade e artefatos públicos</a></li><li><a href="#10-limitacoes">10. Limitações</a></li><li><a href="#11-atualizacao-e-controle-de-versao">11. Atualização e controle de versão</a></li><li><a href="#12-uso-e-citacao">12. Uso e citação</a></li><li><a href="#13-referencias-e-fontes">13. Referências e fontes</a></li></ol>
+      </aside>
+      <div>
+        <details class="mobile-toc">
+          <summary>Sumário da metodologia</summary>
+          <ol class="mobile-toc-list"><li><a href="#1-finalidade-e-escopo">1. Finalidade e escopo</a></li><li><a href="#2-sintese-quantitativa-da-versao-13">2. Síntese quantitativa da versão 1.3</a></li><li><a href="#3-fontes-e-procedimentos-de-aquisicao">3. Fontes e procedimentos de aquisição</a></li><li><a href="#4-normalizacao-integracao-e-deduplicacao">4. Normalização, integração e deduplicação</a></li><li><a href="#5-controle-de-qualidade-e-falsos-positivos">5. Controle de qualidade e falsos positivos</a></li><li><a href="#6-georreferenciamento-e-controle-territorial">6. Georreferenciamento e controle territorial</a></li><li><a href="#7-categorias-de-navegacao">7. Categorias de navegação</a></li><li><a href="#8-etica-seguranca-e-governanca-dos-dados">8. Ética, segurança e governança dos dados</a></li><li><a href="#9-reprodutibilidade-e-artefatos-publicos">9. Reprodutibilidade e artefatos públicos</a></li><li><a href="#10-limitacoes">10. Limitações</a></li><li><a href="#11-atualizacao-e-controle-de-versao">11. Atualização e controle de versão</a></li><li><a href="#12-uso-e-citacao">12. Uso e citação</a></li><li><a href="#13-referencias-e-fontes">13. Referências e fontes</a></li></ol>
+        </details>
+        <article class="document">
+
+
+
+
+<h2 id="1-finalidade-e-escopo">1. Finalidade e escopo</h2>
+<p>O <strong>Ilê Axé Map</strong> é um atlas digital de acesso público dedicado à reunião, à organização e à visualização de informações públicas sobre terreiros de candomblé e outros espaços religiosos afro-brasileiros relacionados à Bahia. O projeto procura reduzir a dispersão informacional entre bases institucionais, plataformas cartográficas e cadastros de natureza distinta, oferecendo uma camada integrada para consulta, pesquisa e documentação.</p>
+<p>A proposta combina três objetivos:</p>
+<ol>
+<li><strong>documental</strong>, ao aproximar registros que se encontram fragmentados em diferentes fontes;</li>
+<li><strong>analítico</strong>, ao permitir a observação exploratória de distribuições territoriais, lacunas de cobertura e diferenças entre bases;</li>
+<li><strong>infraestrutural</strong>, ao disponibilizar dados e código em formatos inspecionáveis, passíveis de crítica, correção e atualização.</li>
+</ol>
+<p>O universo empírico é formado por ocorrências recuperadas em quatro fontes: OpenStreetMap, Google Places, Centro de Estudos Afro-Orientais da Universidade Federal da Bahia (CEAO/UFBA) e levantamento da Secretaria Municipal da Reparação de Salvador, distribuído pela SEFAZ/Salvador. Essas fontes não foram produzidas com a mesma finalidade, no mesmo período ou segundo os mesmos critérios. Sua integração, portanto, não elimina as diferenças de origem: torna-as metodologicamente visíveis.</p>
+<p>A unidade básica do projeto é o <strong>registro de fonte</strong>. Após normalização, comparação e deduplicação, um ou mais registros podem ser reunidos em uma única entrada consolidada. Essa operação é técnica e probabilística: comunidades distintas podem apresentar nomes semelhantes, enquanto a mesma comunidade pode aparecer com grafias, endereços ou coordenadas diferentes.</p>
+<hr/>
+<h2 id="2-sintese-quantitativa-da-versao-13">2. Síntese quantitativa da versão 1.3</h2>
+<p>Os números abaixo foram apurados a partir dos artefatos efetivamente preservados no repositório e da contagem dos registros contidos nos arquivos — e não apenas dos metadados declarativos de versões anteriores.</p>
+<h3 id="21-composicao-por-fonte">2.1. Composição por fonte</h3>
+<div aria-label="Tabela com rolagem horizontal" class="table-wrap" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Fonte</th>
+<th scope="col" style="text-align: right;">Registros materializados antes da consolidação entre fontes</th>
+<th scope="col" style="text-align: right;">Registros na base consolidada v1.3</th>
+<th scope="col" style="text-align: right;">Registros com coordenadas na camada cartográfica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenStreetMap</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr>
+<td>Google Places</td>
+<td style="text-align: right;">1.408</td>
+<td style="text-align: right;">693</td>
+<td style="text-align: right;">693</td>
+</tr>
+<tr>
+<td>CEAO/UFBA</td>
+<td style="text-align: right;">1.155</td>
+<td style="text-align: right;">682</td>
+<td style="text-align: right;">682</td>
+</tr>
+<tr>
+<td>SEMUR — SEFAZ/Salvador</td>
+<td style="text-align: right;">635</td>
+<td style="text-align: right;">234</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>3.242</strong></td>
+<td style="text-align: right;"><strong>1.629</strong></td>
+<td style="text-align: right;"><strong>1.395</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>A coluna inicial descreve as ocorrências persistidas nos artefatos que antecederam a consolidação entre fontes. Ela não deve ser confundida com o número transitório de respostas produzidas pelas APIs durante a coleta. A coluna intermediária registra a fonte principal do registro sobrevivente após a deduplicação; ela não preserva, na versão atual, toda a cadeia de sobreposições entre fontes.</p>
+<p>Os totais de <strong>1.629 registros consolidados</strong> e <strong>1.395 feições publicadas</strong> foram recalculados diretamente dos arrays presentes no commit auditado. Os blocos de metadados internos de <code>data/terreiros_all_sources.json</code> e <code>data/terreiros.geojson</code> ainda conservam contagens de etapas anteriores e não devem ser utilizados como retrato da versão corrente.</p>
+<h3 id="22-fluxo-de-processamento">2.2. Fluxo de processamento</h3>
+<pre><code class="language-text">3.242 ocorrências materializadas nas quatro fontes
+        │
+        ├── normalização e deduplicação entre fontes
+        ▼
+2.158 registros consolidados
+        │
+        ├── remoção heurística de 499 falsos positivos prováveis
+        ▼
+1.659 registros após a limpeza semântica
+        │
+        ├── remoção de 30 registros externos ao recorte operacional
+        ▼
+1.629 registros na base consolidada v1.3
+        │
+        ├── 1.395 registros com coordenadas no recorte operacional da Bahia
+        └──   234 registros SEMUR sem coordenadas extraídas
+</code></pre>
+<p>O total de <strong>1.629 registros</strong> não equivale a 1.629 terreiros presencialmente verificados. Ele expressa o resultado atual de um pipeline de integração, deduplicação e filtragem. Os <strong>1.395 pontos cartográficos</strong> correspondem ao subconjunto com coordenadas que permaneceu após a aplicação do recorte territorial operacional.</p>
+<hr/>
+<h2 id="3-fontes-e-procedimentos-de-aquisicao">3. Fontes e procedimentos de aquisição</h2>
+<h3 id="31-openstreetmap">3.1. OpenStreetMap</h3>
+<p>O OpenStreetMap (OSM) é uma base geográfica colaborativa e aberta. A coleta foi realizada por meio da <strong>Overpass API</strong>, com uma consulta composta por diferentes combinações de atributos e expressões nominais relacionadas ao universo de interesse. Entre os critérios empregados estão:</p>
+<ul>
+<li><code>amenity=place_of_worship</code> associado a <code>religion=candomblé</code>;</li>
+<li><code>amenity=place_of_worship</code> associado a <code>religion=afro_brazilian</code>;</li>
+<li><code>denomination=candomblé</code>;</li>
+<li>nomes contendo expressões como <em>terreiro</em>, <em>candomblé</em>, <em>ilê axé</em>, <em>ilê asé</em> e <em>centro de umbanda</em>.</li>
+</ul>
+<p>O coletor versionado consulta apenas objetos do tipo <strong>nó</strong> (<code>node</code>). Caminhos (<code>way</code>) e relações (<code>relation</code>) não integram essa rotina. O script converte os resultados para GeoJSON e preserva, quando disponíveis, identificador OSM, nome, categoria, denominação, endereço, telefone, sítio eletrônico e demais etiquetas de origem.</p>
+<p>A camada pré-consolidação arquivada contém <strong>44 registros OSM</strong>; após a comparação com as demais fontes e a etapa de filtragem, <strong>20 registros</strong> permanecem na versão 1.3. Como o OpenStreetMap é continuamente editado, a repetição da consulta em outra data pode produzir resultados diferentes.</p>
+<h3 id="32-google-places">3.2. Google Places</h3>
+<p>A coleta no Google Places foi estruturada como uma busca textual multipassagem, combinando expressões relacionadas a terreiros e religiões afro-brasileiras com referências territoriais a municípios e localidades baianas. Entre as expressões registradas nos dados recuperados estão <em>terreiro de candomblé</em>, <em>candomblé</em>, <em>ilê</em>, <em>ilê asé</em>, <em>abassá</em>, <em>inzo</em>, <em>casa de santo</em>, <em>centro de candomblé</em> e <em>centro religioso afro-brasileiro</em>.</p>
+<p>A camada persistida antes da consolidação contém <strong>1.408 identificadores <code>place_id</code> distintos</strong>. Os registros incluem, quando retornados pelo serviço, nome, endereço, coordenadas, categorias da plataforma, avaliação, número de avaliações, situação operacional, localidade e expressão de busca associada.</p>
+<p>Após a deduplicação entre fontes, a filtragem de falsos positivos prováveis e a remoção de ocorrências externas ao recorte operacional, <strong>693 registros atribuídos ao Google Places</strong> permanecem na base consolidada.</p>
+<p>A interface de busca do Google Places favorece entidades com presença digital e tende a incorporar estabelecimentos que apenas compartilham palavras frequentes com o vocabulário religioso — por exemplo, “casa”, “axé”, “santo” ou nomes de municípios. Por essa razão, os resultados dessa fonte foram submetidos a uma etapa específica de controle semântico, descrita na Seção 5.</p>
+<p>O repositório preserva os resultados incorporados, mas não contém, na versão auditada, o script completo de coleta, os logs de paginação nem o histórico integral das requisições. A reprodução exata dessa etapa é, portanto, limitada.</p>
+<h3 id="33-ceaoufba">3.3. CEAO/UFBA</h3>
+<p>A base pública <strong>Mapeamento dos Terreiros de Salvador</strong>, vinculada ao Centro de Estudos Afro-Orientais da UFBA, constitui a fonte de maior densidade histórico-descritiva do projeto. Seu universo declarado é a cidade de Salvador. As páginas preservadas utilizam uma estimativa populacional de 2005 e organizam os mapas históricos até o intervalo 2001–2006; esses marcadores situam temporalmente o levantamento, mas não permitem atribuir a todos os registros uma única data de observação. A extração digital para o Ilê Axé Map ocorreu em 2026 e não deve ser confundida com a produção original das informações.</p>
+<p>Foram materializados <strong>1.155 registros</strong>, acompanhados, em diferentes níveis de completude, por campos como:</p>
+<ul>
+<li>nome da comunidade;</li>
+<li>liderança religiosa;</li>
+<li>nação ou tradição declarada;</li>
+<li>orixá ou entidade regente;</li>
+<li>ano de fundação;</li>
+<li>endereço, bairro e CEP;</li>
+<li>telefone;</li>
+<li>coordenadas geográficas;</li>
+<li>imagens em miniatura e em maior resolução.</li>
+</ul>
+<p>No arquivo estruturado, <strong>1.135 registros possuem referências preenchidas nos campos <code>foto_thumb</code> e <code>foto_grande</code></strong>, enquanto o repositório conserva <strong>1.081 miniaturas fotográficas</strong> obtidas durante a coleta. Referência remota e arquivo efetivamente preservado são, portanto, métricas distintas. Após a consolidação com as demais bases, <strong>682 registros com atribuição principal ao CEAO/UFBA</strong> permanecem na versão 1.3.</p>
+<p>A redução entre os 1.155 registros de origem e os 682 registros atribuídos ao CEAO na base final não significa, por si só, exclusão de 473 comunidades. Parte dessas ocorrências foi agregada a registros considerados equivalentes durante a deduplicação, e a contagem final por fonte corresponde apenas à procedência principal preservada no registro sobrevivente.</p>
+<h3 id="34-semur-sefazsalvador">3.4. SEMUR — SEFAZ/Salvador</h3>
+<p>A quarta fonte é um mapa cartográfico da <strong>Secretaria Municipal da Reparação de Salvador (SEMUR)</strong>, publicado em 2020 e distribuído pela infraestrutura geográfica da SEFAZ/Salvador. A lista nominal foi extraída por reconhecimento óptico de caracteres e revisão estrutural, resultando em <strong>635 pares de código e nome</strong>.</p>
+<p>O documento original apresenta informação cartográfica em sistema UTM, fuso 24S, referida ao SIRGAS 2000. Essas coordenadas não foram extraídas para a versão atual. Em consequência, os registros SEMUR participam da base consolidada e do processo de deduplicação nominal, mas não aparecem como pontos no mapa interativo. Após a comparação com as demais fontes, <strong>234 registros SEMUR sem coordenadas</strong> permanecem na base v1.3.</p>
+<p>A diferença entre contagens apresentadas em documentos derivados e a lista OCR deve ser tratada como questão de proveniência, não resolvida por simples inferência. A versão atual adota como referência operacional os 635 registros efetivamente estruturados no arquivo de origem preservado no repositório.</p>
+<hr/>
+<h2 id="4-normalizacao-integracao-e-deduplicacao">4. Normalização, integração e deduplicação</h2>
+<h3 id="41-padronizacao-minima">4.1. Padronização mínima</h3>
+<p>As quatro fontes utilizam esquemas distintos. O pipeline converte os registros para uma estrutura comum, preservando tanto quanto possível os campos originais. Entre as operações de normalização estão:</p>
+<ul>
+<li>uniformização dos campos de nome e fonte;</li>
+<li>conversão das coordenadas para longitude e latitude em WGS 84 quando já disponíveis em formato compatível;</li>
+<li>tratamento de caixa, acentuação e espaços para fins de comparação nominal;</li>
+<li>manutenção de atributos específicos de cada provedor, como <code>place_id</code>, identificadores OSM, identificadores CEAO e códigos SEMUR;</li>
+<li>geração de uma camada GeoJSON destinada à interface cartográfica e de um JSON consolidado que também comporta registros sem coordenadas.</li>
+</ul>
+<p>A normalização utilizada para comparação não deve substituir a grafia pública ou histórica dos nomes. A diversidade ortográfica — <em>Ilê/Ilé/Ylê</em>, <em>Axé/Asé/Axê</em>, <em>Ketu/Keto</em>, entre outras variações — pode expressar tradições, escolhas institucionais e histórias próprias. Sempre que possível, o valor exibido deve permanecer fiel à fonte considerada principal.</p>
+<h3 id="42-criterios-de-correspondencia">4.2. Critérios de correspondência</h3>
+<p>A deduplicação combina proximidade geográfica e semelhança nominal. Segundo a documentação metodológica do pipeline, dois registros podem ser tratados como candidatos à mesma entidade quando ocorre pelo menos uma das seguintes condições:</p>
+<ol>
+<li>distância inferior a 50 metros entre as coordenadas disponíveis;</li>
+<li>igualdade dos nomes após normalização;</li>
+<li>inclusão substancial de uma forma nominal na outra, desde que a sequência comparada tenha mais de cinco caracteres.</li>
+</ol>
+<p>Quando há correspondência, procura-se conservar o registro com maior densidade informacional e incorporar campos complementares da outra ocorrência. Esse procedimento reduziu <strong>3.242 ocorrências de fonte a 2.158 registros consolidados</strong>, isto é, reuniu 1.084 ocorrências consideradas redundantes.</p>
+<p>A equivalência produzida por esse método é uma hipótese operacional. A proximidade espacial não garante identidade institucional, sobretudo em territórios com forte concentração de comunidades religiosas; nomes semelhantes também podem designar casas distintas, linhagens relacionadas ou mudanças históricas de denominação. Inversamente, mudanças de endereço, abreviações e diferenças ortográficas podem impedir a reunião de registros que se referem à mesma comunidade.</p>
+<h3 id="43-proveniencia-apos-a-fusao">4.3. Proveniência após a fusão</h3>
+<p>Na versão 1.3, o campo <code>fonte</code> indica a procedência principal do registro sobrevivente. Ele não funciona como uma relação exaustiva de todas as fontes que contribuíram para aquela entrada. Consequentemente, as contagens por fonte descrevem a <strong>atribuição final de proveniência</strong>, e não o grau real de sobreposição entre as bases.</p>
+<p>Uma modelagem futura deverá preservar a relação muitos-para-muitos entre entidades consolidadas e registros de origem, com identificadores, datas de acesso, decisões de correspondência e histórico de alterações. Essa mudança permitiria auditar cada fusão sem depender apenas do registro final.</p>
+<hr/>
+<h2 id="5-controle-de-qualidade-e-falsos-positivos">5. Controle de qualidade e falsos positivos</h2>
+<h3 id="51-por-que-filtrar">5.1. Por que filtrar</h3>
+<p>Buscas textuais em plataformas de lugares recuperam entidades que compartilham palavras com o campo religioso, mas não correspondem ao escopo do projeto. Hotéis, restaurantes, lojas, equipamentos públicos, igrejas cristãs, centros kardecistas, monumentos, acidentes geográficos e nomes de municípios podem aparecer porque contêm expressões como “casa”, “santo”, “axé”, “centro”, “terreiro” ou referências territoriais empregadas na consulta.</p>
+<p>O controle de falsos positivos foi aplicado apenas aos registros atribuídos ao <strong>Google Places</strong> e ao <strong>OpenStreetMap</strong>. As entradas CEAO e SEMUR, provenientes de levantamentos institucionalmente orientados ao tema, não passaram pelo mesmo filtro nominal automatizado. Essa diferença de tratamento não equivale a uma auditoria independente da qualidade ou da atualidade desses registros.</p>
+<h3 id="52-procedimento-aplicado">5.2. Procedimento aplicado</h3>
+<p>A limpeza ocorreu em duas camadas:</p>
+<ol>
+<li><strong>varredura inicial de nomes</strong>, que classificou os registros Google consolidados em candidatos religiosos, casos ambíguos e falsos positivos prováveis;</li>
+<li><strong>aplicação de listas de inclusão e exclusão</strong>, com correspondência por substring, sem diferenciação entre maiúsculas e minúsculas.</li>
+</ol>
+<p>A primeira varredura identificou <strong>323 falsos positivos prováveis</strong>. A segunda camada removeu outros <strong>176 registros</strong> por regras nominais adicionais, totalizando <strong>499 exclusões</strong>: 498 registros Google e um registro OSM. A lista integral das exclusões, acompanhada da regra acionada, está disponível em <code>data/falsos_positivos_removidos.json</code>.</p>
+<p>Antes da exclusão, o algoritmo consulta uma lista de termos protetivos associados a possíveis terreiros — como referências a orixás, inquices, voduns, nações, “casa de santo”, “terreiro”, “ilê”, “axé”, “abassá”, “inzo”, “tenda” e expressões correlatas. Apenas na ausência desses sinais são aplicadas as regras de exclusão.</p>
+<h3 id="53-estatuto-da-validacao">5.3. Estatuto da validação</h3>
+<p>A filtragem reduz ruído evidente, mas não constitui validação etnográfica, verificação presencial ou classificação supervisionada por especialistas. A versão atual não dispõe de:</p>
+<ul>
+<li>amostra-ouro rotulada de forma independente;</li>
+<li>dupla codificação humana;</li>
+<li>medida de concordância entre avaliadores;</li>
+<li>estimativas de precisão, revocação ou taxa residual de falsos positivos;</li>
+<li>validação presencial das entidades mantidas;</li>
+<li>revisão comunitária sistemática.</li>
+</ul>
+<p>Por essa razão, as exclusões devem ser entendidas como <strong>decisões heurísticas auditáveis</strong>, e os registros remanescentes como candidatos com graus variados de confiança. As listas de termos podem produzir tanto falsos positivos quanto falsos negativos, especialmente diante da polissemia religiosa, das variações linguísticas e da diversidade de formas de autodenominação.</p>
+<hr/>
+<h2 id="6-georreferenciamento-e-controle-territorial">6. Georreferenciamento e controle territorial</h2>
+<h3 id="61-origem-das-coordenadas">6.1. Origem das coordenadas</h3>
+<p>As coordenadas publicadas foram herdadas das fontes OSM, Google Places e CEAO/UFBA. Não houve, na versão 1.3, geocodificação dos 234 registros SEMUR remanescentes. A camada cartográfica contém, portanto, <strong>1.395 feições pontuais</strong>.</p>
+<p>O projeto não atribui a todas as coordenadas o mesmo grau de precisão. Dependendo da fonte, um ponto pode representar a entrada do imóvel, o centro de uma edificação, uma posição fornecida por plataforma colaborativa ou uma localização aproximada. A presença de coordenadas não deve ser interpretada automaticamente como confirmação da posição exata da comunidade.</p>
+<h3 id="62-recorte-operacional-da-bahia">6.2. Recorte operacional da Bahia</h3>
+<p>Para a checagem inicial foi utilizado um retângulo geográfico aproximado com os seguintes limites:</p>
+<pre><code class="language-text">longitude: -46,7 a -37,3
+latitude:  -18,4 a  -8,5
+</code></pre>
+<p>Esse <em>bounding box</em> funciona como teste de plausibilidade e enquadramento visual; ele não substitui o polígono administrativo oficial do estado. Na camada v1.3, <strong>1.395 pontos</strong> estão dentro do retângulo operacional e possuem o marcador <code>geo_status: in_bahia</code>. Os <strong>234 registros SEMUR</strong> permanecem sem coordenadas.</p>
+<p>Uma etapa anterior continha 30 pontos do Google Places fora desse recorte. Eles foram removidos da base consolidada e da camada publicada no commit <code>5b6b5bb</code>, permanecendo recuperáveis no histórico do repositório para fins de auditoria. Na versão corrente, não há feições externas ao recorte operacional.</p>
+<h3 id="63-interpretacao-espacial">6.3. Interpretação espacial</h3>
+<p>A distribuição de pontos expressa simultaneamente a geografia das comunidades e a geografia das fontes. Concentrações urbanas podem resultar de maior presença digital, cobertura institucional mais intensa, facilidade de georreferenciamento ou campanhas localizadas de mapeamento. Áreas com poucos registros não devem ser interpretadas como áreas com poucos terreiros sem evidência adicional.</p>
+<p>O mapa é adequado para exploração, localização de registros e formulação de hipóteses. Não é, isoladamente, uma base amostral válida para estimar prevalência, densidade, crescimento ou ausência territorial.</p>
+<hr/>
+<h2 id="7-categorias-de-navegacao">7. Categorias de navegação</h2>
+<p>A interface produz uma categoria derivada para permitir filtros e diferenciação visual. Essa classificação é calculada no navegador e não substitui os campos originais das fontes.</p>
+<p>Quando o registro possui o campo <code>nacao</code>, a interface procura expressões associadas a Ketu/Nagô, Angola, Jeje, Umbanda, Candomblé e matriz africana. Na ausência desse campo, o classificador examina conjuntamente nome, religião, denominação e tipo de equipamento. Registros sem correspondência lexical são reunidos em <strong>“Outro”</strong>.</p>
+<p>Essas categorias têm função exclusivamente instrumental. Elas não devem ser tomadas como taxonomia antropológica exaustiva, identidade religiosa certificada ou classificação autorizada pelas comunidades. Grafias não previstas pelo vocabulário podem ser encaminhadas para “Outro”, e casas com pertencimentos múltiplos podem ser reduzidas a uma única categoria em razão da ordem das regras. A análise substantiva deve recorrer aos campos de origem e, quando possível, à autodeclaração da comunidade.</p>
+<hr/>
+<h2 id="8-etica-seguranca-e-governanca-dos-dados">8. Ética, segurança e governança dos dados</h2>
+<p>Terreiros e comunidades religiosas afro-brasileiras são historicamente expostos a racismo religioso, violência, invasões, estigmatização e destruição patrimonial. Essa condição altera o estatuto ético da cartografia. O fato de um dado estar publicamente acessível em sua fonte original não torna sua agregação automaticamente isenta de risco: uma interface unificada reduz o custo de localização, cruzamento e reutilização das informações.</p>
+<p>A versão atual reúne nomes, coordenadas e, em parte dos registros, endereços, lideranças, telefones e imagens provenientes de fontes públicas. A publicação desses elementos deve observar os princípios de finalidade, necessidade, proporcionalidade, segurança e respeito à autodeterminação informacional. A inclusão no mapa não deve ser interpretada como consentimento individual ou comunitário ao projeto, nem como autorização para abordagem, visita, vigilância ou exploração comercial.</p>
+<p>A governança responsável do atlas deve compreender:</p>
+<ol>
+<li><strong>canal de correção e retirada</strong>, por meio do qual comunidades possam solicitar atualização, ocultação ou remoção de informações;</li>
+<li><strong>revisão de granularidade</strong>, avaliando quando coordenadas exatas devem ser substituídas por localização aproximada ou agregação territorial;</li>
+<li><strong>minimização de dados pessoais</strong>, especialmente para nomes de lideranças, telefones e endereços residenciais;</li>
+<li><strong>registro das decisões</strong>, incluindo motivo, data e responsável por alterações sensíveis;</li>
+<li><strong>consulta comunitária</strong>, incorporando representantes das tradições mapeadas à definição das regras de publicação;</li>
+<li><strong>avaliação periódica de risco</strong>, considerando que mudanças no contexto político e tecnológico podem alterar os efeitos da exposição.</li>
+</ol>
+<p>Solicitações de correção, atualização ou retirada podem ser encaminhadas a <strong>leofn@ufba.br</strong>. Uma política pública de governança, com prazos, critérios e modalidades de resposta, deverá acompanhar as próximas versões.</p>
+<hr/>
+<h2 id="9-reprodutibilidade-e-artefatos-publicos">9. Reprodutibilidade e artefatos públicos</h2>
+<p>A reprodutibilidade da versão 1.3 é <strong>parcial</strong>. O repositório permite inspecionar a camada publicada, os registros consolidados, os arquivos de origem preservados para CEAO e SEMUR, a consulta OSM e as regras de detecção e remoção de falsos positivos. Contudo, não estão integralmente disponíveis os scripts que produziram a coleta Google Places, a extração CEAO, o OCR SEMUR e a consolidação inicial entre as quatro fontes.</p>
+<h3 id="91-principais-artefatos">9.1. Principais artefatos</h3>
+<div aria-label="Tabela com rolagem horizontal" class="table-wrap" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Caminho</th>
+<th scope="col">Função</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data/terreiros.geojson</code></td>
+<td>Camada carregada pela interface; 1.395 pontos na versão 1.3</td>
+</tr>
+<tr>
+<td><code>data/terreiros_all_sources.json</code></td>
+<td>Base consolidada com 1.629 registros, incluindo 234 sem coordenadas</td>
+</tr>
+<tr>
+<td><code>data/terreiros_all.geojson</code></td>
+<td>Instantâneo intermediário anterior à limpeza de falsos positivos</td>
+</tr>
+<tr>
+<td><code>data/falsos_positivos_suspeitos.json</code></td>
+<td>Resultado da varredura semântica inicial</td>
+</tr>
+<tr>
+<td><code>data/falsos_positivos_removidos.json</code></td>
+<td>Lista auditável das 499 exclusões</td>
+</tr>
+<tr>
+<td><code>data/ceao/terreiros_ceao_complete.json</code></td>
+<td>Registros estruturados derivados do CEAO/UFBA</td>
+</tr>
+<tr>
+<td><code>data/sefaz/sefaz_terreiros_complete.json</code></td>
+<td>Lista SEMUR extraída do documento cartográfico</td>
+</tr>
+<tr>
+<td><code>data/sefaz/sefaz_salvador_map.pdf</code></td>
+<td>Documento cartográfico de referência preservado no repositório</td>
+</tr>
+<tr>
+<td><code>scripts/collect_osm.py</code></td>
+<td>Consulta e conversão dos dados do OpenStreetMap</td>
+</tr>
+<tr>
+<td><code>scan_fp.py</code></td>
+<td>Varredura de falsos positivos prováveis</td>
+</tr>
+<tr>
+<td><code>clean_fp.py</code></td>
+<td>Aplicação das listas de inclusão e exclusão</td>
+</tr>
+<tr>
+<td><code>refine_and_clean.py</code></td>
+<td>Rotinas complementares de normalização e controle geográfico</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="92-condicoes-para-reproducao-integral">9.2. Condições para reprodução integral</h3>
+<p>Uma versão plenamente reprodutível deverá acrescentar:</p>
+<ul>
+<li>scripts completos de coleta e paginação do Google Places;</li>
+<li>código de extração das páginas CEAO;</li>
+<li>procedimento documentado de OCR e revisão do mapa SEMUR;</li>
+<li>implementação versionada da deduplicação entre fontes;</li>
+<li>ambiente computacional fixado, com dependências e versões;</li>
+<li>dicionário de dados;</li>
+<li>identificadores estáveis para registros de origem e entidades consolidadas;</li>
+<li>testes automatizados de consistência entre metadados, arquivos e interface;</li>
+<li>licença ou política de reutilização definida de forma compatível com a proveniência heterogênea dos dados.</li>
+</ul>
+<p>Na versão auditada, não foi localizado um instrumento único de licenciamento para o conjunto agregado. Acesso público, gratuidade de consulta e licença de redistribuição são condições distintas; as possibilidades de reutilização devem ser verificadas fonte a fonte e formalizadas para o dataset derivado.</p>
+<p>Por envolver serviços dinâmicos e bases editáveis, reprodução não significa necessariamente obter os mesmos resultados em uma nova consulta. O objetivo apropriado é tornar repetíveis as operações, registrar as versões das fontes e explicar toda divergência entre execuções.</p>
+<hr/>
+<h2 id="10-limitacoes">10. Limitações</h2>
+<p>A interpretação do Ilê Axé Map deve considerar, no mínimo, as seguintes limitações:</p>
+<ul>
+<li><strong>cobertura não probabilística:</strong> as fontes não derivam de plano amostral comum;</li>
+<li><strong>viés de visibilidade digital:</strong> comunidades com presença em plataformas, cadastros ou projetos institucionais têm maior chance de aparecer;</li>
+<li><strong>assimetria territorial:</strong> Salvador e áreas com levantamentos específicos estão mais densamente documentadas;</li>
+<li><strong>heterogeneidade temporal:</strong> a data de integração não corresponde à data de produção nem à atualidade de cada registro;</li>
+<li><strong>incerteza ontológica:</strong> um “lugar” de plataforma, uma ficha institucional e uma comunidade religiosa não são unidades automaticamente equivalentes;</li>
+<li><strong>incerteza posicional:</strong> as coordenadas possuem precisão variável e não foram todas verificadas;</li>
+<li><strong>deduplicação probabilística:</strong> falsos agrupamentos e duplicatas residuais são possíveis;</li>
+<li><strong>validação sem padrão-ouro:</strong> a limpeza textual não mede precisão ou revocação;</li>
+<li><strong>proveniência simplificada:</strong> o registro final preserva uma fonte principal, não toda a rede de contribuições;</li>
+<li><strong>categorias derivadas:</strong> os filtros da interface dependem de regras lexicais e não substituem a autodeclaração;</li>
+<li><strong>234 registros não cartografados:</strong> a ausência de coordenadas SEMUR reduz a cobertura visual de Salvador;</li>
+<li><strong>30 ocorrências fora do recorte:</strong> esses pontos demandam revisão territorial específica;</li>
+<li><strong>risco de reidentificação e exposição:</strong> a agregação pode ampliar riscos já enfrentados pelas comunidades.</li>
+</ul>
+<p>Essas limitações não anulam o valor documental do conjunto; elas definem o campo de inferências que ele pode sustentar legitimamente.</p>
+<hr/>
+<h2 id="11-atualizacao-e-controle-de-versao">11. Atualização e controle de versão</h2>
+<p>O conjunto de dados deve adotar versionamento explícito. Cada nova publicação deverá registrar:</p>
+<ul>
+<li>data de extração e data de lançamento;</li>
+<li>fontes consultadas e suas versões, quando disponíveis;</li>
+<li>registros adicionados, alterados, fundidos e removidos;</li>
+<li>mudanças nas regras de deduplicação e classificação;</li>
+<li>decisões de correção ou retirada solicitadas pelas comunidades;</li>
+<li>alterações na granularidade espacial;</li>
+<li>testes de consistência executados;</li>
+<li>responsável pela revisão.</li>
+</ul>
+<h3 id="prioridades-para-a-proxima-versao">Prioridades para a próxima versão</h3>
+<ol>
+<li>documentar e testar automaticamente a regra territorial para evitar a reintrodução de registros externos ao recorte operacional;</li>
+<li>reconciliar os metadados internos com as contagens efetivas dos arquivos e da interface;</li>
+<li>corrigir e ampliar o vocabulário das categorias de navegação;</li>
+<li>criar proveniência muitos-para-muitos entre registros de origem e entidades consolidadas;</li>
+<li>realizar validação humana estratificada, com protocolo e medida de concordância;</li>
+<li>avaliar a geocodificação responsável dos registros SEMUR, preservando incerteza e proteção espacial;</li>
+<li>publicar política de correção, retirada e minimização de dados sensíveis;</li>
+<li>completar os scripts ausentes e fixar o ambiente de reprodução.</li>
+</ol>
+<hr/>
+<h2 id="12-uso-e-citacao">12. Uso e citação</h2>
+<p>O conjunto é indicado para:</p>
+<ul>
+<li>pesquisa exploratória e formulação de hipóteses;</li>
+<li>estudos sobre cobertura e desigualdade entre infraestruturas de dados;</li>
+<li>documentação de proveniência e história de bases cartográficas;</li>
+<li>desenvolvimento de métodos de integração, deduplicação e auditoria de dados culturais.</li>
+</ul>
+<p>Não se recomenda utilizá-lo, sem validação adicional, para:</p>
+<ul>
+<li>estimar o número total de terreiros na Bahia;</li>
+<li>inferir ausência de comunidades em determinado território;</li>
+<li>produzir ranking de municípios ou tradições;</li>
+<li>tomar decisões administrativas ou policiais sobre comunidades específicas;</li>
+<li>realizar visitas, contatos ou intervenções sem mediação ética;</li>
+<li>redistribuir dados pessoais ou coordenadas fora da finalidade de pesquisa.</li>
+</ul>
+<h3 id="citacao-sugerida">Citação sugerida</h3>
+<blockquote>
+<p>NASCIMENTO, Leonardo Fernandes; LABORATÓRIO DE HUMANIDADES DIGITAIS DA UFBA. <strong>Ilê Axé Map: terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia</strong>. Versão 1.3. Salvador: Universidade Federal da Bahia, 2026. Disponível em: <a href="https://labhdufba.github.io/terreiro-map/" rel="noopener noreferrer" target="_blank">https://labhdufba.github.io/terreiro-map/</a>. Acesso em: dia mês ano.</p>
+</blockquote>
+<p>Ao utilizar registros específicos, recomenda-se citar também a fonte de origem correspondente — OpenStreetMap, Google Places, CEAO/UFBA ou SEMUR/SEFAZ — e informar a versão do conjunto consultado.</p>
+<hr/>
+<h2 id="13-referencias-e-fontes">13. Referências e fontes</h2>
+<ul>
+<li><strong>Centro de Estudos Afro-Orientais da Universidade Federal da Bahia.</strong> <em>Mapeamento dos Terreiros de Salvador</em>. Disponível em: <a href="https://terreiros.ceao.ufba.br/" rel="noopener noreferrer" target="_blank">https://terreiros.ceao.ufba.br/</a>.</li>
+<li><strong>OpenStreetMap contributors.</strong> <em>OpenStreetMap</em>. Disponível em: <a href="https://www.openstreetmap.org/" rel="noopener noreferrer" target="_blank">https://www.openstreetmap.org/</a>.</li>
+<li><strong>Overpass API.</strong> Interface de consulta ao OpenStreetMap. Disponível em: <a href="https://overpass-api.de/" rel="noopener noreferrer" target="_blank">https://overpass-api.de/</a>.</li>
+<li><strong>Prefeitura Municipal de Salvador — Secretaria Municipal da Reparação.</strong> Mapa cartográfico de terreiros de Salvador, 2020. Documento distribuído pela infraestrutura geográfica da SEFAZ/Salvador.</li>
+<li><strong>Google.</strong> <em>Google Places</em>. Fonte de registros de lugares consultada no processo de coleta.</li>
+<li><strong>Laboratório de Humanidades Digitais da UFBA.</strong> Repositório do projeto. Disponível em: <a href="https://github.com/LABHDUFBA/terreiro-map" rel="noopener noreferrer" target="_blank">https://github.com/LABHDUFBA/terreiro-map</a>.</li>
+</ul>
+<hr/>
+<p><em>Documento revisto a partir dos arquivos públicos da versão 1.3, commit <code>be63bf88046276d10ade2e27b220550de8288182</code>, auditado em 25 de julho de 2026.</em></p></article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__inner">
+      <span>Ilê Axé Map · LABHD/UFBA</span>
+      <span><a href="METODOLOGIA.md">Ver fonte em Markdown</a> · <a href="https://github.com/LABHDUFBA/terreiro-map" target="_blank" rel="noopener noreferrer">Repositório</a></span>
+    </div>
+  </footer>
+
+  <script>
+    const themeButton = document.getElementById('theme-button');
+    themeButton.addEventListener('click', () => {
+      const current = document.documentElement.dataset.theme;
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const next = current ? (current === 'dark' ? 'light' : 'dark') : (systemDark ? 'light' : 'dark');
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem('ile-axe-theme', next);
+    });
+
+    const tocLinks = [...document.querySelectorAll('.toc-list a')];
+    const headings = tocLinks.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
+    if ('IntersectionObserver' in window && headings.length) {
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if (!visible) return;
+        tocLinks.forEach(link => link.classList.toggle('is-active', link.hash === '#' + visible.target.id));
+      }, { rootMargin: '-15% 0px -75% 0px', threshold: 0 });
+      headings.forEach(heading => observer.observe(heading));
+    }
+  </script>
+</body>
+</html>
