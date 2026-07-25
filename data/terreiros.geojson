@@ -4621,6 +4621,4210 @@
         "search_city": "Simões Filhos",
         "source": "google"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4704314,
+          -13.0080362
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJrYb1vlgbFgcRXNBx3hg5JH0",
+        "name": "Ilê Axé Omin Dá",
+        "address": "R. Alto da Alegria, 27 - Nordeste do Amaralina, Salvador - BA, 41900-505, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 5,
+        "business_status": "OPERATIONAL",
+        "search_city": "Almadina",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4662945,
+          -12.8306947
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJzaKCUGgSFgcR6pVnDhq9CtU",
+        "name": "Ilê Axé Ibá Lugan",
+        "address": "R. São Raimundo, 299 - Paripe, Salvador - BA, 40820-250, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Aurelino Leal",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.64846060000001,
+          -23.6694852
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJaRBF-TRFzpQRHw_CpYzTz2g",
+        "name": "Ilê Axé - São Paulo Artigos Religiosos",
+        "address": "Av. Cupecê, 3849 - Jardim Jabaquara, São Paulo - SP, 04365-001, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest",
+          "store"
+        ],
+        "rating": 4.7,
+        "user_ratings_total": 668,
+        "business_status": "OPERATIONAL",
+        "search_city": "Barreiras",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -42.6265701,
+          -22.4217084
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJBZyRv1gpmAARtMDDyzZufYg",
+        "name": "Ilê Axé Omin",
+        "address": "Al. Tupiniquim, 606 - Boca do Mato, Cachoeiras de Macacu - RJ, 28680-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 17,
+        "business_status": "OPERATIONAL",
+        "search_city": "Barreiras",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -47.80468579999999,
+          -15.7675228
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJRdaVvv08WpMRxNH9Ho9QOUI",
+        "name": "Ilê Axé Oyá Bagan",
+        "address": "Núcleo Rural Tamanduá - Plano Piloto, Brasília - DF, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 4.7,
+        "user_ratings_total": 10,
+        "business_status": "OPERATIONAL",
+        "search_city": "Barreiras",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.6363309,
+          -23.6602478
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJk2mTetRazpQR14gN5ZjzlN8",
+        "name": "Axé Ilê Obá",
+        "address": "R. Azor Silva, 77 - Vila Fachini, São Paulo - SP, 04326-010, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.8,
+        "user_ratings_total": 79,
+        "business_status": "OPERATIONAL",
+        "search_city": "Barreiras",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -44.9862556,
+          -12.1569012
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJV5vxr6uLXwcRS6hPs_EH7Ig",
+        "name": "Casa de umbanda omolokô Pai Zé Pedro das cachoeiras",
+        "address": "R. Planalto, 52 - Sandra Regina, Barreiras - BA, 47809-999, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Barreiras",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.8796071,
+          -15.8550572
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJUVQmTwA5NwcR9w6tl4LYe50",
+        "name": "Ile Axé Osí Mutacutalegin",
+        "address": "Belmonte, BA, 45800-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Belmonte",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.3857921,
+          -12.69313
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJwS9e6w1pFgcRON68L0vQFNU",
+        "name": "Ilê Axé Iboro Odé",
+        "address": "BA-093, Simões Filho - BA, 43700-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 4.6,
+        "user_ratings_total": 19,
+        "business_status": "OPERATIONAL",
+        "search_city": "Birroba",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.36582080000001,
+          -12.8248604
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ0TXiOPgVFgcRMCQWwnNZGo4",
+        "name": "Ilê Axé Ará Ibú Faramin",
+        "address": "Tv. Boa Vista da Ceasa, 48 - Ceasa, Salvador - BA, 41402-390, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 9,
+        "business_status": "OPERATIONAL",
+        "search_city": "Birroba",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.5010565,
+          -12.9559871
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJcayiur0FFgcRgtqG2cGqdjk",
+        "name": "Ilê Axé Oyá Omim Igbalé",
+        "address": "Ladeira São Francisco de Paula, 15 - Comércio, Salvador - BA, 40325-240, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Birroba",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.3630259,
+          -12.9449583
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJr8Npn2UXFgcRmPct-Kh-e-M",
+        "name": "Ilê Axé Iba Faromim",
+        "address": "Baixa da Soronha, 18 - Itapuã, Salvador - BA, 41611-160, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 3,
+        "business_status": "OPERATIONAL",
+        "search_city": "Birroba",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4793861,
+          -12.9359562
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJH3z8NgAbFgcRWFCFQVsOrHs",
+        "name": "Terreiro ile axe oba ina",
+        "address": "R. Santa Augusta, 100 - São Caetano, Salvador - BA, 40391-224, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Birroba",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.3600397,
+          -12.8402352
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJlTA-IVUUFgcRf62G0QKMbcw",
+        "name": "Ilê Axé Ogum Wari",
+        "address": "R. Silva da Ceasa, 228 - Areia Branca, Salvador - BA, 41404-020, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 6,
+        "business_status": "OPERATIONAL",
+        "search_city": "Birroba",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4784633,
+          -12.9517755
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJj5J7xusbFgcRNb1lrd_dgIo",
+        "name": "Ilê Axé Opô Oya Pada",
+        "address": "R. Bom Jesus da Lapa, 53 - IAPI, Salvador - BA, 40323-300, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.9,
+        "user_ratings_total": 23,
+        "business_status": "OPERATIONAL",
+        "search_city": "Bom Jesus da Lapa",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.6689328,
+          -14.2044673
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJl1NOhORLRAcRdM6oOk0_MQE",
+        "name": "Ylê Axé - Palácio dos Orixás - Pai de Santo, Casa de umbanda e Candomblé",
+        "address": "R. Dr. Guilherme Dias, 80 - Centro, Brumado - BA, 46100-000, Brazil",
+        "types": [
+          "establishment",
+          "food",
+          "health",
+          "place_of_worship",
+          "point_of_interest",
+          "store"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Brumado",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.6597997,
+          -14.2013256
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJgdb-H2BJRAcRWWeAbzUkev4",
+        "name": "\"Ilé Axé Iyá Omin Iepondá\"",
+        "address": "R. Dr. Chagas Dinis, 98 - São Félix, Brumado - BA, 46100-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Brumado",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.6738465,
+          -14.2151947
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJG8RNDUlLRAcRJ8ZHaKw4rWw",
+        "name": "Ilé Àlákétù Asé Odé Omi Lódò",
+        "address": "R. São Damião, 2-54 - Juracy P Gomes, Brumado - BA, 46100-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 4,
+        "business_status": "OPERATIONAL",
+        "search_city": "Brumado",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.0020532,
+          -14.2791019
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJNayiaJY1OQcR3BT6IiW38x8",
+        "name": "Terreiro de Candomblé Ilê Axé Babá Wallamym",
+        "address": "R. das Flores, 68 - Itacaré, BA, 45530-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 11,
+        "business_status": "OPERATIONAL",
+        "search_city": "Buerarema",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -42.488011,
+          -14.0674993
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJpeELO8nVRAcR6CO7TNDZ5gw",
+        "name": "Ylê Axé - Palácio dos Orixás - Caetité - BA",
+        "address": "R. Juvenal Lacerda, 148 - Centro, Caetité - BA, 46400-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Caetité",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.2690769,
+          -14.6560425
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJMxCwU0oDOQcRWbWabeZi_Aw",
+        "name": "Ile Axé Ode Omi Ewá",
+        "address": "Banco do Pedro, Ilhéus - BA, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Camamu",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.346145,
+          -12.6980571
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJSyFgXKNpFgcR7ubYNjv8c9Y",
+        "name": "Ilê Axé Odé Tobi Lailá",
+        "address": "R. Sem Denominacao, 161 - Lama Preta, Camaçari - BA, 42806-320, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.9,
+        "user_ratings_total": 15,
+        "business_status": "OPERATIONAL",
+        "search_city": "Camaçari",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.2282105,
+          -12.7647835
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJdWNywh1HFgcR33NEl8cO0Zo",
+        "name": "SOCIEDADE RELIGIOSA TERREIRO ILÊ AXÉ ADÊ WÜRA",
+        "address": "Loteamento Porta do Sol - Rua Pau Brasil, Lot 3 - Quadra 11 - Coqueiro de arembepe, Camaçari - BA, 42800-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Camaçari",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.9542322,
+          -15.6724063
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJhcvpDHFDNwcR4Z6MHjkTzIQ",
+        "name": "YLÊ AXÉ PALÁCIO DOS ORIXÁS - GUARDIÃO OXÓSSI - PAI DE SANTO, CASA DE UMBANDA, CANDOMBLÉ, TARÓLOGA",
+        "address": "R. Rita Braga, 57 - TANCREDÃO, Canavieiras - BA, 45860-000, Brazil",
+        "types": [
+          "establishment",
+          "food",
+          "health",
+          "lodging",
+          "place_of_worship",
+          "point_of_interest",
+          "store"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Canavieiras",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4428854,
+          -12.7755319
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJIyVidA9tFgcRPIaMhdJti0o",
+        "name": "Ilê Axé Ikandele",
+        "address": "Unnamed Road, Simões Filho - BA, 43700-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.3,
+        "user_ratings_total": 3,
+        "business_status": "OPERATIONAL",
+        "search_city": "Caravelas",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.7403511,
+          -17.5351478
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJWzETuQZENQcRPV9boknVOsU",
+        "name": "YLÊ AXÉ PALÁCIO DOS ORIXÁS - GUARDIÃO OXÓSSI O CAVALEIRO DE ARUANDA | PAI DE SANTO, CASA DE UMBANDA E CANDOMBLÉ",
+        "address": "R. Min. Jarbas Passarinho, 64 - Wilson Brito, Teixeira de Freitas - BA, 45995-705, Brazil",
+        "types": [
+          "establishment",
+          "food",
+          "health",
+          "place_of_worship",
+          "point_of_interest",
+          "store"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Caravelas",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.0933475,
+          -15.2200064
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJqzaaUAC7SAcROarNrBmsltA",
+        "name": "Ilê axé xangô agô veredinha",
+        "address": "BR-116 - Veredinha, Vitória da Conquista - BA, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Encruzilhada",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.9007011,
+          -12.2081197
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJff8Ys_o7FAcR8KKmbmfUn6U",
+        "name": "Ilê Axé Omin Ofá Layó",
+        "address": "Rua Corredor de Anizia - Estr. do Jaíba, 220 - jaiba, Feira de Santana - BA, 44115-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 29,
+        "business_status": "OPERATIONAL",
+        "search_city": "Entre Rios",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.5899131,
+          -16.3850847
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJD3pTU5NtNgcRawN13D2VNlQ",
+        "name": "Ylê Axé - Palácio dos Orixás - Eunápolis - BA",
+        "address": "R. Paulino Mendes Lima, 1240 - Jardins de Eunápolis, Eunápolis - BA, 45820-625, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Eunápolis",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.9702131,
+          -12.2666803
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJg5r-J1A3FAcRs86yxdAM2b4",
+        "name": "Ilê Axé Ibá Lundorômim",
+        "address": "R. Dr. Macário Cerqueira, 606 - Jardim Acácia, Feira de Santana - BA, 40301-110, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.931171,
+          -12.213622
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ7zqtYAA5FAcRr84vq27JRXE",
+        "name": "Ilê Axé Obá Kossô",
+        "address": "R. Ibiara, 222 - Mangabeira, Feira de Santana - BA, 44056-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 1,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.9920044,
+          -12.286746
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJXa9kDQBJFAcRWxrKlPCVGhk",
+        "name": "Ilê Axé Ômin Tôbo",
+        "address": "R. Linda Vista, 42 - CIS, Feira de Santana - BA, 44013-130, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.9923445,
+          -12.1911277
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJHRNRiic3FAcRnEBry9_vONg",
+        "name": "ilê Axé Ominlage",
+        "address": "Estr. Braço Forte - Pedra Ferrada, Feira de Santana - BA, 44046-800, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 7,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.9655847,
+          -12.3094156
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJyWXBZg43FAcR97it4iVJBtY",
+        "name": "Ilê Axé Aramegi",
+        "address": "Estr. de São João Grande, 79 - São Gonçalo dos Campos, Feira de Santana - BA, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 10,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.9713322,
+          -12.2644853
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJa9C_7TY3FAcRCNx4EkCaFz0",
+        "name": "Ilê Axé Oxóssi reina na umbanda",
+        "address": "R. Itainópolis Dois - Muchila, Feira de Santana - BA, 44135-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 7,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.8847309,
+          -12.3215998
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJDToxvTw3FAcRrIXNo2IqK6E",
+        "name": "Ilê Axé Okán Oyá Ojú Odé (Yá Rosilene)",
+        "address": "Estr. Limoeiro-Humildes, 1120 - Limoeiro, Feira de Santana - BA, 44149-999, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.9142817,
+          -12.3358739
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJFZoqNZAzFAcRlmb5BF3DCXs",
+        "name": "Ilê axé lede omim yá",
+        "address": "Estrada de Terra Durã - Limoeiro, Feira de Santana - BA, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.9752645,
+          -12.2404971
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJU_DmJHw5FAcRIv2BfeA5V2A",
+        "name": "Ilê Axé 7 Ondas de Yemanjá",
+        "address": "R. Peró Vaz, 119 - Sobradinho, Feira de Santana - BA, 44021-322, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 3,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.0095162,
+          -12.208615
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ3zHWxM03FAcRkj7xt2iZn_U",
+        "name": "ILÊ AXÉ OTÁ OMÍ",
+        "address": "R. Santa Rosa do Viterbo - Asa Branca, Feira de Santana - BA, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.031199,
+          -12.170262
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJZ2Twqv5HFAcRDfz2U6gqPG0",
+        "name": "IlÊ AXÉ ALADÁ MEGÍ IRÊ",
+        "address": "Estr. p/ Jaguará, Feira de Santana - BA, Brazil",
+        "types": [
+          "establishment",
+          "museum",
+          "point_of_interest"
+        ],
+        "rating": 4.5,
+        "user_ratings_total": 16,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.9837051,
+          -12.2544424
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJe8bWhSI3FAcRE2owWW_ffMs",
+        "name": "Ilê Axé Leghy Manjarê",
+        "address": "R. Tarumirim, 139 - Calumbi, Feira de Santana - BA, 44009-100, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.0041585,
+          -12.1718737
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJdcwABfE5FAcRxm-JHg4mjSE",
+        "name": "Ilê Axé Oyá Onira - Casa de Capangueiro",
+        "address": "R. da Solidariedade - São João, Feira de Santana - BA, 44051-260, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.954501,
+          -12.297219
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJYbuKk1I3FAcR7PpI7ZUrcVc",
+        "name": "Ilê axé Siboadã",
+        "address": "R. Amado Bahia, 19 - Tomba, Feira de Santana - BA, 44091-392, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.9047813,
+          -12.2176356
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJl68rIck5FAcRUOueF8dQt0Y",
+        "name": "Ilê Axé Odé Aroní",
+        "address": "Estr. Lagoa das Pedras, 4187 - Aeroporto, Feira de Santana - BA, 41520-970, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.8733918,
+          -12.3127591
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJP3nzWQYxFAcRHq1GjK5P2wE",
+        "name": "Ilê Axé Odé Onidacor",
+        "address": "Humildes, Feira de Santana - State of Bahia, 44135-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 4,
+        "business_status": "OPERATIONAL",
+        "search_city": "Feira de Santana",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.3507941,
+          -12.9046598
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ38gEYFoWFgcR9Dg0Dz6a-74",
+        "name": "Ilê Axé Omó Odé Bualegi",
+        "address": "Jardim das Margaridas, Salvador - State of Bahia, 41502-360, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 20,
+        "business_status": "OPERATIONAL",
+        "search_city": "Gongogi",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.460808,
+          -12.8739619
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJSScnvtoRFgcRq38W6toZOTU",
+        "name": "Ilé Asé Aráká Togum",
+        "address": "R. São Roque - Periperi, Salvador - BA, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.3,
+        "user_ratings_total": 6,
+        "business_status": "OPERATIONAL",
+        "search_city": "Gongogi",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -42.78818580000001,
+          -14.2235179
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJVYyZFe_DWgcRzEJV5b2zwto",
+        "name": "Ilé Àse Ofá ti Odé - Àse Ojú Oòrùn",
+        "address": "R. Ovídio dos Santos, 429 - Guanambi, BA, 46430-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.7,
+        "user_ratings_total": 3,
+        "business_status": "OPERATIONAL",
+        "search_city": "Guanambi",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -42.72443699999999,
+          -14.2223322
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJr-UHnurFWgcRxSxm_x84FyE",
+        "name": "Ilé Àṣẹ Ojú Dan Láyé",
+        "address": "FAZENDA TABÚA GRANDE - Ceraíma, Guanambi - BA, 46430-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 16,
+        "business_status": "OPERATIONAL",
+        "search_city": "Guanambi",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.1758673,
+          -22.7815978
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJoQSOztrFzJQRLnXhuUnuLS8",
+        "name": "Ilê Axé Efon Locy Ijefa",
+        "address": "Parte Baixa - R. Três, 173 - Chácaras Agricolas Beira Rio, Guaratinguetá - SP, 12517-620, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 10,
+        "business_status": "OPERATIONAL",
+        "search_city": "Guaratinga",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.6399267,
+          -14.0670494
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ1ZVA6DQ1PwcRTo62UWKlzRw",
+        "name": "Ilê axé odê ofun Nzambi",
+        "address": "Antonio Rodrigues de souza - Ponto chic - 1/ Everaldo Guimarães - Ibirataia, BA, 45580-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Ibirataia",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.2066843,
+          -12.2094749
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ7zt-Pp1_ZwcRRbgJj2xF5r8",
+        "name": "Ile Àṣẹ Alaketu Ọmọ Oya",
+        "address": "Rua José Pereira, 203 - Cantinho 1, Ibotirama - BA, 47520-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 10,
+        "business_status": "OPERATIONAL",
+        "search_city": "Ibotirama",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.0903909,
+          -14.7851906
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJf3W3f6gJOQcRs8qDQcVW_70",
+        "name": "Ilê Axé Odé Omopondá Aladê Ijexá",
+        "address": "Ilhéus - State of Bahia, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 4.6,
+        "user_ratings_total": 10,
+        "business_status": "OPERATIONAL",
+        "search_city": "Ilhéus",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.0649023,
+          -14.7340484
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJq1y3RQcMOQcRac8wadsPsYw",
+        "name": "Ilê Axé Miregum yá Júlia ty Ogunté",
+        "address": "R. Gravatá, 103 - São Domingos, Ilhéus - BA, 45650-550, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 4.6,
+        "user_ratings_total": 10,
+        "business_status": "OPERATIONAL",
+        "search_city": "Ilhéus",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.0614768,
+          -14.7559476
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJn7w9agALOQcRep7Vcbx07Qg",
+        "name": "Ilê Axé Odé Omi Ewá em Ilhéus",
+        "address": "R. I, 58 - São Domingos, Ilhéus - BA, 45657-742, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Ilhéus",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.3012529,
+          -12.5390662
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJxaS8FS-9agcR57eeXr4PzbU",
+        "name": "Ilê Axe Oba Ade Laio",
+        "address": "R. Dr. Renato Medeiros, 395, Itaberaba - BA, 46880-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itaberaba",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.30736,
+          -12.5359245
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJI-jsC_-9agcRdm72ygLkGjA",
+        "name": "ile axé oya mavanjure",
+        "address": "R. Dois de Julho, 160, Itaberaba - BA, 46880-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 5,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itaberaba",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.291839,
+          -14.7790493
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ02dx-FirOQcRwuSgOpADWNc",
+        "name": "Ilê Axé Ijobá ty Oxumarê Yewá",
+        "address": "Loteamento Vila Paloma - R. C, 106 - Santo Antônio, Itabuna - BA, 45602-114, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 3.4,
+        "user_ratings_total": 5,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itabuna",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.2838474,
+          -14.8009043
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJW_R9WvmqOQcRgoBb7aj2Nu8",
+        "name": "Ilê Axé Oiá Messen",
+        "address": "R. Nossa Sra. das Graças, 350 - Mangabinha, Itabuna - BA, 45600-530, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 3.4,
+        "user_ratings_total": 7,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itabuna",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.2833243,
+          -14.7916229
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJa7uxeNKrOQcRbL7RN56bMuA",
+        "name": "ILÊ AXÉ IJEXÁ ORIXA OLUFON",
+        "address": "Centro Comercial, Itabuna - State of Bahia, 45600-768, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itabuna",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.306303,
+          -14.8115391
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJcWXBrz2rOQcRF4HsiiNLBGU",
+        "name": "Ilê axé Iya Omi",
+        "address": "R. L, 226 - Nova Itabuna, Itabuna - BA, 45611-138, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itabuna",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.7249779,
+          -15.1412874
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJEy70zuQZOAcRBkDLL9ePguk",
+        "name": "PREFEITURA DE ITAJU DO COLÔNIA",
+        "address": "Av. Zelito Brandão Fontes, 11 - Itaju do Col., BA, 45730-000, Brazil",
+        "types": [
+          "city_hall",
+          "establishment",
+          "local_government_office",
+          "point_of_interest"
+        ],
+        "rating": 3.5,
+        "user_ratings_total": 23,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itaju do Colônia",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.7831731,
+          -24.1230004
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJjZ5ZsHkrzpQRZLEmzGttGMQ",
+        "name": "Ilê Iyeiyeo Axé Odé Inlé",
+        "address": "R. Cel. Joaquim Branco - Jardim Aguapeu, Itanhaém - SP, 11740-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 41,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itanhém",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.6616737,
+          -12.9020882
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJOfDiO4r9FQcR6da-plLvbxI",
+        "name": "Ilê axé Iyá okun",
+        "address": "R. I, 233 - Lot. Bosque Ponta da Areia, Itaparica - BA, 44460-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 5,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itaparica",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.6631321,
+          -12.906332
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJfQXNhOv9FQcRNjs-3KGMjnc",
+        "name": "ILÊ AXÉ BABÁ OBALADÊ",
+        "address": "R. Pau-Brasil, 200 - Lot. Bosque Ponta da Areia, Itaparica - BA, 44460-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 8,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itaparica",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.6730655,
+          -12.9001969
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJydkBumf9FQcRVyUa9NZt3EY",
+        "name": "Axé Beach Itaparica Praia Resort",
+        "address": "Av Beira Mar - Porto Santos, Itaparica - BA, 44460-000, Brazil",
+        "types": [
+          "establishment",
+          "lodging",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itaparica",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.6752376,
+          -12.9006192
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJHSDUQfP9FQcR3sMlVLRwra4",
+        "name": "Ilê Axé Babá Omin Ifan",
+        "address": "R. São Judas Tadeu, Itaparica - BA, 44460-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itaparica",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.67873170000001,
+          -12.892195
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJr45RiDTjFQcRWLZs877nJOQ",
+        "name": "Ilé Axé Togí Denã",
+        "address": "Ladeira da Mangueira, 26 - Conj. Agua Viva, Itaparica - BA, 44460-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itaparica",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.66855150000001,
+          -12.901729
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJcYK3ztz9FQcRRELn7GiWxM0",
+        "name": "Ilê Axé Obá Afonjá",
+        "address": "Condomínio Bosque Ponta de Areia Corredor, BA 533, Itaparica - BA, 44460-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itaparica",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.66280769999999,
+          -12.9044496
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJdWwO_L79FQcRYuEjgoQlEkc",
+        "name": "Ile Axé Okum Nilê Ayó",
+        "address": "R. dos Oguns - Lot. Bosque Ponta da Areia, Itaparica - BA, 44460-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itaparica",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.22333709999999,
+          -15.2392328
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ-V1QMgAJSAcRW3GyTtjP5fM",
+        "name": "Ilê Axé Xangô",
+        "address": "R. Joaquim Martins Pereira, 552 - Vila Riachão, Itapetinga - BA, 45700-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 4,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itapetinga",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.2468738,
+          -15.2557049
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJJ1ZqpQALSAcR31ooUlHHcPE",
+        "name": "Ilê Axé Ijóbá Ogum Alakayê",
+        "address": "R. Deraldo Pereira Anunciação, n° 298 - Clodoaldo Costa, Itapetinga - BA, 45700-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.7,
+        "user_ratings_total": 13,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itapetinga",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.5010571,
+          -12.936292
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJW6Am1PcPFgcREVFhWYoipZ8",
+        "name": "Ilê Axé Ogunjá Tiluaiê Orubáia",
+        "address": "2A Travessa Esperança, 51 - Massaranduba, Salvador - BA, 40435-075, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 4.5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Itiúba",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.5954024,
+          -11.2029903
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJqZLmVgD1bAcRarZVLAeD7EE",
+        "name": "Ilê axe murior Jorge de Ogum",
+        "address": "QCW3+QR - Jacobina, State of Bahia, 44700-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Jacobina",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4604606,
+          -12.8362112
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJI0xC4UASFgcR7yIFXz-UWpI",
+        "name": "Candomble Center: Ile Axe Torrunde Ajagum",
+        "address": "R. do Acre, 14 - Paripe, Salvador - BA, 40830-560, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.9,
+        "user_ratings_total": 56,
+        "business_status": "OPERATIONAL",
+        "search_city": "Jandaira",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.2929219,
+          -11.5480125
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJp2Ir43QVEQcR12FWguN2EDU",
+        "name": "Ile Ase Iba Deran Siloya",
+        "address": "FP24+QRW, Olindina - State of Bahia, 48470-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 4,
+        "business_status": "OPERATIONAL",
+        "search_city": "Jandaira",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4310623,
+          -12.8904717
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ28qsSAMRFgcRtgFLvMohoNA",
+        "name": "Ilê axé alaketu obatayo",
+        "address": "R. Orlando José Ribeiro, 198r - Cajazeiras VII, Salvador - BA, 41310-070, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest",
+          "store"
+        ],
+        "rating": 5,
+        "user_ratings_total": 4,
+        "business_status": "OPERATIONAL",
+        "search_city": "Jandaíra",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.1042749,
+          -13.8653874
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJR73FYvuvQAcRB25i1FzB1Gc",
+        "name": "Ilê Alaketù Axé Omo Lodé Lomí",
+        "address": "R. Mascote, II - N 15 - Km-3, Jequié - BA, 45211-012, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 3,
+        "business_status": "OPERATIONAL",
+        "search_city": "Jequié",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.0904642,
+          -13.8516684
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJc6b-eACvQAcRcqXUQ4zPYMQ",
+        "name": "Ilê Axé Oluaiê N'lá",
+        "address": "R. Alvino Ramos, 102 - A Definir, Jequié - BA, 45203-621, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Jequié",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.5147212,
+          -12.9960025
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJKWOIqZwEFgcRpq5z_BvgvQo",
+        "name": "Ilê Axé Ejê Ibá Onãn",
+        "address": "R. dos Réis Católicos - Federação, Salvador - BA, 40230-805, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 4.2,
+        "user_ratings_total": 5,
+        "business_status": "OPERATIONAL",
+        "search_city": "Jitaúna",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.3384131,
+          -12.8420663
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ-zhHEKAVFgcRysgWE7XDQRc",
+        "name": "Ilê Axé Opô Ajagunã",
+        "address": "42700-000 - R. Direta da Capiarara, 830-983 - Jardim Diamante, Lauro de Freitas - BA, 42700-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.6,
+        "user_ratings_total": 66,
+        "business_status": "OPERATIONAL",
+        "search_city": "Jitaúna",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -35.4218397,
+          -5.6375687
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJf_nTuZG6swcRNw_R4EWrFDY",
+        "name": "Ilê Axé Jitaloyá",
+        "address": "R. José Pachêco Dantas, 103, Ceará-Mirim - RN, 59570-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 8,
+        "business_status": "OPERATIONAL",
+        "search_city": "Jitaúna",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.3120044,
+          -12.8993759
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJXTry-_Q9FgcR5TbI8C9V6zw",
+        "name": "Ilê Axé Opô Aganju",
+        "address": "R. Sakete, 4 - Vila Praiana, Lauro de Freitas - BA, 42700-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.9,
+        "user_ratings_total": 16,
+        "business_status": "OPERATIONAL",
+        "search_city": "Lauro de Freitas",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.4027453,
+          -12.5614774
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJiYkc7IIHQgcRgAqQlfWkH6Q",
+        "name": "Poço Halley",
+        "address": "Lençóis - State of Bahia, 46960-000, Brazil",
+        "types": [
+          "establishment",
+          "park",
+          "point_of_interest",
+          "tourist_attraction"
+        ],
+        "rating": 4.8,
+        "user_ratings_total": 383,
+        "business_status": "OPERATIONAL",
+        "search_city": "Lençóis",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.0233778,
+          -16.3143749
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJj6Oy2LrrNgcR0MBX3nZeQc4",
+        "name": "Praia de Lençóis",
+        "address": "Av. Pedro Álvares Cabral, 3, Santa Cruz Cabrália - BA, 45807-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest",
+          "tourist_attraction"
+        ],
+        "rating": 4.8,
+        "user_ratings_total": 174,
+        "business_status": "OPERATIONAL",
+        "search_city": "Lençóis",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.3922837,
+          -12.5641893
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJWQf5BHsHQgcR6P-fgOvGa2U",
+        "name": "Hotel de Lençóis",
+        "address": "Praca - R. Altina Alves, 747 - Lençóis, BA, 46960-000, Brazil",
+        "types": [
+          "establishment",
+          "lodging",
+          "point_of_interest"
+        ],
+        "rating": 4.6,
+        "user_ratings_total": 1342,
+        "business_status": "OPERATIONAL",
+        "search_city": "Lençóis",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.4146224,
+          -12.4618958
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJG56872z7aQcR90pJDeYdd54",
+        "name": "Poço do Diabo",
+        "address": "Lençóis - State of Bahia, 46960-000, Brazil",
+        "types": [
+          "establishment",
+          "park",
+          "point_of_interest",
+          "tourist_attraction"
+        ],
+        "rating": 4.8,
+        "user_ratings_total": 2031,
+        "business_status": "OPERATIONAL",
+        "search_city": "Lençóis",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.38949969999999,
+          -12.5599162
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJyymVPnyJbUYR7TcVtCN7Otw",
+        "name": "Lençóis Trekking - Chapada Diamantina",
+        "address": "Rua Perilo Benjamin - R. do Cajueiro, 118 - Lençóis, BA, 46960-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest",
+          "travel_agency"
+        ],
+        "rating": 4.8,
+        "user_ratings_total": 107,
+        "business_status": "OPERATIONAL",
+        "search_city": "Lençóis",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.4159844,
+          -12.5938248
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJI_c1yk4GQgcRracEtrxspnI",
+        "name": "Cachoeira do Sossego",
+        "address": "Lençóis - State of Bahia, 46960-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest",
+          "tourist_attraction"
+        ],
+        "rating": 4.9,
+        "user_ratings_total": 258,
+        "business_status": "OPERATIONAL",
+        "search_city": "Lençóis",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.2749023,
+          -12.4862318
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ8wlPanQCagcRflxGI4i557c",
+        "name": "Lençóis Airport - Coronel Horácio de Matos-SBLE",
+        "address": "Rodovia BR 242 Km 320 - Cel. Octaviano Alves, Lençóis - BA, 46960-000, Brazil",
+        "types": [
+          "airport",
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.3,
+        "user_ratings_total": 99,
+        "business_status": "OPERATIONAL",
+        "search_city": "Lençóis",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.3883894,
+          -12.5614302
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJja8AYOybmAARVoQxMIVAevg",
+        "name": "Hotel Canto das Águas",
+        "address": "Av. Sr. dos Passos, 1 - Centro, Lençóis - BA, 46960-000, Brazil",
+        "types": [
+          "establishment",
+          "lodging",
+          "point_of_interest"
+        ],
+        "rating": 4.7,
+        "user_ratings_total": 701,
+        "business_status": "OPERATIONAL",
+        "search_city": "Lençóis",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.5399217,
+          -18.0720445
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJwbcNuLzDygARe4M2lpbYgOU",
+        "name": "Cabana Axé Mucuri",
+        "address": "R. Corumbá, 898 - Mucuri, BA, 45930-000, Brazil",
+        "types": [
+          "bar",
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.6,
+        "user_ratings_total": 48,
+        "business_status": "OPERATIONAL",
+        "search_city": "Mucuri",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.0033233,
+          -13.0417679
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ01-JIFohPgcR7w-L3gWipko",
+        "name": "Ilê Axé Oyá Mesan Mãe Nilza da Iansa",
+        "address": "R. Juerana de Cima, 62, Nazaré - BA, 44400-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Nazaré",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.3664032,
+          -17.9049221
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJIz-t603UygARmbB0u-9oO5g",
+        "name": "Barraca Axé-Uai",
+        "address": "576 - R. Bahia, 484 - Nova Viçosa, BA, 45920-000, Brazil",
+        "types": [
+          "bar",
+          "establishment",
+          "food",
+          "point_of_interest",
+          "restaurant"
+        ],
+        "rating": 4.3,
+        "user_ratings_total": 966,
+        "business_status": "OPERATIONAL",
+        "search_city": "Nova Viçosa",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.3726705,
+          -17.8903619
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ4XJZYgDVygARfyUJBOJDMyo",
+        "name": "Beco dos Encantos - Nova Viçosa",
+        "address": "R. Quinze de Outubro, 84 - Nova Viçosa, BA, 45920-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest",
+          "tourist_attraction"
+        ],
+        "rating": 4.7,
+        "user_ratings_total": 55,
+        "business_status": "OPERATIONAL",
+        "search_city": "Nova Viçosa",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.207833,
+          -17.967566
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJqXZibCYsywARVbtOCdsVuC0",
+        "name": "Ilha Coroa Vermelha",
+        "address": "Nova Viçosa - State of Bahia, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.9,
+        "user_ratings_total": 59,
+        "business_status": "OPERATIONAL",
+        "search_city": "Nova Viçosa",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.3576592,
+          -17.8872354
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJYeNgEwDVygARdU4wTAyhVAQ",
+        "name": "Ilha do cascalho",
+        "address": "Nova Viçosa, BA, 45920-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest",
+          "tourist_attraction"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Nova Viçosa",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.3962981,
+          -17.9168815
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJc6oCEw_UygARagurpvdW0zw",
+        "name": "Praia em Nova Viçosa",
+        "address": "praia, Nova Viçosa - BA, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest",
+          "tourist_attraction"
+        ],
+        "rating": 4.4,
+        "user_ratings_total": 302,
+        "business_status": "OPERATIONAL",
+        "search_city": "Nova Viçosa",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.2443828,
+          -9.4008778
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJdb8wFE83CQcRrthEQKZ26qs",
+        "name": "Ilê Axé Palácio dos Orixás | GUARDIÃO OXOSSI - PAULO AFONSO",
+        "address": "R. Campos Sáles, 180 - Cleriston Andrade, Paulo Afonso - BA, 48603-440, Brazil",
+        "types": [
+          "establishment",
+          "food",
+          "health",
+          "place_of_worship",
+          "point_of_interest",
+          "store"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Paulo Afonso",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.221963,
+          -9.455223
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJE6W0VgAxCQcRvdWoH9icbB0",
+        "name": "Ilê Axé Aladomi",
+        "address": "R. Mato Grosso, 988 - Cardeal Brandão Vilela, Paulo Afonso - BA, 48609, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 4,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Paulo Afonso",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.2244919,
+          -9.4494091
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJm2wsjm8xCQcR-RtVK3InZhk",
+        "name": "ILÊ AXÉ OGUN DE LÊ",
+        "address": "R. Nova Glória, 504 - Tancredo Neves III, Paulo Afonso - BA, 48610-428, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Paulo Afonso",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.379165,
+          -13.759033
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJi4l9YAEfPwcR-6-QKcnjWFM",
+        "name": "ilé axé omim adé badan ibó",
+        "address": "Estr. p/ Ituberá, 246, Piraí do Norte - BA, 45436-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 4,
+        "business_status": "OPERATIONAL",
+        "search_city": "Piraí do Norte",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.10701340000001,
+          -16.4152353
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ8zhY4viRNgcR5Sdxu-4WhbE",
+        "name": "ILÊ AXÉ KAJA D'OMIN",
+        "address": "Rua 12, 2013 - Ladeira do Porto Alegre, I - Porto Seguro, BA, 45810-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 4.8,
+        "user_ratings_total": 8,
+        "business_status": "OPERATIONAL",
+        "search_city": "Porto Seguro",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.2008508,
+          -17.4250093
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJxS7dyN37NAcRJskFxw8U_Jo",
+        "name": "Vila Axé",
+        "address": "Rua Binda, nº 10 - Guaratiba, Prado - BA, 45980-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest",
+          "real_estate_agency",
+          "travel_agency"
+        ],
+        "rating": 4.7,
+        "user_ratings_total": 34,
+        "business_status": "OPERATIONAL",
+        "search_city": "Prado",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.2035317,
+          -17.4147055
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJU03cc_77NAcRlq6IcfI_Hog",
+        "name": "Residencial Vila Axé",
+        "address": "Prado - State of Bahia, 45980-000, Brazil",
+        "types": [
+          "establishment",
+          "lodging",
+          "point_of_interest"
+        ],
+        "rating": 3.5,
+        "user_ratings_total": 4,
+        "business_status": "OPERATIONAL",
+        "search_city": "Prado",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.2192983,
+          -17.3258479
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ_YAsRAD5NAcRuKFw8Mc6yIY",
+        "name": "Cabana Oxe - Barraca de Praia",
+        "address": "R. L. Onze - Prado, BA, 45980-000, Brazil",
+        "types": [
+          "establishment",
+          "food",
+          "point_of_interest",
+          "restaurant"
+        ],
+        "rating": 4.7,
+        "user_ratings_total": 55,
+        "business_status": "OPERATIONAL",
+        "search_city": "Prado",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.7454271,
+          -10.6641737
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJnYYXJlm7EgcR1lM6DUAUtvU",
+        "name": "Ilê Axé Reino de Xangô",
+        "address": "BA-381, Itiúba - BA, 48850-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 1,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Queimadas",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -42.0724128,
+          -9.6009691
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJf885GwBXcAcR9FcqPFMUtI4",
+        "name": "Ilé Axé Oyá Bagan",
+        "address": "Remanso, BA, 47200-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Remanso",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.5352523,
+          -10.8281731
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJw66ebwDxEQcRar2mRDvAGZA",
+        "name": "ILÊ AXE TERREIRO DE OXOSSI",
+        "address": "R. Jackson Prado, Ribeira do Pombal - BA, 48400-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Ribeira do Pombal",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.6141096,
+          -13.5901554
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJt1WznZKNQwcRQz59Wn7wL0Y",
+        "name": "Sítio Axé Manga",
+        "address": "BA-148 - R. do Axé Manga - Pilões, Rio de Contas - BA, 46175-000, Brazil",
+        "types": [
+          "bar",
+          "establishment",
+          "food",
+          "point_of_interest",
+          "restaurant"
+        ],
+        "rating": 4.5,
+        "user_ratings_total": 236,
+        "business_status": "OPERATIONAL",
+        "search_city": "Rio de Contas",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.4947526,
+          -12.28778
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ7TJqO8jxagcROT43A8VeUQU",
+        "name": "ILÊ AXÉ PALÁCIO",
+        "address": "Praça Santa Teresa, 57 - Ruy Barbosa, BA, 46800-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest",
+          "store"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "CLOSED_PERMANENTLY",
+        "search_city": "Ruy Barbosa",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.335364,
+          -12.8297821
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJUYP1npgVFgcRzddPLMUyU4c",
+        "name": "Ilê Asé Áláfin Obá Sidenã",
+        "address": "RUA DA PEDREIRA, 75 - Jambeiro, Lauro de Freitas - BA, 42730-550, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 4,
+        "business_status": "OPERATIONAL",
+        "search_city": "Saldanha da Gama",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.8142123,
+          -13.2889553
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJaQKR_QKQPwcRNuA_UyeFxjo",
+        "name": "Ilê Axé Matamba",
+        "address": "Santa Inês, Bahia - State of Bahia, 45320-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Santa Inês",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.9155082,
+          -19.7889222
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ6zv_iwIHqAARf_oM7EtH8PY",
+        "name": "Yle Axé Pilão Odara - Terreiro de Candomblé no Baronesa, São Benedito, Santa Luzia",
+        "address": "R. Gov. Israel Pinheiro, 237 - Baronesa, Santa Luzia - MG, 33170-060, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.5,
+        "user_ratings_total": 23,
+        "business_status": "OPERATIONAL",
+        "search_city": "Santa Luzia",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.7975846,
+          -12.3847116
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJGWvqAgDRaQcRN3C-8wmY-Qg",
+        "name": "Ilê Axé Ajagun",
+        "address": "J682+3WW - Seabra, BA, 46900-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 4,
+        "business_status": "OPERATIONAL",
+        "search_city": "Seabra",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4637886,
+          -12.896886
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJAYc2XwARFgcRo3t5zwF3qCE",
+        "name": "Ilê axé oya jeré",
+        "address": "R. Elísio Mesquita, 273 - Pirajá, Salvador - BA, 41295-360, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Sebastião Laroqueira",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4824697,
+          -12.9409417
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJxRNX9NAbFgcRUaIlv4FrGLI",
+        "name": "Ilê Axé Omin Oba",
+        "address": "R. Lídio dos Santos, 100 - Fazenda Grande do Retiro, Salvador - BA, 40301-110, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 8,
+        "business_status": "OPERATIONAL",
+        "search_city": "Sebastião Laroqueira",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.3565818,
+          -12.866658
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJce1SfM0VFgcR04QfZr3kiaY",
+        "name": "Ilê Axé Opô Ajimuda",
+        "address": "R. Nova Esperança de Cima - Itinga, Salvador - BA, 42700-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 4.8,
+        "user_ratings_total": 8,
+        "business_status": "OPERATIONAL",
+        "search_city": "Serra Preta",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4426634,
+          -12.799773
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ8et0fAATFgcR3fB0y9KjHkg",
+        "name": "Ilê Axé Siguerecy",
+        "address": "R. Direta de Mapele - Mapele, Simões Filho - BA, 43700-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Simões Filho",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4453031,
+          -12.7435383
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJUYdLj71tFgcRKzhq_tmpr_M",
+        "name": "ILÊ AXÉ OYÁ DEMÍN",
+        "address": "Simões Filho - State of Bahia, 43700-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Simões Filho",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.3967866,
+          -12.7695211
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ6z7ACTZrFgcRN5apgXijBYk",
+        "name": "Ilê axé yá omi odé",
+        "address": "R. Otávio Mangabeira, 210 - Lot. Cristo Rey, Simões Filho - BA, 43700-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Simões Filho",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4053818,
+          -12.7719583
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJxYgZMUFtFgcRfbKXAfYzdu4",
+        "name": "Ilê Axé Opô Olú Odé Alaayeda",
+        "address": "Lot. Jardim Renatao, Simões Filho - BA, 43700-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 6,
+        "business_status": "OPERATIONAL",
+        "search_city": "Simões Filho",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4949665,
+          -12.9977383
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJmcNVgiQFFgcRoOrmhFjEKGY",
+        "name": "Ilê Axé Oba Tadê Patiti Oba",
+        "address": "Ladeira Manoel Bonfim, 23 - Engenho Velho da Federação, Salvador - BA, 40286-000, Brazil",
+        "types": [
+          "establishment",
+          "museum",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 5,
+        "business_status": "OPERATIONAL",
+        "search_city": "Sátiro Dias",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.98302169999999,
+          -12.5979408
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJJ1VVVZW_FQcREQAMTigzk9g",
+        "name": "TERREIRO ILÊ AXÉ OGUNJÁ - Associação Helena de Jesus",
+        "address": "Rua Jonival Lucas, Nº 230 - 135, São Félix - BA, 44360-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 10,
+        "business_status": "OPERATIONAL",
+        "search_city": "São Félix",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.9425401,
+          -12.4384176
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJdbhDLADLFQcR3FyAh17EaSE",
+        "name": "Ilê Axé Sindoyá",
+        "address": "R. das Laranjeiras - São Gonçalo dos Campos, BA, 44330-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "São Gonçalo dos Campos",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.954075,
+          -12.4211775
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJBwc3cUnLFQcRi9s8X2fQ7P0",
+        "name": "Templo ilê Axé ioriabalé",
+        "address": "R. Eulália da Silva, 86 - São Gonçalo dos Campos, BA, 44330-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "São Gonçalo dos Campos",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.381792,
+          -12.6945481
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ63gMPptpFgcR5p6aLEwgbp4",
+        "name": "ILÊ AXÉ ANJÔ ALÊ",
+        "address": "Unnamed Road, Simões Filho - BA, 43700-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "São José da Jacente",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.6532355,
+          -23.5328277
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ2Y2CdMRZzpQRZZ9328d1HJE",
+        "name": "Ilê Axé Zé do Coco da Bahia",
+        "address": "R. Barra Funda, 89 - Barra Funda, São Paulo - SP, 01152-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.6,
+        "user_ratings_total": 41,
+        "business_status": "OPERATIONAL",
+        "search_city": "São José da Jacente",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.3374953,
+          -15.0836407
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJnfSsEkU1OAcRKbzYmAfYhRU",
+        "name": "São José da vitória",
+        "address": "R. Quinto de Ávila, São José da Vitória - BA, 45620-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.9,
+        "user_ratings_total": 8,
+        "business_status": "OPERATIONAL",
+        "search_city": "São José da Vitória",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4908753,
+          -12.5127255
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ8y639EZjFgcR6fWbnkTrLKE",
+        "name": "ILÊ AXÉ YBÁ OROMIM",
+        "address": "São Sebastião do Passé, BA, 43850-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "São Sebastião do Passé",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.7602441,
+          -17.540422
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ1ax0JDhFNQcRqPoe_sIt_ug",
+        "name": "Aramefá odé ilê",
+        "address": "R. Monte Carmelo, 202 - Luiz E Magalhaes, Teixeira de Freitas - BA, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 3,
+        "business_status": "OPERATIONAL",
+        "search_city": "Teixeira de Freitas",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.7728269,
+          -17.5194214
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJOcOjzcNDNQcRwnxSIAJ8oeM",
+        "name": "Terreiro de Oyá",
+        "address": "Camélias - Setor Bahia sul, Teixeira de Freitas - BA, 45986-334, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 4.9,
+        "user_ratings_total": 35,
+        "business_status": "OPERATIONAL",
+        "search_city": "Teixeira de Freitas",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.08355390000001,
+          -13.3703578
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJQxLsHJJFPgcRKsMhsAB3RJk",
+        "name": "Terreiro Ilê Axé Omi L'okan",
+        "address": "Rua do Bate Quente, 391 - Bate Quente, Valença - BA, 45400-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.3,
+        "user_ratings_total": 6,
+        "business_status": "OPERATIONAL",
+        "search_city": "Tucano",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.0778717,
+          -13.3546394
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ5bGynZZHPgcRG94HwTmhitU",
+        "name": "ILÊ AXÉ ODÉ LOJU",
+        "address": "R. Trinta e Três - Alto são Roque, Valença - BA, 45400-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Valença",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.0757249,
+          -13.3742798
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJE47J2BtFPgcROAj2Hkccc9w",
+        "name": "ILÊ AXÉ PALÁCIO DOS ORIXÁS",
+        "address": "NA - Praça Conselheiro Baltazar, 338 - Valença, BA, 45400-000, Brazil",
+        "types": [
+          "establishment",
+          "food",
+          "health",
+          "place_of_worship",
+          "point_of_interest",
+          "store"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Valença",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.068852,
+          -13.364038
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ603LdbtDPgcRPGBmLSv7E48",
+        "name": "Ilê Axé Orí Torokê",
+        "address": "Av. Antônio Carlos Magalhães, 256 - Valença, BA, 45400-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 3,
+        "business_status": "OPERATIONAL",
+        "search_city": "Valença",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.0579334,
+          -13.3557576
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJxYutYXZBPgcR_i6NfZg6wls",
+        "name": "Ilê Axé Obá Opá Mimó",
+        "address": "R. Cidade do Rio de Janeiro - Valença, BA, 45400-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 2,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Valença",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.0847333,
+          -13.3697233
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJcffUMABFPgcRdzBNbEInrXA",
+        "name": "Ilê Axé afefe loya",
+        "address": "Valença, BA, 45400-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 1,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Valença",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.0518908,
+          -13.3601728
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJTeahFwBBPgcRXrOGE8raZbA",
+        "name": "Ilê Axé Oba D’Omin Sara",
+        "address": "R. cidade de Jequié - Valença, BA, 45400-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Valença",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.612739,
+          -12.9568409
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJxRQftvwHFgcRfS3VKLVCt3Q",
+        "name": "ILÊ AXÉ ODÉ TOROJY ADÊ MIM",
+        "address": "R. São Felipe - R. Fonte da Prata, 32 - Lot. Parque das Mangueiras, Vera Cruz - BA, 44470-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 4,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.61283530000001,
+          -12.961722
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJA4jxW7cHFgcRakyatX9sYk4",
+        "name": "ILÊ AXÉ HUNTOVÌ ORUNMILÀ",
+        "address": "Alameda Internacional, 109 - Lot. Parque das Mangueiras, Vera Cruz - BA, 44470-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 4,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.6182837,
+          -12.9659264
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJyY8BtWUHFgcRAhPcmjeAbcM",
+        "name": "ILÊ AXÉ AGODÔ",
+        "address": "R. Santa Helena, 91 - Lot. Parque das Mangueiras, Vera Cruz - BA, 44470-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.6552375,
+          -13.0175275
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJyaSSpgn_FQcRawv7QaSMJOg",
+        "name": "Ilé Axé Odé Omim Oya Lessé",
+        "address": "R. Lot. Reduto do Sol, 296 - Condomínio Praia do Caribe, Vera Cruz - BA, 44470-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 3,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.6192131,
+          -12.974806
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ65VAKQAHFgcR3IA0WR9lzf0",
+        "name": "Ilê Axé Oba Ladenã",
+        "address": "Ladeira 28 de Maio, 31 - Gamboa, Vera Cruz - BA, 44470-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 3,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.6654836,
+          -12.9285402
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJTcpuruP9FQcRNR8vxB25-Ug",
+        "name": "Ilê Axé Odé Omín",
+        "address": "R. Núbia Mendes, Itaparica - BA, 44460-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.6493341,
+          -13.0217894
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJT-IUEQABFgcRhW7AEv6nNt8",
+        "name": "Ilê axé ogum Omin ayo",
+        "address": "R. Santo Amaro, 13 - Condomínio Praia do Caribe, Vera Cruz - BA, 44470-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.649095,
+          -12.903178
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJm0z0UwAHFgcREQMCuo7CCQE",
+        "name": "Ilê Axé Iyá Omí Ladê",
+        "address": "R. Arara-L, S/N - Lot. Ens de Amoreiras, Itaparica - BA, 44460-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.62243280000001,
+          -12.9352798
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJfys2kCIHFgcRkecbhF64Hrw",
+        "name": "ILÉ AXÈ OYÁ DEFUNKÊ",
+        "address": "Gameleira, Vera Cruz - BA, 44470-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.627979,
+          -12.9181566
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJH6DlFQAHFgcRlFxsLGCIhds",
+        "name": "Ilê Axé Loci Omi Odé",
+        "address": "R. Beira Mar, 693-569 - Lot. Porto Santo, Itaparica - BA, 44460-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 3,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.6124671,
+          -12.9602025
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJZ828MwAHFgcRc_AUnizdzFo",
+        "name": "ILÊ AXÉ OYÁ DEFUNKÊ",
+        "address": "R. do Dendezeiro - Gameleira, Vera Cruz - BA, 44470-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.7384898,
+          -13.0660938
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJg8-khyUDPgcRCd1vO3z5k6s",
+        "name": "Ilê axé ogum Omin ayọ̀",
+        "address": "Travessa 1 - R. de Cima - Conceição, Vera Cruz - BA, 44470-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.7860168,
+          -13.0600166
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJe6sMzy0DPgcR6ZydtWReh3Y",
+        "name": "ILÊ AXÉ BABÁ OMIM ALÁ FUNFUN",
+        "address": "Jiribatuba, Vera Cruz - State of Bahia, 44470-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 5,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.7727556,
+          -12.8991216
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJwWN8RAD7FQcRPA3sNz0LhOk",
+        "name": "Ilê axé inan omo odobo",
+        "address": "462G+9R, Salinas da Margarida - State of Bahia, 44450-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.6501568,
+          -12.9057216
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJ1cGwIX8HFgcRVwTLvN0RSyQ",
+        "name": "Ilê Axé Babá Omin Tori Alá",
+        "address": "R. Alto do Céu, 699-673, Itaparica - BA, 44460-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 3,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.654625,
+          -12.996811
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJm40MQgD_FQcRgvpmCyklToc",
+        "name": "Associação Benificente Cultura Recreativa e Religiosa Ile Axé Oyá Bagan Babá Alaefurun. Ile Axé Oyá Bagan Babá Alaefurun",
+        "address": "Estr. Baiacu, 407 - Mar Grande, Vera Cruz - BA, 44470-000, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vera Cruz",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.8548098,
+          -14.8674457
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJocNSTQw7RgcRvTDLqEPM4-M",
+        "name": "Ilê Axé omin T'Ogum",
+        "address": "Av. Itabuna, 2678 - Brasil, Vitória da Conquista - BA, 45051-300, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 9,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vitória da Conquista",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.8889872,
+          -14.8371979
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJs6Atffw9RgcR_UNc6-X3MJU",
+        "name": "ILE AXÉ ODÉ KÀLÉSIBÏ",
+        "address": "Av. Dez, 07 - Zabelê, Vitória da Conquista - BA, 45079-340, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vitória da Conquista",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.8319718,
+          -14.8930609
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJqcz9YwA7RgcRSvNXqrI-ScY",
+        "name": "Ilê axé casa de Iansã",
+        "address": "Av. João Cândido, 165 - Chacaras Santa Tereza, Vitória da Conquista - BA, 45027-044, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vitória da Conquista",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.897882,
+          -14.841351
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJE2hqFm88RgcRUmpLQgMs7ws",
+        "name": "Ilé Axé ABC Alaketu",
+        "address": "R. Nelson Rodrigues, 8 - Zabelê, Vitória da Conquista - BA, 45079-160, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.7,
+        "user_ratings_total": 7,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vitória da Conquista",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.8218756,
+          -14.9087229
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJB7kSNgAlRgcRkrD6eAQAO4A",
+        "name": "Ilê axé odé omim",
+        "address": "R. Trinta e Sete, 11 - senhorinha, Vitória da Conquista - BA, 45037-820, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vitória da Conquista",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.8857382,
+          -14.832168
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJX5Px1o89RgcRwZAk6RGr6c8",
+        "name": "Ilê Alaketú Asé Obá Éléfè Ará",
+        "address": "Av. Alto da Colina, 430 - Lot. Senhorinha Cairo, Vitória da Conquista - BA, 45078-616, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.9,
+        "user_ratings_total": 29,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vitória da Conquista",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.85776850000001,
+          -14.8751603
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJxRxFbm87RgcRQyCEBvgIU3Q",
+        "name": "Casa de Oyá - Ilê Axé Oyá Fynmilayo Kilyobá",
+        "address": "Av. Caxias do Sul, 300 - Patagônia, Vitória da Conquista - BA, 45065-100, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 1,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vitória da Conquista",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.8396805,
+          -14.8977561
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJeQt0scU7RgcRrKjLgH-pZtg",
+        "name": "Ilê Axé Alaketu Omí Ógbá",
+        "address": "Av. Bento Gonçalves, 7 - Chacaras Santa Tereza, Vitória da Conquista - BA, 45027-012, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vitória da Conquista",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.8734232,
+          -14.8572249
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJN5QncgA7RgcRzcWtUKY2RTI",
+        "name": "Ile axé oba kosso",
+        "address": "R. Auxencio Dias de Oliveira - Lot. Terras do Remanso, Vitória da Conquista - BA, 45053-545, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vitória da Conquista",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.73334089999999,
+          -14.8497047
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJx-3WBgAxRgcRXHGAx-3HJtc",
+        "name": "Ilê Axé Alaketú Omi Ogbá",
+        "address": "5728+4M - São Sebastião, Vitória da Conquista - BA, Brazil",
+        "types": [
+          "establishment",
+          "place_of_worship",
+          "point_of_interest"
+        ],
+        "rating": null,
+        "user_ratings_total": null,
+        "business_status": "OPERATIONAL",
+        "search_city": "Vitória da Conquista",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.944901,
+          -11.2549994
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJV7g2aqRsbAcRPoN5vVhXGA4",
+        "name": "City of New Várzea",
+        "address": "Praça José Araújo Silva, s/n - Centro, Várzea Nova - BA, 44690-000, Brazil",
+        "types": [
+          "city_hall",
+          "establishment",
+          "local_government_office",
+          "point_of_interest"
+        ],
+        "rating": 4,
+        "user_ratings_total": 59,
+        "business_status": "OPERATIONAL",
+        "search_city": "Várzea Nova",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.3188803,
+          -11.5280938
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJRXYLD0-fbAcR9Fx5g8i0XFM",
+        "name": "Varzea do poço BAHIA",
+        "address": "Várzea do Poço - State of Bahia, 44715-000, Brazil",
+        "types": [
+          "establishment",
+          "point_of_interest"
+        ],
+        "rating": 4.7,
+        "user_ratings_total": 19,
+        "business_status": "OPERATIONAL",
+        "search_city": "Várzea do Poço",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -42.7205106,
+          -10.8326941
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJIcdDeACTZQcRKoh_o82eNLg",
+        "name": "Xique xique bahia",
+        "address": "R. R - Xique-Xique, BA, 47400-000, Brazil",
+        "types": [
+          "establishment",
+          "night_club",
+          "point_of_interest"
+        ],
+        "rating": 5,
+        "user_ratings_total": 2,
+        "business_status": "OPERATIONAL",
+        "search_city": "Xique-Xique",
+        "source": "google"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -42.7307853,
+          -10.8236703
+        ]
+      },
+      "properties": {
+        "place_id": "ChIJJ9VB6ViTZQcRMrjAb6Z5ygw",
+        "name": "Grande Rio Hotel",
+        "address": "R. Góes Calmom, 3 - Centro, Xique-Xique - BA, 47400-000, Brazil",
+        "types": [
+          "establishment",
+          "lodging",
+          "point_of_interest"
+        ],
+        "rating": 4.6,
+        "user_ratings_total": 129,
+        "business_status": "OPERATIONAL",
+        "search_city": "Xique-Xique",
+        "source": "google"
+      }
     }
   ]
 }
