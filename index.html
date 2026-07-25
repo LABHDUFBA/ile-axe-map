@@ -39,7 +39,9 @@
       --marker-dim: #C4BCB0;     /* cal cinza = não-filtrado */
       --radius: 8px;
       --radius-sm: 5px;
-      --topbar-h: 56px;
+      --topbar-h: 96px;
+    --topbar-row1-h: 48px;
+    --topbar-row2-h: 48px;
       --rail-w: 380px;
       --font-display: Fraunces, Georgia, serif;
       --font-body: "Hanken Grotesk", system-ui, sans-serif;
@@ -98,15 +100,26 @@
     /* === Map === */
     #map { position: fixed; inset: 0; }
 
-    /* === Topbar === */
+    /* === Topbar — 2 rows === */
     .topbar {
       position: fixed; z-index: 10; top: 0; left: 0; right: 0;
       height: var(--topbar-h);
-      display: flex; align-items: center; gap: 12px; padding: 0 16px;
+      display: flex; flex-direction: column;
       background: var(--bg-panel);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(12px) saturate(120%);
       -webkit-backdrop-filter: blur(12px) saturate(120%);
+    }
+    .topbar__row1 {
+      display: flex; align-items: center; gap: 12px;
+      height: var(--topbar-row1-h); padding: 0 16px;
+      flex-shrink: 0;
+    }
+    .topbar__row2 {
+      display: flex; align-items: center; gap: 8px;
+      height: var(--topbar-row2-h); padding: 0 16px;
+      border-top: 1px solid var(--border);
+      flex-shrink: 0;
     }
     .topbar__title {
       font-family: var(--font-display); font-size: 18px; font-weight: 600;
@@ -129,18 +142,18 @@
     .topbar__btn:hover { border-color: var(--accent); color: var(--accent); }
     .topbar__btn[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
 
-    /* === Filter chips === */
+    /* === Filter chips — row 2, wrap === */
     .chips {
-      display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none;
-      flex: 1; min-width: 0; padding: 0 4px;
+      display: flex; gap: 6px; flex-wrap: wrap;
+      flex: 1; min-width: 0; padding: 0;
+      align-items: center;
     }
-    .chips::-webkit-scrollbar { display: none; }
     .chip {
       display: inline-flex; align-items: center; gap: 6px;
-      height: 30px; padding: 0 10px; flex-shrink: 0;
+      height: 30px; padding: 0 12px; flex-shrink: 0;
       border: 1px solid var(--border); border-radius: 99px;
       background: var(--bg-elevated); color: var(--text-muted);
-      font: 600 11px/1 var(--font-body); cursor: pointer;
+      font: 600 12px/1 var(--font-body); cursor: pointer;
       transition: all .15s;
     }
     .chip:hover { border-color: var(--border-strong); color: var(--text); }
@@ -148,7 +161,8 @@
       border-color: var(--accent); background: var(--accent-soft); color: var(--accent);
     }
     .chip__dot {
-      width: 8px; height: 8px; border-radius: 50%; background: var(--chip-color, var(--text-faint));
+      width: 10px; height: 10px; border-radius: 50%; background: var(--chip-color, var(--text-faint));
+      border: 1px solid rgba(0,0,0,.1);
     }
     .chip__count { font-weight: 400; opacity: .6; font-size: 10px; }
 
@@ -340,25 +354,27 @@
 
     /* === Map markers === */
     .marker {
-      width: 12px; height: 12px; border-radius: 50%;
+      width: 14px; height: 14px; border-radius: 50%;
       border: 2px solid var(--bg-elevated);
       background: var(--marker-n);
-      box-shadow: 0 1px 4px rgba(0,0,0,.2);
+      box-shadow: 0 1px 4px rgba(0,0,0,.25);
       cursor: pointer;
       transition: transform .15s, box-shadow .15s;
     }
     .marker:hover, .marker.is-active {
-      transform: scale(1.3);
-      box-shadow: 0 2px 8px rgba(0,0,0,.3), 0 0 0 4px var(--accent-soft);
+      transform: scale(1.4);
+      box-shadow: 0 2px 8px rgba(0,0,0,.35), 0 0 0 4px var(--accent-soft);
     }
     .marker.is-dim {
       background: var(--marker-dim);
-      opacity: .5;
+      opacity: .4;
+      transform: scale(.8);
     }
     .marker.is-highlighted {
       background: var(--marker-active);
       border-color: var(--bg-elevated);
-      box-shadow: 0 1px 6px rgba(0,0,0,.25), 0 0 0 3px rgba(168,70,15,.15);
+      box-shadow: 0 1px 6px rgba(0,0,0,.3), 0 0 0 3px rgba(168,70,15,.2);
+      transform: scale(1.2);
     }
 
     /* Cluster circles */
@@ -423,10 +439,12 @@
 
     /* === Mobile === */
     @media (max-width: 768px) {
-      .topbar { padding: 0 10px; gap: 8px; }
+      .topbar__row1 { padding: 0 10px; gap: 8px; }
+      .topbar__row2 { padding: 0 10px; }
       .topbar__title { font-size: 15px; }
       .topbar__count { display: none; }
       .topbar__btn:not(.info-btn) { display: none; }
+      .chip { height: 28px; padding: 0 10px; font-size: 11px; }
 
       .rail {
         width: 100%; top: auto; bottom: 0; height: auto;
@@ -474,15 +492,19 @@
 <body>
   <div id="map" role="application" aria-label="Mapa de terreiros"></div>
 
-  <!-- Topbar -->
+  <!-- Topbar — 2 rows -->
   <header class="topbar">
-    <div class="topbar__title">Ilê Axé <span>Map</span></div>
-    <div class="topbar__count" id="count-badge" aria-live="polite">—</div>
-    <div class="chips" id="chips" role="group" aria-label="Filtrar por nação"></div>
-    <div class="topbar__spacer"></div>
-    <button class="topbar__btn" id="theme-btn" type="button" aria-label="Alternar tema" title="Tema">◐</button>
-    <button class="topbar__btn" id="lang-btn" type="button" aria-pressed="true" aria-label="Idioma">PT</button>
-    <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Informações">ⓘ</button>
+    <div class="topbar__row1">
+      <div class="topbar__title">Ilê Axé <span>Map</span></div>
+      <div class="topbar__count" id="count-badge" aria-live="polite">—</div>
+      <div class="topbar__spacer"></div>
+      <button class="topbar__btn" id="theme-btn" type="button" aria-label="Alternar tema" title="Tema">◐</button>
+      <button class="topbar__btn" id="lang-btn" type="button" aria-pressed="true" aria-label="Idioma">PT</button>
+      <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Informações">ⓘ</button>
+    </div>
+    <div class="topbar__row2">
+      <div class="chips" id="chips" role="group" aria-label="Filtrar por nação"></div>
+    </div>
   </header>
 
   <!-- Left rail: list -->
@@ -566,9 +588,9 @@
   <!-- MapLibre controls -->
   <script>
     const colors = {
-      Ketu: '#29405B', Angola: '#A8460F', Jeje: '#5B7B4A',
-      'Candomblé': '#D9762B', 'Matriz Africana': '#7A6A5A',
-      Umbanda: '#6B8E7B', Outro: '#8A8177'
+      Ketu: '#29405B', Angola: '#C2490F', Jeje: '#4A7C3A',
+      'Candomblé': '#D9762B', 'Matriz Africana': '#7A5C8A',
+      Umbanda: '#2B8E7B', Outro: '#8A8177'
     };
     const categoryOrder = ['Ketu','Angola','Jeje','Candomblé','Matriz Africana','Umbanda','Outro'];
     const fonteLabels = {
@@ -918,12 +940,19 @@
         updateMarkers();
         updateList();
 
-        const bounds = new maplibregl.LngLatBounds();
-        features.forEach(f => bounds.extend(f.geometry.coordinates));
-        if (!bounds.isEmpty()) {
-          map.fitBounds(bounds, {
-            padding: { top: 70, right: 70, bottom: 70, left: 420 },
-            maxZoom: 11, duration: reduceMotion ? 0 : 800
+        // Fit bounds to Bahia only (filter outliers outside BA)
+        const baBounds = new maplibregl.LngLatBounds();
+        features.forEach(f => {
+          const [lng, lat] = f.geometry.coordinates;
+          // Bahia approx: lng -41.5 to -37, lat -18.5 to -8
+          if (lng >= -41.5 && lng <= -37 && lat >= -18.5 && lat <= -8) {
+            baBounds.extend(f.geometry.coordinates);
+          }
+        });
+        if (!baBounds.isEmpty()) {
+          map.fitBounds(baBounds, {
+            padding: { top: 110, right: 70, bottom: 70, left: 420 },
+            maxZoom: 12, duration: reduceMotion ? 0 : 800
           });
         }
       } catch (error) {
