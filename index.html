@@ -35,9 +35,10 @@
       --warm: #A8460F;
       --radius: 8px;
       --radius-sm: 5px;
-      --topbar-h: 96px;
+      --topbar-h: 128px;
       --topbar-row1-h: 48px;
-      --topbar-row2-h: 48px;
+      --topbar-row2-h: 44px;
+      --topbar-row3-h: 36px;
       --rail-w: 380px;
       --font-display: Fraunces, Georgia, serif;
       --font-body: "Hanken Grotesk", system-ui, sans-serif;
@@ -107,6 +108,17 @@
       height: var(--topbar-row2-h); padding: 0 16px;
       border-top: 1px solid var(--border);
       flex-shrink: 0;
+    }
+    .topbar__row3 {
+      display: flex; align-items: center; gap: 8px;
+      height: var(--topbar-row3-h); padding: 0 16px;
+      border-top: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .topbar__filter-label {
+      font-size: 10px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-faint);
+      white-space: nowrap; flex-shrink: 0; margin-right: 4px;
     }
     .topbar__title {
       font-family: var(--font-display); font-size: 18px; font-weight: 600;
@@ -330,10 +342,12 @@
     @media (max-width: 768px) {
       .topbar__row1 { padding: 0 10px; gap: 8px; }
       .topbar__row2 { padding: 0 10px; }
+      .topbar__row3 { padding: 0 10px; }
       .topbar__title { font-size: 15px; }
       .topbar__count { display: none; }
       .topbar__btn:not(.info-btn) { display: none; }
       .chip { height: 28px; padding: 0 10px; font-size: 11px; }
+      .topbar__filter-label { display: none; }
 
       .rail {
         width: 100%; top: auto; bottom: 0; height: auto;
@@ -392,7 +406,12 @@
       <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Informações">ⓘ</button>
     </div>
     <div class="topbar__row2">
+      <span class="topbar__filter-label">Nação</span>
       <div class="chips" id="chips" role="group" aria-label="Filtrar por nação"></div>
+    </div>
+    <div class="topbar__row3">
+      <span class="topbar__filter-label">Fonte</span>
+      <div class="chips" id="chips-fonte" role="group" aria-label="Filtrar por fonte"></div>
     </div>
   </header>
 
@@ -445,9 +464,8 @@
 
       <h3>Fontes</h3>
       <p>
-        <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> (Overpass API)<br>
         <a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a> — 1.155 terreiros com detalhes<br>
-        Google Places API — 1.532 lugares<br>
+        OSM + Google Places — 1.553 lugares<br>
         SEFAZ/Salvador (SEMUR 2020) — 635 terreiros
       </p>
 
@@ -491,8 +509,12 @@
     };
     const categoryOrder = ['Ketu','Angola','Jeje','Candomblé','Matriz Africana','Umbanda','Outro'];
     const fonteLabels = {
-      'osm': 'OpenStreetMap', 'google': 'Google Places',
-      'ceao': 'CEAO/UFBA', 'sefaz': 'SEFAZ/Salvador', 'osm+google': 'OSM+Google'
+      'osm': 'OSM+Google', 'google': 'OSM+Google',
+      'ceao': 'CEAO/UFBA', 'sefaz': 'SEFAZ/Salvador'
+    };
+    const fonteOrder = ['CEAO/UFBA', 'OSM+Google', 'SEFAZ/Salvador'];
+    const fonteColors = {
+      'CEAO/UFBA': '#0072B2', 'OSM+Google': '#009E73', 'SEFAZ/Salvador': '#E69F00'
     };
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -520,7 +542,7 @@
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'bottom-right');
     map.addControl(new maplibregl.ScaleControl({ maxWidth: 110, unit: 'metric' }), 'bottom-right');
 
-    let features = [], markers = [], activeFilters = new Set(), selectedMarker = null, popup = null;
+    let features = [], markers = [], activeNacaoFilters = new Set(), activeFonteFilters = new Set(), selectedMarker = null, popup = null;
     let searchQuery = '', listSubset = [];
     let highlightedNacao = null;
 
@@ -550,26 +572,95 @@
 
     function getName(p) { return p.nome || p.name || p.title || 'Terreiro sem nome'; }
 
+    function getFonteLabel(p) {
+      return fonteLabels[p.fonte] || 'Outro';
+    }
+
     function buildChips() {
       const holder = $('chips'); holder.innerHTML = '';
+      // Botão "Todas"
+      const allBtn = document.createElement('button');
+      allBtn.type = 'button'; allBtn.className = 'chip';
+      allBtn.setAttribute('aria-pressed', 'true');
+      allBtn.textContent = 'Todas';
+      allBtn.addEventListener('click', () => {
+        activeNacaoFilters = new Set(categoryOrder.filter(c => features.some(f => f.properties._nacao === c)));
+        document.querySelectorAll('#chips .chip').forEach(c => c.setAttribute('aria-pressed', 'true'));
+        highlightedNacao = null;
+        updateMarkers(); updateList();
+      });
+      holder.appendChild(allBtn);
+
       categoryOrder.filter(cat => features.some(f => f.properties._nacao === cat)).forEach(cat => {
-        activeFilters.add(cat);
+        activeNacaoFilters.add(cat);
         const count = features.filter(f => f.properties._nacao === cat).length;
         const chip = document.createElement('button');
         chip.type = 'button'; chip.className = 'chip';
         chip.style.setProperty('--chip-color', colors[cat]);
         chip.setAttribute('aria-pressed', 'true');
+        chip.dataset.nacao = cat;
         chip.innerHTML = '<span class="chip__dot"></span>' + cat + ' <span class="chip__count">' + count + '</span>';
         chip.addEventListener('click', () => {
-          highlightedNacao = (highlightedNacao === cat) ? null : cat;
-          if (highlightedNacao) {
-            activeFilters = new Set([cat]);
-            document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', 'false'));
-            chip.setAttribute('aria-pressed', 'true');
+          // Multi-seleção: toggle nação
+          if (activeNacaoFilters.has(cat)) {
+            activeNacaoFilters.delete(cat);
+            chip.setAttribute('aria-pressed', 'false');
           } else {
-            activeFilters = new Set(categoryOrder.filter(c => features.some(f => f.properties._nacao === c)));
-            document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', 'true'));
+            activeNacaoFilters.add(cat);
+            chip.setAttribute('aria-pressed', 'true');
           }
+          // Se nenhuma selecionada, reativa todas
+          if (activeNacaoFilters.size === 0) {
+            activeNacaoFilters = new Set(categoryOrder.filter(c => features.some(f => f.properties._nacao === c)));
+            document.querySelectorAll('#chips .chip[data-nacao]').forEach(c => c.setAttribute('aria-pressed', 'true'));
+          }
+          // Atualiza botão "Todas"
+          const allActive = activeNacaoFilters.size === categoryOrder.filter(c => features.some(f => f.properties._nacao === c)).length;
+          allBtn.setAttribute('aria-pressed', String(allActive));
+          highlightedNacao = null;
+          updateMarkers(); updateList();
+        });
+        holder.appendChild(chip);
+      });
+    }
+
+    function buildFonteChips() {
+      const holder = $('chips-fonte'); holder.innerHTML = '';
+      // Botão "Todas"
+      const allBtn = document.createElement('button');
+      allBtn.type = 'button'; allBtn.className = 'chip';
+      allBtn.setAttribute('aria-pressed', 'true');
+      allBtn.textContent = 'Todas';
+      allBtn.addEventListener('click', () => {
+        activeFonteFilters = new Set(fonteOrder.filter(f => features.some(feat => getFonteLabel(feat.properties) === f)));
+        document.querySelectorAll('#chips-fonte .chip').forEach(c => c.setAttribute('aria-pressed', 'true'));
+        updateMarkers(); updateList();
+      });
+      holder.appendChild(allBtn);
+
+      fonteOrder.filter(f => features.some(feat => getFonteLabel(feat.properties) === f)).forEach(fnt => {
+        activeFonteFilters.add(fnt);
+        const count = features.filter(f => getFonteLabel(f.properties) === fnt).length;
+        const chip = document.createElement('button');
+        chip.type = 'button'; chip.className = 'chip';
+        chip.style.setProperty('--chip-color', fonteColors[fnt] || '#999');
+        chip.setAttribute('aria-pressed', 'true');
+        chip.dataset.fonte = fnt;
+        chip.innerHTML = '<span class="chip__dot"></span>' + fnt + ' <span class="chip__count">' + count + '</span>';
+        chip.addEventListener('click', () => {
+          if (activeFonteFilters.has(fnt)) {
+            activeFonteFilters.delete(fnt);
+            chip.setAttribute('aria-pressed', 'false');
+          } else {
+            activeFonteFilters.add(fnt);
+            chip.setAttribute('aria-pressed', 'true');
+          }
+          if (activeFonteFilters.size === 0) {
+            activeFonteFilters = new Set(fonteOrder.filter(f => features.some(feat => getFonteLabel(feat.properties) === f)));
+            document.querySelectorAll('#chips-fonte .chip[data-fonte]').forEach(c => c.setAttribute('aria-pressed', 'true'));
+          }
+          const allActive = activeFonteFilters.size === fonteOrder.filter(f => features.some(feat => getFonteLabel(feat.properties) === f)).length;
+          allBtn.setAttribute('aria-pressed', String(allActive));
           updateMarkers(); updateList();
         });
         holder.appendChild(chip);
@@ -595,20 +686,16 @@
       let visible = 0;
       markers.forEach(item => {
         const nacao = item.feature.properties._nacao;
-        const inFilter = activeFilters.has(nacao);
+        const fonte = getFonteLabel(item.feature.properties);
+        const inNacao = activeNacaoFilters.has(nacao);
+        const inFonte = activeFonteFilters.has(fonte);
+        const inFilter = inNacao && inFonte;
         const parent = item.element.parentElement;
         if (parent) parent.style.display = inFilter ? '' : 'none';
 
-        if (highlightedNacao) {
-          if (nacao === highlightedNacao) {
-            item.element.classList.add('is-highlighted');
-            item.element.classList.remove('is-dim');
-          } else if (inFilter) {
-            item.element.classList.add('is-dim');
-            item.element.classList.remove('is-highlighted');
-          }
-        } else {
-          item.element.classList.remove('is-dim', 'is-highlighted');
+        if (inFilter) {
+          item.element.classList.remove('is-dim');
+          item.element.classList.remove('is-highlighted');
         }
 
         if (inFilter) visible++;
@@ -667,7 +754,7 @@
         html += '<div class="info-row"><div class="info-row__label">' + label + '</div><div class="info-row__value">' + escapeHtml(val) + '</div></div>';
       });
       html += '<div class="info-row"><div class="info-row__label">Coordenadas</div><div class="info-row__value">' + lat.toFixed(6) + ', ' + lng.toFixed(6) + '</div></div>';
-      if (p.fonte) html += '<div class="info-row"><div class="info-row__label">Fonte</div><div class="info-row__value">' + escapeHtml(fonteLabels[p.fonte] || p.fonte) + '</div></div>';
+      if (p.fonte) html += '<div class="info-row"><div class="info-row__label">Fonte</div><div class="info-row__value">' + escapeHtml(getFonteLabel(p)) + '</div></div>';
       if (p.geo_status === 'out_of_bahia') {
         html += '<div class="info-row"><div class="info-row__label">Geo Status</div><div class="info-row__value" style="color:var(--warm)">Fora da Bahia — ver Metodologia §5</div></div>';
       }
@@ -692,7 +779,7 @@
     }
 
     function getVisibleFeatures() {
-      return features.filter(f => activeFilters.has(f.properties._nacao));
+      return features.filter(f => activeNacaoFilters.has(f.properties._nacao) && activeFonteFilters.has(getFonteLabel(f.properties)));
     }
 
     function updateList() {
@@ -837,6 +924,7 @@
           .map(f => ({ ...f, properties: { ...(f.properties || {}), _nacao: classify(f.properties || {}) } }));
 
         buildChips();
+        buildFonteChips();
         addMarkers();
         updateMarkers();
         updateList();
