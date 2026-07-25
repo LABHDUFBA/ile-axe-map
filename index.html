@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
   <script>
-    const DATASET_VERSION = 'v1.1';
+    const DATASET_VERSION = 'v1.2';
     const DATASET_DATE = '2026-07-25';
     const DATASET_TOTAL = 2158;
     const DATASET_GEO = 1924;
@@ -22,7 +22,7 @@
     /* === Paleta: cal, índigo do pano da costa, dendê/barro === */
     :root {
       --bg: #FAF7F2;
-      --bg-panel: rgba(250,247,242,.96);
+      --bg-panel: #FAF7F2;
       --bg-elevated: #FFF;
       --text: #1C1917;
       --text-muted: #8A8177;
@@ -49,7 +49,7 @@
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #14120F;
-        --bg-panel: rgba(20,18,15,.94);
+        --bg-panel: #14120F;
         --bg-elevated: #1E1B18;
         --text: #F2EDE4;
         --text-muted: #8A8177;
@@ -68,7 +68,7 @@
     [data-theme="light"] { color-scheme: light; }
     [data-theme="dark"] {
       color-scheme: dark;
-      --bg: #14120F; --bg-panel: rgba(20,18,15,.94); --bg-elevated: #1E1B18;
+      --bg: #14120F; --bg-panel: #14120F; --bg-elevated: #1E1B18;
       --text: #F2EDE4; --text-muted: #8A8177; --text-faint: #5C544A;
       --border: #2A2724; --border-strong: #3A3631;
       --accent: #5B7BA0; --accent-hover: #7A9BC0; --accent-soft: rgba(91,123,160,.12);
@@ -96,8 +96,6 @@
       display: flex; flex-direction: column;
       background: var(--bg-panel);
       border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px) saturate(120%);
-      -webkit-backdrop-filter: blur(12px) saturate(120%);
     }
     .topbar__row1 {
       display: flex; align-items: center; gap: 12px;
@@ -161,7 +159,6 @@
       width: var(--rail-w); background: var(--bg-panel);
       border-right: 1px solid var(--border);
       display: flex; flex-direction: column;
-      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
       transition: transform .3s cubic-bezier(.22,1,.36,1);
     }
     .rail__search {
@@ -230,7 +227,6 @@
       display: flex; flex-direction: column;
       transform: translateX(calc(-1 * var(--rail-w) - 20px));
       transition: transform .35s cubic-bezier(.22,1,.36,1);
-      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     }
     .detail.open { transform: translateX(0); }
     .detail__head { flex: none; padding: 20px 48px 16px 20px; border-bottom: 1px solid var(--border); }
@@ -266,7 +262,6 @@
       display: flex; flex-direction: column;
       transform: translateX(calc(360px + 20px));
       transition: transform .35s cubic-bezier(.22,1,.36,1);
-      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     }
     .info-panel.open { transform: translateX(0); }
     .info-panel__head { flex: none; padding: 20px 48px 16px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
@@ -329,6 +324,8 @@
     .skeleton__line:last-child { width: 60%; }
     @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 
+    .rail__handle { display: none; } /* hidden on desktop, shown on mobile */
+
     /* === Mobile === */
     @media (max-width: 768px) {
       .topbar__row1 { padding: 0 10px; gap: 8px; }
@@ -346,12 +343,16 @@
         transform: translateY(calc(100% - 48px));
       }
       .rail.expanded { transform: translateY(0); }
-      .rail::before {
-        content: ""; position: absolute; top: 8px; left: calc(50% - 20px);
-        width: 40px; height: 4px; border-radius: 4px;
-        background: var(--border-strong); cursor: pointer;
+      .rail__handle {
+        display: block; position: absolute; top: 0; left: 0; right: 0;
+        height: 20px; background: transparent; border: none; cursor: pointer;
         z-index: 10;
       }
+      .rail__handle::after {
+        content: ""; position: absolute; top: 8px; left: calc(50% - 20px);
+        width: 40px; height: 4px; border-radius: 4px; background: var(--border-strong);
+      }
+      .rail__handle[aria-expanded="true"]::after { transform: rotate(180deg); }
 
       .detail {
         width: 100%; top: auto; bottom: 0; height: 75vh;
@@ -396,6 +397,7 @@
   </header>
 
   <aside class="rail" id="rail" aria-label="Lista de terreiros">
+    <button class="rail__handle" id="rail-handle" type="button" aria-expanded="false" aria-label="Expandir lista"></button>
     <div class="rail__search">
       <input type="text" id="search" placeholder="Buscar terreiro…" aria-label="Buscar">
     </div>
@@ -433,7 +435,7 @@
 
       <h3>Dataset</h3>
       <dl>
-        <dt>Versão</dt><dd id="info-version">v1.1</dd>
+        <dt>Versão</dt><dd id="info-version">v1.2</dd>
         <dt>Extração</dt><dd id="info-date">2026-07-25</dd>
         <dt>Total</dt><dd id="info-total">2.158 únicos</dd>
         <dt>Georreferenciados</dt><dd id="info-geo">1.924</dd>
@@ -474,32 +476,19 @@
 
   <script>
     /*
-     * Okabe-Ito palette (Wong, Nature Methods 2011) — DCV-safe for 7 categories.
-     * Mapped to nações: each hue distinguishable under deuteranopia/protanopia.
+     * Okabe-Ito palette (Wong, Nature Methods 2011) — single assignment for both themes.
+     * Constância categórica: a mesma nação tem a mesma cor em light e dark.
+     * A borda branca de 2px isola o azul do basemap dark sem precisar trocar cores.
      */
-    const colorsLight = {
+    const colors = {
       Ketu: '#0072B2',              // blue
-      Angola: '#D55E00',            // vermillion (not orange — distinct from Candomblé)
+      Angola: '#D55E00',            // vermillion
       Jeje: '#009E73',              // bluish-green
-      'Candomblé': '#E69F00',       // orange (distinct from Angola vermillion)
+      'Candomblé': '#E69F00',       // orange
       'Matriz Africana': '#CC79A7', // reddish-purple
       Umbanda: '#56B4E9',           // sky-blue
       Outro: '#999999'              // grey
     };
-    const colorsDark = {
-      Ketu: '#56B4E9',              // sky-blue (brighter for dark bg)
-      Angola: '#E69F00',            // orange
-      Jeje: '#009E73',              // bluish-green
-      'Candomblé': '#F0E442',       // yellow (high contrast on dark)
-      'Matriz Africana': '#CC79A7', // reddish-purple
-      Umbanda: '#0072B2',           // blue
-      Outro: '#777777'              // grey
-    };
-    function getColors() {
-      const dark = (themeOverride === 'dark') ||
-        (!themeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches);
-      return dark ? colorsDark : colorsLight;
-    }
     const categoryOrder = ['Ketu','Angola','Jeje','Candomblé','Matriz Africana','Umbanda','Outro'];
     const fonteLabels = {
       'osm': 'OpenStreetMap', 'google': 'Google Places',
@@ -563,7 +552,6 @@
 
     function buildChips() {
       const holder = $('chips'); holder.innerHTML = '';
-      const colors = getColors();
       categoryOrder.filter(cat => features.some(f => f.properties._nacao === cat)).forEach(cat => {
         activeFilters.add(cat);
         const count = features.filter(f => f.properties._nacao === cat).length;
@@ -588,20 +576,12 @@
       });
     }
 
-    // BUG 3 FIX: clearMarkers() removes all markers before re-adding
-    function clearMarkers() {
-      markers.forEach(item => item.marker.remove());
-      markers = [];
-    }
-
     function addMarkers() {
-      const colors = getColors();
       features.forEach(feature => {
         const [lng, lat] = feature.geometry.coordinates;
         const el = document.createElement('button');
         el.type = 'button'; el.className = 'marker';
         el.setAttribute('aria-label', getName(feature.properties));
-        // Use inline background color from theme-appropriate palette
         el.style.background = colors[feature.properties._nacao] || colors['Outro'];
         const marker = new maplibregl.Marker({ element: el, anchor: 'center' }).setLngLat([lng, lat]).addTo(map);
         el.addEventListener('mouseenter', () => showTooltip(feature));
@@ -756,7 +736,6 @@
         holder.innerHTML = '<div class="rail__empty">Nenhum terreiro encontrado</div>';
         return;
       }
-      const colors = getColors();
       var html = '';
       items.forEach(function(f) {
         var p = f.properties;
@@ -799,28 +778,19 @@
       updateList();
     });
 
-    // BUG 3 FIX: clearMarkers before re-adding on theme toggle
+    // Theme toggle: reaplicar cores nos marcadores existentes (não destruir/recriar)
     $('theme-btn').addEventListener('click', function() {
       const isDark = (themeOverride === 'dark') ||
         (!themeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches);
       themeOverride = isDark ? 'light' : 'dark';
       applyTheme();
-      clearMarkers();           // remove old markers + reset array
       map.setStyle(mapStyle());
       map.once('styledata', function() {
-        addMarkers();            // re-add with new theme colors
-        updateMarkers();
-        // Re-apply chip colors for new theme
-        const colors = getColors();
-        document.querySelectorAll('.chip').forEach(chip => {
-          var text = chip.textContent.trim().split(' ')[0];
-          // Find matching category
-          categoryOrder.forEach(cat => {
-            if (cat === text || text.startsWith(cat.slice(0,5))) {
-              chip.style.setProperty('--chip-color', colors[cat]);
-            }
-          });
+        // Reaplicar background nos marcadores existentes — Marker é DOM, sobrevive a setStyle()
+        markers.forEach(item => {
+          item.element.style.background = colors[item.feature.properties._nacao] || colors['Outro'];
         });
+        updateMarkers();
       });
     });
 
@@ -840,13 +810,14 @@
       }
     });
 
-    // BUG 1 FIX: Bottom sheet expand/collapse handler (mobile)
-    $('rail').addEventListener('click', function(e) {
-      // Only toggle if click is on the ::before handle area (top 16px of rail on mobile)
-      if (window.innerWidth <= 768 && e.clientY - this.getBoundingClientRect().top < 20) {
-        this.classList.toggle('expanded');
-      }
+    // Bottom sheet: <button> real com stopPropagation nos filhos interativos
+    $('rail-handle').addEventListener('click', function(e) {
+      const expanded = $('rail').classList.toggle('expanded');
+      this.setAttribute('aria-expanded', String(expanded));
+      this.setAttribute('aria-label', expanded ? 'Recolher lista' : 'Expandir lista');
     });
+    // stopPropagation no search para não conflitar com o handle
+    $('search').addEventListener('click', function(e) { e.stopPropagation(); });
 
     var moveTimer = null;
     map.on('moveend', function() {

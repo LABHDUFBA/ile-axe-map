@@ -2,7 +2,7 @@
 
 ## Mapeamento de Terreiros de Candomblé da Bahia
 
-**Versão:** v1.1  
+**Versão:** v1.2  
 **Data:** 25 de julho de 2026
 **Repositório:** [github.com/LABHDUFBA/terreiro-map](https://github.com/LABHDUFBA/terreiro-map)  
 **Mapa interativo:** [labhdufba.github.io/terreiro-map](https://labhdufba.github.io/terreiro-map/)  
@@ -190,11 +190,15 @@ Cada registro mantém o campo `fonte` indicando sua origem (`osm`, `google`, `ce
 
    Adicionalmente, ~12 registros dentro do bbox da Bahia têm nomes que sugerem estabelecimentos não religiosos (pet shops, lojas de artigos religiosos, fabricantes) — falsos positivos da busca textual do Google Places.
 
+   **Nota sobre o bbox:** a primeira tentativa de corrigir o enquadramento usou lng −41,5 como limite oeste. Esse valor exclui todo o Oeste e o Médio São Francisco baiano — Barreiras (−45,0), Bom Jesus da Lapa (−43,4), Guanambi (−42,8), Xique-Xique (−42,7) e Irecê (−41,85). Os ~100 "outliers" que desapareceram nessa versão eram terreiros legítimos, não erros de georreferenciamento. O bbox correto (−46,7 a −37,3) preserva todos os terreiros do estado. Este quase-erro ilustra o risco de usar retângulos envoltórios sem conhecimento da geografia regional.
+
    **Ação tomada:** todos os registros receberam campo `geo_status` (`in_bahia`, `out_of_bahia`, `no_coords`) no GeoJSON e no JSON completo. Os 36 outliers permanecem no dataset mas são flaggados; o enquadramento inicial do mapa (`fitBounds`) considera apenas `in_bahia`. O painel de detalhe exibe aviso "Fora da Bahia" para outliers.
 
    **Recomendação:** revisão manual dos 36 outliers para re-georreferenciamento ou remoção. Correção no pipeline `collect_osm.py` / `collect_google.py` para validar coordenadas contra o limite municipal do IBGE antes da inserção.
 
-8. **Dívida técnica — clustering:** A versão atual usa marcadores DOM individuais (`maplibregl.Marker`) que não escalam bem com densidade. Em zoom baixo, ~1.900 pontos sobrepostos geram overplotting. A solução adequada é migrar para `GeoJSON source` + `cluster: true` do MapLibre GL, renderizando círculos agregados em zoom baixo e marcadores individuais em zoom alto. Planejado para v1.2.
+8. **Falsos positivos e precisão do dataset:** O headline de 2.158 registros únicos resulta da união de quatro fontes com casamento por nome e regex, sem precisão validada. A inspeção preliminar identificou ~12 falsos positivos (estabelecimentos não religiosos) apenas na amostra casual — esse número é piso, não estimativa. Antes da v1.2, planeja-se auditoria manual estratificada por fonte (n≈100 cada) com reporte de precisão e intervalo de confiança.
+
+9. **Dívida técnica — clustering:** A versão atual usa marcadores DOM individuais (`maplibregl.Marker`) que não escalam bem com densidade. Em zoom baixo, ~1.900 pontos sobrepostos geram overplotting. A solução adequada é migrar para `GeoJSON source` + `cluster: true` do MapLibre GL, renderizando círculos agregados em zoom baixo e marcadores individuais em zoom alto. Planejado para v1.2.
 
 ---
 
