@@ -33,6 +33,7 @@
     .filter:hover { border-color:rgba(232,168,56,.65); color:var(--color-cream); transform:translateY(-1px); }
     .filter[aria-pressed="true"] { border-color:var(--filter-color); background:color-mix(in srgb,var(--filter-color) 20%,transparent); color:var(--color-cream); }
     .filter-dot { width:7px; height:7px; border-radius:50%; background:var(--filter-color); box-shadow:0 0 0 2px rgba(255,255,255,.08); }
+    .filter-count { opacity:.5; font-weight:400; }
     .top-actions { position:fixed; z-index:2; top:20px; right:20px; display:flex; gap:8px; }
     .action { display:grid; width:42px; height:42px; place-items:center; border:1px solid var(--line); border-radius:12px; background:var(--glass); box-shadow:0 10px 30px rgba(0,0,0,.22); color:var(--color-parchment); cursor:pointer; font:700 11px/1 "Hanken Grotesk",sans-serif; letter-spacing:.04em; backdrop-filter:blur(16px); transition:border-color .2s,color .2s,transform .2s; }
     .action:hover { border-color:rgba(232,168,56,.7); color:var(--color-gold); transform:translateY(-1px); }
@@ -56,11 +57,13 @@
     .close { position:absolute; top:15px; right:15px; display:grid; width:32px; height:32px; place-items:center; border:1px solid var(--line); border-radius:9px; background:rgba(255,248,237,.05); color:var(--color-parchment); cursor:pointer; font-size:20px; line-height:1; transition:color .2s,border-color .2s; }
     .close:hover { border-color:var(--color-gold); color:var(--color-gold); }
     .detail-body { overflow:auto; padding:10px 22px 22px; scrollbar-color:rgba(232,168,56,.45) transparent; }
+    .detail-photo { width:100%; border-radius:10px; border:1px solid var(--line); object-fit:cover; max-height:220px; margin:10px 0 14px; }
     .info { display:grid; grid-template-columns:108px 1fr; gap:12px; padding:12px 0; border-bottom:1px solid rgba(240,230,210,.1); font-size:13px; line-height:1.35; }
     .info-label { color:rgba(240,230,210,.48); font-size:10px; font-weight:700; letter-spacing:.11em; text-transform:uppercase; }
     .info-value { color:var(--color-parchment); overflow-wrap:anywhere; text-align:right; }
     .detail-link { display:flex; align-items:center; justify-content:space-between; margin-top:19px; padding:13px 14px; border:1px solid rgba(232,168,56,.55); border-radius:10px; color:var(--color-gold); text-decoration:none; font-size:12px; font-weight:700; transition:background .2s,color .2s; }
     .detail-link:hover { background:var(--color-gold); color:var(--color-night); }
+    .detail-link + .detail-link { margin-top:8px; }
     .maplibregl-ctrl-group { overflow:hidden; border:1px solid var(--line)!important; border-radius:11px!important; background:var(--glass)!important; box-shadow:0 8px 24px rgba(0,0,0,.25)!important; backdrop-filter:blur(12px); }
     .maplibregl-ctrl-group button { width:34px!important; height:34px!important; background-color:transparent!important; }
     .maplibregl-ctrl-group button span { filter:invert(87%) sepia(17%) saturate(525%) hue-rotate(346deg) brightness(98%); }
@@ -95,11 +98,12 @@
       <div class="detail-head"><div class="detail-nacao" id="detail-nacao"></div><h2 id="detail-title"></h2></div>
       <div class="detail-body" id="detail-fields"></div>
     </aside>
-    <footer class="footer"><span>Dados:</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a><span>·</span><a href="https://github.com/LABHDUFBA" target="_blank" rel="noopener">LABHD/UFBA</a><span>·</span><a href="data/terreiros.geojson" download>Download GeoJSON</a></footer>
+    <footer class="footer"><span>Dados:</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OSM</a><span>·</span><a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a><span>·</span><a href="METODOLOGIA.md" target="_blank">Metodologia</a><span>·</span><a href="data/terreiros.geojson" download>GeoJSON</a></footer>
   </main>
   <script>
-    const colors = { Ketu:'#e8a838', Angola:'#c4700f', Jeje:'#8b2c1c', 'Candomblé':'#d4841a', 'Matriz Africana':'#a0522d', Outro:'#7a6a5a' };
-    const categoryOrder = ['Ketu','Angola','Jeje','Candomblé','Matriz Africana','Outro'];
+    const colors = { Ketu:'#e8a838', Angola:'#c4700f', Jeje:'#8b2c1c', 'Candomblé':'#d4841a', 'Matriz Africana':'#a0522d', 'Umbanda':'#6b8e7b', Outro:'#7a6a5a' };
+    const categoryOrder = ['Ketu','Angola','Jeje','Candomblé','Matriz Africana','Umbanda','Outro'];
+    const fonteLabels = { 'osm':'OpenStreetMap', 'google':'Google Places', 'ceao':'CEAO/UFBA', 'sefaz':'SEFAZ/Salvador', 'osm+google':'OSM+Google' };
     const map = new maplibregl.Map({ container:'map', style:'https://tiles.openfreemap.org/styles/dark', center:[-38.50,-12.97], zoom:8.1, attributionControl:true });
     map.addControl(new maplibregl.NavigationControl({ showCompass:false }), 'bottom-right');
     map.addControl(new maplibregl.ScaleControl({ maxWidth:110, unit:'metric' }), 'bottom-right');
@@ -107,41 +111,104 @@
     const $ = id => document.getElementById(id);
     const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
     function classify(properties) {
-      const text = [properties.religion,properties.denomination,properties.name].filter(Boolean).join(' ').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-      if (/(\bketu\b|\bnago\b|alaketu)/.test(text)) return 'Ketu';
-      if (/\bangola\b/.test(text)) return 'Angola';
-      if (/\bjeje\b/.test(text)) return 'Jeje';
+      // Se já tem nação do CEAO, usar diretamente
+      if (properties.nacao) {
+        const n = properties.nacao.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+        if (/(ketu|nago|alaketu)/.test(n)) return 'Ketu';
+        if (/angola/.test(n)) return 'Angola';
+        if (/jeje/.test(n)) return 'Jeje';
+        if (/umbanda/.test(n)) return 'Umbanda';
+        if (/candombl/.test(n)) return 'Candomblé';
+        if (/(matriz|african)/.test(n)) return 'Matriz Africana';
+        return 'Outro';
+      }
+      // Fallback: classificar por nome/tipo
+      const text = [properties.religion,properties.denomination,properties.name,properties.nome,properties.amenity].filter(Boolean).join(' ').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+      if (/(ketu|nago|alaketu)/.test(text)) return 'Ketu';
+      if (/angola/.test(text)) return 'Angola';
+      if (/jeje/.test(text)) return 'Jeje';
+      if (/umbanda/.test(text)) return 'Umbanda';
       if (/(matriz|african)/.test(text)) return 'Matriz Africana';
-      if (/(candombl|umbanda|batuque|xango)/.test(text)) return 'Candomblé';
+      if (/(candombl|batuque|xango)/.test(text)) return 'Candomblé';
       return 'Outro';
     }
+    function getName(p) { return p.nome || p.name || p.title || 'Terreiro sem nome'; }
     function buildFilters() {
       const holder = $('filters'); holder.innerHTML = '';
       categoryOrder.filter(category => features.some(f => f.properties._nacao === category)).forEach(category => {
         active.add(category);
         const button = document.createElement('button'); button.type='button'; button.className='filter'; button.style.setProperty('--filter-color',colors[category]); button.setAttribute('aria-pressed','true');
-        button.innerHTML = `<span class="filter-dot"></span>${category}`;
+        const count = features.filter(f => f.properties._nacao === category).length;
+        button.innerHTML = '<span class="filter-dot"></span>' + category + ' <span class="filter-count">' + count + '</span>';
         button.addEventListener('click', () => { const enabled = !active.has(category); enabled ? active.add(category) : active.delete(category); button.setAttribute('aria-pressed',String(enabled)); updateMarkers(); });
         holder.appendChild(button);
       });
     }
     function addMarkers() {
       features.forEach(feature => {
-        const [lng,lat] = feature.geometry.coordinates; const element = document.createElement('button'); element.type='button'; element.className='marker'; element.style.setProperty('--marker-color', colors[feature.properties._nacao]); element.setAttribute('aria-label', feature.properties.name || 'Terreiro');
+        const [lng,lat] = feature.geometry.coordinates; const element = document.createElement('button'); element.type='button'; element.className='marker'; element.style.setProperty('--marker-color', colors[feature.properties._nacao]); element.setAttribute('aria-label', getName(feature.properties));
         const marker = new maplibregl.Marker({ element, anchor:'center' }).setLngLat([lng,lat]).addTo(map);
         element.addEventListener('mouseenter', () => showTooltip(feature)); element.addEventListener('mouseleave', () => { if (popup) popup.remove(); }); element.addEventListener('focus', () => showTooltip(feature)); element.addEventListener('blur', () => { if (popup) popup.remove(); }); element.addEventListener('click', () => showDetail(feature, element));
         markers.push({ feature, element, marker });
       });
     }
-    function updateMarkers() { markers.forEach(item => { const visible = active.has(item.feature.properties._nacao); item.element.parentElement.style.display = visible ? '' : 'none'; }); $('stats').textContent = `${markers.filter(item => active.has(item.feature.properties._nacao)).length} terreiros mapeados`; }
-    function showTooltip(feature) { if (popup) popup.remove(); const p = feature.properties; popup = new maplibregl.Popup({ closeButton:false, closeOnClick:false, offset:18 }).setLngLat(feature.geometry.coordinates).setHTML(`<div class="tooltip-name">${escapeHtml(p.name || 'Terreiro sem nome')}</div><div class="tooltip-meta">${escapeHtml(p._nacao)}</div>`).addTo(map); }
+    function updateMarkers() { markers.forEach(item => { const visible = active.has(item.feature.properties._nacao); item.element.parentElement.style.display = visible ? '' : 'none'; }); const count = markers.filter(item => active.has(item.feature.properties._nacao)).length; $('stats').textContent = count + ' terreiros mapeados'; }
+    function showTooltip(feature) { if (popup) popup.remove(); const p = feature.properties; popup = new maplibregl.Popup({ closeButton:false, closeOnClick:false, offset:18 }).setLngLat(feature.geometry.coordinates).setHTML('<div class="tooltip-name">' + escapeHtml(getName(p)) + '</div><div class="tooltip-meta">' + escapeHtml(p._nacao) + '</div>').addTo(map); }
     function showDetail(feature, element) {
       if (popup) popup.remove(); if (selectedMarker) selectedMarker.classList.remove('is-active'); selectedMarker = element; element.classList.add('is-active');
-      const p = feature.properties, [lng,lat] = feature.geometry.coordinates; $('detail-nacao').textContent = p._nacao; $('detail-title').textContent = p.name || 'Terreiro sem nome';
-      const fields = [['religion','Religião'],['denomination','Denominação'],['amenity','Tipo'],['addr:street','Rua'],['addr:housenumber','Número'],['addr:suburb','Bairro'],['addr:city','Cidade'],['addr:postcode','CEP'],['phone','Telefone'],['start_date','Fundação']];
-      const rows = fields.filter(([key]) => p[key] && !/^n[aã]o informado/i.test(String(p[key]))).map(([key,label]) => `<div class="info"><div class="info-label">${label}</div><div class="info-value">${escapeHtml(p[key])}</div></div>`);
-      rows.push(`<div class="info"><div class="info-label">Coordenadas</div><div class="info-value">${lat.toFixed(6)}, ${lng.toFixed(6)}</div></div>`);
-      $('detail-fields').innerHTML = rows.join('') + `<a class="detail-link" href="https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=18/${lat}/${lng}" target="_blank" rel="noopener">Ver no OpenStreetMap <span>↗</span></a>`;
+      const p = feature.properties, [lng,lat] = feature.geometry.coordinates;
+      $('detail-nacao').textContent = p._nacao;
+      $('detail-title').textContent = getName(p);
+      let html = '';
+      // Foto do CEAO (thumbnail local)
+      if (p.foto_thumb) {
+        let fotoSrc = p.foto_thumb;
+        if (fotoSrc.indexOf('terreiros.ceao.ufba.br/_FT/pq/') !== -1) {
+          var match = fotoSrc.match(/\/pq\/(\d+)\./);
+          if (match) fotoSrc = 'data/ceao/fotos/' + match[1] + '_thumb.jpg';
+        }
+        html += '<img class="detail-photo" src="' + escapeHtml(fotoSrc) + '" alt="' + escapeHtml(getName(p)) + '" loading="lazy" onerror="this.style.display=\'none\'">';
+      }
+      // Campos ricos — suporta ambos os formatos (CEAO e OSM antigo)
+      var seenLabels = {};
+      var fields = [
+        ['lideranca','Liderança'],
+        ['nacao','Nação'],
+        ['regente','Orixá Regente'],
+        ['ano_fundacao','Fundação'],
+        ['start_date','Fundação'],
+        ['endereco','Endereço'],
+        ['addr:street','Endereço'],
+        ['bairro','Bairro'],
+        ['addr:suburb','Bairro'],
+        ['addr:city','Cidade'],
+        ['cep','CEP'],
+        ['addr:postcode','CEP'],
+        ['telefone','Telefone'],
+        ['phone','Telefone'],
+        ['rating','Avaliação'],
+        ['reviews','Reviews'],
+      ];
+      fields.forEach(function(pair) {
+        var key = pair[0], label = pair[1];
+        if (!p[key]) return;
+        var val = String(p[key]);
+        if (/^n[aã]o (tem|informado)/i.test(val)) return;
+        if (seenLabels[label]) return;
+        seenLabels[label] = true;
+        if (key === 'rating') val = val + '★';
+        if (key === 'reviews') val = val + ' avaliações';
+        html += '<div class="info"><div class="info-label">' + label + '</div><div class="info-value">' + escapeHtml(val) + '</div></div>';
+      });
+      html += '<div class="info"><div class="info-label">Coordenadas</div><div class="info-value">' + lat.toFixed(6) + ', ' + lng.toFixed(6) + '</div></div>';
+      if (p.fonte) {
+        html += '<div class="info"><div class="info-label">Fonte</div><div class="info-value">' + escapeHtml(fonteLabels[p.fonte] || p.fonte) + '</div></div>';
+      }
+      html += '<a class="detail-link" href="https://www.openstreetmap.org/?mlat=' + lat + '&mlon=' + lng + '#map=18/' + lat + '/' + lng + '" target="_blank" rel="noopener">Ver no OpenStreetMap <span>↗</span></a>';
+      if (p.ceao_id) {
+        html += '<a class="detail-link" href="https://terreiros.ceao.ufba.br/detalhe/' + p.ceao_id + '" target="_blank" rel="noopener" style="border-color:rgba(196,112,15,.5)">Ver no CEAO/UFBA <span>↗</span></a>';
+      }
+      $('detail-fields').innerHTML = html;
       $('detail').classList.add('open'); map.easeTo({ center:[lng,lat], zoom:Math.max(map.getZoom(),13), duration:700, essential:true });
     }
     function closeDetail() { $('detail').classList.remove('open'); if (selectedMarker) selectedMarker.classList.remove('is-active'); selectedMarker = null; }
