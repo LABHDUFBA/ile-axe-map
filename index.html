@@ -13,59 +13,34 @@
   <script>
     const DATASET_VERSION = 'v1.3';
     const DATASET_DATE = '2026-07-25';
-    const DATASET_TOTAL = 1629;
-    const DATASET_GEO = 1395;
-    const DATASET_IN_BAHIA = 1395;
-    const DATASET_OUT_OF_BAHIA = 0;
   </script>
   <style>
-    /* === Paleta: cal, índigo do pano da costa, dendê/barro === */
+    /* === Paleta === */
     :root {
-      --bg: #FAF7F2;
-      --bg-panel: #FAF7F2;
-      --bg-elevated: #FFF;
-      --text: #1C1917;
-      --text-muted: #8A8177;
-      --text-faint: #B8AFA5;
-      --border: #E7E0D6;
-      --border-strong: #D4CBBE;
-      --accent: #29405B;
-      --accent-hover: #1E3247;
-      --accent-soft: rgba(41,64,91,.08);
+      --bg: #FAF7F2; --bg-panel: #FAF7F2; --bg-elevated: #FFF;
+      --text: #1C1917; --text-muted: #8A8177; --text-faint: #B8AFA5;
+      --border: #E7E0D6; --border-strong: #D4CBBE;
+      --accent: #29405B; --accent-hover: #1E3247; --accent-soft: rgba(41,64,91,.08);
       --warm: #A8460F;
-      --radius: 8px;
-      --radius-sm: 5px;
-      --topbar-h: 128px;
-      --topbar-row1-h: 48px;
-      --topbar-row2-h: 44px;
-      --topbar-row3-h: 36px;
-      --rail-w: 380px;
+      --radius: 8px; --radius-sm: 5px;
+      --topbar-h: 52px;
+      --rail-w: 340px;
       --font-display: Fraunces, Georgia, serif;
       --font-body: "Hanken Grotesk", system-ui, sans-serif;
       --shadow: 0 1px 3px rgba(28,25,23,.08), 0 4px 16px rgba(28,25,23,.06);
       --shadow-lg: 0 4px 24px rgba(28,25,23,.12);
     }
-
-    /* Dark mode */
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #14120F;
-        --bg-panel: #14120F;
-        --bg-elevated: #1E1B18;
-        --text: #F2EDE4;
-        --text-muted: #8A8177;
-        --text-faint: #5C544A;
-        --border: #2A2724;
-        --border-strong: #3A3631;
-        --accent: #5B7BA0;
-        --accent-hover: #7A9BC0;
-        --accent-soft: rgba(91,123,160,.12);
+        --bg: #14120F; --bg-panel: #14120F; --bg-elevated: #1E1B18;
+        --text: #F2EDE4; --text-muted: #8A8177; --text-faint: #5C544A;
+        --border: #2A2724; --border-strong: #3A3631;
+        --accent: #5B7BA0; --accent-hover: #7A9BC0; --accent-soft: rgba(91,123,160,.12);
         --warm: #D9762B;
         --shadow: 0 1px 3px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.2);
         --shadow-lg: 0 4px 24px rgba(0,0,0,.35);
       }
     }
-
     [data-theme="light"] { color-scheme: light; }
     [data-theme="dark"] {
       color-scheme: dark;
@@ -74,96 +49,34 @@
       --border: #2A2724; --border-strong: #3A3631;
       --accent: #5B7BA0; --accent-hover: #7A9BC0; --accent-soft: rgba(91,123,160,.12);
       --warm: #D9762B;
-      --shadow: 0 1px 3px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.2);
-      --shadow-lg: 0 4px 24px rgba(0,0,0,.35);
     }
     [data-theme="dark"] body { background: var(--bg); }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { width: 100%; height: 100%; overflow: hidden; }
-    body {
-      background: var(--bg); color: var(--text);
-      font-family: var(--font-body); font-size: 14px; line-height: 1.4;
-      -webkit-font-smoothing: antialiased;
-    }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 14px; line-height: 1.4; -webkit-font-smoothing: antialiased; }
     button, a { -webkit-tap-highlight-color: transparent; color: inherit; }
-
     #map { position: fixed; inset: 0; }
 
-    /* === Topbar — 2 rows === */
+    /* === Topbar — 1 linha === */
     .topbar {
       position: fixed; z-index: 10; top: 0; left: 0; right: 0;
       height: var(--topbar-h);
-      display: flex; flex-direction: column;
-      background: var(--bg-panel);
-      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 12px; padding: 0 16px;
+      background: var(--bg-panel); border-bottom: 1px solid var(--border);
     }
-    .topbar__row1 {
-      display: flex; align-items: center; gap: 12px;
-      height: var(--topbar-row1-h); padding: 0 16px;
-      flex-shrink: 0;
-    }
-    .topbar__row2 {
-      display: flex; align-items: center; gap: 8px;
-      height: var(--topbar-row2-h); padding: 0 16px;
-      border-top: 1px solid var(--border);
-      flex-shrink: 0;
-    }
-    .topbar__row3 {
-      display: flex; align-items: center; gap: 8px;
-      height: var(--topbar-row3-h); padding: 0 16px;
-      border-top: 1px solid var(--border);
-      flex-shrink: 0;
-    }
-    .topbar__filter-label {
-      font-size: 10px; font-weight: 700; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--text-faint);
-      white-space: nowrap; flex-shrink: 0; margin-right: 4px;
-    }
-    .topbar__title {
-      font-family: var(--font-display); font-size: 18px; font-weight: 600;
-      letter-spacing: .02em; color: var(--text); white-space: nowrap;
-    }
+    .topbar__title { font-family: var(--font-display); font-size: 18px; font-weight: 600; letter-spacing: .02em; white-space: nowrap; }
     .topbar__title span { color: var(--warm); }
-    .topbar__count {
-      font-size: 12px; font-weight: 600; color: var(--text-muted);
-      padding: 3px 8px; border-radius: 99px; background: var(--accent-soft);
-      white-space: nowrap;
-    }
+    .topbar__count { font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 3px 10px; border-radius: 99px; background: var(--accent-soft); white-space: nowrap; }
     .topbar__spacer { flex: 1; }
     .topbar__btn {
-      display: grid; place-items: center; width: 36px; height: 36px;
+      display: grid; place-items: center; width: 34px; height: 34px;
       border: 1px solid var(--border); border-radius: var(--radius-sm);
       background: var(--bg-elevated); color: var(--text-muted);
       cursor: pointer; font-size: 14px; font-weight: 700;
       transition: border-color .15s, color .15s;
     }
     .topbar__btn:hover { border-color: var(--accent); color: var(--accent); }
-    .topbar__btn[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
-
-    /* === Filter chips — row 2, wrap === */
-    .chips {
-      display: flex; gap: 6px; flex-wrap: wrap;
-      flex: 1; min-width: 0; padding: 0;
-      align-items: center;
-    }
-    .chip {
-      display: inline-flex; align-items: center; gap: 6px;
-      height: 30px; padding: 0 12px; flex-shrink: 0;
-      border: 1px solid var(--border); border-radius: 99px;
-      background: var(--bg-elevated); color: var(--text-muted);
-      font: 600 12px/1 var(--font-body); cursor: pointer;
-      transition: all .15s;
-    }
-    .chip:hover { border-color: var(--border-strong); color: var(--text); }
-    .chip[aria-pressed="true"] {
-      border-color: var(--accent); background: var(--accent-soft); color: var(--accent);
-    }
-    .chip__dot {
-      width: 10px; height: 10px; border-radius: 50%; background: var(--chip-color, var(--text-faint));
-      border: 1px solid rgba(0,0,0,.1);
-    }
-    .chip__count { font-weight: 400; opacity: .6; font-size: 10px; }
 
     /* === Left rail === */
     .rail {
@@ -173,69 +86,84 @@
       display: flex; flex-direction: column;
       transition: transform .3s cubic-bezier(.22,1,.36,1);
     }
-    .rail__search {
-      flex: none; padding: 12px 16px; border-bottom: 1px solid var(--border);
-    }
+    .rail__search { flex: none; padding: 10px 14px; border-bottom: 1px solid var(--border); }
     .rail__search input {
-      width: 100%; height: 36px; padding: 0 12px;
+      width: 100%; height: 34px; padding: 0 12px;
       border: 1px solid var(--border); border-radius: var(--radius-sm);
       background: var(--bg-elevated); color: var(--text);
-      font: 400 13px/1 var(--font-body);
-      transition: border-color .15s;
+      font: 400 13px/1 var(--font-body); transition: border-color .15s;
     }
     .rail__search input:focus { outline: none; border-color: var(--accent); }
     .rail__search input::placeholder { color: var(--text-faint); }
 
+    /* === Filter panel === */
+    .filters {
+      flex: none; border-bottom: 1px solid var(--border);
+      max-height: 340px; overflow-y: auto;
+      scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent;
+    }
+    .filters::-webkit-scrollbar { width: 5px; }
+    .filters::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
+    .filter-group { padding: 8px 14px 10px; }
+    .filter-group + .filter-group { border-top: 1px solid var(--border); }
+    .filter-group__title {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-faint);
+      cursor: pointer; user-select: none; margin-bottom: 4px;
+    }
+    .filter-group__title:hover { color: var(--text-muted); }
+    .filter-group__title::after { content: '▾'; font-size: 9px; margin-left: auto; transition: transform .2s; }
+    .filter-group.collapsed .filter-group__title::after { transform: rotate(-90deg); }
+    .filter-group__body { display: flex; flex-direction: column; gap: 2px; }
+    .filter-group.collapsed .filter-group__body { display: none; }
+
+    .filter-opt {
+      display: flex; align-items: center; gap: 8px;
+      padding: 5px 4px; cursor: pointer;
+      font-size: 13px; color: var(--text);
+      border-radius: var(--radius-sm); transition: background .12s;
+    }
+    .filter-opt:hover { background: var(--accent-soft); }
+    .filter-opt input { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; flex-shrink: 0; }
+    .filter-opt__dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; border: 1px solid rgba(0,0,0,.15); }
+    .filter-opt__label { flex: 1; }
+    .filter-opt__count { font-size: 11px; color: var(--text-faint); font-weight: 400; }
+    .filter-opt--all { font-weight: 600; color: var(--accent); border-bottom: 1px solid var(--border); margin-bottom: 2px; padding-bottom: 6px; }
+
+    /* === List === */
+    .rail__viewport-label {
+      padding: 6px 14px 4px; font-size: 10px; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint);
+      display: flex; justify-content: space-between; align-items: center;
+      flex: none; border-bottom: 1px solid var(--border);
+    }
     .rail__list {
       flex: 1; overflow-y: auto; padding: 4px 0;
       scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent;
     }
-    .rail__list::-webkit-scrollbar { width: 6px; }
+    .rail__list::-webkit-scrollbar { width: 5px; }
     .rail__list::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
 
     .rail-item {
       display: flex; align-items: center; gap: 10px;
-      padding: 10px 16px; cursor: pointer;
-      border-left: 3px solid transparent;
-      transition: background .12s;
+      padding: 8px 14px; cursor: pointer;
+      border-left: 3px solid transparent; transition: background .12s;
     }
     .rail-item:hover { background: var(--accent-soft); }
-    .rail-item.is-active {
-      background: var(--accent-soft); border-left-color: var(--accent);
-    }
-    .rail-item__dot {
-      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
-      background: var(--item-color, #8A8177);
-    }
+    .rail-item.is-active { background: var(--accent-soft); border-left-color: var(--accent); }
+    .rail-item__dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: var(--item-color, #8A8177); }
     .rail-item__body { flex: 1; min-width: 0; }
-    .rail-item__name {
-      font-size: 13px; font-weight: 500; color: var(--text);
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    }
-    .rail-item__meta {
-      font-size: 11px; color: var(--text-muted); margin-top: 1px;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    }
-    .rail-item__photo {
-      width: 36px; height: 36px; border-radius: var(--radius-sm);
-      object-fit: cover; flex-shrink: 0; border: 1px solid var(--border);
-    }
+    .rail-item__name { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .rail-item__meta { font-size: 11px; color: var(--text-muted); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .rail-item__photo { width: 36px; height: 36px; border-radius: var(--radius-sm); object-fit: cover; flex-shrink: 0; border: 1px solid var(--border); }
+    .rail__empty { padding: 40px 24px; text-align: center; color: var(--text-faint); font-size: 13px; }
+    .rail__handle { display: none; }
 
-    .rail__empty {
-      padding: 40px 24px; text-align: center; color: var(--text-faint); font-size: 13px;
-    }
-
-    .rail__viewport-label {
-      padding: 8px 16px 4px; font-size: 10px; font-weight: 700;
-      letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint);
-      display: flex; justify-content: space-between; align-items: center;
-    }
-
-    /* === Detail panel === */
+    /* === Detail === */
     .detail {
       position: fixed; z-index: 6; top: var(--topbar-h); bottom: 0; left: 0;
-      width: var(--rail-w); background: var(--bg-panel);
-      border-right: 1px solid var(--border);
+      width: var(--rail-w); background: var(--bg-panel); border-right: 1px solid var(--border);
       display: flex; flex-direction: column;
       transform: translateX(calc(-1 * var(--rail-w) - 20px));
       transition: transform .35s cubic-bezier(.22,1,.36,1);
@@ -243,24 +171,17 @@
     .detail.open { transform: translateX(0); }
     .detail__head { flex: none; padding: 20px 48px 16px 20px; border-bottom: 1px solid var(--border); }
     .detail__nacao { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--warm); }
-    .detail__title { font-family: var(--font-display); font-size: 24px; font-weight: 600; line-height: 1.15; color: var(--text); margin-top: 6px; }
-    .detail__close {
-      position: absolute; top: 14px; right: 14px;
-      width: 32px; height: 32px; display: grid; place-items: center;
-      border: 1px solid var(--border); border-radius: var(--radius-sm);
-      background: var(--bg-elevated); color: var(--text-muted);
-      cursor: pointer; font-size: 18px; line-height: 1;
-      transition: border-color .15s, color .15s;
-    }
+    .detail__title { font-family: var(--font-display); font-size: 22px; font-weight: 600; line-height: 1.15; margin-top: 6px; }
+    .detail__close { position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elevated); color: var(--text-muted); cursor: pointer; font-size: 18px; line-height: 1; }
     .detail__close:hover { border-color: var(--accent); color: var(--accent); }
     .detail__body { flex: 1; overflow-y: auto; padding: 0 20px 24px; scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
-    .detail__body::-webkit-scrollbar { width: 6px; }
+    .detail__body::-webkit-scrollbar { width: 5px; }
     .detail__body::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
     .detail__photo { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); object-fit: cover; max-height: 240px; margin: 14px 0 18px; }
-    .info-row { display: grid; grid-template-columns: 100px 1fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+    .info-row { display: grid; grid-template-columns: 100px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
     .info-row__label { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); }
-    .info-row__value { color: var(--text); text-align: right; overflow-wrap: anywhere; }
-    .detail__link { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding: 11px 14px; border: 1px solid var(--accent); border-radius: var(--radius-sm); color: var(--accent); text-decoration: none; font-size: 12px; font-weight: 600; transition: background .15s, color .15s; }
+    .info-row__value { text-align: right; overflow-wrap: anywhere; }
+    .detail__link { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding: 10px 14px; border: 1px solid var(--accent); border-radius: var(--radius-sm); color: var(--accent); text-decoration: none; font-size: 12px; font-weight: 600; transition: background .15s, color .15s; }
     .detail__link:hover { background: var(--accent); color: var(--bg-elevated); }
     .detail__link + .detail__link { margin-top: 8px; }
     .detail__link--warm { border-color: var(--warm); color: var(--warm); }
@@ -269,60 +190,31 @@
     /* === Info panel === */
     .info-panel {
       position: fixed; z-index: 7; top: var(--topbar-h); right: 0; bottom: 0;
-      width: 360px; background: var(--bg-panel);
-      border-left: 1px solid var(--border);
+      width: 340px; background: var(--bg-panel); border-left: 1px solid var(--border);
       display: flex; flex-direction: column;
-      transform: translateX(calc(360px + 20px));
+      transform: translateX(calc(340px + 20px));
       transition: transform .35s cubic-bezier(.22,1,.36,1);
     }
     .info-panel.open { transform: translateX(0); }
-    .info-panel__head { flex: none; padding: 20px 48px 16px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
-    .info-panel__title { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--text); }
-    .info-panel__body { flex: 1; overflow-y: auto; padding: 16px 20px 24px; font-size: 13px; line-height: 1.55; color: var(--text); scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
-    .info-panel__body h3 { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); margin: 20px 0 8px; }
+    .info-panel__head { flex: none; padding: 18px 48px 14px 20px; border-bottom: 1px solid var(--border); }
+    .info-panel__title { font-family: var(--font-display); font-size: 18px; font-weight: 600; }
+    .info-panel__body { flex: 1; overflow-y: auto; padding: 14px 20px 24px; font-size: 13px; line-height: 1.55; scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
+    .info-panel__body h3 { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); margin: 18px 0 8px; }
     .info-panel__body h3:first-child { margin-top: 0; }
     .info-panel__body p { color: var(--text-muted); margin-bottom: 8px; }
     .info-panel__body a { color: var(--accent); text-decoration: none; }
     .info-panel__body a:hover { text-decoration: underline; }
     .info-panel__body dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 8px 0; }
-    .info-panel__body dt { font-weight: 600; color: var(--text); font-size: 12px; }
+    .info-panel__body dt { font-weight: 600; font-size: 12px; }
     .info-panel__body dd { color: var(--text-muted); font-size: 12px; }
     .info-panel__close { position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elevated); color: var(--text-muted); cursor: pointer; font-size: 18px; }
 
-    /* === Map markers === */
-    .marker {
-      width: 12px; height: 12px; border-radius: 50%;
-      border: 2px solid var(--bg-elevated);
-      box-shadow: 0 1px 4px rgba(0,0,0,.25);
-      cursor: pointer;
-      transition: transform .15s, box-shadow .15s;
-    }
-    .marker:hover, .marker.is-active {
-      transform: scale(1.4);
-      box-shadow: 0 2px 8px rgba(0,0,0,.35), 0 0 0 4px var(--accent-soft);
-    }
-    .marker.is-dim {
-      opacity: .3;
-      transform: scale(.7);
-    }
-    .marker.is-highlighted {
-      border-color: var(--bg-elevated);
-      box-shadow: 0 1px 6px rgba(0,0,0,.3), 0 0 0 3px rgba(0,0,0,.15);
-      transform: scale(1.3);
-    }
-
-    /* Cluster circles */
-    .cluster {
-      display: grid; place-items: center;
-      width: 36px; height: 36px; border-radius: 50%;
-      background: var(--accent-soft); border: 2px solid var(--accent);
-      color: var(--accent); font: 700 13px/1 var(--font-body);
-      cursor: pointer;
-    }
-    .cluster:hover { background: var(--accent); color: var(--bg-elevated); }
+    /* === Markers === */
+    .marker { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--bg-elevated); box-shadow: 0 1px 4px rgba(0,0,0,.25); cursor: pointer; transition: transform .15s; }
+    .marker:hover, .marker.is-active { transform: scale(1.4); box-shadow: 0 2px 8px rgba(0,0,0,.35), 0 0 0 4px var(--accent-soft); }
 
     /* === MapLibre overrides === */
-    .maplibregl-popup-content { min-width: 160px; padding: 8px 10px; border-radius: var(--radius-sm); background: var(--bg-elevated); border: 1px solid var(--border); box-shadow: var(--shadow); color: var(--text); font-family: var(--font-body); }
+    .maplibregl-popup-content { min-width: 160px; padding: 8px 10px; border-radius: var(--radius-sm); background: var(--bg-elevated); border: 1px solid var(--border); box-shadow: var(--shadow); font-family: var(--font-body); }
     .maplibregl-popup-tip { border-top-color: var(--bg-elevated)!important; border-bottom-color: var(--bg-elevated)!important; }
     .maplibregl-ctrl-group { border: 1px solid var(--border)!important; border-radius: var(--radius-sm)!important; background: var(--bg-elevated)!important; box-shadow: var(--shadow)!important; overflow: hidden; }
     .maplibregl-ctrl-group button { width: 32px!important; height: 32px!important; background: transparent!important; }
@@ -330,89 +222,37 @@
     .maplibregl-ctrl-attrib { background: var(--bg-panel)!important; color: var(--text-muted)!important; font: 10px var(--font-body)!important; border-radius: var(--radius-sm) 0 0 0; }
     .maplibregl-ctrl-attrib a { color: var(--accent)!important; }
 
-    /* === Skeleton === */
-    .skeleton { padding: 12px 16px; }
-    .skeleton__line { height: 14px; border-radius: 4px; background: linear-gradient(90deg, var(--border) 25%, var(--border-strong) 50%, var(--border) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; margin-bottom: 8px; }
-    .skeleton__line:last-child { width: 60%; }
-    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-
-    .rail__handle { display: none; } /* hidden on desktop, shown on mobile */
-
     /* === Mobile === */
     @media (max-width: 768px) {
-      .topbar__row1 { padding: 0 10px; gap: 8px; }
-      .topbar__row2 { padding: 0 10px; }
-      .topbar__row3 { padding: 0 10px; }
+      .topbar { padding: 0 10px; gap: 8px; }
       .topbar__title { font-size: 15px; }
       .topbar__count { display: none; }
       .topbar__btn:not(.info-btn) { display: none; }
-      .chip { height: 28px; padding: 0 10px; font-size: 11px; }
-      .topbar__filter-label { display: none; }
-
-      .rail {
-        width: 100%; top: auto; bottom: 0; height: auto;
-        border-right: none; border-top: 1px solid var(--border);
-        border-radius: 16px 16px 0 0;
-        max-height: 75vh;
-        transform: translateY(calc(100% - 48px));
-      }
+      .rail { width: 100%; top: auto; bottom: 0; height: auto; max-height: 75vh; border-right: none; border-top: 1px solid var(--border); border-radius: 16px 16px 0 0; transform: translateY(calc(100% - 48px)); }
       .rail.expanded { transform: translateY(0); }
-      .rail__handle {
-        display: block; position: absolute; top: 0; left: 0; right: 0;
-        height: 20px; background: transparent; border: none; cursor: pointer;
-        z-index: 10;
-      }
-      .rail__handle::after {
-        content: ""; position: absolute; top: 8px; left: calc(50% - 20px);
-        width: 40px; height: 4px; border-radius: 4px; background: var(--border-strong);
-      }
+      .rail__handle { display: block; position: absolute; top: 0; left: 0; right: 0; height: 20px; background: transparent; border: none; cursor: pointer; z-index: 10; }
+      .rail__handle::after { content: ""; position: absolute; top: 8px; left: calc(50% - 20px); width: 40px; height: 4px; border-radius: 4px; background: var(--border-strong); }
       .rail__handle[aria-expanded="true"]::after { transform: rotate(180deg); }
-
-      .detail {
-        width: 100%; top: auto; bottom: 0; height: 75vh;
-        border-right: none; border-top: 1px solid var(--border);
-        border-radius: 16px 16px 0 0;
-        transform: translateY(100%);
-      }
+      .filters { max-height: 200px; }
+      .detail { width: 100%; top: auto; bottom: 0; height: 75vh; border-right: none; border-top: 1px solid var(--border); border-radius: 16px 16px 0 0; transform: translateY(100%); }
       .detail.open { transform: translateY(0); }
       .detail__head { padding-top: 24px; }
-      .detail__head::before {
-        content: ""; position: absolute; top: 8px; left: calc(50% - 20px);
-        width: 40px; height: 4px; border-radius: 4px; background: var(--border-strong);
-      }
-
-      .info-panel {
-        width: 100%; top: var(--topbar-h); bottom: 0;
-        transform: translateX(100%);
-      }
+      .detail__head::before { content: ""; position: absolute; top: 8px; left: calc(50% - 20px); width: 40px; height: 4px; border-radius: 4px; background: var(--border-strong); }
+      .info-panel { width: 100%; top: var(--topbar-h); bottom: 0; transform: translateX(100%); }
       .info-panel.open { transform: translateX(0); }
     }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: .01ms!important; transition-duration: .01ms!important; }
-    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms!important; transition-duration: .01ms!important; } }
   </style>
 </head>
 <body>
   <div id="map" role="application" aria-label="Mapa de terreiros"></div>
 
   <header class="topbar">
-    <div class="topbar__row1">
-      <div class="topbar__title">Ilê Axé <span>Map</span></div>
-      <div class="topbar__count" id="count-badge" aria-live="polite">—</div>
-      <div class="topbar__spacer"></div>
-      <button class="topbar__btn" id="theme-btn" type="button" aria-label="Alternar tema" title="Tema">◐</button>
-      <button class="topbar__btn" id="lang-btn" type="button" aria-pressed="true" aria-label="Idioma">PT</button>
-      <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Informações">ⓘ</button>
-    </div>
-    <div class="topbar__row2">
-      <span class="topbar__filter-label">Nação</span>
-      <div class="chips" id="chips" role="group" aria-label="Filtrar por nação"></div>
-    </div>
-    <div class="topbar__row3">
-      <span class="topbar__filter-label">Fonte</span>
-      <div class="chips" id="chips-fonte" role="group" aria-label="Filtrar por fonte"></div>
-    </div>
+    <div class="topbar__title">Ilê Axé <span>Map</span></div>
+    <div class="topbar__count" id="count-badge" aria-live="polite">—</div>
+    <div class="topbar__spacer"></div>
+    <button class="topbar__btn" id="theme-btn" type="button" aria-label="Alternar tema" title="Tema">◐</button>
+    <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Informações">ⓘ</button>
   </header>
 
   <aside class="rail" id="rail" aria-label="Lista de terreiros">
@@ -420,18 +260,9 @@
     <div class="rail__search">
       <input type="text" id="search" placeholder="Buscar terreiro…" aria-label="Buscar">
     </div>
-    <div class="rail__viewport-label" id="viewport-label">
-      <span>Todos os terreiros</span>
-    </div>
-    <div class="rail__list" id="rail-list">
-      <div class="skeleton" id="skeleton">
-        <div class="skeleton__line"></div>
-        <div class="skeleton__line"></div>
-        <div class="skeleton__line"></div>
-        <div class="skeleton__line"></div>
-        <div class="skeleton__line"></div>
-      </div>
-    </div>
+    <div class="filters" id="filters"></div>
+    <div class="rail__viewport-label" id="viewport-label"><span>Todos os terreiros</span></div>
+    <div class="rail__list" id="rail-list"></div>
   </aside>
 
   <aside class="detail" id="detail" aria-live="polite" aria-label="Detalhes">
@@ -445,81 +276,54 @@
 
   <aside class="info-panel" id="info-panel" aria-label="Sobre o projeto">
     <button class="info-panel__close" id="info-close" type="button" aria-label="Fechar">×</button>
-    <div class="info-panel__head">
-      <div class="info-panel__title">Sobre</div>
-    </div>
+    <div class="info-panel__head"><div class="info-panel__title">Sobre</div></div>
     <div class="info-panel__body">
       <h3>Projeto</h3>
       <p>Atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia.</p>
-
       <h3>Dataset</h3>
       <dl>
-        <dt>Versão</dt><dd id="info-version">v1.3</dd>
-        <dt>Extração</dt><dd id="info-date">2026-07-25</dd>
-        <dt>Total</dt><dd id="info-total">1.629 únicos</dd>
-        <dt>Georreferenciados</dt><dd id="info-geo">1.395</dd>
-        <dt>Na Bahia</dt><dd>1.395</dd>
-        <dt>Fora da Bahia</dt><dd>0 (ver Metodologia §5)</dd>
+        <dt>Versão</dt><dd>v1.3</dd>
+        <dt>Extração</dt><dd>2026-07-25</dd>
+        <dt>Total</dt><dd>1.629 únicos</dd>
+        <dt>Georreferenciados</dt><dd>1.395</dd>
       </dl>
-
       <h3>Fontes</h3>
       <p>
-        <a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a> — 1.155 terreiros com detalhes<br>
-        OSM + Google Places — 1.553 lugares<br>
-        SEFAZ/Salvador (SEMUR 2020) — 635 terreiros
+        <a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a> — 682 terreiros<br>
+        OSM + Google Places — 743 lugares<br>
+        SEFAZ/Salvador (SEMUR 2020) — 234 registros
       </p>
-
       <h3>Metodologia</h3>
       <p>
-        <a href="METODOLOGIA.md" target="_blank">Nota técnico-metodológica completa</a><br>
+        <a href="METODOLOGIA.md" target="_blank">Nota técnico-metodológica</a><br>
         <a href="data/terreiros.geojson" download>Download GeoJSON</a><br>
         <a href="data/terreiros_all_sources.json" download>Dataset completo (JSON)</a>
       </p>
-
       <h3>Código</h3>
       <p>
         <a href="https://github.com/LABHDUFBA/terreiro-map" target="_blank" rel="noopener">github.com/LABHDUFBA/terreiro-map</a><br>
         LABHD/UFBA · Leonardo Fernandes Nascimento
       </p>
-
       <h3>Aviso</h3>
       <p style="font-size: 12px; color: var(--text-faint)">
-        Terreiros são alvo recorrente de intolerância religiosa.
-        Os dados aqui consolidados são de fontes públicas, mas a agregação
-        em interface consultável reduz o custo de coleta. Uma camada de
-        consentimento e agregação por setor está em desenvolvimento.
+        Terreiros são alvo recorrente de intolerância religiosa. Os dados aqui consolidados são de fontes públicas, mas a agregação em interface consultável reduz o custo de coleta. Uma camada de consentimento e agregação por setor está em desenvolvimento.
       </p>
     </div>
   </aside>
 
   <script>
-    /*
-     * Okabe-Ito palette (Wong, Nature Methods 2011) — single assignment for both themes.
-     * Constância categórica: a mesma nação tem a mesma cor em light e dark.
-     * A borda branca de 2px isola o azul do basemap dark sem precisar trocar cores.
-     */
+    /* Okabe-Ito — constância categórica (mesma cor em light/dark) */
     const colors = {
-      Ketu: '#0072B2',              // blue
-      Angola: '#D55E00',            // vermillion
-      Jeje: '#009E73',              // bluish-green
-      'Candomblé': '#E69F00',       // orange
-      'Matriz Africana': '#CC79A7', // reddish-purple
-      Umbanda: '#56B4E9',           // sky-blue
-      Outro: '#999999'              // grey
+      Ketu: '#0072B2', Angola: '#D55E00', Jeje: '#009E73',
+      'Candomblé': '#E69F00', 'Matriz Africana': '#CC79A7',
+      Umbanda: '#56B4E9', Outro: '#999999'
     };
     const categoryOrder = ['Ketu','Angola','Jeje','Candomblé','Matriz Africana','Umbanda','Outro'];
-    const fonteLabels = {
-      'osm': 'OSM+Google', 'google': 'OSM+Google',
-      'ceao': 'CEAO/UFBA', 'sefaz': 'SEFAZ/Salvador'
-    };
+    const fonteMap = { 'osm': 'OSM+Google', 'google': 'OSM+Google', 'ceao': 'CEAO/UFBA', 'sefaz': 'SEFAZ/Salvador' };
     const fonteOrder = ['CEAO/UFBA', 'OSM+Google', 'SEFAZ/Salvador'];
-    const fonteColors = {
-      'CEAO/UFBA': '#0072B2', 'OSM+Google': '#009E73', 'SEFAZ/Salvador': '#E69F00'
-    };
+    const fonteColors = { 'CEAO/UFBA': '#0072B2', 'OSM+Google': '#009E73', 'SEFAZ/Salvador': '#E69F00' };
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // Theme: respect system default, allow manual override
     let themeOverride = null;
     function applyTheme() {
       if (themeOverride) document.documentElement.setAttribute('data-theme', themeOverride);
@@ -528,23 +332,22 @@
     applyTheme();
 
     const mapStyle = () => {
-      const dark = (themeOverride === 'dark') ||
-        (!themeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      const dark = (themeOverride === 'dark') || (!themeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches);
       return dark ? 'https://tiles.openfreemap.org/styles/dark' : 'https://tiles.openfreemap.org/styles/positron';
     };
 
     const map = new maplibregl.Map({
       container: 'map', style: mapStyle(),
       center: [-38.50, -12.97], zoom: 8.1,
-      attributionControl: true,
-      maxZoom: 16, minZoom: 5
+      attributionControl: true, maxZoom: 16, minZoom: 5
     });
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'bottom-right');
     map.addControl(new maplibregl.ScaleControl({ maxWidth: 110, unit: 'metric' }), 'bottom-right');
 
-    let features = [], markers = [], activeNacaoFilters = new Set(), activeFonteFilters = new Set(), selectedMarker = null, popup = null;
+    let features = [], markers = [];
+    let activeNacao = new Set(), activeFonte = new Set();
+    let selectedMarker = null, popup = null;
     let searchQuery = '', listSubset = [];
-    let highlightedNacao = null;
 
     const $ = id => document.getElementById(id);
     const escapeHtml = v => String(v ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
@@ -571,102 +374,109 @@
     }
 
     function getName(p) { return p.nome || p.name || p.title || 'Terreiro sem nome'; }
+    function getFonteLabel(p) { return fonteMap[p.fonte] || 'Outro'; }
 
-    function getFonteLabel(p) {
-      return fonteLabels[p.fonte] || 'Outro';
-    }
+    /* === Build filter UI === */
+    function buildFilters() {
+      const holder = $('filters');
+      holder.innerHTML = '';
 
-    function buildChips() {
-      const holder = $('chips'); holder.innerHTML = '';
-      // Botão "Todas"
-      const allBtn = document.createElement('button');
-      allBtn.type = 'button'; allBtn.className = 'chip';
-      allBtn.setAttribute('aria-pressed', 'true');
-      allBtn.textContent = 'Todas';
-      allBtn.addEventListener('click', () => {
-        activeNacaoFilters = new Set(categoryOrder.filter(c => features.some(f => f.properties._nacao === c)));
-        document.querySelectorAll('#chips .chip').forEach(c => c.setAttribute('aria-pressed', 'true'));
-        highlightedNacao = null;
+      // --- Nação ---
+      const nacaoGroup = document.createElement('div');
+      nacaoGroup.className = 'filter-group';
+      nacaoGroup.innerHTML = '<div class="filter-group__title">Nação</div><div class="filter-group__body"></div>';
+      const nacaoBody = nacaoGroup.querySelector('.filter-group__body');
+
+      // Select-all checkbox
+      const allNacao = makeCheckbox('all-nacao', 'Todas', null, true, () => {
+        const checked = allNacao.checkbox.checked;
+        if (checked) {
+          activeNacao = new Set(categoryOrder.filter(c => features.some(f => f.properties._nacao === c)));
+        } else {
+          activeNacao.clear();
+        }
+        nacaoBody.querySelectorAll('.filter-opt[data-cat]').forEach(opt => { opt.checkbox.checked = checked; });
         updateMarkers(); updateList();
       });
-      holder.appendChild(allBtn);
+      allNacao.el.classList.add('filter-opt--all');
+      nacaoBody.appendChild(allNacao.el);
 
       categoryOrder.filter(cat => features.some(f => f.properties._nacao === cat)).forEach(cat => {
-        activeNacaoFilters.add(cat);
+        activeNacao.add(cat);
         const count = features.filter(f => f.properties._nacao === cat).length;
-        const chip = document.createElement('button');
-        chip.type = 'button'; chip.className = 'chip';
-        chip.style.setProperty('--chip-color', colors[cat]);
-        chip.setAttribute('aria-pressed', 'true');
-        chip.dataset.nacao = cat;
-        chip.innerHTML = '<span class="chip__dot"></span>' + cat + ' <span class="chip__count">' + count + '</span>';
-        chip.addEventListener('click', () => {
-          // Multi-seleção: toggle nação
-          if (activeNacaoFilters.has(cat)) {
-            activeNacaoFilters.delete(cat);
-            chip.setAttribute('aria-pressed', 'false');
-          } else {
-            activeNacaoFilters.add(cat);
-            chip.setAttribute('aria-pressed', 'true');
-          }
-          // Se nenhuma selecionada, reativa todas
-          if (activeNacaoFilters.size === 0) {
-            activeNacaoFilters = new Set(categoryOrder.filter(c => features.some(f => f.properties._nacao === c)));
-            document.querySelectorAll('#chips .chip[data-nacao]').forEach(c => c.setAttribute('aria-pressed', 'true'));
-          }
-          // Atualiza botão "Todas"
-          const allActive = activeNacaoFilters.size === categoryOrder.filter(c => features.some(f => f.properties._nacao === c)).length;
-          allBtn.setAttribute('aria-pressed', String(allActive));
-          highlightedNacao = null;
+        const opt = makeCheckbox('nac-' + cat, cat, colors[cat], true, () => {
+          if (opt.checkbox.checked) activeNacao.add(cat);
+          else activeNacao.delete(cat);
+          syncAllCheckbox(allNacao, nacaoBody, 'cat');
           updateMarkers(); updateList();
         });
-        holder.appendChild(chip);
+        opt.el.dataset.cat = cat;
+        opt.el.querySelector('.filter-opt__label').innerHTML += ' <span class="filter-opt__count">' + count + '</span>';
+        nacaoBody.appendChild(opt.el);
       });
-    }
 
-    function buildFonteChips() {
-      const holder = $('chips-fonte'); holder.innerHTML = '';
-      // Botão "Todas"
-      const allBtn = document.createElement('button');
-      allBtn.type = 'button'; allBtn.className = 'chip';
-      allBtn.setAttribute('aria-pressed', 'true');
-      allBtn.textContent = 'Todas';
-      allBtn.addEventListener('click', () => {
-        activeFonteFilters = new Set(fonteOrder.filter(f => features.some(feat => getFonteLabel(feat.properties) === f)));
-        document.querySelectorAll('#chips-fonte .chip').forEach(c => c.setAttribute('aria-pressed', 'true'));
+      // Toggle collapse
+      nacaoGroup.querySelector('.filter-group__title').addEventListener('click', () => nacaoGroup.classList.toggle('collapsed'));
+      holder.appendChild(nacaoGroup);
+
+      // --- Fonte ---
+      const fonteGroup = document.createElement('div');
+      fonteGroup.className = 'filter-group';
+      fonteGroup.innerHTML = '<div class="filter-group__title">Fonte</div><div class="filter-group__body"></div>';
+      const fonteBody = fonteGroup.querySelector('.filter-group__body');
+
+      const allFonte = makeCheckbox('all-fonte', 'Todas', null, true, () => {
+        const checked = allFonte.checkbox.checked;
+        if (checked) {
+          activeFonte = new Set(fonteOrder.filter(f => features.some(feat => getFonteLabel(feat.properties) === f)));
+        } else {
+          activeFonte.clear();
+        }
+        fonteBody.querySelectorAll('.filter-opt[data-fonte]').forEach(opt => { opt.checkbox.checked = checked; });
         updateMarkers(); updateList();
       });
-      holder.appendChild(allBtn);
+      allFonte.el.classList.add('filter-opt--all');
+      fonteBody.appendChild(allFonte.el);
 
       fonteOrder.filter(f => features.some(feat => getFonteLabel(feat.properties) === f)).forEach(fnt => {
-        activeFonteFilters.add(fnt);
+        activeFonte.add(fnt);
         const count = features.filter(f => getFonteLabel(f.properties) === fnt).length;
-        const chip = document.createElement('button');
-        chip.type = 'button'; chip.className = 'chip';
-        chip.style.setProperty('--chip-color', fonteColors[fnt] || '#999');
-        chip.setAttribute('aria-pressed', 'true');
-        chip.dataset.fonte = fnt;
-        chip.innerHTML = '<span class="chip__dot"></span>' + fnt + ' <span class="chip__count">' + count + '</span>';
-        chip.addEventListener('click', () => {
-          if (activeFonteFilters.has(fnt)) {
-            activeFonteFilters.delete(fnt);
-            chip.setAttribute('aria-pressed', 'false');
-          } else {
-            activeFonteFilters.add(fnt);
-            chip.setAttribute('aria-pressed', 'true');
-          }
-          if (activeFonteFilters.size === 0) {
-            activeFonteFilters = new Set(fonteOrder.filter(f => features.some(feat => getFonteLabel(feat.properties) === f)));
-            document.querySelectorAll('#chips-fonte .chip[data-fonte]').forEach(c => c.setAttribute('aria-pressed', 'true'));
-          }
-          const allActive = activeFonteFilters.size === fonteOrder.filter(f => features.some(feat => getFonteLabel(feat.properties) === f)).length;
-          allBtn.setAttribute('aria-pressed', String(allActive));
+        const opt = makeCheckbox('fonte-' + fnt, fnt, fonteColors[fnt], true, () => {
+          if (opt.checkbox.checked) activeFonte.add(fnt);
+          else activeFonte.delete(fnt);
+          syncAllCheckbox(allFonte, fonteBody, 'fonte');
           updateMarkers(); updateList();
         });
-        holder.appendChild(chip);
+        opt.el.dataset.fonte = fnt;
+        opt.el.querySelector('.filter-opt__label').innerHTML += ' <span class="filter-opt__count">' + count + '</span>';
+        fonteBody.appendChild(opt.el);
       });
+
+      fonteGroup.querySelector('.filter-group__title').addEventListener('click', () => fonteGroup.classList.toggle('collapsed'));
+      holder.appendChild(fonteGroup);
     }
 
+    function makeCheckbox(id, label, color, checked, onChange) {
+      const el = document.createElement('label');
+      el.className = 'filter-opt';
+      el.htmlFor = id;
+      const cb = document.createElement('input');
+      cb.type = 'checkbox'; cb.id = id; cb.checked = checked;
+      let dot = '';
+      if (color) dot = '<span class="filter-opt__dot" style="background:' + color + '"></span>';
+      el.innerHTML = dot + '<span class="filter-opt__label">' + label + '</span>';
+      el.insertBefore(cb, el.firstChild);
+      cb.addEventListener('change', onChange);
+      return { el, checkbox: cb };
+    }
+
+    function syncAllCheckbox(allOpt, body, attr) {
+      const opts = body.querySelectorAll('.filter-opt[data-' + attr + ']');
+      const allChecked = Array.from(opts).every(o => o.checkbox.checked);
+      allOpt.checkbox.checked = allChecked;
+    }
+
+    /* === Markers === */
     function addMarkers() {
       features.forEach(feature => {
         const [lng, lat] = feature.geometry.coordinates;
@@ -687,18 +497,10 @@
       markers.forEach(item => {
         const nacao = item.feature.properties._nacao;
         const fonte = getFonteLabel(item.feature.properties);
-        const inNacao = activeNacaoFilters.has(nacao);
-        const inFonte = activeFonteFilters.has(fonte);
-        const inFilter = inNacao && inFonte;
+        const show = activeNacao.has(nacao) && activeFonte.has(fonte);
         const parent = item.element.parentElement;
-        if (parent) parent.style.display = inFilter ? '' : 'none';
-
-        if (inFilter) {
-          item.element.classList.remove('is-dim');
-          item.element.classList.remove('is-highlighted');
-        }
-
-        if (inFilter) visible++;
+        if (parent) parent.style.display = show ? '' : 'none';
+        if (show) visible++;
       });
       $('count-badge').textContent = visible.toLocaleString('pt-BR') + ' terreiros';
     }
@@ -716,34 +518,18 @@
       if (popup) popup.remove();
       if (selectedMarker) selectedMarker.classList.remove('is-active');
       selectedMarker = element; element.classList.add('is-active');
-
       const p = feature.properties;
       const [lng, lat] = feature.geometry.coordinates;
-
       $('detail-nacao').textContent = p._nacao;
       $('detail-title').textContent = getName(p);
-
       let html = '';
       if (p.foto_thumb) {
         let src = p.foto_thumb;
-        if (src.indexOf('terreiros.ceao.ufba.br/_FT/pq/') !== -1) {
-          var m = src.match(/\/pq\/(\d+)\./);
-          if (m) src = 'data/ceao/fotos/' + m[1] + '_thumb.jpg';
-        }
+        if (src.indexOf('terreiros.ceao.ufba.br/_FT/pq/') !== -1) { var m = src.match(/\/pq\/(\d+)\./); if (m) src = 'data/ceao/fotos/' + m[1] + '_thumb.jpg'; }
         html += '<img class="detail__photo" src="' + escapeHtml(src) + '" alt="' + escapeHtml(getName(p)) + '" loading="lazy" onerror="this.style.display=\'none\'">';
       }
-
       var seen = {};
-      var fields = [
-        ['lideranca','Liderança'],['nacao','Nação'],['regente','Orixá Regente'],
-        ['ano_fundacao','Fundação'],['start_date','Fundação'],
-        ['endereco','Endereço'],['addr:street','Endereço'],
-        ['bairro','Bairro'],['addr:suburb','Bairro'],
-        ['addr:city','Cidade'],['cep','CEP'],['addr:postcode','CEP'],
-        ['telefone','Telefone'],['phone','Telefone'],
-        ['rating','Avaliação'],['reviews','Reviews'],
-      ];
-      fields.forEach(function(pair) {
+      [['lideranca','Liderança'],['nacao','Nação'],['regente','Orixá Regente'],['ano_fundacao','Fundação'],['start_date','Fundação'],['endereco','Endereço'],['addr:street','Endereço'],['bairro','Bairro'],['addr:suburb','Bairro'],['addr:city','Cidade'],['cep','CEP'],['addr:postcode','CEP'],['telefone','Telefone'],['phone','Telefone'],['rating','Avaliação'],['reviews','Reviews']].forEach(function(pair) {
         var key = pair[0], label = pair[1];
         if (!p[key]) return;
         var val = String(p[key]);
@@ -755,31 +541,17 @@
       });
       html += '<div class="info-row"><div class="info-row__label">Coordenadas</div><div class="info-row__value">' + lat.toFixed(6) + ', ' + lng.toFixed(6) + '</div></div>';
       if (p.fonte) html += '<div class="info-row"><div class="info-row__label">Fonte</div><div class="info-row__value">' + escapeHtml(getFonteLabel(p)) + '</div></div>';
-      if (p.geo_status === 'out_of_bahia') {
-        html += '<div class="info-row"><div class="info-row__label">Geo Status</div><div class="info-row__value" style="color:var(--warm)">Fora da Bahia — ver Metodologia §5</div></div>';
-      }
-
       html += '<a class="detail__link" href="https://www.openstreetmap.org/?mlat=' + lat + '&mlon=' + lng + '#map=18/' + lat + '/' + lng + '" target="_blank" rel="noopener">Ver no OpenStreetMap ↗</a>';
-      if (p.ceao_id) {
-        html += '<a class="detail__link detail__link--warm" href="https://terreiros.ceao.ufba.br/detalhe/' + p.ceao_id + '" target="_blank" rel="noopener">Ver no CEAO/UFBA ↗</a>';
-      }
-
+      if (p.ceao_id) html += '<a class="detail__link detail__link--warm" href="https://terreiros.ceao.ufba.br/detalhe/' + p.ceao_id + '" target="_blank" rel="noopener">Ver no CEAO/UFBA ↗</a>';
       $('detail-body').innerHTML = html;
       $('detail').classList.add('open');
-
-      if (!reduceMotion) {
-        map.easeTo({ center: [lng, lat], zoom: Math.max(map.getZoom(), 13), duration: 600, essential: true });
-      }
+      if (!reduceMotion) map.easeTo({ center: [lng, lat], zoom: Math.max(map.getZoom(), 13), duration: 600, essential: true });
     }
 
-    function closeDetail() {
-      $('detail').classList.remove('open');
-      if (selectedMarker) selectedMarker.classList.remove('is-active');
-      selectedMarker = null;
-    }
+    function closeDetail() { $('detail').classList.remove('open'); if (selectedMarker) selectedMarker.classList.remove('is-active'); selectedMarker = null; }
 
     function getVisibleFeatures() {
-      return features.filter(f => activeNacaoFilters.has(f.properties._nacao) && activeFonteFilters.has(getFonteLabel(f.properties)));
+      return features.filter(f => activeNacao.has(f.properties._nacao) && activeFonte.has(getFonteLabel(f.properties)));
     }
 
     function updateList() {
@@ -789,40 +561,26 @@
         const q = searchQuery.toLowerCase();
         filtered = all.filter(f => {
           const p = f.properties;
-          const name = (getName(p) || '').toLowerCase();
-          const nacao = (p.nacao || '').toLowerCase();
-          const bairro = (p.bairro || p['addr:suburb'] || '').toLowerCase();
-          const lider = (p.lideranca || '').toLowerCase();
-          return name.includes(q) || nacao.includes(q) || bairro.includes(q) || lider.includes(q);
+          return (getName(p) || '').toLowerCase().includes(q) || (p.nacao || '').toLowerCase().includes(q) || (p.bairro || p['addr:suburb'] || '').toLowerCase().includes(q) || (p.lideranca || '').toLowerCase().includes(q);
         });
       }
-
       let inViewport = filtered;
-      const viewportLabel = $('viewport-label');
+      const vl = $('viewport-label');
       if (map.getZoom() > 10) {
         const bounds = map.getBounds();
-        inViewport = filtered.filter(f => {
-          const [lng, lat] = f.geometry.coordinates;
-          return bounds.contains([lng, lat]);
-        });
-        const inVp = inViewport.length;
-        const total = filtered.length;
-        viewportLabel.innerHTML = '<span>' + inVp + ' nesta área</span><span style="font-weight:400;opacity:.6">' + total + ' total</span>';
+        inViewport = filtered.filter(f => bounds.contains(f.geometry.coordinates));
+        vl.innerHTML = '<span>' + inViewport.length + ' nesta área</span><span style="font-weight:400;opacity:.6">' + filtered.length + ' total</span>';
       } else {
         inViewport = filtered.slice(0, 200);
-        viewportLabel.innerHTML = '<span>' + filtered.length + ' terreiros</span><span style="font-weight:400;opacity:.6">aproxime para filtrar por área</span>';
+        vl.innerHTML = '<span>' + filtered.length + ' terreiros</span><span style="font-weight:400;opacity:.6">aproxime p/ filtrar área</span>';
       }
-
       listSubset = inViewport;
       renderList(inViewport);
     }
 
     function renderList(items) {
       const holder = $('rail-list');
-      if (items.length === 0) {
-        holder.innerHTML = '<div class="rail__empty">Nenhum terreiro encontrado</div>';
-        return;
-      }
+      if (items.length === 0) { holder.innerHTML = '<div class="rail__empty">Nenhum terreiro encontrado</div>'; return; }
       var html = '';
       items.forEach(function(f) {
         var p = f.properties;
@@ -833,122 +591,65 @@
         var photo = '';
         if (p.foto_thumb) {
           var src = p.foto_thumb;
-          if (src.indexOf('terreiros.ceao.ufba.br/_FT/pq/') !== -1) {
-            var m = src.match(/\/pq\/(\d+)\./);
-            if (m) src = 'data/ceao/fotos/' + m[1] + '_thumb.jpg';
-          }
+          if (src.indexOf('terreiros.ceao.ufba.br/_FT/pq/') !== -1) { var m = src.match(/\/pq\/(\d+)\./); if (m) src = 'data/ceao/fotos/' + m[1] + '_thumb.jpg'; }
           photo = '<img class="rail-item__photo" src="' + escapeHtml(src) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">';
         }
-        html += '<div class="rail-item" data-nacao="' + escapeHtml(p._nacao) + '" style="--item-color:' + (colors[p._nacao] || colors['Outro']) + '">' +
-          '<div class="rail-item__dot"></div>' +
-          '<div class="rail-item__body"><div class="rail-item__name">' + name + '</div>' +
-          '<div class="rail-item__meta">' + meta + '</div></div>' +
-          photo + '</div>';
+        html += '<div class="rail-item" style="--item-color:' + (colors[p._nacao] || colors['Outro']) + '"><div class="rail-item__dot"></div><div class="rail-item__body"><div class="rail-item__name">' + name + '</div><div class="rail-item__meta">' + meta + '</div></div>' + photo + '</div>';
       });
       holder.innerHTML = html;
-
       holder.querySelectorAll('.rail-item').forEach(function(item, idx) {
         item.addEventListener('click', function() {
           if (idx < listSubset.length) {
             var f = listSubset[idx];
-            var markerItem = markers.find(function(m) { return m.feature === f; });
-            if (markerItem) showDetail(f, markerItem.element);
+            var mi = markers.find(function(m) { return m.feature === f; });
+            if (mi) showDetail(f, mi.element);
           }
         });
       });
     }
 
-    // === Event handlers ===
+    // === Events ===
     $('detail-close').addEventListener('click', closeDetail);
-    $('search').addEventListener('input', function(e) {
-      searchQuery = e.target.value.trim();
-      updateList();
-    });
-
-    // Theme toggle: reaplicar cores nos marcadores existentes (não destruir/recriar)
+    $('search').addEventListener('input', function(e) { searchQuery = e.target.value.trim(); updateList(); });
     $('theme-btn').addEventListener('click', function() {
-      const isDark = (themeOverride === 'dark') ||
-        (!themeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      const isDark = (themeOverride === 'dark') || (!themeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches);
       themeOverride = isDark ? 'light' : 'dark';
-      applyTheme();
-      map.setStyle(mapStyle());
+      applyTheme(); map.setStyle(mapStyle());
       map.once('styledata', function() {
-        // Reaplicar background nos marcadores existentes — Marker é DOM, sobrevive a setStyle()
-        markers.forEach(item => {
-          item.element.style.background = colors[item.feature.properties._nacao] || colors['Outro'];
-        });
+        markers.forEach(item => { item.element.style.background = colors[item.feature.properties._nacao] || colors['Outro']; });
         updateMarkers();
       });
     });
-
-    $('lang-btn').addEventListener('click', function() {
-      var en = $('lang-btn').textContent === 'EN';
-      $('lang-btn').textContent = en ? 'PT' : 'EN';
-      $('lang-btn').setAttribute('aria-pressed', String(!en));
-    });
-
     $('info-btn').addEventListener('click', function() { $('info-panel').classList.toggle('open'); });
     $('info-close').addEventListener('click', function() { $('info-panel').classList.remove('open'); });
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeDetail();
-        $('info-panel').classList.remove('open');
-      }
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { closeDetail(); $('info-panel').classList.remove('open'); } });
+    $('rail-handle').addEventListener('click', function() {
+      const exp = $('rail').classList.toggle('expanded');
+      this.setAttribute('aria-expanded', String(exp));
     });
-
-    // Bottom sheet: <button> real com stopPropagation nos filhos interativos
-    $('rail-handle').addEventListener('click', function(e) {
-      const expanded = $('rail').classList.toggle('expanded');
-      this.setAttribute('aria-expanded', String(expanded));
-      this.setAttribute('aria-label', expanded ? 'Recolher lista' : 'Expandir lista');
-    });
-    // stopPropagation no search para não conflitar com o handle
     $('search').addEventListener('click', function(e) { e.stopPropagation(); });
 
     var moveTimer = null;
-    map.on('moveend', function() {
-      if (moveTimer) clearTimeout(moveTimer);
-      moveTimer = setTimeout(updateList, 200);
-    });
+    map.on('moveend', function() { if (moveTimer) clearTimeout(moveTimer); moveTimer = setTimeout(updateList, 200); });
 
-    // === Load data ===
+    // === Load ===
     map.on('load', async function() {
       try {
         const response = await fetch('data/terreiros.geojson');
         if (!response.ok) throw new Error(response.status);
         const data = await response.json();
-
         features = data.features
           .filter(f => f.geometry && f.geometry.type === 'Point' && Array.isArray(f.geometry.coordinates))
           .map(f => ({ ...f, properties: { ...(f.properties || {}), _nacao: classify(f.properties || {}) } }));
-
-        buildChips();
-        buildFonteChips();
+        buildFilters();
         addMarkers();
         updateMarkers();
         updateList();
-
-        // BUG 2 FIX: Correct Bahia bbox + responsive padding
-        // Bahia: lng -46.7 to -37.3, lat -18.4 to -8.5
         const baBounds = new maplibregl.LngLatBounds();
-        features.forEach(f => {
-          const [lng, lat] = f.geometry.coordinates;
-          if (lng >= -46.7 && lng <= -37.3 && lat >= -18.4 && lat <= -8.5) {
-            baBounds.extend(f.geometry.coordinates);
-          }
-        });
+        features.forEach(f => { const [lng, lat] = f.geometry.coordinates; if (lng >= -46.7 && lng <= -37.3 && lat >= -18.4 && lat <= -8.5) baBounds.extend(f.geometry.coordinates); });
         if (!baBounds.isEmpty()) {
           const isMobile = window.innerWidth <= 768;
-          map.fitBounds(baBounds, {
-            padding: {
-              top: 110,
-              right: 70,
-              bottom: isMobile ? 200 : 70,
-              left: isMobile ? 20 : 420
-            },
-            maxZoom: 12, duration: reduceMotion ? 0 : 800
-          });
+          map.fitBounds(baBounds, { padding: { top: 60, right: 40, bottom: isMobile ? 200 : 40, left: isMobile ? 20 : 360 }, maxZoom: 12, duration: reduceMotion ? 0 : 800 });
         }
       } catch (error) {
         console.error('Erro ao carregar:', error);
