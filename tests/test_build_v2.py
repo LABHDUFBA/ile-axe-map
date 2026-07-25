@@ -96,6 +96,36 @@ class BuildV2Tests(unittest.TestCase):
             self.assertTrue(all(row["status_revisao"] == "pendente" for row in review_rows))
             self.assertTrue(all(row["nacao_componentes"] == "[]" for row in review_rows))
 
+    def test_build_excludes_curated_false_positives(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            result = build_v2(
+                ROOT / "data/ceao/terreiros_ceao_complete.json",
+                ROOT / "data/terreiros_all_sources.json",
+                Path(tmp),
+                ROOT / "data/exclusoes_curadas.csv",
+            )
+
+            self.assertEqual(result["source_counts"]["google"], 682)
+            self.assertEqual(result["total_records"], 2091)
+            self.assertEqual(result["mappable_records"], 1857)
+
+            geojson = json.loads((Path(tmp) / "terreiros_v2.geojson").read_text())
+            names = {feature["properties"].get("nome") for feature in geojson["features"]}
+            excluded_names = {
+                "Casa Rural - Materiais de Construção e Agro veterinária",
+                "Casas Freire",
+                "Rua Bahia, 457 Santo Antonio De Jesus",
+                "Remanso BA",
+                "Sítio Arqueológico Pilão Arcado Velho",
+                "CRAS - Itaguaçu da Bahia",
+                "Casa São Paulo",
+                "Casa das Espumas",
+                "R. Castro Alves, 169 - Cs A",
+                "Casa do Campo",
+                "Casa São Luiz Materiais De Construção",
+            }
+            self.assertTrue(names.isdisjoint(excluded_names))
+
     def test_build_does_not_overwrite_v1_artifacts(self):
         with tempfile.TemporaryDirectory() as tmp:
             output = Path(tmp)
@@ -128,8 +158,9 @@ class SiteIntegrationTests(unittest.TestCase):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("v2.1", html)
         self.assertIn("1.155 terreiros", html)
-        self.assertIn("2.102 registros", html)
-        self.assertIn("1.868", html)
+        self.assertIn("2.091 registros", html)
+        self.assertIn("1.857", html)
+        self.assertIn("OSM + Google Places — 702 lugares", html)
         self.assertIn("49 declarações do CEAO", html)
 
     def test_methodology_documents_ceao_reconciliation(self):

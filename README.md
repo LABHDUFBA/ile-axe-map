@@ -5,8 +5,8 @@ Mapa interativo de terreiros de candomblé e espaços religiosos afro-brasileiro
 ## Dataset v2.1
 
 - **Fonte primária:** CEAO/UFBA, com os 1.155 registros extraídos e georreferenciados.
-- **Fontes complementares:** Google Places (693), OpenStreetMap (20) e SEMUR/SEFAZ Salvador (234 sem coordenadas).
-- **Total:** 2.102 registros, dos quais 1.868 aparecem no mapa.
+- **Fontes complementares:** Google Places (682), OpenStreetMap (20) e SEMUR/SEFAZ Salvador (234 sem coordenadas).
+- **Total:** 2.091 registros, dos quais 1.857 aparecem no mapa.
 - A v1 permanece preservada; a interface carrega `data/terreiros_v2.geojson`.
 
 Os totais representam registros preservados por fonte e não devem ser interpretados automaticamente como entidades únicas entre fontes.

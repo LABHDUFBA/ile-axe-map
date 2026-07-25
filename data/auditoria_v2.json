@@ -1,21 +1,21 @@
 {
   "versao": "2.1",
   "criterio": "CEAO completo como fonte primária; Google, OSM e SEFAZ preservados como complementares",
-  "total_registros": 2102,
-  "total_georreferenciados": 1868,
+  "total_registros": 2091,
+  "total_georreferenciados": 1857,
   "fontes": {
     "ceao": 1155,
-    "google": 693,
+    "google": 682,
     "osm": 20,
     "sefaz": 234
   },
   "fontes_georreferenciadas": {
     "ceao": 1155,
-    "google": 693,
+    "google": 682,
     "osm": 20
   },
   "classificacao_mapa": {
-    "Não informado": 716,
+    "Não informado": 705,
     "Keto": 668,
     "Angola": 279,
     "Keto Angola": 40,
@@ -86,5 +86,9 @@
     "amostra": 172,
     "status": "pendente",
     "criterio": "amostra de até 10 registros por declaração literal de nação"
+  },
+  "exclusoes_curadas": {
+    "arquivo": "exclusoes_curadas.csv",
+    "total": 11
   }
 }

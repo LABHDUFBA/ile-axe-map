@@ -80,6 +80,32 @@ def prepare_other_record(raw: dict[str, Any]) -> dict[str, Any]:
     return record
 
 
+def load_exclusions(path: Path | None) -> set[tuple[str, float, float]]:
+    if path is None:
+        return set()
+
+    with path.open(encoding="utf-8", newline="") as handle:
+        return {
+            (
+                row["nome"].strip().casefold(),
+                round(float(row["latitude"]), 6),
+                round(float(row["longitude"]), 6),
+            )
+            for row in csv.DictReader(handle)
+        }
+
+
+def exclusion_key(record: dict[str, Any]) -> tuple[str, float, float] | None:
+    try:
+        return (
+            str(record.get("nome") or record.get("name") or "").strip().casefold(),
+            round(float(record["lat"]), 6),
+            round(float(record["lng"]), 6),
+        )
+    except (KeyError, TypeError, ValueError):
+        return None
+
+
 def to_feature(record: dict[str, Any]) -> dict[str, Any]:
     properties = {key: value for key, value in record.items() if key not in {"lat", "lng"}}
     return {
@@ -130,7 +156,12 @@ def build_human_review(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return rows
 
 
-def build_v2(ceao_path: Path, current_path: Path, output_dir: Path) -> dict[str, Any]:
+def build_v2(
+    ceao_path: Path,
+    current_path: Path,
+    output_dir: Path,
+    exclusions_path: Path | None = None,
+) -> dict[str, Any]:
     ceao_raw = json.loads(ceao_path.read_text(encoding="utf-8"))
     current = json.loads(current_path.read_text(encoding="utf-8"))
     current_records = current["terreiros"]
@@ -144,10 +175,11 @@ def build_v2(ceao_path: Path, current_path: Path, output_dir: Path) -> dict[str,
         clean_ceao_record(raw, previous_ceao.get(str(raw.get("id") or raw.get("ceao_id"))))
         for raw in ceao_raw
     ]
+    exclusions = load_exclusions(exclusions_path)
     other_records = [
         prepare_other_record(record)
         for record in current_records
-        if record.get("fonte") != "ceao"
+        if record.get("fonte") != "ceao" and exclusion_key(record) not in exclusions
     ]
     records = ceao_records + other_records
     features = [to_feature(record) for record in records if valid_coordinates(record)]
@@ -183,6 +215,10 @@ def build_v2(ceao_path: Path, current_path: Path, output_dir: Path) -> dict[str,
             "amostra": len(review_rows),
             "status": "pendente",
             "criterio": "amostra de até 10 registros por declaração literal de nação",
+        },
+        "exclusoes_curadas": {
+            "arquivo": exclusions_path.name if exclusions_path else None,
+            "total": len(exclusions),
         },
     }
 
@@ -243,9 +279,14 @@ def main() -> None:
     parser.add_argument("--ceao", type=Path, default=Path("data/ceao/terreiros_ceao_complete.json"))
     parser.add_argument("--current", type=Path, default=Path("data/terreiros_all_sources.json"))
     parser.add_argument("--output", type=Path, default=Path("data"))
+    parser.add_argument(
+        "--exclusions",
+        type=Path,
+        default=Path("data/exclusoes_curadas.csv"),
+    )
     args = parser.parse_args()
 
-    result = build_v2(args.ceao, args.current, args.output)
+    result = build_v2(args.ceao, args.current, args.output, args.exclusions)
     print(json.dumps(result["audit"], ensure_ascii=False, indent=2))
 
 

@@ -27,8 +27,8 @@
     "total_unico": 2158,
     "criterio_deduplicacao": "Coordenadas <50m OU nome normalizado similar",
     "versao": "2.1",
-    "total_registros": 2102,
-    "total_georreferenciados": 1868,
+    "total_registros": 2091,
+    "total_georreferenciados": 1857,
     "fonte_primaria": "CEAO/UFBA",
     "auditoria": "auditoria_v2.json"
   },
@@ -44217,30 +44217,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Casa São Luiz Materiais De Construção",
-      "lat": -13.0312019,
-      "lng": -39.6042004,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Lomanto Jr, 417 - Centro, Amargosa - BA, 45300-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 206,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Casa Rio Paraguaçu",
       "lat": -12.4853688,
       "lng": -39.116978,
@@ -44971,30 +44947,6 @@
       "telefone": "",
       "rating": 4.9,
       "reviews": 26,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa do Campo",
-      "lat": -12.9465335,
-      "lng": -39.5229315,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Quinze de Novembro, 195 - Elísio Medrado, BA, 45305-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.4,
-      "reviews": 14,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -45777,30 +45729,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "CRAS - Itaguaçu da Bahia",
-      "lat": -11.0077648,
-      "lng": -42.3939351,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. 20 de Outro, SN - Centro, Itaguaçu da Bahia - BA, 47440-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 6,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Casa em Jacobina",
       "lat": -11.1799574,
       "lng": -40.5398775,
@@ -45907,54 +45835,6 @@
       "telefone": "",
       "rating": 4.2,
       "reviews": 111,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa Rural - Materiais de Construção e Agro veterinária",
-      "lat": -11.3474178,
-      "lng": -41.6631013,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Joaquim Augusto, 83 - Centro, João Dourado - BA, 44920-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.6,
-      "reviews": 79,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casas Freire",
-      "lat": -11.3478562,
-      "lng": -41.6610124,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "186 - Praça João Dourado, 122, João Dourado - BA, 44920-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 32,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -46521,30 +46401,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Sítio Arqueológico Pilão Arcado Velho",
-      "lat": -10.1527868,
-      "lng": -42.4267142,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Unnamed Road - Pilão Arcado, Sento Sé - BA, 47350-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 8,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Paróquia de Santo Antônio das Queimadas",
       "lat": -10.9783685,
       "lng": -39.6271764,
@@ -46857,30 +46713,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Casa São Paulo",
-      "lat": -12.9700232,
-      "lng": -39.2620765,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Monsenhor Antônio Oliveira, 4 - Centro, Santo Antônio de Jesus - BA, 44571-060, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.1,
-      "reviews": 9,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "CASA DO COURO LTDA",
       "lat": -12.9680229,
       "lng": -39.2625564,
@@ -46891,78 +46723,6 @@
       "telefone": "",
       "rating": 5,
       "reviews": 167,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa das Espumas",
-      "lat": -12.9674074,
-      "lng": -39.2632786,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Landulfo Alves, 118 - Centro, Santo Antônio de Jesus - BA, 44430-088, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4,
-      "reviews": 5,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "R. Castro Alves, 169 - Cs A",
-      "lat": -12.9688089,
-      "lng": -39.2586163,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Castro Alves, 169 - Cs A - Centro, Santo Antônio de Jesus - BA, 44430-546, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Rua Bahia, 457 Santo Antonio De Jesus",
-      "lat": -12.9772291,
-      "lng": -39.2614421,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Bahia, 467 - Santa Rita, Santo Antônio de Jesus - BA, 44430-400, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.9,
-      "reviews": 12,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -47635,30 +47395,6 @@
       "telefone": "",
       "rating": 5,
       "reviews": 3,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Remanso BA",
-      "lat": -9.61961,
-      "lng": -42.0841857,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Remanso, BA, 47200-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.6,
-      "reviews": 82,
       "geo_status": "in_bahia",
       "fontes": [
         {
