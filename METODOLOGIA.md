@@ -6,7 +6,7 @@
 **Data da coleta:** 25 de julho de 2026  
 **Repositório:** [github.com/LABHDUFBA/terreiro-map](https://github.com/LABHDUFBA/terreiro-map)  
 **Mapa interativo:** [labhdufba.github.io/terreiro-map](https://labhdufba.github.io/terreiro-map/)  
-**Responsável:** Leonardo Fonseca (leofn@ufba.br)
+**Responsável:** Leonardo Fernandes Nascimento (leofn@ufba.br)
 
 ---
 
@@ -281,7 +281,7 @@ Esta é uma decisão de projeto, não de design. Condiciona o layout do mapa e s
 
 ## 10. Como Citar
 
-> FONSECA, Leonardo N. **Mapeamento de Terreiros de Candomblé da Bahia.** v1.0. LABHD/UFBA, 2026. Disponível em: https://labhdufba.github.io/terreiro-map/. Acesso em: [data].
+> NASCIMENTO, Leonardo Fernandes. **Mapeamento de Terreiros de Candomblé da Bahia.** v1.0. LABHD/UFBA, 2026. Disponível em: https://labhdufba.github.io/terreiro-map/. Acesso em: [data].
 
 ---
 
