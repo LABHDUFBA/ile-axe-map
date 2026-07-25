@@ -83,6 +83,7 @@
       transition: border-color .15s, color .15s;
     }
     .topbar__btn:hover { border-color: var(--accent); color: var(--accent); }
+    .topbar__btn.info-btn { width: auto; padding: 0 12px; }
 
     /* === Left rail === */
     .rail {
@@ -136,6 +137,9 @@
     .filter-opt__label { flex: 1; }
     .filter-opt__count { font-size: 11px; color: var(--text-faint); font-weight: 400; }
     .filter-opt--all { font-weight: 600; color: var(--accent); border-bottom: 1px solid var(--border); margin-bottom: 2px; padding-bottom: 6px; }
+    .filter-opt.is-disabled { cursor: default; color: var(--text-muted); }
+    .filter-opt.is-disabled:hover { background: transparent; }
+    .filter-opt.is-disabled input { cursor: not-allowed; }
 
     /* === List === */
     .rail__viewport-label {
@@ -261,7 +265,7 @@
     <div class="topbar__count" id="count-badge" aria-live="polite">—</div>
     <div class="topbar__spacer"></div>
     <button class="topbar__btn" id="theme-btn" type="button" aria-label="Alternar tema" title="Tema">◐</button>
-    <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Informações">ⓘ</button>
+    <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Sobre o projeto">Sobre</button>
   </header>
 
   <aside class="rail" id="rail" aria-label="Lista de terreiros">
@@ -299,7 +303,7 @@
       <h3>Fontes</h3>
       <p>
         <a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a> — 682 terreiros<br>
-        OSM + Google Places — 743 lugares<br>
+        OSM + Google Places — 713 lugares<br>
         SEFAZ/Salvador (SEMUR 2020) — 234 registros
       </p>
       <h3>Metodologia</h3>
@@ -475,6 +479,16 @@
         opt.el.querySelector('.filter-opt__label').innerHTML += ' <span class="filter-opt__count">' + count + '</span>';
         fonteBody.appendChild(opt.el);
       });
+
+      // Fontes presentes no dataset completo, mas ainda sem coordenadas no mapa.
+      if (!features.some(feat => getFonteLabel(feat.properties) === 'SEFAZ/Salvador')) {
+        const opt = makeCheckbox('fonte-sefaz-indisponivel', 'SEFAZ/Salvador (SEMUR 2020)', fonteColors['SEFAZ/Salvador'], false, function() {});
+        opt.checkbox.disabled = true;
+        opt.el.classList.add('is-disabled');
+        opt.el.title = '234 registros no dataset completo, ainda sem coordenadas para exibição no mapa';
+        opt.el.querySelector('.filter-opt__label').innerHTML += ' <span class="filter-opt__count">234 · sem coordenadas</span>';
+        fonteBody.appendChild(opt.el);
+      }
 
       fonteGroup.querySelector('.filter-group__title').addEventListener('click', () => fonteGroup.classList.toggle('collapsed'));
       holder.appendChild(fonteGroup);
