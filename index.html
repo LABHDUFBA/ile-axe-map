@@ -555,14 +555,12 @@
         html += '<img class="detail__photo" src="' + escapeHtml(src) + '" alt="' + escapeHtml(getName(p)) + '" loading="lazy" onerror="this.style.display=\'none\'">';
       }
       var seen = {};
-      [['lideranca','Liderança'],['nacao','Nação'],['regente','Orixá Regente'],['ano_fundacao','Fundação'],['start_date','Fundação'],['endereco','Endereço'],['addr:street','Endereço'],['bairro','Bairro'],['addr:suburb','Bairro'],['addr:city','Cidade'],['cep','CEP'],['addr:postcode','CEP'],['telefone','Telefone'],['phone','Telefone'],['rating','Avaliação'],['reviews','Reviews']].forEach(function(pair) {
+      [['lideranca','Liderança'],['nacao','Nação'],['regente','Orixá Regente'],['ano_fundacao','Fundação'],['start_date','Fundação'],['endereco','Endereço'],['addr:street','Endereço'],['bairro','Bairro'],['addr:suburb','Bairro'],['addr:city','Cidade'],['cep','CEP'],['addr:postcode','CEP'],['telefone','Telefone'],['phone','Telefone']].forEach(function(pair) {
         var key = pair[0], label = pair[1];
         if (!p[key]) return;
         var val = String(p[key]);
         if (/^n[aã]o (tem|informado)/i.test(val)) return;
         if (seen[label]) return; seen[label] = true;
-        if (key === 'rating') val += '★';
-        if (key === 'reviews') val += ' avaliações';
         html += '<div class="info-row"><div class="info-row__label">' + label + '</div><div class="info-row__value">' + escapeHtml(val) + '</div></div>';
       });
       html += '<div class="info-row"><div class="info-row__label">Coordenadas</div><div class="info-row__value">' + lat.toFixed(6) + ', ' + lng.toFixed(6) + '</div></div>';
