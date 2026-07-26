@@ -154,6 +154,11 @@ class SiteIntegrationTests(unittest.TestCase):
         self.assertNotIn("transition: transform .15s", html)
         self.assertNotIn("keto|ketu|nago|alaketo|alaketu", html)
 
+    def test_light_theme_uses_liberty_basemap(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn("https://tiles.openfreemap.org/styles/liberty", html)
+        self.assertNotIn("https://tiles.openfreemap.org/styles/positron", html)
+
     def test_about_panel_reports_v2_reconciliation(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("v2.1", html)
