@@ -154,6 +154,16 @@ class SiteIntegrationTests(unittest.TestCase):
         self.assertNotIn("transition: transform .15s", html)
         self.assertNotIn("keto|ketu|nago|alaketo|alaketu", html)
 
+    def test_markers_have_mobile_touch_target_without_enlarging_visual_dot(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn(".marker { width: 44px; height: 44px;", html)
+        self.assertIn("touch-action: manipulation", html)
+        self.assertIn(".marker__dot { width: 12px; height: 12px;", html)
+        self.assertIn(".marker--unknown .marker__dot", html)
+        self.assertIn("el.appendChild(dot)", html)
+        self.assertIn("dot.style.background = nationColor", html)
+        self.assertIn("item.dot.style.background = nationColor", html)
+
     def test_map_opens_at_bahia_extent_without_second_camera_animation(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("const BAHIA_BOUNDS", html)
