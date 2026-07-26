@@ -105,9 +105,9 @@ class BuildV2Tests(unittest.TestCase):
                 ROOT / "data/exclusoes_curadas.csv",
             )
 
-            self.assertEqual(result["source_counts"]["google"], 679)
-            self.assertEqual(result["total_records"], 2088)
-            self.assertEqual(result["mappable_records"], 1854)
+            self.assertEqual(result["source_counts"]["google"], 550)
+            self.assertEqual(result["total_records"], 1959)
+            self.assertEqual(result["mappable_records"], 1725)
 
             geojson = json.loads((Path(tmp) / "terreiros_v2.geojson").read_text())
             names = {feature["properties"].get("nome") for feature in geojson["features"]}

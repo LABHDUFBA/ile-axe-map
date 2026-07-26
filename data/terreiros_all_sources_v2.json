@@ -27,8 +27,8 @@
     "total_unico": 2158,
     "criterio_deduplicacao": "Coordenadas <50m OU nome normalizado similar",
     "versao": "2.1",
-    "total_registros": 2088,
-    "total_georreferenciados": 1854,
+    "total_registros": 1959,
+    "total_georreferenciados": 1725,
     "fonte_primaria": "CEAO/UFBA",
     "auditoria": "auditoria_v2.json"
   },
@@ -39033,30 +39033,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Axé Beach Itaparica Praia Resort",
-      "lat": -12.9001969,
-      "lng": -38.6730655,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av Beira Mar - Porto Santos, Itaparica - BA, 44460-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Ilê Axé Babá Omin Ifan",
       "lat": -12.9006192,
       "lng": -38.6752376,
@@ -39403,78 +39379,6 @@
       "telefone": "",
       "rating": 4.9,
       "reviews": 16,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Cabana Axé Mucuri",
-      "lat": -18.0720445,
-      "lng": -39.5399217,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Corumbá, 898 - Mucuri, BA, 45930-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.6,
-      "reviews": 48,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Barraca Axé-Uai",
-      "lat": -17.9049221,
-      "lng": -39.3664032,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "576 - R. Bahia, 484 - Nova Viçosa, BA, 45920-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.3,
-      "reviews": 966,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Ilha do cascalho",
-      "lat": -17.8872354,
-      "lng": -39.3576592,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Nova Viçosa, BA, 45920-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -40627,54 +40531,6 @@
       "telefone": "",
       "rating": 4.6,
       "reviews": 11,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Santuário do Bom Jesus da Lapa",
-      "lat": -13.2588469,
-      "lng": -43.4222905,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Praça da Bandeira, 106 - • Bom Jesus da Lapa, Bom Jesus da Lapa - BA, 47600-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.9,
-      "reviews": 2221,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Bom jesus da Lapa Ba",
-      "lat": -13.2458899,
-      "lng": -43.3967639,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. São Francisco - Bom Jesus da Lapa, BA, 47600-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 3,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -42201,30 +42057,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Templo Atuaro do Amanhecer - Luis Eduardo Magalhães BA",
-      "lat": -12.0674347,
-      "lng": -45.7729673,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Jatobá, 2593 - Jardim Alvorada, Luís Eduardo Magalhães - BA, 47850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 3.9,
-      "reviews": 15,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Terreiro Bandalekongo",
       "lat": -12.7712991,
       "lng": -38.9162386,
@@ -42801,30 +42633,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Casa das Ervas Santa Bárbara",
-      "lat": -10.841247,
-      "lng": -38.5395905,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Silvia Brito, Ribeira do Pombal - BA, 48400-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Terreiro Ibá Oyá Indenbúrêjí",
       "lat": -12.8969885,
       "lng": -38.3753585,
@@ -43051,30 +42859,6 @@
       "telefone": "",
       "rating": 5,
       "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Todos os terreiro de candomblé",
-      "lat": -11.954041,
-      "lng": -38.9744069,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Santa Bárbara - State of Bahia, 44150-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -43713,30 +43497,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "ARTIGOS RELIGIOSOS ALTO DO OGUM",
-      "lat": -14.9737049,
-      "lng": -41.4054709,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Joaquim Ferraz de Araújo, 39 - Tremedal, BA, 45170-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "CUUC - Casa de Umbanda União e Caridade",
       "lat": -12.9263054,
       "lng": -38.5075834,
@@ -44025,30 +43785,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Casa das Pembas São Cosme e Damião",
-      "lat": -14.8502923,
-      "lng": -40.8423822,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Humberto Flôres, 28 - Centro, Vitória da Conquista - BA, 45000-560, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 4,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Casa de xango ( pai Adriano)",
       "lat": -14.8757232,
       "lng": -40.8795199,
@@ -44241,30 +43977,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Comunidade Quilombola Santo Antônio",
-      "lat": -12.3837542,
-      "lng": -39.1331336,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "BR-116, 205 - Antônio Cardoso, BA, 44180-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "CASA DE CARIDADE MARIA CONGA",
       "lat": -12.1269792,
       "lng": -45.014785,
@@ -44275,30 +43987,6 @@
       "telefone": "",
       "rating": 5,
       "reviews": 5,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Centro Histórico de Belmonte",
-      "lat": -15.8605559,
-      "lng": -38.88142500000001,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Rio Mar, 178 - Centro, Belmonte - BA, 45800-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4,
-      "reviews": 12,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -44361,78 +44049,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Casa Cosme e Damião - Materiais de Umbanda e Artesanato em geral",
-      "lat": -14.2095102,
-      "lng": -41.6692055,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Avenida Doutor Antônio - Av. Antônio Mourão Guimarães, 389 - Centro, Brumado - BA, 46100-097, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa Do Lavrador",
-      "lat": -14.2032455,
-      "lng": -41.6625088,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Cel. Santos, 76 - Cidade das Esmeraldas, Brumado - BA, 46100-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa do Vaqueiro",
-      "lat": -14.2005966,
-      "lng": -41.681736,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Horácio José dos Santos - Olhos D'agua, Brumado - BA, 46115-202, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Floresta Sagrada Do Castelo Alto De Xangô",
       "lat": -14.1930519,
       "lng": -41.6672993,
@@ -44457,126 +44073,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Casa do Pão",
-      "lat": -14.2095317,
-      "lng": -41.6771667,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Felipe dos Santos, 409 - Flores, Brumado - BA, 46100-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa de Saúde Santo Antônio",
-      "lat": -15.4167897,
-      "lng": -39.4949434,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Santa Luzia, 56 - Camacan, BA, 45880-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Loja Santo André - CAMAMU",
-      "lat": -13.9465488,
-      "lng": -39.1021288,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Rua Prof - Rua Clotilde Salgado Zenha, s/n - Camamu, BA, 45445-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.1,
-      "reviews": 15,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa Santos - Materiais de Construção",
-      "lat": -12.7201172,
-      "lng": -38.3177372,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. dos Horizontes - Verdes Horizontes, Camaçari - BA, 42809-645, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 4,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Paróquia Catedral São Thomaz de Cantuária",
-      "lat": -12.7007198,
-      "lng": -38.3244555,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Praça Desembargador Montenegro, 9 - Centro, Camaçari - BA, 42800-020, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 202,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Casa da Sereia Arembepe",
       "lat": -12.7730165,
       "lng": -38.17660250000001,
@@ -44587,270 +44083,6 @@
       "telefone": "",
       "rating": 4.3,
       "reviews": 4,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "R. Alto da Capelinha, 37 - Cs",
-      "lat": -12.6723205,
-      "lng": -38.5365606,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Alto da Capelinha, 37 - Cs - Santo Antonio, Candeias - BA, 43820-050, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "SB dos Santos Barbosa",
-      "lat": -12.6678461,
-      "lng": -38.5411569,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Guanabara, 77 - Pitanga, Candeias - BA, 43810-310, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 3.5,
-      "reviews": 6,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Sesi Candeias",
-      "lat": -12.6474046,
-      "lng": -38.5353934,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. da Prefeitura - Santa Terezinha, Candeias - BA, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 40,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa de Castro Alves",
-      "lat": -12.969721,
-      "lng": -38.5082396,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. do Passo, 52 - Centro Histórico, Salvador - BA, 40301-408, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 102,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa de ervas Santo Antônio",
-      "lat": -12.2547467,
-      "lng": -38.970001,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "galeria dos artesão - R. Dr. Olímpio Vital, 358 - Centro, Feira de Santana - BA, 44002-625, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Materiais de Construção Santo Antônio",
-      "lat": -12.3317529,
-      "lng": -38.76802,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Getúlio Vargas, 29, Conceição do Jacuípe - BA, 44245-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 3.6,
-      "reviews": 21,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa Rosada Eventos",
-      "lat": -12.3299217,
-      "lng": -38.7645912,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Rua XV de novembro, 04 - Centro, Conceição do Jacuípe - BA, 44245-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.2,
-      "reviews": 46,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Duarte drinks",
-      "lat": -12.3329161,
-      "lng": -38.7747683,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Diocleciano dos Santos, Conceição do Jacuípe - BA, 44230-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 1,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Paróquia Santo Antônio",
-      "lat": -14.8959561,
-      "lng": -41.9686894,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "BA-148, 362 - Condeúba, BA, 46200-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.9,
-      "reviews": 49,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa da renata santos de jesus",
-      "lat": -12.6664828,
-      "lng": -39.099988,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Rui Barbosa - Bairro Primavera, Cruz das Almas - BA, 44380-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa de Raçao Santo Antonio",
-      "lat": -12.6177453,
-      "lng": -38.3004035,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. da Suíça, 83-131 - Conjunto Hab., Dias d'Ávila - BA, 42850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.4,
-      "reviews": 7,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -44913,54 +44145,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "CATEDRAL - UNIVERSAL DIAS D’ÁVILA",
-      "lat": -12.6120154,
-      "lng": -38.2988894,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Brasil, 539 - Parque de Dias Davila, Dias d'Ávila - BA, 42850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 186,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "The Church of Jesus Christ of Latter-day Saints",
-      "lat": -12.6100532,
-      "lng": -38.309042,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Raul Seixas, 864 - Parque Capuame, Dias d'Ávila - BA, 42850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.9,
-      "reviews": 26,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Casa do Preto Velho",
       "lat": -16.3731031,
       "lng": -39.5870892,
@@ -44971,126 +44155,6 @@
       "telefone": "",
       "rating": 4.3,
       "reviews": 25,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa do Caçador",
-      "lat": -16.3726664,
-      "lng": -39.5841824,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Santos Dumont, 634 - Centro, Eunápolis - BA, 45820-011, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.4,
-      "reviews": 73,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa De Ervas São Pedro",
-      "lat": -12.254921,
-      "lng": -38.9692729,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Dr. Olímpio Vital, 192 - Centro, Feira de Santana - BA, 44002-740, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 10,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Vidente em Feira de Santana - Mãe de Santo -Pai de Santo-Taróloga-Cartomante em Feira de Santana BA",
-      "lat": -12.2492024,
-      "lng": -38.9645879,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Santos Dumont, 187 - Centro, Feira de Santana - BA, 44002-384, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 3,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa de ervas 7 linhas",
-      "lat": -12.2568241,
-      "lng": -38.9682408,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. 24 de Maio, 29 - Centro, Feira de Santana - BA, 44002-136, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 14,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa das Velas Oxalá Casa das Ervas Oxalá",
-      "lat": -12.2527219,
-      "lng": -38.9693773,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Maceió, 48 - Centro, Feira de Santana - BA, 44002-600, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 9,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -45153,102 +44217,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Lojão Central",
-      "lat": -14.2281098,
-      "lng": -42.7810487,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Tv. Getúlio Vargas, 330 - Guanambi, BA, 46430-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.4,
-      "reviews": 1185,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa da Criança - Guanambi",
-      "lat": -14.2237821,
-      "lng": -42.7734696,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Otávio Mangabeira, 607 - Guanambi, BA, 46430-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 3,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Ateliê das festas",
-      "lat": -14.2181753,
-      "lng": -42.7811576,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Santos Dumont, 204 - Centro, Guanambi - BA, 46430-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa do sans",
-      "lat": -16.5807469,
-      "lng": -39.7810366,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Jaíro Góes - Guaratinga, BA, 45840-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Casa Iansã",
       "lat": -14.791751,
       "lng": -39.0474064,
@@ -45259,30 +44227,6 @@
       "telefone": "",
       "rating": 4.5,
       "reviews": 22,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "House of Artists",
-      "lat": -14.7914687,
-      "lng": -39.0621832,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Gov. Roberto Santos, 1676 - Esperança, Ilhéus - BA, 45658-610, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4,
-      "reviews": 6,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -45321,78 +44265,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Casa das Pembas Cosme e Damião",
-      "lat": -14.1342248,
-      "lng": -39.7387068,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Jaime Tanajura, 193 - centro, Ipiaú - BA, 45570-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 3,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa das baterias Ipiaú",
-      "lat": -14.132536,
-      "lng": -39.7342205,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Getulio Vargas, 706 - Bairro Centro, Ipiaú - BA, 45570-780, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.9,
-      "reviews": 27,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Mundo Do Real",
-      "lat": -14.1408712,
-      "lng": -39.7317005,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Moisés Santos, 3 - Ipiau, Ipiaú - BA, 45570-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 28,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Casa São Francisco",
       "lat": -12.1582705,
       "lng": -39.7388577,
@@ -45403,78 +44275,6 @@
       "telefone": "",
       "rating": 4.4,
       "reviews": 88,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa de ervas são Jorge",
-      "lat": -11.3036581,
-      "lng": -41.8564766,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Rua Aristides Moitinho - Centro, Irecê - BA, 44900-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 4,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa Rústica Irecê - Móveis e decoração de madeira de demolição",
-      "lat": -11.2951581,
-      "lng": -41.8520476,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Santos Lopes, 1006 - Centro, Irecê - BA, 44860-169, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.3,
-      "reviews": 6,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Paróquia São Domingos de Gusmão - Centro",
-      "lat": -11.3036922,
-      "lng": -41.8570471,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Irecê - State of Bahia, 44900-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 196,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -45633,54 +44433,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Casa das Quentinhas",
-      "lat": -14.7868572,
-      "lng": -39.2834285,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Catarina Alves, 133 - Santo Antônio, Itabuna - BA, 45602-180, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Espetinho do Santo",
-      "lat": -14.8084813,
-      "lng": -39.27812979999999,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Manoel Souza Chaves - Banco Raso, Itabuna - BA, 45600-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Nossa Casa Itacaré",
       "lat": -14.2800765,
       "lng": -38.9938368,
@@ -45691,150 +44443,6 @@
       "telefone": "",
       "rating": 4.8,
       "reviews": 26,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa da Susan",
-      "lat": -14.2760851,
-      "lng": -38.9969388,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Antonio Athanásio dos Santos, 39 - Centro, Itacaré - BA, 45530-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 15,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa em Jacobina",
-      "lat": -11.1799574,
-      "lng": -40.5398775,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Jacobina II, Jacobina - State of Bahia, 44700-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Centro Cultural de Jacobina",
-      "lat": -11.1823375,
-      "lng": -40.5150928,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Melchior Dias, 21 - Centro, Jacobina - BA, 44700-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.2,
-      "reviews": 185,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "CAVALCANTI Madeira e Construção",
-      "lat": -11.1799103,
-      "lng": -40.5208823,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Orlando Oliveira Pires - Caeira, Jacobina - BA, 44700-672, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.4,
-      "reviews": 147,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa de Saúde Maria José Souza Santos",
-      "lat": -13.5295094,
-      "lng": -39.9717525,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Everaldo de Souza Santos, 137 - Muritiba, Jaguaquara - BA, 45345-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.2,
-      "reviews": 11,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Posto Jitauna",
-      "lat": -14.017115,
-      "lng": -39.8859599,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "BR-330, 5, Jitaúna - BA, 45225-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.2,
-      "reviews": 111,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -45883,54 +44491,6 @@
       "telefone": "",
       "rating": 4.2,
       "reviews": 6,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Espaço de Eventos Monte Santo",
-      "lat": -9.433013599999999,
-      "lng": -40.5144943,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Sem Denominacao, 12 - Argemiro, Juazeiro - BA, 48901-050, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 46,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Central de Adubos - Matriz Juazeiro",
-      "lat": -9.446664,
-      "lng": -40.48827989999999,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Rodovia Lomanto Junior, 399 - Itaberaba, Juazeiro - BA, 48907-090, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.6,
-      "reviews": 250,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -46041,150 +44601,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Casa da Lavoura LEM - Irrigação, Motores e Ferramentas",
-      "lat": -12.0883799,
-      "lng": -45.7973025,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Paraíba, 270 - Centro, Luís Eduardo Magalhães - BA, 47850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 309,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Semprelar Centro - Luís Eduardo Magalhães",
-      "lat": -12.0882824,
-      "lng": -45.79636439999999,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "rua Pernambuco quadra 25, lote 9 centro - Lot. Mimoso Doeste I, Luís Eduardo Magalhães - BA, 47850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.4,
-      "reviews": 625,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Hiper Santo Antonio",
-      "lat": -12.0813159,
-      "lng": -45.7873878,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Juscelino Kubitscheck, 3073 - Jardim Imperial, Luís Eduardo Magalhães - BA, 47850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.4,
-      "reviews": 1532,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Super Santo Antonio Centro",
-      "lat": -12.0904011,
-      "lng": -45.7954158,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Barreiras - Lot. Mimoso Doeste I, Luís Eduardo Magalhães - BA, 47850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 757,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Centro Comunitário Dom Ricardo - Luís Eduardo Magalhães - Com. Sta. Catarina",
-      "lat": -12.099567,
-      "lng": -45.7956517,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Itacaré, 543 - Lot. Florais Lea, Luís Eduardo Magalhães - BA, 47850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.3,
-      "reviews": 9,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Mansão Drinks",
-      "lat": -12.745508,
-      "lng": -38.6174358,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Treze de Junho, 196 - Centro, Me. de Deus - BA, 42600-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4,
-      "reviews": 90,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Casa De Ervas Pai Joaquim",
       "lat": -10.4394982,
       "lng": -39.3317252,
@@ -46195,78 +44611,6 @@
       "telefone": "",
       "rating": 4.7,
       "reviews": 3,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Festejos De Todos Os Santos",
-      "lat": -10.4401101,
-      "lng": -39.32662440000001,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Dep. Luís Eduardo Magalhães, Monte Santo - BA, 48800-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 1,
-      "reviews": 2,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa Das Ervas Ogum",
-      "lat": -11.5488765,
-      "lng": -41.1606952,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Caetano Dutra, 20 - Morro do Chapéu, BA, 44850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.1,
-      "reviews": 39,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Cachoeira Ferro Doido",
-      "lat": -11.6252381,
-      "lng": -40.9997256,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Ventura, Morro do Chapéu - State of Bahia, 44850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 973,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -46329,78 +44673,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Lojas B Móveis - Roupeiros, Armários, Cozinhas, Colchões, Sofás, Camas",
-      "lat": -10.0151773,
-      "lng": -37.8945924,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Tv. Antônio Pessoa Pinto, 08 - Centro, Pedro Alexandre - BA, 48580-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 85,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Paróquia de Santo Antônio das Queimadas",
-      "lat": -10.9783685,
-      "lng": -39.6271764,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Padre Edmilson Gomes Sobrinho - Queimadas, BA, 48860-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.6,
-      "reviews": 25,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa do irmão Santos e Val",
-      "lat": -9.609136,
-      "lng": -42.07562069999999,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Ocimar Coelho de Moura - Remanso, BA, 47200-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Casa São Cristovão",
       "lat": -11.8074938,
       "lng": -39.3834897,
@@ -46411,366 +44683,6 @@
       "telefone": "",
       "rating": 4.9,
       "reviews": 10,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa do acarajé didy e Shell",
-      "lat": -11.8090318,
-      "lng": -39.3823923,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Conselheiro Eliel Martins - Riachão do Jacuípe, BA, 44640-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 2,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa da Cidadania",
-      "lat": -10.8364373,
-      "lng": -38.54306260000001,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Oliveira Brito, Ribeira do Pombal - BA, 48400-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 5,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casas Rio de Contas",
-      "lat": -13.5840778,
-      "lng": -41.8103072,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Vicente Correia Neto, 324 - Rio de Contas, BA, 46170-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 5,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa Rio de Contas - Renovada e Ampliada - Three-Bedroom Home",
-      "lat": -13.5787602,
-      "lng": -41.8094101,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Rio de Contas, State of Bahia, 46170-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa das Histórias de Salvador",
-      "lat": -12.9728553,
-      "lng": -38.5135077,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. da Bélgica, 2 - Comércio, Salvador - BA, 40010-030, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 261,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa Cultural Reggae",
-      "lat": -12.970239,
-      "lng": -38.508476,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. do Passo, 17 - Centro Histórico, Salvador - BA, 40301-408, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 68,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Loja Santa Bárbara",
-      "lat": -12.9510558,
-      "lng": -38.5024832,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Loja - Santa Barbara, Salvador - BA, 40460-650, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.9,
-      "reviews": 22,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa de Câmara e Cadeia",
-      "lat": -16.2792586,
-      "lng": -39.0243914,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Ladeira C. Alta, 25, Santa Cruz Cabrália - BA, 45807-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.2,
-      "reviews": 5,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Núcleo Histórico Ferroviário de Santa Inês-BA",
-      "lat": -13.2986641,
-      "lng": -39.8220689,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Ave.Francisco Leal Sales, 26, Santa Inês - BA, 45320-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 4,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa do Gesso- Santo Antônio de Jesus",
-      "lat": -12.9672564,
-      "lng": -39.25821579999999,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Luiz Viana, 366 - Centro, Santo Antônio de Jesus - BA, 44571-019, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 9,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "CASA DO COURO LTDA",
-      "lat": -12.9680229,
-      "lng": -39.2625564,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Landulfo Alves, 4 - Centro, Santo Antônio de Jesus - BA, 44571-380, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 167,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa de Ervas Xangô Seabra",
-      "lat": -12.4197133,
-      "lng": -41.7682731,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Barão do Rio Branco, 88 - Centro, Seabra - BA, 46900-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 1,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa dos cabos SBA - Materiais elétricos",
-      "lat": -12.4284164,
-      "lng": -41.7698302,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Vinte e Dois de Abril, 96 - Seabra, BA, 46900-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 50,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Home of the Giants",
-      "lat": -12.8218289,
-      "lng": -38.3826798,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Elmo Serejo de Farias, 110 - Nucleo Hab. Rubens Costa Cia I, Simões Filho - BA, 43700-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 268,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Sítio do Quinto",
-      "lat": -10.3651688,
-      "lng": -38.2033808,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Sítio do Quinto, BA, 48565-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -46819,78 +44731,6 @@
       "telefone": "",
       "rating": 4.4,
       "reviews": 22,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Umburana de Dionísio",
-      "lat": -11.8979126,
-      "lng": -41.60189,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Canudos, Mulungu do Morro - BA, 44880-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 3,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Lojas Santo Antônio",
-      "lat": -13.3724669,
-      "lng": -39.0733976,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Gov. Gonçalves - Valença, BA, 45400-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4,
-      "reviews": 39,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Casa das Noivas",
-      "lat": -13.3746541,
-      "lng": -39.0639093,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Rua Mestre Osvaldo dos Santos, 87 - Valença, BA, 45400-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 28,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -46977,30 +44817,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Casa da Robótica",
-      "lat": -14.852299,
-      "lng": -40.8228229,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Rua Antônia Fernandes Santos Silva 281 - Brasil, Vitória da Conquista - BA, 45005-386, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.9,
-      "reviews": 469,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Casa Maria Mãe Dos Pobres",
       "lat": -14.84952,
       "lng": -40.8360304,
@@ -47011,54 +44827,6 @@
       "telefone": "",
       "rating": 4.8,
       "reviews": 4,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Sítio Santana",
-      "lat": -11.6144063,
-      "lng": -40.1312921,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Caraíbas, 618 - Alto da colina, Várzea da Roça - BA, 44635-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 25,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Prefeitura Municipal de Várzea da Roça",
-      "lat": -11.6079576,
-      "lng": -40.1380868,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Pça. da Bandeira, 125, Várzea da Roça - BA, 44635-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 3.8,
-      "reviews": 54,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -47107,30 +44875,6 @@
       "telefone": "",
       "rating": 5,
       "reviews": 7,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Gruta do Bom Jesus da Lapa",
-      "lat": -13.2593491,
-      "lng": -43.4217543,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Bom Jesus da Lapa, BA, 47600-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -47203,30 +44947,6 @@
       "telefone": "",
       "rating": 5,
       "reviews": 4,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Centro Cultural Tribo Bahia Capoeira - Itacaré",
-      "lat": -14.2791533,
-      "lng": -38.9912864,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Procurar o Mestre Bico Duro - Tv. São Miguel, 60 - Itacaré, BA, 45530-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 28,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -47361,54 +45081,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Vale do Amanhecer - Templo Rivan",
-      "lat": -10.8081725,
-      "lng": -38.5362215,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Unnamed Road, Ribeira do Pombal - BA, 48400-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 4,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Centro Espirita Alberto Ramos",
-      "lat": -13.5863992,
-      "lng": -41.81256860000001,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Francisco Santana, 115 - Rio de Contas, BA, 46170-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 6,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Centro Umbandista 4 Luas",
       "lat": -12.9048435,
       "lng": -38.4475904,
@@ -47433,30 +45105,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Associação de Terreiros da Bahia - Egbé axé",
-      "lat": -12.9758209,
-      "lng": -38.5134054,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Edificio Sul America - Tv. da Ajuda, 2 - Sl 608 - Centro Historico, Salvador - BA, 40026-038, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Centro De Quimbanda Mãe Ana De Oxum",
       "lat": -12.2463662,
       "lng": -38.9696995,
@@ -47467,30 +45115,6 @@
       "telefone": "",
       "rating": null,
       "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "CENTRO ESPIRITA DISCIPULOS DE JESUS",
-      "lat": -10.4598879,
-      "lng": -40.1891002,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. João Rodrigues, 67 - Centro, Sr. do Bonfim - BA, 48970-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -47563,30 +45187,6 @@
       "telefone": "",
       "rating": 5,
       "reviews": 50,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Senzala do Barro Preto - Cultural Association Ile Aiye",
-      "lat": -12.9443801,
-      "lng": -38.4869443,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Direta do Curuzu, 228 - Curuzu, Salvador - BA, 40366-110, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.6,
-      "reviews": 644,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -49281,30 +46881,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "METODO SUPERA LUIS EDUARDO MAGALHÃES",
-      "lat": -12.0843728,
-      "lng": -45.7916329,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Edifício Com e Residencial Ilha Bella - R. Castro Alves, 2126 - Sl 01 - Centro, Luís Eduardo Magalhães - BA, 47850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 10,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Ilê ase oxalá",
       "lat": -15.2489267,
       "lng": -40.2230155,
@@ -49737,54 +47313,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Itaparica Island",
-      "lat": -13.0152747,
-      "lng": -38.7053934,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Itaparica Island, State of Bahia, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 2964,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Rodoviária de Valença BA",
-      "lat": -13.3757726,
-      "lng": -39.0766332,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "166, - R. Abel Águiar Queirós, 78 - Valença, BA, 45400-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 3.4,
-      "reviews": 423,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Associação Ilê Axé Ijexá Ejó Odu",
       "lat": -14.7755368,
       "lng": -39.2755489,
@@ -49809,54 +47337,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Ilha do pescador",
-      "lat": -14.7715696,
-      "lng": -39.0155464,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "6XHM+9Q, Ilhéus - State of Bahia, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 4,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Açai Expresso da Ilha",
-      "lat": -14.8090128,
-      "lng": -39.02536910000001,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Cassimiro Costa, 78 - Pontal, Ilhéus - BA, 45654-530, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 3,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Ilê Axé Dandalunda",
       "lat": -14.7909705,
       "lng": -39.056938,
@@ -49867,30 +47347,6 @@
       "telefone": "",
       "rating": 5,
       "reviews": 3,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Eco Água Ilhéus",
-      "lat": -14.7406265,
-      "lng": -39.0857032,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Antigo Pesque-pague - Rodovia Ilhéus-Uruçuca, Km 4,5 - Iguape, Ilhéus - BA, 45658-335, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.3,
-      "reviews": 118,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -49963,78 +47419,6 @@
       "telefone": "",
       "rating": null,
       "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Ilha do fogo",
-      "lat": -9.406230299999999,
-      "lng": -40.5055672,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "BR-407 - Atrás da Banca, Juazeiro - BA, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 18,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Condomínio Cidade do Ouro",
-      "lat": -11.1895128,
-      "lng": -40.5419477,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Retiro, Jacobina - BA, 44700-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4,
-      "reviews": 59,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "IlhaBela",
-      "lat": -12.7021344,
-      "lng": -38.3245796,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Francisco Drumond - Camaçari, BA, 42800-063, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 7,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -50193,30 +47577,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "PALÁCIO DE OYA",
-      "lat": -12.9511192,
-      "lng": -38.5017726,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "FEIRA DE SÃO JOAQUIM - RUA PRINCIPAL, QD 1 - LOJA 1 - Comércio, Salvador - BA, 40460-650, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 33,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Terreiro Mokambo",
       "lat": -12.9283679,
       "lng": -38.405596,
@@ -50313,30 +47673,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Núcleo de Estudo Afro-Baianos Regionais - Kàwé",
-      "lat": -14.7966447,
-      "lng": -39.1722889,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Edifício José Haroldo Castro Vieira - Salobrinho, Ilhéus - BA, 45662-900, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Frutos do Candomblé",
       "lat": -14.8364708,
       "lng": -39.0289104,
@@ -50409,30 +47745,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Coletivo de Entidades Negras",
-      "lat": -12.9744771,
-      "lng": -38.5080554,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. das Laranjeiras, 25 - Centro Histórico, Salvador - BA, 40026-230, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 28,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Tenda Umbandista do Saber",
       "lat": -12.9610904,
       "lng": -38.50117669999999,
@@ -50443,30 +47755,6 @@
       "telefone": "",
       "rating": 5,
       "reviews": 3,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Retiro de Itaparica",
-      "lat": -12.9039873,
-      "lng": -38.6447644,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Beira Mar, 3473 - São João de Manguinhos, Itaparica - BA, 44460-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 13,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -50505,54 +47793,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "TEMPLO OGANDO DO AMANHECER",
-      "lat": -14.7869356,
-      "lng": -39.2648878,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Europa Unida, 96 - São Judas Tadeu, Itabuna - BA, 45605-280, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 7,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Vale do Amanhecer - Templo Ogamor",
-      "lat": -14.8435939,
-      "lng": -40.87975,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Rafael Spínola, 32 - Zabelê, Vitória da Conquista - BA, 45078-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 22,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Federação cultural de umbanda ogum e xangô",
       "lat": -14.191043,
       "lng": -41.6508974,
@@ -50563,30 +47803,6 @@
       "telefone": "",
       "rating": null,
       "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Church Bom Jesus dos Navegantes",
-      "lat": -13.2534283,
-      "lng": -43.42407550000001,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Nova Brasília, Bom Jesus da Lapa - State of Bahia, 47600-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 114,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -50673,54 +47889,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Associação de Mães, Pais e Amigos dos Autistas de Serrinha",
-      "lat": -11.6631814,
-      "lng": -39.0057034,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Pedro Tiago, 383 - Ginásio, Serrinha - BA, 48700-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 6,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Associação Baiana de Avicultura",
-      "lat": -12.5033831,
-      "lng": -38.99987060000001,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Campo de Futebol, 172, Conceição da Feira - BA, 44320-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.9,
-      "reviews": 9,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "ABASSÁ DE YGICIDANLOYÁ",
       "lat": -14.7905979,
       "lng": -39.0539277,
@@ -50731,78 +47899,6 @@
       "telefone": "",
       "rating": null,
       "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Campo Bahia",
-      "lat": -16.2434906,
-      "lng": -39.011385,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Avenida Beira Mar, 1885 Vilarejo de, Santa Cruz Cabrália - BA, 45807-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 646,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Cidade histórica Porto Seguro",
-      "lat": -16.4388208,
-      "lng": -39.0646755,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Rua Pedro Alvares Cabral - Porto Seguro, BA, 45810-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 72,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "CEASA VITÓRIA DA CONQUISTA - CEAVIC",
-      "lat": -14.8442729,
-      "lng": -40.9069587,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "BA-262, KM 316 - São Pedro, Vitória da Conquista - BA, 45070-330, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.8,
-      "reviews": 54,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -50841,30 +47937,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Associação Batista do Extremo Sul Baiano",
-      "lat": -17.5339608,
-      "lng": -39.7433108,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. João Calmom, 128 - São Pedro, Teixeira de Freitas - BA, 45995-153, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 1,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Abassà da Deusa Òsùn de Idjemim",
       "lat": -9.3711471,
       "lng": -38.24098559999999,
@@ -50889,30 +47961,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Sac De Senhor Do Bonfim",
-      "lat": -10.4620346,
-      "lng": -40.1878233,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Praça Nova Do Congresso, 01 Central Shopping, 1º Andar - Centro, Sr. do Bonfim - BA, 48970-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 2.7,
-      "reviews": 33,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Abassá de Oxóssi",
       "lat": -14.2012894,
       "lng": -41.682231,
@@ -50923,78 +47971,6 @@
       "telefone": "",
       "rating": null,
       "reviews": null,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "ABAPA | Associação Baiana dos Produtores de Algodão",
-      "lat": -12.0869336,
-      "lng": -45.7567695,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Rod. Pres. Juscelino Kubitschek - Jardim Paraiso Fase II, Luís Eduardo Magalhães - BA, 47850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.7,
-      "reviews": 122,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Centro de Treinamento & Tecnologia da Abapa",
-      "lat": -12.0826684,
-      "lng": -45.7126472,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "BR 020, 242 - KM 50, Luís Eduardo Magalhães - BA, 47850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 22,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "ABAPA(Nova sede)",
-      "lat": -12.0803055,
-      "lng": -45.706978,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "W79V+V6, Luís Eduardo Magalhaes - State of Bahia, 47850-000, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 5,
-      "reviews": 4,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -51043,78 +48019,6 @@
       "telefone": "",
       "rating": 5,
       "reviews": 4,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Enzo Informática",
-      "lat": -12.8749893,
-      "lng": -38.3072587,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Santos Dumont, 6105 - Portão, Lauro de Freitas - BA, 42712-740, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 3.9,
-      "reviews": 15,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Enzo Vilas Jato",
-      "lat": -12.8833861,
-      "lng": -38.3035849,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Praia da Pituba, 03 - quadra11 - Vilas do Atlântico, Lauro de Freitas - BA, 42708-810, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 2.7,
-      "reviews": 3,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Enzo do Surf",
-      "lat": -12.8822646,
-      "lng": -38.3025369,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Praia de Sauípe - Vilas do Atlântico, Salvador - BA, 42708-830, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": null,
-      "reviews": null,
       "geo_status": "in_bahia",
       "fontes": [
         {
