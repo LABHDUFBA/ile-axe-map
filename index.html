@@ -239,10 +239,12 @@
     .info-panel__close { position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elevated); color: var(--text-muted); cursor: pointer; font-size: 18px; }
 
     /* === Markers === */
-    .marker { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--bg-elevated); box-shadow: 0 1px 4px rgba(0,0,0,.25); cursor: pointer; transition: box-shadow .15s, opacity .15s; }
-    .marker:hover, .marker.is-active { box-shadow: 0 2px 8px rgba(0,0,0,.35), 0 0 0 4px var(--accent-soft); }
-    .marker--unknown { width: 10px; height: 10px; background: transparent!important; border-color: #8A8177; opacity: .68; }
-    .marker--unknown:hover, .marker--unknown.is-active { opacity: 1; }
+    .marker { width: 44px; height: 44px; display: grid; place-items: center; padding: 0; border: 0; background: transparent!important; cursor: pointer; touch-action: manipulation; }
+    .marker__dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--bg-elevated); box-shadow: 0 1px 4px rgba(0,0,0,.25); pointer-events: none; transition: box-shadow .15s, opacity .15s; }
+    .marker:hover .marker__dot, .marker.is-active .marker__dot { box-shadow: 0 2px 8px rgba(0,0,0,.35), 0 0 0 4px var(--accent-soft); }
+    .marker:focus-visible { outline: 2px solid var(--accent); outline-offset: -8px; border-radius: 50%; }
+    .marker--unknown .marker__dot { width: 10px; height: 10px; background: transparent!important; border-color: #8A8177; opacity: .68; }
+    .marker--unknown:hover .marker__dot, .marker--unknown.is-active .marker__dot { opacity: 1; }
 
     /* === MapLibre overrides === */
     .maplibregl-popup-content { min-width: 160px; padding: 8px 10px; border-radius: var(--radius-sm); background: var(--bg-elevated); border: 1px solid var(--border); box-shadow: var(--shadow); font-family: var(--font-body); }
@@ -570,13 +572,16 @@
         const el = document.createElement('button');
         el.type = 'button'; el.className = 'marker';
         el.setAttribute('aria-label', getName(feature.properties));
-        el.style.background = nationColor(feature.properties._nacao);
+        const dot = document.createElement('span');
+        dot.className = 'marker__dot';
+        dot.style.background = nationColor(feature.properties._nacao);
+        el.appendChild(dot);
         el.classList.toggle('marker--unknown', feature.properties._nacao === 'Não informado');
         const marker = new maplibregl.Marker({ element: el, anchor: 'center' }).setLngLat([lng, lat]).addTo(map);
         el.addEventListener('mouseenter', () => showTooltip(feature));
         el.addEventListener('mouseleave', () => { if (popup) popup.remove(); });
         el.addEventListener('click', () => showDetail(feature, el));
-        markers.push({ feature, element: el, marker });
+        markers.push({ feature, element: el, dot, marker });
       });
     }
 
@@ -701,7 +706,7 @@
       themeOverride = isDark ? 'light' : 'dark';
       applyTheme(); map.setStyle(mapStyle());
       map.once('styledata', function() {
-        markers.forEach(item => { item.element.style.background = nationColor(item.feature.properties._nacao); });
+        markers.forEach(item => { item.dot.style.background = nationColor(item.feature.properties._nacao); });
         updateMarkers();
       });
     });
