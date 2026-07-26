@@ -154,6 +154,12 @@ class SiteIntegrationTests(unittest.TestCase):
         self.assertNotIn("transition: transform .15s", html)
         self.assertNotIn("keto|ketu|nago|alaketo|alaketu", html)
 
+    def test_map_opens_at_bahia_extent_without_second_camera_animation(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn("const BAHIA_BOUNDS", html)
+        self.assertIn("bounds: BAHIA_BOUNDS", html)
+        self.assertNotIn("map.fitBounds", html)
+
     def test_light_theme_uses_liberty_basemap(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("https://tiles.openfreemap.org/styles/liberty", html)
