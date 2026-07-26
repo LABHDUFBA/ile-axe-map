@@ -23,23 +23,41 @@ Os totais representam registros preservados por fonte e não devem ser interpret
 
 ```text
 ├── index.html
+├── revisao-google.html
 ├── metodologia.html
 ├── data/
 │   ├── terreiros_v2.geojson
 │   ├── terreiros_all_sources_v2.json
 │   ├── auditoria_v2.json
 │   ├── revisao_humana_nacao_v2.csv
+│   ├── revisao_google.json
 │   └── ceao/terreiros_ceao_complete.json
 ├── scripts/
 │   ├── build_v2.py
+│   ├── build_google_review.py
 │   └── collect_osm.py
-└── tests/test_build_v2.py
+└── tests/
+    ├── test_build_v2.py
+    └── test_google_review.py
 ```
+
+## Revisão humana das entradas Google
+
+A página `revisao-google.html` apresenta as 693 entradas Google em uma fila de
+curadoria. Os 133 casos ambíguos da triagem anterior aparecem primeiro. Cada
+registro pode ser marcado como `manter`, `falso_positivo` ou `pendente`.
+
+As decisões são salvas no navegador e podem ser exportadas ou importadas em
+CSV. Sugestões automáticas não removem registros. Após a conferência da lista,
+os falsos positivos confirmados devem ser incorporados a
+`data/exclusoes_curadas.csv`; somente então o build v2 aplica as exclusões aos
+artefatos publicados. Os dados brutos permanecem preservados.
 
 ## Regerar e validar
 
 ```bash
 python3 scripts/build_v2.py
+python3 scripts/build_google_review.py
 python3 -m unittest discover -s tests -v
 ```
 
