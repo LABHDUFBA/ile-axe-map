@@ -61,6 +61,14 @@
     body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 14px; line-height: 1.4; -webkit-font-smoothing: antialiased; }
     button, a { -webkit-tap-highlight-color: transparent; color: inherit; }
     #map { position: fixed; inset: 0; }
+    body:not(.map-ready) #map { visibility: hidden; }
+    #map-loading {
+      position: fixed; z-index: 4; inset: var(--topbar-h) 0 0 var(--rail-w);
+      display: grid; place-items: center;
+      background: var(--bg); color: var(--text-muted);
+      font-size: 13px; font-weight: 600; letter-spacing: .04em;
+    }
+    body.map-ready #map-loading { display: none; }
 
     /* === Topbar — 1 linha === */
     .topbar {
@@ -247,6 +255,7 @@
 
     /* === Mobile === */
     @media (max-width: 600px) {
+      #map-loading { left: 0; bottom: 52px; }
       .topbar { padding: 0 10px; gap: 8px; }
       .topbar__title { font-size: 15px; }
       .topbar__count { display: none; }
@@ -277,6 +286,7 @@
 </head>
 <body>
   <div id="map" role="application" aria-label="Mapa de terreiros"></div>
+  <div id="map-loading" role="status" aria-live="polite">Carregando mapa…</div>
 
   <header class="topbar">
     <a class="topbar__labhd" href="https://labhdufba.github.io/" target="_blank" rel="noopener" aria-label="Laboratório de Humanidades Digitais da UFBA">
@@ -408,6 +418,10 @@
 
     const $ = id => document.getElementById(id);
     const escapeHtml = v => String(v ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+
+    function revealStableMap() {
+      requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('map-ready')));
+    }
 
     function classify(p) {
       if (p.nacao_categoria) return p.nacao_categoria;
@@ -717,10 +731,13 @@
         addMarkers();
         updateMarkers();
         updateList();
+        if (map.loaded()) revealStableMap();
+        else map.once('idle', revealStableMap);
       } catch (error) {
         console.error('Erro ao carregar:', error);
         $('rail-list').innerHTML = '<div class="rail__empty">Não foi possível carregar os dados</div>';
         $('count-badge').textContent = 'erro';
+        revealStableMap();
       }
     });
   </script>
