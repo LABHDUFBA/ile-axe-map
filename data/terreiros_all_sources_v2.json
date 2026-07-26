@@ -27,8 +27,8 @@
     "total_unico": 2158,
     "criterio_deduplicacao": "Coordenadas <50m OU nome normalizado similar",
     "versao": "2.1",
-    "total_registros": 2091,
-    "total_georreferenciados": 1857,
+    "total_registros": 2088,
+    "total_georreferenciados": 1854,
     "fonte_primaria": "CEAO/UFBA",
     "auditoria": "auditoria_v2.json"
   },
@@ -45993,30 +45993,6 @@
       "metodo_classificacao": "ausente-v2.1"
     },
     {
-      "nome": "Laticínios Santana Lauro de Freitas",
-      "lat": -12.8965478,
-      "lng": -38.3214385,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Av. Amarílio Thiago dos Santos, 205 - Centro, Lauro de Freitas - BA, 42703-750, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 207,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
       "nome": "Casa de Caridade Adolfo Bezerra de Menezes",
       "lat": -12.888872,
       "lng": -38.3318279,
@@ -46027,30 +46003,6 @@
       "telefone": "",
       "rating": 4.3,
       "reviews": 48,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "CASA DAS RESISTÊNCIAS",
-      "lat": -12.8891686,
-      "lng": -38.3224036,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "Estrada do Côco - Av. Santos Dumont, 3862 - Loja 19 - Recreio Ipitanga, Lauro de Freitas - BA, 42700-170, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.6,
-      "reviews": 27,
       "geo_status": "in_bahia",
       "fontes": [
         {
@@ -51139,30 +51091,6 @@
       "telefone": "",
       "rating": 2.7,
       "reviews": 3,
-      "geo_status": "in_bahia",
-      "fontes": [
-        {
-          "fonte": "google",
-          "id": null
-        }
-      ],
-      "nacao_original": null,
-      "nacao_componentes": [],
-      "nacao_primaria": null,
-      "nacao_categoria": "Não informado",
-      "metodo_classificacao": "ausente-v2.1"
-    },
-    {
-      "nome": "Condomínio Spazio Sunrise",
-      "lat": -12.8976991,
-      "lng": -38.3233386,
-      "fonte": "google",
-      "fonte_detalhe": "",
-      "endereco": "R. Manoel Silvestre Leite, 190 - Centro, Lauro de Freitas - BA, 42703-050, Brazil",
-      "bairro": "",
-      "telefone": "",
-      "rating": 4.5,
-      "reviews": 154,
       "geo_status": "in_bahia",
       "fontes": [
         {

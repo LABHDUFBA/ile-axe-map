@@ -105,9 +105,9 @@ class BuildV2Tests(unittest.TestCase):
                 ROOT / "data/exclusoes_curadas.csv",
             )
 
-            self.assertEqual(result["source_counts"]["google"], 682)
-            self.assertEqual(result["total_records"], 2091)
-            self.assertEqual(result["mappable_records"], 1857)
+            self.assertEqual(result["source_counts"]["google"], 679)
+            self.assertEqual(result["total_records"], 2088)
+            self.assertEqual(result["mappable_records"], 1854)
 
             geojson = json.loads((Path(tmp) / "terreiros_v2.geojson").read_text())
             names = {feature["properties"].get("nome") for feature in geojson["features"]}
@@ -123,6 +123,9 @@ class BuildV2Tests(unittest.TestCase):
                 "R. Castro Alves, 169 - Cs A",
                 "Casa do Campo",
                 "Casa São Luiz Materiais De Construção",
+                "Laticínios Santana Lauro de Freitas",
+                "Condomínio Spazio Sunrise",
+                "CASA DAS RESISTÊNCIAS",
             }
             self.assertTrue(names.isdisjoint(excluded_names))
 
