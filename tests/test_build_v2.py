@@ -160,6 +160,13 @@ class SiteIntegrationTests(unittest.TestCase):
         self.assertIn("bounds: BAHIA_BOUNDS", html)
         self.assertNotIn("map.fitBounds", html)
 
+    def test_map_stays_hidden_until_style_and_markers_are_stable(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn("body:not(.map-ready) #map", html)
+        self.assertIn("id=\"map-loading\"", html)
+        self.assertIn("function revealStableMap()", html)
+        self.assertIn("map.once('idle', revealStableMap)", html)
+
     def test_light_theme_uses_liberty_basemap(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("https://tiles.openfreemap.org/styles/liberty", html)
