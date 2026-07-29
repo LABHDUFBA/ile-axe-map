@@ -267,25 +267,25 @@
 <tr>
 <td><strong>Total</strong></td>
 <td style="text-align: right;"><strong>3.242</strong></td>
-<td style="text-align: right;"><strong>2.091</strong></td>
-<td style="text-align: right;"><strong>1.857</strong></td>
+<td style="text-align: right;"><strong>1.959</strong></td>
+<td style="text-align: right;"><strong>1.725</strong></td>
 </tr>
 </tbody>
 </table></div>
 <p>A coluna inicial descreve as ocorrências persistidas nos artefatos que antecederam a consolidação. A coluna intermediária registra os registros preservados por fonte na v2.1. Esses totais não devem ser interpretados automaticamente como entidades únicas entre fontes, pois correspondências interfontes ainda exigem revisão com proveniência muitos-para-muitos.</p>
-<p>Os totais de <strong>2.091 registros</strong> e <strong>1.857 feições publicadas</strong> foram recalculados diretamente dos artefatos v2. O CEAO é a fonte primária e todos os seus 1.155 registros estão representados.</p>
+<p>Os totais de <strong>1.959 registros</strong> e <strong>1.725 feições publicadas</strong> foram recalculados diretamente dos artefatos v2. O CEAO é a fonte primária e todos os seus 1.155 registros estão representados.</p>
 <h3 id="22-fluxo-de-processamento">2.2. Fluxo de processamento</h3>
 <pre><code class="language-text">1.629 registros preservados na base v1.3
         │
         ├── substituição de 682 registros CEAO pelo acervo completo de 1.155
         ├── manutenção de 682 Google, 20 OSM e 234 SEMUR já filtrados
         ▼
-2.091 registros na base v2.1
+1.959 registros na base v2.1
         │
-        ├── 1.857 registros com coordenadas no recorte operacional da Bahia
+        ├── 1.725 registros com coordenadas no recorte operacional da Bahia
         └──   234 registros SEMUR sem coordenadas extraídas
 </code></pre>
-<p>O total de <strong>2.091 registros</strong> não equivale a 2.091 terreiros presencialmente verificados ou necessariamente únicos entre fontes. Os <strong>1.857 pontos cartográficos</strong> correspondem ao subconjunto com coordenadas válidas no recorte territorial operacional.</p>
+<p>O total de <strong>1.959 registros</strong> não equivale a 1.959 terreiros presencialmente verificados ou necessariamente únicos entre fontes. Os <strong>1.725 pontos cartográficos</strong> correspondem ao subconjunto com coordenadas válidas no recorte territorial operacional.</p>
 <hr/>
 <h2 id="3-fontes-e-procedimentos-de-aquisicao">3. Fontes e procedimentos de aquisição</h2>
 <h3 id="31-openstreetmap">3.1. OpenStreetMap</h3>
@@ -347,7 +347,7 @@
 <p>A equivalência produzida por esse método é uma hipótese operacional. A proximidade espacial não garante identidade institucional, sobretudo em territórios com forte concentração de comunidades religiosas; nomes semelhantes também podem designar casas distintas, linhagens relacionadas ou mudanças históricas de denominação. Inversamente, mudanças de endereço, abreviações e diferenças ortográficas podem impedir a reunião de registros que se referem à mesma comunidade.</p>
 <h3 id="43-proveniencia-apos-a-fusao">4.3. Proveniência após a fusão</h3>
 <p>Na versão 2.1, cada registro recebe <code>fonte</code> e uma lista <code>fontes</code> com a procedência conhecida. Como a versão anterior não preservou todos os vínculos entre registros fundidos, a cadeia histórica de sobreposições não pôde ser reconstruída integralmente.</p>
-<p>Para evitar novas perdas, a v2.1 prioriza a representação integral do CEAO e não declara os 2.091 registros como entidades únicas entre fontes. Uma futura deduplicação muitos-para-muitos deverá manter identificadores, decisões de correspondência e todos os registros de origem.</p>
+<p>Para evitar novas perdas, a v2.1 prioriza a representação integral do CEAO e não declara os 1.959 registros como entidades únicas entre fontes. Uma futura deduplicação muitos-para-muitos deverá manter identificadores, decisões de correspondência e todos os registros de origem.</p>
 <hr/>
 <h2 id="5-controle-de-qualidade-e-falsos-positivos">5. Controle de qualidade e falsos positivos</h2>
 <h3 id="51-por-que-filtrar">5.1. Por que filtrar</h3>
@@ -375,14 +375,14 @@
 <hr/>
 <h2 id="6-georreferenciamento-e-controle-territorial">6. Georreferenciamento e controle territorial</h2>
 <h3 id="61-origem-das-coordenadas">6.1. Origem das coordenadas</h3>
-<p>As coordenadas publicadas foram herdadas das fontes OSM, Google Places e CEAO/UFBA. Não houve, na versão 2.1, geocodificação dos 234 registros SEMUR remanescentes. A camada cartográfica contém, portanto, <strong>1.857 feições pontuais</strong>.</p>
+<p>As coordenadas publicadas foram herdadas das fontes OSM, Google Places e CEAO/UFBA. Não houve, na versão 2.1, geocodificação dos 234 registros SEMUR remanescentes. A camada cartográfica contém, portanto, <strong>1.725 feições pontuais</strong>.</p>
 <p>O projeto não atribui a todas as coordenadas o mesmo grau de precisão. Dependendo da fonte, um ponto pode representar a entrada do imóvel, o centro de uma edificação, uma posição fornecida por plataforma colaborativa ou uma localização aproximada. A presença de coordenadas não deve ser interpretada automaticamente como confirmação da posição exata da comunidade.</p>
 <h3 id="62-recorte-operacional-da-bahia">6.2. Recorte operacional da Bahia</h3>
 <p>Para a checagem inicial foi utilizado um retângulo geográfico aproximado com os seguintes limites:</p>
 <pre><code class="language-text">longitude: -46,7 a -37,3
 latitude:  -18,4 a  -8,5
 </code></pre>
-<p>Esse <em>bounding box</em> funciona como teste de plausibilidade e enquadramento visual; ele não substitui o polígono administrativo oficial do estado. Na camada v2.1, <strong>1.857 pontos</strong> estão dentro do retângulo operacional. Os <strong>234 registros SEMUR</strong> permanecem sem coordenadas.</p>
+<p>Esse <em>bounding box</em> funciona como teste de plausibilidade e enquadramento visual; ele não substitui o polígono administrativo oficial do estado. Na camada v2.1, <strong>1.725 pontos</strong> estão dentro do retângulo operacional. Os <strong>234 registros SEMUR</strong> permanecem sem coordenadas.</p>
 <p>Uma etapa anterior continha 30 pontos do Google Places fora desse recorte. Eles foram removidos da base consolidada e da camada publicada no commit <code>5b6b5bb</code>, permanecendo recuperáveis no histórico do repositório para fins de auditoria. Na versão corrente, não há feições externas ao recorte operacional.</p>
 <h3 id="63-interpretacao-espacial">6.3. Interpretação espacial</h3>
 <p>A distribuição de pontos expressa simultaneamente a geografia das comunidades e a geografia das fontes. Concentrações urbanas podem resultar de maior presença digital, cobertura institucional mais intensa, facilidade de georreferenciamento ou campanhas localizadas de mapeamento. Áreas com poucos registros não devem ser interpretadas como áreas com poucos terreiros sem evidência adicional.</p>
@@ -421,11 +421,11 @@ latitude:  -18,4 a  -8,5
 <tbody>
 <tr>
 <td><code>data/terreiros_v2.geojson</code></td>
-<td>Camada carregada pela interface; 1.857 pontos na versão 2.1</td>
+<td>Camada carregada pela interface; 1.725 pontos na versão 2.1</td>
 </tr>
 <tr>
 <td><code>data/terreiros_all_sources_v2.json</code></td>
-<td>Base v2.1 com 2.091 registros, incluindo 234 sem coordenadas</td>
+<td>Base v2.1 com 1.959 registros, incluindo 234 sem coordenadas</td>
 </tr>
 <tr>
 <td><code>data/auditoria_v2.json</code></td>

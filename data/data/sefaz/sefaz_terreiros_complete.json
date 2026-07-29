@@ -1,0 +1,2549 @@
+{
+  "fonte": "SEFAZ/Salvador - SEMUR (Prefeitura de Salvador, 2020)",
+  "url": "https://www.sefaz.salvador.ba.gov.br/geosalvador/sharing/rest/content/items/08d566c4316a470b8a146e640c998b08/data",
+  "total_terreiros": 635,
+  "data_coleta": "2026-07-25",
+  "observacao": "Lista extraída via OCR visual do PDF mapa cartográfico. Coordenadas UTM 24S (SIRGAS 2000) não extraídas.",
+  "terreiros": [
+    {
+      "codigo": 2,
+      "nome": "ILE AXE OMIN ODE OXE"
+    },
+    {
+      "codigo": 3,
+      "nome": "ILE AXE OYA JEJEMIN"
+    },
+    {
+      "codigo": 4,
+      "nome": "YLE ASE TY OGUM"
+    },
+    {
+      "codigo": 5,
+      "nome": "ILÉ AXÉ BABÁ WALLAMYM"
+    },
+    {
+      "codigo": 6,
+      "nome": "ONZÓ NGUZO ZA NKISI DANDALUNDA YE TEMPO"
+    },
+    {
+      "codigo": 7,
+      "nome": "ONZO MEAM KAFUM DE UZAMBE"
+    },
+    {
+      "codigo": 8,
+      "nome": "ILÉ AXÉ TUMBI ODÉ OJI"
+    },
+    {
+      "codigo": 9,
+      "nome": "ILE ASE ORISANLA J'OMI - TERREIRO SÃO BENTO"
+    },
+    {
+      "codigo": 10,
+      "nome": "YLE ASE IYA OMIM OSOGBO"
+    },
+    {
+      "codigo": 11,
+      "nome": "ILE AXE BABA OMIM OJU LONA"
+    },
+    {
+      "codigo": 12,
+      "nome": "TERREIRO ALOYÁ"
+    },
+    {
+      "codigo": 13,
+      "nome": "ILE AXE OGUM ALABEJI"
+    },
+    {
+      "codigo": 14,
+      "nome": "ILE AXE LOGEMIM"
+    },
+    {
+      "codigo": 15,
+      "nome": "ILE AXE OFA BUA LAN OMO TGBARA"
+    },
+    {
+      "codigo": 16,
+      "nome": "Yìê Asé Oyá Lecy"
+    },
+    {
+      "codigo": 17,
+      "nome": "TERREIRO MANSU BANTU DO INKINAMSABA"
+    },
+    {
+      "codigo": 18,
+      "nome": "ILÊ AXÉ ODÉ LODOMIN"
+    },
+    {
+      "codigo": 19,
+      "nome": "ILE AXE OXALUFA"
+    },
+    {
+      "codigo": 20,
+      "nome": "UNZO KAWANI MESO MA WANZI JUNSARA"
+    },
+    {
+      "codigo": 21,
+      "nome": "TERREIRO DO CABOCLO SETE FLEXA"
+    },
+    {
+      "codigo": 22,
+      "nome": "CENTRO ESPÍRITA OGUM MARINHO"
+    },
+    {
+      "codigo": 23,
+      "nome": "ILE IYA OMI ASE IYAMASE - GANTOIS"
+    },
+    {
+      "codigo": 24,
+      "nome": "ILÉ AXÉ OBAKAN"
+    },
+    {
+      "codigo": 25,
+      "nome": "ILE AXE JINFAN OKAM ONILÉ"
+    },
+    {
+      "codigo": 26,
+      "nome": "ILê AXê OYA NITA OGI"
+    },
+    {
+      "codigo": 27,
+      "nome": "ILE AXE YA ODO NIBU"
+    },
+    {
+      "codigo": 30,
+      "nome": "UNZÓ SASAGANZUA KATITEMBU KIATALALA MBA KATUALA"
+    },
+    {
+      "codigo": 31,
+      "nome": "ILe AXe OYA TOUJINAN"
+    },
+    {
+      "codigo": 32,
+      "nome": "ILe AXe OGUM OSIN IMOLe"
+    },
+    {
+      "codigo": 33,
+      "nome": "TERREIRO MUTALESI YE MATAMBA"
+    },
+    {
+      "codigo": 34,
+      "nome": "ILE AXE OGUM OMIKAYE"
+    },
+    {
+      "codigo": 35,
+      "nome": "ILÉ AXÉ ODÉ OMIN"
+    },
+    {
+      "codigo": 36,
+      "nome": "ILE ASE OMI LAYO"
+    },
+    {
+      "codigo": 37,
+      "nome": "ILê AXê IYÁ OMIN ODé"
+    },
+    {
+      "codigo": 38,
+      "nome": "TERREIRO ONZÓ AKENÁ KAFUNGE D'AMAZE"
+    },
+    {
+      "codigo": 39,
+      "nome": "ILE AXE AIRA D'MIM"
+    },
+    {
+      "codigo": 40,
+      "nome": "TERREIRO TAMBAMAZI MUKONGO JUCARA FILHO"
+    },
+    {
+      "codigo": 41,
+      "nome": "ILÉ AXÉ OGODOGÊ"
+    },
+    {
+      "codigo": 42,
+      "nome": "YLÉ AXÉ ODÉ TÓKI"
+    },
+    {
+      "codigo": 43,
+      "nome": "ILE AXE T'ORI ALA"
+    },
+    {
+      "codigo": 45,
+      "nome": "ILe AXe OPo YeYePONDA"
+    },
+    {
+      "codigo": 46,
+      "nome": "ILE AXE OMIMNINJA"
+    },
+    {
+      "codigo": 47,
+      "nome": "ILÉ AXÉ ÉJO DAN"
+    },
+    {
+      "codigo": 48,
+      "nome": "ILE AXE IDANJEWE"
+    },
+    {
+      "codigo": 49,
+      "nome": "ILÊ OGUNJÁ"
+    },
+    {
+      "codigo": 50,
+      "nome": "TERREIRO DE CANDOMBLE JÊJE D HOME IMBURACI"
+    },
+    {
+      "codigo": 51,
+      "nome": "ILÉ AXÉ IFAN ADAGEGI"
+    },
+    {
+      "codigo": 52,
+      "nome": "ILE ORE OFE"
+    },
+    {
+      "codigo": 53,
+      "nome": "UNZO LECOUSI DE INZAMBI"
+    },
+    {
+      "codigo": 54,
+      "nome": "Ilê Axé Oyá Nitá Izô Oxê Omim"
+    },
+    {
+      "codigo": 55,
+      "nome": "ILê ASE OSUN DEY ORISALA MUENDE"
+    },
+    {
+      "codigo": 56,
+      "nome": "ABASSa KAYAMACY LUANDEREGY D'UNZAMBY"
+    },
+    {
+      "codigo": 58,
+      "nome": "MANSO SINAVURÙ MAMÊTO KAYÁLA"
+    },
+    {
+      "codigo": 59,
+      "nome": "ILE OYA BANAGI"
+    },
+    {
+      "codigo": 60,
+      "nome": "RUMPAYME DAN"
+    },
+    {
+      "codigo": 61,
+      "nome": "ILE ASE OMI OLA"
+    },
+    {
+      "codigo": 62,
+      "nome": "ILÉ AXÉ OBÁ OMI DEL'OYÁ"
+    },
+    {
+      "codigo": 63,
+      "nome": "UNZO KAVUNGO ZUNGARA DYA NZAAMBI"
+    },
+    {
+      "codigo": 64,
+      "nome": "ILÉ AXÉ MEGÊ IRÊ"
+    },
+    {
+      "codigo": 65,
+      "nome": "UNZO DYAZULE"
+    },
+    {
+      "codigo": 66,
+      "nome": "TERREIRO DUNDA KESSIMBE DE MZAMBI"
+    },
+    {
+      "codigo": 67,
+      "nome": "ILE AXE BABA FALAJI"
+    },
+    {
+      "codigo": 68,
+      "nome": "ILÉ AXÉ MOJARÉ"
+    },
+    {
+      "codigo": 69,
+      "nome": "ILÉ AXÉ BÁBÁ OLUFON ALÁ"
+    },
+    {
+      "codigo": 70,
+      "nome": "ILÉ AXÉ AYRÁ IZÔ"
+    },
+    {
+      "codigo": 71,
+      "nome": "ILE ASE BABA OMIM SAFURAN HOMO JIFOKAN"
+    },
+    {
+      "codigo": 72,
+      "nome": "ILE AXE GIROQUEME"
+    },
+    {
+      "codigo": 73,
+      "nome": "ILê AXé INJE Ajé OYá"
+    },
+    {
+      "codigo": 74,
+      "nome": "TERREIRO OYA MESAN"
+    },
+    {
+      "codigo": 75,
+      "nome": "Ilê Axé OMINDOIASE"
+    },
+    {
+      "codigo": 76,
+      "nome": "ILÉ AXÉ OMIM J'OBA"
+    },
+    {
+      "codigo": 77,
+      "nome": "ILE AXE OBA OJU INAN"
+    },
+    {
+      "codigo": 78,
+      "nome": "Ilê Axé Ewé"
+    },
+    {
+      "codigo": 79,
+      "nome": "ILE AXÉ OYÁ MESY"
+    },
+    {
+      "codigo": 80,
+      "nome": "YLE AXE YA GUEREMYM"
+    },
+    {
+      "codigo": 81,
+      "nome": "Ile AXe OMo ODe BUALEGI"
+    },
+    {
+      "codigo": 82,
+      "nome": "ILE AXE OGUNJA OMIN INA"
+    },
+    {
+      "codigo": 83,
+      "nome": "ODô OMIM OBá AIRá"
+    },
+    {
+      "codigo": 84,
+      "nome": "OFA OMIN"
+    },
+    {
+      "codigo": 85,
+      "nome": "TANURI JUNSARA"
+    },
+    {
+      "codigo": 86,
+      "nome": "CENTRO DE UMBANDA ESTRELA DE ARUANDA"
+    },
+    {
+      "codigo": 87,
+      "nome": "ILE AXE SAIM"
+    },
+    {
+      "codigo": 88,
+      "nome": "MANSU TATEETU KAVUUNGU DYA NAZAAMBI"
+    },
+    {
+      "codigo": 89,
+      "nome": "Ilê Axé Ewá OMIM NIRê"
+    },
+    {
+      "codigo": 90,
+      "nome": "ILE AXE OMINIJA"
+    },
+    {
+      "codigo": 91,
+      "nome": "ILÊ AXÉ IGBÁ OMI ÈJÁ"
+    },
+    {
+      "codigo": 92,
+      "nome": "TERREIRO IGAN LEMIN"
+    },
+    {
+      "codigo": 93,
+      "nome": "OMO ALADE"
+    },
+    {
+      "codigo": 94,
+      "nome": "ILÊ ASSÉ CAUNDÉ"
+    },
+    {
+      "codigo": 95,
+      "nome": "TERREIRO DANDALONI MATUMBI LEMBACESSI NZAMBI"
+    },
+    {
+      "codigo": 96,
+      "nome": "UNZO KWA MPAANZU"
+    },
+    {
+      "codigo": 97,
+      "nome": "ILÊ AXÉ BENSEN MEJI"
+    },
+    {
+      "codigo": 98,
+      "nome": "ILÊ AXÉ OMIN AJUSUN ODé"
+    },
+    {
+      "codigo": 99,
+      "nome": "ILÊ AXÉ JIBÁNEJI"
+    },
+    {
+      "codigo": 100,
+      "nome": "ILE AXE IBALE DE OYA"
+    },
+    {
+      "codigo": 101,
+      "nome": "ILE AXE OMELEJI"
+    },
+    {
+      "codigo": 102,
+      "nome": "YLE ASE IYA OMIM ODO"
+    },
+    {
+      "codigo": 103,
+      "nome": "TERREIRO INKOSSE LEMBA DIUZAMBE"
+    },
+    {
+      "codigo": 104,
+      "nome": "TERREIRO OYA GEBERÊ DE UNZAMBE"
+    },
+    {
+      "codigo": 105,
+      "nome": "ILE AXE BABA ALA AYE"
+    },
+    {
+      "codigo": 106,
+      "nome": "ILE AXé BABá IGBONAN AZOANE KISI (ILE AZOANE)"
+    },
+    {
+      "codigo": 107,
+      "nome": "Ile AXe OMIN Da"
+    },
+    {
+      "codigo": 108,
+      "nome": "ILe AXE TOGUM"
+    },
+    {
+      "codigo": 109,
+      "nome": "UNZó SASAGANZUá KANJOãNLOJOLO KANGUNGA KIASAMPALAKãNUA"
+    },
+    {
+      "codigo": 110,
+      "nome": "ILE AXE SOBOAJO"
+    },
+    {
+      "codigo": 111,
+      "nome": "ILE AXE KALE BOKUN"
+    },
+    {
+      "codigo": 112,
+      "nome": "ILÊ AXÉ DI OYÁ"
+    },
+    {
+      "codigo": 113,
+      "nome": "ILe AXe AJAGUM"
+    },
+    {
+      "codigo": 114,
+      "nome": "ILE AXE ABEOKUTA"
+    },
+    {
+      "codigo": 115,
+      "nome": "ILE AXE OBATOSI"
+    },
+    {
+      "codigo": 116,
+      "nome": "ILE AXE OYÁ DEJI"
+    },
+    {
+      "codigo": 117,
+      "nome": "ARAKA"
+    },
+    {
+      "codigo": 119,
+      "nome": "ILE ASE TOLORI JAGÚN EJI EGBé"
+    },
+    {
+      "codigo": 120,
+      "nome": "OLÉ AXÉ O PÔ ONIRÊ"
+    },
+    {
+      "codigo": 121,
+      "nome": "TERREIRO VENCE TUDO"
+    },
+    {
+      "codigo": 123,
+      "nome": "UNZO NGUNZO KWA KAYONGO"
+    },
+    {
+      "codigo": 124,
+      "nome": "Ilê Axé Opó Obaláji"
+    },
+    {
+      "codigo": 125,
+      "nome": "ILE AXE OJU OMIN"
+    },
+    {
+      "codigo": 126,
+      "nome": "ILE ASE IJI ATI OYA"
+    },
+    {
+      "codigo": 128,
+      "nome": "UNZO MUTALABO Y SAMBANGO"
+    },
+    {
+      "codigo": 129,
+      "nome": "ILE AXE OMI DOLA"
+    },
+    {
+      "codigo": 130,
+      "nome": "ILE AXE ODE TO-LA"
+    },
+    {
+      "codigo": 131,
+      "nome": "ILÉ AXÉ OJU OBAMIN"
+    },
+    {
+      "codigo": 132,
+      "nome": "ILE AXE MABE FUNGEBÉ"
+    },
+    {
+      "codigo": 133,
+      "nome": "MANSU GONGOBILA DE N'ZAMBI"
+    },
+    {
+      "codigo": 134,
+      "nome": "TUMBENCI"
+    },
+    {
+      "codigo": 135,
+      "nome": "Ilê Ajé IJê"
+    },
+    {
+      "codigo": 136,
+      "nome": "TERREIRO BABAMACHO"
+    },
+    {
+      "codigo": 138,
+      "nome": "TUMBA JUNSARA"
+    },
+    {
+      "codigo": 139,
+      "nome": "ILE AXE EXU BARU OXUM"
+    },
+    {
+      "codigo": 140,
+      "nome": "ILê AXé JISAÚ"
+    },
+    {
+      "codigo": 141,
+      "nome": "ILê AXé ÒGUN DEY"
+    },
+    {
+      "codigo": 142,
+      "nome": "ILE AXE OMIN OXE"
+    },
+    {
+      "codigo": 143,
+      "nome": "ILê AXé EUGIM LOIá"
+    },
+    {
+      "codigo": 144,
+      "nome": "ILE AXE OJEJI"
+    },
+    {
+      "codigo": 145,
+      "nome": "ILE AXE OJU ORU RELIQUIAS DE OGUM"
+    },
+    {
+      "codigo": 146,
+      "nome": "ILê AXé FAKAMIN ADEDEWA"
+    },
+    {
+      "codigo": 147,
+      "nome": "IYLE AXE IYA OLUFANDE - TERREIRO OLUFANJA"
+    },
+    {
+      "codigo": 148,
+      "nome": "TERREIRO OYA UNIPO NETO"
+    },
+    {
+      "codigo": 149,
+      "nome": "ILê AXé YAOMINIDê - CASA DAS ÁGUAS MÃE"
+    },
+    {
+      "codigo": 150,
+      "nome": "TERREIRO ATIMSIMBIUDEUZAMBI"
+    },
+    {
+      "codigo": 151,
+      "nome": "ILê AXé ALADE OLUOMIN"
+    },
+    {
+      "codigo": 152,
+      "nome": "TERREIRO INGUe ERVA JUNcARA"
+    },
+    {
+      "codigo": 153,
+      "nome": "ILÉ AXÉ IBÁ LUGAN"
+    },
+    {
+      "codigo": 154,
+      "nome": "CENTRO OGUN DE KARIRI"
+    },
+    {
+      "codigo": 155,
+      "nome": "ILÊ OGODO OLONAN"
+    },
+    {
+      "codigo": 156,
+      "nome": "ILE AXE TOALEGI"
+    },
+    {
+      "codigo": 157,
+      "nome": "ILE AXE IYA DE"
+    },
+    {
+      "codigo": 158,
+      "nome": "FRATERNIDADE UMBANDISTA CAVALEIROS DE ARUANDA"
+    },
+    {
+      "codigo": 160,
+      "nome": "ILE AXE OYA BALE"
+    },
+    {
+      "codigo": 161,
+      "nome": "Ilê Axé IABASSÚ"
+    },
+    {
+      "codigo": 162,
+      "nome": "ILE AXE OMIN OGUNTÉ"
+    },
+    {
+      "codigo": 163,
+      "nome": "ILE AXE YA LEGY ODE"
+    },
+    {
+      "codigo": 164,
+      "nome": "ILE IGBA ORO"
+    },
+    {
+      "codigo": 165,
+      "nome": "ILE AXE OMYN IFAN"
+    },
+    {
+      "codigo": 166,
+      "nome": "ILê AXé OBá ADê NILA"
+    },
+    {
+      "codigo": 167,
+      "nome": "ILÊ AXÉ IBA GINÁ"
+    },
+    {
+      "codigo": 168,
+      "nome": "Ilê Axé de Oxum"
+    },
+    {
+      "codigo": 169,
+      "nome": "TERREIRO DE OXOSSI MUTALAMBO"
+    },
+    {
+      "codigo": 170,
+      "nome": "ILê AxÉ OMIM ARIM MASSUM"
+    },
+    {
+      "codigo": 171,
+      "nome": "ILÊ AXÉ ALÁ JILEWÁ OMÓ"
+    },
+    {
+      "codigo": 172,
+      "nome": "ILE AXE OMOLOYA"
+    },
+    {
+      "codigo": 173,
+      "nome": "ILE AXE EWEW OYA OMIN"
+    },
+    {
+      "codigo": 174,
+      "nome": "ILE AXE OPO ALWA E"
+    },
+    {
+      "codigo": 175,
+      "nome": "ILe AXe OMIN ALa"
+    },
+    {
+      "codigo": 176,
+      "nome": "Oya Matamba"
+    },
+    {
+      "codigo": 177,
+      "nome": "ILE AXE TAYODE ONIN OFÁ"
+    },
+    {
+      "codigo": 178,
+      "nome": "ILE AXE OYA OGUM SILE OMIN"
+    },
+    {
+      "codigo": 179,
+      "nome": "ILê AXÉ OMIN OFÁ"
+    },
+    {
+      "codigo": 180,
+      "nome": "ILE AXE OMIM OJU OBA ARO"
+    },
+    {
+      "codigo": 181,
+      "nome": "ILE AXE OMIN ALEMIN"
+    },
+    {
+      "codigo": 182,
+      "nome": "AWZIIDIJUNCARA"
+    },
+    {
+      "codigo": 183,
+      "nome": "Iê AXé ODê OMINSILé"
+    },
+    {
+      "codigo": 184,
+      "nome": "ILE AXE OYA IDAN IZO"
+    },
+    {
+      "codigo": 185,
+      "nome": "ILé AXé ALá OMIM GUIAN"
+    },
+    {
+      "codigo": 186,
+      "nome": "YLE AXÉ OGÔ OGUM"
+    },
+    {
+      "codigo": 187,
+      "nome": "JAKURIKA ATIM DE UZAMBE"
+    },
+    {
+      "codigo": 188,
+      "nome": "Ilê AXé YEYE Okê"
+    },
+    {
+      "codigo": 189,
+      "nome": "Ilê TOMIM KIOSISé AYó"
+    },
+    {
+      "codigo": 190,
+      "nome": "ILE ASE TAFARODE OMIN EIYE"
+    },
+    {
+      "codigo": 193,
+      "nome": "ILÉ YÁ YALODEIYDÉ"
+    },
+    {
+      "codigo": 194,
+      "nome": "YLE OMIM AXE D'OXUM"
+    },
+    {
+      "codigo": 195,
+      "nome": "ILE AXE ODE ATI IYA RE"
+    },
+    {
+      "codigo": 197,
+      "nome": "UNZO ONIMBOYA"
+    },
+    {
+      "codigo": 198,
+      "nome": "TERREIRO MANSUN BANDUN KUÉKUÉ DE INKINANSABA FILHO"
+    },
+    {
+      "codigo": 199,
+      "nome": "Ilê Axé Etomin Ewa"
+    },
+    {
+      "codigo": 200,
+      "nome": "UNZO AXé KANTULANDê DE UMZAMBE"
+    },
+    {
+      "codigo": 201,
+      "nome": "TERREIRO VIVA DEUS NETO"
+    },
+    {
+      "codigo": 202,
+      "nome": "UNZO BAKISE SASAGANZUA GONGARA KAYANGO"
+    },
+    {
+      "codigo": 203,
+      "nome": "CENTRO DE UMBANDA OGUM DE RONDA"
+    },
+    {
+      "codigo": 204,
+      "nome": "KUNZO KWA TATETO MUTALOMBO BURUNGUZO GOMGOMBIRA MUTALE"
+    },
+    {
+      "codigo": 205,
+      "nome": "OYA OMIM BALE"
+    },
+    {
+      "codigo": 206,
+      "nome": "ILE AXE OGUM DEWI"
+    },
+    {
+      "codigo": 207,
+      "nome": "TERREIRO UNIPÓ FILHO"
+    },
+    {
+      "codigo": 208,
+      "nome": "TERREIRO DE OBALUAE"
+    },
+    {
+      "codigo": 209,
+      "nome": "NZO KISIMBI KEUAMAZI DYA NZAMBI"
+    },
+    {
+      "codigo": 210,
+      "nome": "ILE AXE OXALA OMIN AWO"
+    },
+    {
+      "codigo": 211,
+      "nome": "ILÉ AXÉ JITOLU"
+    },
+    {
+      "codigo": 212,
+      "nome": "MANSO BANTU MUNAN KAMEIAM"
+    },
+    {
+      "codigo": 213,
+      "nome": "MANSO GONGOMBIRA DINHANGA NGIJI"
+    },
+    {
+      "codigo": 214,
+      "nome": "ILE AXE OURO DE AYRA"
+    },
+    {
+      "codigo": 215,
+      "nome": "ABEBê WúRá (LEQUE DE OURO)"
+    },
+    {
+      "codigo": 216,
+      "nome": "UNZó USOBA MATAMBA"
+    },
+    {
+      "codigo": 217,
+      "nome": "ILE AXE ODE OFA OMINILE"
+    },
+    {
+      "codigo": 219,
+      "nome": "TERREIRO D DANDALUNDA"
+    },
+    {
+      "codigo": 221,
+      "nome": "CENTRO DO CABOCLO SULTÃO DAS MATAS"
+    },
+    {
+      "codigo": 222,
+      "nome": "ILE AXE OJU OJI ODEIKAN - TERREIRO SANTA CRUS FILHO"
+    },
+    {
+      "codigo": 223,
+      "nome": "ILE ASE OPO OYA BAZANE"
+    },
+    {
+      "codigo": 224,
+      "nome": "ILE AXE OLUBINAYE"
+    },
+    {
+      "codigo": 225,
+      "nome": "ILE AXE TALAOBI"
+    },
+    {
+      "codigo": 226,
+      "nome": "TERREIRO OXUM OPARA"
+    },
+    {
+      "codigo": 227,
+      "nome": "TERREIRO NINFA"
+    },
+    {
+      "codigo": 228,
+      "nome": "ILE ALA INAKO"
+    },
+    {
+      "codigo": 229,
+      "nome": "ILÊ AXÉ OBÁ TASI"
+    },
+    {
+      "codigo": 230,
+      "nome": "NZO MUTALOMBO YE KAIONGO"
+    },
+    {
+      "codigo": 231,
+      "nome": "TERREIRO TUPINAMBA"
+    },
+    {
+      "codigo": 232,
+      "nome": "Ilê Asé Oni Ndako"
+    },
+    {
+      "codigo": 233,
+      "nome": "ILE AXE OMIN AFANY"
+    },
+    {
+      "codigo": 234,
+      "nome": "TERREIRO DO MALEMBA"
+    },
+    {
+      "codigo": 235,
+      "nome": "CENTRO OXOSSI GUERREIRO DA ALDEIA DE JIQUIRIÇA"
+    },
+    {
+      "codigo": 236,
+      "nome": "TERREIRO ILE AXE YA OMIM LONAN"
+    },
+    {
+      "codigo": 237,
+      "nome": "TERREIRO AUXILIAR SULTAO DAS MATAS VIRGENS"
+    },
+    {
+      "codigo": 238,
+      "nome": "ILE AXE DELEOMI"
+    },
+    {
+      "codigo": 239,
+      "nome": "UNZO DE MAMETO KAIONGO"
+    },
+    {
+      "codigo": 240,
+      "nome": "IBA FAROMIM"
+    },
+    {
+      "codigo": 242,
+      "nome": "ONZO GONGOBIRA DANDALUNDA DUNZAMBI"
+    },
+    {
+      "codigo": 243,
+      "nome": "ILÉ AXÉ IJEXÁ OLOGUN EDÉ SILEMIN"
+    },
+    {
+      "codigo": 244,
+      "nome": "ILE ASE YA RIRA"
+    },
+    {
+      "codigo": 245,
+      "nome": "ILÉ AXÉ OJU IGBALÉ"
+    },
+    {
+      "codigo": 246,
+      "nome": "ILE AXE OLUAYE ONISOGUM"
+    },
+    {
+      "codigo": 247,
+      "nome": "ILE AXE IYAOMIN AFEFE AGADA O"
+    },
+    {
+      "codigo": 248,
+      "nome": "TERREIRO GONGOBIRA FILHO DO TUMBA JUNCARA"
+    },
+    {
+      "codigo": 249,
+      "nome": "ILE AXE OJU OBA LAIO"
+    },
+    {
+      "codigo": 252,
+      "nome": "TENDA DE CARIDADE DO REI DAS COBRAS CAINANAS"
+    },
+    {
+      "codigo": 254,
+      "nome": "ILE AXE OMINLAYE"
+    },
+    {
+      "codigo": 256,
+      "nome": "Terreiro Viva Deus Filho"
+    },
+    {
+      "codigo": 258,
+      "nome": "TERREIRO DO BATE FOLHA"
+    },
+    {
+      "codigo": 259,
+      "nome": "ILE OLORUM AXE GIOCAN"
+    },
+    {
+      "codigo": 260,
+      "nome": "CENTRO DE UMBANDA JURITI"
+    },
+    {
+      "codigo": 261,
+      "nome": "ILê AXê OMIN SELEGI"
+    },
+    {
+      "codigo": 262,
+      "nome": "ILE BIKONAN"
+    },
+    {
+      "codigo": 263,
+      "nome": "TATETO ROJI KIAMBA JILEKAANGA"
+    },
+    {
+      "codigo": 264,
+      "nome": "IDE ODE KELESI"
+    },
+    {
+      "codigo": 265,
+      "nome": "TERREIRO DE ORIXALa"
+    },
+    {
+      "codigo": 266,
+      "nome": "CASA DE UMBANDA SANTA RITA DE CASSIA - ABASSA DE OXUM DAS PEDRAS"
+    },
+    {
+      "codigo": 267,
+      "nome": "ILE ASE OMINIFAM ONIBAHIN OLOROKE"
+    },
+    {
+      "codigo": 269,
+      "nome": "ILE AXE ALARABEDE"
+    },
+    {
+      "codigo": 270,
+      "nome": "CENTRO ESPIRITA CABOCLO TUBAJUCARA"
+    },
+    {
+      "codigo": 271,
+      "nome": "SOCIEDADE CIVIL E RELIGIOSA ILÊ ASIPA"
+    },
+    {
+      "codigo": 273,
+      "nome": "CENTRO DE OXALA"
+    },
+    {
+      "codigo": 275,
+      "nome": "ILE AXE OYAKAYODE"
+    },
+    {
+      "codigo": 276,
+      "nome": "ILE AXE IFA OLORUM BABA OMI"
+    },
+    {
+      "codigo": 277,
+      "nome": "UNZO DE KAGILE"
+    },
+    {
+      "codigo": 278,
+      "nome": "ILE TIBOJEMIM AXE"
+    },
+    {
+      "codigo": 280,
+      "nome": "ILE AXE SIDAN OJI"
+    },
+    {
+      "codigo": 281,
+      "nome": "ILe AXe OMIM EFAN"
+    },
+    {
+      "codigo": 283,
+      "nome": "OMINITA"
+    },
+    {
+      "codigo": 284,
+      "nome": "MANSU BANZANGOLA"
+    },
+    {
+      "codigo": 285,
+      "nome": "ILê AXé OMOM OMIN IYá IPONDá"
+    },
+    {
+      "codigo": 286,
+      "nome": "ILE IYA OMIM ORO"
+    },
+    {
+      "codigo": 287,
+      "nome": "ILê AXé IBONã"
+    },
+    {
+      "codigo": 288,
+      "nome": "NZO MAVULA NGUUNZO AMAZI DYA NZAAMBI"
+    },
+    {
+      "codigo": 289,
+      "nome": "TERREIRO UNZÓ GUNZELÉ KUNA ZAMBI"
+    },
+    {
+      "codigo": 290,
+      "nome": "TERREIRO MEIA TUMBENCI"
+    },
+    {
+      "codigo": 291,
+      "nome": "NZO MILONGA NZAMBI"
+    },
+    {
+      "codigo": 292,
+      "nome": "TERREIRO XAXARA KEWAZABA FILHO DO BATE FOLHINHA"
+    },
+    {
+      "codigo": 293,
+      "nome": "Ilê Axé Obá Ibarunan"
+    },
+    {
+      "codigo": 294,
+      "nome": "TERREIRO IMBANZANGOLÁ"
+    },
+    {
+      "codigo": 295,
+      "nome": "ILE AXE ODOR BOUJY"
+    },
+    {
+      "codigo": 297,
+      "nome": "Ilê Axé Oyá Manêjê"
+    },
+    {
+      "codigo": 298,
+      "nome": "TERREIRO UNZO MALAULA KUNA BATEFOLHINHA"
+    },
+    {
+      "codigo": 299,
+      "nome": "ILE BABA ODE"
+    },
+    {
+      "codigo": 300,
+      "nome": "ILÉ ASÉ ODÉ SILÉ ÁGUAS DE EFAN"
+    },
+    {
+      "codigo": 301,
+      "nome": "UNZÓ DE NKICE MUTAZINGUÊ TOMBENCI NETO"
+    },
+    {
+      "codigo": 302,
+      "nome": "UNZÓ DE NKICE MUTAZINGUÊ TOMBENCI NETO"
+    },
+    {
+      "codigo": 303,
+      "nome": "ILÉ AXÉ EPÔ AGODÔ"
+    },
+    {
+      "codigo": 304,
+      "nome": "ILE SEGBONRANSI AWO SASARA"
+    },
+    {
+      "codigo": 305,
+      "nome": "TERREIRO BOIADEIRO MENINO"
+    },
+    {
+      "codigo": 306,
+      "nome": "CENTRO UMBANDISTA IEMANJa OGUNTe"
+    },
+    {
+      "codigo": 307,
+      "nome": "TERREIRO DELEWI"
+    },
+    {
+      "codigo": 308,
+      "nome": "ILE OMI OIA ODE CAFUNGE"
+    },
+    {
+      "codigo": 309,
+      "nome": "ILE AXE BABA ALA OKAN OMIN"
+    },
+    {
+      "codigo": 311,
+      "nome": "ILE BABA BOKININ"
+    },
+    {
+      "codigo": 312,
+      "nome": "TERREIRO JUNSUN"
+    },
+    {
+      "codigo": 313,
+      "nome": "Ilê Axé ONI AZOANI"
+    },
+    {
+      "codigo": 314,
+      "nome": "TERREIRO LADE PADE MIN"
+    },
+    {
+      "codigo": 315,
+      "nome": "Ilê Axé OXUM APARá"
+    },
+    {
+      "codigo": 317,
+      "nome": "ILÉ AXÉ TOLUJÁ"
+    },
+    {
+      "codigo": 318,
+      "nome": "ILÉ AXÉ OKUTA INA"
+    },
+    {
+      "codigo": 319,
+      "nome": "ILÉ ASÉ ÌGBÁLÉ LEJI"
+    },
+    {
+      "codigo": 320,
+      "nome": "ILE AXE ODE BULERIM"
+    },
+    {
+      "codigo": 321,
+      "nome": "ILÉ ASE IANI DERECE"
+    },
+    {
+      "codigo": 322,
+      "nome": "Ilê Axé Omi Natossi"
+    },
+    {
+      "codigo": 323,
+      "nome": "Ilê Axé Yá NIDé OPá"
+    },
+    {
+      "codigo": 324,
+      "nome": "ILE AXE OMI LAXE"
+    },
+    {
+      "codigo": 325,
+      "nome": "ADÉ FUNFUN"
+    },
+    {
+      "codigo": 326,
+      "nome": "TERREIRO TIRA TEIMA"
+    },
+    {
+      "codigo": 327,
+      "nome": "CENTRO ESPIRITA CABOCLO ITAPUA"
+    },
+    {
+      "codigo": 328,
+      "nome": "KUZÓ ROXEKIAMBA"
+    },
+    {
+      "codigo": 329,
+      "nome": "ILE AXE ORISSUM NANKJWE - IAONAN"
+    },
+    {
+      "codigo": 460,
+      "nome": "ILê AXé ABORIMESAN ARABA IBáGUN"
+    },
+    {
+      "codigo": 461,
+      "nome": "ILE AXE IYA TOMIN"
+    },
+    {
+      "codigo": 462,
+      "nome": "UNZO Ofá MUCUMBI DEOMAZI"
+    },
+    {
+      "codigo": 463,
+      "nome": "SENZALA RELIGIOSA MUKKUNNDEWá"
+    },
+    {
+      "codigo": 467,
+      "nome": "ILE AXE OBA AIRA BODE"
+    },
+    {
+      "codigo": 468,
+      "nome": "ESTRELA GUIA DAS SETE PONTAS CASA DE OGUM"
+    },
+    {
+      "codigo": 469,
+      "nome": "CENTRO UMBANDISTA PAZ E JUSTIçA"
+    },
+    {
+      "codigo": 470,
+      "nome": "ILE AXE ODE BOMIM"
+    },
+    {
+      "codigo": 471,
+      "nome": "CENTRO DE CABOCLO ESTRELA DO ORIENTE"
+    },
+    {
+      "codigo": 472,
+      "nome": "UNZO DANDAMUTALE"
+    },
+    {
+      "codigo": 473,
+      "nome": "ILE ASE JAGUN"
+    },
+    {
+      "codigo": 474,
+      "nome": "ILÊ AXÉ IFÉ D'OXUM"
+    },
+    {
+      "codigo": 475,
+      "nome": "ILÊ MAROIALAGE ALAKETU"
+    },
+    {
+      "codigo": 476,
+      "nome": "ILE AXE OYA"
+    },
+    {
+      "codigo": 477,
+      "nome": "ILE AXE OYA DEOMIN BANGO OYA"
+    },
+    {
+      "codigo": 478,
+      "nome": "CENTRO DE OXOSSE MUTALAMBO"
+    },
+    {
+      "codigo": 479,
+      "nome": "OMIN NATOSSE"
+    },
+    {
+      "codigo": 480,
+      "nome": "ILE AXE KALAINA"
+    },
+    {
+      "codigo": 481,
+      "nome": "ILÊ AXE AKORO GENAN"
+    },
+    {
+      "codigo": 482,
+      "nome": "ILE AXE OLORUM OYA"
+    },
+    {
+      "codigo": 483,
+      "nome": "ILE AXE IBOALAMA"
+    },
+    {
+      "codigo": 484,
+      "nome": "ILÊ AXÉ LAMIN OYÁ"
+    },
+    {
+      "codigo": 485,
+      "nome": "TERREIRO VIVA DEUS"
+    },
+    {
+      "codigo": 486,
+      "nome": "AXELOYA"
+    },
+    {
+      "codigo": 487,
+      "nome": "ILê OMIN AXé OLô YGENIA"
+    },
+    {
+      "codigo": 488,
+      "nome": "ILÊ ASÉ JÔBI LÔDÉ"
+    },
+    {
+      "codigo": 490,
+      "nome": "TERREIRO ALA OMIM AXÉ"
+    },
+    {
+      "codigo": 491,
+      "nome": "ILE ASE ODE OLUAMI"
+    },
+    {
+      "codigo": 497,
+      "nome": "ILE AXE ORIXA KOLOBO"
+    },
+    {
+      "codigo": 498,
+      "nome": "ILE OXUMARE ARAKA AXE OGODO"
+    },
+    {
+      "codigo": 499,
+      "nome": "LECY OMI ONI OKUTã LEWA"
+    },
+    {
+      "codigo": 501,
+      "nome": "ILÊ AXÉ OPO OYA PADA"
+    },
+    {
+      "codigo": 502,
+      "nome": "UNZó BAMBURUCEMA TALê D'UNZAMBE"
+    },
+    {
+      "codigo": 503,
+      "nome": "ILE AXE OXUM GBO OMINDE LEFON ONILE"
+    },
+    {
+      "codigo": 504,
+      "nome": "ILE AXE OBA ILEXA"
+    },
+    {
+      "codigo": 505,
+      "nome": "ILE AXE OBA TUNDE"
+    },
+    {
+      "codigo": 507,
+      "nome": "TERREIRO TUMBALAGI JUNCARA"
+    },
+    {
+      "codigo": 508,
+      "nome": "TERREIRO DANDALUNDA"
+    },
+    {
+      "codigo": 509,
+      "nome": "YLê Axé OYA ARGAN"
+    },
+    {
+      "codigo": 510,
+      "nome": "YLÊ ASSÉ OMINIBU"
+    },
+    {
+      "codigo": 511,
+      "nome": "ILê Axé TORRUN GUNAN"
+    },
+    {
+      "codigo": 512,
+      "nome": "ILE AXE TALAKENAN"
+    },
+    {
+      "codigo": 513,
+      "nome": "Ilê Axé Ogum Odê"
+    },
+    {
+      "codigo": 514,
+      "nome": "ILe AXe OYA SENAN"
+    },
+    {
+      "codigo": 515,
+      "nome": "ILE AXE BATACOLOMIM"
+    },
+    {
+      "codigo": 516,
+      "nome": "ILÊ ASE OPO OYA ODE WURA"
+    },
+    {
+      "codigo": 517,
+      "nome": "ILÊ AXÉ DE OYÁ"
+    },
+    {
+      "codigo": 518,
+      "nome": "ILE AXE DEWALEJI"
+    },
+    {
+      "codigo": 519,
+      "nome": "ILE AXE AZOANI SOBO MI"
+    },
+    {
+      "codigo": 520,
+      "nome": "ILE AXÉ YEYE OMIN ODÉ OXÉ AIRA"
+    },
+    {
+      "codigo": 521,
+      "nome": "ILE AXE ODEFARA OYADEMIN"
+    },
+    {
+      "codigo": 522,
+      "nome": "UNZO DE MUTALAMBO"
+    },
+    {
+      "codigo": 523,
+      "nome": "ILÊ AXÉ OBA TYLE OYA"
+    },
+    {
+      "codigo": 524,
+      "nome": "TERREIRO DE OGUM E DANDALUNDA"
+    },
+    {
+      "codigo": 525,
+      "nome": "ILE AXE IBA OGUM"
+    },
+    {
+      "codigo": 526,
+      "nome": "ILe AXe ALAKETU ORIXA OPARa TI IBAIN"
+    },
+    {
+      "codigo": 527,
+      "nome": "TERREIRO FILHOS DE OXUM"
+    },
+    {
+      "codigo": 528,
+      "nome": "ILE AXE OYO BOMIM"
+    },
+    {
+      "codigo": 529,
+      "nome": "ILE AXE OYA ADIRE OMIN"
+    },
+    {
+      "codigo": 530,
+      "nome": "ILE AXE ADEJEMIM"
+    },
+    {
+      "codigo": 531,
+      "nome": "ILE AXE DE LOGUM EDE"
+    },
+    {
+      "codigo": 532,
+      "nome": "ILE ASE OYE NANA ALAABONA"
+    },
+    {
+      "codigo": 534,
+      "nome": "ILE AXE OPO OYA ONYRA"
+    },
+    {
+      "codigo": 535,
+      "nome": "OMIN LEUA"
+    },
+    {
+      "codigo": 536,
+      "nome": "NZO KAIAIA MENSU AMAZI"
+    },
+    {
+      "codigo": 537,
+      "nome": "TERREIRO DA VISAURA"
+    },
+    {
+      "codigo": 538,
+      "nome": "ESPADA ARCO E FLEXA OXUM"
+    },
+    {
+      "codigo": 539,
+      "nome": "IKIN TOLOXE OMON ALABAXE"
+    },
+    {
+      "codigo": 540,
+      "nome": "EWEW TINTUN"
+    },
+    {
+      "codigo": 541,
+      "nome": "TERREIRO ODe LOMIN"
+    },
+    {
+      "codigo": 542,
+      "nome": "YLE AXE YNGONGO KINGONGO DE UMZAMBE"
+    },
+    {
+      "codigo": 543,
+      "nome": "CENTRO DE UMBANDA ESTRELA GUIA"
+    },
+    {
+      "codigo": 544,
+      "nome": "UNZÓ MUTALOMBÔ"
+    },
+    {
+      "codigo": 545,
+      "nome": "ILE AXE D'JA OMIN"
+    },
+    {
+      "codigo": 546,
+      "nome": "TERREIRO PILAO DE PRATA"
+    },
+    {
+      "codigo": 547,
+      "nome": "ILE AXE IBA JEJEMIM"
+    },
+    {
+      "codigo": 548,
+      "nome": "ILE AXE OYA TAUIGÃ IKU BALÉ"
+    },
+    {
+      "codigo": 549,
+      "nome": "LAJUOMIN"
+    },
+    {
+      "codigo": 550,
+      "nome": "ILÊ AXÉ MAGEBEMIN"
+    },
+    {
+      "codigo": 551,
+      "nome": "ILE ASE KAYODE AJASE OMOM BABA BOMIM"
+    },
+    {
+      "codigo": 552,
+      "nome": "Ilê Asé Opó Onirê"
+    },
+    {
+      "codigo": 553,
+      "nome": "ILE ASE OBA BABA SERE - ILOBAXE"
+    },
+    {
+      "codigo": 554,
+      "nome": "TERREIRO DE OXOSSI"
+    },
+    {
+      "codigo": 555,
+      "nome": "OYA MESAN"
+    },
+    {
+      "codigo": 556,
+      "nome": "ILÊ ASÉ SÀPANÃ OYÁ BAGAN"
+    },
+    {
+      "codigo": 557,
+      "nome": "ODÉ TAOMI"
+    },
+    {
+      "codigo": 558,
+      "nome": "OMIN AMBUKE"
+    },
+    {
+      "codigo": 559,
+      "nome": "EJA OMIM"
+    },
+    {
+      "codigo": 560,
+      "nome": "Ile Axe Gezubu"
+    },
+    {
+      "codigo": 561,
+      "nome": "Unzo Nkose Fokan Jifan"
+    },
+    {
+      "codigo": 562,
+      "nome": "ile axe omi ogum jatoni"
+    },
+    {
+      "codigo": 563,
+      "nome": "ILE OMITOIA"
+    },
+    {
+      "codigo": 564,
+      "nome": "ILE AXE OMIM OLUWO EJIGBO"
+    },
+    {
+      "codigo": 565,
+      "nome": "Ile Axe Oju Omin Ofa Ya Ominadegi"
+    },
+    {
+      "codigo": 567,
+      "nome": "IBUGBE WON ORISA"
+    },
+    {
+      "codigo": 568,
+      "nome": "TEMPLO UMBANDISTA CASA DE CARIDADE PAI MANOEL"
+    },
+    {
+      "codigo": 569,
+      "nome": "ILE AXE OGODO SILE"
+    },
+    {
+      "codigo": 570,
+      "nome": "ILE ASE TOMIM AFUNKELE"
+    },
+    {
+      "codigo": 571,
+      "nome": "TERREIRO SAKE DE LAZENZA DE UM ZAMBY"
+    },
+    {
+      "codigo": 576,
+      "nome": "TERREIRO D'YEMANJA"
+    },
+    {
+      "codigo": 577,
+      "nome": "ILE AXE AGUE-ETALA AZIRI"
+    },
+    {
+      "codigo": 578,
+      "nome": "ILE AXE ONIRE UNXE OMI OYA"
+    },
+    {
+      "codigo": 579,
+      "nome": "ile axe ayra intile omolu aloya"
+    },
+    {
+      "codigo": 580,
+      "nome": "ILE AXE OMINDE"
+    },
+    {
+      "codigo": 581,
+      "nome": "ILE AXE ORO MIN"
+    },
+    {
+      "codigo": 582,
+      "nome": "ILE AXE TUNDMIN"
+    },
+    {
+      "codigo": 583,
+      "nome": "TERREIRO LUANDEI"
+    },
+    {
+      "codigo": 584,
+      "nome": "ILE AXE OMIN FANDE"
+    },
+    {
+      "codigo": 586,
+      "nome": "ILE AXE OPO OBALAYO"
+    },
+    {
+      "codigo": 587,
+      "nome": "TERREIRO CASA DE OXUM."
+    },
+    {
+      "codigo": 588,
+      "nome": "ILE AXE ESTRELA GUIA"
+    },
+    {
+      "codigo": 589,
+      "nome": "ILE AXE OMIM JEMIN"
+    },
+    {
+      "codigo": 590,
+      "nome": "TERREIRO DE BOIADEIRO"
+    },
+    {
+      "codigo": 591,
+      "nome": "ILE AXE AIRA"
+    },
+    {
+      "codigo": 592,
+      "nome": "YLE AXE MATAMBELE"
+    },
+    {
+      "codigo": 593,
+      "nome": "ILE AXE ALA KIRIJ"
+    },
+    {
+      "codigo": 594,
+      "nome": "UATI"
+    },
+    {
+      "codigo": 595,
+      "nome": "IEIE OMINLAXE"
+    },
+    {
+      "codigo": 596,
+      "nome": "ILE AXE ABEBE OMIN OMO"
+    },
+    {
+      "codigo": 597,
+      "nome": "TERREIRO TATETA KAIANGUE DIUMZAMBI"
+    },
+    {
+      "codigo": 598,
+      "nome": "ILE AXE OMI OYA OKUTA OGUM"
+    },
+    {
+      "codigo": 599,
+      "nome": "ILE AXE OYA JERE"
+    },
+    {
+      "codigo": 600,
+      "nome": "YLE AXE DEUMIN GERE GOMBIRA AXE"
+    },
+    {
+      "codigo": 602,
+      "nome": "ILE AXE OMIN DEWA"
+    },
+    {
+      "codigo": 603,
+      "nome": "YLE AXE ONIN PO"
+    },
+    {
+      "codigo": 604,
+      "nome": "ILE AXE ORUM MOGI"
+    },
+    {
+      "codigo": 605,
+      "nome": "ILE AXE OBA UNTILE"
+    },
+    {
+      "codigo": 606,
+      "nome": "ILE AXE OFA OMI"
+    },
+    {
+      "codigo": 608,
+      "nome": "ILE AXE AZOANI"
+    },
+    {
+      "codigo": 609,
+      "nome": "YNSSU GUNZU KILOMBATA"
+    },
+    {
+      "codigo": 610,
+      "nome": "ILE AXE OMOLU JIBADEU"
+    },
+    {
+      "codigo": 611,
+      "nome": "ILE AXE ODE BUALEJI"
+    },
+    {
+      "codigo": 613,
+      "nome": "TERREIRO OMOLU XAPANAN"
+    },
+    {
+      "codigo": 615,
+      "nome": "ILE AXE OMIM TUNDE"
+    },
+    {
+      "codigo": 616,
+      "nome": "TENDA DE CABOCLO BOIADEIRO"
+    },
+    {
+      "codigo": 618,
+      "nome": "UNZO MONA DI AMEAN"
+    },
+    {
+      "codigo": 619,
+      "nome": "UNZO CAFUNGE DE UNZAMBI"
+    },
+    {
+      "codigo": 620,
+      "nome": "CEDAC - Terreiro de Ajunss"
+    },
+    {
+      "codigo": 621,
+      "nome": "UNZO LEUSI DYA LUANZA MAVULA MATAMBA"
+    },
+    {
+      "codigo": 622,
+      "nome": "Ilê Axé Aguerede Azo Omi"
+    },
+    {
+      "codigo": 623,
+      "nome": "TERREIRO ESPADA GUERREIRA"
+    },
+    {
+      "codigo": 626,
+      "nome": "ILE AXE OXAGOMIN"
+    },
+    {
+      "codigo": 627,
+      "nome": "CENTRO DE UMBANDA IRMAO CARLOS"
+    },
+    {
+      "codigo": 628,
+      "nome": "ILE AXE JA OMMI"
+    },
+    {
+      "codigo": 629,
+      "nome": "ILE AXE TOGY"
+    },
+    {
+      "codigo": 630,
+      "nome": "ILE AXE OROMIN"
+    },
+    {
+      "codigo": 632,
+      "nome": "UNZO CAFUNGE"
+    },
+    {
+      "codigo": 633,
+      "nome": "UNZO GANDOIA DE ZAMBI"
+    },
+    {
+      "codigo": 634,
+      "nome": "ILE AXE JILEWA"
+    },
+    {
+      "codigo": 635,
+      "nome": "ILE AXE OMIN ALA"
+    },
+    {
+      "codigo": 636,
+      "nome": "TERREIRO DE OBALUAE"
+    },
+    {
+      "codigo": 637,
+      "nome": "Centro de Giro Sultão das Matas"
+    },
+    {
+      "codigo": 638,
+      "nome": "ILE AXE UYA D'BALE"
+    },
+    {
+      "codigo": 639,
+      "nome": "ILE AXE OFA ONITAFA"
+    },
+    {
+      "codigo": 640,
+      "nome": "ILE AXE ADE OMIM LOSI"
+    },
+    {
+      "codigo": 641,
+      "nome": "ILÊ AXÉ OMIM ODÉ XAURUM"
+    },
+    {
+      "codigo": 642,
+      "nome": "ILE AXE OYA IGBALESI JITOLU"
+    },
+    {
+      "codigo": 643,
+      "nome": "ILE AXE OPANIGERECEUI"
+    },
+    {
+      "codigo": 644,
+      "nome": "ILE AXE ALA OMIN NIDEUA"
+    },
+    {
+      "codigo": 645,
+      "nome": "ILE AXE BABA OMIM GERI POKAN"
+    },
+    {
+      "codigo": 646,
+      "nome": "ILE YA OYA OMIM"
+    },
+    {
+      "codigo": 647,
+      "nome": "ILE AXE DE OGUNJA"
+    },
+    {
+      "codigo": 648,
+      "nome": "TERREIRO VODUN ZOO"
+    },
+    {
+      "codigo": 650,
+      "nome": "ILE AXE OMIN OYA"
+    },
+    {
+      "codigo": 651,
+      "nome": "UNZO DILONGATALA DE UNZAMBE"
+    },
+    {
+      "codigo": 652,
+      "nome": "ILE AXÉ OMIN OXUM ADUPÉ"
+    },
+    {
+      "codigo": 653,
+      "nome": "ILE AXE OMIN OXOM ADUPE"
+    },
+    {
+      "codigo": 654,
+      "nome": "ILE ASE ODE LUADEMIM"
+    },
+    {
+      "codigo": 655,
+      "nome": "Ilê Axé Ogum Resi Omin"
+    },
+    {
+      "codigo": 656,
+      "nome": "TERREIRO DE OXOSSE"
+    },
+    {
+      "codigo": 659,
+      "nome": "UNZO MANAMBE DE INZAMBE"
+    },
+    {
+      "codigo": 660,
+      "nome": "ILE AXE AJUNSUN OIA BALE"
+    },
+    {
+      "codigo": 661,
+      "nome": "ILE AXE OMY APARA"
+    },
+    {
+      "codigo": 663,
+      "nome": "TERREIRO OMIN LEUI"
+    },
+    {
+      "codigo": 664,
+      "nome": "CENTRO DE CABOCLO TUPINIQUIM"
+    },
+    {
+      "codigo": 665,
+      "nome": "TERREIRO INDEKENAN"
+    },
+    {
+      "codigo": 666,
+      "nome": "ILE AXE OGI OBAKENAN"
+    },
+    {
+      "codigo": 667,
+      "nome": "CENTRO DE CABOCLO SETE PEDRA"
+    },
+    {
+      "codigo": 668,
+      "nome": "ILE ASE OMIN OYA OBA NIRE"
+    },
+    {
+      "codigo": 669,
+      "nome": "ILE AXE OYA AGODO"
+    },
+    {
+      "codigo": 670,
+      "nome": "ILE AXE OMIN NEWA"
+    },
+    {
+      "codigo": 671,
+      "nome": "ILE AXE OYA D''BALE"
+    },
+    {
+      "codigo": 672,
+      "nome": "ILE AXE YA OMINJA"
+    },
+    {
+      "codigo": 673,
+      "nome": "ONZO KAFUGE KAYALA D'UNZAMBI"
+    },
+    {
+      "codigo": 675,
+      "nome": "ONZO ZAMBE NANGUE"
+    },
+    {
+      "codigo": 676,
+      "nome": "Ilê Axé Omi Oya Kialonde"
+    },
+    {
+      "codigo": 677,
+      "nome": "ILE AXE YEYE OROMIN"
+    },
+    {
+      "codigo": 678,
+      "nome": "TERREIRO DE COSME E DAMIAO DA BELA UNIAO"
+    },
+    {
+      "codigo": 679,
+      "nome": "UNZO D'AMAZIMONA KESSIMBE"
+    },
+    {
+      "codigo": 680,
+      "nome": "TERREIRO DE OXOSSSI"
+    },
+    {
+      "codigo": 681,
+      "nome": "ILE AXE OGUNJA OMIMTOLOKARA"
+    },
+    {
+      "codigo": 682,
+      "nome": "ILE L'OBAREJI"
+    },
+    {
+      "codigo": 683,
+      "nome": "ILE AXE OMI IBU D''ALA"
+    },
+    {
+      "codigo": 684,
+      "nome": "ILE AXE OMINADE OYASSI"
+    },
+    {
+      "codigo": 685,
+      "nome": "ILE AXE OBA ODO BAININ OMO ALAFIN OYO"
+    },
+    {
+      "codigo": 688,
+      "nome": "ONZO D"
+    },
+    {
+      "codigo": 690,
+      "nome": "UNZO TATETO KITEMBO EWAZILE MA VILE NZAMBI - FILHO DE LEMBA"
+    },
+    {
+      "codigo": 691,
+      "nome": "ILE ASE OMO OBIRIBARA"
+    },
+    {
+      "codigo": 692,
+      "nome": "AXE KWE GBEWA"
+    },
+    {
+      "codigo": 693,
+      "nome": "TERREIRO GIRO DE CABOCLO"
+    },
+    {
+      "codigo": 694,
+      "nome": "ILE AXE AYRA YA OMIN LODUMARE"
+    },
+    {
+      "codigo": 695,
+      "nome": "ILE AXE JILEWA"
+    },
+    {
+      "codigo": 696,
+      "nome": "Ilê Axé Oya Ina Omo Dewaleji"
+    },
+    {
+      "codigo": 697,
+      "nome": "ABASSA KAFUNGE NZOMBI"
+    },
+    {
+      "codigo": 699,
+      "nome": "ILE AXE LEJE KAIJANA"
+    },
+    {
+      "codigo": 700,
+      "nome": "ILE ASE AIRA ALA OJUADE"
+    },
+    {
+      "codigo": 702,
+      "nome": "UNZO MAIALA"
+    },
+    {
+      "codigo": 703,
+      "nome": "ILE AXE OGGNIFALAYASSY"
+    },
+    {
+      "codigo": 704,
+      "nome": "ILE AXE OMINDEUI"
+    },
+    {
+      "codigo": 705,
+      "nome": "UNZO MAIANBA DE INZAMBE"
+    },
+    {
+      "codigo": 706,
+      "nome": "ILE AXE AUE TE DO"
+    },
+    {
+      "codigo": 707,
+      "nome": "VODUN KWE TO ZO"
+    },
+    {
+      "codigo": 708,
+      "nome": "DAOME MBURASI"
+    },
+    {
+      "codigo": 709,
+      "nome": "ILE AXE BABA FUNFUN"
+    },
+    {
+      "codigo": 710,
+      "nome": "UNZO MUTALE DE UNZAMBI"
+    },
+    {
+      "codigo": 711,
+      "nome": "ILE ASE OBA KOSU IFA"
+    },
+    {
+      "codigo": 712,
+      "nome": "UNZO LEMBA JUNSSARA"
+    },
+    {
+      "codigo": 714,
+      "nome": "ILE OMIN OBA"
+    },
+    {
+      "codigo": 715,
+      "nome": "ILE AXE JINAUE ONO ODE"
+    },
+    {
+      "codigo": 716,
+      "nome": "Ile Axé Oya Konansi"
+    },
+    {
+      "codigo": 717,
+      "nome": "ILE AXE YA LESSY"
+    },
+    {
+      "codigo": 721,
+      "nome": "ILE AXE AIDAN NEUA OMO EW EW TINTU"
+    },
+    {
+      "codigo": 723,
+      "nome": "Ilê Axé Aro Demin Siloya Omo Omiokun"
+    },
+    {
+      "codigo": 724,
+      "nome": "ILE AXE DE OMOLU"
+    },
+    {
+      "codigo": 725,
+      "nome": "ILE ASE EWEW ASSACOJE"
+    },
+    {
+      "codigo": 726,
+      "nome": "CENTRO DE UMBANDA IEMANJA"
+    },
+    {
+      "codigo": 727,
+      "nome": "ILE AXE ODE XAMODO"
+    },
+    {
+      "codigo": 728,
+      "nome": "ILE AXE AGUELESI OLORUN FE"
+    },
+    {
+      "codigo": 729,
+      "nome": "ONZO NIKAULE NKOSI D'UNZAMBI"
+    },
+    {
+      "codigo": 731,
+      "nome": "ILE AXE ODO NIN EJA"
+    },
+    {
+      "codigo": 732,
+      "nome": "TERREIRO KEKERE YLE DE OGUN"
+    },
+    {
+      "codigo": 733,
+      "nome": "ILE ASE OGUM ODE"
+    },
+    {
+      "codigo": 734,
+      "nome": "ONZO KAIAJAMBA D'UNZAMBE"
+    },
+    {
+      "codigo": 735,
+      "nome": "ILE AXE AWON FUNFUN"
+    },
+    {
+      "codigo": 736,
+      "nome": "ILE AXE OMIN OYA ONIRE"
+    },
+    {
+      "codigo": 737,
+      "nome": "ILE AXE ODE OMON OBA"
+    },
+    {
+      "codigo": 738,
+      "nome": "ILE AXE OYA OJU BABA OMIN"
+    },
+    {
+      "codigo": 740,
+      "nome": "ILE AXE AJAGUNA OLOODO"
+    },
+    {
+      "codigo": 741,
+      "nome": "CENTRO DE ARUANDA DO CABOCLO BOIADEIRO"
+    },
+    {
+      "codigo": 742,
+      "nome": "CENTRO DO CABOCLO BOIADEIRO"
+    },
+    {
+      "codigo": 743,
+      "nome": "ONZO ANGOROMIN D'UNZAMBI"
+    },
+    {
+      "codigo": 744,
+      "nome": "Centro do Caboclo Boiadeiro Luz e Caridade"
+    },
+    {
+      "codigo": 745,
+      "nome": "ILE AXE VODUM KAIOGY"
+    },
+    {
+      "codigo": 746,
+      "nome": "ILE AXE OMIN ORO"
+    },
+    {
+      "codigo": 747,
+      "nome": "TERREIRO ZOGODO BOGUM MALE RUNDO"
+    },
+    {
+      "codigo": 748,
+      "nome": "IYA OMIN EFAN"
+    },
+    {
+      "codigo": 749,
+      "nome": "CENTRO DE UMBANDA OSEIAS D'OGUN"
+    },
+    {
+      "codigo": 750,
+      "nome": "OJU TY OYA OMINIRE"
+    },
+    {
+      "codigo": 751,
+      "nome": "Oluaie Oju Aiye"
+    },
+    {
+      "codigo": 752,
+      "nome": "ABONY AJA KONDA APONDA"
+    },
+    {
+      "codigo": 753,
+      "nome": "CENTRO DE CABOCLO ATUMBANSE"
+    },
+    {
+      "codigo": 754,
+      "nome": "CENTRO DE CABOCLO ARCO VERDE"
+    },
+    {
+      "codigo": 755,
+      "nome": "ILE AXE MEDA OJIDAN"
+    },
+    {
+      "codigo": 756,
+      "nome": "ILE AXE ODE EMI AKIKANJU"
+    },
+    {
+      "codigo": 757,
+      "nome": "ILE AXE TORI OYA"
+    },
+    {
+      "codigo": 758,
+      "nome": "CENTRO DE UMBANDA TERREIRO DE OMOLU"
+    },
+    {
+      "codigo": 759,
+      "nome": "Unzo Amazi Danda Mutaleci"
+    },
+    {
+      "codigo": 760,
+      "nome": "CENTRO DO CABOCLO TUPY DA SERRA"
+    },
+    {
+      "codigo": 762,
+      "nome": "CENTRO DE CARIDADE LUZ E PAZ"
+    },
+    {
+      "codigo": 763,
+      "nome": "ILE AXE OFA DEMIN"
+    },
+    {
+      "codigo": 764,
+      "nome": "ILE AXE ODE NIGEWА"
+    },
+    {
+      "codigo": 765,
+      "nome": "ILE AXE YA OMI"
+    },
+    {
+      "codigo": 766,
+      "nome": "CENTRO DE UMBANDA CABOCLO TAPEROA"
+    },
+    {
+      "codigo": 767,
+      "nome": "CENTRO DO CABOCLO BOIADEIRO LACO DE PRATA"
+    },
+    {
+      "codigo": 768,
+      "nome": "ILÊ AXÉ IDAN BOMIM"
+    },
+    {
+      "codigo": 769,
+      "nome": "ILE AXE YA OMIM BARAJA"
+    },
+    {
+      "codigo": 770,
+      "nome": "NZO MUNGONGO LEMBEUAJI JUNÇARA"
+    },
+    {
+      "codigo": 771,
+      "nome": "ILE AXE ONGINOQUE OMOROSSI"
+    },
+    {
+      "codigo": 772,
+      "nome": "Ilê Axé Araka Oridan Jere"
+    },
+    {
+      "codigo": 773,
+      "nome": "CENTRO UMBANDISTA CABOCLO REI DAS MATAS"
+    },
+    {
+      "codigo": 774,
+      "nome": "ONZO GONZO MISSANDANLUNDA"
+    },
+    {
+      "codigo": 775,
+      "nome": "TERREIRO MUTALÉ CONGO"
+    },
+    {
+      "codigo": 776,
+      "nome": "MANSU KAIANGO CAJANJA FILHO"
+    },
+    {
+      "codigo": 777,
+      "nome": "ILÊ AXÉ ABILERÉ"
+    },
+    {
+      "codigo": 778,
+      "nome": "CENTRO DE CABOCLO VIDA E LUZ"
+    },
+    {
+      "codigo": 779,
+      "nome": "ILE AXE TOLONA"
+    },
+    {
+      "codigo": 780,
+      "nome": "ILE AXE OXALADE"
+    },
+    {
+      "codigo": 781,
+      "nome": "TERREIRO NANÃ ALODÊ DE UNZAMBI"
+    },
+    {
+      "codigo": 782,
+      "nome": "ile oxossi"
+    },
+    {
+      "codigo": 783,
+      "nome": "Uzo Unkuanxi Umuene Nongongo Anga kinue Vasambilua"
+    },
+    {
+      "codigo": 784,
+      "nome": "Nzo Sassaganzua Nguzu Maza Mukongo ye Kalunga"
+    },
+    {
+      "codigo": 785,
+      "nome": "UNZO MEAN RIA KAIAIA"
+    },
+    {
+      "codigo": 786,
+      "nome": "CENTRO DE UMBANDA ALDEIA DE BOIADEIRO"
+    },
+    {
+      "codigo": 787,
+      "nome": "TERREIRO DE BAMBURUCEMA"
+    },
+    {
+      "codigo": 789,
+      "nome": "KWE ACARA SOBO"
+    },
+    {
+      "codigo": 790,
+      "nome": "Ile Axe Oba Paleomon"
+    },
+    {
+      "codigo": 791,
+      "nome": "ILE AXE NINFA OMIN"
+    },
+    {
+      "codigo": 792,
+      "nome": "ILE AZE OYA OMI JADE"
+    },
+    {
+      "codigo": 793,
+      "nome": "MARLOM FRANCISCO CARDOSO BASTOS"
+    },
+    {
+      "codigo": 794,
+      "nome": "CENTRO DE CABOCLO CASA DE LUA CHEIA"
+    },
+    {
+      "codigo": 796,
+      "nome": "YLÉ ASE OPO JAGUM"
+    },
+    {
+      "codigo": 800,
+      "nome": "Centro Ogum de Ronda"
+    },
+    {
+      "codigo": 801,
+      "nome": "CENTRO OXOSSE GUERREIRO"
+    },
+    {
+      "codigo": 802,
+      "nome": "Templo dos Orixás"
+    },
+    {
+      "codigo": 807,
+      "nome": "ILE AXE OYA TUNDE SILE OMO"
+    },
+    {
+      "codigo": 814,
+      "nome": "ILE AXE ODE OMIM SILE OMO"
+    },
+    {
+      "codigo": 817,
+      "nome": "Ilê Axé Ya Omin Ju Moba"
+    },
+    {
+      "codigo": 818,
+      "nome": "ILE AXE OMIN DUN YPONDA"
+    },
+    {
+      "codigo": 819,
+      "nome": "RISALVA HERMINIA DA ANUCIACAO"
+    },
+    {
+      "codigo": 821,
+      "nome": "ILE AXE ODE LOSIRE"
+    },
+    {
+      "codigo": 824,
+      "nome": "ILE AXE TUA OMIM"
+    },
+    {
+      "codigo": 826,
+      "nome": "Ilé Axé Ode Tingongo Lomi"
+    },
+    {
+      "codigo": 827,
+      "nome": "ILE AXE GITOLUSSY"
+    },
+    {
+      "codigo": 831,
+      "nome": "CENTRO DO CABOCLO SULTÃO DAS MATAS"
+    },
+    {
+      "codigo": 832,
+      "nome": "ILE AXE OXUM"
+    },
+    {
+      "codigo": 835,
+      "nome": "ONZO MUTA EUSI"
+    },
+    {
+      "codigo": 836,
+      "nome": "ILE AXE JAGUM AGILESY"
+    },
+    {
+      "codigo": 840,
+      "nome": "Centro de Caboclo Sultão das Matas"
+    },
+    {
+      "codigo": 841,
+      "nome": "ILE AXE OGUM ALAKAYE"
+    },
+    {
+      "codigo": 842,
+      "nome": "Terreiro Kidanadana"
+    },
+    {
+      "codigo": 843,
+      "nome": "ILE AXE OGUNSSY OMIN"
+    },
+    {
+      "codigo": 845,
+      "nome": "ILÊ AXÉ OBÁ OTUM"
+    },
+    {
+      "codigo": 846,
+      "nome": "CENTRO DO CABLOCO BOIADEIRO"
+    },
+    {
+      "codigo": 847,
+      "nome": "CENTRO DE OGUM"
+    },
+    {
+      "codigo": 851,
+      "nome": "Ilê Axé Yà Pondá"
+    },
+    {
+      "codigo": 855,
+      "nome": "ILE D'BALE OYA GANDEGI"
+    },
+    {
+      "codigo": 857,
+      "nome": "Ilê Alaakoro Ase Omi"
+    },
+    {
+      "codigo": 858,
+      "nome": "CENTRO DE CABLOCO PENACHO VERDE"
+    },
+    {
+      "codigo": 860,
+      "nome": "Terreiro Viva Deus Roxo Mukumbi"
+    },
+    {
+      "codigo": 861,
+      "nome": "ILE AXE OMIM OUNTE"
+    },
+    {
+      "codigo": 863,
+      "nome": "CASA DE CARIDADE CABLOCO BOIADEIRO"
+    },
+    {
+      "codigo": 864,
+      "nome": "Ilê Axé Omin Omo Mensa Ode"
+    },
+    {
+      "codigo": 865,
+      "nome": "Onzo Kaia Muta do Kalunga Mean"
+    },
+    {
+      "codigo": 866,
+      "nome": "ILE AXE ORI MIM MIWA"
+    },
+    {
+      "codigo": 868,
+      "nome": "CENTRO DE UMBANDA PAI OXALA"
+    },
+    {
+      "codigo": 869,
+      "nome": "CENTRO CABLOCO BOIADEIRO"
+    },
+    {
+      "codigo": 871,
+      "nome": "ILE ASE OMIN ALOYA"
+    },
+    {
+      "codigo": 872,
+      "nome": "Ilê Axé Oya Ade"
+    },
+    {
+      "codigo": 874,
+      "nome": "ILÊ AXÉ OFA OMIN ODE"
+    },
+    {
+      "codigo": 875,
+      "nome": "ILÊ AXÉ OJUJÉ"
+    },
+    {
+      "codigo": 876,
+      "nome": "CENTRO DE UMBANDA OXALA"
+    },
+    {
+      "codigo": 878,
+      "nome": "ILE AXE EJA ROMIN"
+    },
+    {
+      "codigo": 879,
+      "nome": "ILE OYA KOSSUM"
+    },
+    {
+      "codigo": 882,
+      "nome": "ILE ASE OMINIRE OLOGUN IFA BEMINGA"
+    },
+    {
+      "codigo": 888,
+      "nome": "ILE AXE OMAN OGUM LANAN"
+    }
+  ]
+}

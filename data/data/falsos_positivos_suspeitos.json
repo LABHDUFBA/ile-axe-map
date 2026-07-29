@@ -1,0 +1,4337 @@
+{
+  "google_false_positives": [
+    {
+      "nome": "PREFEITURA DE ITAJU DO COLÔNIA",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -15.1412874,
+      "lng": -39.7249779
+    },
+    {
+      "nome": "Poço Halley",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -12.5614774,
+      "lng": -41.4027453
+    },
+    {
+      "nome": "Praia de Lençóis",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -16.3143749,
+      "lng": -39.0233778
+    },
+    {
+      "nome": "Hotel de Lençóis",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.5641893,
+      "lng": -41.3922837
+    },
+    {
+      "nome": "Lençóis Trekking - Chapada Diamantina",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.5599162,
+      "lng": -41.38949969999999
+    },
+    {
+      "nome": "Lençóis Airport - Coronel Horácio de Matos-SBLE",
+      "fonte": "google",
+      "razao": "Shopping/infra",
+      "lat": -12.4862318,
+      "lng": -41.2749023
+    },
+    {
+      "nome": "Hotel Canto das Águas",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.5614302,
+      "lng": -41.3883894
+    },
+    {
+      "nome": "Beco dos Encantos - Nova Viçosa",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -17.8903619,
+      "lng": -39.3726705
+    },
+    {
+      "nome": "Praia em Nova Viçosa",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -17.9168815,
+      "lng": -39.3962981
+    },
+    {
+      "nome": "Cabana Oxe - Barraca de Praia",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -17.3258479,
+      "lng": -39.2192983
+    },
+    {
+      "nome": "São José da vitória",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -15.0836407,
+      "lng": -39.3374953
+    },
+    {
+      "nome": "Xique xique bahia",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -10.8326941,
+      "lng": -42.7205106
+    },
+    {
+      "nome": "Grande Rio Hotel",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -10.8236703,
+      "lng": -42.7307853
+    },
+    {
+      "nome": "Igreja Universal",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -15.8599373,
+      "lng": -38.8792997
+    },
+    {
+      "nome": "Quilombo Zizi de Zeca",
+      "fonte": "google",
+      "razao": "Quilombo nao-terreiro",
+      "lat": -11.2080798,
+      "lng": -40.5475348
+    },
+    {
+      "nome": "Candombá Restaurante",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -12.5615562,
+      "lng": -41.3897403
+    },
+    {
+      "nome": "Aldeia Filhos de Tupinambá",
+      "fonte": "google",
+      "razao": "Indigena",
+      "lat": -12.7983478,
+      "lng": -38.3781835
+    },
+    {
+      "nome": "Prefeitura Municipal de São Felipe",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -12.8471566,
+      "lng": -39.0882568
+    },
+    {
+      "nome": "casa do pé da cajá!",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.6311435,
+      "lng": -38.96113039999999
+    },
+    {
+      "nome": "Prefeitura de Teodoro Sampaio",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -12.3056137,
+      "lng": -38.6409227
+    },
+    {
+      "nome": "Mercadinho Santos (Casa do Geladão)",
+      "fonte": "google",
+      "razao": "Mercado",
+      "lat": -12.1133897,
+      "lng": -38.4462248
+    },
+    {
+      "nome": "Casas Bahia",
+      "fonte": "google",
+      "razao": "Rede lojas",
+      "lat": -12.1388567,
+      "lng": -38.4259614
+    },
+    {
+      "nome": "Loteria Elinoel de Faro Santos",
+      "fonte": "google",
+      "razao": "Comercio",
+      "lat": -12.1384347,
+      "lng": -38.4230582
+    },
+    {
+      "nome": "Atacadão - Alagoinhas",
+      "fonte": "google",
+      "razao": "Mercado",
+      "lat": -12.1641408,
+      "lng": -38.4116997
+    },
+    {
+      "nome": "Hospital Alagoinhas",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -12.1367398,
+      "lng": -38.4208286
+    },
+    {
+      "nome": "La Casa de Pastel",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -13.0239868,
+      "lng": -39.6038665
+    },
+    {
+      "nome": "Casa Triunfante - Artigos Religiosos",
+      "fonte": "google",
+      "razao": "Loja artigos",
+      "lat": -12.1455931,
+      "lng": -45.00045100000001
+    },
+    {
+      "nome": "Santos Divino",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -12.1531293,
+      "lng": -44.9893258
+    },
+    {
+      "nome": "São Miguel Arcanjo ️ - Artigos Religiosos em Barreiras",
+      "fonte": "google",
+      "razao": "Loja artigos",
+      "lat": -12.1493551,
+      "lng": -44.9987442
+    },
+    {
+      "nome": "Enxovais Monte Santo",
+      "fonte": "google",
+      "razao": "Loja",
+      "lat": -19.920088,
+      "lng": -43.951688
+    },
+    {
+      "nome": "Belmonte Lighthouse",
+      "fonte": "google",
+      "razao": "Infra/transporte",
+      "lat": -15.863574,
+      "lng": -38.8772448
+    },
+    {
+      "nome": "Praia de Belmonte",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -15.9514644,
+      "lng": -38.8984583
+    },
+    {
+      "nome": "Abrigo Sao Vicente De Paulo",
+      "fonte": "google",
+      "razao": "Assistencia social",
+      "lat": -15.8578483,
+      "lng": -38.8790971
+    },
+    {
+      "nome": "Casa da construção - Material de construção, Elétrico, Hidráulico e Tintas",
+      "fonte": "google",
+      "razao": "Material construcao",
+      "lat": -14.2060402,
+      "lng": -41.68542619999999
+    },
+    {
+      "nome": "Casa das Telhas - Madeireira e Material de Construção",
+      "fonte": "google",
+      "razao": "Material construcao",
+      "lat": -14.2097804,
+      "lng": -41.6517779
+    },
+    {
+      "nome": "Hotel São Lázaro - Brumado",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -14.2068958,
+      "lng": -41.6540707
+    },
+    {
+      "nome": "Padaria União Santos",
+      "fonte": "google",
+      "razao": "Comercio",
+      "lat": -14.2065843,
+      "lng": -41.6741544
+    },
+    {
+      "nome": "Buerarema",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -14.9567483,
+      "lng": -39.3016915
+    },
+    {
+      "nome": "Fazenda Espelho D'água",
+      "fonte": "google",
+      "razao": "Rural",
+      "lat": -12.5247449,
+      "lng": -39.15861779999999
+    },
+    {
+      "nome": "House Of House And Chain Waterfall - Museum",
+      "fonte": "google",
+      "razao": "Cultura/memorial",
+      "lat": -12.6052351,
+      "lng": -38.962105
+    },
+    {
+      "nome": "Hostel Casa de Avany",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.6053178,
+      "lng": -38.9627557
+    },
+    {
+      "nome": "Casa do Morro",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -13.4057861,
+      "lng": -38.9081304
+    },
+    {
+      "nome": "Diocesan Center John Paul II",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -12.6961571,
+      "lng": -38.31784030000001
+    },
+    {
+      "nome": "CASA DE CECÍLIA",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.7094698,
+      "lng": -38.328875
+    },
+    {
+      "nome": "Santuário Nossa Senhora das Candeias",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -12.6581221,
+      "lng": -38.5346132
+    },
+    {
+      "nome": "PAX SANTOS",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -12.6677812,
+      "lng": -38.5427537
+    },
+    {
+      "nome": "Parish Our Lady of Candeias",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -12.6700277,
+      "lng": -38.5489783
+    },
+    {
+      "nome": "Casa de Frios Vitória",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -12.6728334,
+      "lng": -38.5410555
+    },
+    {
+      "nome": "Rosangela",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -12.6762791,
+      "lng": -38.5446854
+    },
+    {
+      "nome": "HOSPITAL MUNICIPAL DE CANDEIAS",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -12.6603339,
+      "lng": -38.5323968
+    },
+    {
+      "nome": "Restaurante Casa Delivery",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -12.6738115,
+      "lng": -38.5394978
+    },
+    {
+      "nome": "Casa próximo comercial Santos",
+      "fonte": "google",
+      "razao": "Comercio",
+      "lat": -17.7295366,
+      "lng": -39.2652463
+    },
+    {
+      "nome": "Casa Mascarenhas",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -17.5170086,
+      "lng": -40.1098049
+    },
+    {
+      "nome": "Conceição do Jacuípe ba",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -12.3224017,
+      "lng": -38.7637367
+    },
+    {
+      "nome": "Paróquia Nossa Senhora da Conceição do Jacuípe",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -12.3285401,
+      "lng": -38.7631902
+    },
+    {
+      "nome": "Congregação Cristã no Brasil - Fazenda Oitizeiro",
+      "fonte": "google",
+      "razao": "Rural",
+      "lat": -12.3746873,
+      "lng": -38.78141979999999
+    },
+    {
+      "nome": "Pousada Bella Casa",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -14.8954364,
+      "lng": -41.9689827
+    },
+    {
+      "nome": "Casa Oliveira",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -14.9030838,
+      "lng": -41.9725207
+    },
+    {
+      "nome": "Meat House",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -12.2479884,
+      "lng": -38.7505145
+    },
+    {
+      "nome": "O Sabor_ Casa de Queijos & Frios",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -12.2478549,
+      "lng": -38.749183
+    },
+    {
+      "nome": "Projeto Social Coração de Maria",
+      "fonte": "google",
+      "razao": "Assistencia social",
+      "lat": -12.8504214,
+      "lng": -38.3876517
+    },
+    {
+      "nome": "Santa Casa de Misericórdia",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -12.6690449,
+      "lng": -39.1018418
+    },
+    {
+      "nome": "São João de Cruz das Almas",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -12.6625672,
+      "lng": -39.1162151
+    },
+    {
+      "nome": "Loja Reino de Ayrà e Osun",
+      "fonte": "google",
+      "razao": "Comercio",
+      "lat": -12.6114124,
+      "lng": -38.2985471
+    },
+    {
+      "nome": "Bichinhos de Casa | Pet Shop - Dias d'Ávila",
+      "fonte": "google",
+      "razao": "Pet shop",
+      "lat": -12.6102536,
+      "lng": -38.2988229
+    },
+    {
+      "nome": "Casa Do Tempero",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -16.3730867,
+      "lng": -39.5854469
+    },
+    {
+      "nome": "Casa Popular",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -16.3729709,
+      "lng": -39.5862062
+    },
+    {
+      "nome": "Quintal de Casa | Choperia e Petiscaria",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -16.3609859,
+      "lng": -39.5842724
+    },
+    {
+      "nome": "Campo Santo Cemitério Parque",
+      "fonte": "google",
+      "razao": "Cemiterio",
+      "lat": -16.3890938,
+      "lng": -39.5606132
+    },
+    {
+      "nome": "Sabor da Casa",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -16.3725412,
+      "lng": -39.5834076
+    },
+    {
+      "nome": "Prefeitura Municipal de Floresta azul",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -14.8592246,
+      "lng": -39.65721569999999
+    },
+    {
+      "nome": "Pousada HS",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -13.7432436,
+      "lng": -39.4833346
+    },
+    {
+      "nome": "Memorial Casa De Dona Dedé",
+      "fonte": "google",
+      "razao": "Cultura/memorial",
+      "lat": -14.2303913,
+      "lng": -42.7806316
+    },
+    {
+      "nome": "Nossa Casa Church",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -14.2087194,
+      "lng": -42.7685644
+    },
+    {
+      "nome": "Aeroporto Municipal de Guanambi - Isaac Moura Rocha",
+      "fonte": "google",
+      "razao": "Shopping/infra",
+      "lat": -14.2090603,
+      "lng": -42.7492045
+    },
+    {
+      "nome": "Comercial Santos Dumont",
+      "fonte": "google",
+      "razao": "Comercio",
+      "lat": -14.2313497,
+      "lng": -42.7805772
+    },
+    {
+      "nome": "Casa de Carnes Premium Grill",
+      "fonte": "google",
+      "razao": "Acougue",
+      "lat": -14.2155027,
+      "lng": -42.7854137
+    },
+    {
+      "nome": "Pousada Bandeirante",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -14.234396,
+      "lng": -42.7783682
+    },
+    {
+      "nome": "Casa de Carne Premium",
+      "fonte": "google",
+      "razao": "Acougue",
+      "lat": -14.2159766,
+      "lng": -42.799526
+    },
+    {
+      "nome": "SAC Municipal de Guanambi",
+      "fonte": "google",
+      "razao": "Instituicao publica",
+      "lat": -14.2178919,
+      "lng": -42.7822313
+    },
+    {
+      "nome": "Hotel Sul Bahia",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -14.2345807,
+      "lng": -42.7766135
+    },
+    {
+      "nome": "University Center From Guanambi",
+      "fonte": "google",
+      "razao": "Instituicao publica",
+      "lat": -14.2036891,
+      "lng": -42.7601364
+    },
+    {
+      "nome": "LUAR",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -14.2274839,
+      "lng": -42.7786528
+    },
+    {
+      "nome": "Supermercado Santos",
+      "fonte": "google",
+      "razao": "Mercado",
+      "lat": -17.6862517,
+      "lng": -40.104422
+    },
+    {
+      "nome": "Residência Fazenda Santo Antônio",
+      "fonte": "google",
+      "razao": "Rural",
+      "lat": -14.7648291,
+      "lng": -39.098084
+    },
+    {
+      "nome": "Terminal Rodoviário de Ilhéus",
+      "fonte": "google",
+      "razao": "Infra/transporte",
+      "lat": -14.7968031,
+      "lng": -39.0588138
+    },
+    {
+      "nome": "San Francisco Church",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -14.8250763,
+      "lng": -39.033763
+    },
+    {
+      "nome": "BRUNO SANTOS - Corretor e Avaliador de Imóveis",
+      "fonte": "google",
+      "razao": "Imobiliaria",
+      "lat": -14.7940503,
+      "lng": -39.032046
+    },
+    {
+      "nome": "San Sebastian Cathedral",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -14.7994178,
+      "lng": -39.0322549
+    },
+    {
+      "nome": "Hospital São José",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -14.795996,
+      "lng": -39.0338681
+    },
+    {
+      "nome": "Casa Design",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -14.7903333,
+      "lng": -39.0400143
+    },
+    {
+      "nome": "Hotel Rio De Contas",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -14.1400589,
+      "lng": -39.7344548
+    },
+    {
+      "nome": "Adriana Imobiliária",
+      "fonte": "google",
+      "razao": "Imobiliaria",
+      "lat": -14.142201,
+      "lng": -39.7319863
+    },
+    {
+      "nome": "Loteria Sonho Real Santos 2000",
+      "fonte": "google",
+      "razao": "Comercio",
+      "lat": -11.8209635,
+      "lng": -42.61395419999999
+    },
+    {
+      "nome": "Casa De Apoio Santa Dulce Dos Pobres",
+      "fonte": "google",
+      "razao": "Assistencia social",
+      "lat": -11.3059095,
+      "lng": -41.8555032
+    },
+    {
+      "nome": "Casa do Construtor - Aluguel de Equipamentos",
+      "fonte": "google",
+      "razao": "Imobiliaria",
+      "lat": -11.2974343,
+      "lng": -41.8536036
+    },
+    {
+      "nome": "Roman Catholic Diocese of Irecê",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -11.2981588,
+      "lng": -41.8512784
+    },
+    {
+      "nome": "Comercial Carvalho",
+      "fonte": "google",
+      "razao": "Comercio",
+      "lat": -11.2995547,
+      "lng": -41.8203268
+    },
+    {
+      "nome": "casa da pessoa mais bonita do mundo",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -14.7881398,
+      "lng": -39.2816663
+    },
+    {
+      "nome": "CEMITÉRIO CAMPO SANTO",
+      "fonte": "google",
+      "razao": "Cemiterio",
+      "lat": -14.7849607,
+      "lng": -39.278368
+    },
+    {
+      "nome": "CASA & CONSTRUÇÃO",
+      "fonte": "google",
+      "razao": "Material construcao",
+      "lat": -14.7875075,
+      "lng": -39.2827393
+    },
+    {
+      "nome": "CASA DE COSTURA",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -14.7888084,
+      "lng": -39.2798727
+    },
+    {
+      "nome": "Residencial Casa Da Praia Itacaré",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -14.2790983,
+      "lng": -38.9872906
+    },
+    {
+      "nome": "Casa Arcádia Aluguel de Temporada Itacaré Bahia - 22 Hóspedes, Piscina, 5 Suítes, Churrasqueira | Vacation Home Villa Rental",
+      "fonte": "google",
+      "razao": "Imobiliaria",
+      "lat": -14.2771293,
+      "lng": -39.0006727
+    },
+    {
+      "nome": "Casa Flor Itacaré - aluguel temporada",
+      "fonte": "google",
+      "razao": "Imobiliaria",
+      "lat": -14.2765602,
+      "lng": -38.9963114
+    },
+    {
+      "nome": "Casa Fluir Espaço Cultural e Bar",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -14.278229,
+      "lng": -38.9948641
+    },
+    {
+      "nome": "Pousada Casa Mineira",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -14.2791831,
+      "lng": -38.9928622
+    },
+    {
+      "nome": "Pousada Zazá",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -14.2772293,
+      "lng": -38.9878167
+    },
+    {
+      "nome": "Condomínio Villas de São José",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -14.2924804,
+      "lng": -39.0011964
+    },
+    {
+      "nome": "Bazar Santo Antonio",
+      "fonte": "google",
+      "razao": "Comercio",
+      "lat": -14.6758341,
+      "lng": -39.3709523
+    },
+    {
+      "nome": "CASA DE CARNES SANTOS",
+      "fonte": "google",
+      "razao": "Acougue",
+      "lat": -15.2442767,
+      "lng": -40.2434646
+    },
+    {
+      "nome": "Paróquia Nossa Senhora do Rosário de Itapitanga",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -14.4232163,
+      "lng": -39.5646362
+    },
+    {
+      "nome": "Casa Tobias",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -11.183372,
+      "lng": -40.5125608
+    },
+    {
+      "nome": "Matrix Square",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -11.1840421,
+      "lng": -40.5092475
+    },
+    {
+      "nome": "Alto do Cruzeiro",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -11.1896558,
+      "lng": -40.5094364
+    },
+    {
+      "nome": "Loteamento Morro do Ouro",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -11.1699517,
+      "lng": -40.51752020000001
+    },
+    {
+      "nome": "Santa Casa de Jequié",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -13.8339847,
+      "lng": -40.0810956
+    },
+    {
+      "nome": "João Dourado",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -11.3488292,
+      "lng": -41.6554283
+    },
+    {
+      "nome": "Casa De Apoio Chorrochó-Bahia",
+      "fonte": "google",
+      "razao": "Assistencia social",
+      "lat": -9.4138142,
+      "lng": -40.5090678
+    },
+    {
+      "nome": "Casa",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -9.414994,
+      "lng": -40.5091051
+    },
+    {
+      "nome": "Casa Verde",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -9.4162508,
+      "lng": -40.50798289999999
+    },
+    {
+      "nome": "Casa Nova",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -9.4297621,
+      "lng": -40.5077458
+    },
+    {
+      "nome": "Diocesan Cathedral of Our Lady of caves",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -9.4122334,
+      "lng": -40.4992127
+    },
+    {
+      "nome": "CASA DE APOIO PILÃO ARCADO",
+      "fonte": "google",
+      "razao": "Assistencia social",
+      "lat": -9.4159435,
+      "lng": -40.5071506
+    },
+    {
+      "nome": "Casa do Queijo e Frios",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -9.4124506,
+      "lng": -40.5073979
+    },
+    {
+      "nome": "loja São Bento Fabricante de Artigos Religiosos",
+      "fonte": "google",
+      "razao": "Loja artigos",
+      "lat": -7.1999489,
+      "lng": -39.3178257
+    },
+    {
+      "nome": "Tok Essências e Ervas",
+      "fonte": "google",
+      "razao": "Loja artigos",
+      "lat": -12.8975222,
+      "lng": -38.3220023
+    },
+    {
+      "nome": "Palácio das Artes e Essências - Parque Shopping Bahia",
+      "fonte": "google",
+      "razao": "Shopping/infra",
+      "lat": -12.88717,
+      "lng": -38.318673
+    },
+    {
+      "nome": "Casa do Construtor Lauro de Freitas/BA - Aluguel de Equipamentos",
+      "fonte": "google",
+      "razao": "Imobiliaria",
+      "lat": -12.8699512,
+      "lng": -38.30145359999999
+    },
+    {
+      "nome": "Atacadão - Lauro de Freitas Caji",
+      "fonte": "google",
+      "razao": "Mercado",
+      "lat": -12.8913757,
+      "lng": -38.32571009999999
+    },
+    {
+      "nome": "Casa Dez",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.8806494,
+      "lng": -38.3265493
+    },
+    {
+      "nome": "Pousada Casa de Charme Lençóis",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.5704563,
+      "lng": -41.3891256
+    },
+    {
+      "nome": "Serra Do Salto em Licínio de Almeida BA",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -14.5244606,
+      "lng": -42.553247
+    },
+    {
+      "nome": "Luz da Vida Artigos Religiosos",
+      "fonte": "google",
+      "razao": "Loja artigos",
+      "lat": -12.0779049,
+      "lng": -45.8027244
+    },
+    {
+      "nome": "Chapel St. Anthony",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -12.080899,
+      "lng": -45.8096882
+    },
+    {
+      "nome": "Mercadona Mercado Da Dona De Casa",
+      "fonte": "google",
+      "razao": "Mercado",
+      "lat": -12.0797834,
+      "lng": -45.80590189999999
+    },
+    {
+      "nome": "Hotel Saint Louis",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.0900749,
+      "lng": -45.7778143
+    },
+    {
+      "nome": "Rota de Casa Adega e Distribuidora de Bebidas",
+      "fonte": "google",
+      "razao": "Comercio",
+      "lat": -12.0910846,
+      "lng": -45.7866101
+    },
+    {
+      "nome": "Efatá Casa de Carnes",
+      "fonte": "google",
+      "razao": "Acougue",
+      "lat": -12.0796284,
+      "lng": -45.8027585
+    },
+    {
+      "nome": "Casas Baiana",
+      "fonte": "google",
+      "razao": "Rede lojas",
+      "lat": -12.0966871,
+      "lng": -45.80137819999999
+    },
+    {
+      "nome": "Matriz Paróquia Nossa Senhora Aparecida",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -12.0859008,
+      "lng": -45.7985952
+    },
+    {
+      "nome": "Terminal Marítimo de Madre de Deus",
+      "fonte": "google",
+      "razao": "Infra/transporte",
+      "lat": -12.7459786,
+      "lng": -38.621297
+    },
+    {
+      "nome": "Hotel Beira Mar",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.7459469,
+      "lng": -38.6156807
+    },
+    {
+      "nome": "Pousada Vitória",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.7437673,
+      "lng": -38.6133679
+    },
+    {
+      "nome": "Capela de Santo Antônio da Aldeia",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -12.7555943,
+      "lng": -38.9490129
+    },
+    {
+      "nome": "Casa Paroquial de Maragogipe",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -12.7764667,
+      "lng": -38.9178745
+    },
+    {
+      "nome": "Casa Mariano",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.7782545,
+      "lng": -38.9203032
+    },
+    {
+      "nome": "Santo Mascote Pet Shop",
+      "fonte": "google",
+      "razao": "Pet shop",
+      "lat": -3.0784992,
+      "lng": -60.04862120000001
+    },
+    {
+      "nome": "Serra Da Santa Cruz Preservada - Monte Santo",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -10.4388112,
+      "lng": -39.3348389
+    },
+    {
+      "nome": "Museu do Sertão, Monte Santo - BA.",
+      "fonte": "google",
+      "razao": "Cultura/memorial",
+      "lat": -10.4382307,
+      "lng": -39.33474810000001
+    },
+    {
+      "nome": "Capela Da Serra",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -10.4404818,
+      "lng": -39.3377931
+    },
+    {
+      "nome": "serapião",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -10.4466101,
+      "lng": -39.3309594
+    },
+    {
+      "nome": "restaurante casa nordestina",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -10.44017,
+      "lng": -39.3318821
+    },
+    {
+      "nome": "Lira",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -10.4396273,
+      "lng": -39.3328763
+    },
+    {
+      "nome": "MADEIREIRA SOUSA E MATERIAL DE CONSTRUÇÃO",
+      "fonte": "google",
+      "razao": "Material construcao",
+      "lat": -10.4388638,
+      "lng": -39.3234986
+    },
+    {
+      "nome": "Casa Vasconcelos",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -11.5494626,
+      "lng": -41.1618019
+    },
+    {
+      "nome": "Morro do Chapéu",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -11.5492702,
+      "lng": -41.1572503
+    },
+    {
+      "nome": "UNIVERSAL CHURCH",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -11.5451861,
+      "lng": -41.1553507
+    },
+    {
+      "nome": "Pousada Santo Antônio",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -13.0064951,
+      "lng": -41.371025
+    },
+    {
+      "nome": "Villa Matilde - Casas de Temporada",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -13.0087727,
+      "lng": -41.3711295
+    },
+    {
+      "nome": "Pousada Recanto da Chapada",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -13.0075464,
+      "lng": -41.37442009999999
+    },
+    {
+      "nome": "Casa Branca Hotel",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -18.081596,
+      "lng": -39.545991
+    },
+    {
+      "nome": "Casa de dona Maria",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.61723,
+      "lng": -38.9834615
+    },
+    {
+      "nome": "Ruínas da Igreja Nova",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -14.2675447,
+      "lng": -43.1642941
+    },
+    {
+      "nome": "Secretaria Paroquial Nossa Senhora Mãe de Deus e dos Homens",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -14.2615038,
+      "lng": -43.1667457
+    },
+    {
+      "nome": "Paratinga Sucesso",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -12.6933624,
+      "lng": -43.1841193
+    },
+    {
+      "nome": "Bate Papo Restaurante e Eventos",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -9.405109399999999,
+      "lng": -38.2128202
+    },
+    {
+      "nome": "Igreja Matriz Nossa Senhora da Conceição",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -10.0087978,
+      "lng": -37.8935171
+    },
+    {
+      "nome": "Piraí do Norte",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -13.7602091,
+      "lng": -39.3748793
+    },
+    {
+      "nome": "ponto novo Bahia",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -10.8661021,
+      "lng": -40.1343196
+    },
+    {
+      "nome": "Santo Hostel",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -16.4420475,
+      "lng": -39.0690227
+    },
+    {
+      "nome": "CASA BATEIA",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -16.4256383,
+      "lng": -39.0934135
+    },
+    {
+      "nome": "Casa Bahia de Todos os Santos - Entire Place",
+      "fonte": "google",
+      "razao": "Rede lojas",
+      "lat": -16.432621,
+      "lng": -39.0873108
+    },
+    {
+      "nome": "Quijingue",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -10.7522881,
+      "lng": -39.2107181
+    },
+    {
+      "nome": "St. Antônio de Pádua Parish",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -11.4956693,
+      "lng": -39.4244573
+    },
+    {
+      "nome": "Pousada Santos Ribeira Do Pombal",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -10.8364354,
+      "lng": -38.5414487
+    },
+    {
+      "nome": "Santos & Santos | Advogados Associados",
+      "fonte": "google",
+      "razao": "Juridico",
+      "lat": -10.835111,
+      "lng": -38.5372828
+    },
+    {
+      "nome": "Fazenda Vaccaro - Hospedagem camponesa em Rio de Contas BA",
+      "fonte": "google",
+      "razao": "Rural",
+      "lat": -13.5327725,
+      "lng": -41.8711807
+    },
+    {
+      "nome": "Santa Casa Misericórdia Ruy Barbosa",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -12.2822244,
+      "lng": -40.4925499
+    },
+    {
+      "nome": "Diocese de Ruy Barbosa",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -12.2849325,
+      "lng": -40.491236
+    },
+    {
+      "nome": "A Casa do Espanto",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.9638356,
+      "lng": -38.50409
+    },
+    {
+      "nome": "Ateliê Casa 9",
+      "fonte": "google",
+      "razao": "Fabricante",
+      "lat": -12.96796,
+      "lng": -38.5072122
+    },
+    {
+      "nome": "a Casa do Rio Vermelho",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -13.007743,
+      "lng": -38.4897292
+    },
+    {
+      "nome": "Santa Casa da Bahia",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -12.9803952,
+      "lng": -38.5087211
+    },
+    {
+      "nome": "Casa de Artesanatos",
+      "fonte": "google",
+      "razao": "Loja artigos",
+      "lat": -9.733540999999999,
+      "lng": -38.1275685
+    },
+    {
+      "nome": "Praia de Santo Antônio - Santa Cruz Cabrália",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -16.1851209,
+      "lng": -38.962656
+    },
+    {
+      "nome": "Balsa Cabrália - Santo André",
+      "fonte": "google",
+      "razao": "Infra/transporte",
+      "lat": -16.2780816,
+      "lng": -39.0216263
+    },
+    {
+      "nome": "Balsa de Santo André x Cabrália",
+      "fonte": "google",
+      "razao": "Infra/transporte",
+      "lat": -16.269844,
+      "lng": -39.0223808
+    },
+    {
+      "nome": "Mirante centro historico",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -16.2774862,
+      "lng": -39.0240571
+    },
+    {
+      "nome": "Atacadão Santos",
+      "fonte": "google",
+      "razao": "Mercado",
+      "lat": -13.3886483,
+      "lng": -44.2058687
+    },
+    {
+      "nome": "Santa Maria da Vitória",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -13.3857026,
+      "lng": -44.1991852
+    },
+    {
+      "nome": "Hotel Fazenda Casa Forte",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.7791256,
+      "lng": -39.5184188
+    },
+    {
+      "nome": "Hotel Casa Grande",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.5483856,
+      "lng": -38.7091979
+    },
+    {
+      "nome": "Shop St. Anthony",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -12.9691359,
+      "lng": -39.2628897
+    },
+    {
+      "nome": "Hospital Santo Antônio",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -12.9653021,
+      "lng": -39.26032319999999
+    },
+    {
+      "nome": "Pousada Lua de Pedra",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.8210898,
+      "lng": -38.7916009
+    },
+    {
+      "nome": "Hospital Municipal Dom Antonio Monteiro",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -10.4614765,
+      "lng": -40.1832754
+    },
+    {
+      "nome": "OAB-BA Ordem dos Advogados do Brasil Subseção Senhor do Bonfim",
+      "fonte": "google",
+      "razao": "Juridico",
+      "lat": -10.4648476,
+      "lng": -40.184115
+    },
+    {
+      "nome": "Loteamento Colinas de Bonfim",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -10.4727655,
+      "lng": -40.1695973
+    },
+    {
+      "nome": "Loja Verdes Mares Senhor do Bonfim",
+      "fonte": "google",
+      "razao": "Comercio",
+      "lat": -10.459809,
+      "lng": -40.1780316
+    },
+    {
+      "nome": "Sento Sé",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -9.7411564,
+      "lng": -41.8831044
+    },
+    {
+      "nome": "Serra Dourada",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.7594434,
+      "lng": -43.9508324
+    },
+    {
+      "nome": "City of Serra Preta",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.1608343,
+      "lng": -39.3304951
+    },
+    {
+      "nome": "Shopping Serrinha",
+      "fonte": "google",
+      "razao": "Shopping/infra",
+      "lat": -11.672271,
+      "lng": -39.0013767
+    },
+    {
+      "nome": "Lar da Serenidade - Casa para idosos",
+      "fonte": "google",
+      "razao": "Assistencia social",
+      "lat": -11.6518543,
+      "lng": -38.9967091
+    },
+    {
+      "nome": "Prefeitura Municipal de Sítio do Mato",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -13.0784714,
+      "lng": -43.4678692
+    },
+    {
+      "nome": "Prefeitura Municipal de Sátiro Dias",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -11.6042648,
+      "lng": -38.5809877
+    },
+    {
+      "nome": "Prefeitura Municipal de São Domingos - Bahia",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -11.4648122,
+      "lng": -39.5277305
+    },
+    {
+      "nome": "Santa Casa De São Felix",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -12.6041566,
+      "lng": -38.9736453
+    },
+    {
+      "nome": "Prefeitura Municipal de São Gabriel - Bahia",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -11.2285407,
+      "lng": -41.8765835
+    },
+    {
+      "nome": "Matecol - São Miguel",
+      "fonte": "google",
+      "razao": "Industria/servicos",
+      "lat": -13.0471994,
+      "lng": -39.4555274
+    },
+    {
+      "nome": "Tanhaçu",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -14.0201135,
+      "lng": -41.2476486
+    },
+    {
+      "nome": "Monte De Tanquinho",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -11.9810085,
+      "lng": -39.1032941
+    },
+    {
+      "nome": "Tapiramutá",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -11.8471473,
+      "lng": -40.79290049999999
+    },
+    {
+      "nome": "CASA TUCANO",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -13.4384607,
+      "lng": -38.9016368
+    },
+    {
+      "nome": "Honório Pousada",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -10.9708176,
+      "lng": -38.7906769
+    },
+    {
+      "nome": "Pousada Pé De Arruda",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -10.9887248,
+      "lng": -38.8032566
+    },
+    {
+      "nome": "Hotel do Jorro",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -11.0336626,
+      "lng": -38.7954785
+    },
+    {
+      "nome": "Caldas Palace Hotel",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -11.0376109,
+      "lng": -38.7924355
+    },
+    {
+      "nome": "Uauá",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -9.8401248,
+      "lng": -39.4819919
+    },
+    {
+      "nome": "Varejão São Roque",
+      "fonte": "google",
+      "razao": "Mercado",
+      "lat": -10.7322329,
+      "lng": -41.3255934
+    },
+    {
+      "nome": "Casa Valença",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -13.382388,
+      "lng": -39.0702388
+    },
+    {
+      "nome": "Casa Nossa Senhora Aparecida",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -22.2441421,
+      "lng": -43.7013684
+    },
+    {
+      "nome": "Atacadão - Valença",
+      "fonte": "google",
+      "razao": "Mercado",
+      "lat": -13.3815683,
+      "lng": -39.0742262
+    },
+    {
+      "nome": "Monument To Indian",
+      "fonte": "google",
+      "razao": "Cultura/memorial",
+      "lat": -14.85337,
+      "lng": -40.839462
+    },
+    {
+      "nome": "Pousada Varzeana",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -11.6088032,
+      "lng": -40.13535660000001
+    },
+    {
+      "nome": "Gruta de Nossa Senhora da Soledade",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -13.2600175,
+      "lng": -43.4216203
+    },
+    {
+      "nome": "Bar elite Ibirapuã",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -17.6892688,
+      "lng": -40.1119189
+    },
+    {
+      "nome": "Ceak",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -13.5256137,
+      "lng": -39.9642035
+    },
+    {
+      "nome": "Secal - Sociedade Espírita Caminho de Luz",
+      "fonte": "google",
+      "razao": "Espiritismo/Kardecismo",
+      "lat": -12.0824945,
+      "lng": -45.8067182
+    },
+    {
+      "nome": "Sítio Raio de Luz - Aldeia Pena Verde",
+      "fonte": "google",
+      "razao": "Indigena",
+      "lat": -12.4582502,
+      "lng": -37.9705432
+    },
+    {
+      "nome": "Barbearia Deleão",
+      "fonte": "google",
+      "razao": "Salao",
+      "lat": -10.7306852,
+      "lng": -41.3235743
+    },
+    {
+      "nome": "Conceição da Feira Prefecture",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -12.5029176,
+      "lng": -39.0008154
+    },
+    {
+      "nome": "Orla de Itaparica",
+      "fonte": "google",
+      "razao": "Turismo",
+      "lat": -12.8854855,
+      "lng": -38.6845213
+    },
+    {
+      "nome": "Playa De Itaparica",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.8880384,
+      "lng": -38.67299149999999
+    },
+    {
+      "nome": "Pousada Eclipse",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.8973641,
+      "lng": -38.6614218
+    },
+    {
+      "nome": "Marina Itaparíca",
+      "fonte": "google",
+      "razao": "Infra/transporte",
+      "lat": -12.8887594,
+      "lng": -38.6834886
+    },
+    {
+      "nome": "Hotel Rio Acarai",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -13.9444289,
+      "lng": -39.1041918
+    },
+    {
+      "nome": "VLT - Parada Ilha de São João",
+      "fonte": "google",
+      "razao": "Infra/transporte",
+      "lat": -12.8198351,
+      "lng": -38.4588134
+    },
+    {
+      "nome": "Condomínio Ilha de Bali",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.2461087,
+      "lng": -38.9045315
+    },
+    {
+      "nome": "Alagoinhas ba",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.1564296,
+      "lng": -38.4045381
+    },
+    {
+      "nome": "Ilha de Santorini",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.1088896,
+      "lng": -38.4436462
+    },
+    {
+      "nome": "Condomínio Ilha de Capri Alagoinhas",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.1089263,
+      "lng": -38.44454500000001
+    },
+    {
+      "nome": "Residencial Ilha de Ibiza",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -14.86068,
+      "lng": -40.829835
+    },
+    {
+      "nome": "Saubara",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -12.7389558,
+      "lng": -38.768058
+    },
+    {
+      "nome": "Orla de São Francisco do Conde",
+      "fonte": "google",
+      "razao": "Turismo",
+      "lat": -12.6305618,
+      "lng": -38.6781845
+    },
+    {
+      "nome": "Terminal Fluvial de Valença",
+      "fonte": "google",
+      "razao": "Infra/transporte",
+      "lat": -13.3700582,
+      "lng": -39.0690604
+    },
+    {
+      "nome": "Estacionamento Deu Onda",
+      "fonte": "google",
+      "razao": "Estacionamento",
+      "lat": -13.371343,
+      "lng": -39.070326
+    },
+    {
+      "nome": "Hotel SESI Valença",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -13.3552751,
+      "lng": -39.0655357
+    },
+    {
+      "nome": "Ilha Grande",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -13.9166667,
+      "lng": -39
+    },
+    {
+      "nome": "Passarela Ilha Do Jegue",
+      "fonte": "google",
+      "razao": "Infra/transporte",
+      "lat": -14.7909011,
+      "lng": -39.2728286
+    },
+    {
+      "nome": "Terminal Rodoviário de Itabuna",
+      "fonte": "google",
+      "razao": "Infra/transporte",
+      "lat": -14.7923684,
+      "lng": -39.28262950000001
+    },
+    {
+      "nome": "Shopping Jequitibá",
+      "fonte": "google",
+      "razao": "Shopping/infra",
+      "lat": -14.7975085,
+      "lng": -39.2734375
+    },
+    {
+      "nome": "Ilhéus Airport",
+      "fonte": "google",
+      "razao": "Shopping/infra",
+      "lat": -14.8139815,
+      "lng": -39.0315656
+    },
+    {
+      "nome": "Jorge Amado Airport",
+      "fonte": "google",
+      "razao": "Shopping/infra",
+      "lat": -14.815643,
+      "lng": -39.033008
+    },
+    {
+      "nome": "Cabana Ilha De Ilhéus",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -14.7551291,
+      "lng": -39.0615845
+    },
+    {
+      "nome": "Ilhéus Hotel",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -14.799757,
+      "lng": -39.0342375
+    },
+    {
+      "nome": "Porto Seco de Ilhéus",
+      "fonte": "google",
+      "razao": "Infra/transporte",
+      "lat": -14.78547,
+      "lng": -39.0327491
+    },
+    {
+      "nome": "Mirante da Piedade",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -14.7942893,
+      "lng": -39.0334403
+    },
+    {
+      "nome": "Ayla Praia Hotel Centro Porto Seguro",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -16.4442044,
+      "lng": -39.0663748
+    },
+    {
+      "nome": "Pousada Tapuia",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -16.4478415,
+      "lng": -39.0621376
+    },
+    {
+      "nome": "Porto Seguro Praia Resort All Inclusive",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -16.4195079,
+      "lng": -39.0552482
+    },
+    {
+      "nome": "Safe Harbor Lighthouse",
+      "fonte": "google",
+      "razao": "Infra/transporte",
+      "lat": -16.4360768,
+      "lng": -39.0639677
+    },
+    {
+      "nome": "Residencial Ilha di Capri",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -14.8628975,
+      "lng": -40.81719469999999
+    },
+    {
+      "nome": "Lord Pousada & Restaurante",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -17.5387693,
+      "lng": -39.7141808
+    },
+    {
+      "nome": "Ilha Lesbos",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -17.5527377,
+      "lng": -39.7085951
+    },
+    {
+      "nome": "Teixeirinha",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -17.5276719,
+      "lng": -39.7375593
+    },
+    {
+      "nome": "Ilha Nossa Senhora",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -9.4171756,
+      "lng": -40.4725334
+    },
+    {
+      "nome": "Orla II - Juazeiro",
+      "fonte": "google",
+      "razao": "Turismo",
+      "lat": -9.409189399999999,
+      "lng": -40.5070558
+    },
+    {
+      "nome": "Lago de Paulo Afonso",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -9.4242791,
+      "lng": -38.234841
+    },
+    {
+      "nome": "Site iGuanambi",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -14.2229448,
+      "lng": -42.7782744
+    },
+    {
+      "nome": "Nicó Palace Hotel",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -14.2232456,
+      "lng": -42.7790791
+    },
+    {
+      "nome": "Senhor do Bonfim Ba",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -10.5391037,
+      "lng": -40.1353563
+    },
+    {
+      "nome": "Maior Sanfona do Mundo",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -10.4585786,
+      "lng": -40.1786532
+    },
+    {
+      "nome": "Prefeitura Municipal de Senhor do Bonfim",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -10.4618993,
+      "lng": -40.1912327
+    },
+    {
+      "nome": "Tempero Da Ilha",
+      "fonte": "google",
+      "razao": "Bar/restaurante",
+      "lat": -11.3041324,
+      "lng": -41.85541509999999
+    },
+    {
+      "nome": "Luis Eduardo Magalhaes Airport",
+      "fonte": "google",
+      "razao": "Shopping/infra",
+      "lat": -12.0712814,
+      "lng": -45.7128486
+    },
+    {
+      "nome": "Hotel Columbia Luís Eduardo Magalhães",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.0799893,
+      "lng": -45.7990053
+    },
+    {
+      "nome": "Porto Center Hotel",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.0902662,
+      "lng": -45.7988011
+    },
+    {
+      "nome": "Pak Suítes Hotel",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -12.0923565,
+      "lng": -45.7993921
+    },
+    {
+      "nome": "Spring Island Lagoon",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -15.2544179,
+      "lng": -40.257623
+    },
+    {
+      "nome": "IEL Eunápolis",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -16.3347161,
+      "lng": -39.5814861
+    },
+    {
+      "nome": "Raio do Sol - Artigos Africanos",
+      "fonte": "google",
+      "razao": "Loja artigos",
+      "lat": -13.8610743,
+      "lng": -40.07738459999999
+    },
+    {
+      "nome": "Afro-Brazilian Museum UFBA",
+      "fonte": "google",
+      "razao": "Cultura/memorial",
+      "lat": -12.9727902,
+      "lng": -38.5098637
+    },
+    {
+      "nome": "Cultural Afro Brazilian Museum",
+      "fonte": "google",
+      "razao": "Cultura/memorial",
+      "lat": -12.9760642,
+      "lng": -38.5125855
+    },
+    {
+      "nome": "Centro Cultural da Irmandade de Nossa Senhora da Boa Morte",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -12.6038105,
+      "lng": -38.9639615
+    },
+    {
+      "nome": "Taize Community Alagoinhas",
+      "fonte": "google",
+      "razao": "Espiritismo/Kardecismo",
+      "lat": -12.119204,
+      "lng": -38.4078865
+    },
+    {
+      "nome": "Centro de Espiritualidade Santa Tereza (Diocese de Serrinha)",
+      "fonte": "google",
+      "razao": "Igreja catolica/evangelica",
+      "lat": -11.6741021,
+      "lng": -39.0148652
+    },
+    {
+      "nome": "TerLuz",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -12.8285085,
+      "lng": -38.2568106
+    },
+    {
+      "nome": "Massapê Artesanato de Raiz",
+      "fonte": "google",
+      "razao": "Loja artigos",
+      "lat": -12.5551409,
+      "lng": -38.702784
+    },
+    {
+      "nome": "Fazenda Cassinum",
+      "fonte": "google",
+      "razao": "Rural",
+      "lat": -12.6727192,
+      "lng": -38.8600505
+    },
+    {
+      "nome": "Muritiba-Ba",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -12.6269775,
+      "lng": -38.9963194
+    },
+    {
+      "nome": "Culture Center",
+      "fonte": "google",
+      "razao": "Cultura/memorial",
+      "lat": -12.1491526,
+      "lng": -38.4244438
+    },
+    {
+      "nome": "Alagoinhas Prefecture",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -12.1377767,
+      "lng": -38.42400560000001
+    },
+    {
+      "nome": "ABSA Limpa fossa",
+      "fonte": "google",
+      "razao": "Industria/servicos",
+      "lat": -12.9787646,
+      "lng": -39.2618349
+    },
+    {
+      "nome": "Serra do Abiá",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -13.308419,
+      "lng": -39.33065939999999
+    },
+    {
+      "nome": "ESTRELA DALVA CENTRO HOTEL",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -16.4439553,
+      "lng": -39.0678041
+    },
+    {
+      "nome": "Kûara Hotel",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -16.5002673,
+      "lng": -39.0707566
+    },
+    {
+      "nome": "Eco Bahia Hotel Porto Seguro",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -16.4400977,
+      "lng": -39.0649372
+    },
+    {
+      "nome": "Balsa de Arraial d'Ajuda x Porto Seguro, Atendimento ao Turista, Reclamações e Sugestões, Gastronômica, Mercado",
+      "fonte": "google",
+      "razao": "Mercado",
+      "lat": -16.454277,
+      "lng": -39.0651435
+    },
+    {
+      "nome": "Portal Beach Hotel - Rede Soberano",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -16.4081496,
+      "lng": -39.0483931
+    },
+    {
+      "nome": "Aysú Trancoso Hotel",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -16.603327,
+      "lng": -39.10539199999999
+    },
+    {
+      "nome": "Arraial d'Ajuda Eco Resort",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -16.4582478,
+      "lng": -39.06041930000001
+    },
+    {
+      "nome": "Resort Arcobaleno All Inclusive",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -16.3950424,
+      "lng": -39.04136
+    },
+    {
+      "nome": "Passarela do Descobrimento, do Álcool, da Cultura, Atendimento ao Turista, Reclamações e Sugestões, Gastronômicas e Mercado",
+      "fonte": "google",
+      "razao": "Mercado",
+      "lat": -16.4527591,
+      "lng": -39.0633161
+    },
+    {
+      "nome": "Village Mutá Apart Hotel",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -16.3457938,
+      "lng": -39.0102213
+    },
+    {
+      "nome": "Porto Seguro Airport",
+      "fonte": "google",
+      "razao": "Shopping/infra",
+      "lat": -16.4410576,
+      "lng": -39.0806245
+    },
+    {
+      "nome": "Ceasa Juazeiro",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -9.446274899999999,
+      "lng": -40.4894924
+    },
+    {
+      "nome": "Bethany Community Center",
+      "fonte": "google",
+      "razao": "Espiritismo/Kardecismo",
+      "lat": -14.2570107,
+      "lng": -42.7364784
+    },
+    {
+      "nome": "Hotel Portal Guanambi",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -14.2111297,
+      "lng": -42.7681554
+    },
+    {
+      "nome": "Casa Pedacinho do Morro",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -13.2577276,
+      "lng": -43.41710279999999
+    },
+    {
+      "nome": "Santuário Lapa Hotel",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -13.257599,
+      "lng": -43.422231
+    },
+    {
+      "nome": "Hotel Conceito",
+      "fonte": "google",
+      "razao": "Hotel/pousada",
+      "lat": -13.2551851,
+      "lng": -43.4170799
+    },
+    {
+      "nome": "Inpasa - Unidade Luís Eduardo Magalhães",
+      "fonte": "google",
+      "razao": "Industria/servicos",
+      "lat": -12.1161356,
+      "lng": -45.9576851
+    },
+    {
+      "nome": "Eunapolis-BA",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -16.3595456,
+      "lng": -39.5737469
+    },
+    {
+      "nome": "Agazetabahia",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -16.37242,
+      "lng": -39.5764459
+    },
+    {
+      "nome": "Kasabella Acabamentos",
+      "fonte": "google",
+      "razao": "Loja",
+      "lat": -16.3499779,
+      "lng": -39.5795495
+    },
+    {
+      "nome": "Lazo Industria de Cosméticos",
+      "fonte": "google",
+      "razao": "Industria/servicos",
+      "lat": -12.8656069,
+      "lng": -38.3086002
+    },
+    {
+      "nome": "Inove Oftalmologia",
+      "fonte": "google",
+      "razao": "Saude/instituicao",
+      "lat": -12.8701992,
+      "lng": -38.2998725
+    },
+    {
+      "nome": "Shopping Center Candeias",
+      "fonte": "google",
+      "razao": "Shopping/infra",
+      "lat": -12.6667624,
+      "lng": -38.5451641
+    },
+    {
+      "nome": "JUNIOR SOM",
+      "fonte": "google",
+      "razao": "Servicos",
+      "lat": -12.6616174,
+      "lng": -38.53314659999999
+    },
+    {
+      "nome": "ENTRONCAMENTO",
+      "fonte": "google",
+      "razao": "Nome de municipio BA",
+      "lat": -12.5979008,
+      "lng": -38.3290253
+    },
+    {
+      "nome": "Cachoeira do Villa Rial",
+      "fonte": "google",
+      "razao": "Nao-religioso generico",
+      "lat": -12.5854635,
+      "lng": -38.8896013
+    }
+  ],
+  "google_ambiguous": [
+    {
+      "nome": "Riachao do Jacuipe/Ba.",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.8091292,
+      "lng": -39.3832607
+    },
+    {
+      "nome": "Poço do Diabo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.4618958,
+      "lng": -41.4146224
+    },
+    {
+      "nome": "Cachoeira do Sossego",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.5938248,
+      "lng": -41.4159844
+    },
+    {
+      "nome": "Ilha Coroa Vermelha",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -17.967566,
+      "lng": -39.207833
+    },
+    {
+      "nome": "Ilha do cascalho",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -17.8872354,
+      "lng": -39.3576592
+    },
+    {
+      "nome": "City of New Várzea",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.2549994,
+      "lng": -40.944901
+    },
+    {
+      "nome": "Varzea do poço BAHIA",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.5280938,
+      "lng": -40.3188803
+    },
+    {
+      "nome": "Templo Atuaro do Amanhecer - Luis Eduardo Magalhães BA",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0674347,
+      "lng": -45.7729673
+    },
+    {
+      "nome": "Casa Pequenina da Colina",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7936755,
+      "lng": -38.9322019
+    },
+    {
+      "nome": "Lar Espírita Maria De Nazaré - LEMANA",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.0049219,
+      "lng": -41.3736767
+    },
+    {
+      "nome": "Casa Ecumênica Pai José",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.4154232,
+      "lng": -39.0918692
+    },
+    {
+      "nome": "Spiritual Center Porto da Paz",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.4429401,
+      "lng": -39.0771186
+    },
+    {
+      "nome": "Igreja do Evangelho Quadrangular",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.688544,
+      "lng": -41.67704820000001
+    },
+    {
+      "nome": "Casa das Ervas Santa Bárbara",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.841247,
+      "lng": -38.5395905
+    },
+    {
+      "nome": "Casa de Tope",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7708036,
+      "lng": -38.3467887
+    },
+    {
+      "nome": "mar grande, vera cruz",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9580683,
+      "lng": -38.6101635
+    },
+    {
+      "nome": "Casa de Oração Irmãos em Cristo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.1274113,
+      "lng": -38.4419845
+    },
+    {
+      "nome": "Loja Maçônica 25 Dezembro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.1416465,
+      "lng": -38.4270104
+    },
+    {
+      "nome": "Sítio Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.156459,
+      "lng": -38.383279
+    },
+    {
+      "nome": "Casa da Paz Igreja do Santo Daime",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7901539,
+      "lng": -39.110418
+    },
+    {
+      "nome": "Casa São Luiz Materiais De Construção",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.0312019,
+      "lng": -39.6042004
+    },
+    {
+      "nome": "Casa Rio Paraguaçu",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.4853688,
+      "lng": -39.116978
+    },
+    {
+      "nome": "Casa de Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9671039,
+      "lng": -39.2565669
+    },
+    {
+      "nome": "Comunidade Quilombola Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.3837542,
+      "lng": -39.1331336
+    },
+    {
+      "nome": "Comunidade Casa de Oração",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.1372272,
+      "lng": -44.974194
+    },
+    {
+      "nome": "Centro Histórico de Belmonte",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -15.8605559,
+      "lng": -38.88142500000001
+    },
+    {
+      "nome": "Loja Maçônica União e Sigilo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -15.8578361,
+      "lng": -38.8805913
+    },
+    {
+      "nome": "Casa Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.2575718,
+      "lng": -43.4207038
+    },
+    {
+      "nome": "Casa Do Lavrador",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.2032455,
+      "lng": -41.6625088
+    },
+    {
+      "nome": "Casa do Vaqueiro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.2005966,
+      "lng": -41.681736
+    },
+    {
+      "nome": "Casa do Pão",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.2095317,
+      "lng": -41.6771667
+    },
+    {
+      "nome": "Park History Castro Alves",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.5336273,
+      "lng": -39.1911086
+    },
+    {
+      "nome": "Church of the Third Order of Mount Carmel",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6058248,
+      "lng": -38.9616455
+    },
+    {
+      "nome": "Convento Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.4868191,
+      "lng": -39.0450727
+    },
+    {
+      "nome": "Casa de Saúde Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -15.4167897,
+      "lng": -39.4949434
+    },
+    {
+      "nome": "Loja Santo André - CAMAMU",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.9465488,
+      "lng": -39.1021288
+    },
+    {
+      "nome": "Casa Santos - Materiais de Construção",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7201172,
+      "lng": -38.3177372
+    },
+    {
+      "nome": "Casa de Mãe",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7099041,
+      "lng": -38.3282741
+    },
+    {
+      "nome": "Paróquia Catedral São Thomaz de Cantuária",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7007198,
+      "lng": -38.3244555
+    },
+    {
+      "nome": "Gilmara Santos CASA",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6851909,
+      "lng": -38.331871
+    },
+    {
+      "nome": "Casa da Sereia Arembepe",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7730165,
+      "lng": -38.17660250000001
+    },
+    {
+      "nome": "Sitio Histórico Governador Paulo Souto",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -15.6811976,
+      "lng": -38.9445433
+    },
+    {
+      "nome": "R. Alto da Capelinha, 37 - Cs",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6723205,
+      "lng": -38.5365606
+    },
+    {
+      "nome": "Casa de Júlia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6735662,
+      "lng": -38.534843
+    },
+    {
+      "nome": "Casa de Pneus Ibiapina",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6668358,
+      "lng": -38.5373194
+    },
+    {
+      "nome": "SB dos Santos Barbosa",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6678461,
+      "lng": -38.5411569
+    },
+    {
+      "nome": "Casa De Jaci QG #CoisadeAurea",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6765629,
+      "lng": -38.5376389
+    },
+    {
+      "nome": "Sesi Candeias",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6474046,
+      "lng": -38.5353934
+    },
+    {
+      "nome": "Co-Catedral Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -17.7334782,
+      "lng": -39.2665352
+    },
+    {
+      "nome": "Casa de Castro Alves",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.969721,
+      "lng": -38.5082396
+    },
+    {
+      "nome": "Casa 27 - Centro de Castro Alves",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7607574,
+      "lng": -39.4267694
+    },
+    {
+      "nome": "Casa de ervas Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.2547467,
+      "lng": -38.970001
+    },
+    {
+      "nome": "Materiais de Construção Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.3317529,
+      "lng": -38.76802
+    },
+    {
+      "nome": "Casa Rosada Eventos",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.3299217,
+      "lng": -38.7645912
+    },
+    {
+      "nome": "Duarte drinks",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.3329161,
+      "lng": -38.7747683
+    },
+    {
+      "nome": "Paróquia Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8959561,
+      "lng": -41.9686894
+    },
+    {
+      "nome": "Casa Mariense Caixa Aqui",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.2479971,
+      "lng": -38.7498226
+    },
+    {
+      "nome": "Casa das Embalagens",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6726013,
+      "lng": -39.1025807
+    },
+    {
+      "nome": "Casa de Raçao Santo Antonio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6177453,
+      "lng": -38.3004035
+    },
+    {
+      "nome": "CATEDRAL - UNIVERSAL DIAS D’ÁVILA",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6120154,
+      "lng": -38.2988894
+    },
+    {
+      "nome": "Casa do Campo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9465335,
+      "lng": -39.5229315
+    },
+    {
+      "nome": "IGREJA CASA DE ORAÇÃO TABERNACULO SANTO",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.3547668,
+      "lng": -39.5868001
+    },
+    {
+      "nome": "Casa Lotérica Santos Dumont",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.3725955,
+      "lng": -39.5848389
+    },
+    {
+      "nome": "Casa das Bebidas",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.37329,
+      "lng": -39.5881157
+    },
+    {
+      "nome": "Casa do Caçador",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.3726664,
+      "lng": -39.5841824
+    },
+    {
+      "nome": "Casa De Ervas São Pedro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.254921,
+      "lng": -38.9692729
+    },
+    {
+      "nome": "Casa de ervas 7 linhas",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.2568241,
+      "lng": -38.9682408
+    },
+    {
+      "nome": "San Antonio house",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.2600104,
+      "lng": -38.9647867
+    },
+    {
+      "nome": "Casa do Adubo Gandu - Fertilizantes e Defensivos",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.7485162,
+      "lng": -39.4847472
+    },
+    {
+      "nome": "Casa do Led",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.2170374,
+      "lng": -42.782741
+    },
+    {
+      "nome": "Lojão Central",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.2281098,
+      "lng": -42.7810487
+    },
+    {
+      "nome": "Casa de Rações JVN",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.223554,
+      "lng": -42.7802865
+    },
+    {
+      "nome": "Casa da Criança - Guanambi",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.2237821,
+      "lng": -42.7734696
+    },
+    {
+      "nome": "Ateliê das festas",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.2181753,
+      "lng": -42.7811576
+    },
+    {
+      "nome": "Casa do sans",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.5807469,
+      "lng": -39.7810366
+    },
+    {
+      "nome": "Flour House",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8418591,
+      "lng": -39.03420570000001
+    },
+    {
+      "nome": "Casa do Som Brasil",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7977447,
+      "lng": -39.0353765
+    },
+    {
+      "nome": "Casa Worship Ilhéus",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8229,
+      "lng": -39.0292655
+    },
+    {
+      "nome": "House of Artists",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7914687,
+      "lng": -39.0621832
+    },
+    {
+      "nome": "Vini Áudio Tec – Instalação de Som em Ilhéus e região",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.807064,
+      "lng": -39.0577196
+    },
+    {
+      "nome": "Casa Na Rocha",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7844405,
+      "lng": -39.0549803
+    },
+    {
+      "nome": "Casa de Cida",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7843531,
+      "lng": -39.0531032
+    },
+    {
+      "nome": "Casa das baterias Ipiaú",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.132536,
+      "lng": -39.7342205
+    },
+    {
+      "nome": "Mundo Do Real",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.1408712,
+      "lng": -39.7317005
+    },
+    {
+      "nome": "Igreja de Sant'Ana",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.1327184,
+      "lng": -39.74822169999999
+    },
+    {
+      "nome": "Casa São Francisco",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.1582705,
+      "lng": -39.7388577
+    },
+    {
+      "nome": "Igreja Matriz Senhora Sant'Ana",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.156719,
+      "lng": -39.7401401
+    },
+    {
+      "nome": "Casa de ervas são Jorge",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.3036581,
+      "lng": -41.8564766
+    },
+    {
+      "nome": "Casa do Pintor",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.3020703,
+      "lng": -41.85586869999999
+    },
+    {
+      "nome": "Casa De Oração Maria De Nazaré",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.3066438,
+      "lng": -41.85476389999999
+    },
+    {
+      "nome": "Casa do Cimento",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.2906332,
+      "lng": -41.8501633
+    },
+    {
+      "nome": "Casa Rústica Irecê - Móveis e decoração de madeira de demolição",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.2951581,
+      "lng": -41.8520476
+    },
+    {
+      "nome": "Casa dos Radiadores",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.3003978,
+      "lng": -41.8550766
+    },
+    {
+      "nome": "Paróquia São Domingos de Gusmão - Centro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.3036922,
+      "lng": -41.8570471
+    },
+    {
+      "nome": "Sinos De Belem",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.3045772,
+      "lng": -41.8590416
+    },
+    {
+      "nome": "Ideal Veículos e Casa do Parabrisa",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.2946448,
+      "lng": -41.8518255
+    },
+    {
+      "nome": "Eletrosantos Electronic Components",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7859491,
+      "lng": -39.272057
+    },
+    {
+      "nome": "Estância Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7883215,
+      "lng": -39.25035099999999
+    },
+    {
+      "nome": "Casa do Puxador",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7897618,
+      "lng": -39.2793944
+    },
+    {
+      "nome": "Casa Do Vergalhão",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7904907,
+      "lng": -39.2847951
+    },
+    {
+      "nome": "Casa das Quentinhas",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7868572,
+      "lng": -39.2834285
+    },
+    {
+      "nome": "Espetinho do Santo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8084813,
+      "lng": -39.27812979999999
+    },
+    {
+      "nome": "Praça Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7875713,
+      "lng": -39.2836336
+    },
+    {
+      "nome": "Nossa Casa Itacaré",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.2800765,
+      "lng": -38.9938368
+    },
+    {
+      "nome": "Casa da Susan",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.2760851,
+      "lng": -38.9969388
+    },
+    {
+      "nome": "Casa Abade - Itacaré",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.2798474,
+      "lng": -38.9931762
+    },
+    {
+      "nome": "Casa Júnior Andrade",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.2871206,
+      "lng": -38.99592579999999
+    },
+    {
+      "nome": "CRAS - Itaguaçu da Bahia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.0077648,
+      "lng": -42.3939351
+    },
+    {
+      "nome": "Casa de cultura Junot Matos de Santana",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.6742792,
+      "lng": -39.3716865
+    },
+    {
+      "nome": "Casa de Isaque santos",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -15.1172159,
+      "lng": -40.0715163
+    },
+    {
+      "nome": "Casa em Jacobina",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.1799574,
+      "lng": -40.5398775
+    },
+    {
+      "nome": "Centro Cultural de Jacobina",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.1823375,
+      "lng": -40.5150928
+    },
+    {
+      "nome": "CAVALCANTI Madeira e Construção",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.1799103,
+      "lng": -40.5208823
+    },
+    {
+      "nome": "City of Jacobina",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.1833171,
+      "lng": -40.5097299
+    },
+    {
+      "nome": "Casa de Saúde Maria José Souza Santos",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.5295094,
+      "lng": -39.9717525
+    },
+    {
+      "nome": "Casa de Fogos Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.8692331,
+      "lng": -40.0601787
+    },
+    {
+      "nome": "Vila Temão",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.0152417,
+      "lng": -39.854017
+    },
+    {
+      "nome": "Posto Jitauna",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.017115,
+      "lng": -39.8859599
+    },
+    {
+      "nome": "Casa Rural - Materiais de Construção e Agro veterinária",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.3474178,
+      "lng": -41.6631013
+    },
+    {
+      "nome": "Casas Freire",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.3478562,
+      "lng": -41.6610124
+    },
+    {
+      "nome": "Casa São João",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.4425802,
+      "lng": -42.2394945
+    },
+    {
+      "nome": "Arca do Divino",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -7.199399999999999,
+      "lng": -39.316669
+    },
+    {
+      "nome": "Casa de Mateus",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -9.4154337,
+      "lng": -40.5104579
+    },
+    {
+      "nome": "Espaço de Eventos Monte Santo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -9.433013599999999,
+      "lng": -40.5144943
+    },
+    {
+      "nome": "Casa do Bolsa Família",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -9.411379,
+      "lng": -40.508446
+    },
+    {
+      "nome": "Defensoria Pública do Estado da Bahia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -9.4111152,
+      "lng": -40.5075307
+    },
+    {
+      "nome": "Central de Adubos - Matriz Juazeiro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -9.446664,
+      "lng": -40.48827989999999
+    },
+    {
+      "nome": "Palacio de Oyo Lauro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.8954094,
+      "lng": -38.3237379
+    },
+    {
+      "nome": "Casa Rainha do Mar",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.8952802,
+      "lng": -38.3249475
+    },
+    {
+      "nome": "Laticínios Santana Lauro de Freitas",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.8965478,
+      "lng": -38.3214385
+    },
+    {
+      "nome": "CASA DAS RESISTÊNCIAS",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.8891686,
+      "lng": -38.3224036
+    },
+    {
+      "nome": "Casa da Ferramenta",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0904128,
+      "lng": -45.7851992
+    },
+    {
+      "nome": "Casa da Lavoura LEM - Irrigação, Motores e Ferramentas",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0883799,
+      "lng": -45.7973025
+    },
+    {
+      "nome": "CASA DO INSTALADOR",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0789291,
+      "lng": -45.7974682
+    },
+    {
+      "nome": "Casa Neia Santos Clínica de Estética - Bahia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0796838,
+      "lng": -45.7859615
+    },
+    {
+      "nome": "Semprelar Centro - Luís Eduardo Magalhães",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0882824,
+      "lng": -45.79636439999999
+    },
+    {
+      "nome": "Hiper Santo Antonio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0813159,
+      "lng": -45.7873878
+    },
+    {
+      "nome": "Casa do Crochê e cia e Tiane Variedades",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0885814,
+      "lng": -45.8002861
+    },
+    {
+      "nome": "Comunidade Católica Divino Espírito Santo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0767944,
+      "lng": -45.7924801
+    },
+    {
+      "nome": "Casa de Bianca filha",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0641114,
+      "lng": -45.798085
+    },
+    {
+      "nome": "Super Santo Antonio Centro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0904011,
+      "lng": -45.7954158
+    },
+    {
+      "nome": "Casa Do Bolo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0980726,
+      "lng": -45.80096349999999
+    },
+    {
+      "nome": "Centro Comunitário Dom Ricardo - Luís Eduardo Magalhães - Com. Sta. Catarina",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.099567,
+      "lng": -45.7956517
+    },
+    {
+      "nome": "Madre de Deus - Ba",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.741582,
+      "lng": -38.6199365
+    },
+    {
+      "nome": "Mother Of God Of Orla",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7452538,
+      "lng": -38.6136437
+    },
+    {
+      "nome": "Mansão Drinks",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.745508,
+      "lng": -38.6174358
+    },
+    {
+      "nome": "Água Mineral J.Santos",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7398765,
+      "lng": -38.613365
+    },
+    {
+      "nome": "Funeraria Deus Conosco",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7410051,
+      "lng": -38.6159582
+    },
+    {
+      "nome": "Mata de São João",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.5321828,
+      "lng": -38.2960419
+    },
+    {
+      "nome": "Casa De Ervas Pai Joaquim",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.4394982,
+      "lng": -39.3317252
+    },
+    {
+      "nome": "Santuário da Santa Cruz de Monte Santo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.4298474,
+      "lng": -39.3391227
+    },
+    {
+      "nome": "Casa de residência",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.4381805,
+      "lng": -39.3290058
+    },
+    {
+      "nome": "Casa De Atendimento Ao Turista",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.4387799,
+      "lng": -39.3337375
+    },
+    {
+      "nome": "Casa da Pizza Três Irmãos",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.4361872,
+      "lng": -39.3339328
+    },
+    {
+      "nome": "Festejos De Todos Os Santos",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.4401101,
+      "lng": -39.32662440000001
+    },
+    {
+      "nome": "Cachoeira Ferro Doido",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.6252381,
+      "lng": -40.9997256
+    },
+    {
+      "nome": "Casa di Vó - hospedagem e condução turística",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.0101684,
+      "lng": -41.3707999
+    },
+    {
+      "nome": "Casa de Cultura Rio Fundo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.002564,
+      "lng": -39.108948
+    },
+    {
+      "nome": "Santos de Fé",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9975304,
+      "lng": -39.1104626
+    },
+    {
+      "nome": "City of New Ibiá",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.8109626,
+      "lng": -39.6244826
+    },
+    {
+      "nome": "Casa dos santos",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8493832,
+      "lng": -40.8285692
+    },
+    {
+      "nome": "Igreja Matriz de Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6892091,
+      "lng": -43.1833994
+    },
+    {
+      "nome": "Pé de Serra",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.8345297,
+      "lng": -39.61093
+    },
+    {
+      "nome": "Casa São Pedro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -23.5236129,
+      "lng": -46.806061
+    },
+    {
+      "nome": "Maison Piatã",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9490743,
+      "lng": -38.3783889
+    },
+    {
+      "nome": "Sítio Arqueológico Pilão Arcado Velho",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.1527868,
+      "lng": -42.4267142
+    },
+    {
+      "nome": "Igreja Da Antiga Pilão Arcado",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.1501399,
+      "lng": -42.4232397
+    },
+    {
+      "nome": "Casa de caçula",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.4071266,
+      "lng": -39.08205299999999
+    },
+    {
+      "nome": "Paróquia de Santo Antônio das Queimadas",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.9783685,
+      "lng": -39.6271764
+    },
+    {
+      "nome": "Rafael Jambeiro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.4059619,
+      "lng": -39.5038474
+    },
+    {
+      "nome": "Casa do irmão Santos e Val",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -9.609136,
+      "lng": -42.07562069999999
+    },
+    {
+      "nome": "Casa São Cristovão",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.8074938,
+      "lng": -39.3834897
+    },
+    {
+      "nome": "Casa do acarajé didy e Shell",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.8090318,
+      "lng": -39.3823923
+    },
+    {
+      "nome": "Espaço Católico Sagrada Família",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.837384,
+      "lng": -38.5366677
+    },
+    {
+      "nome": "Casa de plantas Dulce & Maria",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.8358639,
+      "lng": -38.5347349
+    },
+    {
+      "nome": "Casa de Campo Senhora Santana",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.5531902,
+      "lng": -41.8435128
+    },
+    {
+      "nome": "Casas Rio de Contas",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.5840778,
+      "lng": -41.8103072
+    },
+    {
+      "nome": "Casa Rio de Contas - Renovada e Ampliada - Three-Bedroom Home",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.5787602,
+      "lng": -41.8094101
+    },
+    {
+      "nome": "Igreja de Senhora Sant'Ana",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.5834852,
+      "lng": -41.8137502
+    },
+    {
+      "nome": "Fundação Casa de Rui Barbosa",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -22.9488011,
+      "lng": -43.1870261
+    },
+    {
+      "nome": "Rui Barbosa’s House",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -22.5041599,
+      "lng": -43.1767342
+    },
+    {
+      "nome": "Casa do Carnaval da Bahia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9724854,
+      "lng": -38.5108757
+    },
+    {
+      "nome": "Foundation Casa de Jorge Amado",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9716745,
+      "lng": -38.5084708
+    },
+    {
+      "nome": "Casa das Histórias de Salvador",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9728553,
+      "lng": -38.5135077
+    },
+    {
+      "nome": "Casa Cultural Reggae",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.970239,
+      "lng": -38.508476
+    },
+    {
+      "nome": "Loja Santa Bárbara",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9510558,
+      "lng": -38.5024832
+    },
+    {
+      "nome": "Casa de Câmara e Cadeia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.2792586,
+      "lng": -39.0243914
+    },
+    {
+      "nome": "Vila de Santo André",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.2516318,
+      "lng": -39.0162504
+    },
+    {
+      "nome": "Casa Cacau Bahia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.1851409,
+      "lng": -38.963748
+    },
+    {
+      "nome": "Núcleo Histórico Ferroviário de Santa Inês-BA",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.2986641,
+      "lng": -39.8220689
+    },
+    {
+      "nome": "Casa de Júnior e Zene",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.3881784,
+      "lng": -44.1895187
+    },
+    {
+      "nome": "Casa das Antenas",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.5506559,
+      "lng": -38.7082676
+    },
+    {
+      "nome": "Casa São Paulo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9700232,
+      "lng": -39.2620765
+    },
+    {
+      "nome": "CASA DO COURO LTDA",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9680229,
+      "lng": -39.2625564
+    },
+    {
+      "nome": "Casa das Sandálias",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9675387,
+      "lng": -39.2643037
+    },
+    {
+      "nome": "Casa das Espumas",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9674074,
+      "lng": -39.2632786
+    },
+    {
+      "nome": "R. Castro Alves, 169 - Cs A",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9688089,
+      "lng": -39.2586163
+    },
+    {
+      "nome": "Casa dos cabos SBA - Materiais elétricos",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.4284164,
+      "lng": -41.7698302
+    },
+    {
+      "nome": "Funerária Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.4174599,
+      "lng": -41.7751097
+    },
+    {
+      "nome": "Basílica do Senhor do Bonfim",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9237266,
+      "lng": -38.5080816
+    },
+    {
+      "nome": "Casa Ramalho - Móveis e Eletrodomésticos",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7609138,
+      "lng": -43.9506605
+    },
+    {
+      "nome": "Catedral Senhora Santana - Serrinha",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.6592992,
+      "lng": -39.0054704
+    },
+    {
+      "nome": "Casa da Fruta Verdura",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.4173015,
+      "lng": -40.2889032
+    },
+    {
+      "nome": "Casa de retiro Monte Ascenção",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.702894,
+      "lng": -38.3883168
+    },
+    {
+      "nome": "Home of the Giants",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.8218289,
+      "lng": -38.3826798
+    },
+    {
+      "nome": "Simões Filho Bahia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7827376,
+      "lng": -38.3896024
+    },
+    {
+      "nome": "Loja Casa do Santo Dom Aquino",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -15.6060674,
+      "lng": -56.09636570000001
+    },
+    {
+      "nome": "Sítio do Quinto",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.3651688,
+      "lng": -38.2033808
+    },
+    {
+      "nome": "Igreja Católica",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -9.4695494,
+      "lng": -40.7992373
+    },
+    {
+      "nome": "Arraial Santana",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.6709845,
+      "lng": -38.5147351
+    },
+    {
+      "nome": "São Desidério",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.361991,
+      "lng": -44.974374
+    },
+    {
+      "nome": "Igreja e Convento de Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6309584,
+      "lng": -38.6760363
+    },
+    {
+      "nome": "Câmara Municipal de Tabocas do Brejo Velho",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7019796,
+      "lng": -44.01237099999999
+    },
+    {
+      "nome": "Tanquinho, Bahia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.9772164,
+      "lng": -39.10309170000001
+    },
+    {
+      "nome": "Casa do Tucano",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -23.9866448,
+      "lng": -46.1879313
+    },
+    {
+      "nome": "Umburana de Dionísio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.8979126,
+      "lng": -41.60189
+    },
+    {
+      "nome": "Umburanas - Bahia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.7308303,
+      "lng": -41.3244261
+    },
+    {
+      "nome": "Lojas Santo Antônio",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.3724669,
+      "lng": -39.0733976
+    },
+    {
+      "nome": "Casa das Noivas",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.3746541,
+      "lng": -39.0639093
+    },
+    {
+      "nome": "Casa Mais Fácil | Valença 01",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.3498457,
+      "lng": -39.060581
+    },
+    {
+      "nome": "CASA DE VELAS JARDIM DE CIMA",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -22.2438551,
+      "lng": -43.70301800000001
+    },
+    {
+      "nome": "Casas de Retiro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.954575,
+      "lng": -38.6070971
+    },
+    {
+      "nome": "Casa de Antônia Fernandes Santos Silva década 1930",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8508607,
+      "lng": -40.8381413
+    },
+    {
+      "nome": "Casa da Robótica",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.852299,
+      "lng": -40.8228229
+    },
+    {
+      "nome": "Cantinho do Cristão",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8520462,
+      "lng": -40.84002479999999
+    },
+    {
+      "nome": "Casa Maria Mãe Dos Pobres",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.84952,
+      "lng": -40.8360304
+    },
+    {
+      "nome": "Casa da Sopa",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8541493,
+      "lng": -40.83389
+    },
+    {
+      "nome": "Sítio Santana",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.6144063,
+      "lng": -40.1312921
+    },
+    {
+      "nome": "Centro Cultural Tribo Bahia Capoeira - Itacaré",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.2791533,
+      "lng": -38.9912864
+    },
+    {
+      "nome": "Grupo Espírita Cruzada do Bem",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.1827626,
+      "lng": -40.5145102
+    },
+    {
+      "nome": "Centro Kardecista \"Nosso Lar\"",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7792747,
+      "lng": -38.9145833
+    },
+    {
+      "nome": "Casa Espírita Francisco Cândido Xavier - CEFRAN",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.4308673,
+      "lng": -38.3373891
+    },
+    {
+      "nome": "Escola Municipal Manoel Fidelis Da Silva",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.7540657,
+      "lng": -39.21084829999999
+    },
+    {
+      "nome": "Congregação Cristã no Brasil - Central - QUADRA 20",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -9.6157483,
+      "lng": -42.0768917
+    },
+    {
+      "nome": "Fundação Chico Xavier",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.2901319,
+      "lng": -39.0237871
+    },
+    {
+      "nome": "Comunidade Caxuté",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.467594,
+      "lng": -39.0901394
+    },
+    {
+      "nome": "Império do Real",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.5512,
+      "lng": -38.7074491
+    },
+    {
+      "nome": "Itaparica - Praia do Forte",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.8790897,
+      "lng": -38.6854084
+    },
+    {
+      "nome": "Fonte da Bica",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.8887839,
+      "lng": -38.6826354
+    },
+    {
+      "nome": "Coroa do Limo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.8907106,
+      "lng": -38.686541
+    },
+    {
+      "nome": "METODO SUPERA LUIS EDUARDO MAGALHÃES",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0843728,
+      "lng": -45.7916329
+    },
+    {
+      "nome": "Ilha 9 Coworking",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.2564243,
+      "lng": -38.9432721
+    },
+    {
+      "nome": "Itaparica Island",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.0152747,
+      "lng": -38.7053934
+    },
+    {
+      "nome": "Rodoviária de Valença BA",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.3757726,
+      "lng": -39.0766332
+    },
+    {
+      "nome": "Comunidade Ilha Verde",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8239208,
+      "lng": -39.3180627
+    },
+    {
+      "nome": "Ilha do pescador",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7715696,
+      "lng": -39.0155464
+    },
+    {
+      "nome": "Ilha do Frade",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8,
+      "lng": -39.0375
+    },
+    {
+      "nome": "Açai Expresso da Ilha",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8090128,
+      "lng": -39.02536910000001
+    },
+    {
+      "nome": "Eco Água Ilhéus",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7406265,
+      "lng": -39.0857032
+    },
+    {
+      "nome": "Ilha Pedra de Ilhéus",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7703707,
+      "lng": -39.0175604
+    },
+    {
+      "nome": "Condomínio Ilha Bela",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.4244538,
+      "lng": -39.0981767
+    },
+    {
+      "nome": "Vitória da conquista bahia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8497875,
+      "lng": -40.8376707
+    },
+    {
+      "nome": "Cristo de Mário Cravo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8359165,
+      "lng": -40.8283157
+    },
+    {
+      "nome": "Ilha society fest",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.1585522,
+      "lng": -45.0205511
+    },
+    {
+      "nome": "Ilha das Corredeiras",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.1557042,
+      "lng": -44.9947632
+    },
+    {
+      "nome": "Ilha do fogo",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -9.406230299999999,
+      "lng": -40.5055672
+    },
+    {
+      "nome": "Divisa de Estados: Pernambuco / Bahia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -9.4059945,
+      "lng": -40.5045148
+    },
+    {
+      "nome": "Ilha do Urubu - Paulo Afonso Bahia - Brasil",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -9.3924871,
+      "lng": -38.1974547
+    },
+    {
+      "nome": "Ilha do Ouro Condomínio Residence",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.1850027,
+      "lng": -40.5257718
+    },
+    {
+      "nome": "Condomínio Cidade do Ouro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.1895128,
+      "lng": -40.5419477
+    },
+    {
+      "nome": "Quilombo Erê",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.1865368,
+      "lng": -40.4992767
+    },
+    {
+      "nome": "Gruta da Ressurreição",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.258356,
+      "lng": -43.4203603
+    },
+    {
+      "nome": "IlhaBela",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7021344,
+      "lng": -38.3245796
+    },
+    {
+      "nome": "Igreja Messiânica Mundial do Brasil",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.1842239,
+      "lng": -40.5101995
+    },
+    {
+      "nome": "Coletivo de Entidades Negras",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9744771,
+      "lng": -38.5080554
+    },
+    {
+      "nome": "Foundation Terra Mirim",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.7325039,
+      "lng": -38.3968262
+    },
+    {
+      "nome": "Retiro de Itaparica",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9039873,
+      "lng": -38.6447644
+    },
+    {
+      "nome": "Associação do Culto Afro Itabunense",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.7928251,
+      "lng": -39.2605076
+    },
+    {
+      "nome": "Gruta De Belém",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.2566532,
+      "lng": -43.4169653
+    },
+    {
+      "nome": "UPAMC - UNIÃO CULTURAL DOS SACERDOTES AFRO DO MUNICÍPIO DE CAMAÇARI",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6505379,
+      "lng": -38.0975252
+    },
+    {
+      "nome": "Embasa, Santo Amaro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.5527501,
+      "lng": -38.7146331
+    },
+    {
+      "nome": "ADESA - Assembleia de Deus em Santo Amaro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.5507645,
+      "lng": -38.7092972
+    },
+    {
+      "nome": "Associação de Mães, Pais e Amigos dos Autistas de Serrinha",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -11.6631814,
+      "lng": -39.0057034
+    },
+    {
+      "nome": "Absa Locações",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9706574,
+      "lng": -39.2550919
+    },
+    {
+      "nome": "Associação Baiana de Avicultura",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.5033831,
+      "lng": -38.99987060000001
+    },
+    {
+      "nome": "Praça do Bosque",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.0320003,
+      "lng": -39.6003457
+    },
+    {
+      "nome": "City of Amargosa",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -13.0322097,
+      "lng": -39.6031422
+    },
+    {
+      "nome": "CÂMARA MUNICIPAL DE SÃO FRANCISCO DO CONDE",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6298211,
+      "lng": -38.6787021
+    },
+    {
+      "nome": "Campo Bahia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.2434906,
+      "lng": -39.011385
+    },
+    {
+      "nome": "High City (historic city)",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.4374357,
+      "lng": -39.0645609
+    },
+    {
+      "nome": "Cidade histórica Porto Seguro",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.4388208,
+      "lng": -39.0646755
+    },
+    {
+      "nome": "CEASA VITÓRIA DA CONQUISTA - CEAVIC",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -14.8442729,
+      "lng": -40.9069587
+    },
+    {
+      "nome": "Do Sahy mission",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.5191153,
+      "lng": -40.2314646
+    },
+    {
+      "nome": "EMBASA - Unidade Regional de Senhor do Bonfim",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.4571974,
+      "lng": -40.1776074
+    },
+    {
+      "nome": "Sac De Senhor Do Bonfim",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -10.4620346,
+      "lng": -40.1878233
+    },
+    {
+      "nome": "ABAPA | Associação Baiana dos Produtores de Algodão",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0869336,
+      "lng": -45.7567695
+    },
+    {
+      "nome": "Centro de Treinamento & Tecnologia da Abapa",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0826684,
+      "lng": -45.7126472
+    },
+    {
+      "nome": "ABAPA(Nova sede)",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.0803055,
+      "lng": -45.706978
+    },
+    {
+      "nome": "Eunapolis Bahia",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.3579397,
+      "lng": -39.5878265
+    },
+    {
+      "nome": "Department of Social Services",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.3800036,
+      "lng": -39.588783
+    },
+    {
+      "nome": "IGREJA BATISTA CANAA - EUNAPOLIS",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -16.3713868,
+      "lng": -39.5852634
+    },
+    {
+      "nome": "Condomínio Spazio Sunrise",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.8976991,
+      "lng": -38.3233386
+    },
+    {
+      "nome": "Enersol Brasil | Energia Solar | Lauro de Freitas",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.9030056,
+      "lng": -38.334978
+    },
+    {
+      "nome": "IBGE - Cachoeira",
+      "fonte": "google",
+      "razao": "Sem kw religiosa",
+      "lat": -12.6046443,
+      "lng": -38.96282980000001
+    }
+  ],
+  "google_real_count": 604,
+  "non_google_total": 937,
+  "summary": {
+    "google_total": 1221,
+    "google_fp": 323,
+    "google_ambiguous": 294,
+    "google_real": 604,
+    "non_google": 937,
+    "fp_rate_google": "26.5%",
+    "total_dataset": 2158,
+    "total_fp_all_sources": 323
+  }
+}
