@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Atlas aberto de terreiros de candomblé da Bahia.">
   <title>Ilê Axé Map — Terreiros de Candomblé da Bahia</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -60,6 +60,10 @@
     html, body { width: 100%; height: 100%; overflow: hidden; }
     body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 14px; line-height: 1.4; -webkit-font-smoothing: antialiased; }
     button, a { -webkit-tap-highlight-color: transparent; color: inherit; }
+    .skip-link { position: fixed; z-index: 30; top: 8px; left: 8px; padding: 8px 12px; border-radius: var(--radius-sm); background: var(--bg-elevated); color: var(--accent); transform: translateY(-150%); transition: transform .16s; }
+    .skip-link:focus { transform: translateY(0); }
+    button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible,
+    .filter-opt:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
     #map { position: fixed; inset: 0; }
     body:not(.map-ready) #map { visibility: hidden; }
     #map-loading {
@@ -137,6 +141,7 @@
       font-size: 11px; font-weight: 700; letter-spacing: .1em;
       text-transform: uppercase; color: var(--text-faint);
       cursor: pointer; user-select: none; margin-bottom: 4px;
+      width: 100%; border: 0; background: transparent; text-align: left; font: inherit;
     }
     .filter-group__title:hover { color: var(--text-muted); }
     .filter-group__title::after { content: '▾'; font-size: 9px; margin-left: auto; transition: transform .2s; }
@@ -159,6 +164,7 @@
     .filter-opt.is-disabled { cursor: default; color: var(--text-muted); }
     .filter-opt.is-disabled:hover { background: transparent; }
     .filter-opt.is-disabled input { cursor: not-allowed; }
+    .filter-opt input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
     /* === List === */
     .rail__viewport-label {
@@ -176,7 +182,8 @@
 
     .rail-item {
       display: flex; align-items: center; gap: 10px;
-      padding: 8px 14px; cursor: pointer;
+      padding: 8px 14px; cursor: pointer; width: 100%; text-align: left;
+      border-top: 0; border-right: 0; border-bottom: 0; background: transparent; color: inherit; font: inherit;
       border-left: 3px solid transparent; transition: background .12s;
     }
     .rail-item:hover { background: var(--accent-soft); }
@@ -238,13 +245,14 @@
     .info-panel__body dd { color: var(--text-muted); font-size: 12px; }
     .info-panel__close { position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elevated); color: var(--text-muted); cursor: pointer; font-size: 18px; }
 
-    /* === Markers === */
-    .marker { width: 44px; height: 44px; display: grid; place-items: center; padding: 0; border: 0; background: transparent!important; cursor: pointer; touch-action: manipulation; }
-    .marker__dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--bg-elevated); box-shadow: 0 1px 4px rgba(0,0,0,.25); pointer-events: none; transition: box-shadow .15s, opacity .15s; }
-    .marker:hover .marker__dot, .marker.is-active .marker__dot { box-shadow: 0 2px 8px rgba(0,0,0,.35), 0 0 0 4px var(--accent-soft); }
-    .marker:focus-visible { outline: 2px solid var(--accent); outline-offset: -8px; border-radius: 50%; }
-    .marker--unknown .marker__dot { width: 10px; height: 10px; background: transparent!important; border-color: #8A8177; opacity: .68; }
-    .marker--unknown:hover .marker__dot, .marker--unknown.is-active .marker__dot { opacity: 1; }
+    /* === GeoJSON layers === */
+    .map-error { display: flex!important; flex-direction: column; gap: 12px; padding: 24px; text-align: center; }
+    .map-error a { color: var(--accent); }
+    .map-error button { align-self: center; padding: 8px 14px; border: 1px solid var(--accent); border-radius: var(--radius-sm); background: var(--bg-elevated); color: var(--accent); cursor: pointer; font-weight: 600; }
+    .duplicate-picker { display: grid; gap: 4px; min-width: 210px; }
+    .duplicate-picker__title { font-size: 11px; color: var(--text-muted); margin-bottom: 3px; }
+    .duplicate-picker button { border: 0; border-radius: 4px; padding: 5px 6px; background: var(--accent-soft); color: var(--text); cursor: pointer; text-align: left; font: 600 12px var(--font-body); }
+    .duplicate-picker button:hover, .duplicate-picker button:focus-visible { background: var(--accent); color: var(--bg-elevated); }
 
     /* === MapLibre overrides === */
     .maplibregl-popup-content { min-width: 160px; padding: 8px 10px; border-radius: var(--radius-sm); background: var(--bg-elevated); border: 1px solid var(--border); box-shadow: var(--shadow); font-family: var(--font-body); }
@@ -287,7 +295,8 @@
   </style>
 </head>
 <body>
-  <div id="map" role="application" aria-label="Mapa de terreiros"></div>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+  <div id="map" role="region" aria-label="Mapa de terreiros"></div>
   <div id="map-loading" role="status" aria-live="polite">Carregando mapa…</div>
 
   <header class="topbar">
@@ -295,7 +304,7 @@
       <img src="assets/labhd-logo.webp" alt="LABHD/UFBA">
     </a>
     <div class="topbar__brand">
-      <div class="topbar__title">Ilê Axé <span>Map</span></div>
+      <h1 class="topbar__title">Ilê Axé <span>Map</span></h1>
       <svg class="topbar__brand-icon" viewBox="0 0 64 64" width="30" height="30" aria-hidden="true" focusable="false">
         <path class="leaf" d="M16 58 C14.5 44 12 31 10 19 C18.5 30 23 44 25 58 Z"/>
         <path class="leaf" d="M48 58 C49.5 44 52 31 54 19 C45.5 30 41 44 39 58 Z"/>
@@ -306,9 +315,10 @@
     <div class="topbar__count" id="count-badge" aria-live="polite">—</div>
     <div class="topbar__spacer"></div>
     <button class="topbar__btn" id="theme-btn" type="button" aria-label="Alternar tema" title="Tema">◐</button>
-    <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Sobre o projeto">Sobre</button>
+    <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Sobre o projeto" aria-expanded="false" aria-controls="info-panel">Sobre</button>
   </header>
 
+  <main id="main-content">
   <aside class="rail" id="rail" aria-label="Lista de terreiros">
     <button class="rail__handle" id="rail-handle" type="button" aria-expanded="false" aria-label="Abrir filtros e lista">
       <span>Filtros e lista</span><span class="rail__handle-icon" aria-hidden="true">⌃</span>
@@ -321,7 +331,7 @@
     <div class="rail__list" id="rail-list"></div>
   </aside>
 
-  <aside class="detail" id="detail" aria-live="polite" aria-label="Detalhes">
+  <aside class="detail" id="detail" role="dialog" aria-modal="true" aria-live="polite" aria-label="Detalhes" aria-hidden="true">
     <button class="detail__close" id="detail-close" type="button" aria-label="Fechar">×</button>
     <div class="detail__head">
       <div class="detail__nacao" id="detail-nacao"></div>
@@ -340,8 +350,8 @@
       <dl>
         <dt>Versão</dt><dd>v2.1</dd>
         <dt>Extração</dt><dd>2026-07-25</dd>
-        <dt>Total</dt><dd>2.091 registros</dd>
-        <dt>Georreferenciados</dt><dd>1.857</dd>
+        <dt>Total</dt><dd id="dataset-total">1.959 registros</dd>
+        <dt>Georreferenciados</dt><dd id="dataset-georef">1.725</dd>
         <dt>Nações</dt><dd>49 declarações do CEAO</dd>
       </dl>
       <h3>Fontes</h3>
@@ -367,6 +377,7 @@
       </p>
     </div>
   </aside>
+  </main>
 
   <script>
     /* Rótulos literais do CEAO; cores não representam macrogrupos analíticos. */
@@ -413,16 +424,35 @@
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'bottom-right');
     map.addControl(new maplibregl.ScaleControl({ maxWidth: 110, unit: 'metric' }), 'bottom-right');
 
-    let features = [], markers = [];
+    let features = [], sourceReady = false;
     let activeNacao = new Set(), activeFonte = new Set();
-    let selectedMarker = null, popup = null;
+    let selectedFeature = null, popup = null, lastTrigger = null;
     let searchQuery = '', listSubset = [];
+    let loadTimer = null, mapErrorShown = false;
+    const sourceId = 'terreiros';
+    const pointLayerId = 'unclustered-point';
 
     const $ = id => document.getElementById(id);
     const escapeHtml = v => String(v ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 
     function revealStableMap() {
+      if (loadTimer) { clearTimeout(loadTimer); loadTimer = null; }
       requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('map-ready')));
+    }
+
+    function showMapError(detail) {
+      if (mapErrorShown) return;
+      mapErrorShown = true;
+      const loading = $('map-loading');
+      loading.classList.add('map-error');
+      loading.innerHTML = '<strong>Não foi possível carregar o mapa.</strong><span>' + escapeHtml(detail || 'Verifique sua conexão e tente novamente.') + '</span><a href="metodologia.html">Consultar a metodologia</a><button type="button" id="map-retry">Tentar novamente</button>';
+      $('map-retry').addEventListener('click', function() {
+        mapErrorShown = false;
+        loading.classList.remove('map-error');
+        loading.textContent = 'Carregando mapa…';
+        loadTimer = setTimeout(() => showMapError('O carregamento demorou mais de 15 segundos.'), 15000);
+        map.setStyle(mapStyle());
+      });
     }
 
     function classify(p) {
@@ -452,7 +482,7 @@
       // --- Nação ---
       const nacaoGroup = document.createElement('div');
       nacaoGroup.className = 'filter-group';
-      nacaoGroup.innerHTML = '<div class="filter-group__title">Nação</div><div class="filter-group__body"></div>';
+      nacaoGroup.innerHTML = '<button class="filter-group__title" type="button" aria-expanded="true">Nação</button><div class="filter-group__body"></div>';
       const nacaoBody = nacaoGroup.querySelector('.filter-group__body');
 
       // Select-all checkbox
@@ -488,13 +518,16 @@
       });
 
       // Toggle collapse
-      nacaoGroup.querySelector('.filter-group__title').addEventListener('click', () => nacaoGroup.classList.toggle('collapsed'));
+      nacaoGroup.querySelector('.filter-group__title').addEventListener('click', function() {
+        const collapsed = nacaoGroup.classList.toggle('collapsed');
+        this.setAttribute('aria-expanded', String(!collapsed));
+      });
       holder.appendChild(nacaoGroup);
 
       // --- Fonte ---
       const fonteGroup = document.createElement('div');
       fonteGroup.className = 'filter-group';
-      fonteGroup.innerHTML = '<div class="filter-group__title">Fonte</div><div class="filter-group__body"></div>';
+      fonteGroup.innerHTML = '<button class="filter-group__title" type="button" aria-expanded="true">Fonte</button><div class="filter-group__body"></div>';
       const fonteBody = fonteGroup.querySelector('.filter-group__body');
 
       const allFonteCbId = 'all-fonte';
@@ -538,7 +571,10 @@
         fonteBody.appendChild(opt.el);
       }
 
-      fonteGroup.querySelector('.filter-group__title').addEventListener('click', () => fonteGroup.classList.toggle('collapsed'));
+      fonteGroup.querySelector('.filter-group__title').addEventListener('click', function() {
+        const collapsed = fonteGroup.classList.toggle('collapsed');
+        this.setAttribute('aria-expanded', String(!collapsed));
+      });
       holder.appendChild(fonteGroup);
     }
 
@@ -565,36 +601,70 @@
       allOpt.checkbox.checked = allChecked;
     }
 
-    /* === Markers === */
-    function addMarkers() {
-      features.forEach(feature => {
-        const [lng, lat] = feature.geometry.coordinates;
-        const el = document.createElement('button');
-        el.type = 'button'; el.className = 'marker';
-        el.setAttribute('aria-label', getName(feature.properties));
-        const dot = document.createElement('span');
-        dot.className = 'marker__dot';
-        dot.style.background = nationColor(feature.properties._nacao);
-        el.appendChild(dot);
-        el.classList.toggle('marker--unknown', feature.properties._nacao === 'Não informado');
-        const marker = new maplibregl.Marker({ element: el, anchor: 'center' }).setLngLat([lng, lat]).addTo(map);
-        el.addEventListener('mouseenter', () => showTooltip(feature));
-        el.addEventListener('mouseleave', () => { if (popup) popup.remove(); });
-        el.addEventListener('click', () => showDetail(feature, el));
-        markers.push({ feature, element: el, dot, marker });
-      });
+    /* === Fonte GeoJSON, clustering e interação === */
+    function colorExpression() {
+      const expression = ['match', ['get', '_nacao']];
+      categoryOrder.forEach(category => expression.push(category, nationColor(category)));
+      expression.push('#999999');
+      return expression;
+    }
+
+    function addMapLayers() {
+      if (!features.length || !map.isStyleLoaded()) return;
+      if (map.getSource(sourceId) && map.getLayer(pointLayerId)) { sourceReady = true; return; }
+      ['cluster-count', 'clusters', 'unclustered-point-hit', pointLayerId].forEach(id => { if (map.getLayer(id)) map.removeLayer(id); });
+      if (map.getSource(sourceId)) map.removeSource(sourceId);
+      map.addSource('terreiros', { type: 'geojson', data: { type: 'FeatureCollection', features: getVisibleFeatures() }, cluster: true, clusterMaxZoom: 14, clusterRadius: 50 });
+      map.addLayer({ id: 'clusters', type: 'circle', source: sourceId, filter: ['has', 'point_count'], paint: {
+        'circle-color': ['step', ['get', 'point_count'], '#0072B2', 20, '#D55E00', 100, '#CC79A7'],
+        'circle-radius': ['step', ['get', 'point_count'], 18, 20, 23, 100, 28], 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(255,255,255,.8)'
+      }});
+      map.addLayer({ id: 'cluster-count', type: 'symbol', source: sourceId, filter: ['has', 'point_count'], layout: { 'text-field': ['get', 'point_count_abbreviated'], 'text-size': 12, 'text-allow-overlap': true }, paint: { 'text-color': '#fff' } });
+      map.addLayer({ id: 'unclustered-point-hit', type: 'circle', source: sourceId, filter: ['!', ['has', 'point_count']], paint: { 'circle-radius': 22, 'circle-opacity': 0 } });
+      map.addLayer({ id: pointLayerId, type: 'circle', source: sourceId, filter: ['!', ['has', 'point_count']], paint: {
+        'circle-color': colorExpression(), 'circle-radius': ['interpolate', ['linear'], ['zoom'], 5, 7, 12, 10, 16, 12], 'circle-stroke-width': 2, 'circle-stroke-color': '#fff', 'circle-opacity': .92
+      }});
+      sourceReady = true;
+      bindLayerEvents();
     }
 
     function updateMarkers() {
-      let visible = 0;
-      markers.forEach(item => {
-        const nacao = item.feature.properties._nacao;
-        const fonte = getFonteLabel(item.feature.properties);
-        const show = activeNacao.has(nacao) && activeFonte.has(fonte);
-        item.element.style.display = show ? '' : 'none';
-        if (show) visible++;
+      const visibleFeatures = getVisibleFeatures();
+      if (sourceReady && map.getSource(sourceId)) map.getSource(sourceId).setData({ type: 'FeatureCollection', features: visibleFeatures });
+      $('count-badge').textContent = visibleFeatures.length.toLocaleString('pt-BR') + ' terreiros';
+    }
+
+    function bindLayerEvents() {
+      map.off('mouseenter', 'unclustered-point-hit', onPointEnter); map.off('mouseleave', 'unclustered-point-hit', onPointLeave);
+      map.off('mouseenter', pointLayerId, onPointEnter); map.off('mouseleave', pointLayerId, onPointLeave);
+      map.off('click', 'clusters', onClusterClick); map.off('click', 'unclustered-point-hit', onPointClick); map.off('focus', pointLayerId, onPointFocus);
+      map.on('mouseenter', 'unclustered-point-hit', onPointEnter); map.on('mouseleave', 'unclustered-point-hit', onPointLeave);
+      map.on('mouseenter', pointLayerId, onPointEnter); map.on('mouseleave', pointLayerId, onPointLeave);
+      map.on('click', 'clusters', onClusterClick); map.on('click', 'unclustered-point-hit', onPointClick); map.on('focus', pointLayerId, onPointFocus);
+    }
+    function pointFeature(event) { return event && event.features && event.features[0]; }
+    function onPointEnter(event) { map.getCanvas().style.cursor = 'pointer'; const feature = pointFeature(event); if (feature) showTooltip(feature); }
+    function onPointLeave() { map.getCanvas().style.cursor = ''; if (popup) popup.remove(); }
+    function onPointFocus(event) { const feature = pointFeature(event); if (feature) showTooltip(feature); }
+    function onClusterClick(event) {
+      const cluster = pointFeature(event); if (!cluster) return;
+      map.getSource(sourceId).getClusterExpansionZoom(cluster.properties.cluster_id, (error, zoom) => {
+        if (!error) map.easeTo({ center: cluster.geometry.coordinates, zoom: Math.min(zoom, 16), duration: reduceMotion ? 0 : 500, essential: true });
       });
-      $('count-badge').textContent = visible.toLocaleString('pt-BR') + ' terreiros';
+    }
+    function onPointClick(event) {
+      const feature = pointFeature(event); if (!feature) return;
+      const key = feature.geometry.coordinates.join(',');
+      const duplicates = getVisibleFeatures().filter(item => item.geometry.coordinates.join(',') === key);
+      lastTrigger = map.getCanvas();
+      if (duplicates.length > 1) showDuplicatePicker(duplicates); else showDetail(feature, lastTrigger);
+    }
+    function showDuplicatePicker(duplicates) {
+      if (popup) popup.remove();
+      const wrapper = document.createElement('div'); wrapper.className = 'duplicate-picker';
+      wrapper.innerHTML = '<div class="duplicate-picker__title">' + duplicates.length + ' registros neste ponto. Escolha um:</div>';
+      duplicates.forEach(feature => { const button = document.createElement('button'); button.type = 'button'; button.textContent = getName(feature.properties); button.addEventListener('click', () => { if (popup) popup.remove(); showDetail(feature, lastTrigger); }); wrapper.appendChild(button); });
+      popup = new maplibregl.Popup({ closeButton: true, closeOnClick: true, offset: 14 }).setLngLat(duplicates[0].geometry.coordinates).setDOMContent(wrapper).addTo(map);
     }
 
     function showTooltip(feature) {
@@ -606,10 +676,9 @@
         .addTo(map);
     }
 
-    function showDetail(feature, element) {
+    function showDetail(feature, trigger) {
       if (popup) popup.remove();
-      if (selectedMarker) selectedMarker.classList.remove('is-active');
-      selectedMarker = element; element.classList.add('is-active');
+      selectedFeature = feature; lastTrigger = trigger || lastTrigger || map.getCanvas();
       const p = feature.properties;
       const [lng, lat] = feature.geometry.coordinates;
       $('detail-nacao').textContent = p._nacao;
@@ -634,11 +703,15 @@
       html += '<a class="detail__link" href="https://www.openstreetmap.org/?mlat=' + lat + '&mlon=' + lng + '#map=18/' + lat + '/' + lng + '" target="_blank" rel="noopener">Ver no OpenStreetMap ↗</a>';
       if (p.ceao_id) html += '<a class="detail__link detail__link--warm" href="https://terreiros.ceao.ufba.br/detalhe/' + p.ceao_id + '" target="_blank" rel="noopener">Ver no CEAO/UFBA ↗</a>';
       $('detail-body').innerHTML = html;
-      $('detail').classList.add('open');
+      $('detail').classList.add('open'); $('detail').setAttribute('aria-hidden', 'false'); $('detail-close').focus();
       if (!reduceMotion) map.easeTo({ center: [lng, lat], zoom: Math.max(map.getZoom(), 13), duration: 600, essential: true });
     }
 
-    function closeDetail() { $('detail').classList.remove('open'); if (selectedMarker) selectedMarker.classList.remove('is-active'); selectedMarker = null; }
+    function closeDetail() {
+      $('detail').classList.remove('open'); $('detail').setAttribute('aria-hidden', 'true'); selectedFeature = null;
+      if (lastTrigger && typeof lastTrigger.focus === 'function') lastTrigger.focus();
+      lastTrigger = null;
+    }
 
     function getVisibleFeatures() {
       return features.filter(f => activeNacao.has(f.properties._nacao) && activeFonte.has(getFonteLabel(f.properties)));
@@ -684,15 +757,14 @@
           if (src.indexOf('terreiros.ceao.ufba.br/_FT/pq/') !== -1) { var m = src.match(/\/pq\/(\d+)\./); if (m) src = 'data/ceao/fotos/' + m[1] + '_thumb.jpg'; }
           photo = '<img class="rail-item__photo" src="' + escapeHtml(src) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">';
         }
-        html += '<div class="rail-item" style="--item-color:' + nationColor(p._nacao) + '"><div class="rail-item__dot"></div><div class="rail-item__body"><div class="rail-item__name">' + name + '</div><div class="rail-item__meta">' + meta + '</div></div>' + photo + '</div>';
+        html += '<button class="rail-item" type="button" style="--item-color:' + nationColor(p._nacao) + '" aria-label="Abrir detalhes de ' + name + '"><span class="rail-item__dot"></span><span class="rail-item__body"><span class="rail-item__name">' + name + '</span><span class="rail-item__meta">' + meta + '</span></span>' + photo + '</button>';
       });
       holder.innerHTML = html;
       holder.querySelectorAll('.rail-item').forEach(function(item, idx) {
         item.addEventListener('click', function() {
           if (idx < listSubset.length) {
             var f = listSubset[idx];
-            var mi = markers.find(function(m) { return m.feature === f; });
-            if (mi) showDetail(f, mi.element);
+            showDetail(f, item);
           }
         });
       });
@@ -706,13 +778,21 @@
       themeOverride = isDark ? 'light' : 'dark';
       applyTheme(); map.setStyle(mapStyle());
       map.once('styledata', function() {
-        markers.forEach(item => { item.dot.style.background = nationColor(item.feature.properties._nacao); });
+        if (features.length) addMapLayers();
         updateMarkers();
       });
     });
-    $('info-btn').addEventListener('click', function() { $('info-panel').classList.toggle('open'); });
-    $('info-close').addEventListener('click', function() { $('info-panel').classList.remove('open'); });
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { closeDetail(); $('info-panel').classList.remove('open'); } });
+    $('info-btn').addEventListener('click', function() { const open = $('info-panel').classList.toggle('open'); this.setAttribute('aria-expanded', String(open)); });
+    $('info-close').addEventListener('click', function() { $('info-panel').classList.remove('open'); $('info-btn').setAttribute('aria-expanded', 'false'); $('info-btn').focus(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { closeDetail(); $('info-panel').classList.remove('open'); $('info-btn').setAttribute('aria-expanded', 'false'); } });
+    $('detail').addEventListener('keydown', function(e) {
+      if (e.key !== 'Tab' || !$('detail').classList.contains('open')) return;
+      const focusable = $('detail').querySelectorAll('button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      const first = focusable[0], last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
     $('rail-handle').addEventListener('click', function() {
       const exp = $('rail').classList.toggle('expanded');
       this.setAttribute('aria-expanded', String(exp));
@@ -722,18 +802,29 @@
 
     var moveTimer = null;
     map.on('moveend', function() { if (moveTimer) clearTimeout(moveTimer); moveTimer = setTimeout(updateList, 200); });
+    map.on('error', function(event) {
+      const message = event && event.error && event.error.message ? event.error.message : 'O estilo ou os mapas-base não responderam.';
+      console.error('Erro do mapa:', event && event.error);
+      showMapError(message);
+    });
+    loadTimer = setTimeout(() => showMapError('O carregamento demorou mais de 15 segundos.'), 15000);
+    map.on('styledata', function() { if (features.length) addMapLayers(); });
 
     // === Load ===
     map.on('load', async function() {
       try {
-        const response = await fetch('data/terreiros_v2.geojson');
-        if (!response.ok) throw new Error(response.status);
-        const data = await response.json();
+        const [geoResponse, auditResponse] = await Promise.all([fetch('data/terreiros_v2.geojson'), fetch('data/auditoria_v2.json')]);
+        if (!geoResponse.ok) throw new Error('GeoJSON ' + geoResponse.status);
+        if (!auditResponse.ok) throw new Error('Auditoria ' + auditResponse.status);
+        const data = await geoResponse.json();
+        const audit = await auditResponse.json();
+        $('dataset-total').textContent = Number(audit.total_registros).toLocaleString('pt-BR') + ' registros';
+        $('dataset-georef').textContent = Number(audit.total_georreferenciados).toLocaleString('pt-BR');
         features = data.features
           .filter(f => f.geometry && f.geometry.type === 'Point' && Array.isArray(f.geometry.coordinates))
           .map(f => ({ ...f, properties: { ...(f.properties || {}), _nacao: classify(f.properties || {}) } }));
         buildFilters();
-        addMarkers();
+        addMapLayers();
         updateMarkers();
         updateList();
         if (map.loaded()) revealStableMap();
@@ -742,7 +833,7 @@
         console.error('Erro ao carregar:', error);
         $('rail-list').innerHTML = '<div class="rail__empty">Não foi possível carregar os dados</div>';
         $('count-badge').textContent = 'erro';
-        revealStableMap();
+        showMapError('Os dados de auditoria ou o GeoJSON não puderam ser carregados.');
       }
     });
   </script>

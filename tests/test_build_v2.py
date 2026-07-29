@@ -157,15 +157,13 @@ class SiteIntegrationTests(unittest.TestCase):
         self.assertNotIn("transition: transform .15s", html)
         self.assertNotIn("keto|ketu|nago|alaketo|alaketu", html)
 
-    def test_markers_have_mobile_touch_target_without_enlarging_visual_dot(self):
+    def test_geojson_layers_have_mobile_touch_target_without_dom_markers(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn(".marker { width: 44px; height: 44px;", html)
-        self.assertIn("touch-action: manipulation", html)
-        self.assertIn(".marker__dot { width: 12px; height: 12px;", html)
-        self.assertIn(".marker--unknown .marker__dot", html)
-        self.assertIn("el.appendChild(dot)", html)
-        self.assertIn("dot.style.background = nationColor", html)
-        self.assertIn("item.dot.style.background = nationColor", html)
+        self.assertIn("map.addSource('terreiros', { type: 'geojson'", html)
+        self.assertIn("cluster: true, clusterMaxZoom: 14, clusterRadius: 50", html)
+        self.assertIn("circle-radius': 22", html)
+        self.assertIn("unclustered-point", html)
+        self.assertNotIn("new maplibregl.Marker", html)
 
     def test_map_opens_at_bahia_extent_without_second_camera_animation(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
@@ -189,8 +187,9 @@ class SiteIntegrationTests(unittest.TestCase):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("v2.1", html)
         self.assertIn("1.155 terreiros", html)
-        self.assertIn("2.091 registros", html)
-        self.assertIn("1.857", html)
+        self.assertIn("1.959 registros", html)
+        self.assertIn("1.725", html)
+        self.assertIn("fetch('data/auditoria_v2.json')", html)
         self.assertIn("OSM + Google Places — 702 lugares", html)
         self.assertIn("49 declarações do CEAO", html)
 
