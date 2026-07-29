@@ -276,7 +276,7 @@
       .rail__handle-icon { font-size: 15px; transition: transform .2s; }
       .rail__handle[aria-expanded="true"] .rail__handle-icon { transform: rotate(180deg); }
       .filters { max-height: 200px; }
-      .detail { width: 100%; top: auto; bottom: 0; height: 75vh; border-right: none; border-top: 1px solid var(--border); border-radius: 16px 16px 0 0; transform: translateY(100%); }
+      .detail { width: 100%; top: auto; bottom: 0; max-height: 45vh; height: auto; border-right: none; border-top: 1px solid var(--border); border-radius: 16px 16px 0 0; transform: translateY(100%); overflow-y: auto; -webkit-overflow-scrolling: touch; }
       .detail.open { transform: translateY(0); }
       .detail__head { padding-top: 24px; }
       .detail__head::before { content: ""; position: absolute; top: 8px; left: calc(50% - 20px); width: 40px; height: 4px; border-radius: 4px; background: var(--border-strong); }
