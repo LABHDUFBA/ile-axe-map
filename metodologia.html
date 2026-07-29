@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Nota técnico-metodológica do Ilê Axé Map, atlas digital de terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia.">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="light">
   <title>Metodologia | Ilê Axé Map</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,15 +30,16 @@
       --shadow: 0 1px 3px rgba(28,25,23,.08), 0 4px 16px rgba(28,25,23,.05);
     }
     @media (prefers-color-scheme: dark) {
-      :root {
-        color-scheme: dark;
-        --bg: #14120f; --surface: #1e1b18; --text: #f2ede4;
-        --muted: #b6ada2; --faint: #8a8177;
-        --border: #2a2724; --border-strong: #3a3631;
-        --accent: #7a9bc0; --accent-hover: #9cb8d6;
-        --accent-soft: rgba(91,123,160,.14);
-        --warm: #e58a46; --warm-soft: rgba(217,118,43,.1);
-        --shadow: 0 1px 3px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.2);
+      :root:not([data-theme="light"]) {
+        /* Tema escuro desabilitado — metodologia sempre clara */
+        color-scheme: light;
+        --bg: #faf7f2; --surface: #fff; --text: #1c1917;
+        --muted: #6b6358; --faint: #8a8177;
+        --border: #e0d8cd; --border-strong: #c9c0b3;
+        --accent: #29405b; --accent-hover: #1e3247;
+        --accent-soft: rgba(41,64,91,.08);
+        --warm: #a8460f; --warm-soft: rgba(168,70,15,.08);
+        --shadow: 0 1px 3px rgba(28,25,23,.08), 0 4px 16px rgba(28,25,23,.05);
       }
     }
     [data-theme="light"] {
@@ -180,7 +181,6 @@
       <span class="header-section">Metodologia</span>
       <span class="header-spacer"></span>
       <a class="map-link" href="./"><span aria-hidden="true">←</span> Voltar ao mapa</a>
-      <button class="theme-button" id="theme-button" type="button" aria-label="Alternar tema" title="Alternar tema">◐</button>
     </div>
   </header>
 
@@ -588,14 +588,8 @@ latitude:  -18,4 a  -8,5
   </footer>
 
   <script>
-    const themeButton = document.getElementById('theme-button');
-    themeButton.addEventListener('click', () => {
-      const current = document.documentElement.dataset.theme;
-      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const next = current ? (current === 'dark' ? 'light' : 'dark') : (systemDark ? 'light' : 'dark');
-      document.documentElement.dataset.theme = next;
-      localStorage.setItem('ile-axe-theme', next);
-    });
+    /* Tema sempre claro na metodologia */
+    document.documentElement.dataset.theme = 'light';
 
     const tocLinks = [...document.querySelectorAll('.toc-list a')];
     const headings = tocLinks.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
