@@ -5,8 +5,8 @@
 **Versão do conjunto de dados:** 1.3<br>
 **Data de extração e integração:** 25 de julho de 2026<br>
 **Responsabilidade:** Leonardo Fernandes Nascimento — Laboratório de Humanidades Digitais da Universidade Federal da Bahia (LABHD/UFBA)<br>
-**Repositório:** <https://github.com/LABHDUFBA/terreiro-map><br>
-**Mapa:** <https://labhdufba.github.io/terreiro-map/>
+**Repositório:** <https://github.com/LABHDUFBA/ile-axe-map><br>
+**Mapa:** <https://labhdufba.github.io/ile-axe-map/>
 
 > **Nota de leitura.** O Ilê Axé Map não constitui um censo, um cadastro oficial nem um inventário exaustivo das comunidades religiosas afro-brasileiras da Bahia. Trata-se de uma infraestrutura cartográfica de pesquisa que integra registros oriundos de fontes públicas heterogêneas. Cada ponto representa um **registro consolidado**, com diferentes graus de completude e validação — não a certificação definitiva da existência, da identidade religiosa ou da situação atual de uma comunidade.
 
@@ -363,7 +363,7 @@ Não se recomenda utilizá-lo, sem validação adicional, para:
 
 ### Citação sugerida
 
-> NASCIMENTO, Leonardo Fernandes; LABORATÓRIO DE HUMANIDADES DIGITAIS DA UFBA. **Ilê Axé Map: terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia**. Versão 1.3. Salvador: Universidade Federal da Bahia, 2026. Disponível em: <https://labhdufba.github.io/terreiro-map/>. Acesso em: dia mês ano.
+> NASCIMENTO, Leonardo Fernandes; LABORATÓRIO DE HUMANIDADES DIGITAIS DA UFBA. **Ilê Axé Map: terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia**. Versão 1.3. Salvador: Universidade Federal da Bahia, 2026. Disponível em: <https://labhdufba.github.io/ile-axe-map/>. Acesso em: dia mês ano.
 
 Ao utilizar registros específicos, recomenda-se citar também a fonte de origem correspondente — OpenStreetMap, Google Places, CEAO/UFBA ou SEMUR/SEFAZ — e informar a versão do conjunto consultado.
 
@@ -376,7 +376,7 @@ Ao utilizar registros específicos, recomenda-se citar também a fonte de origem
 - **Overpass API.** Interface de consulta ao OpenStreetMap. Disponível em: <https://overpass-api.de/>.
 - **Prefeitura Municipal de Salvador — Secretaria Municipal da Reparação.** Mapa cartográfico de terreiros de Salvador, 2020. Documento distribuído pela infraestrutura geográfica da SEFAZ/Salvador.
 - **Google.** *Google Places*. Fonte de registros de lugares consultada no processo de coleta.
-- **Laboratório de Humanidades Digitais da UFBA.** Repositório do projeto. Disponível em: <https://github.com/LABHDUFBA/terreiro-map>.
+- **Laboratório de Humanidades Digitais da UFBA.** Repositório do projeto. Disponível em: <https://github.com/LABHDUFBA/ile-axe-map>.
 
 ---
 
