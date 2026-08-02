@@ -1,0 +1,107 @@
+{
+  "records": 3923,
+  "by_state": {
+    "PE": 1245,
+    "PA": 1078,
+    "RS": 1260,
+    "MG": 339,
+    "CE": 1
+  },
+  "cities": 75,
+  "top_cities": [
+    {
+      "city": "Belém",
+      "state": "PA",
+      "count": 784
+    },
+    {
+      "city": "Recife",
+      "state": "PE",
+      "count": 570
+    },
+    {
+      "city": "Porto Alegre",
+      "state": "RS",
+      "count": 475
+    },
+    {
+      "city": "Olinda",
+      "state": "PE",
+      "count": 223
+    },
+    {
+      "city": "Ananindeua",
+      "state": "PA",
+      "count": 203
+    },
+    {
+      "city": "Alvorada",
+      "state": "RS",
+      "count": 175
+    },
+    {
+      "city": "Belo Horizonte",
+      "state": "MG",
+      "count": 172
+    },
+    {
+      "city": "VIamão",
+      "state": "RS",
+      "count": 122
+    },
+    {
+      "city": "Jaboatão dos Guararapes",
+      "state": "PE",
+      "count": 120
+    },
+    {
+      "city": "Gravataí",
+      "state": "RS",
+      "count": 118
+    },
+    {
+      "city": "Paulista",
+      "state": "PE",
+      "count": 108
+    },
+    {
+      "city": "Canoas",
+      "state": "RS",
+      "count": 101
+    },
+    {
+      "city": "Marituba",
+      "state": "PA",
+      "count": 73
+    },
+    {
+      "city": "Guaíba",
+      "state": "RS",
+      "count": 69
+    },
+    {
+      "city": "São Leopoldo",
+      "state": "RS",
+      "count": 63
+    }
+  ],
+  "missing": {
+    "name": 1,
+    "leadership": 1,
+    "religion": 5,
+    "nation_line_raw": 93,
+    "regent_raw": 3,
+    "foundation_raw": 196,
+    "address_raw": 0,
+    "address_full_raw": 0,
+    "city": 0,
+    "state": 0,
+    "postcode": 96,
+    "email": 3236,
+    "photo_urls": 724
+  },
+  "duplicate_name_city_groups": 151,
+  "records_in_name_city_groups": 376,
+  "exact_duplicate_groups": 0,
+  "records_in_exact_duplicate_groups": 0
+}

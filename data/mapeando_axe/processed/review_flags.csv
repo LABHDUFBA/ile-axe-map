@@ -1,0 +1,98 @@
+source_record_id,name,city,state_raw,reasons,source_url
+3871,Agrupamento de Umbanda  Estrela Azul Choupana do Caboclo Cobra Coral,Belo Horizonte,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3713,Casa de Nossa Senhora do Perpétuo Socorro,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3706,Casa de Oração Vó Catarina,Belo Horizonte,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3695,Casa de Oyá,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3666,Casa Espírita Pai Xangô,Eldorado do Sul,CE,uf_incompativel_com_municipio,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3663,Casa Nagô Oxum Mirim,Olinda,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3367,Centro Cabocla Rosa Maria,Olinda,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3362,Centro Cacique Cobral Coral,São Leopoldo,RS,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3326,Centro de Quimbanda Rainha das Rainhas e Exu Tiriri,VIamão,RS,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3247,Centro de Umbanda José Esplandim,Igarassu,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3225,Centro de Umbanda Nossa Senhora do Carmo,Paulista,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3216,Centro de Umbanda Ogum Beira Mar e Iemanjá,Glorinha,RS,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3157,Centro de Umbanda Rainha das Flores,Igarassu,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3117,Centro Espírita Afro Umbandista Rei dos Índios,São Lourenço da Mata,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3083,Centro Espírita Cabocla Jacira,Camaragibe,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3076,Centro Espírita Cabocla Jacira,São Lourenço da Mata,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3062,Centro Espírita Cabocla Jandira,Igarassu,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3058,Centro Espírita Cabocla Jupiara,Igarassu,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3031,Centro Espírita Caboclo  Jupiracy,Olinda,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+3004,Centro Espírita Caboclo Jupiraci,Jaboatão dos Guararapes,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2969,Centro Espírita Caboclo Rio Negro,Paulista,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2958,Centro Espírita Caboclo Sete Liras do Mar,Belo Horizonte,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2929,Centro Espírita de Angola Abassá de Oyá,Jaboatão dos Guararapes,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2909,Centro Espírita de Umbanda Caboclo Malunguinho,Cabo de Santo Agostinho,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2906,Centro Espírita de Umbanda Caboclo Oxóssi,Itapissuma,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2871,Centro Espírita de Umbanda Mestre Aroeira,Cabo de Santo Agostinho,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2832,Centro Espírita de Umbanda Terreiro Santa Bárbara,Recife,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2748,Centro Espírita Mestre João,São Lourenço da Mata,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2731,Centro Espírita Nossa Senhora da Conceição,São Joaquim de Bicas,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2706,Centro Espírita Nossa Senhora do Rosário,Belo Horizonte,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2688,Centro Espírita Ogum Naruê,Belo Horizonte,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2668,Centro Espírita Pai Francisco de Aruanda,Belo Horizonte,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2656,Centro Espírita Pai Manuel de Aruanda,Belo Horizonte,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2576,Centro Espírita Senhora do Mar,Santa Luzia,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2474,Chão de Força José Pilintra,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2439,Floresta de Caboclo João da Mata e Cabocla Herondina,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2419,Fundere Ny Vodum Ajunssum Jiassu,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2276,Ilê Ase Ogunte Tundesy,Ananindeua,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2266,Ilê Asé Omo Odé Igbo,Ribeirao das Neves,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2241,Ilè Àse Sango Baru,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2225,Ilê Axé Africano de Oxum Azeri,Jaboatão dos Guararapes,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2198,Ilê Axé D' Ogum,Santa Luzia,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2192,Ilê Axé Danladeji,Belo Horizonte,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2168,Ilê Axé de Xangô,Santa Luzia,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2155,Ilê Axé Frekuem Opará,Santa Luzia,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2128,Ilê Axé Lebara Ainã Auê,Recife,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2098,Ilê Axé Obá Ogodô,Paulista,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+2044,Ilê Axé Oju Omin-Olá,Contagem,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1985,Ilê Axé Orum D'Oyá,Santa Luzia,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1955,Ilê Axé Oxum Ceci,Recife,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1911,Ilê Axé Oyá Bamborê,Camaragibe,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1866,Ilê Axé Oyá T´Ogum,Paulista,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1849,Ilê Axê Togun Maxé,Paulista,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1815,Ile Axe Xangô Obá Cosou,Jaboatão dos Guararapes,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1724,Ilê de Oxun Karê,Belo Horizonte,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1708,Ilê de Yansã,Jaboatão dos Guararapes,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1680,Ilê Óbá Izô,Ananindeua,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1666,Ilê Olü Ayê,Juatuba,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1653,Ilê Orixá Oguiãn Olabomaxó,Olinda,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1604,Ilê Wopo Olojukan,Belo Horizonte,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1598,Inzo Angola Kazembi Dia Kabila,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1589,Kaô Ilê Ojô Obá Kaô,Belo Horizonte,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1578,Mãe Cambinda de Aruanda,Ribeirao das Neves,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1549,Opó Ylê Axé Omo Agodô Obá Otu,Paulista,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1533,Palácio de Orixalá,Igarassu,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1523,Reinado de Iansã,Paulista,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1394,Roça Branca Terreiro de Candomblé,Belo Horizonte,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1391,Roça de Candomblé Filhos de Cassange,Santa Luzia,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1386,Roça Ilê Axé Obá Agodô,Olinda,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+1302,Seara de São Sebastião,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+989,Tenda de Paulina,Igarassu,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+984,Tenda de São Jorge e Jarina,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+969,Tenda de Umbanda Caboclo Oxossi,Camaragibe,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+945,Tenda de Umbanda Marinheiro Norato,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+942,Tenda de Umbanda Nossa Senhora da Conceição,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+938,Tenda de Umbanda Pai Joaquim,Recife,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+928,Tenda de Umbanda Senhor do Bonfim,Olinda,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+858,Tenda São José do Ribamar,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+856,Tenda Toya Jarina e Rompe Mato,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+670,Terreiro de Mina Nagô Cabocla Mariana,Marituba,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+532,Terreiro de Mina Santa Bárbara,Marituba,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+452,Terreiro de Pemba,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+422,Terreiro de São Miguel,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+380,Terreiro de Umbanda Caboclo Serra Negra,Santa Luzia,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+377,Terreiro de Umbanda Caboclo Tupinambá,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+351,Terreiro de Umbanda João da Mata e Herondina,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+318,Terreiro de Umbanda São Benedito,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+296,Terreiro do Caboclo Flecheiro,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+279,Terreiro Giro de Caboclo,Belém,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+272,Terreiro Mãe Maria de Angola e São Jerônimo,Belo Horizonte,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+218,Terreiro Olhos de Lebara,São Lourenço da Mata,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+211,Terreiro Pai João de Aruanda,Itatiaiuçu,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+206,Terreiro Rei Sebastião,Ananindeua,PA,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+136,Únzó Mazalundé,Vespasiano,MG,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+130,,Belém,PA,nome_ausente|cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+102,Ylê Ashé Logun Edé,Igarassu,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm
+17,Ylé Olódi Odo T´Ógiyán Íkosãn Tòsun Aladé,Abreu e Lima,PE,cep_ausente_ou_invalido,https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm

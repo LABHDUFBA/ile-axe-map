@@ -1,0 +1,28 @@
+{
+  "source_url": "https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm",
+  "collection_date": "2026-08-02",
+  "declared_researched_houses": 4045,
+  "published_records_main_page": 3923,
+  "published_records_regional_pages": 3922,
+  "regional_page_counts": {
+    "terreiros_belem": 1078,
+    "terreiros_belohorizonte": 339,
+    "terreiros_portoalegre": 1260,
+    "terreiros_recife": 1245
+  },
+  "main_only_record": {
+    "name": "Casa Espírita Pai Xangô",
+    "city": "Eldorado do Sul"
+  },
+  "raw_sha256": "bb4b70d6f38774b21f5390302143ca9de617a05e7272fdb5146ec38c3ba21e5e",
+  "records_with_email": 687,
+  "records_with_photo": 3199,
+  "unique_photo_urls": 5410,
+  "coordinates_available": 0,
+  "notes": [
+    "O total de 4.045 é declarado como universo pesquisado pelo projeto.",
+    "A página geral publica 3.923 fichas.",
+    "As páginas regionais publicam 3.922 fichas; a divergência foi preservada e documentada.",
+    "O site não fornece coordenadas; o GeoJSON usa geometry=null."
+  ]
+}
