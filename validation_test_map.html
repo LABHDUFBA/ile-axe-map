@@ -33,7 +33,7 @@ var cc={confirmado:'#2ecc71',confirmado_proximo:'#27ae60',google_melhor:'#29405B
 var cl={confirmado:'Confirmado',confirmado_proximo:'Confirmado proximo',google_melhor:'Google melhor',novo_google:'Novo (so Google)',novo_google_possivel:'Novo Google (possivel)',nominatim_melhor:'Nominatim melhor',divergente_inconclusivo:'Divergente (revisar)',proximo_nome_diferente:'Proximo, nome diferente',match_ruim:'Match ruim'};
 var F=D.features,e=function(v){return String(v==null?'':v).replace(/[&<>'"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]})};
 var map=L.map('map',{zoomControl:false,minZoom:4,maxZoom:16});L.control.zoom({position:'bottomright'}).addTo(map);L.control.scale({position:'bottomright',maxWidth:110,imperial:false}).addTo(map);
-L.tileLayer('https://tiles.openfreemap.org/styles/liberty/{z}/{x}/{y}.png',{maxZoom:19,attribution:'OpenFreeMap | OpenStreetMap'}).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,subdomains:'abcd',crossOrigin:true,attribution:'&copy; OpenStreetMap contributors &copy; CARTO'}).addTo(map);
 var b=L.latLngBounds(F.map(function(f){return[f.geometry.coordinates[1],f.geometry.coordinates[0]]}));map.fitBounds(b,{padding:[60,60],maxZoom:8,animate:false});
 var mc=L.markerClusterGroup({iconCreateFunction:function(c){var n=c.getChildCount(),s=n<10?33:n<100?40:50;return L.divIcon({html:'<span>'+n+'</span>',className:'tc',iconSize:[s,s]})},maxClusterRadius:50});
 var ac=new Set(Object.keys(cc)),sq='',sel=null,M=[];
