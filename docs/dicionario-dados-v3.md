@@ -6,6 +6,7 @@ Este documento descreve a entidade canônica de terreiro usada na unificação n
 
 - Todos os objetos canônicos rejeitam propriedades não declaradas.
 - Campos anuláveis aceitam `null` quando a informação não está disponível.
+- Todas as chaves listadas nos objetos canônicos são obrigatórias, inclusive quando o campo é anulável.
 - `entity_id` segue `trr_<identificador estável>`. O trecho após `trr_` pode conter letras, números, `_` e `-`.
 - Cada entidade registra ao menos uma fonte.
 - Datas de coleta, quando disponíveis, usam uma data de calendário válida no formato `AAAA-MM-DD`. Fontes legadas sem essa informação usam `null`.
@@ -128,22 +129,38 @@ Entidades com `status_territorial` igual a `sem_coordenada` devem usar `status_v
 
 ### `valores_originais`
 
-`valores_originais` é o contêiner explícito para preservar campos que existem nas fontes, mas não pertencem ao contrato canônico. Isso evita liberar propriedades arbitrárias no topo ou nos demais objetos da entidade.
+`valores_originais` é uma lista não vazia que preserva campos que existem nas fontes, mas não pertencem ao contrato canônico. Isso evita liberar propriedades arbitrárias no topo ou nos demais objetos da entidade. Cada item possui exatamente três chaves:
 
-As chaves de primeiro nível são nomes não vazios de fontes. O valor de cada fonte é um objeto livre com os campos e estruturas JSON recebidos daquela origem. Exemplo:
+| Campo | Tipo | Anulável | Descrição |
+|---|---|---:|---|
+| `fonte` | string não vazia | não | Nome estável da fonte. |
+| `id_fonte` | string não vazia | não | Identificador do registro dentro da fonte. |
+| `dados` | objeto JSON livre | não | Conteúdo interno recebido da origem, com propriedades e estruturas arbitrárias. |
+
+O vínculo com o registro de origem é definido pelo par (`fonte`, `id_fonte`). Assim, uma entidade pode preservar dois ou mais registros da mesma fonte, desde que tenham identificadores distintos. A unicidade desse par é verificada pelo builder, pois JSON Schema não expressa unicidade composta de forma simples. Exemplo:
 
 ```json
 {
-  "valores_originais": {
-    "ceao": {
-      "NOME": "Ilê Axé Exemplo",
-      "NACAO": "Keto"
+  "valores_originais": [
+    {
+      "fonte": "ceao",
+      "id_fonte": "123",
+      "dados": {
+        "NOME": "Ilê Axé Exemplo",
+        "NACAO": "Keto"
+      }
     },
-    "google": {
-      "types": ["place_of_worship", "establishment"]
+    {
+      "fonte": "ceao",
+      "id_fonte": "456",
+      "dados": {
+        "NOME": "Outra ficha vinculada à mesma entidade"
+      }
     }
-  }
+  ]
 }
 ```
 
 A preservação nesse campo não implica que o valor original foi escolhido para um campo canônico. A contribuição efetiva é registrada em `fontes[].campos_contribuidos`.
+
+`valores_originais` é conteúdo interno de proveniência e jamais deve ser exportado diretamente para o GeoJSON ou HTML público. Toda publicação deve selecionar apenas campos autorizados e filtrar contatos, dados pessoais e demais campos sensíveis presentes em `dados`.

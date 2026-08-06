@@ -105,9 +105,13 @@ def entidade_minima():
             "flags": [],
             "grupo_reconciliacao": None,
         },
-        "valores_originais": {
-            "ceao": {"NOME": "Ilê Axé Exemplo"},
-        },
+        "valores_originais": [
+            {
+                "fonte": "ceao",
+                "id_fonte": "123",
+                "dados": {"NOME": "Ilê Axé Exemplo"},
+            }
+        ],
     }
 
 
@@ -392,9 +396,61 @@ def test_entidade_exige_ao_menos_uma_fonte(schema, entidade_minima):
         jsonschema.validate(entidade, schema)
 
 
-def test_valores_originais_preservam_estruturas_json(schema, entidade_minima):
+def test_formato_antigo_de_valores_originais_e_rejeitado(schema, entidade_minima):
     entidade = copy.deepcopy(entidade_minima)
-    entidade["valores_originais"]["google"] = {
+    entidade["valores_originais"] = {
+        "ceao": {"NOME": "Ilê Axé Exemplo"},
+    }
+
+    with pytest.raises(jsonschema.ValidationError):
+        jsonschema.validate(entidade, schema)
+
+
+def test_valores_originais_aceitam_lista_minima_valida(schema, entidade_minima):
+    jsonschema.validate(entidade_minima, schema)
+
+
+def test_valores_originais_aceitam_dois_registros_da_mesma_fonte(
+    schema, entidade_minima
+):
+    entidade = copy.deepcopy(entidade_minima)
+    entidade["valores_originais"].append(
+        {
+            "fonte": "ceao",
+            "id_fonte": "456",
+            "dados": {"NOME": "Outro registro da mesma fonte"},
+        }
+    )
+
+    jsonschema.validate(entidade, schema)
+
+
+@pytest.mark.parametrize("campo", ["fonte", "id_fonte"])
+def test_valores_originais_rejeitam_fonte_e_id_vazios(
+    schema, entidade_minima, campo
+):
+    entidade = copy.deepcopy(entidade_minima)
+    entidade["valores_originais"][0][campo] = ""
+
+    with pytest.raises(jsonschema.ValidationError):
+        jsonschema.validate(entidade, schema)
+
+
+def test_valores_originais_rejeitam_campos_extras_no_item(
+    schema, entidade_minima
+):
+    entidade = copy.deepcopy(entidade_minima)
+    entidade["valores_originais"][0]["campo_extra"] = "valor"
+
+    with pytest.raises(jsonschema.ValidationError):
+        jsonschema.validate(entidade, schema)
+
+
+def test_valores_originais_preservam_payload_json_arbitrario(
+    schema, entidade_minima
+):
+    entidade = copy.deepcopy(entidade_minima)
+    entidade["valores_originais"][0]["dados"] = {
         "types": ["place_of_worship", "establishment"],
         "geometry": {"location": {"lat": -12.9, "lng": -38.5}},
         "campo_nulo": None,
@@ -415,9 +471,9 @@ def test_campos_arbitrarios_fora_de_valores_originais_sao_rejeitados(
         jsonschema.validate(entidade, schema)
 
 
-def test_valores_originais_sao_organizados_por_fonte(schema, entidade_minima):
+def test_valores_originais_exigem_ao_menos_um_registro(schema, entidade_minima):
     entidade = copy.deepcopy(entidade_minima)
-    entidade["valores_originais"] = {"ceao": "registro sem estrutura"}
+    entidade["valores_originais"] = []
 
     with pytest.raises(jsonschema.ValidationError):
         jsonschema.validate(entidade, schema)
