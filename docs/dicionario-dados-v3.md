@@ -129,7 +129,7 @@ Entidades com `status_territorial` igual a `sem_coordenada` devem usar `status_v
 
 ### `valores_originais`
 
-`valores_originais` é uma lista não vazia que preserva campos que existem nas fontes, mas não pertencem ao contrato canônico. Isso evita liberar propriedades arbitrárias no topo ou nos demais objetos da entidade. Cada item possui exatamente três chaves:
+`valores_originais` é uma lista não vazia em que cada item preserva o registro bruto completo de uma ocorrência de fonte, inclusive valores que também alimentam campos canônicos. Isso evita liberar propriedades arbitrárias no topo ou nos demais objetos da entidade. Cada item possui exatamente três chaves:
 
 | Campo | Tipo | Anulável | Descrição |
 |---|---|---:|---|
@@ -137,7 +137,7 @@ Entidades com `status_territorial` igual a `sem_coordenada` devem usar `status_v
 | `id_fonte` | string não vazia | não | Identificador do registro dentro da fonte. |
 | `dados` | objeto JSON livre | não | Conteúdo interno recebido da origem, com propriedades e estruturas arbitrárias. |
 
-O vínculo com o registro de origem é definido pelo par (`fonte`, `id_fonte`). Assim, uma entidade pode preservar dois ou mais registros da mesma fonte, desde que tenham identificadores distintos. A unicidade desse par é verificada pelo builder, pois JSON Schema não expressa unicidade composta de forma simples. Exemplo:
+O vínculo com o registro de origem é definido pelo par (`fonte`, `id_fonte`). Cada par presente em `valores_originais` deve corresponder a uma entrada em `fontes[]` com os mesmos valores. Assim, uma entidade pode preservar dois ou mais registros da mesma fonte, desde que tenham identificadores distintos. A unicidade dos pares em `valores_originais` e sua integridade referencial com `fontes[]` são verificadas pelos adaptadores e pelo builder, pois essas restrições não são expressas de forma simples no JSON Schema. Exemplo:
 
 ```json
 {
