@@ -280,12 +280,21 @@
       }
     },
     "valores_originais": {
-      "description": "Valores de origem agrupados pela fonte. Cada fonte preserva seus campos sem alterar o contrato canônico.",
-      "type": "object",
-      "propertyNames": {"minLength": 1},
-      "additionalProperties": {
+      "description": "Registros de origem preservados e vinculados pelo par fonte e id_fonte.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
         "type": "object",
-        "additionalProperties": true
+        "additionalProperties": false,
+        "required": ["fonte", "id_fonte", "dados"],
+        "properties": {
+          "fonte": {"type": "string", "minLength": 1},
+          "id_fonte": {"type": "string", "minLength": 1},
+          "dados": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
       }
     }
   },
