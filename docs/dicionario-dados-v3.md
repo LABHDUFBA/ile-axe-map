@@ -1,0 +1,132 @@
+# Dicionário de dados v3
+
+Este documento descreve a entidade canônica de terreiro usada na unificação nacional v3. O contrato executável está em `schemas/terreiro-v3.schema.json` e usa JSON Schema Draft 2020-12.
+
+## Convenções
+
+- Todos os objetos canônicos rejeitam propriedades não declaradas.
+- Campos anuláveis aceitam `null` quando a informação não está disponível.
+- `entity_id` segue `trr_<identificador estável>`. O trecho após `trr_` pode conter letras, números, `_` e `-`.
+- Cada entidade registra ao menos uma fonte.
+- Datas de coleta usam `AAAA-MM-DD`.
+- `confianca` varia de 0 a 1, inclusive.
+
+## Campos da entidade
+
+### Identificação canônica
+
+| Campo | Tipo | Obrigatório | Descrição |
+|---|---|---:|---|
+| `entity_id` | string | sim | Identificador canônico estável, por exemplo `trr_ceao_123`. |
+
+### `nome`
+
+| Campo | Tipo | Anulável | Descrição |
+|---|---|---:|---|
+| `preferido` | string não vazia | não | Nome escolhido para exibição e referência canônica. |
+| `aliases` | array de strings não vazias | não | Outras grafias ou nomes associados, sem duplicatas. |
+| `normalizado_match` | string não vazia | não | Forma normalizada usada somente para comparação e reconciliação. |
+
+### `localizacao`
+
+| Campo | Tipo | Anulável | Descrição |
+|---|---|---:|---|
+| `latitude` | número entre -90 e 90 | sim | Latitude em graus decimais. |
+| `longitude` | número entre -180 e 180 | sim | Longitude em graus decimais. |
+| `fonte_coordenada` | string | sim | Fonte da coordenada adotada. |
+| `precisao` | string | sim | Qualificação da precisão espacial informada pelo processo de origem. |
+| `uf` | string com 2 letras maiúsculas | sim | Sigla da unidade federativa. |
+| `municipio` | string | sim | Nome do município. |
+| `codigo_ibge_municipio` | string com 7 dígitos | sim | Código IBGE do município, preservando zeros à esquerda. |
+| `bairro` | string | sim | Bairro ou localidade equivalente. |
+| `cep` | string | sim | CEP conforme recebido ou normalizado pelo pipeline. |
+| `endereco_original` | string | sim | Endereço textual antes da decomposição em campos. |
+| `status_territorial` | enum | não | Resultado da avaliação territorial. |
+
+Valores de `status_territorial`:
+
+- `intersecao_ibge`: a coordenada intersecta o polígono territorial esperado.
+- `fora_poligono`: há coordenada, mas ela não intersecta o polígono esperado.
+- `sem_coordenada`: latitude e longitude não estão disponíveis e podem ser `null`.
+
+### `identidade_religiosa`
+
+| Campo | Tipo | Anulável | Descrição |
+|---|---|---:|---|
+| `tradicao_declarada` | string | sim | Tradição conforme declaração da fonte. |
+| `nacao_declarada` | string | sim | Nação conforme declaração da fonte, sem substituir o valor original. |
+| `componentes` | array de strings não vazias | não | Componentes identificados em uma declaração composta. |
+| `categoria_analitica` | string | sim | Categoria derivada para análise. |
+| `metodo` | enum | não | Método que produziu a categoria analítica. |
+| `revisao_humana` | enum | não | Situação da revisão humana da classificação. |
+
+Valores de `metodo`:
+
+- `declarado`
+- `normalizado_declaracao`
+- `inferido_nome`
+- `ausente`
+
+Valores de `revisao_humana`:
+
+- `aprovado`
+- `pendente`
+- `nao_aplicavel`
+
+### `identificadores`
+
+| Campo | Tipo | Anulável | Descrição |
+|---|---|---:|---|
+| `cnpj` | string | sim | CNPJ associado ao terreiro. |
+| `ceao_id` | string | sim | Identificador no cadastro do CEAO. |
+| `osm_id` | string | sim | Identificador do elemento no OpenStreetMap. |
+| `google_place_id` | string | sim | Place ID do Google. |
+
+### `fontes[]`
+
+O array deve conter ao menos um item. Cada item possui:
+
+| Campo | Tipo | Anulável | Descrição |
+|---|---|---:|---|
+| `fonte` | string não vazia | não | Nome estável da fonte, por exemplo `ceao`, `osm` ou `google`. |
+| `id_fonte` | string não vazia | não | Identificador do registro dentro da fonte. |
+| `url` | string | sim | URL de consulta ou referência do registro. |
+| `campos_contribuidos` | array de strings não vazias | não | Caminhos dos campos canônicos contribuídos pela fonte. |
+| `data_coleta` | string `AAAA-MM-DD` | não | Data em que o registro foi coletado. |
+
+### `qualidade`
+
+| Campo | Tipo | Anulável | Descrição |
+|---|---|---:|---|
+| `status_validacao_geografica` | enum | não | Síntese da validação geográfica. |
+| `confianca` | número entre 0 e 1 | não | Confiança agregada na entidade reconciliada. |
+| `flags` | array de strings não vazias | não | Sinais de qualidade ou pendências, sem duplicatas. |
+| `grupo_reconciliacao` | string | sim | Identificador do grupo de registros considerado na reconciliação. |
+
+Valores de `status_validacao_geografica`:
+
+- `confirmado`
+- `provavel`
+- `inconclusivo`
+
+### `valores_originais`
+
+`valores_originais` é o contêiner explícito para preservar campos que existem nas fontes, mas não pertencem ao contrato canônico. Isso evita liberar propriedades arbitrárias no topo ou nos demais objetos da entidade.
+
+As chaves de primeiro nível são nomes não vazios de fontes. O valor de cada fonte é um objeto livre com os campos e estruturas JSON recebidos daquela origem. Exemplo:
+
+```json
+{
+  "valores_originais": {
+    "ceao": {
+      "NOME": "Ilê Axé Exemplo",
+      "NACAO": "Keto"
+    },
+    "google": {
+      "types": ["place_of_worship", "establishment"]
+    }
+  }
+}
+```
+
+A preservação nesse campo não implica que o valor original foi escolhido para um campo canônico. A contribuição efetiva é registrada em `fontes[].campos_contribuidos`.
