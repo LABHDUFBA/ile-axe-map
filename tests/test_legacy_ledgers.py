@@ -49,6 +49,19 @@ def test_cnpj_invalido_no_motivo_falha_em_vez_de_virar_identidade_forte():
         build_stable_identity(row)
 
 
+def test_cnpj_com_mais_de_14_digitos_nao_e_truncado_para_identidade_forte():
+    row = {
+        "nome": "Registro malformado",
+        "fonte": "CNPJ/Receita",
+        "latitude": "-4.0",
+        "longitude": "-49.0",
+        "motivo": "CNPJ 054192050001209",
+    }
+
+    with pytest.raises(ValueError, match="CNPJ inválido.*054192050001209"):
+        build_stable_identity(row)
+
+
 def test_fallback_sintetico_e_deterministico_sem_id_nativo():
     row = {
         "nome": "  Ilê   Axé Àṣẹ  ",
