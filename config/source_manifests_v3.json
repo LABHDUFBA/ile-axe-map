@@ -97,8 +97,8 @@
     {
       "name": "exclusoes_curadas",
       "path": "data/exclusoes_curadas.csv",
-      "sha256": "0c81fdfb8351a992ef984621c1eb9aff73d322f932926daf4093abeb0074a5bb",
-      "count": 145,
+      "sha256": "4649e913d7f33dbcebf1877f9b1fc1f008f33227ff348da148a940f9270dc8ac",
+      "count": 146,
       "id_field": null,
       "sensitivity": "interno",
       "kind": "ledger_curado",
