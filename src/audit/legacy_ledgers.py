@@ -1,7 +1,9 @@
 import csv
 import hashlib
 import json
+import os
 import re
+import tempfile
 import unicodedata
 from collections import Counter
 from pathlib import Path
@@ -43,8 +45,14 @@ def validate_manifest(root, manifest):
     required = {"name", "path", "sha256", "count", "id_field", "sensitivity", "kind"}
     validated = {}
     for item in manifest["inputs"]:
-        if not required.issubset(item):
-            raise ValueError("manifest sem metadados obrigatórios")
+        missing = sorted(required - set(item))
+        if missing:
+            name = item.get("name", "<sem name>")
+            path_value = item.get("path", "<sem path>")
+            raise ValueError(
+                "manifest sem metadados obrigatórios: "
+                f"name={name}, path={path_value}, ausentes={','.join(missing)}"
+            )
         relative = Path(item["path"])
         if relative.is_absolute():
             raise ValueError("manifest exige path local relativo")
@@ -53,22 +61,49 @@ def validate_manifest(root, manifest):
             raise ValueError("path do manifest escapa da raiz")
         actual_hash = sha256_file(path)
         if actual_hash != item["sha256"]:
-            raise ValueError(f"hash divergente: {item['name']}")
-        if _record_count(path) != item["count"]:
-            raise ValueError(f"contagem divergente: {item['name']}")
+            raise ValueError(
+                "hash divergente: "
+                f"name={item['name']}, path={item['path']}, "
+                f"esperado={item['sha256']}, encontrado={actual_hash}"
+            )
+        actual_count = _record_count(path)
+        if actual_count != item["count"]:
+            raise ValueError(
+                "contagem divergente: "
+                f"name={item['name']}, path={item['path']}, "
+                f"esperado {item['count']}, encontrado {actual_count}"
+            )
         validated[item["name"]] = actual_hash
     return validated
+
+
+def _valid_cnpj(digits):
+    if len(digits) != 14 or len(set(digits)) == 1:
+        return False
+
+    def check_digit(prefix, weights):
+        total = sum(int(digit) * weight for digit, weight in zip(prefix, weights))
+        remainder = total % 11
+        return "0" if remainder < 2 else str(11 - remainder)
+
+    first = check_digit(digits[:12], (5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2))
+    second = check_digit(
+        digits[:12] + first, (6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2)
+    )
+    return digits[-2:] == first + second
 
 
 def build_stable_identity(row):
     cnpjs = re.findall(r"(?:\d[.\-/ ]*){14}", row.get("motivo", ""))
     if cnpjs:
-        digits = re.sub(r"\D", "", cnpjs[0])
-        if len(digits) == 14:
-            return {
-                "stable_key": f"cnpj:{digits}",
-                "identity_synthetic": False,
-            }
+        raw_cnpj = cnpjs[0].strip()
+        digits = re.sub(r"\D", "", raw_cnpj)
+        if not _valid_cnpj(digits):
+            raise ValueError(f"CNPJ inválido na curadoria: {raw_cnpj}")
+        return {
+            "stable_key": f"cnpj:{digits}",
+            "identity_synthetic": False,
+        }
 
     basis = "|".join(
         (
@@ -83,31 +118,58 @@ def build_stable_identity(row):
 
 
 def normalize_curated_ledger(source_path, output_path):
+    source_path = Path(source_path)
+    output_path = Path(output_path)
     with source_path.open(encoding="utf-8", newline="") as handle:
         reader = csv.DictReader(handle)
-        fieldnames = list(reader.fieldnames or [])
         rows = list(reader)
 
     output_rows = []
-    for row in rows:
+    seen_keys = {}
+    for line_number, row in enumerate(rows, start=2):
         identity = build_stable_identity(row)
+        stable_key = identity["stable_key"]
+        if stable_key in seen_keys:
+            raise ValueError(
+                f"stable_key duplicada {stable_key}: "
+                f"linhas {seen_keys[stable_key]} e {line_number}"
+            )
+        seen_keys[stable_key] = line_number
         output_rows.append(
             {
-                **row,
-                "stable_key": identity["stable_key"],
+                "stable_key": stable_key,
                 "identity_synthetic": str(identity["identity_synthetic"]).lower(),
+                "status": row["status"],
             }
         )
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    with output_path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(
-            handle,
-            fieldnames=fieldnames + ["stable_key", "identity_synthetic"],
-            lineterminator="\n",
-        )
-        writer.writeheader()
-        writer.writerows(output_rows)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            "w",
+            encoding="utf-8",
+            newline="",
+            dir=output_path.parent,
+            prefix=f".{output_path.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as handle:
+            temporary = Path(handle.name)
+            writer = csv.DictWriter(
+                handle,
+                fieldnames=["stable_key", "identity_synthetic", "status"],
+                lineterminator="\n",
+            )
+            writer.writeheader()
+            writer.writerows(output_rows)
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temporary, output_path)
+        temporary = None
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
     return {"row_count": len(output_rows)}
 
 
@@ -127,8 +189,21 @@ def summarize_national(mapeando, cnpj, terreiros_brasil, dedup_report):
         for row in terreiros_brasil
     )
     admitted = admitted_mapeando + admitted_cnpj + admitted_tdb
-    if admitted != dedup_report["total_bruto"]:
-        raise ValueError("admitidos não fecham com o relatório legado")
+    duplicates = dedup_report["duplicates"]
+    duplicate_count = dedup_report["duplicatas"]
+    if duplicate_count != len(duplicates):
+        raise ValueError(
+            "duplicatas divergentes: "
+            f"esperado {duplicate_count}, encontrado {len(duplicates)}"
+        )
+    accounted = dedup_report["mantidos"] + duplicate_count
+    total_bruto = dedup_report["total_bruto"]
+    if accounted != total_bruto or accounted != admitted:
+        raise ValueError(
+            "equação contábil nacional divergente: "
+            f"mantidos({dedup_report['mantidos']}) + duplicatas({duplicate_count}) "
+            f"= {accounted}, total_bruto={total_bruto}, admitidos={admitted}"
+        )
 
     removed_by_source = Counter(
         item["removed_source"] for item in dedup_report["duplicates"]
@@ -138,9 +213,21 @@ def summarize_national(mapeando, cnpj, terreiros_brasil, dedup_report):
         "mapeando_axe": "mapeando_axe",
         "terreirosdobrasil": "terreirosdobrasil",
     }
+    known_sources = set(source_labels)
+    for index, item in enumerate(duplicates, start=1):
+        for field in ("removed_source", "kept_source"):
+            if item[field] not in known_sources:
+                raise ValueError(
+                    f"fonte desconhecida em duplicates[{index}].{field}: {item[field]}"
+                )
     breakdown = {label: 0 for label in source_labels.values()}
     for source, count in removed_by_source.items():
         breakdown[source_labels[source]] = count
+    if sum(breakdown.values()) != duplicate_count:
+        raise ValueError(
+            "breakdown de duplicatas não fecha: "
+            f"esperado {duplicate_count}, encontrado {sum(breakdown.values())}"
+        )
 
     pair_counts = Counter(
         (item["removed_source"], item["kept_source"])

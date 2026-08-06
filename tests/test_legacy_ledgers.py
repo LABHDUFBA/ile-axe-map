@@ -36,6 +36,19 @@ def test_cnpj_e_a_chave_forte_da_exclusao():
     }
 
 
+def test_cnpj_invalido_no_motivo_falha_em_vez_de_virar_identidade_forte():
+    row = {
+        "nome": "Registro inválido",
+        "fonte": "CNPJ/Receita",
+        "latitude": "-4.0",
+        "longitude": "-49.0",
+        "motivo": "CNPJ 11.111.111/1111-11",
+    }
+
+    with pytest.raises(ValueError, match="CNPJ inválido.*11.111.111/1111-11"):
+        build_stable_identity(row)
+
+
 def test_fallback_sintetico_e_deterministico_sem_id_nativo():
     row = {
         "nome": "  Ilê   Axé Àṣẹ  ",
@@ -115,8 +128,43 @@ def test_normalizacao_preserva_linhas_e_nao_usa_fuzzy(tmp_path):
     assert len(normalized) == 2
     assert normalized[0]["stable_key"] != normalized[1]["stable_key"]
     assert all(row["identity_synthetic"] == "true" for row in normalized)
-    assert list(normalized[0]) == fieldnames + ["stable_key", "identity_synthetic"]
+    assert list(normalized[0]) == ["stable_key", "identity_synthetic", "status"]
     assert b"\r\n" not in output.read_bytes()
+
+
+def test_normalizacao_rejeita_colisao_de_chave_com_linhas_diagnosticadas(tmp_path):
+    source = tmp_path / "ledger.csv"
+    output = tmp_path / "ledger_v3.csv"
+    rows = [
+        {
+            "nome": "Ilê Axé",
+            "fonte": "Google Places",
+            "latitude": "-12.9",
+            "longitude": "-38.5",
+            "motivo": "revisão 1",
+            "status": "excluída",
+        },
+        {
+            "nome": "  Ile Axe ",
+            "fonte": "google places",
+            "latitude": "-12.9000001",
+            "longitude": "-38.5000001",
+            "motivo": "revisão 2",
+            "status": "excluída",
+        },
+    ]
+    with source.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+
+    stable_key = build_stable_identity(rows[0])["stable_key"]
+    with pytest.raises(
+        ValueError, match=rf"{stable_key}.*linhas 2 e 3"
+    ):
+        normalize_curated_ledger(source, output)
+
+    assert not output.exists()
 
 
 def test_resumo_nacional_fecha_equacoes_contabeis():
@@ -156,6 +204,53 @@ def test_resumo_nacional_fecha_equacoes_contabeis():
         "mapeando_axe->cnpj": 1,
     }
     assert summary["limiar_efetivo_legado"] == 0.5
+
+
+def _national_inputs():
+    return (
+        [{"nominatim_lat": -12.0, "nominatim_lng": -38.0}],
+        [{"lat": -13.0, "lng": -39.0}],
+        [{"lat": -14.0, "lng": -40.0}],
+        {
+            "total_bruto": 3,
+            "mantidos": 2,
+            "duplicatas": 1,
+            "duplicates": [
+                {
+                    "removed_source": "mapeando_axe",
+                    "kept_source": "receita_federal_cnpj",
+                }
+            ],
+        },
+    )
+
+
+def test_resumo_nacional_rejeita_contagem_de_duplicatas_divergente():
+    mapeando, cnpj, terreiros, dedup = _national_inputs()
+    dedup["duplicatas"] = 2
+
+    with pytest.raises(ValueError, match="duplicatas.*esperado 2.*encontrado 1"):
+        summarize_national(mapeando, cnpj, terreiros, dedup)
+
+
+@pytest.mark.parametrize(
+    ("field", "value"),
+    [("mantidos", 1), ("total_bruto", 4)],
+)
+def test_resumo_nacional_rejeita_equacao_contabil_divergente(field, value):
+    mapeando, cnpj, terreiros, dedup = _national_inputs()
+    dedup[field] = value
+
+    with pytest.raises(ValueError, match="equação contábil"):
+        summarize_national(mapeando, cnpj, terreiros, dedup)
+
+
+def test_resumo_nacional_rejeita_fonte_desconhecida_no_breakdown():
+    mapeando, cnpj, terreiros, dedup = _national_inputs()
+    dedup["duplicates"][0]["removed_source"] = "fonte_surpresa"
+
+    with pytest.raises(ValueError, match="fonte desconhecida.*fonte_surpresa"):
+        summarize_national(mapeando, cnpj, terreiros, dedup)
 
 
 def test_resumo_bahia_reconcilia_apenas_por_chaves_exatas():
@@ -222,9 +317,106 @@ def test_manifest_valida_hash_contagem_e_metadados_obrigatorios(tmp_path):
     validated = validate_manifest(tmp_path, manifest)
 
     assert validated == {"input": sha256_file(data_path)}
+    actual_hash = manifest["inputs"][0]["sha256"]
     manifest["inputs"][0]["sha256"] = "0" * 64
-    with pytest.raises(ValueError, match="hash"):
+    with pytest.raises(
+        ValueError,
+        match=rf"hash divergente.*input.*input.json.*{'0' * 64}.*{actual_hash}",
+    ):
         validate_manifest(tmp_path, manifest)
+
+
+def test_manifest_rejeita_contagem_divergente_com_diagnostico(tmp_path):
+    data_path = tmp_path / "input.json"
+    data_path.write_text(json.dumps([{"id": "a"}]), encoding="utf-8")
+    item = {
+        "name": "input",
+        "path": "input.json",
+        "sha256": sha256_file(data_path),
+        "count": 2,
+        "id_field": "id",
+        "sensitivity": "interno",
+        "kind": "input_bruto",
+    }
+
+    with pytest.raises(
+        ValueError, match="contagem divergente.*input.*input.json.*esperado 2.*encontrado 1"
+    ):
+        validate_manifest(tmp_path, {"inputs": [item]})
+
+
+def test_manifest_rejeita_metadata_ausente_com_diagnostico(tmp_path):
+    item = {"name": "input", "path": "input.json"}
+
+    with pytest.raises(
+        ValueError, match="metadados obrigatórios.*input.*input.json.*count.*sha256"
+    ):
+        validate_manifest(tmp_path, {"inputs": [item]})
+
+
+def test_falha_antes_da_publicacao_preserva_os_dois_outputs(tmp_path):
+    from scripts.audit_legacy_v3 import generate_audit_outputs
+
+    report_path = tmp_path / "legacy_audit.json"
+    ledger_path = tmp_path / "exclusoes_curadas_v3.csv"
+    report_path.write_bytes(b"relatorio antigo\n")
+    ledger_path.write_bytes(b"ledger antigo\n")
+    manifest = json.loads(
+        (ROOT / "config/source_manifests_v3.json").read_text(encoding="utf-8")
+    )
+
+    def fail_before_publish():
+        raise RuntimeError("falha controlada")
+
+    with pytest.raises(RuntimeError, match="falha controlada"):
+        generate_audit_outputs(
+            ROOT,
+            manifest,
+            report_path,
+            ledger_path,
+            before_publish=fail_before_publish,
+        )
+
+    assert report_path.read_bytes() == b"relatorio antigo\n"
+    assert ledger_path.read_bytes() == b"ledger antigo\n"
+    assert sorted(path.name for path in tmp_path.iterdir()) == [
+        "exclusoes_curadas_v3.csv",
+        "legacy_audit.json",
+    ]
+
+
+def test_falha_na_segunda_substituicao_restabelece_os_dois_outputs(tmp_path):
+    import os
+
+    from scripts.audit_legacy_v3 import _publish_outputs
+
+    ledger_path = tmp_path / "ledger.csv"
+    report_path = tmp_path / "report.json"
+    staged_ledger = tmp_path / "ledger.stage"
+    staged_report = tmp_path / "report.stage"
+    ledger_path.write_text("ledger antigo", encoding="utf-8")
+    report_path.write_text("relatório antigo", encoding="utf-8")
+    staged_ledger.write_text("ledger novo", encoding="utf-8")
+    staged_report.write_text("relatório novo", encoding="utf-8")
+    publication_replacements = 0
+
+    def fail_second_publication(source, destination):
+        nonlocal publication_replacements
+        if Path(source) in {staged_ledger, staged_report}:
+            publication_replacements += 1
+            if publication_replacements == 2:
+                raise OSError("falha controlada na substituição")
+        os.replace(source, destination)
+
+    with pytest.raises(OSError, match="falha controlada"):
+        _publish_outputs(
+            [(staged_ledger, ledger_path), (staged_report, report_path)],
+            replace=fail_second_publication,
+        )
+
+    assert ledger_path.read_text(encoding="utf-8") == "ledger antigo"
+    assert report_path.read_text(encoding="utf-8") == "relatório antigo"
+    assert not any("backup" in path.name for path in tmp_path.iterdir())
 
 
 def test_cli_gera_outputs_reais_em_destino_configuravel(tmp_path):
@@ -276,6 +468,12 @@ def test_outputs_reais_sao_agregados_e_preservam_baseline():
     bahia = next(item for item in manifest["inputs"] if item["name"] == "bahia_v2")
     assert bahia["id_policy_by_source"]["google"] == "synthetic_fallback"
     assert bahia["id_policy_by_source"]["osm"] == "synthetic_fallback"
+    exclusions = next(
+        item for item in manifest["inputs"] if item["name"] == "exclusoes_curadas"
+    )
+    assert exclusions["sensitivity"] == "publico_curado_legado"
+    assert "organizacionais" in exclusions["privacy_note"]
+    assert "minimizado" in exclusions["privacy_note"]
 
     assert report["total_bruto"] == 8815
     assert report["deduplicacao_nacional"]["admitidos"] == 5492
@@ -296,6 +494,8 @@ def test_outputs_reais_sao_agregados_e_preservam_baseline():
     assert all(term not in serialized for term in ("telefone", "endereco", "payload", "contato"))
 
     assert len(ledger) == 146
+    assert list(ledger[0]) == ["stable_key", "identity_synthetic", "status"]
+    assert not ({"nome", "municipio", "endereco", "fonte", "latitude", "longitude", "motivo"} & set(ledger[0]))
     identities = {row["stable_key"]: row for row in ledger}
     assert len(identities) == 146
     assert identities["cnpj:05419205000120"]["identity_synthetic"] == "false"

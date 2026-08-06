@@ -2,7 +2,9 @@
 import argparse
 import csv
 import json
+import os
 import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -87,6 +89,83 @@ def build_report(root, manifest, ledger_path):
     }
 
 
+def _temporary_path(destination, label="stage"):
+    destination = Path(destination)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    descriptor, name = tempfile.mkstemp(
+        dir=destination.parent,
+        prefix=f".{destination.name}.{label}.",
+        suffix=".tmp",
+    )
+    os.close(descriptor)
+    path = Path(name)
+    path.unlink()
+    return path
+
+
+def _write_report(path, report):
+    with path.open("w", encoding="utf-8") as handle:
+        json.dump(report, handle, ensure_ascii=False, indent=2, sort_keys=True)
+        handle.write("\n")
+        handle.flush()
+        os.fsync(handle.fileno())
+
+
+def _publish_outputs(outputs, replace=os.replace):
+    outputs = [(Path(staged), Path(destination)) for staged, destination in outputs]
+    backups = {}
+    installed = set()
+    try:
+        for _, destination in outputs:
+            if destination.exists():
+                backup = _temporary_path(destination, label="backup")
+                replace(destination, backup)
+                backups[destination] = backup
+
+        for staged, destination in outputs:
+            replace(staged, destination)
+            installed.add(destination)
+    except Exception:
+        for destination in installed:
+            destination.unlink(missing_ok=True)
+        for destination, backup in reversed(list(backups.items())):
+            destination.unlink(missing_ok=True)
+            replace(backup, destination)
+        raise
+    finally:
+        for backup in backups.values():
+            backup.unlink(missing_ok=True)
+
+
+def generate_audit_outputs(
+    root, manifest, report_path, ledger_path, before_publish=None
+):
+    root = Path(root).resolve()
+    report_path = Path(report_path)
+    ledger_path = Path(ledger_path)
+    validate_manifest(root, manifest)
+    source_ledger = next(
+        root / item["path"]
+        for item in manifest["inputs"]
+        if item["name"] == "exclusoes_curadas"
+    )
+    staged_ledger = _temporary_path(ledger_path)
+    staged_report = _temporary_path(report_path)
+    try:
+        normalize_curated_ledger(source_ledger, staged_ledger)
+        report = build_report(root, manifest, staged_ledger)
+        _write_report(staged_report, report)
+        if before_publish is not None:
+            before_publish()
+        _publish_outputs(
+            [(staged_ledger, ledger_path), (staged_report, report_path)]
+        )
+        return report
+    finally:
+        staged_ledger.unlink(missing_ok=True)
+        staged_report.unlink(missing_ok=True)
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Audita ledgers legados da unificação v3")
     parser.add_argument("--root", type=Path, default=ROOT)
@@ -102,20 +181,7 @@ def main():
     ledger_path = args.ledger or root / "data/audit/v3/exclusoes_curadas_v3.csv"
     manifest = _read_json(root / "config/source_manifests_v3.json")
 
-    validate_manifest(root, manifest)
-    source_ledger = next(
-        root / item["path"]
-        for item in manifest["inputs"]
-        if item["name"] == "exclusoes_curadas"
-    )
-    normalize_curated_ledger(source_ledger, ledger_path)
-    report = build_report(root, manifest, ledger_path)
-
-    report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(
-        json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
-    )
+    generate_audit_outputs(root, manifest, report_path, ledger_path)
     print(f"auditoria gerada: {report_path}")
     print(f"ledger normalizado: {ledger_path}")
 

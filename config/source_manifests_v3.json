@@ -100,9 +100,10 @@
       "sha256": "4649e913d7f33dbcebf1877f9b1fc1f008f33227ff348da148a940f9270dc8ac",
       "count": 146,
       "id_field": null,
-      "sensitivity": "interno",
+      "sensitivity": "publico_curado_legado",
       "kind": "ledger_curado",
-      "identity_policy": "CNPJ forte quando presente; fallback sintético fonte+nome_normalizado+lat6+lng6"
+      "identity_policy": "CNPJ forte quando presente e válido; fallback sintético fonte+nome_normalizado+lat6+lng6",
+      "privacy_note": "Ledger legado já publicado, contendo apenas dados organizacionais e localizações públicas; o output v3 é minimizado para stable_key, identity_synthetic e status."
     }
   ]
 }
