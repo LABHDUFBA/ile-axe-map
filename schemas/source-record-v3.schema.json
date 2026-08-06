@@ -101,7 +101,7 @@
         "google_place_id": {"$ref": "#/$defs/textoOuNulo"},
         "url": {
           "oneOf": [
-            {"type": "string", "format": "uri", "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:[^\\s]+$"},
+            {"type": "string", "format": "uri", "pattern": "^https?://[^\\s/:?#]+(?::[0-9]+)?(?:[/?#][^\\s]*)?$"},
             {"type": "null"}
           ]
         }
