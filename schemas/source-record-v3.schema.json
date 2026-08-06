@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ileaxe.org/schemas/source-record-v3.schema.json",
+  "title": "Registro intermediário de fonte v3",
+  "description": "Contrato interno de uma ocorrência preservada antes de reconciliação ou deduplicação.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_record_key",
+    "fonte",
+    "id_fonte",
+    "id_fonte_sintetico",
+    "nome_original",
+    "localizacao_original",
+    "identidade_religiosa_original",
+    "identificadores",
+    "data_coleta",
+    "flags_auditoria",
+    "dados_originais"
+  ],
+  "properties": {
+    "source_record_key": {
+      "type": "string",
+      "pattern": "^(ceao|bahia_google|osm|sefaz|mapeando_axe|cnpj|terreiros_brasil):\\S+$"
+    },
+    "fonte": {"$ref": "#/$defs/fonte"},
+    "id_fonte": {"type": "string", "pattern": "\\S"},
+    "id_fonte_sintetico": {"type": "boolean"},
+    "nome_original": {"$ref": "#/$defs/textoNaoVazioOuNulo"},
+    "localizacao_original": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "latitude",
+        "longitude",
+        "endereco",
+        "municipio",
+        "uf",
+        "cep",
+        "precisao",
+        "fonte_coordenada",
+        "coordenadas_alternativas"
+      ],
+      "properties": {
+        "latitude": {"$ref": "#/$defs/latitudeOuNula"},
+        "longitude": {"$ref": "#/$defs/longitudeOuNula"},
+        "endereco": {"$ref": "#/$defs/textoOuNulo"},
+        "municipio": {"$ref": "#/$defs/textoOuNulo"},
+        "uf": {"$ref": "#/$defs/textoOuNulo"},
+        "cep": {"$ref": "#/$defs/textoOuNulo"},
+        "precisao": {"$ref": "#/$defs/textoOuNulo"},
+        "fonte_coordenada": {"$ref": "#/$defs/textoOuNulo"},
+        "coordenadas_alternativas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["latitude", "longitude", "fonte", "precisao"],
+            "properties": {
+              "latitude": {"type": "number", "minimum": -90, "maximum": 90},
+              "longitude": {"type": "number", "minimum": -180, "maximum": 180},
+              "fonte": {"type": "string", "pattern": "\\S"},
+              "precisao": {"$ref": "#/$defs/textoOuNulo"}
+            }
+          }
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "latitude": {"type": "null"},
+            "longitude": {"type": "null"}
+          }
+        },
+        {
+          "properties": {
+            "latitude": {"type": "number"},
+            "longitude": {"type": "number"}
+          }
+        }
+      ]
+    },
+    "identidade_religiosa_original": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tradicao", "nacao", "denominacao"],
+      "properties": {
+        "tradicao": {"$ref": "#/$defs/textoOuNulo"},
+        "nacao": {"$ref": "#/$defs/textoOuNulo"},
+        "denominacao": {"$ref": "#/$defs/textoOuNulo"}
+      }
+    },
+    "identificadores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cnpj", "ceao_id", "osm_id", "google_place_id", "url"],
+      "properties": {
+        "cnpj": {"$ref": "#/$defs/textoOuNulo"},
+        "ceao_id": {"$ref": "#/$defs/textoOuNulo"},
+        "osm_id": {"$ref": "#/$defs/textoOuNulo"},
+        "google_place_id": {"$ref": "#/$defs/textoOuNulo"},
+        "url": {
+          "oneOf": [
+            {"type": "string", "format": "uri", "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:[^\\s]+$"},
+            {"type": "null"}
+          ]
+        }
+      }
+    },
+    "data_coleta": {
+      "oneOf": [
+        {"type": "string", "format": "date"},
+        {"type": "null"}
+      ]
+    },
+    "flags_auditoria": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "baseline_atual",
+        "exclusao_curada",
+        "remocao_heuristica_legada",
+        "ambiguo_pendente",
+        "dedup_legado_recuperado"
+      ],
+      "properties": {
+        "baseline_atual": {"type": "boolean"},
+        "exclusao_curada": {"type": "boolean"},
+        "remocao_heuristica_legada": {"type": "boolean"},
+        "ambiguo_pendente": {"type": "boolean"},
+        "dedup_legado_recuperado": {"type": "boolean"}
+      }
+    },
+    "dados_originais": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {"if": {"properties": {"fonte": {"const": "ceao"}}}, "then": {"properties": {"source_record_key": {"pattern": "^ceao:"}}}},
+    {"if": {"properties": {"fonte": {"const": "bahia_google"}}}, "then": {"properties": {"source_record_key": {"pattern": "^bahia_google:"}}}},
+    {"if": {"properties": {"fonte": {"const": "osm"}}}, "then": {"properties": {"source_record_key": {"pattern": "^osm:"}}}},
+    {"if": {"properties": {"fonte": {"const": "sefaz"}}}, "then": {"properties": {"source_record_key": {"pattern": "^sefaz:"}}}},
+    {"if": {"properties": {"fonte": {"const": "mapeando_axe"}}}, "then": {"properties": {"source_record_key": {"pattern": "^mapeando_axe:"}}}},
+    {"if": {"properties": {"fonte": {"const": "cnpj"}}}, "then": {"properties": {"source_record_key": {"pattern": "^cnpj:"}}}},
+    {"if": {"properties": {"fonte": {"const": "terreiros_brasil"}}}, "then": {"properties": {"source_record_key": {"pattern": "^terreiros_brasil:"}}}}
+  ],
+  "$defs": {
+    "fonte": {
+      "enum": [
+        "ceao",
+        "bahia_google",
+        "osm",
+        "sefaz",
+        "mapeando_axe",
+        "cnpj",
+        "terreiros_brasil"
+      ]
+    },
+    "textoOuNulo": {"type": ["string", "null"]},
+    "textoNaoVazioOuNulo": {
+      "oneOf": [
+        {"type": "string", "pattern": "\\S"},
+        {"type": "null"}
+      ]
+    },
+    "latitudeOuNula": {
+      "type": ["number", "null"],
+      "minimum": -90,
+      "maximum": 90
+    },
+    "longitudeOuNula": {
+      "type": ["number", "null"],
+      "minimum": -180,
+      "maximum": 180
+    }
+  }
+}
