@@ -79,7 +79,50 @@
         "status_territorial": {
           "enum": ["intersecao_ibge", "fora_poligono", "sem_coordenada"]
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {"status_territorial": {"const": "sem_coordenada"}}
+          },
+          "then": {
+            "properties": {
+              "latitude": {"type": "null"},
+              "longitude": {"type": "null"}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status_territorial": {
+                "enum": ["intersecao_ibge", "fora_poligono"]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "latitude": {"type": "number"},
+              "longitude": {"type": "number"}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {"status_territorial": {"const": "intersecao_ibge"}}
+          },
+          "then": {
+            "properties": {
+              "uf": {"type": "string", "pattern": "^[A-Z]{2}$"},
+              "municipio": {"type": "string", "minLength": 1},
+              "codigo_ibge_municipio": {
+                "type": "string",
+                "pattern": "^[0-9]{7}$"
+              }
+            }
+          }
+        }
+      ]
     },
     "identidade_religiosa": {
       "type": "object",
@@ -112,7 +155,30 @@
         "revisao_humana": {
           "enum": ["aprovado", "pendente", "nao_aplicavel"]
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"metodo": {"const": "ausente"}}},
+          "then": {
+            "properties": {
+              "tradicao_declarada": {"type": "null"},
+              "nacao_declarada": {"type": "null"},
+              "componentes": {"maxItems": 0},
+              "categoria_analitica": {"type": "null"},
+              "revisao_humana": {"const": "nao_aplicavel"}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"metodo": {"const": "inferido_nome"}}},
+          "then": {
+            "properties": {
+              "categoria_analitica": {"type": "string", "minLength": 1},
+              "revisao_humana": {"enum": ["pendente", "aprovado"]}
+            }
+          }
+        }
+      ]
     },
     "identificadores": {
       "type": "object",
@@ -144,12 +210,45 @@
           "url": {"type": ["string", "null"]},
           "campos_contribuidos": {
             "type": "array",
-            "items": {"type": "string", "minLength": 1},
+            "items": {
+              "enum": [
+                "entity_id",
+                "nome.preferido",
+                "nome.aliases",
+                "nome.normalizado_match",
+                "localizacao.latitude",
+                "localizacao.longitude",
+                "localizacao.fonte_coordenada",
+                "localizacao.precisao",
+                "localizacao.uf",
+                "localizacao.municipio",
+                "localizacao.codigo_ibge_municipio",
+                "localizacao.bairro",
+                "localizacao.cep",
+                "localizacao.endereco_original",
+                "localizacao.status_territorial",
+                "identidade_religiosa.tradicao_declarada",
+                "identidade_religiosa.nacao_declarada",
+                "identidade_religiosa.componentes",
+                "identidade_religiosa.categoria_analitica",
+                "identidade_religiosa.metodo",
+                "identidade_religiosa.revisao_humana",
+                "identificadores.cnpj",
+                "identificadores.ceao_id",
+                "identificadores.osm_id",
+                "identificadores.google_place_id",
+                "qualidade.status_validacao_geografica",
+                "qualidade.confianca",
+                "qualidade.flags",
+                "qualidade.grupo_reconciliacao"
+              ]
+            },
             "uniqueItems": true
           },
           "data_coleta": {
-            "type": "string",
-            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            "type": ["string", "null"],
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+            "format": "date"
           }
         }
       }
@@ -189,5 +288,48 @@
         "additionalProperties": true
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "localizacao": {
+            "properties": {
+              "status_territorial": {"const": "sem_coordenada"}
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "qualidade": {
+            "properties": {
+              "status_validacao_geografica": {"const": "inconclusivo"}
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "qualidade": {
+            "properties": {
+              "status_validacao_geografica": {"const": "confirmado"}
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "localizacao": {
+            "properties": {
+              "latitude": {"type": "number"},
+              "longitude": {"type": "number"}
+            }
+          }
+        }
+      }
+    }
+  ]
 }

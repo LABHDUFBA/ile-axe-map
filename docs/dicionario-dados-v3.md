@@ -8,7 +8,7 @@ Este documento descreve a entidade canônica de terreiro usada na unificação n
 - Campos anuláveis aceitam `null` quando a informação não está disponível.
 - `entity_id` segue `trr_<identificador estável>`. O trecho após `trr_` pode conter letras, números, `_` e `-`.
 - Cada entidade registra ao menos uma fonte.
-- Datas de coleta usam `AAAA-MM-DD`.
+- Datas de coleta, quando disponíveis, usam uma data de calendário válida no formato `AAAA-MM-DD`. Fontes legadas sem essa informação usam `null`.
 - `confianca` varia de 0 a 1, inclusive.
 
 ## Campos da entidade
@@ -47,7 +47,9 @@ Valores de `status_territorial`:
 
 - `intersecao_ibge`: a coordenada intersecta o polígono territorial esperado.
 - `fora_poligono`: há coordenada, mas ela não intersecta o polígono esperado.
-- `sem_coordenada`: latitude e longitude não estão disponíveis e podem ser `null`.
+- `sem_coordenada`: latitude e longitude não estão disponíveis e devem ser `null`.
+
+`intersecao_ibge` e `fora_poligono` exigem latitude e longitude numéricas. Nenhum status aceita apenas uma coordenada. Além disso, `intersecao_ibge` exige `uf` com duas letras maiúsculas, `municipio` não vazio e `codigo_ibge_municipio` com sete dígitos.
 
 ### `identidade_religiosa`
 
@@ -73,6 +75,8 @@ Valores de `revisao_humana`:
 - `pendente`
 - `nao_aplicavel`
 
+Quando `metodo` é `ausente`, `tradicao_declarada`, `nacao_declarada` e `categoria_analitica` devem ser `null`, `componentes` deve ser vazio e `revisao_humana` deve ser `nao_aplicavel`. Quando `metodo` é `inferido_nome`, `categoria_analitica` deve ser uma string não vazia e `revisao_humana` deve ser `pendente` ou `aprovado`.
+
 ### `identificadores`
 
 | Campo | Tipo | Anulável | Descrição |
@@ -91,8 +95,19 @@ O array deve conter ao menos um item. Cada item possui:
 | `fonte` | string não vazia | não | Nome estável da fonte, por exemplo `ceao`, `osm` ou `google`. |
 | `id_fonte` | string não vazia | não | Identificador do registro dentro da fonte. |
 | `url` | string | sim | URL de consulta ou referência do registro. |
-| `campos_contribuidos` | array de strings não vazias | não | Caminhos dos campos canônicos contribuídos pela fonte. |
-| `data_coleta` | string `AAAA-MM-DD` | não | Data em que o registro foi coletado. |
+| `campos_contribuidos` | array de caminhos canônicos | não | Campos folha canônicos contribuídos pela fonte, sem duplicatas. |
+| `data_coleta` | string `AAAA-MM-DD` ou `null` | sim | Data de calendário válida em que o registro foi coletado; fontes legadas podem não informar a data. |
+
+Os únicos valores aceitos em `campos_contribuidos` são:
+
+- `entity_id`
+- `nome.preferido`, `nome.aliases`, `nome.normalizado_match`
+- `localizacao.latitude`, `localizacao.longitude`, `localizacao.fonte_coordenada`, `localizacao.precisao`, `localizacao.uf`, `localizacao.municipio`, `localizacao.codigo_ibge_municipio`, `localizacao.bairro`, `localizacao.cep`, `localizacao.endereco_original`, `localizacao.status_territorial`
+- `identidade_religiosa.tradicao_declarada`, `identidade_religiosa.nacao_declarada`, `identidade_religiosa.componentes`, `identidade_religiosa.categoria_analitica`, `identidade_religiosa.metodo`, `identidade_religiosa.revisao_humana`
+- `identificadores.cnpj`, `identificadores.ceao_id`, `identificadores.osm_id`, `identificadores.google_place_id`
+- `qualidade.status_validacao_geografica`, `qualidade.confianca`, `qualidade.flags`, `qualidade.grupo_reconciliacao`
+
+Objetos contêiner, campos de proveniência em `fontes[]`, `valores_originais` e caminhos inexistentes não são contribuições canônicas válidas.
 
 ### `qualidade`
 
@@ -108,6 +123,8 @@ Valores de `status_validacao_geografica`:
 - `confirmado`
 - `provavel`
 - `inconclusivo`
+
+Entidades com `status_territorial` igual a `sem_coordenada` devem usar `status_validacao_geografica` igual a `inconclusivo`. O valor `confirmado` exige latitude e longitude numéricas.
 
 ### `valores_originais`
 
