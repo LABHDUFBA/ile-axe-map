@@ -94,9 +94,13 @@ def _valid_cnpj(digits):
 
 
 def build_stable_identity(row):
-    cnpjs = re.findall(r"(?:\d[.\-/ ]*){14}", row.get("motivo", ""))
+    motivo = row.get("motivo", "")
+    cnpjs = re.findall(
+        r"(?<!\d)(?:\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}|\d{14})(?!\d)",
+        motivo,
+    )
     if cnpjs:
-        raw_cnpj = cnpjs[0].strip()
+        raw_cnpj = cnpjs[0]
         digits = re.sub(r"\D", "", raw_cnpj)
         if not _valid_cnpj(digits):
             raise ValueError(f"CNPJ inválido na curadoria: {raw_cnpj}")
@@ -104,6 +108,15 @@ def build_stable_identity(row):
             "stable_key": f"cnpj:{digits}",
             "identity_synthetic": False,
         }
+
+    malformed = re.search(
+        r"\bCNPJ\b\s*[:#-]?\s*([0-9][0-9.\-/ ]*)",
+        motivo,
+        flags=re.IGNORECASE,
+    )
+    if malformed:
+        raw_cnpj = malformed.group(1).strip()
+        raise ValueError(f"CNPJ inválido na curadoria: {raw_cnpj}")
 
     basis = "|".join(
         (
