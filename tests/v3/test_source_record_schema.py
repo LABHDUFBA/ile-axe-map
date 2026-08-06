@@ -134,6 +134,9 @@ def test_schema_rejeita_id_vazio(validator, registro_completo):
         "não é uma URI",
         "http://",
         "https://",
+        "https://@",
+        "https://user@",
+        "https://user@:443/x",
         "https://:443/caminho",
         "/caminho/relativo",
         "https://exa mple.org",
@@ -147,9 +150,19 @@ def test_schema_rejeita_url_invalida(validator, registro_completo, url):
         validator.validate(registro)
 
 
-def test_schema_aceita_url_https_absoluta_com_host(validator, registro_completo):
+@pytest.mark.parametrize(
+    "url",
+    [
+        "https://example.org/registro?id=1#detalhes",
+        "http://127.0.0.1:8080/caminho?x=1",
+        "http://localhost:8000/registro",
+        "https://usuario:senha@example.org:8443/a?b=c#d",
+        "https://[2001:db8::1]:8443/a?b=c",
+    ],
+)
+def test_schema_aceita_url_http_absoluta_com_host(validator, registro_completo, url):
     registro = copy.deepcopy(registro_completo)
-    registro["identificadores"]["url"] = "https://example.org/registro?id=1"
+    registro["identificadores"]["url"] = url
 
     validator.validate(registro)
 

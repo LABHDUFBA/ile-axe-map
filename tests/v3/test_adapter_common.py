@@ -329,25 +329,173 @@ def test_build_base_source_record_rejeita_colecao_de_alternativas_que_nao_e_list
         )
 
 
-@pytest.mark.parametrize("with_coordinates", [False, True])
-def test_build_base_source_record_retorna_registro_valido_no_schema(with_coordinates):
-    schema = json.loads(
-        (ROOT / "schemas/source-record-v3.schema.json").read_text(encoding="utf-8")
-    )
-    validator = jsonschema.Draft202012Validator(
-        schema, format_checker=jsonschema.FormatChecker()
-    )
-    latitude = -12.9 if with_coordinates else None
-    longitude = -38.5 if with_coordinates else None
+@pytest.mark.parametrize("nome", ["", "   ", 123, False, [], {}])
+def test_build_base_source_record_rejeita_nome_original_invalido(nome):
+    with pytest.raises((TypeError, ValueError), match="nome_original"):
+        build_base_source_record(
+            fonte="osm",
+            id_fonte="1",
+            id_fonte_sintetico=False,
+            nome_original=nome,
+            dados_originais={},
+        )
 
+
+def test_build_base_source_record_preserva_nome_original_valido():
+    record = build_base_source_record(
+        fonte="osm",
+        id_fonte="1",
+        id_fonte_sintetico=False,
+        nome_original="  Ilê Axé  ",
+        dados_originais={},
+    )
+
+    assert record["nome_original"] == "  Ilê Axé  "
+
+
+@pytest.mark.parametrize(
+    "data_coleta",
+    ["2026-02-31", "2026-2-01", "01-02-2026", "2026-01-01T00:00:00", "", 20260807],
+)
+def test_build_base_source_record_rejeita_data_coleta_invalida(data_coleta):
+    with pytest.raises((TypeError, ValueError), match="data_coleta"):
+        build_base_source_record(
+            fonte="osm",
+            id_fonte="1",
+            id_fonte_sintetico=False,
+            nome_original=None,
+            dados_originais={},
+            data_coleta=data_coleta,
+        )
+
+
+@pytest.mark.parametrize(
+    "url",
+    [
+        "http://",
+        "https://",
+        "https://@",
+        "https://@example.org",
+        "https://user@",
+        "https://user@:443/x",
+        "/relativa",
+        "ftp://example.org/a",
+        "https://exa mple.org",
+        "https://example.org:abc/a",
+        "https://example.org:70000/a",
+        123,
+    ],
+)
+def test_build_base_source_record_rejeita_url_invalida(url):
+    with pytest.raises((TypeError, ValueError), match="url"):
+        build_base_source_record(
+            fonte="osm",
+            id_fonte="1",
+            id_fonte_sintetico=False,
+            nome_original=None,
+            dados_originais={},
+            url=url,
+        )
+
+
+def test_build_base_source_record_aceita_url_ipv6_bracketed():
+    url = "https://[2001:db8::1]:8443/a?b=c"
     record = build_base_source_record(
         fonte="osm",
         id_fonte="1",
         id_fonte_sintetico=False,
         nome_original=None,
         dados_originais={},
-        latitude=latitude,
-        longitude=longitude,
+        url=url,
     )
 
-    validator.validate(record)
+    assert record["identificadores"]["url"] == url
+
+
+@pytest.mark.parametrize(
+    ("campo", "valor"),
+    [
+        ("ceao_id", 123),
+        ("osm_id", False),
+        ("google_place_id", []),
+        ("cnpj", 4858642000187),
+    ],
+)
+def test_build_base_source_record_rejeita_identificador_nao_textual(campo, valor):
+    with pytest.raises(TypeError, match=campo):
+        build_base_source_record(
+            fonte="osm",
+            id_fonte="1",
+            id_fonte_sintetico=False,
+            nome_original=None,
+            dados_originais={},
+            **{campo: valor},
+        )
+
+
+def test_build_base_source_record_rejeita_identificador_desconhecido():
+    arguments = {
+        "fonte": "osm",
+        "id_fonte": "1",
+        "id_fonte_sintetico": False,
+        "nome_original": None,
+        "dados_originais": {},
+        "identificador_desconhecido": "valor",
+    }
+
+    with pytest.raises(TypeError, match="identificador_desconhecido"):
+        build_base_source_record(**arguments)
+
+
+@pytest.mark.parametrize("cnpj", ["04.858.642/0001-88", "11.111.111/1111-11", "123"])
+def test_build_base_source_record_rejeita_cnpj_invalido(cnpj):
+    with pytest.raises(ValueError, match="cnpj"):
+        build_base_source_record(
+            fonte="cnpj",
+            id_fonte=cnpj,
+            id_fonte_sintetico=False,
+            nome_original=None,
+            dados_originais={},
+            cnpj=cnpj,
+        )
+
+
+@pytest.mark.parametrize(
+    "overrides",
+    [
+        {},
+        {"nome_original": "  Ilê Axé  ", "data_coleta": "2024-02-29"},
+        {
+            "latitude": -12.9,
+            "longitude": -38.5,
+            "url": "https://example.org:8443/registro?id=1#fonte",
+            "ceao_id": "00123",
+        },
+        {"url": "http://127.0.0.1:8080/caminho?x=1"},
+        {"url": "http://localhost:8000/registro"},
+        {"url": "https://usuario:senha@example.org:8443/a?b=c#d"},
+        {
+            "url": "https://[2001:db8::1]:8443/a?b=c",
+            "cnpj": "04.858.642/0001-87",
+        },
+    ],
+)
+def test_build_base_source_record_retorna_registro_valido_no_schema(overrides):
+    schema = json.loads(
+        (ROOT / "schemas/source-record-v3.schema.json").read_text(encoding="utf-8")
+    )
+    validator = jsonschema.Draft202012Validator(
+        schema, format_checker=jsonschema.FormatChecker()
+    )
+    arguments = {
+        "fonte": "osm",
+        "id_fonte": "1",
+        "id_fonte_sintetico": False,
+        "nome_original": None,
+        "dados_originais": {},
+    }
+    arguments.update(overrides)
+
+    record = build_base_source_record(**arguments)
+
+    assert list(validator.iter_errors(record)) == []

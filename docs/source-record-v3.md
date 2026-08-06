@@ -12,13 +12,13 @@ Quando a fonte não oferece ID nativo, `synthetic_source_id` calcula SHA-256 sob
 
 ## Estrutura e validação
 
-O helper `build_base_source_record` monta todos os objetos e campos obrigatórios. Ele não infere tradição, nação ou denominação. Coordenadas principais devem estar ambas presentes ou ambas nulas, ser finitas, não booleanas e respeitar as faixas globais. Coordenadas alternativas sempre exigem latitude e longitude globais válidas, fonte não vazia e precisão textual ou nula. Overrides parciais de `flags_auditoria` são mesclados com as cinco flags padrão; chaves desconhecidas e valores não booleanos são rejeitados.
+O helper `build_base_source_record` monta todos os objetos e campos obrigatórios. Ele não infere tradição, nação ou denominação. `nome_original` aceita somente texto não vazio após trim ou nulo. `data_coleta` aceita somente uma data real em `YYYY-MM-DD` ou nulo. Coordenadas principais devem estar ambas presentes ou ambas nulas, ser finitas, não booleanas e respeitar as faixas globais. Coordenadas alternativas sempre exigem latitude e longitude globais válidas, fonte não vazia e precisão textual ou nula. Overrides parciais de `flags_auditoria` são mesclados com as cinco flags padrão; chaves desconhecidas e valores não booleanos são rejeitados.
 
 O registro retornado não compartilha referências mutáveis com os argumentos. `dados_originais`, coordenadas alternativas, flags e demais valores são copiados profundamente, portanto mutações posteriores no payload de entrada não alteram o registro.
 
-O JSON Schema valida CNPJ somente como `string|null`. Adaptadores devem chamar `valid_cnpj`, que aceita CNPJ com máscara padrão ou 14 dígitos e verifica os dois dígitos verificadores.
+O JSON Schema valida CNPJ somente como `string|null`. O builder chama `valid_cnpj` para todo CNPJ não nulo. A função aceita máscara padrão ou 14 dígitos e verifica os dois dígitos verificadores. Os demais identificadores aceitam somente texto ou nulo.
 
-Validações de `date` e `uri` exigem `jsonschema.Draft202012Validator` com `jsonschema.FormatChecker()`. URLs aceitas são somente HTTP(S) absolutas com host não vazio.
+Validações de `date` e `uri` exigem `jsonschema.Draft202012Validator` com `jsonschema.FormatChecker()`. URLs aceitas são somente HTTP(S) absolutas com hostname não vazio. Domínios, IPv4, `localhost`, portas, userinfo não vazio, caminho, query, fragmento e IPv6 entre colchetes são aceitos sem consultar DNS.
 
 ## Privacidade
 

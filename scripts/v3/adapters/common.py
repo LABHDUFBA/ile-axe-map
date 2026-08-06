@@ -3,12 +3,13 @@
 from __future__ import annotations
 
 import copy
+from datetime import date
 import hashlib
 import json
 import math
 import re
 from typing import Any
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
 
 
 SOURCES = frozenset(
@@ -173,6 +174,48 @@ def _merge_audit_flags(overrides: Any) -> dict[str, bool]:
     return flags
 
 
+def _validate_nullable_text(value: Any, name: str, *, nonempty: bool = False) -> None:
+    if value is None:
+        return
+    if not isinstance(value, str):
+        raise TypeError(f"{name} deve ser texto ou nulo")
+    if nonempty and not value.strip():
+        raise ValueError(f"{name} não pode ser vazio")
+
+
+def _validate_collection_date(value: Any) -> None:
+    if value is None:
+        return
+    if not isinstance(value, str):
+        raise TypeError("data_coleta deve ser texto ou nula")
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+        raise ValueError("data_coleta deve usar o formato YYYY-MM-DD")
+    try:
+        date.fromisoformat(value)
+    except ValueError as error:
+        raise ValueError("data_coleta deve representar uma data real") from error
+
+
+def _validate_url(value: Any) -> None:
+    if value is None:
+        return
+    if not isinstance(value, str):
+        raise TypeError("url deve ser texto ou nula")
+    if re.search(r"\s", value):
+        raise ValueError("url não pode conter espaços")
+    try:
+        parsed = urlsplit(value)
+        parsed.port
+    except ValueError as error:
+        raise ValueError("url inválida") from error
+    if (
+        parsed.scheme not in {"http", "https"}
+        or not parsed.hostname
+        or parsed.netloc.startswith("@")
+    ):
+        raise ValueError("url deve ser HTTP(S) absoluta com hostname")
+
+
 def build_base_source_record(
     *,
     fonte: str,
@@ -202,6 +245,34 @@ def build_base_source_record(
 ) -> dict[str, Any]:
     """Monta a estrutura comum sem classificar identidade religiosa."""
     normalized_id = normalize_source_id(id_fonte)
+    if not isinstance(id_fonte_sintetico, bool):
+        raise TypeError("id_fonte_sintetico deve ser booleano")
+    _validate_nullable_text(nome_original, "nome_original", nonempty=True)
+    if not isinstance(dados_originais, dict):
+        raise TypeError("dados_originais deve ser um dicionário")
+
+    nullable_text_fields = {
+        "endereco": endereco,
+        "municipio": municipio,
+        "uf": uf,
+        "cep": cep,
+        "precisao": precisao,
+        "fonte_coordenada": fonte_coordenada,
+        "tradicao": tradicao,
+        "nacao": nacao,
+        "denominacao": denominacao,
+        "cnpj": cnpj,
+        "ceao_id": ceao_id,
+        "osm_id": osm_id,
+        "google_place_id": google_place_id,
+    }
+    for field_name, value in nullable_text_fields.items():
+        _validate_nullable_text(value, field_name)
+    if cnpj is not None and not valid_cnpj(cnpj):
+        raise ValueError("cnpj inválido")
+    _validate_url(url)
+    _validate_collection_date(data_coleta)
+
     if (latitude is None) != (longitude is None):
         raise ValueError("coordenadas principais devem estar ambas presentes ou nulas")
     if latitude is not None:
