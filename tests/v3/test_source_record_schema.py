@@ -128,12 +128,30 @@ def test_schema_rejeita_id_vazio(validator, registro_completo):
         validator.validate(registro)
 
 
-def test_schema_rejeita_url_invalida(validator, registro_completo):
+@pytest.mark.parametrize(
+    "url",
+    [
+        "não é uma URI",
+        "http://",
+        "https://",
+        "https://:443/caminho",
+        "/caminho/relativo",
+        "https://exa mple.org",
+    ],
+)
+def test_schema_rejeita_url_invalida(validator, registro_completo, url):
     registro = copy.deepcopy(registro_completo)
-    registro["identificadores"]["url"] = "não é uma URI"
+    registro["identificadores"]["url"] = url
 
     with pytest.raises(jsonschema.ValidationError):
         validator.validate(registro)
+
+
+def test_schema_aceita_url_https_absoluta_com_host(validator, registro_completo):
+    registro = copy.deepcopy(registro_completo)
+    registro["identificadores"]["url"] = "https://example.org/registro?id=1"
+
+    validator.validate(registro)
 
 
 def test_schema_rejeita_data_invalida(validator, registro_completo):

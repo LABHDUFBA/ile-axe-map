@@ -1,3 +1,8 @@
+import json
+import math
+from pathlib import Path
+
+import jsonschema
 import pytest
 
 from scripts.v3.adapters.common import (
@@ -10,16 +15,22 @@ from scripts.v3.adapters.common import (
 )
 
 
+ROOT = Path(__file__).resolve().parents[2]
+
+
 @pytest.mark.parametrize(
     ("value", "expected"),
-    [(" 00123 ", "00123"), (123, "123"), (False, "False"), ("ação", "ação")],
+    [(" 00123 ", "00123"), (0, "0"), (123, "123"), ("ação", "ação")],
 )
-def test_normalize_source_id_converte_escalar_e_preserva_significado(value, expected):
+def test_normalize_source_id_aceita_texto_e_inteiro_nao_booleano(value, expected):
     assert normalize_source_id(value) == expected
 
 
-@pytest.mark.parametrize("value", [None, "", "   ", [], {}, ["id"], {"id"}])
-def test_normalize_source_id_rejeita_ausente_vazio_e_estrutural(value):
+@pytest.mark.parametrize(
+    "value",
+    [None, True, False, 1.0, math.nan, math.inf, -math.inf, "", "   ", [], {}],
+)
+def test_normalize_source_id_rejeita_tipos_ambiguos_ausentes_e_vazios(value):
     with pytest.raises((TypeError, ValueError)):
         normalize_source_id(value)
 
@@ -54,8 +65,24 @@ def test_synthetic_source_id_e_deterministico_e_separa_fronteiras():
     assert len(first) == len("synthetic:") + 64
 
 
-@pytest.mark.parametrize("parts", [(), (None,), ("",), ("   ",), ({"a": 1},)])
-def test_synthetic_source_id_rejeita_partes_ausentes_vazias_ou_estruturais(parts):
+def test_synthetic_source_id_preserva_tipos_das_partes():
+    ids = {
+        synthetic_source_id("osm", value)
+        for value in (1, "1", 1.0, True, "True", None)
+    }
+
+    assert len(ids) == 6
+
+
+def test_synthetic_source_id_preserva_texto_exatamente():
+    assert synthetic_source_id("osm", " x ") != synthetic_source_id("osm", "x")
+
+
+@pytest.mark.parametrize(
+    "parts",
+    [(), ("",), ("   ",), (math.nan,), (math.inf,), (-math.inf,), ([],), ({},)],
+)
+def test_synthetic_source_id_rejeita_partes_fracas_nao_finitas_ou_estruturais(parts):
     with pytest.raises((TypeError, ValueError)):
         synthetic_source_id("ceao", *parts)
 
@@ -157,3 +184,170 @@ def test_build_base_source_record_preserva_identidade_religiosa_fornecida():
     }
     assert record["localizacao_original"]["latitude"] is None
     assert record["localizacao_original"]["longitude"] is None
+
+
+def test_build_base_source_record_faz_copia_profunda_dos_mutaveis():
+    payload = {"objeto": {"lista": [1]}}
+    alternativa = {
+        "latitude": -12.9,
+        "longitude": -38.5,
+        "fonte": "geocodificador",
+        "precisao": None,
+    }
+    flags = {"baseline_atual": True}
+
+    record = build_base_source_record(
+        fonte="ceao",
+        id_fonte="1",
+        id_fonte_sintetico=False,
+        nome_original="Teste",
+        dados_originais=payload,
+        coordenadas_alternativas=[alternativa],
+        flags_auditoria=flags,
+    )
+    payload["objeto"]["lista"].append(2)
+    alternativa["latitude"] = 0
+    flags["baseline_atual"] = False
+
+    assert record["dados_originais"] == {"objeto": {"lista": [1]}}
+    assert record["localizacao_original"]["coordenadas_alternativas"][0][
+        "latitude"
+    ] == -12.9
+    assert record["flags_auditoria"]["baseline_atual"] is True
+
+
+@pytest.mark.parametrize(
+    ("latitude", "longitude"),
+    [
+        (None, -38.5),
+        (-12.9, None),
+        (True, -38.5),
+        (-12.9, False),
+        (math.nan, -38.5),
+        (-12.9, math.inf),
+        (-90.1, -38.5),
+        (-12.9, 180.1),
+    ],
+)
+def test_build_base_source_record_rejeita_coordenadas_principais_invalidas(
+    latitude, longitude
+):
+    with pytest.raises((TypeError, ValueError), match="coordenada|latitude|longitude"):
+        build_base_source_record(
+            fonte="osm",
+            id_fonte="1",
+            id_fonte_sintetico=False,
+            nome_original=None,
+            dados_originais={},
+            latitude=latitude,
+            longitude=longitude,
+        )
+
+
+def test_build_base_source_record_mescla_flags_parciais_com_defaults():
+    record = build_base_source_record(
+        fonte="osm",
+        id_fonte="1",
+        id_fonte_sintetico=False,
+        nome_original=None,
+        dados_originais={},
+        flags_auditoria={"ambiguo_pendente": True},
+    )
+
+    assert record["flags_auditoria"] == {
+        "baseline_atual": False,
+        "exclusao_curada": False,
+        "remocao_heuristica_legada": False,
+        "ambiguo_pendente": True,
+        "dedup_legado_recuperado": False,
+    }
+
+
+@pytest.mark.parametrize(
+    "flags", [{"desconhecida": True}, {"baseline_atual": 1}, {"baseline_atual": "sim"}]
+)
+def test_build_base_source_record_rejeita_flags_invalidas(flags):
+    with pytest.raises((TypeError, ValueError), match="flag"):
+        build_base_source_record(
+            fonte="osm",
+            id_fonte="1",
+            id_fonte_sintetico=False,
+            nome_original=None,
+            dados_originais={},
+            flags_auditoria=flags,
+        )
+
+
+@pytest.mark.parametrize(
+    "alternativa",
+    [
+        {"latitude": -12.9, "longitude": -38.5, "fonte": "geo"},
+        {
+            "latitude": True,
+            "longitude": -38.5,
+            "fonte": "geo",
+            "precisao": None,
+        },
+        {
+            "latitude": -12.9,
+            "longitude": 181,
+            "fonte": "geo",
+            "precisao": None,
+        },
+        {
+            "latitude": -12.9,
+            "longitude": -38.5,
+            "fonte": " ",
+            "precisao": None,
+        },
+    ],
+)
+def test_build_base_source_record_rejeita_coordenada_alternativa_invalida(alternativa):
+    with pytest.raises((TypeError, ValueError), match="alternativa"):
+        build_base_source_record(
+            fonte="osm",
+            id_fonte="1",
+            id_fonte_sintetico=False,
+            nome_original=None,
+            dados_originais={},
+            coordenadas_alternativas=[alternativa],
+        )
+
+
+@pytest.mark.parametrize("alternativas", [False, {}, ()])
+def test_build_base_source_record_rejeita_colecao_de_alternativas_que_nao_e_lista(
+    alternativas,
+):
+    with pytest.raises(TypeError, match="alternativas"):
+        build_base_source_record(
+            fonte="osm",
+            id_fonte="1",
+            id_fonte_sintetico=False,
+            nome_original=None,
+            dados_originais={},
+            coordenadas_alternativas=alternativas,
+        )
+
+
+@pytest.mark.parametrize("with_coordinates", [False, True])
+def test_build_base_source_record_retorna_registro_valido_no_schema(with_coordinates):
+    schema = json.loads(
+        (ROOT / "schemas/source-record-v3.schema.json").read_text(encoding="utf-8")
+    )
+    validator = jsonschema.Draft202012Validator(
+        schema, format_checker=jsonschema.FormatChecker()
+    )
+    latitude = -12.9 if with_coordinates else None
+    longitude = -38.5 if with_coordinates else None
+
+    record = build_base_source_record(
+        fonte="osm",
+        id_fonte="1",
+        id_fonte_sintetico=False,
+        nome_original=None,
+        dados_originais={},
+        latitude=latitude,
+        longitude=longitude,
+    )
+
+    validator.validate(record)

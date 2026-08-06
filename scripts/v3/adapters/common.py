@@ -2,10 +2,11 @@
 
 from __future__ import annotations
 
+import copy
 import hashlib
 import json
+import math
 import re
-from collections.abc import Mapping, Sequence, Set
 from typing import Any
 from urllib.parse import quote
 
@@ -32,15 +33,13 @@ AUDIT_FLAG_NAMES = (
 
 
 def normalize_source_id(value: Any) -> str:
-    """Converte um ID escalar em texto, preservando zeros à esquerda."""
+    """Normaliza IDs textuais ou inteiros, sem aceitar tipos ambíguos."""
     if value is None:
         raise ValueError("id_fonte não pode ser nulo")
-    if isinstance(value, (Mapping, Set)) or (
-        isinstance(value, Sequence) and not isinstance(value, str)
-    ):
-        raise TypeError("id_fonte deve ser escalar")
+    if isinstance(value, bool) or not isinstance(value, (str, int)):
+        raise TypeError("id_fonte deve ser string ou inteiro não booleano")
 
-    normalized = str(value).strip()
+    normalized = value.strip() if isinstance(value, str) else str(value)
     if not normalized:
         raise ValueError("id_fonte não pode ser vazio")
     return normalized
@@ -59,14 +58,34 @@ def make_source_record_key(fonte: str, id_fonte: Any) -> str:
 
 
 def synthetic_source_id(fonte: str, *parts: Any) -> str:
-    """Gera ID sintético SHA-256 sobre fonte e partes serializadas em JSON."""
+    """Gera ID sintético com fronteiras e tipos explícitos em JSON canônico."""
     _validate_source(fonte)
     if not parts:
         raise ValueError("ao menos uma parte é necessária para o ID sintético")
 
-    normalized_parts = [normalize_source_id(part) for part in parts]
+    typed_parts = []
+    for part in parts:
+        if part is None:
+            typed_parts.append({"tipo": "null", "valor": None})
+        elif isinstance(part, bool):
+            typed_parts.append({"tipo": "boolean", "valor": part})
+        elif isinstance(part, str):
+            if not part.strip():
+                raise ValueError("parte textual do ID sintético não pode ser vazia")
+            typed_parts.append({"tipo": "string", "valor": part})
+        elif isinstance(part, int):
+            typed_parts.append({"tipo": "integer", "valor": part})
+        elif isinstance(part, float):
+            if not math.isfinite(part):
+                raise ValueError("parte numérica do ID sintético deve ser finita")
+            typed_parts.append({"tipo": "number", "valor": part})
+        else:
+            raise TypeError(
+                "parte do ID sintético deve ser string, inteiro, float, booleano ou nulo"
+            )
+
     basis = json.dumps(
-        {"fonte": fonte, "partes": normalized_parts},
+        {"fonte": fonte, "partes": typed_parts},
         ensure_ascii=False,
         separators=(",", ":"),
         sort_keys=True,
@@ -105,6 +124,55 @@ def empty_audit_flags() -> dict[str, bool]:
     return {name: False for name in AUDIT_FLAG_NAMES}
 
 
+def _validate_coordinate(value: Any, name: str, minimum: float, maximum: float) -> None:
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        raise TypeError(f"{name} da coordenada deve ser numérica e não booleana")
+    if not math.isfinite(value):
+        raise ValueError(f"{name} da coordenada deve ser finita")
+    if not minimum <= value <= maximum:
+        raise ValueError(f"{name} da coordenada fora da faixa permitida")
+
+
+def _validate_alternative_coordinates(coordinates: Any) -> None:
+    if not isinstance(coordinates, list):
+        raise TypeError("coordenadas alternativas devem ser uma lista")
+
+    required = {"latitude", "longitude", "fonte", "precisao"}
+    for coordinate in coordinates:
+        if not isinstance(coordinate, dict) or set(coordinate) != required:
+            raise ValueError(
+                "coordenada alternativa deve conter latitude, longitude, fonte e precisao"
+            )
+        try:
+            _validate_coordinate(coordinate["latitude"], "latitude", -90, 90)
+            _validate_coordinate(coordinate["longitude"], "longitude", -180, 180)
+        except (TypeError, ValueError) as error:
+            raise type(error)(f"coordenada alternativa inválida: {error}") from error
+        if not isinstance(coordinate["fonte"], str) or not coordinate["fonte"].strip():
+            raise ValueError("fonte da coordenada alternativa deve ser texto não vazio")
+        if coordinate["precisao"] is not None and not isinstance(
+            coordinate["precisao"], str
+        ):
+            raise TypeError("precisao da coordenada alternativa deve ser texto ou nula")
+
+
+def _merge_audit_flags(overrides: Any) -> dict[str, bool]:
+    flags = empty_audit_flags()
+    if overrides is None:
+        return flags
+    if not isinstance(overrides, dict):
+        raise TypeError("flags_auditoria deve ser um dicionário")
+
+    unknown = set(overrides) - set(AUDIT_FLAG_NAMES)
+    if unknown:
+        raise ValueError(f"flag de auditoria desconhecida: {sorted(unknown)[0]}")
+    for name, value in overrides.items():
+        if not isinstance(value, bool):
+            raise TypeError(f"flag de auditoria {name!r} deve ser booleana")
+        flags[name] = value
+    return flags
+
+
 def build_base_source_record(
     *,
     fonte: str,
@@ -134,7 +202,19 @@ def build_base_source_record(
 ) -> dict[str, Any]:
     """Monta a estrutura comum sem classificar identidade religiosa."""
     normalized_id = normalize_source_id(id_fonte)
-    return {
+    if (latitude is None) != (longitude is None):
+        raise ValueError("coordenadas principais devem estar ambas presentes ou nulas")
+    if latitude is not None:
+        _validate_coordinate(latitude, "latitude", -90, 90)
+        _validate_coordinate(longitude, "longitude", -180, 180)
+
+    alternative_coordinates = (
+        [] if coordenadas_alternativas is None else coordenadas_alternativas
+    )
+    _validate_alternative_coordinates(alternative_coordinates)
+    audit_flags = _merge_audit_flags(flags_auditoria)
+
+    record = {
         "source_record_key": make_source_record_key(fonte, normalized_id),
         "fonte": fonte,
         "id_fonte": normalized_id,
@@ -149,7 +229,7 @@ def build_base_source_record(
             "cep": cep,
             "precisao": precisao,
             "fonte_coordenada": fonte_coordenada,
-            "coordenadas_alternativas": list(coordenadas_alternativas or []),
+            "coordenadas_alternativas": alternative_coordinates,
         },
         "identidade_religiosa_original": {
             "tradicao": tradicao,
@@ -164,6 +244,7 @@ def build_base_source_record(
             "url": url,
         },
         "data_coleta": data_coleta,
-        "flags_auditoria": dict(flags_auditoria or empty_audit_flags()),
+        "flags_auditoria": audit_flags,
         "dados_originais": dados_originais,
     }
+    return copy.deepcopy(record)
