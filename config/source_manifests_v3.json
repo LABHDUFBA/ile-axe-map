@@ -1,0 +1,108 @@
+{
+  "version": 3,
+  "description": "Inputs locais da auditoria legada v3. Snapshots internos não são versionados.",
+  "inputs": [
+    {
+      "name": "mapeando_axe",
+      "path": "data/reference/v3_inputs/unified_nominatim.json",
+      "sha256": "6131cc9c311df71a4bd9f307e89cfc5f85ff5525966f551d0be4f5e9cd0c72b3",
+      "count": 3923,
+      "id_field": "source_record_id",
+      "sensitivity": "interno",
+      "kind": "input_bruto",
+      "coordinate_authority": "pending",
+      "coordinate_note": "Input legado reproduzível; a autoridade entre este geocoding e o produto v2 rico permanece pendente."
+    },
+    {
+      "name": "cnpj",
+      "path": "data/reference/v3_inputs/nominatim_results.json",
+      "sha256": "26942627e4d138cf127c433b5c7482fd0545466409ad8a0d2ce673715ab23c7b",
+      "count": 2673,
+      "id_field": "cnpj",
+      "sensitivity": "interno",
+      "kind": "input_bruto"
+    },
+    {
+      "name": "terreiros_brasil",
+      "path": "data/reference/v3_inputs/terreirosdobrasil_recovered.json",
+      "sha256": "5e5822a4cc7297e43dffd0b15d8bdf57a0cf8aad75ffdc704935efffcba639dd",
+      "count": 260,
+      "id_field": "id",
+      "sensitivity": "interno",
+      "kind": "input_bruto"
+    },
+    {
+      "name": "bahia_v2",
+      "path": "data/reference/v3_inputs/terreiros_all_sources_v2.json",
+      "sha256": "6d80e632128262b5f5c841cc0961d9ce20a0073490322083307796258fb7f539",
+      "count": 1959,
+      "id_field": "mixed_by_source",
+      "sensitivity": "interno",
+      "kind": "agregado_bahia",
+      "id_policy_by_source": {
+        "ceao": "ceao_id",
+        "sefaz": "synthetic_fallback",
+        "google": "synthetic_fallback",
+        "osm": "synthetic_fallback"
+      },
+      "id_note": "Google e OSM não preservam place_id/osm_id neste agregado; não inventar IDs nativos."
+    },
+    {
+      "name": "baseline_v2",
+      "path": "data/reference/v3_inputs/validation_all_sources_v2.geojson",
+      "sha256": "28501e7a52a3a2b191cd26be0dfeca8cd493de5580fe2690850fc9df1a1ffca9",
+      "count": 5757,
+      "id_field": "properties.id",
+      "sensitivity": "publicacao",
+      "kind": "baseline_publicado"
+    },
+    {
+      "name": "dedup_nacional",
+      "path": "data/reference/v3_inputs/deduplication_report.json",
+      "sha256": "b2193d85bf7f6ba0ac831aac786efc7bb73d1f09d0587163e60a30383e115eee",
+      "count": 1157,
+      "id_field": "removed",
+      "sensitivity": "interno",
+      "kind": "ledger_legado"
+    },
+    {
+      "name": "remocoes_bahia",
+      "path": "data/reference/v3_inputs/falsos_positivos_removidos.json",
+      "sha256": "b80ab63d4522d274829cf0ab8379c4d79b86605c80b4eae5f12eb9f5cafcef78",
+      "count": 499,
+      "id_field": null,
+      "sensitivity": "interno",
+      "kind": "ledger_legado",
+      "identity_policy": "ponte exata fonte+nome para snapshot pre-96493ef"
+    },
+    {
+      "name": "suspeitos_bahia",
+      "path": "data/reference/v3_inputs/falsos_positivos_suspeitos.json",
+      "sha256": "f6501bbb4ce90346749cca587a6942939b30524b88c887e1473e1c33ecbc0e72",
+      "count": 617,
+      "id_field": null,
+      "sensitivity": "interno",
+      "kind": "ledger_legado",
+      "identity_policy": "fonte+nome_normalizado+lat6+lng6"
+    },
+    {
+      "name": "snapshot_bahia_pre_96493ef",
+      "path": "data/reference/v3_inputs/terreiros_all_sources_pre_96493ef.json",
+      "sha256": "ed729819913ec07389f6c30c8020086e181ca8a6f0a9ec51e6967e3f2bba4268",
+      "count": 2158,
+      "id_field": "mixed_by_source",
+      "sensitivity": "interno",
+      "kind": "snapshot_historico"
+    },
+    {
+      "name": "exclusoes_curadas",
+      "path": "data/exclusoes_curadas.csv",
+      "sha256": "0c81fdfb8351a992ef984621c1eb9aff73d322f932926daf4093abeb0074a5bb",
+      "count": 145,
+      "id_field": null,
+      "sensitivity": "interno",
+      "kind": "ledger_curado",
+      "identity_policy": "CNPJ forte quando presente; fallback sintético fonte+nome_normalizado+lat6+lng6"
+    }
+  ]
+}

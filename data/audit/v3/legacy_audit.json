@@ -1,0 +1,66 @@
+{
+  "bahia": {
+    "ambiguos": {
+      "ambiguos_pendentes_v2": 27,
+      "fora_bbox": 5,
+      "nas_exclusoes_curadas": 106,
+      "nas_remocoes": 156,
+      "total": 294
+    },
+    "falsos_positivos_nas_remocoes": 323,
+    "intersecao_remocoes_exclusoes": 0,
+    "remocoes_heuristicas": 499
+  },
+  "baseline_atual": {
+    "contagem": 5757
+  },
+  "deduplicacao_nacional": {
+    "admitidos": 5492,
+    "admitidos_por_fonte": {
+      "cnpj": 2526,
+      "mapeando_axe": 2828,
+      "terreirosdobrasil": 138
+    },
+    "brutos": 6856,
+    "limiar_efetivo_legado": 0.5,
+    "mantidos": 4335,
+    "pares_mapeando": {
+      "mapeando_axe->cnpj": 18,
+      "mapeando_axe->mapeando_axe": 401
+    },
+    "removidos": 1157,
+    "removidos_por_fonte": {
+      "cnpj": 685,
+      "mapeando_axe": 419,
+      "terreirosdobrasil": 53
+    }
+  },
+  "exclusoes_curadas": {
+    "contagem": 145,
+    "identidades_sinteticas": 143
+  },
+  "hashes": {
+    "exclusoes_curadas_v3": "198c20824cc9930c3ba07239dd24330437d92372b43de8b7055b92b5a1e1e636",
+    "inputs": {
+      "bahia_v2": "6d80e632128262b5f5c841cc0961d9ce20a0073490322083307796258fb7f539",
+      "baseline_v2": "28501e7a52a3a2b191cd26be0dfeca8cd493de5580fe2690850fc9df1a1ffca9",
+      "cnpj": "26942627e4d138cf127c433b5c7482fd0545466409ad8a0d2ce673715ab23c7b",
+      "dedup_nacional": "b2193d85bf7f6ba0ac831aac786efc7bb73d1f09d0587163e60a30383e115eee",
+      "exclusoes_curadas": "0c81fdfb8351a992ef984621c1eb9aff73d322f932926daf4093abeb0074a5bb",
+      "mapeando_axe": "6131cc9c311df71a4bd9f307e89cfc5f85ff5525966f551d0be4f5e9cd0c72b3",
+      "remocoes_bahia": "b80ab63d4522d274829cf0ab8379c4d79b86605c80b4eae5f12eb9f5cafcef78",
+      "snapshot_bahia_pre_96493ef": "ed729819913ec07389f6c30c8020086e181ca8a6f0a9ec51e6967e3f2bba4268",
+      "suspeitos_bahia": "f6501bbb4ce90346749cca587a6942939b30524b88c887e1473e1c33ecbc0e72",
+      "terreiros_brasil": "5e5822a4cc7297e43dffd0b15d8bdf57a0cf8aad75ffdc704935efffcba639dd"
+    }
+  },
+  "semantica": [
+    "exclusao_curada",
+    "remocao_heuristica_legada",
+    "ambiguo_pendente",
+    "dedup_legado_recuperado",
+    "baseline_atual"
+  ],
+  "total_bruto": 8815,
+  "version": 3
+}
