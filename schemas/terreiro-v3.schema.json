@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ileaxe.org/schemas/terreiro-v3.schema.json",
+  "title": "Entidade canônica de terreiro v3",
+  "description": "Contrato da entidade reconciliada de terreiro na unificação nacional v3.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "entity_id",
+    "nome",
+    "localizacao",
+    "identidade_religiosa",
+    "identificadores",
+    "fontes",
+    "qualidade",
+    "valores_originais"
+  ],
+  "properties": {
+    "entity_id": {
+      "description": "Identificador canônico formado pelo prefixo trr_ e um identificador estável.",
+      "type": "string",
+      "pattern": "^trr_[A-Za-z0-9][A-Za-z0-9_-]*$"
+    },
+    "nome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["preferido", "aliases", "normalizado_match"],
+      "properties": {
+        "preferido": {"type": "string", "minLength": 1},
+        "aliases": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
+        "normalizado_match": {"type": "string", "minLength": 1}
+      }
+    },
+    "localizacao": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "latitude",
+        "longitude",
+        "fonte_coordenada",
+        "precisao",
+        "uf",
+        "municipio",
+        "codigo_ibge_municipio",
+        "bairro",
+        "cep",
+        "endereco_original",
+        "status_territorial"
+      ],
+      "properties": {
+        "latitude": {
+          "type": ["number", "null"],
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "type": ["number", "null"],
+          "minimum": -180,
+          "maximum": 180
+        },
+        "fonte_coordenada": {"type": ["string", "null"]},
+        "precisao": {"type": ["string", "null"]},
+        "uf": {
+          "type": ["string", "null"],
+          "pattern": "^[A-Z]{2}$"
+        },
+        "municipio": {"type": ["string", "null"]},
+        "codigo_ibge_municipio": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9]{7}$"
+        },
+        "bairro": {"type": ["string", "null"]},
+        "cep": {"type": ["string", "null"]},
+        "endereco_original": {"type": ["string", "null"]},
+        "status_territorial": {
+          "enum": ["intersecao_ibge", "fora_poligono", "sem_coordenada"]
+        }
+      }
+    },
+    "identidade_religiosa": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tradicao_declarada",
+        "nacao_declarada",
+        "componentes",
+        "categoria_analitica",
+        "metodo",
+        "revisao_humana"
+      ],
+      "properties": {
+        "tradicao_declarada": {"type": ["string", "null"]},
+        "nacao_declarada": {"type": ["string", "null"]},
+        "componentes": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
+        "categoria_analitica": {"type": ["string", "null"]},
+        "metodo": {
+          "enum": [
+            "declarado",
+            "normalizado_declaracao",
+            "inferido_nome",
+            "ausente"
+          ]
+        },
+        "revisao_humana": {
+          "enum": ["aprovado", "pendente", "nao_aplicavel"]
+        }
+      }
+    },
+    "identificadores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cnpj", "ceao_id", "osm_id", "google_place_id"],
+      "properties": {
+        "cnpj": {"type": ["string", "null"]},
+        "ceao_id": {"type": ["string", "null"]},
+        "osm_id": {"type": ["string", "null"]},
+        "google_place_id": {"type": ["string", "null"]}
+      }
+    },
+    "fontes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "fonte",
+          "id_fonte",
+          "url",
+          "campos_contribuidos",
+          "data_coleta"
+        ],
+        "properties": {
+          "fonte": {"type": "string", "minLength": 1},
+          "id_fonte": {"type": "string", "minLength": 1},
+          "url": {"type": ["string", "null"]},
+          "campos_contribuidos": {
+            "type": "array",
+            "items": {"type": "string", "minLength": 1},
+            "uniqueItems": true
+          },
+          "data_coleta": {
+            "type": "string",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          }
+        }
+      }
+    },
+    "qualidade": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status_validacao_geografica",
+        "confianca",
+        "flags",
+        "grupo_reconciliacao"
+      ],
+      "properties": {
+        "status_validacao_geografica": {
+          "enum": ["confirmado", "provavel", "inconclusivo"]
+        },
+        "confianca": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "flags": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
+        "grupo_reconciliacao": {"type": ["string", "null"]}
+      }
+    },
+    "valores_originais": {
+      "description": "Valores de origem agrupados pela fonte. Cada fonte preserva seus campos sem alterar o contrato canônico.",
+      "type": "object",
+      "propertyNames": {"minLength": 1},
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    }
+  }
+}
