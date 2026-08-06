@@ -251,7 +251,7 @@ def test_cli_gera_outputs_reais_em_destino_configuravel(tmp_path):
     assert result.returncode == 0, result.stderr
     assert json.loads(report_path.read_text(encoding="utf-8"))["total_bruto"] == 8815
     with ledger_path.open(encoding="utf-8", newline="") as handle:
-        assert len(list(csv.DictReader(handle))) == 145
+        assert len(list(csv.DictReader(handle))) == 146
 
 
 def test_outputs_reais_sao_agregados_e_preservam_baseline():
@@ -284,7 +284,7 @@ def test_outputs_reais_sao_agregados_e_preservam_baseline():
     assert report["bahia"]["remocoes_heuristicas"] == 499
     assert report["bahia"]["ambiguos"]["ambiguos_pendentes_v2"] == 27
     assert report["baseline_atual"]["contagem"] == 5757
-    assert report["exclusoes_curadas"]["contagem"] == 145
+    assert report["exclusoes_curadas"]["contagem"] == 146
     assert report["semantica"] == [
         "exclusao_curada",
         "remocao_heuristica_legada",
@@ -295,10 +295,11 @@ def test_outputs_reais_sao_agregados_e_preservam_baseline():
     serialized = json.dumps(report, ensure_ascii=False).casefold()
     assert all(term not in serialized for term in ("telefone", "endereco", "payload", "contato"))
 
-    assert len(ledger) == 145
+    assert len(ledger) == 146
     identities = {row["stable_key"]: row for row in ledger}
-    assert len(identities) == 145
+    assert len(identities) == 146
     assert identities["cnpj:05419205000120"]["identity_synthetic"] == "false"
     assert identities["cnpj:04858642000187"]["identity_synthetic"] == "false"
+    assert identities["cnpj:10344860000104"]["identity_synthetic"] == "false"
     assert sum(row["identity_synthetic"] == "true" for row in ledger) == 143
     assert report["hashes"]["exclusoes_curadas_v3"] == sha256_file(ledger_path)
