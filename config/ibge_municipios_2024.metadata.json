@@ -1,0 +1,19 @@
+{
+  "arquivo_fonte": "BR_Municipios_2024.dbf",
+  "bytes_dbf": 2865036,
+  "campos_fonte": {
+    "codigo_ibge": "CD_MUN",
+    "nome": "NM_MUN",
+    "uf": "SIGLA_UF"
+  },
+  "fonte_siafi": "https://www.tesourotransparente.gov.br/ckan/dataset/abb968cb-3710-4f85-89cf-875c91b9c7f6/resource/eebb3bc6-9eea-4496-8bcf-304f33155282/download/tabmun.csv",
+  "geracao": "Leitura determinística do DBF oficial, sem geometria nem fuzzy matching.",
+  "observacao_registros": "A Malha Municipal 2024 contém 5.573 registros: municípios e áreas operacionais codificadas pelo IBGE. A ponte preserva todos os registros oficiais.",
+  "registros": 5573,
+  "registros_com_siafi": 5570,
+  "registros_sem_siafi": 3,
+  "sha256_dbf": "0257f680ff908c0c1d32856d73631bb0d5d0f95d87fb964f7364659f8599d59e",
+  "sha256_mapping_csv": "2e28f2324a36271cd60cb282af4dba03312a70ac721ee9778d11895c9292f876",
+  "sha256_siafi_csv": "3651c930ca1ddfde0bb7b47130795f332330d4c66b3db70f49f3ca3494e4242d",
+  "versao": "IBGE Malha Municipal 2024"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ileaxe.org/schemas/dedup-occurrence-status-v3.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["occurrence_ref", "fonte", "exclusao_curada", "ledger_refs", "status"],
+  "properties": {
+    "occurrence_ref": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "fonte": {"enum": ["ceao", "bahia_google", "osm", "sefaz", "mapeando_axe", "cnpj", "terreiros_brasil"]},
+    "exclusao_curada": {"type": "boolean"},
+    "ledger_refs": {"type": "array", "maxItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^curated-exclusion-v3:[0-9a-f]{64}$"}},
+    "status": {"enum": ["preserved", "preserved_curated_exclusion"]}
+  },
+  "oneOf": [
+    {"properties": {"exclusao_curada": {"const": false}, "ledger_refs": {"maxItems": 0}, "status": {"const": "preserved"}}},
+    {"properties": {"exclusao_curada": {"const": true}, "ledger_refs": {"minItems": 1}, "status": {"const": "preserved_curated_exclusion"}}}
+  ]
+}
