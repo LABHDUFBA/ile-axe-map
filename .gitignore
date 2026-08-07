@@ -1,3 +1,9 @@
 data/ceao/fotos_grandes.zip
 data/sefaz/sefaz_salvador_map.pdf
 data/processed/v3/source_records.jsonl
+data/processed/v3/dedup_candidates.jsonl
+data/processed/v3/dedup_occurrence_status.jsonl
+data/processed/v3/.*.tmp-*
+data/processed/v3/.*.bak-*
+data/audit/v3/.*.tmp-*
+data/audit/v3/.*.bak-*
