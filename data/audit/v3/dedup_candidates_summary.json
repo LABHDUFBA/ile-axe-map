@@ -1,0 +1,78 @@
+{
+  "candidate_counts": {
+    "by_evidence": {
+      "distance": 16,
+      "exact_name": 559,
+      "name_similarity": 16
+    },
+    "by_negative_evidence": {
+      "collapsed_coordinate": 4,
+      "different_cnpj": 4
+    },
+    "by_relation": {
+      "distinct_entities": 4,
+      "possible_same_entity": 389,
+      "unresolved": 174
+    },
+    "by_review_status": {
+      "pending": 563,
+      "rejected": 4
+    },
+    "total": 567
+  },
+  "canonical_entities_created": 0,
+  "curated_exclusions": {
+    "absent": 143,
+    "ambiguous": 0,
+    "bridge_original_ambiguous": 0,
+    "bridge_original_missing": 0,
+    "matched": 3,
+    "rows": 146
+  },
+  "equations": {
+    "candidate_relations": "567 = 567",
+    "curated_ledger": "3 + 143 + 0 = 146",
+    "occurrences_preserved": "8815 = 8815"
+  },
+  "input": {
+    "bytes": 11599613,
+    "counts_by_source": {
+      "bahia_google": 550,
+      "ceao": 1155,
+      "cnpj": 2673,
+      "mapeando_axe": 3923,
+      "osm": 20,
+      "sefaz": 234,
+      "terreiros_brasil": 260
+    },
+    "occurrences": 8815,
+    "sha256": "81ec25970498272c4e0fbd7305b721f57a8da05ef4ed521accb5c323c074b5d2"
+  },
+  "metrics": {
+    "candidate_component_records": 600,
+    "candidate_components": 236,
+    "collapsed_coordinate_groups": 104,
+    "exact_name_cross_source_groups": 114,
+    "exact_name_cross_source_pairs": 246,
+    "exact_name_groups_overall": 409,
+    "exact_name_groups_same_municipality": 156,
+    "exact_name_pairs_same_municipality": 385,
+    "geographic_homonym_pairs": 1193,
+    "occurrences_preserved": 8815,
+    "proximity_name_compatible_pairs": 16,
+    "records_with_name": 8814
+  },
+  "outputs": {
+    "candidates": {
+      "bytes": 334246,
+      "lines": 567,
+      "sha256": "0063e745cf1c696c8b9d9cf5f3778fbb6a7cfa3529661acaa18270f01e93b372"
+    },
+    "occurrence_status": {
+      "bytes": 1155556,
+      "lines": 8815,
+      "sha256": "02dedea79e01fd82f9a1a31d76b0e94a6fe9f86f3e176dd956ea693c628d992a"
+    }
+  },
+  "protocol_version": "dedup-candidate-v3"
+}
