@@ -236,7 +236,9 @@ def _component_key(pair_key: str) -> str:
     return f"dedup-component-v3:{digest}"
 
 
-def _validate_candidate_semantics(candidates: list[dict[str, Any]], records: list[dict[str, Any]]) -> None:
+def _validate_candidate_semantics(
+    candidates: list[dict[str, Any]], records: list[dict[str, Any]], municipality_index: MunicipalityIndex | None = None,
+) -> None:
     """Valida relações que JSON Schema não consegue expressar."""
     records_by_ref = {_occurrence_ref(row["source_record_key"]): row for row in records}
     evidence_contracts = {
@@ -272,17 +274,42 @@ def _validate_candidate_semantics(candidates: list[dict[str, Any]], records: lis
                 expected = evidence_contracts[evidence_type]
                 if (evidence["provenance"], evidence["authority"]) != expected:
                     raise GenerationError(f"combinação evidence/provenance/authority inválida no índice {index}")
-            if evidence_type == "exact_name" and _normalize(left.get("nome_original")) != _normalize(right.get("nome_original")):
-                raise GenerationError(f"evidence exact_name sem nomes iguais no índice {index}")
+            if evidence_type == "exact_name":
+                same_name = _normalize(left.get("nome_original")) == _normalize(right.get("nome_original"))
+                same_geography = _geography_relation(left, right, municipality_index)[0] == "same"
+                if not same_name or (left["fonte"] == right["fonte"] and not same_geography):
+                    raise GenerationError(f"evidence exact_name sem nome/geografia compatível no índice {index}")
+            if evidence_type == "exact_cnpj":
+                left_cnpj = _valid_cnpj(left.get("identificadores", {}).get("cnpj"))
+                right_cnpj = _valid_cnpj(right.get("identificadores", {}).get("cnpj"))
+                if not left_cnpj or left_cnpj != right_cnpj:
+                    raise GenerationError(f"evidence exact_cnpj sem CNPJ válido igual no índice {index}")
+            if evidence_type == "exact_native_id" and not (
+                left["fonte"] == right["fonte"]
+                and left.get("id_fonte") == right.get("id_fonte")
+                and not left.get("id_fonte_sintetico", False)
+                and not right.get("id_fonte_sintetico", False)
+            ):
+                raise GenerationError(f"evidence exact_native_id sem ID nativo válido igual no índice {index}")
+            if evidence_type == "name_similarity" and evidence.get("score") != round(_jaccard(left.get("nome_original"), right.get("nome_original")), 3):
+                raise GenerationError(f"score de name_similarity inválido no índice {index}")
             if evidence_type == "distance":
                 left_coordinate, right_coordinate = _coordinates(left), _coordinates(right)
                 if not left_coordinate or not right_coordinate:
                     raise GenerationError(f"evidence distance sem coordenadas no índice {index}")
+                distance = _distance_m(left_coordinate[:2], right_coordinate[:2])
+                if distance > 500 or evidence["distance_bucket"] != _distance_bucket(distance):
+                    raise GenerationError(f"distance_bucket inválido no índice {index}")
                 expected_authority = "geocoder_auxiliary" if "geocoder_auxiliary" in (left_coordinate[2], right_coordinate[2]) else "declared"
                 if evidence["provenance"] != "derived_spatial_grid" or evidence["authority"] != expected_authority:
                     raise GenerationError(f"combinação evidence/provenance/authority inválida no índice {index}")
 
         negative_types = {item["type"] for item in candidate["negative_evidence"]}
+        if "different_cnpj" in negative_types:
+            left_cnpj = _valid_cnpj(left.get("identificadores", {}).get("cnpj"))
+            right_cnpj = _valid_cnpj(right.get("identificadores", {}).get("cnpj"))
+            if not left_cnpj or not right_cnpj or left_cnpj == right_cnpj:
+                raise GenerationError(f"negative evidence different_cnpj inválida no índice {index}")
         status = candidate["review_status"]
         relation = candidate["suggested_relation"]
         if status == "pending" and relation not in {"possible_same_entity", "unresolved"}:
@@ -778,7 +805,7 @@ def build_dedup_candidates(
     records, manifest = _load_validated_source(source_path, Path(source_manifest_path), Path(source_schema_path))
     generated = generate_candidates(records, municipality_index=mapping)
     _validate_rows(generated["candidate_pairs"], Path(candidate_schema_path), "candidato")
-    _validate_candidate_semantics(generated["candidate_pairs"], records)
+    _validate_candidate_semantics(generated["candidate_pairs"], records, mapping)
     matched, ledger_counts = _reconcile_ledger(records, Path(curated_ledger_path), Path(original_ledger_path))
     statuses = []
     for record in sorted(records, key=lambda row: _occurrence_ref(row["source_record_key"])):
