@@ -1,0 +1,1434 @@
+{
+  "campos_nacionais_propostos": {
+    "contato.telefone_declarado": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "osm"
+      ],
+      "grupo_semantico": "contato_publicacao"
+    },
+    "identidade_religiosa.categoria_declarada": {
+      "fontes_contribuintes": [
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "identidade_religiosa"
+    },
+    "identidade_religiosa.categoria_normalizada": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "osm",
+        "sefaz"
+      ],
+      "grupo_semantico": "identidade_religiosa"
+    },
+    "identidade_religiosa.componentes": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "osm",
+        "sefaz"
+      ],
+      "grupo_semantico": "identidade_religiosa"
+    },
+    "identidade_religiosa.nacao_declarada": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "osm",
+        "sefaz",
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "identidade_religiosa"
+    },
+    "identidade_religiosa.nacao_normalizada": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "osm",
+        "sefaz"
+      ],
+      "grupo_semantico": "identidade_religiosa"
+    },
+    "identificacao.descricao_declarada": {
+      "fontes_contribuintes": [
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "identificacao_nome"
+    },
+    "identificadores.ceao_id": {
+      "fontes_contribuintes": [
+        "ceao"
+      ],
+      "grupo_semantico": "identificadores"
+    },
+    "identificadores.cnpj": {
+      "fontes_contribuintes": [
+        "cnpj"
+      ],
+      "grupo_semantico": "identificadores"
+    },
+    "identificadores.id_nativo": {
+      "fontes_contribuintes": [
+        "mapeando_axe",
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "identificadores"
+    },
+    "identificadores.osm_id": {
+      "fontes_contribuintes": [
+        "mapeando_axe"
+      ],
+      "grupo_semantico": "identificadores"
+    },
+    "identificadores.sefaz_codigo": {
+      "fontes_contribuintes": [
+        "sefaz"
+      ],
+      "grupo_semantico": "identificadores"
+    },
+    "localizacao.bairro_declarado": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "cnpj",
+        "osm"
+      ],
+      "grupo_semantico": "localizacao_endereco"
+    },
+    "localizacao.cep_declarado": {
+      "fontes_contribuintes": [
+        "ceao",
+        "cnpj",
+        "mapeando_axe"
+      ],
+      "grupo_semantico": "localizacao_endereco"
+    },
+    "localizacao.codigo_ibge_municipio": {
+      "fontes_contribuintes": [
+        "cnpj"
+      ],
+      "grupo_semantico": "localizacao_endereco"
+    },
+    "localizacao.endereco_declarado": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "mapeando_axe",
+        "osm",
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "localizacao_endereco"
+    },
+    "localizacao.endereco_geocodificado": {
+      "fontes_contribuintes": [
+        "mapeando_axe"
+      ],
+      "grupo_semantico": "localizacao_endereco"
+    },
+    "localizacao.latitude": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "cnpj",
+        "mapeando_axe",
+        "osm",
+        "sefaz",
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "localizacao_endereco"
+    },
+    "localizacao.logradouro_declarado": {
+      "fontes_contribuintes": [
+        "cnpj"
+      ],
+      "grupo_semantico": "localizacao_endereco"
+    },
+    "localizacao.longitude": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "cnpj",
+        "mapeando_axe",
+        "osm",
+        "sefaz",
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "localizacao_endereco"
+    },
+    "localizacao.municipio_declarado": {
+      "fontes_contribuintes": [
+        "mapeando_axe",
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "localizacao_endereco"
+    },
+    "localizacao.numero_declarado": {
+      "fontes_contribuintes": [
+        "cnpj"
+      ],
+      "grupo_semantico": "localizacao_endereco"
+    },
+    "localizacao.precisao": {
+      "fontes_contribuintes": [
+        "cnpj",
+        "mapeando_axe",
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "localizacao_endereco"
+    },
+    "localizacao.uf_declarada": {
+      "fontes_contribuintes": [
+        "cnpj",
+        "mapeando_axe",
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "localizacao_endereco"
+    },
+    "midia.imagem_principal_url": {
+      "fontes_contribuintes": [
+        "ceao"
+      ],
+      "grupo_semantico": "midia"
+    },
+    "midia.miniatura_url": {
+      "fontes_contribuintes": [
+        "ceao"
+      ],
+      "grupo_semantico": "midia"
+    },
+    "nome.declarado": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "cnpj",
+        "mapeando_axe",
+        "osm",
+        "sefaz",
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "identificacao_nome"
+    },
+    "nome.juridico_declarado": {
+      "fontes_contribuintes": [
+        "cnpj"
+      ],
+      "grupo_semantico": "identificacao_nome"
+    },
+    "organizacao.ano_fundacao_declarado": {
+      "fontes_contribuintes": [
+        "ceao"
+      ],
+      "grupo_semantico": "organizacao_historia"
+    },
+    "organizacao.data_fundacao_declarada": {
+      "fontes_contribuintes": [
+        "cnpj"
+      ],
+      "grupo_semantico": "organizacao_historia"
+    },
+    "organizacao.lideranca_declarada": {
+      "fontes_contribuintes": [
+        "ceao"
+      ],
+      "grupo_semantico": "organizacao_historia"
+    },
+    "organizacao.regente_declarado": {
+      "fontes_contribuintes": [
+        "ceao"
+      ],
+      "grupo_semantico": "organizacao_historia"
+    },
+    "proveniencia.consulta_geocodificacao": {
+      "fontes_contribuintes": [
+        "cnpj",
+        "mapeando_axe"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "proveniencia.descricao_fonte": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "osm",
+        "sefaz"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "proveniencia.fonte": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "cnpj",
+        "osm",
+        "sefaz",
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "proveniencia.fontes_relacionadas[].fonte": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "osm",
+        "sefaz"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "proveniencia.fontes_relacionadas[].id": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "osm",
+        "sefaz"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "proveniencia.metodo_recuperacao": {
+      "fontes_contribuintes": [
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "proveniencia.tipo_objeto_osm_geocodificado": {
+      "fontes_contribuintes": [
+        "mapeando_axe"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "proveniencia.url_registro": {
+      "fontes_contribuintes": [
+        "terreiros_brasil"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "qualidade.avaliacao_fonte": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "osm"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "qualidade.confianca_geocodificacao": {
+      "fontes_contribuintes": [
+        "mapeando_axe"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "qualidade.metodo_classificacao": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "osm",
+        "sefaz"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "qualidade.quantidade_avaliacoes_fonte": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "osm"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "qualidade.status_geocodificacao": {
+      "fontes_contribuintes": [
+        "mapeando_axe"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "qualidade.status_geografico": {
+      "fontes_contribuintes": [
+        "bahia_google",
+        "ceao",
+        "osm",
+        "sefaz"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    },
+    "qualidade.tipo_endereco_geocodificador": {
+      "fontes_contribuintes": [
+        "mapeando_axe"
+      ],
+      "grupo_semantico": "proveniencia_qualidade"
+    }
+  },
+  "fontes": {
+    "bahia_google": {
+      "campos": [
+        {
+          "campo_original": "bairro",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "endereco",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 550,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "fonte",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 550,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "fonte_detalhe",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "fontes",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 550,
+          "tipos_observados": [
+            "list"
+          ]
+        },
+        {
+          "campo_original": "fontes[]",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 550,
+          "tipos_observados": [
+            "object"
+          ]
+        },
+        {
+          "campo_original": "fontes[].fonte",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 550,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "fontes[].id",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "geo_status",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 550,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "lat",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 550,
+          "tipos_observados": [
+            "float"
+          ]
+        },
+        {
+          "campo_original": "lng",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 550,
+          "tipos_observados": [
+            "float"
+          ]
+        },
+        {
+          "campo_original": "metodo_classificacao",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 550,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nacao_categoria",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 550,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nacao_componentes",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "nacao_original",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "nacao_primaria",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "nome",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 550,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "rating",
+          "cobertura_percentual": "78.727273",
+          "preenchidos": 433,
+          "tipos_observados": [
+            "float",
+            "int"
+          ]
+        },
+        {
+          "campo_original": "reviews",
+          "cobertura_percentual": "78.727273",
+          "preenchidos": 433,
+          "tipos_observados": [
+            "int"
+          ]
+        },
+        {
+          "campo_original": "telefone",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        }
+      ],
+      "quantidade_campos": 20,
+      "registros": 550
+    },
+    "ceao": {
+      "campos": [
+        {
+          "campo_original": "ano_fundacao",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "bairro",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "ceao_id",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "cep",
+          "cobertura_percentual": "89.350649",
+          "preenchidos": 1032,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "endereco",
+          "cobertura_percentual": "82.510823",
+          "preenchidos": 953,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "fonte",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "fonte_detalhe",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "fontes",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "list"
+          ]
+        },
+        {
+          "campo_original": "fontes[]",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "object"
+          ]
+        },
+        {
+          "campo_original": "fontes[].fonte",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "fontes[].id",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "foto_grande",
+          "cobertura_percentual": "98.268398",
+          "preenchidos": 1135,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "foto_thumb",
+          "cobertura_percentual": "98.268398",
+          "preenchidos": 1135,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "geo_status",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "lat",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "float"
+          ]
+        },
+        {
+          "campo_original": "lideranca",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "lng",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "float"
+          ]
+        },
+        {
+          "campo_original": "metodo_classificacao",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nacao",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nacao_categoria",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nacao_componentes",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "nacao_original",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nacao_primaria",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "nome",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "rating",
+          "cobertura_percentual": "3.549784",
+          "preenchidos": 41,
+          "tipos_observados": [
+            "float",
+            "int"
+          ]
+        },
+        {
+          "campo_original": "regente",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "reviews",
+          "cobertura_percentual": "3.549784",
+          "preenchidos": 41,
+          "tipos_observados": [
+            "int"
+          ]
+        },
+        {
+          "campo_original": "telefone",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 1155,
+          "tipos_observados": [
+            "string"
+          ]
+        }
+      ],
+      "quantidade_campos": 28,
+      "registros": 1155
+    },
+    "cnpj": {
+      "campos": [
+        {
+          "campo_original": "bairro",
+          "cobertura_percentual": "98.578376",
+          "preenchidos": 2635,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "cep",
+          "cobertura_percentual": "99.775533",
+          "preenchidos": 2667,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "cnpj",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 2673,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "codigo_municipio",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 2673,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "data_inicio",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 2673,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "lat",
+          "cobertura_percentual": "94.500561",
+          "preenchidos": 2526,
+          "tipos_observados": [
+            "float"
+          ]
+        },
+        {
+          "campo_original": "lng",
+          "cobertura_percentual": "94.500561",
+          "preenchidos": 2526,
+          "tipos_observados": [
+            "float"
+          ]
+        },
+        {
+          "campo_original": "logradouro",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 2673,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nome_fantasia",
+          "cobertura_percentual": "50.766929",
+          "preenchidos": 1357,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "numero",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 2673,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "precision",
+          "cobertura_percentual": "94.500561",
+          "preenchidos": 2526,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "query_used",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 2673,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "razao_social",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 2673,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "source",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 2673,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "uf",
+          "cobertura_percentual": "99.962589",
+          "preenchidos": 2672,
+          "tipos_observados": [
+            "string"
+          ]
+        }
+      ],
+      "quantidade_campos": 15,
+      "registros": 2673
+    },
+    "mapeando_axe": {
+      "campos": [
+        {
+          "campo_original": "address_raw",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 3923,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "city",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 3923,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "name",
+          "cobertura_percentual": "99.974509",
+          "preenchidos": 3922,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nominatim_addresstype",
+          "cobertura_percentual": "28.294672",
+          "preenchidos": 1110,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nominatim_confidence",
+          "cobertura_percentual": "72.087688",
+          "preenchidos": 2828,
+          "tipos_observados": [
+            "float"
+          ]
+        },
+        {
+          "campo_original": "nominatim_display_name",
+          "cobertura_percentual": "72.087688",
+          "preenchidos": 2828,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nominatim_lat",
+          "cobertura_percentual": "72.087688",
+          "preenchidos": 2828,
+          "tipos_observados": [
+            "float"
+          ]
+        },
+        {
+          "campo_original": "nominatim_lng",
+          "cobertura_percentual": "72.087688",
+          "preenchidos": 2828,
+          "tipos_observados": [
+            "float"
+          ]
+        },
+        {
+          "campo_original": "nominatim_osm_id",
+          "cobertura_percentual": "72.087688",
+          "preenchidos": 2828,
+          "tipos_observados": [
+            "int"
+          ]
+        },
+        {
+          "campo_original": "nominatim_osm_type",
+          "cobertura_percentual": "72.087688",
+          "preenchidos": 2828,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nominatim_precision",
+          "cobertura_percentual": "72.087688",
+          "preenchidos": 2828,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nominatim_query",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 3923,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nominatim_status",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 3923,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "postcode",
+          "cobertura_percentual": "97.552893",
+          "preenchidos": 3827,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "source_record_id",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 3923,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "state",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 3923,
+          "tipos_observados": [
+            "string"
+          ]
+        }
+      ],
+      "quantidade_campos": 16,
+      "registros": 3923
+    },
+    "osm": {
+      "campos": [
+        {
+          "campo_original": "bairro",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "endereco",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "fonte",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 20,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "fonte_detalhe",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "fontes",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 20,
+          "tipos_observados": [
+            "list"
+          ]
+        },
+        {
+          "campo_original": "fontes[]",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 20,
+          "tipos_observados": [
+            "object"
+          ]
+        },
+        {
+          "campo_original": "fontes[].fonte",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 20,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "fontes[].id",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "geo_status",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 20,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "lat",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 20,
+          "tipos_observados": [
+            "float"
+          ]
+        },
+        {
+          "campo_original": "lng",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 20,
+          "tipos_observados": [
+            "float"
+          ]
+        },
+        {
+          "campo_original": "metodo_classificacao",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 20,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nacao_categoria",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 20,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nacao_componentes",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "nacao_original",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "nacao_primaria",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "nome",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 20,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "rating",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "reviews",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "telefone",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        }
+      ],
+      "quantidade_campos": 20,
+      "registros": 20
+    },
+    "sefaz": {
+      "campos": [
+        {
+          "campo_original": "fonte",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 234,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "fonte_detalhe",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 234,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "fontes",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 234,
+          "tipos_observados": [
+            "list"
+          ]
+        },
+        {
+          "campo_original": "fontes[]",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 234,
+          "tipos_observados": [
+            "object"
+          ]
+        },
+        {
+          "campo_original": "fontes[].fonte",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 234,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "fontes[].id",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 234,
+          "tipos_observados": [
+            "int"
+          ]
+        },
+        {
+          "campo_original": "geo_status",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 234,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "lat",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "lng",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "metodo_classificacao",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 234,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nacao_categoria",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 234,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nacao_componentes",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "nacao_original",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "nacao_primaria",
+          "cobertura_percentual": "0.000000",
+          "preenchidos": 0,
+          "tipos_observados": []
+        },
+        {
+          "campo_original": "nome",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 234,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "sefaz_codigo",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 234,
+          "tipos_observados": [
+            "int"
+          ]
+        }
+      ],
+      "quantidade_campos": 16,
+      "registros": 234
+    },
+    "terreiros_brasil": {
+      "campos": [
+        {
+          "campo_original": "categoria_raw",
+          "cobertura_percentual": "92.307692",
+          "preenchidos": 240,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "cidade",
+          "cobertura_percentual": "52.692308",
+          "preenchidos": 137,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "descricao",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 260,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "endereco",
+          "cobertura_percentual": "53.076923",
+          "preenchidos": 138,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "id",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 260,
+          "tipos_observados": [
+            "int"
+          ]
+        },
+        {
+          "campo_original": "lat",
+          "cobertura_percentual": "99.615385",
+          "preenchidos": 259,
+          "tipos_observados": [
+            "float"
+          ]
+        },
+        {
+          "campo_original": "link",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 260,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "lng",
+          "cobertura_percentual": "99.615385",
+          "preenchidos": 259,
+          "tipos_observados": [
+            "float"
+          ]
+        },
+        {
+          "campo_original": "nacao",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 260,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "nome",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 260,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "precision",
+          "cobertura_percentual": "0.384615",
+          "preenchidos": 1,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "recovery_method",
+          "cobertura_percentual": "0.384615",
+          "preenchidos": 1,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "source",
+          "cobertura_percentual": "100.000000",
+          "preenchidos": 260,
+          "tipos_observados": [
+            "string"
+          ]
+        },
+        {
+          "campo_original": "uf",
+          "cobertura_percentual": "52.692308",
+          "preenchidos": 137,
+          "tipos_observados": [
+            "string"
+          ]
+        }
+      ],
+      "quantidade_campos": 14,
+      "registros": 260
+    }
+  },
+  "metadados": {
+    "contagens_fontes": {
+      "bahia_google": 550,
+      "ceao": 1155,
+      "cnpj": 2673,
+      "mapeando_axe": 3923,
+      "osm": 20,
+      "sefaz": 234,
+      "terreiros_brasil": 260
+    },
+    "inputs": [
+      {
+        "count": 1959,
+        "name": "bahia_v2",
+        "path": "data/reference/v3_inputs/terreiros_all_sources_v2.json",
+        "sha256": "6d80e632128262b5f5c841cc0961d9ce20a0073490322083307796258fb7f539"
+      },
+      {
+        "count": 2673,
+        "name": "cnpj",
+        "path": "data/reference/v3_inputs/nominatim_results.json",
+        "sha256": "26942627e4d138cf127c433b5c7482fd0545466409ad8a0d2ce673715ab23c7b"
+      },
+      {
+        "count": 3923,
+        "name": "mapeando_axe",
+        "path": "data/reference/v3_inputs/unified_nominatim.json",
+        "sha256": "6131cc9c311df71a4bd9f307e89cfc5f85ff5525966f551d0be4f5e9cd0c72b3"
+      },
+      {
+        "count": 260,
+        "name": "terreiros_brasil",
+        "path": "data/reference/v3_inputs/terreirosdobrasil_recovered.json",
+        "sha256": "5e5822a4cc7297e43dffd0b15d8bdf57a0cf8aad75ffdc704935efffcba639dd"
+      }
+    ],
+    "privacidade": "Somente nomes de campos, tipos, contagens, percentuais, hashes e mapeamentos; sem valores de registros.",
+    "total_registros": 8815,
+    "versao": 3
+  },
+  "politica_ausencia": {
+    "imputacao_silenciosa_permitida": false,
+    "inferencia_exige_marcacao_explicita": true,
+    "valor_para_variavel_nao_coletada": null
+  }
+}
