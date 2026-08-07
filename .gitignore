@@ -17,3 +17,5 @@ data/processed/v3/review_queue_v3.csv
 data/processed/v3/review_decisions_v3.jsonl
 data/processed/v3/entity_assignments_v3.jsonl
 data/processed/v3/entities_v3.jsonl
+data/processed/v3/google_pilot_results_v3.jsonl
+data/processed/v3/google_pilot_sample_v3.jsonl
