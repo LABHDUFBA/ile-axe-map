@@ -1,9 +1,9 @@
 {
   "candidate_counts": {
     "by_evidence": {
-      "distance": 16,
-      "exact_name": 559,
-      "name_similarity": 16
+      "distance": 23,
+      "exact_name": 384,
+      "name_similarity": 23
     },
     "by_negative_evidence": {
       "collapsed_coordinate": 4,
@@ -11,14 +11,14 @@
     },
     "by_relation": {
       "distinct_entities": 4,
-      "possible_same_entity": 389,
-      "unresolved": 174
+      "possible_same_entity": 379,
+      "unresolved": 11
     },
     "by_review_status": {
-      "pending": 563,
+      "pending": 390,
       "rejected": 4
     },
-    "total": 567
+    "total": 394
   },
   "canonical_entities_created": 0,
   "curated_exclusions": {
@@ -30,7 +30,7 @@
     "rows": 146
   },
   "equations": {
-    "candidate_relations": "567 = 567",
+    "candidate_relations": "394 = 394",
     "curated_ledger": "3 + 143 + 0 = 146",
     "occurrences_preserved": "8815 = 8815"
   },
@@ -48,31 +48,49 @@
     "occurrences": 8815,
     "sha256": "81ec25970498272c4e0fbd7305b721f57a8da05ef4ed521accb5c323c074b5d2"
   },
+  "metric_change": {
+    "candidate_pairs_before_d2": 567,
+    "candidate_pairs_without_siafi_bridge": 352,
+    "description": "Os 567 pares anteriores usavam a semântica pré-D2. O resultado intermediário de 352 pares já harmonizava IBGE e texto, mas interpretava o código municipal de quatro dígitos do CNPJ como IBGE e deixava essa geografia desconhecida. A ponte oficial SIAFI→IBGE restaura as comparações municipais válidas; os demais controles D2 continuam ativos.",
+    "historical_geographic_homonym_pairs": 1193,
+    "historical_incomparable_ibge_text_pairs": 39
+  },
   "metrics": {
-    "candidate_component_records": 600,
-    "candidate_components": 236,
+    "candidate_component_records": 788,
+    "candidate_components": 394,
     "collapsed_coordinate_groups": 104,
-    "exact_name_cross_source_groups": 114,
-    "exact_name_cross_source_pairs": 246,
-    "exact_name_groups_overall": 409,
-    "exact_name_groups_same_municipality": 156,
-    "exact_name_pairs_same_municipality": 385,
-    "geographic_homonym_pairs": 1193,
+    "exact_name_cross_source_groups": 113,
+    "exact_name_cross_source_pairs": 245,
+    "exact_name_groups_overall": 406,
+    "exact_name_groups_same_municipality": 164,
+    "exact_name_pairs_same_municipality": 373,
+    "geographic_homonym_pairs": 952,
+    "name_pair_comparisons": 543,
     "occurrences_preserved": 8815,
-    "proximity_name_compatible_pairs": 16,
-    "records_with_name": 8814
+    "oversized_name_groups": 0,
+    "oversized_name_theoretical_pairs": 0,
+    "oversized_spatial_buckets": 1,
+    "pair_comparison_budget": 250000,
+    "placeholder_name_records": 100,
+    "proximity_name_compatible_pairs": 23,
+    "records_with_name": 8814,
+    "spatial_pair_comparisons": 19512
   },
   "outputs": {
     "candidates": {
-      "bytes": 334246,
-      "lines": 567,
-      "sha256": "0063e745cf1c696c8b9d9cf5f3778fbb6a7cfa3529661acaa18270f01e93b372"
+      "bytes": 280478,
+      "lines": 394,
+      "sha256": "609ee1252891c47722b3d4c34a4023df7f9623b6a27f35b26abfa4f3b8157417"
     },
     "occurrence_status": {
-      "bytes": 1155556,
+      "bytes": 1476275,
       "lines": 8815,
-      "sha256": "02dedea79e01fd82f9a1a31d76b0e94a6fe9f86f3e176dd956ea693c628d992a"
+      "sha256": "849e1a369b395b89b6694e66df6829f75ad88b26b7402f46bffc7a1428079147"
     }
+  },
+  "privacy": {
+    "occurrence_ref_protocol": "sha256(occurrence-ref-v1\\0source_record_key)",
+    "source_record_key_published": false
   },
   "protocol_version": "dedup-candidate-v3"
 }

@@ -1,87 +1,38 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://ileaxe.org/schemas/dedup-candidate-v3.schema.json",
-  "title": "Par candidato de deduplicação preservadora v3",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "candidate_pair_key",
-    "left_source_record_key",
-    "right_source_record_key",
-    "left_source",
-    "right_source",
-    "evidence",
-    "negative_evidence",
-    "suggested_relation",
-    "review_status",
-    "candidate_component_key",
-    "canonical_entity_created"
-  ],
+  "required": ["candidate_pair_key", "left_occurrence_ref", "right_occurrence_ref", "left_source", "right_source", "evidence", "negative_evidence", "suggested_relation", "review_status", "candidate_component_key", "conflicting_pair_keys", "canonical_entity_created"],
   "properties": {
     "candidate_pair_key": {"type": "string", "pattern": "^dedupv3:[0-9a-f]{64}$"},
-    "left_source_record_key": {"type": "string", "minLength": 3},
-    "right_source_record_key": {"type": "string", "minLength": 3},
-    "left_source": {"type": "string", "minLength": 1},
-    "right_source": {"type": "string", "minLength": 1},
-    "evidence": {
-      "type": "array",
-      "minItems": 1,
-      "items": {"$ref": "#/$defs/evidence"}
-    },
-    "negative_evidence": {
-      "type": "array",
-      "items": {"$ref": "#/$defs/negativeEvidence"}
-    },
-    "suggested_relation": {
-      "enum": [
-        "distinct_entities",
-        "possible_same_entity",
-        "same_entity_same_location",
-        "possible_same_entity_moved",
-        "unresolved"
-      ]
-    },
-    "review_status": {
-      "enum": ["pending", "accepted", "rejected", "auto_linked_strong_id"]
-    },
-    "candidate_component_key": {
-      "type": "string",
-      "pattern": "^dedup-component-v3:[0-9a-f]{64}$"
-    },
+    "left_occurrence_ref": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "right_occurrence_ref": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "left_source": {"enum": ["ceao", "bahia_google", "osm", "sefaz", "mapeando_axe", "cnpj", "terreiros_brasil"]},
+    "right_source": {"enum": ["ceao", "bahia_google", "osm", "sefaz", "mapeando_axe", "cnpj", "terreiros_brasil"]},
+    "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
+    "negative_evidence": {"type": "array", "items": {"$ref": "#/$defs/negativeEvidence"}},
+    "suggested_relation": {"enum": ["distinct_entities", "possible_same_entity", "same_entity_same_location", "possible_same_entity_moved", "unresolved"]},
+    "review_status": {"enum": ["pending", "rejected", "auto_linked_strong_id"]},
+    "candidate_component_key": {"type": "string", "pattern": "^dedup-component-v3:[0-9a-f]{64}$"},
+    "conflicting_pair_keys": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^dedupv3:[0-9a-f]{64}$"}},
     "canonical_entity_created": {"const": false}
   },
+  "allOf": [
+    {"if": {"properties": {"review_status": {"const": "rejected"}}, "required": ["review_status"]}, "then": {"properties": {"suggested_relation": {"const": "distinct_entities"}, "negative_evidence": {"contains": {"properties": {"type": {"const": "different_cnpj"}}, "required": ["type"]}}}}}
+  ],
   "$defs": {
     "evidence": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["type", "provenance", "authority"],
+      "type": "object", "additionalProperties": false, "required": ["type", "provenance", "authority"],
       "properties": {
-        "type": {
-          "enum": ["exact_cnpj", "exact_native_id", "exact_name", "name_similarity", "distance"]
-        },
-        "provenance": {
-          "enum": ["promoted_identifier", "source_namespace", "normalized_name", "normalized_name_tokens", "derived_spatial_grid"]
-        },
-        "authority": {
-          "enum": ["source_native", "declared", "derived", "geocoder_auxiliary"]
-        },
+        "type": {"enum": ["exact_cnpj", "exact_native_id", "exact_name", "name_similarity", "distance"]},
+        "provenance": {"enum": ["promoted_identifier", "source_namespace", "normalized_name", "normalized_name_tokens", "derived_spatial_grid"]},
+        "authority": {"enum": ["source_native", "declared", "derived", "geocoder_auxiliary"]},
         "score": {"type": "number", "minimum": 0, "maximum": 1},
         "distance_bucket": {"enum": ["0-25m", "25-100m", "100-500m"]}
       },
-      "oneOf": [
-        {"required": ["score"], "not": {"required": ["distance_bucket"]}},
-        {"required": ["distance_bucket"], "not": {"required": ["score"]}}
-      ]
+      "oneOf": [{"required": ["score"], "not": {"required": ["distance_bucket"]}}, {"required": ["distance_bucket"], "not": {"required": ["score"]}}]
     },
-    "negativeEvidence": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["type"],
-      "properties": {
-        "type": {
-          "enum": ["different_cnpj", "different_municipality", "different_uf", "collapsed_coordinate", "strong_id_conflict"]
-        }
-      }
-    }
+    "negativeEvidence": {"type": "object", "additionalProperties": false, "required": ["type"], "properties": {"type": {"enum": ["different_cnpj", "different_municipality", "different_uf", "collapsed_coordinate", "strong_id_conflict"]}}}
   }
 }

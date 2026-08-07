@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ileaxe.org/schemas/dedup-summary-v3.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocol_version", "input", "outputs", "candidate_counts", "metrics", "curated_exclusions", "equations", "canonical_entities_created", "privacy", "metric_change"],
+  "properties": {
+    "protocol_version": {"const": "dedup-candidate-v3"},
+    "input": {"$ref": "#/$defs/input"},
+    "outputs": {"type": "object", "additionalProperties": false, "required": ["candidates", "occurrence_status"], "properties": {"candidates": {"$ref": "#/$defs/output"}, "occurrence_status": {"$ref": "#/$defs/output"}}},
+    "candidate_counts": {"type": "object", "additionalProperties": false, "required": ["total", "by_relation", "by_review_status", "by_evidence", "by_negative_evidence"], "properties": {"total": {"type": "integer", "minimum": 0}, "by_relation": {"$ref": "#/$defs/counts"}, "by_review_status": {"$ref": "#/$defs/counts"}, "by_evidence": {"$ref": "#/$defs/counts"}, "by_negative_evidence": {"$ref": "#/$defs/counts"}}},
+    "metrics": {"$ref": "#/$defs/counts"},
+    "curated_exclusions": {"$ref": "#/$defs/counts"},
+    "equations": {"type": "object", "additionalProperties": false, "required": ["occurrences_preserved", "curated_ledger", "candidate_relations"], "properties": {"occurrences_preserved": {"type": "string"}, "curated_ledger": {"type": "string"}, "candidate_relations": {"type": "string"}}},
+    "canonical_entities_created": {"const": 0},
+    "privacy": {"type": "object", "additionalProperties": false, "required": ["occurrence_ref_protocol", "source_record_key_published"], "properties": {"occurrence_ref_protocol": {"const": "sha256(occurrence-ref-v1\\0source_record_key)"}, "source_record_key_published": {"const": false}}},
+    "metric_change": {"type": "object", "additionalProperties": false, "required": ["candidate_pairs_before_d2", "candidate_pairs_without_siafi_bridge", "historical_geographic_homonym_pairs", "historical_incomparable_ibge_text_pairs", "description"], "properties": {"candidate_pairs_before_d2": {"const": 567}, "candidate_pairs_without_siafi_bridge": {"const": 352}, "historical_geographic_homonym_pairs": {"const": 1193}, "historical_incomparable_ibge_text_pairs": {"const": 39}, "description": {"type": "string", "minLength": 1}}}
+  },
+  "$defs": {
+    "counts": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "output": {"type": "object", "additionalProperties": false, "required": ["sha256", "bytes", "lines"], "properties": {"sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "bytes": {"type": "integer", "minimum": 0}, "lines": {"type": "integer", "minimum": 0}}},
+    "input": {"type": "object", "additionalProperties": false, "required": ["sha256", "bytes", "occurrences", "counts_by_source"], "properties": {"sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "bytes": {"type": "integer", "minimum": 0}, "occurrences": {"type": "integer", "minimum": 0}, "counts_by_source": {"$ref": "#/$defs/counts"}}}
+  }
+}
