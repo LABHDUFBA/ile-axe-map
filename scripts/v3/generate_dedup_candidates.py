@@ -236,6 +236,116 @@ def _component_key(pair_key: str) -> str:
     return f"dedup-component-v3:{digest}"
 
 
+def _validate_candidate_semantics(candidates: list[dict[str, Any]], records: list[dict[str, Any]]) -> None:
+    """Valida relações que JSON Schema não consegue expressar."""
+    records_by_ref = {_occurrence_ref(row["source_record_key"]): row for row in records}
+    evidence_contracts = {
+        "exact_cnpj": ("promoted_identifier", "source_native"),
+        "exact_native_id": ("source_namespace", "source_native"),
+        "exact_name": ("normalized_name", "declared"),
+        "name_similarity": ("normalized_name_tokens", "derived"),
+    }
+    for index, candidate in enumerate(candidates):
+        left_ref = candidate["left_occurrence_ref"]
+        right_ref = candidate["right_occurrence_ref"]
+        if left_ref == right_ref:
+            raise GenerationError(f"candidato no índice {index} deve ter refs distintos")
+        if left_ref > right_ref:
+            raise GenerationError(f"candidato no índice {index} fora da ordem lexical")
+        expected_pair_key = _pair_key(left_ref, right_ref)
+        if candidate["candidate_pair_key"] != expected_pair_key:
+            raise GenerationError(f"candidate_pair_key inválida no índice {index}")
+        if candidate["candidate_component_key"] != _component_key(expected_pair_key):
+            raise GenerationError(f"candidate_component_key inválida no índice {index}")
+        try:
+            left, right = records_by_ref[left_ref], records_by_ref[right_ref]
+        except KeyError as error:
+            raise GenerationError(f"candidato no índice {index} referencia ocorrência ausente") from error
+        if (candidate["left_source"], candidate["right_source"]) != (left["fonte"], right["fonte"]):
+            raise GenerationError(f"fontes do candidato inconsistentes no índice {index}")
+
+        evidence_types = set()
+        for evidence in candidate["evidence"]:
+            evidence_type = evidence["type"]
+            evidence_types.add(evidence_type)
+            if evidence_type in evidence_contracts:
+                expected = evidence_contracts[evidence_type]
+                if (evidence["provenance"], evidence["authority"]) != expected:
+                    raise GenerationError(f"combinação evidence/provenance/authority inválida no índice {index}")
+            if evidence_type == "exact_name" and _normalize(left.get("nome_original")) != _normalize(right.get("nome_original")):
+                raise GenerationError(f"evidence exact_name sem nomes iguais no índice {index}")
+            if evidence_type == "distance":
+                left_coordinate, right_coordinate = _coordinates(left), _coordinates(right)
+                if not left_coordinate or not right_coordinate:
+                    raise GenerationError(f"evidence distance sem coordenadas no índice {index}")
+                expected_authority = "geocoder_auxiliary" if "geocoder_auxiliary" in (left_coordinate[2], right_coordinate[2]) else "declared"
+                if evidence["provenance"] != "derived_spatial_grid" or evidence["authority"] != expected_authority:
+                    raise GenerationError(f"combinação evidence/provenance/authority inválida no índice {index}")
+
+        negative_types = {item["type"] for item in candidate["negative_evidence"]}
+        status = candidate["review_status"]
+        relation = candidate["suggested_relation"]
+        if status == "pending" and relation not in {"possible_same_entity", "unresolved"}:
+            raise GenerationError(f"review_status pending incompatível no índice {index}")
+        if status == "auto_linked_strong_id":
+            strong_valid = False
+            if "exact_cnpj" in evidence_types:
+                left_cnpj = _valid_cnpj(left.get("identificadores", {}).get("cnpj"))
+                right_cnpj = _valid_cnpj(right.get("identificadores", {}).get("cnpj"))
+                strong_valid = bool(left_cnpj and left_cnpj == right_cnpj)
+            if "exact_native_id" in evidence_types:
+                strong_valid = strong_valid or (
+                    left["fonte"] == right["fonte"]
+                    and left.get("id_fonte") == right.get("id_fonte")
+                    and not left.get("id_fonte_sintetico", False)
+                    and not right.get("id_fonte_sintetico", False)
+                )
+            if not strong_valid or relation not in {"same_entity_same_location", "possible_same_entity", "possible_same_entity_moved"}:
+                raise GenerationError(f"review_status auto_linked_strong_id incompatível no índice {index}")
+        if status == "rejected" and (relation != "distinct_entities" or "different_cnpj" not in negative_types):
+            raise GenerationError(f"review_status rejected incompatível no índice {index}")
+
+
+def _validate_summary_semantics(summary: dict[str, Any], candidates: list[dict[str, Any]], *, input_count: int) -> None:
+    expected_counts = {
+        "by_relation": dict(sorted(Counter(row["suggested_relation"] for row in candidates).items())),
+        "by_review_status": dict(sorted(Counter(row["review_status"] for row in candidates).items())),
+        "by_evidence": dict(sorted(Counter(item["type"] for row in candidates for item in row["evidence"]).items())),
+        "by_negative_evidence": dict(sorted(Counter(item["type"] for row in candidates for item in row["negative_evidence"]).items())),
+    }
+    if summary["candidate_counts"]["total"] != len(candidates):
+        raise GenerationError("candidate_counts.total não fecha")
+    for field, expected in expected_counts.items():
+        if summary["candidate_counts"][field] != expected:
+            raise GenerationError(f"candidate_counts.{field} não fecha")
+    metrics = summary["metrics"]
+    unique_refs = {row[field] for row in candidates for field in ("left_occurrence_ref", "right_occurrence_ref")}
+    expected_metrics = {
+        "occurrences_preserved": input_count,
+        "candidate_components": len(candidates),
+        "candidate_component_ref_occurrences": len(candidates) * 2,
+        "unique_occurrence_refs_in_components": len(unique_refs),
+    }
+    for field, expected in expected_metrics.items():
+        if metrics.get(field) != expected:
+            raise GenerationError(f"metrics.{field} não fecha")
+    ledger = summary["curated_exclusions"]
+    if ledger["matched"] + ledger["absent"] + ledger["ambiguous"] != ledger["rows"]:
+        raise GenerationError("equação curated_ledger não fecha")
+    equations = {
+        "occurrences_preserved": f"{input_count} = {input_count}",
+        "curated_ledger": f"{ledger['matched']} + {ledger['absent']} + {ledger['ambiguous']} = {ledger['rows']}",
+        "candidate_relations": f"{len(candidates)} = {len(candidates)}",
+    }
+    for field, expected in equations.items():
+        if summary["equations"].get(field) != expected:
+            raise GenerationError(f"equação {field} não fecha")
+    if summary["outputs"]["candidates"]["lines"] != len(candidates):
+        raise GenerationError("outputs.candidates.lines não fecha")
+    if summary["outputs"]["occurrence_status"]["lines"] != input_count:
+        raise GenerationError("outputs.occurrence_status.lines não fecha")
+
+
 def _evidence(evidence_type: str, provenance: str, authority: str, *, score: float | None = None, distance_bucket: str | None = None) -> dict[str, Any]:
     item: dict[str, Any] = {"type": evidence_type, "provenance": provenance, "authority": authority}
     if score is not None:
@@ -366,6 +476,45 @@ def generate_candidates(
             y = EARTH_RADIUS_M * math.radians(coordinate[0])
             spatial_buckets[(municipality, math.floor(x / CELL_SIZE_M), math.floor(y / CELL_SIZE_M))].append(key)
     oversized_spatial_buckets = sum(len(group) > max_spatial_bucket for group in spatial_buckets.values())
+    oversized_spatial_bucket_details: list[dict[str, Any]] = []
+    for (municipality, bx, by), keys in sorted(spatial_buckets.items()):
+        if len(keys) <= max_spatial_bucket:
+            continue
+        coordinate_counts = Counter(coordinates[key][:2] for key in keys)
+        collapsed_group = max(coordinate_counts.values(), default=0) >= 3
+        eligible_found = 0
+        if collapsed_group:
+            for left_key, right_key in combinations(keys, 2):
+                if _jaccard(by_key[left_key].get("nome_original"), by_key[right_key].get("nome_original")) < 0.8:
+                    continue
+                if _distance_m(coordinates[left_key][:2], coordinates[right_key][:2]) <= 500:
+                    eligible_found += 1
+        oversized_spatial_bucket_details.append({
+            "bucket_id": f"{municipality[0]}|{municipality[1]}|{bx}|{by}",
+            "registro_count": len(keys),
+            "razao": "collapsed_coordinate_group" if collapsed_group else "oversized_spatial_bucket",
+            "pares_elegiveis_estimados": len(keys) * (len(keys) - 1) // 2,
+            "pares_elegiveis_encontrados_bruteforce": eligible_found if collapsed_group else 0,
+            "estrategia": "skip",
+        })
+    for (municipality, bx, by), keys in sorted(spatial_buckets.items()):
+        if len(keys) > max_spatial_bucket:
+            continue
+        oversized_neighbors = [
+            spatial_buckets.get((municipality, bx + dx, by + dy), [])
+            for dx in (-1, 0, 1)
+            for dy in (-1, 0, 1)
+            if len(spatial_buckets.get((municipality, bx + dx, by + dy), [])) > max_spatial_bucket
+        ]
+        if oversized_neighbors:
+            oversized_spatial_bucket_details.append({
+                "bucket_id": f"{municipality[0]}|{municipality[1]}|{bx}|{by}",
+                "registro_count": len(keys),
+                "razao": "oversized_neighbor_bucket",
+                "pares_elegiveis_estimados": len(keys) * sum(len(group) for group in oversized_neighbors),
+                "pares_elegiveis_encontrados_bruteforce": 0,
+                "estrategia": "skip",
+            })
     seen_spatial: set[tuple[str, str]] = set()
     proximity_pairs = spatial_comparisons = 0
     for (municipality, bx, by), left_keys in spatial_buckets.items():
@@ -451,10 +600,13 @@ def generate_candidates(
         "exact_name_groups_same_municipality": sum(count > 1 for count in municipality_name_counts.values()),
         "exact_name_pairs_same_municipality": exact_same_municipality, "geographic_homonym_pairs": geographic_homonym_pairs,
         "proximity_name_compatible_pairs": proximity_pairs, "collapsed_coordinate_groups": sum(len(group) >= 3 for group in coordinate_groups.values()),
-        "candidate_components": len(candidate_pairs), "candidate_component_records": len(candidate_pairs) * 2,
+        "candidate_components": len(candidate_pairs), "candidate_component_ref_occurrences": len(candidate_pairs) * 2,
+        "unique_occurrence_refs_in_components": len({item[field] for item in candidate_pairs for field in ("left_occurrence_ref", "right_occurrence_ref")}),
         "name_pair_comparisons": name_comparisons, "spatial_pair_comparisons": spatial_comparisons,
         "oversized_name_groups": oversized_name_groups, "oversized_name_theoretical_pairs": oversized_name_pairs,
-        "oversized_spatial_buckets": oversized_spatial_buckets, "pair_comparison_budget": max_pair_comparisons,
+        "oversized_spatial_buckets": oversized_spatial_buckets,
+        "oversized_spatial_bucket_details": oversized_spatial_bucket_details,
+        "pair_comparison_budget": max_pair_comparisons,
     }
     return {"candidate_pairs": candidate_pairs, "metrics": metrics}
 
@@ -587,6 +739,12 @@ def _assert_inside(root: Path, path: Path, label: str, *, allow_symlink: bool = 
     except ValueError as error:
         raise GenerationError(f"{label} fora do root") from error
     if not allow_symlink:
+        relative = lexical.relative_to(root)
+        current = root
+        for part in relative.parts:
+            current = current / part
+            if current.is_symlink():
+                raise GenerationError(f"{label} não permite symlink")
         try:
             lexical.resolve().relative_to(root)
         except ValueError as error:
@@ -599,7 +757,7 @@ def build_dedup_candidates(
     curated_ledger_path: Path, original_ledger_path: Path, candidate_output_path: Path, status_output_path: Path,
     summary_output_path: Path, source_schema_path: Path | None = None, status_schema_path: Path | None = None,
     summary_schema_path: Path | None = None, municipality_mapping_path: Path | None = None,
-    release_root_path: Path | None = None, pointer_output_path: Path | None = None, allow_input_symlink: bool = True,
+    release_root_path: Path | None = None, pointer_output_path: Path | None = None, allow_input_symlink: bool = False,
 ) -> dict[str, Any]:
     root = root.resolve()
     source_schema_path = source_schema_path or candidate_schema_path.parent / "source-record-v3.schema.json"
@@ -620,6 +778,7 @@ def build_dedup_candidates(
     records, manifest = _load_validated_source(source_path, Path(source_manifest_path), Path(source_schema_path))
     generated = generate_candidates(records, municipality_index=mapping)
     _validate_rows(generated["candidate_pairs"], Path(candidate_schema_path), "candidato")
+    _validate_candidate_semantics(generated["candidate_pairs"], records)
     matched, ledger_counts = _reconcile_ledger(records, Path(curated_ledger_path), Path(original_ledger_path))
     statuses = []
     for record in sorted(records, key=lambda row: _occurrence_ref(row["source_record_key"])):
@@ -648,6 +807,7 @@ def build_dedup_candidates(
             "description": "Os 567 pares anteriores usavam a semântica pré-D2. O resultado intermediário de 352 pares já harmonizava IBGE e texto, mas interpretava o código municipal de quatro dígitos do CNPJ como IBGE e deixava essa geografia desconhecida. A ponte oficial SIAFI→IBGE restaura as comparações municipais válidas; os demais controles D2 continuam ativos.",
         },
     }
+    _validate_summary_semantics(summary, generated["candidate_pairs"], input_count=len(records))
     _validate_rows([summary], Path(summary_schema_path), "summary")
     summary_bytes = (json.dumps(summary, ensure_ascii=False, sort_keys=True, indent=2, allow_nan=False) + "\n").encode()
     if release_root_path is not None and pointer_output_path is not None:

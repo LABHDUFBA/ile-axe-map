@@ -9,7 +9,7 @@
     "input": {"$ref": "#/$defs/input"},
     "outputs": {"type": "object", "additionalProperties": false, "required": ["candidates", "occurrence_status"], "properties": {"candidates": {"$ref": "#/$defs/output"}, "occurrence_status": {"$ref": "#/$defs/output"}}},
     "candidate_counts": {"type": "object", "additionalProperties": false, "required": ["total", "by_relation", "by_review_status", "by_evidence", "by_negative_evidence"], "properties": {"total": {"type": "integer", "minimum": 0}, "by_relation": {"$ref": "#/$defs/counts"}, "by_review_status": {"$ref": "#/$defs/counts"}, "by_evidence": {"$ref": "#/$defs/counts"}, "by_negative_evidence": {"$ref": "#/$defs/counts"}}},
-    "metrics": {"$ref": "#/$defs/counts"},
+    "metrics": {"$ref": "#/$defs/metrics"},
     "curated_exclusions": {"$ref": "#/$defs/counts"},
     "equations": {"type": "object", "additionalProperties": false, "required": ["occurrences_preserved", "curated_ledger", "candidate_relations"], "properties": {"occurrences_preserved": {"type": "string"}, "curated_ledger": {"type": "string"}, "candidate_relations": {"type": "string"}}},
     "canonical_entities_created": {"const": 0},
@@ -18,6 +18,32 @@
   },
   "$defs": {
     "counts": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "metrics": {
+      "type": "object",
+      "required": ["candidate_components", "candidate_component_ref_occurrences", "unique_occurrence_refs_in_components", "oversized_spatial_bucket_details"],
+      "properties": {
+        "candidate_components": {"type": "integer", "minimum": 0, "description": "Quantidade de componentes, um por par candidato."},
+        "candidate_component_ref_occurrences": {"type": "integer", "minimum": 0, "description": "Total de referências nos componentes, contando as duas pontas de cada par e suas repetições."},
+        "unique_occurrence_refs_in_components": {"type": "integer", "minimum": 0, "description": "Quantidade de referências de ocorrência distintas presentes em ao menos um componente."},
+        "oversized_spatial_bucket_details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["bucket_id", "registro_count", "razao", "pares_elegiveis_estimados", "pares_elegiveis_encontrados_bruteforce", "estrategia"],
+            "properties": {
+              "bucket_id": {"type": "string", "minLength": 1},
+              "registro_count": {"type": "integer", "minimum": 0},
+              "razao": {"enum": ["collapsed_coordinate_group", "oversized_spatial_bucket", "oversized_neighbor_bucket"]},
+              "pares_elegiveis_estimados": {"type": "integer", "minimum": 0},
+              "pares_elegiveis_encontrados_bruteforce": {"type": "integer", "minimum": 0},
+              "estrategia": {"const": "skip"}
+            }
+          }
+        }
+      },
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    },
     "output": {"type": "object", "additionalProperties": false, "required": ["sha256", "bytes", "lines"], "properties": {"sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "bytes": {"type": "integer", "minimum": 0}, "lines": {"type": "integer", "minimum": 0}}},
     "input": {"type": "object", "additionalProperties": false, "required": ["sha256", "bytes", "occurrences", "counts_by_source"], "properties": {"sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "bytes": {"type": "integer", "minimum": 0}, "occurrences": {"type": "integer", "minimum": 0}, "counts_by_source": {"$ref": "#/$defs/counts"}}}
   }

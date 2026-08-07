@@ -257,6 +257,118 @@ def test_par_e_componente_sao_deterministicos_e_ordenados():
     assert pair["candidate_component_key"].startswith("dedup-component-v3:")
 
 
+@pytest.mark.parametrize(
+    ("mutation", "message"),
+    [
+        (lambda pair: pair.update(right_occurrence_ref=pair["left_occurrence_ref"]), "refs distintos"),
+        (
+            lambda pair: pair.update(
+                left_occurrence_ref=pair["right_occurrence_ref"],
+                right_occurrence_ref=pair["left_occurrence_ref"],
+            ),
+            "ordem lexical",
+        ),
+        (lambda pair: pair.update(candidate_pair_key="dedupv3:" + "0" * 64), "candidate_pair_key"),
+        (
+            lambda pair: pair.update(candidate_component_key="dedup-component-v3:" + "0" * 64),
+            "candidate_component_key",
+        ),
+    ],
+)
+def test_validacao_semantica_rejeita_refs_e_chaves_inconsistentes(mutation, message):
+    result = generator.generate_candidates([record("mapeando_axe:a"), record("mapeando_axe:b")])
+    mutation(result["candidate_pairs"][0])
+
+    with pytest.raises(generator.GenerationError, match=message):
+        generator._validate_candidate_semantics(result["candidate_pairs"], [record("mapeando_axe:a"), record("mapeando_axe:b")])
+
+
+def test_validacao_semantica_rejeita_combinacao_de_evidencia_invalida():
+    records = [record("mapeando_axe:a"), record("mapeando_axe:b")]
+    result = generator.generate_candidates(records)
+    result["candidate_pairs"][0]["evidence"][0]["authority"] = "derived"
+
+    with pytest.raises(generator.GenerationError, match="evidence"):
+        generator._validate_candidate_semantics(result["candidate_pairs"], records)
+
+
+def test_validacao_semantica_rejeita_distancia_sem_coordenadas():
+    records = [record("mapeando_axe:a"), record("mapeando_axe:b")]
+    result = generator.generate_candidates(records)
+    result["candidate_pairs"][0]["evidence"] = [{
+        "type": "distance",
+        "provenance": "derived_spatial_grid",
+        "authority": "declared",
+        "distance_bucket": "0-25m",
+    }]
+
+    with pytest.raises(generator.GenerationError, match="coordenadas"):
+        generator._validate_candidate_semantics(result["candidate_pairs"], records)
+
+
+def test_validacao_semantica_rejeita_evidencia_forte_sem_identificador_real():
+    records = [record("mapeando_axe:a"), record("mapeando_axe:b")]
+    result = generator.generate_candidates(records)
+    result["candidate_pairs"][0]["evidence"] = [{
+        "type": "exact_cnpj",
+        "provenance": "promoted_identifier",
+        "authority": "source_native",
+        "score": 1.0,
+    }]
+
+    with pytest.raises(generator.GenerationError, match="exact_cnpj"):
+        generator._validate_candidate_semantics(result["candidate_pairs"], records)
+
+
+def test_validacao_semantica_rejeita_bucket_de_distancia_incorreto():
+    records = [
+        record("mapeando_axe:a", lat=-12.0, lon=-38.0),
+        record("mapeando_axe:b", lat=-12.0, lon=-38.0),
+    ]
+    result = generator.generate_candidates(records)
+    distance = next(item for item in result["candidate_pairs"][0]["evidence"] if item["type"] == "distance")
+    distance["distance_bucket"] = "100-500m"
+
+    with pytest.raises(generator.GenerationError, match="distance_bucket"):
+        generator._validate_candidate_semantics(result["candidate_pairs"], records)
+
+
+def test_validacao_semantica_rejeita_different_cnpj_sem_cnpjs_diferentes():
+    records = [record("mapeando_axe:a"), record("mapeando_axe:b")]
+    result = generator.generate_candidates(records)
+    pair = result["candidate_pairs"][0]
+    pair["suggested_relation"] = "distinct_entities"
+    pair["review_status"] = "rejected"
+    pair["negative_evidence"] = [{"type": "different_cnpj"}]
+
+    with pytest.raises(generator.GenerationError, match="different_cnpj"):
+        generator._validate_candidate_semantics(result["candidate_pairs"], records)
+
+
+@pytest.mark.parametrize(
+    ("review_status", "suggested_relation", "evidence", "negative_evidence"),
+    [
+        ("pending", "same_entity_same_location", None, []),
+        ("auto_linked_strong_id", "possible_same_entity", None, []),
+        ("rejected", "distinct_entities", None, []),
+    ],
+)
+def test_validacao_semantica_rejeita_status_incompativel(
+    review_status, suggested_relation, evidence, negative_evidence
+):
+    records = [record("mapeando_axe:a"), record("mapeando_axe:b")]
+    result = generator.generate_candidates(records)
+    pair = result["candidate_pairs"][0]
+    pair["review_status"] = review_status
+    pair["suggested_relation"] = suggested_relation
+    pair["negative_evidence"] = negative_evidence
+    if evidence is not None:
+        pair["evidence"] = evidence
+
+    with pytest.raises(generator.GenerationError, match="review_status"):
+        generator._validate_candidate_semantics(result["candidate_pairs"], records)
+
+
 def _write_jsonl(path, rows):
     path.parent.mkdir(parents=True, exist_ok=True)
     content = "".join(
@@ -347,6 +459,104 @@ def test_build_publica_outputs_minimizados_e_preserva_todas_as_ocorrencias(tmp_p
         assert sensitive not in candidate_text
         assert sensitive not in config["status_output_path"].read_text(encoding="utf-8")
         assert sensitive not in config["summary_output_path"].read_text(encoding="utf-8")
+
+
+def test_summary_documenta_referencias_repetidas_e_ocorrencias_unicas(tmp_path):
+    config = _integration_config(
+        tmp_path,
+        [record("mapeando_axe:a"), record("mapeando_axe:b"), record("mapeando_axe:c")],
+    )
+
+    summary = generator.build_dedup_candidates(**config)
+
+    assert summary["metrics"]["candidate_components"] == 3
+    assert summary["metrics"]["candidate_component_ref_occurrences"] == 6
+    assert summary["metrics"]["unique_occurrence_refs_in_components"] == 3
+
+
+@pytest.mark.parametrize(
+    ("mutation", "message"),
+    [
+        (lambda summary: summary["candidate_counts"].update(total=99), "candidate_counts.total"),
+        (lambda summary: summary["candidate_counts"]["by_relation"].update(unresolved=99), "by_relation"),
+        (lambda summary: summary["candidate_counts"]["by_review_status"].update(pending=99), "by_review_status"),
+        (lambda summary: summary["candidate_counts"]["by_evidence"].update(exact_name=99), "by_evidence"),
+        (lambda summary: summary["candidate_counts"]["by_negative_evidence"].update(different_cnpj=1), "by_negative_evidence"),
+        (lambda summary: summary["metrics"].update(occurrences_preserved=99), "occurrences_preserved"),
+        (lambda summary: summary["metrics"].update(candidate_components=99), "candidate_components"),
+        (lambda summary: summary["metrics"].update(candidate_component_ref_occurrences=99), "candidate_component_ref_occurrences"),
+        (lambda summary: summary["metrics"].update(unique_occurrence_refs_in_components=99), "unique_occurrence_refs_in_components"),
+        (lambda summary: summary["curated_exclusions"].update(rows=1), "curated_ledger"),
+        (lambda summary: summary["equations"].update(candidate_relations="99 = 1"), "candidate_relations"),
+    ],
+)
+def test_validacao_semantica_rejeita_summary_inconsistente(tmp_path, mutation, message):
+    config = _integration_config(tmp_path, [record("mapeando_axe:a"), record("mapeando_axe:b")])
+    summary = generator.build_dedup_candidates(**config)
+    candidates = [json.loads(line) for line in config["candidate_output_path"].read_text().splitlines()]
+    mutation(summary)
+
+    with pytest.raises(generator.GenerationError, match=message):
+        generator._validate_summary_semantics(summary, candidates, input_count=2)
+
+
+def test_bucket_espacial_colapsado_oversized_e_registrado_com_auditoria_bruteforce():
+    records = [
+        record(
+            f"cnpj:{index}",
+            source="cnpj",
+            name=f"Nome sem sobreposicao {index}",
+            lat=-12.0,
+            lon=-38.0,
+        )
+        for index in range(500)
+    ]
+
+    result = generator.generate_candidates(records, max_spatial_bucket=200)
+
+    assert result["candidate_pairs"] == []
+    assert result["metrics"]["oversized_spatial_buckets"] == 1
+    assert result["metrics"]["oversized_spatial_bucket_details"] == [{
+        "bucket_id": "text:salvador|BA|-8267|-2669",
+        "registro_count": 500,
+        "razao": "collapsed_coordinate_group",
+        "pares_elegiveis_estimados": 124_750,
+        "pares_elegiveis_encontrados_bruteforce": 0,
+        "estrategia": "skip",
+    }]
+
+
+def test_bucket_vizinho_pulado_por_oversized_tambem_e_registrado():
+    records = [
+        record(f"cnpj:{index}", source="cnpj", name=f"Grupo {index}", lat=-12.0, lon=-38.0)
+        for index in range(201)
+    ]
+    records.append(record("cnpj:vizinho", source="cnpj", name="Vizinho", lat=-12.0, lon=-37.999))
+
+    result = generator.generate_candidates(records, max_spatial_bucket=200)
+
+    details = result["metrics"]["oversized_spatial_bucket_details"]
+    assert any(detail == {
+        "bucket_id": "text:salvador|BA|-8266|-2669",
+        "registro_count": 1,
+        "razao": "oversized_neighbor_bucket",
+        "pares_elegiveis_estimados": 201,
+        "pares_elegiveis_encontrados_bruteforce": 0,
+        "estrategia": "skip",
+    } for detail in details)
+
+
+def test_source_records_symlink_rejeitado_por_default_e_aceito_com_flag(tmp_path):
+    config = _integration_config(tmp_path, [record("mapeando_axe:a")])
+    real_source = tmp_path / "source_records_real.jsonl"
+    config["source_path"].rename(real_source)
+    config["source_path"].symlink_to(real_source.name)
+
+    with pytest.raises(generator.GenerationError, match="symlink"):
+        generator.build_dedup_candidates(**config)
+
+    summary = generator.build_dedup_candidates(**config, allow_input_symlink=True)
+    assert summary["input"]["occurrences"] == 1
 
 
 def test_hash_invalido_falha_sem_publicar(tmp_path):
