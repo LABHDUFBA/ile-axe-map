@@ -11,3 +11,6 @@ data/processed/v3/**/.*.tmp-*
 data/processed/v3/**/.*.bak-*
 data/audit/v3/.*.tmp-*
 data/audit/v3/.*.bak-*
+data/processed/v3/review_queue_v3.html
+data/processed/v3/review_queue_v3.jsonl
+data/processed/v3/review_queue_v3.csv

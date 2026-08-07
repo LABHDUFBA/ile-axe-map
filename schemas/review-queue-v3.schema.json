@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ile-axe-map/schemas/review-queue-v3.schema.json",
+  "title": "Fila de Revisão Humana v3",
+  "description": "Item da fila de revisão de candidatos de deduplicação. Contém apenas dados não-sensíveis para decisão humana.",
+  "type": "object",
+  "required": [
+    "queue_position",
+    "priority",
+    "priority_label",
+    "suggested_relation",
+    "review_status",
+    "left_fonte",
+    "right_fonte",
+    "left_name",
+    "right_name",
+    "evidence_types",
+    "negative_evidence",
+    "cross_source",
+    "candidate_pair_key"
+  ],
+  "properties": {
+    "queue_position": { "type": "integer", "minimum": 1 },
+    "priority": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "priority_label": {
+      "type": "string",
+      "enum": [
+        "cross_source_unresolved",
+        "cross_source_possible",
+        "collapsed_coordinate",
+        "same_source_possible",
+        "distinct_confirm"
+      ]
+    },
+    "suggested_relation": {
+      "type": "string",
+      "enum": [
+        "distinct_entities",
+        "possible_same_entity",
+        "same_entity_same_location",
+        "possible_same_entity_moved",
+        "unresolved"
+      ]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["pending", "accepted", "rejected", "auto_linked_strong_id"]
+    },
+    "left_fonte": { "type": "string" },
+    "right_fonte": { "type": "string" },
+    "left_name": { "type": ["string", "null"] },
+    "right_name": { "type": ["string", "null"] },
+    "left_municipio": { "type": ["string", "null"] },
+    "left_uf": { "type": ["string", "null"] },
+    "right_municipio": { "type": ["string", "null"] },
+    "right_uf": { "type": ["string", "null"] },
+    "same_municipality": { "type": "boolean" },
+    "same_uf": { "type": "boolean" },
+    "evidence_types": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "negative_evidence": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "distance_bucket": { "type": ["string", "number", "null"] },
+    "cross_source": { "type": "boolean" },
+    "candidate_pair_key": { "type": "string" }
+  },
+  "additionalProperties": false
+}
