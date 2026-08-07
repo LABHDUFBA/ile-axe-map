@@ -14,3 +14,6 @@ data/audit/v3/.*.bak-*
 data/processed/v3/review_queue_v3.html
 data/processed/v3/review_queue_v3.jsonl
 data/processed/v3/review_queue_v3.csv
+data/processed/v3/review_decisions_v3.jsonl
+data/processed/v3/entity_assignments_v3.jsonl
+data/processed/v3/entities_v3.jsonl
