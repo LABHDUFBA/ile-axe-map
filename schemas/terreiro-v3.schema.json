@@ -1,38 +1,159 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://ileaxe.org/schemas/terreiro-v3.schema.json",
-  "title": "Entidade canônica de terreiro v3",
-  "description": "Contrato da entidade reconciliada de terreiro na unificação nacional v3.",
+  "title": "Entidade canônica nacional de terreiro v3",
+  "description": "Contrato experimental do formato nacional comum, nullable e com proveniência por campo.",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "entity_id",
-    "nome",
-    "localizacao",
-    "identidade_religiosa",
     "identificadores",
+    "nome",
+    "identificacao",
+    "localizacao",
+    "geocodificacao",
+    "identidade_religiosa",
+    "organizacao",
+    "patrimonio",
+    "contato",
+    "midia",
+    "publicacao",
     "fontes",
+    "proveniencia",
     "qualidade",
+    "revisao",
+    "contribuicoes_campos",
     "valores_originais"
   ],
   "properties": {
     "entity_id": {
-      "description": "Identificador canônico formado pelo prefixo trr_ e um identificador estável.",
       "type": "string",
-      "pattern": "^trr_[A-Za-z0-9][A-Za-z0-9_-]*$"
+      "pattern": "^trr_[A-Za-z0-9][A-Za-z0-9_-]*$",
+      "description": "Identificador canônico estável da entidade."
+    },
+    "identificadores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cnpj",
+        "ceao_id",
+        "osm_id",
+        "google_place_id",
+        "sefaz_codigo",
+        "id_nativo"
+      ],
+      "properties": {
+        "cnpj": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "ceao_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "osm_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "google_place_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "sefaz_codigo": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "id_nativo": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-z0-9_]+:.+$"
+        }
+      }
     },
     "nome": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["preferido", "aliases", "normalizado_match"],
+      "required": [
+        "preferido",
+        "declarado",
+        "juridico_declarado",
+        "aliases",
+        "normalizado_match"
+      ],
       "properties": {
-        "preferido": {"type": "string", "minLength": 1},
+        "preferido": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "juridico_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
         "aliases": {
-          "type": "array",
-          "items": {"type": "string", "minLength": 1},
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
           "uniqueItems": true
         },
-        "normalizado_match": {"type": "string", "minLength": 1}
+        "normalizado_match": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      }
+    },
+    "identificacao": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "descricao_declarada"
+      ],
+      "properties": {
+        "descricao_declarada": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
       }
     },
     "localizacao": {
@@ -49,46 +170,182 @@
         "bairro",
         "cep",
         "endereco_original",
+        "endereco_declarado",
+        "logradouro_declarado",
+        "numero_declarado",
+        "complemento_declarado",
+        "bairro_declarado",
+        "municipio_declarado",
+        "uf_declarada",
+        "codigo_municipio_declarado",
+        "cep_declarado",
         "status_territorial"
       ],
       "properties": {
         "latitude": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "minimum": -90,
           "maximum": 90
         },
         "longitude": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "minimum": -180,
           "maximum": 180
         },
-        "fonte_coordenada": {"type": ["string", "null"]},
-        "precisao": {"type": ["string", "null"]},
+        "fonte_coordenada": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "precisao": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
         "uf": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
           "pattern": "^[A-Z]{2}$"
         },
-        "municipio": {"type": ["string", "null"]},
+        "municipio": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
         "codigo_ibge_municipio": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
           "pattern": "^[0-9]{7}$"
         },
-        "bairro": {"type": ["string", "null"]},
-        "cep": {"type": ["string", "null"]},
-        "endereco_original": {"type": ["string", "null"]},
+        "bairro": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "cep": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "endereco_original": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "endereco_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "logradouro_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "numero_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "complemento_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "bairro_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "municipio_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "uf_declarada": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "pattern": "^[A-Z]{2}$"
+        },
+        "codigo_municipio_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "cep_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
         "status_territorial": {
-          "enum": ["intersecao_ibge", "fora_poligono", "sem_coordenada"]
+          "enum": [
+            "intersecao_ibge",
+            "fora_poligono",
+            "sem_coordenada",
+            null
+          ]
         }
       },
       "allOf": [
         {
           "if": {
-            "properties": {"status_territorial": {"const": "sem_coordenada"}}
+            "properties": {
+              "status_territorial": {
+                "const": "sem_coordenada"
+              }
+            }
           },
           "then": {
             "properties": {
-              "latitude": {"type": "null"},
-              "longitude": {"type": "null"}
+              "latitude": {
+                "type": "null"
+              },
+              "longitude": {
+                "type": "null"
+              }
             }
           }
         },
@@ -96,25 +353,42 @@
           "if": {
             "properties": {
               "status_territorial": {
-                "enum": ["intersecao_ibge", "fora_poligono"]
+                "enum": [
+                  "intersecao_ibge",
+                  "fora_poligono"
+                ]
               }
             }
           },
           "then": {
             "properties": {
-              "latitude": {"type": "number"},
-              "longitude": {"type": "number"}
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              }
             }
           }
         },
         {
           "if": {
-            "properties": {"status_territorial": {"const": "intersecao_ibge"}}
+            "properties": {
+              "status_territorial": {
+                "const": "intersecao_ibge"
+              }
+            }
           },
           "then": {
             "properties": {
-              "uf": {"type": "string", "pattern": "^[A-Z]{2}$"},
-              "municipio": {"type": "string", "minLength": 1},
+              "uf": {
+                "type": "string",
+                "pattern": "^[A-Z]{2}$"
+              },
+              "municipio": {
+                "type": "string",
+                "minLength": 1
+              },
               "codigo_ibge_municipio": {
                 "type": "string",
                 "pattern": "^[0-9]{7}$"
@@ -124,71 +398,465 @@
         }
       ]
     },
+    "geocodificacao": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "resultado",
+        "consulta",
+        "status",
+        "precisao",
+        "confianca",
+        "tipo_endereco"
+      ],
+      "properties": {
+        "resultado": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "latitude",
+            "longitude",
+            "osm_id",
+            "osm_tipo",
+            "endereco"
+          ],
+          "properties": {
+            "latitude": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": -90,
+              "maximum": 90
+            },
+            "longitude": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": -180,
+              "maximum": 180
+            },
+            "osm_id": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            },
+            "osm_tipo": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            },
+            "endereco": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            }
+          }
+        },
+        "consulta": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "precisao": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "confianca": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "tipo_endereco": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      }
+    },
     "identidade_religiosa": {
       "type": "object",
       "additionalProperties": false,
       "required": [
         "tradicao_declarada",
         "nacao_declarada",
+        "denominacao_declarada",
+        "linhagem_declarada",
+        "categoria_declarada",
         "componentes",
+        "nacao_normalizada",
+        "categoria_normalizada",
         "categoria_analitica",
         "metodo",
         "revisao_humana"
       ],
       "properties": {
-        "tradicao_declarada": {"type": ["string", "null"]},
-        "nacao_declarada": {"type": ["string", "null"]},
+        "tradicao_declarada": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "nacao_declarada": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "denominacao_declarada": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "linhagem_declarada": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "categoria_declarada": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
         "componentes": {
-          "type": "array",
-          "items": {"type": "string", "minLength": 1},
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
           "uniqueItems": true
         },
-        "categoria_analitica": {"type": ["string", "null"]},
+        "nacao_normalizada": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "categoria_normalizada": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "categoria_analitica": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
         "metodo": {
           "enum": [
             "declarado",
             "normalizado_declaracao",
             "inferido_nome",
-            "ausente"
+            "ausente",
+            null
           ]
         },
         "revisao_humana": {
-          "enum": ["aprovado", "pendente", "nao_aplicavel"]
+          "enum": [
+            "aprovado",
+            "pendente",
+            "nao_aplicavel",
+            null
+          ]
         }
       },
       "allOf": [
         {
-          "if": {"properties": {"metodo": {"const": "ausente"}}},
+          "if": {
+            "properties": {
+              "metodo": {
+                "const": "ausente"
+              }
+            }
+          },
           "then": {
             "properties": {
-              "tradicao_declarada": {"type": "null"},
-              "nacao_declarada": {"type": "null"},
-              "componentes": {"maxItems": 0},
-              "categoria_analitica": {"type": "null"},
-              "revisao_humana": {"const": "nao_aplicavel"}
+              "tradicao_declarada": {
+                "type": "null"
+              },
+              "nacao_declarada": {
+                "type": "null"
+              },
+              "componentes": {
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "array",
+                    "maxItems": 0
+                  }
+                ]
+              },
+              "categoria_analitica": {
+                "type": "null"
+              },
+              "revisao_humana": {
+                "const": "nao_aplicavel"
+              }
             }
           }
         },
         {
-          "if": {"properties": {"metodo": {"const": "inferido_nome"}}},
+          "if": {
+            "properties": {
+              "metodo": {
+                "const": "inferido_nome"
+              }
+            }
+          },
           "then": {
             "properties": {
-              "categoria_analitica": {"type": "string", "minLength": 1},
-              "revisao_humana": {"enum": ["pendente", "aprovado"]}
+              "categoria_analitica": {
+                "type": "string",
+                "minLength": 1
+              },
+              "revisao_humana": {
+                "enum": [
+                  "pendente",
+                  "aprovado"
+                ]
+              }
             }
           }
         }
       ]
     },
-    "identificadores": {
+    "organizacao": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["cnpj", "ceao_id", "osm_id", "google_place_id"],
+      "required": [
+        "lideranca_declarada",
+        "regente_declarado",
+        "data_inicio_cadastral_declarada",
+        "ano_fundacao_declarado",
+        "situacao_cadastral"
+      ],
       "properties": {
-        "cnpj": {"type": ["string", "null"]},
-        "ceao_id": {"type": ["string", "null"]},
-        "osm_id": {"type": ["string", "null"]},
-        "google_place_id": {"type": ["string", "null"]}
+        "lideranca_declarada": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "regente_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "data_inicio_cadastral_declarada": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "ano_fundacao_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "pattern": "^(?:[0-9]{4}|.+)$"
+        },
+        "situacao_cadastral": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      }
+    },
+    "patrimonio": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tombamento",
+        "cadastro_reconhecimento",
+        "protecao",
+        "orgao",
+        "ato_data"
+      ],
+      "properties": {
+        "tombamento": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "cadastro_reconhecimento": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "protecao": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "orgao": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "ato_data": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        }
+      }
+    },
+    "contato": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "telefone_declarado",
+        "email_declarado",
+        "site_declarado"
+      ],
+      "properties": {
+        "telefone_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "email_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "format": "email"
+        },
+        "site_declarado": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "format": "uri"
+        }
+      }
+    },
+    "midia": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "imagem_principal_url",
+        "miniatura_url"
+      ],
+      "properties": {
+        "imagem_principal_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "format": "uri"
+        },
+        "miniatura_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "format": "uri"
+        }
+      }
+    },
+    "publicacao": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "permitir_contato",
+        "permitir_lideranca",
+        "permitir_localizacao_precisa",
+        "permitir_midia"
+      ],
+      "properties": {
+        "permitir_contato": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "permitir_lideranca": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "permitir_localizacao_precisa": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "permitir_midia": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
       }
     },
     "fontes": {
@@ -205,51 +873,222 @@
           "data_coleta"
         ],
         "properties": {
-          "fonte": {"type": "string", "minLength": 1},
-          "id_fonte": {"type": "string", "minLength": 1},
-          "url": {"type": ["string", "null"]},
+          "fonte": {
+            "type": "string",
+            "minLength": 1
+          },
+          "id_fonte": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
           "campos_contribuidos": {
             "type": "array",
             "items": {
               "enum": [
+                "contato.email_declarado",
+                "contato.site_declarado",
+                "contato.telefone_declarado",
                 "entity_id",
-                "nome.preferido",
-                "nome.aliases",
-                "nome.normalizado_match",
-                "localizacao.latitude",
-                "localizacao.longitude",
-                "localizacao.fonte_coordenada",
-                "localizacao.precisao",
-                "localizacao.uf",
-                "localizacao.municipio",
-                "localizacao.codigo_ibge_municipio",
-                "localizacao.bairro",
-                "localizacao.cep",
-                "localizacao.endereco_original",
-                "localizacao.status_territorial",
-                "identidade_religiosa.tradicao_declarada",
-                "identidade_religiosa.nacao_declarada",
-                "identidade_religiosa.componentes",
+                "geocodificacao.confianca",
+                "geocodificacao.consulta",
+                "geocodificacao.precisao",
+                "geocodificacao.resultado.endereco",
+                "geocodificacao.resultado.latitude",
+                "geocodificacao.resultado.longitude",
+                "geocodificacao.resultado.osm_id",
+                "geocodificacao.resultado.osm_tipo",
+                "geocodificacao.status",
+                "geocodificacao.tipo_endereco",
                 "identidade_religiosa.categoria_analitica",
+                "identidade_religiosa.categoria_declarada",
+                "identidade_religiosa.categoria_normalizada",
+                "identidade_religiosa.componentes",
+                "identidade_religiosa.denominacao_declarada",
+                "identidade_religiosa.linhagem_declarada",
                 "identidade_religiosa.metodo",
+                "identidade_religiosa.nacao_declarada",
+                "identidade_religiosa.nacao_normalizada",
                 "identidade_religiosa.revisao_humana",
-                "identificadores.cnpj",
+                "identidade_religiosa.tradicao_declarada",
+                "identificacao.descricao_declarada",
                 "identificadores.ceao_id",
-                "identificadores.osm_id",
+                "identificadores.cnpj",
                 "identificadores.google_place_id",
-                "qualidade.status_validacao_geografica",
+                "identificadores.id_nativo",
+                "identificadores.osm_id",
+                "identificadores.sefaz_codigo",
+                "localizacao.bairro",
+                "localizacao.bairro_declarado",
+                "localizacao.cep",
+                "localizacao.cep_declarado",
+                "localizacao.codigo_ibge_municipio",
+                "localizacao.codigo_municipio_declarado",
+                "localizacao.complemento_declarado",
+                "localizacao.endereco_declarado",
+                "localizacao.endereco_original",
+                "localizacao.fonte_coordenada",
+                "localizacao.latitude",
+                "localizacao.logradouro_declarado",
+                "localizacao.longitude",
+                "localizacao.municipio",
+                "localizacao.municipio_declarado",
+                "localizacao.numero_declarado",
+                "localizacao.precisao",
+                "localizacao.status_territorial",
+                "localizacao.uf",
+                "localizacao.uf_declarada",
+                "midia.imagem_principal_url",
+                "midia.miniatura_url",
+                "nome.aliases",
+                "nome.declarado",
+                "nome.juridico_declarado",
+                "nome.normalizado_match",
+                "nome.preferido",
+                "organizacao.ano_fundacao_declarado",
+                "organizacao.data_inicio_cadastral_declarada",
+                "organizacao.lideranca_declarada",
+                "organizacao.regente_declarado",
+                "organizacao.situacao_cadastral",
+                "patrimonio.ato_data",
+                "patrimonio.cadastro_reconhecimento",
+                "patrimonio.orgao",
+                "patrimonio.protecao",
+                "patrimonio.tombamento",
+                "proveniencia.data_coleta",
+                "proveniencia.descricao_fonte",
+                "proveniencia.fonte",
+                "proveniencia.fontes_relacionadas[].fonte",
+                "proveniencia.fontes_relacionadas[].id",
+                "proveniencia.id_fonte",
+                "proveniencia.metodo_recuperacao",
+                "proveniencia.url_registro",
+                "publicacao.permitir_contato",
+                "publicacao.permitir_lideranca",
+                "publicacao.permitir_localizacao_precisa",
+                "publicacao.permitir_midia",
+                "qualidade.avaliacao_fonte",
                 "qualidade.confianca",
                 "qualidade.flags",
-                "qualidade.grupo_reconciliacao"
+                "qualidade.grupo_reconciliacao",
+                "qualidade.metodo_classificacao",
+                "qualidade.quantidade_avaliacoes_fonte",
+                "qualidade.status_geografico",
+                "qualidade.status_validacao_geografica",
+                "revisao.data",
+                "revisao.observacoes",
+                "revisao.responsavel",
+                "revisao.status"
               ]
             },
             "uniqueItems": true
           },
           "data_coleta": {
-            "type": ["string", "null"],
-            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
-            "format": "date"
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "format": "date",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
           }
+        }
+      }
+    },
+    "proveniencia": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fonte",
+        "id_fonte",
+        "url_registro",
+        "descricao_fonte",
+        "data_coleta",
+        "metodo_recuperacao",
+        "fontes_relacionadas"
+      ],
+      "properties": {
+        "fonte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "id_fonte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "url_registro": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "format": "uri"
+        },
+        "descricao_fonte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "data_coleta": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "metodo_recuperacao": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "fontes_relacionadas": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "fonte",
+              "id"
+            ],
+            "properties": {
+              "fonte": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "id": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              }
+            }
+          },
+          "uniqueItems": true
         }
       }
     },
@@ -260,36 +1099,328 @@
         "status_validacao_geografica",
         "confianca",
         "flags",
-        "grupo_reconciliacao"
+        "grupo_reconciliacao",
+        "status_geografico",
+        "metodo_classificacao",
+        "avaliacao_fonte",
+        "quantidade_avaliacoes_fonte"
       ],
       "properties": {
         "status_validacao_geografica": {
-          "enum": ["confirmado", "provavel", "inconclusivo"]
+          "enum": [
+            "confirmado",
+            "provavel",
+            "inconclusivo",
+            null
+          ]
         },
         "confianca": {
-          "type": "number",
+          "type": [
+            "number",
+            "null"
+          ],
           "minimum": 0,
           "maximum": 1
         },
         "flags": {
-          "type": "array",
-          "items": {"type": "string", "minLength": 1},
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
           "uniqueItems": true
         },
-        "grupo_reconciliacao": {"type": ["string", "null"]}
+        "grupo_reconciliacao": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "status_geografico": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "metodo_classificacao": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "avaliacao_fonte": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 5
+        },
+        "quantidade_avaliacoes_fonte": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "revisao": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "responsavel",
+        "data",
+        "observacoes"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "pendente",
+            "aprovado",
+            "rejeitado",
+            "nao_aplicavel",
+            null
+          ]
+        },
+        "responsavel": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "data": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "observacoes": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      }
+    },
+    "contribuicoes_campos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "campo_nacional",
+          "fonte",
+          "id_fonte",
+          "campo_original",
+          "estado",
+          "valor",
+          "metodo",
+          "versao",
+          "data_coleta",
+          "qualidade",
+          "status",
+          "publicavel"
+        ],
+        "properties": {
+          "campo_nacional": {
+            "type": "string",
+            "enum": [
+              "contato.email_declarado",
+              "contato.site_declarado",
+              "contato.telefone_declarado",
+              "entity_id",
+              "geocodificacao.confianca",
+              "geocodificacao.consulta",
+              "geocodificacao.precisao",
+              "geocodificacao.resultado.endereco",
+              "geocodificacao.resultado.latitude",
+              "geocodificacao.resultado.longitude",
+              "geocodificacao.resultado.osm_id",
+              "geocodificacao.resultado.osm_tipo",
+              "geocodificacao.status",
+              "geocodificacao.tipo_endereco",
+              "identidade_religiosa.categoria_analitica",
+              "identidade_religiosa.categoria_declarada",
+              "identidade_religiosa.categoria_normalizada",
+              "identidade_religiosa.componentes",
+              "identidade_religiosa.denominacao_declarada",
+              "identidade_religiosa.linhagem_declarada",
+              "identidade_religiosa.metodo",
+              "identidade_religiosa.nacao_declarada",
+              "identidade_religiosa.nacao_normalizada",
+              "identidade_religiosa.revisao_humana",
+              "identidade_religiosa.tradicao_declarada",
+              "identificacao.descricao_declarada",
+              "identificadores.ceao_id",
+              "identificadores.cnpj",
+              "identificadores.google_place_id",
+              "identificadores.id_nativo",
+              "identificadores.osm_id",
+              "identificadores.sefaz_codigo",
+              "localizacao.bairro",
+              "localizacao.bairro_declarado",
+              "localizacao.cep",
+              "localizacao.cep_declarado",
+              "localizacao.codigo_ibge_municipio",
+              "localizacao.codigo_municipio_declarado",
+              "localizacao.complemento_declarado",
+              "localizacao.endereco_declarado",
+              "localizacao.endereco_original",
+              "localizacao.fonte_coordenada",
+              "localizacao.latitude",
+              "localizacao.logradouro_declarado",
+              "localizacao.longitude",
+              "localizacao.municipio",
+              "localizacao.municipio_declarado",
+              "localizacao.numero_declarado",
+              "localizacao.precisao",
+              "localizacao.status_territorial",
+              "localizacao.uf",
+              "localizacao.uf_declarada",
+              "midia.imagem_principal_url",
+              "midia.miniatura_url",
+              "nome.aliases",
+              "nome.declarado",
+              "nome.juridico_declarado",
+              "nome.normalizado_match",
+              "nome.preferido",
+              "organizacao.ano_fundacao_declarado",
+              "organizacao.data_inicio_cadastral_declarada",
+              "organizacao.lideranca_declarada",
+              "organizacao.regente_declarado",
+              "organizacao.situacao_cadastral",
+              "patrimonio.ato_data",
+              "patrimonio.cadastro_reconhecimento",
+              "patrimonio.orgao",
+              "patrimonio.protecao",
+              "patrimonio.tombamento",
+              "proveniencia.data_coleta",
+              "proveniencia.descricao_fonte",
+              "proveniencia.fonte",
+              "proveniencia.fontes_relacionadas[].fonte",
+              "proveniencia.fontes_relacionadas[].id",
+              "proveniencia.id_fonte",
+              "proveniencia.metodo_recuperacao",
+              "proveniencia.url_registro",
+              "publicacao.permitir_contato",
+              "publicacao.permitir_lideranca",
+              "publicacao.permitir_localizacao_precisa",
+              "publicacao.permitir_midia",
+              "qualidade.avaliacao_fonte",
+              "qualidade.confianca",
+              "qualidade.flags",
+              "qualidade.grupo_reconciliacao",
+              "qualidade.metodo_classificacao",
+              "qualidade.quantidade_avaliacoes_fonte",
+              "qualidade.status_geografico",
+              "qualidade.status_validacao_geografica",
+              "revisao.data",
+              "revisao.observacoes",
+              "revisao.responsavel",
+              "revisao.status"
+            ]
+          },
+          "fonte": {
+            "type": "string",
+            "minLength": 1
+          },
+          "id_fonte": {
+            "type": "string",
+            "minLength": 1
+          },
+          "campo_original": {
+            "type": "string",
+            "minLength": 1
+          },
+          "estado": {
+            "enum": [
+              "declarado",
+              "normalizado",
+              "inferido"
+            ]
+          },
+          "valor": {
+            "not": {
+              "type": "null"
+            }
+          },
+          "metodo": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "versao": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "data_coleta": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "format": "date",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          },
+          "qualidade": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "status": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "publicavel": {
+            "type": "boolean"
+          }
+        }
       }
     },
     "valores_originais": {
-      "description": "Registros de origem preservados e vinculados pelo par fonte e id_fonte.",
+      "description": "Payloads originais completos, internos, vinculados por fonte e id_fonte.",
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["fonte", "id_fonte", "dados"],
+        "required": [
+          "fonte",
+          "id_fonte",
+          "dados"
+        ],
         "properties": {
-          "fonte": {"type": "string", "minLength": 1},
-          "id_fonte": {"type": "string", "minLength": 1},
+          "fonte": {
+            "type": "string",
+            "minLength": 1
+          },
+          "id_fonte": {
+            "type": "string",
+            "minLength": 1
+          },
           "dados": {
             "type": "object",
             "additionalProperties": true
@@ -304,7 +1435,9 @@
         "properties": {
           "localizacao": {
             "properties": {
-              "status_territorial": {"const": "sem_coordenada"}
+              "status_territorial": {
+                "const": "sem_coordenada"
+              }
             }
           }
         }
@@ -313,7 +1446,12 @@
         "properties": {
           "qualidade": {
             "properties": {
-              "status_validacao_geografica": {"const": "inconclusivo"}
+              "status_validacao_geografica": {
+                "enum": [
+                  "inconclusivo",
+                  null
+                ]
+              }
             }
           }
         }
@@ -324,7 +1462,9 @@
         "properties": {
           "qualidade": {
             "properties": {
-              "status_validacao_geografica": {"const": "confirmado"}
+              "status_validacao_geografica": {
+                "const": "confirmado"
+              }
             }
           }
         }
@@ -333,8 +1473,12 @@
         "properties": {
           "localizacao": {
             "properties": {
-              "latitude": {"type": "number"},
-              "longitude": {"type": "number"}
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              }
             }
           }
         }

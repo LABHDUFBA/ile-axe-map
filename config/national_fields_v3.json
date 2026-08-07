@@ -1,0 +1,1568 @@
+{
+  "versao": "3.0.0-experimental",
+  "schema": "schemas/terreiro-v3.schema.json",
+  "metacampos_tecnicos_fora_do_catalogo": [
+    "fontes[]",
+    "contribuicoes_campos[]",
+    "valores_originais[]"
+  ],
+  "campos": [
+    {
+      "caminho": "contato.email_declarado",
+      "grupo": "contato",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "interno",
+      "descricao": "Slot nacional para contato / email declarado.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "contato.site_declarado",
+      "grupo": "contato",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "interno",
+      "descricao": "Slot nacional para contato / site declarado.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "contato.telefone_declarado",
+      "grupo": "contato",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "interno",
+      "descricao": "Slot nacional para contato / telefone declarado.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "telefone"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "telefone"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "telefone"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "entity_id",
+      "grupo": "entity_id",
+      "tipo_logico": "string",
+      "nullable": false,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Identificador canônico estável da entidade, obrigatório e não anulável.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "geocodificacao.confianca",
+      "grupo": "geocodificacao",
+      "tipo_logico": "number",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para geocodificacao / confianca.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "nominatim_confidence"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "geocodificacao.consulta",
+      "grupo": "geocodificacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "revisar",
+      "sensibilidade_publicacao": "interno",
+      "descricao": "Slot nacional para geocodificacao / consulta.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": [
+        {
+          "fonte": "cnpj",
+          "campo_original": "query_used"
+        },
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "nominatim_query"
+        }
+      ]
+    },
+    {
+      "caminho": "geocodificacao.precisao",
+      "grupo": "geocodificacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para geocodificacao / precisao.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "cnpj",
+          "campo_original": "precision"
+        },
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "nominatim_precision"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "geocodificacao.resultado.endereco",
+      "grupo": "geocodificacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para geocodificacao / resultado / endereco.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "nominatim_display_name"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "geocodificacao.resultado.latitude",
+      "grupo": "geocodificacao",
+      "tipo_logico": "number",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para geocodificacao / resultado / latitude.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "cnpj",
+          "campo_original": "lat"
+        },
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "nominatim_lat"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "geocodificacao.resultado.longitude",
+      "grupo": "geocodificacao",
+      "tipo_logico": "number",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para geocodificacao / resultado / longitude.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "cnpj",
+          "campo_original": "lng"
+        },
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "nominatim_lng"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "geocodificacao.resultado.osm_id",
+      "grupo": "geocodificacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "ID do objeto auxiliar retornado pelo geocodificador, nunca ID OSM da entidade.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "nominatim_osm_id"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "geocodificacao.resultado.osm_tipo",
+      "grupo": "geocodificacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para geocodificacao / resultado / osm tipo.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "nominatim_osm_type"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "geocodificacao.status",
+      "grupo": "geocodificacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para geocodificacao / status.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "nominatim_status"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "geocodificacao.tipo_endereco",
+      "grupo": "geocodificacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "revisar",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para geocodificacao / tipo endereco.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": [
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "nominatim_addresstype"
+        }
+      ]
+    },
+    {
+      "caminho": "identidade_religiosa.categoria_analitica",
+      "grupo": "identidade_religiosa",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identidade religiosa / categoria analitica.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "identidade_religiosa.categoria_declarada",
+      "grupo": "identidade_religiosa",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identidade religiosa / categoria declarada.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "categoria_raw"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "identidade_religiosa.categoria_normalizada",
+      "grupo": "identidade_religiosa",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "revisar",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identidade religiosa / categoria normalizada.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "nacao_categoria"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "nacao_categoria"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "nacao_categoria"
+        },
+        {
+          "fonte": "sefaz",
+          "campo_original": "nacao_categoria"
+        }
+      ]
+    },
+    {
+      "caminho": "identidade_religiosa.componentes",
+      "grupo": "identidade_religiosa",
+      "tipo_logico": "array",
+      "nullable": true,
+      "status": "revisar",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identidade religiosa / componentes.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "nacao_componentes"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "nacao_componentes"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "nacao_componentes"
+        },
+        {
+          "fonte": "sefaz",
+          "campo_original": "nacao_componentes"
+        }
+      ]
+    },
+    {
+      "caminho": "identidade_religiosa.denominacao_declarada",
+      "grupo": "identidade_religiosa",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identidade religiosa / denominacao declarada.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "identidade_religiosa.linhagem_declarada",
+      "grupo": "identidade_religiosa",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identidade religiosa / linhagem declarada.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "identidade_religiosa.metodo",
+      "grupo": "identidade_religiosa",
+      "tipo_logico": "enum",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identidade religiosa / metodo.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "identidade_religiosa.nacao_declarada",
+      "grupo": "identidade_religiosa",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "revisar",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identidade religiosa / nacao declarada.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "nacao_original"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "nacao"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "nacao_original"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "nacao_original"
+        },
+        {
+          "fonte": "sefaz",
+          "campo_original": "nacao_original"
+        },
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "nacao"
+        }
+      ]
+    },
+    {
+      "caminho": "identidade_religiosa.nacao_normalizada",
+      "grupo": "identidade_religiosa",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "revisar",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identidade religiosa / nacao normalizada.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "nacao_primaria"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "nacao_primaria"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "nacao_primaria"
+        },
+        {
+          "fonte": "sefaz",
+          "campo_original": "nacao_primaria"
+        }
+      ]
+    },
+    {
+      "caminho": "identidade_religiosa.revisao_humana",
+      "grupo": "identidade_religiosa",
+      "tipo_logico": "enum",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identidade religiosa / revisao humana.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "identidade_religiosa.tradicao_declarada",
+      "grupo": "identidade_religiosa",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identidade religiosa / tradicao declarada.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "identificacao.descricao_declarada",
+      "grupo": "identificacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identificacao / descricao declarada.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "descricao"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "identificadores.ceao_id",
+      "grupo": "identificadores",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identificadores / ceao id.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "ceao",
+          "campo_original": "ceao_id"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "identificadores.cnpj",
+      "grupo": "identificadores",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identificadores / cnpj.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "cnpj",
+          "campo_original": "cnpj"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "identificadores.google_place_id",
+      "grupo": "identificadores",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identificadores / google place id.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "identificadores.id_nativo",
+      "grupo": "identificadores",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identificadores / id nativo.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "source_record_id"
+        },
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "id"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "identificadores.osm_id",
+      "grupo": "identificadores",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "ID OSM nativo e confirmado da entidade.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "identificadores.sefaz_codigo",
+      "grupo": "identificadores",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para identificadores / sefaz codigo.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "sefaz",
+          "campo_original": "sefaz_codigo"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.bairro",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para localizacao / bairro.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.bairro_declarado",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para localizacao / bairro declarado.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "bairro"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "bairro"
+        },
+        {
+          "fonte": "cnpj",
+          "campo_original": "bairro"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "bairro"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.cep",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para localizacao / cep.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.cep_declarado",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para localizacao / cep declarado.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "ceao",
+          "campo_original": "cep"
+        },
+        {
+          "fonte": "cnpj",
+          "campo_original": "cep"
+        },
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "postcode"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.codigo_ibge_municipio",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Código IBGE confirmado do município.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.codigo_municipio_declarado",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "revisar",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para localizacao / codigo municipio declarado.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": [
+        {
+          "fonte": "cnpj",
+          "campo_original": "codigo_municipio"
+        }
+      ]
+    },
+    {
+      "caminho": "localizacao.complemento_declarado",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "controlado",
+      "descricao": "Slot nacional para localizacao / complemento declarado.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.endereco_declarado",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "controlado",
+      "descricao": "Slot nacional para localizacao / endereco declarado.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "endereco"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "endereco"
+        },
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "address_raw"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "endereco"
+        },
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "endereco"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.endereco_original",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "controlado",
+      "descricao": "Slot nacional para localizacao / endereco original.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.fonte_coordenada",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para localizacao / fonte coordenada.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.latitude",
+      "grupo": "localizacao",
+      "tipo_logico": "number",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "controlado",
+      "descricao": "Slot nacional para localizacao / latitude.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "lat"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "lat"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "lat"
+        },
+        {
+          "fonte": "sefaz",
+          "campo_original": "lat"
+        },
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "lat"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.logradouro_declarado",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "controlado",
+      "descricao": "Slot nacional para localizacao / logradouro declarado.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "cnpj",
+          "campo_original": "logradouro"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.longitude",
+      "grupo": "localizacao",
+      "tipo_logico": "number",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "controlado",
+      "descricao": "Slot nacional para localizacao / longitude.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "lng"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "lng"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "lng"
+        },
+        {
+          "fonte": "sefaz",
+          "campo_original": "lng"
+        },
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "lng"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.municipio",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para localizacao / municipio.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.municipio_declarado",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para localizacao / municipio declarado.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "city"
+        },
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "cidade"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.numero_declarado",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "controlado",
+      "descricao": "Slot nacional para localizacao / numero declarado.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "cnpj",
+          "campo_original": "numero"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.precisao",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para localizacao / precisao.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "precision"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.status_territorial",
+      "grupo": "localizacao",
+      "tipo_logico": "enum",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para localizacao / status territorial.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.uf",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para localizacao / uf.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "localizacao.uf_declarada",
+      "grupo": "localizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para localizacao / uf declarada.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "cnpj",
+          "campo_original": "uf"
+        },
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "state"
+        },
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "uf"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "midia.imagem_principal_url",
+      "grupo": "midia",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "controlado",
+      "descricao": "Slot nacional para midia / imagem principal url.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "ceao",
+          "campo_original": "foto_grande"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "midia.miniatura_url",
+      "grupo": "midia",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "controlado",
+      "descricao": "Slot nacional para midia / miniatura url.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "ceao",
+          "campo_original": "foto_thumb"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "nome.aliases",
+      "grupo": "nome",
+      "tipo_logico": "array",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para nome / aliases.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "nome.declarado",
+      "grupo": "nome",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para nome / declarado.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "nome"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "nome"
+        },
+        {
+          "fonte": "cnpj",
+          "campo_original": "nome_fantasia"
+        },
+        {
+          "fonte": "mapeando_axe",
+          "campo_original": "name"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "nome"
+        },
+        {
+          "fonte": "sefaz",
+          "campo_original": "nome"
+        },
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "nome"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "nome.juridico_declarado",
+      "grupo": "nome",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para nome / juridico declarado.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "cnpj",
+          "campo_original": "razao_social"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "nome.normalizado_match",
+      "grupo": "nome",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para nome / normalizado match.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "nome.preferido",
+      "grupo": "nome",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para nome / preferido.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "organizacao.ano_fundacao_declarado",
+      "grupo": "organizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Ano de fundação religiosa conforme declarado.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "ceao",
+          "campo_original": "ano_fundacao"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "organizacao.data_inicio_cadastral_declarada",
+      "grupo": "organizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "revisar",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Data de início cadastral, distinta da fundação religiosa.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": [
+        {
+          "fonte": "cnpj",
+          "campo_original": "data_inicio"
+        }
+      ]
+    },
+    {
+      "caminho": "organizacao.lideranca_declarada",
+      "grupo": "organizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "interno",
+      "descricao": "Slot nacional para organizacao / lideranca declarada.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "ceao",
+          "campo_original": "lideranca"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "organizacao.regente_declarado",
+      "grupo": "organizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "interno",
+      "descricao": "Slot nacional para organizacao / regente declarado.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "ceao",
+          "campo_original": "regente"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "organizacao.situacao_cadastral",
+      "grupo": "organizacao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para organizacao / situacao cadastral.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "patrimonio.ato_data",
+      "grupo": "patrimonio",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para patrimonio / ato data.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "patrimonio.cadastro_reconhecimento",
+      "grupo": "patrimonio",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para patrimonio / cadastro reconhecimento.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "patrimonio.orgao",
+      "grupo": "patrimonio",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para patrimonio / orgao.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "patrimonio.protecao",
+      "grupo": "patrimonio",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para patrimonio / protecao.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "patrimonio.tombamento",
+      "grupo": "patrimonio",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para patrimonio / tombamento.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "proveniencia.data_coleta",
+      "grupo": "proveniencia",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para proveniencia / data coleta.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "proveniencia.descricao_fonte",
+      "grupo": "proveniencia",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para proveniencia / descricao fonte.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "fonte_detalhe"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "fonte_detalhe"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "fonte_detalhe"
+        },
+        {
+          "fonte": "sefaz",
+          "campo_original": "fonte_detalhe"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "proveniencia.fonte",
+      "grupo": "proveniencia",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para proveniencia / fonte.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "fonte"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "fonte"
+        },
+        {
+          "fonte": "cnpj",
+          "campo_original": "source"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "fonte"
+        },
+        {
+          "fonte": "sefaz",
+          "campo_original": "fonte"
+        },
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "source"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "proveniencia.fontes_relacionadas[].fonte",
+      "grupo": "proveniencia",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para proveniencia / fontes relacionadas / fonte.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "fontes[].fonte"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "fontes[].fonte"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "fontes[].fonte"
+        },
+        {
+          "fonte": "sefaz",
+          "campo_original": "fontes[].fonte"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "proveniencia.fontes_relacionadas[].id",
+      "grupo": "proveniencia",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para proveniencia / fontes relacionadas / id.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "fontes[].id"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "fontes[].id"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "fontes[].id"
+        },
+        {
+          "fonte": "sefaz",
+          "campo_original": "fontes[].id"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "proveniencia.id_fonte",
+      "grupo": "proveniencia",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para proveniencia / id fonte.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "proveniencia.metodo_recuperacao",
+      "grupo": "proveniencia",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para proveniencia / metodo recuperacao.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "recovery_method"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "proveniencia.url_registro",
+      "grupo": "proveniencia",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para proveniencia / url registro.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "terreiros_brasil",
+          "campo_original": "link"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "publicacao.permitir_contato",
+      "grupo": "publicacao",
+      "tipo_logico": "boolean",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "controlado",
+      "descricao": "Slot nacional para publicacao / permitir contato.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "publicacao.permitir_lideranca",
+      "grupo": "publicacao",
+      "tipo_logico": "boolean",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "controlado",
+      "descricao": "Slot nacional para publicacao / permitir lideranca.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "publicacao.permitir_localizacao_precisa",
+      "grupo": "publicacao",
+      "tipo_logico": "boolean",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "controlado",
+      "descricao": "Slot nacional para publicacao / permitir localizacao precisa.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "publicacao.permitir_midia",
+      "grupo": "publicacao",
+      "tipo_logico": "boolean",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "controlado",
+      "descricao": "Slot nacional para publicacao / permitir midia.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "qualidade.avaliacao_fonte",
+      "grupo": "qualidade",
+      "tipo_logico": "number",
+      "nullable": true,
+      "status": "revisar",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para qualidade / avaliacao fonte.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "rating"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "rating"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "rating"
+        }
+      ]
+    },
+    {
+      "caminho": "qualidade.confianca",
+      "grupo": "qualidade",
+      "tipo_logico": "number",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para qualidade / confianca.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "qualidade.flags",
+      "grupo": "qualidade",
+      "tipo_logico": "array",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para qualidade / flags.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "qualidade.grupo_reconciliacao",
+      "grupo": "qualidade",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para qualidade / grupo reconciliacao.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "qualidade.metodo_classificacao",
+      "grupo": "qualidade",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "revisar",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para qualidade / metodo classificacao.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "metodo_classificacao"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "metodo_classificacao"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "metodo_classificacao"
+        },
+        {
+          "fonte": "sefaz",
+          "campo_original": "metodo_classificacao"
+        }
+      ]
+    },
+    {
+      "caminho": "qualidade.quantidade_avaliacoes_fonte",
+      "grupo": "qualidade",
+      "tipo_logico": "integer",
+      "nullable": true,
+      "status": "revisar",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para qualidade / quantidade avaliacoes fonte.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "reviews"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "reviews"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "reviews"
+        }
+      ]
+    },
+    {
+      "caminho": "qualidade.status_geografico",
+      "grupo": "qualidade",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "aprovado",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para qualidade / status geografico.",
+      "fontes_contribuintes_aprovadas": [
+        {
+          "fonte": "bahia_google",
+          "campo_original": "geo_status"
+        },
+        {
+          "fonte": "ceao",
+          "campo_original": "geo_status"
+        },
+        {
+          "fonte": "osm",
+          "campo_original": "geo_status"
+        },
+        {
+          "fonte": "sefaz",
+          "campo_original": "geo_status"
+        }
+      ],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "qualidade.status_validacao_geografica",
+      "grupo": "qualidade",
+      "tipo_logico": "enum",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para qualidade / status validacao geografica.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "revisao.data",
+      "grupo": "revisao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para revisao / data.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "revisao.observacoes",
+      "grupo": "revisao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para revisao / observacoes.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "revisao.responsavel",
+      "grupo": "revisao",
+      "tipo_logico": "string",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para revisao / responsavel.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    },
+    {
+      "caminho": "revisao.status",
+      "grupo": "revisao",
+      "tipo_logico": "enum",
+      "nullable": true,
+      "status": "reservado_sem_fonte",
+      "sensibilidade_publicacao": "publico",
+      "descricao": "Slot nacional para revisao / status.",
+      "fontes_contribuintes_aprovadas": [],
+      "fontes_contribuintes_pendentes": []
+    }
+  ]
+}
