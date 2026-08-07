@@ -1,358 +1,1029 @@
 {
   "campos_nacionais_propostos": {
     "contato.telefone_declarado": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "osm"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "telefone",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        },
+        {
+          "campo_original": "telefone",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        },
+        {
+          "campo_original": "telefone",
+          "fonte": "osm",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "contato_publicacao"
     },
-    "identidade_religiosa.categoria_declarada": {
-      "fontes_contribuintes": [
-        "terreiros_brasil"
+    "geocodificacao.confianca": {
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "nominatim_confidence",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        }
       ],
+      "contribuicoes_pendentes": [],
+      "grupo_semantico": "geocodificacao"
+    },
+    "geocodificacao.consulta": {
+      "contribuicoes_aprovadas": [],
+      "contribuicoes_pendentes": [
+        {
+          "campo_original": "query_used",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        },
+        {
+          "campo_original": "nominatim_query",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        }
+      ],
+      "grupo_semantico": "geocodificacao"
+    },
+    "geocodificacao.precisao": {
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "precision",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        },
+        {
+          "campo_original": "nominatim_precision",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        }
+      ],
+      "contribuicoes_pendentes": [],
+      "grupo_semantico": "geocodificacao"
+    },
+    "geocodificacao.resultado.endereco": {
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "nominatim_display_name",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        }
+      ],
+      "contribuicoes_pendentes": [],
+      "grupo_semantico": "geocodificacao"
+    },
+    "geocodificacao.resultado.latitude": {
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "lat",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        },
+        {
+          "campo_original": "nominatim_lat",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        }
+      ],
+      "contribuicoes_pendentes": [],
+      "grupo_semantico": "geocodificacao"
+    },
+    "geocodificacao.resultado.longitude": {
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "lng",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        },
+        {
+          "campo_original": "nominatim_lng",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        }
+      ],
+      "contribuicoes_pendentes": [],
+      "grupo_semantico": "geocodificacao"
+    },
+    "geocodificacao.resultado.osm_id": {
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "nominatim_osm_id",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        }
+      ],
+      "contribuicoes_pendentes": [],
+      "grupo_semantico": "geocodificacao"
+    },
+    "geocodificacao.resultado.osm_tipo": {
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "nominatim_osm_type",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        }
+      ],
+      "contribuicoes_pendentes": [],
+      "grupo_semantico": "geocodificacao"
+    },
+    "geocodificacao.status": {
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "nominatim_status",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        }
+      ],
+      "contribuicoes_pendentes": [],
+      "grupo_semantico": "geocodificacao"
+    },
+    "geocodificacao.tipo_endereco": {
+      "contribuicoes_aprovadas": [],
+      "contribuicoes_pendentes": [
+        {
+          "campo_original": "nominatim_addresstype",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "inferido_geocodificacao"
+        }
+      ],
+      "grupo_semantico": "geocodificacao"
+    },
+    "identidade_religiosa.categoria_declarada": {
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "categoria_raw",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        }
+      ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "identidade_religiosa"
     },
     "identidade_religiosa.categoria_normalizada": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "osm",
-        "sefaz"
+      "contribuicoes_aprovadas": [],
+      "contribuicoes_pendentes": [
+        {
+          "campo_original": "nacao_categoria",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao_categoria",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao_categoria",
+          "fonte": "osm",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao_categoria",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        }
       ],
       "grupo_semantico": "identidade_religiosa"
     },
     "identidade_religiosa.componentes": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "osm",
-        "sefaz"
+      "contribuicoes_aprovadas": [],
+      "contribuicoes_pendentes": [
+        {
+          "campo_original": "nacao_componentes",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao_componentes",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao_componentes",
+          "fonte": "osm",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao_componentes",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        }
       ],
       "grupo_semantico": "identidade_religiosa"
     },
     "identidade_religiosa.nacao_declarada": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "osm",
-        "sefaz",
-        "terreiros_brasil"
+      "contribuicoes_aprovadas": [],
+      "contribuicoes_pendentes": [
+        {
+          "campo_original": "nacao_original",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao_original",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao_original",
+          "fonte": "osm",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao_original",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        }
       ],
       "grupo_semantico": "identidade_religiosa"
     },
     "identidade_religiosa.nacao_normalizada": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "osm",
-        "sefaz"
+      "contribuicoes_aprovadas": [],
+      "contribuicoes_pendentes": [
+        {
+          "campo_original": "nacao_primaria",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao_primaria",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao_primaria",
+          "fonte": "osm",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "nacao_primaria",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        }
       ],
       "grupo_semantico": "identidade_religiosa"
     },
     "identificacao.descricao_declarada": {
-      "fontes_contribuintes": [
-        "terreiros_brasil"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "descricao",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "identificacao_nome"
     },
     "identificadores.ceao_id": {
-      "fontes_contribuintes": [
-        "ceao"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "ceao_id",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "identificadores"
     },
     "identificadores.cnpj": {
-      "fontes_contribuintes": [
-        "cnpj"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "cnpj",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "identificadores"
     },
     "identificadores.id_nativo": {
-      "fontes_contribuintes": [
-        "mapeando_axe",
-        "terreiros_brasil"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "source_record_id",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        },
+        {
+          "campo_original": "id",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        }
       ],
-      "grupo_semantico": "identificadores"
-    },
-    "identificadores.osm_id": {
-      "fontes_contribuintes": [
-        "mapeando_axe"
-      ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "identificadores"
     },
     "identificadores.sefaz_codigo": {
-      "fontes_contribuintes": [
-        "sefaz"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "sefaz_codigo",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "identificadores"
     },
     "localizacao.bairro_declarado": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "cnpj",
-        "osm"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "bairro",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        },
+        {
+          "campo_original": "bairro",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        },
+        {
+          "campo_original": "bairro",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        },
+        {
+          "campo_original": "bairro",
+          "fonte": "osm",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "localizacao_endereco"
     },
     "localizacao.cep_declarado": {
-      "fontes_contribuintes": [
-        "ceao",
-        "cnpj",
-        "mapeando_axe"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "cep",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        },
+        {
+          "campo_original": "cep",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        },
+        {
+          "campo_original": "postcode",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "localizacao_endereco"
     },
-    "localizacao.codigo_ibge_municipio": {
-      "fontes_contribuintes": [
-        "cnpj"
+    "localizacao.codigo_municipio_declarado": {
+      "contribuicoes_aprovadas": [],
+      "contribuicoes_pendentes": [
+        {
+          "campo_original": "codigo_municipio",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        }
       ],
       "grupo_semantico": "localizacao_endereco"
     },
     "localizacao.endereco_declarado": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "mapeando_axe",
-        "osm",
-        "terreiros_brasil"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "endereco",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        },
+        {
+          "campo_original": "endereco",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        },
+        {
+          "campo_original": "address_raw",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        },
+        {
+          "campo_original": "endereco",
+          "fonte": "osm",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        },
+        {
+          "campo_original": "endereco",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        }
       ],
-      "grupo_semantico": "localizacao_endereco"
-    },
-    "localizacao.endereco_geocodificado": {
-      "fontes_contribuintes": [
-        "mapeando_axe"
-      ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "localizacao_endereco"
     },
     "localizacao.latitude": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "cnpj",
-        "mapeando_axe",
-        "osm",
-        "sefaz",
-        "terreiros_brasil"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "lat",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "coordenada"
+        },
+        {
+          "campo_original": "lat",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "coordenada"
+        },
+        {
+          "campo_original": "lat",
+          "fonte": "osm",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "coordenada"
+        },
+        {
+          "campo_original": "lat",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "coordenada"
+        },
+        {
+          "campo_original": "lat",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "coordenada"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "localizacao_endereco"
     },
     "localizacao.logradouro_declarado": {
-      "fontes_contribuintes": [
-        "cnpj"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "logradouro",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "localizacao_endereco"
     },
     "localizacao.longitude": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "cnpj",
-        "mapeando_axe",
-        "osm",
-        "sefaz",
-        "terreiros_brasil"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "lng",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "coordenada"
+        },
+        {
+          "campo_original": "lng",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "coordenada"
+        },
+        {
+          "campo_original": "lng",
+          "fonte": "osm",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "coordenada"
+        },
+        {
+          "campo_original": "lng",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "coordenada"
+        },
+        {
+          "campo_original": "lng",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "coordenada"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "localizacao_endereco"
     },
     "localizacao.municipio_declarado": {
-      "fontes_contribuintes": [
-        "mapeando_axe",
-        "terreiros_brasil"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "city",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        },
+        {
+          "campo_original": "cidade",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "localizacao_endereco"
     },
     "localizacao.numero_declarado": {
-      "fontes_contribuintes": [
-        "cnpj"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "numero",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "localizacao_endereco"
     },
     "localizacao.precisao": {
-      "fontes_contribuintes": [
-        "cnpj",
-        "mapeando_axe",
-        "terreiros_brasil"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "precision",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "localizacao_endereco"
     },
     "localizacao.uf_declarada": {
-      "fontes_contribuintes": [
-        "cnpj",
-        "mapeando_axe",
-        "terreiros_brasil"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "uf",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        },
+        {
+          "campo_original": "state",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        },
+        {
+          "campo_original": "uf",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "localizacao_endereco"
     },
     "midia.imagem_principal_url": {
-      "fontes_contribuintes": [
-        "ceao"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "foto_grande",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "midia"
     },
     "midia.miniatura_url": {
-      "fontes_contribuintes": [
-        "ceao"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "foto_thumb",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "midia"
     },
     "nome.declarado": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "cnpj",
-        "mapeando_axe",
-        "osm",
-        "sefaz",
-        "terreiros_brasil"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "nome",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        },
+        {
+          "campo_original": "nome",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        },
+        {
+          "campo_original": "nome_fantasia",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        },
+        {
+          "campo_original": "name",
+          "fonte": "mapeando_axe",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        },
+        {
+          "campo_original": "nome",
+          "fonte": "osm",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        },
+        {
+          "campo_original": "nome",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        },
+        {
+          "campo_original": "nome",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "identificacao_nome"
     },
     "nome.juridico_declarado": {
-      "fontes_contribuintes": [
-        "cnpj"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "razao_social",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "identificacao_nome"
     },
     "organizacao.ano_fundacao_declarado": {
-      "fontes_contribuintes": [
-        "ceao"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "ano_fundacao",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "organizacao_historia"
     },
-    "organizacao.data_fundacao_declarada": {
-      "fontes_contribuintes": [
-        "cnpj"
+    "organizacao.data_inicio_cadastral_declarada": {
+      "contribuicoes_aprovadas": [],
+      "contribuicoes_pendentes": [
+        {
+          "campo_original": "data_inicio",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        }
       ],
       "grupo_semantico": "organizacao_historia"
     },
     "organizacao.lideranca_declarada": {
-      "fontes_contribuintes": [
-        "ceao"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "lideranca",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "organizacao_historia"
     },
     "organizacao.regente_declarado": {
-      "fontes_contribuintes": [
-        "ceao"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "regente",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "organizacao_historia"
     },
-    "proveniencia.consulta_geocodificacao": {
-      "fontes_contribuintes": [
-        "cnpj",
-        "mapeando_axe"
-      ],
-      "grupo_semantico": "proveniencia_qualidade"
-    },
     "proveniencia.descricao_fonte": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "osm",
-        "sefaz"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "fonte_detalhe",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        },
+        {
+          "campo_original": "fonte_detalhe",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        },
+        {
+          "campo_original": "fonte_detalhe",
+          "fonte": "osm",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        },
+        {
+          "campo_original": "fonte_detalhe",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "proveniencia_qualidade"
     },
     "proveniencia.fonte": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "cnpj",
-        "osm",
-        "sefaz",
-        "terreiros_brasil"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "fonte",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        },
+        {
+          "campo_original": "fonte",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        },
+        {
+          "campo_original": "source",
+          "fonte": "cnpj",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        },
+        {
+          "campo_original": "fonte",
+          "fonte": "osm",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        },
+        {
+          "campo_original": "fonte",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        },
+        {
+          "campo_original": "source",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "proveniencia_qualidade"
     },
     "proveniencia.fontes_relacionadas[].fonte": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "osm",
-        "sefaz"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "fontes[].fonte",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        },
+        {
+          "campo_original": "fontes[].fonte",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        },
+        {
+          "campo_original": "fontes[].fonte",
+          "fonte": "osm",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        },
+        {
+          "campo_original": "fontes[].fonte",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "proveniencia_qualidade"
     },
     "proveniencia.fontes_relacionadas[].id": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "osm",
-        "sefaz"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "fontes[].id",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        },
+        {
+          "campo_original": "fontes[].id",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        },
+        {
+          "campo_original": "fontes[].id",
+          "fonte": "osm",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        },
+        {
+          "campo_original": "fontes[].id",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "identificador"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "proveniencia_qualidade"
     },
     "proveniencia.metodo_recuperacao": {
-      "fontes_contribuintes": [
-        "terreiros_brasil"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "recovery_method",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "preservar_original"
+        }
       ],
-      "grupo_semantico": "proveniencia_qualidade"
-    },
-    "proveniencia.tipo_objeto_osm_geocodificado": {
-      "fontes_contribuintes": [
-        "mapeando_axe"
-      ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "proveniencia_qualidade"
     },
     "proveniencia.url_registro": {
-      "fontes_contribuintes": [
-        "terreiros_brasil"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "link",
+          "fonte": "terreiros_brasil",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "copiar_declarado"
+        }
       ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "proveniencia_qualidade"
     },
     "qualidade.avaliacao_fonte": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "osm"
-      ],
-      "grupo_semantico": "proveniencia_qualidade"
-    },
-    "qualidade.confianca_geocodificacao": {
-      "fontes_contribuintes": [
-        "mapeando_axe"
+      "contribuicoes_aprovadas": [],
+      "contribuicoes_pendentes": [
+        {
+          "campo_original": "rating",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "rating",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "rating",
+          "fonte": "osm",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        }
       ],
       "grupo_semantico": "proveniencia_qualidade"
     },
     "qualidade.metodo_classificacao": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "osm",
-        "sefaz"
+      "contribuicoes_aprovadas": [],
+      "contribuicoes_pendentes": [
+        {
+          "campo_original": "metodo_classificacao",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "metodo_classificacao",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "metodo_classificacao",
+          "fonte": "osm",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "metodo_classificacao",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        }
       ],
       "grupo_semantico": "proveniencia_qualidade"
     },
     "qualidade.quantidade_avaliacoes_fonte": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "osm"
-      ],
-      "grupo_semantico": "proveniencia_qualidade"
-    },
-    "qualidade.status_geocodificacao": {
-      "fontes_contribuintes": [
-        "mapeando_axe"
+      "contribuicoes_aprovadas": [],
+      "contribuicoes_pendentes": [
+        {
+          "campo_original": "reviews",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "reviews",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        },
+        {
+          "campo_original": "reviews",
+          "fonte": "osm",
+          "incluir_formato_nacional": "revisar",
+          "regra_harmonizacao": "preservar_original"
+        }
       ],
       "grupo_semantico": "proveniencia_qualidade"
     },
     "qualidade.status_geografico": {
-      "fontes_contribuintes": [
-        "bahia_google",
-        "ceao",
-        "osm",
-        "sefaz"
+      "contribuicoes_aprovadas": [
+        {
+          "campo_original": "geo_status",
+          "fonte": "bahia_google",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        },
+        {
+          "campo_original": "geo_status",
+          "fonte": "ceao",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        },
+        {
+          "campo_original": "geo_status",
+          "fonte": "osm",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        },
+        {
+          "campo_original": "geo_status",
+          "fonte": "sefaz",
+          "incluir_formato_nacional": "sim",
+          "regra_harmonizacao": "normalizar_sem_substituir"
+        }
       ],
-      "grupo_semantico": "proveniencia_qualidade"
-    },
-    "qualidade.tipo_endereco_geocodificador": {
-      "fontes_contribuintes": [
-        "mapeando_axe"
-      ],
+      "contribuicoes_pendentes": [],
       "grupo_semantico": "proveniencia_qualidade"
     }
   },

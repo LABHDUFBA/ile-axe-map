@@ -29,6 +29,7 @@ O agregado Bahia tem 1.959 registros e foi separado pelo campo `fonte`: CEAO 1.1
 6. Variáveis exclusivas úteis entram no formato comum. Estruturas de transporte e variáveis estritamente específicas permanecem no payload original.
 7. Contatos, liderança e consultas de geocodificação são internos por padrão. Publicação exige controle explícito por campo e finalidade.
 8. Esta etapa não escolhe entidade canônica, nome preferido, coordenada vencedora ou fonte mais confiável.
+9. Resultados de geocodificação são dados auxiliares inferidos. Não provam identidade, não criam identificador da entidade e não substituem endereço ou coordenada declarada ou canônica.
 
 ## Estados de um valor
 
@@ -56,13 +57,13 @@ Não equiparar automaticamente nome fantasia, razão social e nome religioso.
 
 - `identificadores.cnpj`
 - `identificadores.ceao_id`
-- `identificadores.osm_id`, acompanhado do tipo de objeto OSM quando disponível
+- `identificadores.osm_id`, reservado para um identificador nativo da entidade confirmado na fonte OSM
 - `identificadores.google_place_id`, previsto no modelo, mas ausente no agregado Bahia atual
 - `identificadores.sefaz_codigo`
 - `identificadores.id_nativo`, sempre com namespace da fonte
 - `proveniencia.fontes_relacionadas[].fonte` e `.id`
 
-IDs retornados por geocodificação não provam que o objeto geocodificado é a mesma entidade religiosa. Google e OSM não preservam seus IDs nativos no agregado atual, portanto eles devem ficar `null`, sem fabricação retrospectiva.
+`nominatim_osm_id` não contribui para `identificadores.osm_id`: ele identifica somente o objeto devolvido pelo geocodificador. Google e OSM não preservam seus IDs nativos no agregado atual, portanto eles devem ficar `null`, sem fabricação retrospectiva.
 
 ### 3. Localização e endereço
 
@@ -73,16 +74,30 @@ IDs retornados por geocodificação não provam que o objeto geocodificado é a 
 - `localizacao.bairro_declarado`
 - `localizacao.municipio_declarado`
 - `localizacao.uf_declarada`
-- `localizacao.codigo_ibge_municipio`
+- `localizacao.codigo_municipio_declarado`, candidato pendente de validação do domínio cadastral
 - `localizacao.cep_declarado`
 - `localizacao.latitude`
 - `localizacao.longitude`
-- `localizacao.precisao`
-- `localizacao.endereco_geocodificado`
+- `localizacao.precisao`, somente quando qualifica coordenada do registro integrado
 
-Coordenadas devem carregar fonte, método e precisão. Coordenadas declaradas e geocodificadas não devem ser fundidas silenciosamente. `codigo_municipio` exige confirmação humana de que seu domínio é IBGE antes de virar código IBGE nacional.
+As coordenadas `lat` e `lng` do agregado Bahia e de Terreiros do Brasil permanecem classificadas como coordenadas dos respectivos registros integrados, com sua origem documentada. Já `lat`, `lng` e `precision` do input CNPJ são saídas de geocodificação. `codigo_municipio` não é chamado de IBGE: seu domínio precisa ser confirmado antes de qualquer normalização.
 
-### 4. Identidade religiosa
+### 4. Geocodificação auxiliar
+
+- `geocodificacao.resultado.latitude`
+- `geocodificacao.resultado.longitude`
+- `geocodificacao.resultado.osm_id`
+- `geocodificacao.resultado.osm_tipo`
+- `geocodificacao.resultado.endereco`
+- `geocodificacao.consulta`, interno por padrão
+- `geocodificacao.status`
+- `geocodificacao.precisao`
+- `geocodificacao.confianca`
+- `geocodificacao.tipo_endereco`
+
+Esses campos recebem as saídas Nominatim de Mapeando Axé e as saídas de geocodificação do input CNPJ. A regra `inferido_geocodificacao` exige proveniência do processo. O resultado pode apoiar revisão e localização, mas não comprova que o objeto retornado é o terreiro, não substitui coordenada ou endereço da entidade e não fornece ID nativo da entidade.
+
+### 5. Identidade religiosa
 
 - `identidade_religiosa.tradicao_declarada`, previsto, sem contribuição inequívoca na matriz atual
 - `identidade_religiosa.nacao_declarada`
@@ -93,19 +108,19 @@ Coordenadas devem carregar fonte, método e precisão. Coordenadas declaradas e 
 - `identidade_religiosa.nacao_normalizada`
 - `identidade_religiosa.categoria_normalizada`
 
-Os campos `nacao_categoria`, `nacao_componentes`, `nacao_primaria` e `metodo_classificacao` do agregado Bahia aparentam ser derivados. Eles permanecem marcados para revisão e não substituem `nacao_original` ou outro valor declarado.
+`nacao` e `nacao_original` mantêm `identidade_religiosa.nacao_declarada` apenas como destino candidato e ficam em revisão. É preciso validar por fonte se representam declaração da organização, descrição editorial ou classificação de terceiro. Os campos `nacao_categoria`, `nacao_componentes`, `nacao_primaria` e `metodo_classificacao` do agregado Bahia são derivados e também permanecem em revisão.
 
-### 5. Organização e história
+### 6. Organização e história
 
 - `organizacao.lideranca_declarada`
 - `organizacao.regente_declarado`
-- `organizacao.data_fundacao_declarada`
+- `organizacao.data_inicio_cadastral_declarada`, candidato em revisão
 - `organizacao.ano_fundacao_declarado`
 - `organizacao.situacao_cadastral`, previsto, sem campo inequívoco identificado
 
-`data_inicio` da fonte CNPJ pode ser início cadastral, não fundação religiosa. A equivalência exige decisão humana. Liderança e regência são internas por padrão.
+`data_inicio` da fonte CNPJ é preservada como data de início cadastral declarada e pendente. Ela nunca é tratada como fundação religiosa sem confirmação semântica da fonte. Liderança e regência são internas por padrão.
 
-### 6. Patrimônio e reconhecimento
+### 7. Patrimônio e reconhecimento
 
 Campos nacionais previstos:
 
@@ -117,7 +132,7 @@ Campos nacionais previstos:
 
 Nenhuma variável inequívoca destes temas foi encontrada nas sete fontes atuais. Todos devem permanecer `null`. Não inferir reconhecimento a partir da presença no CEAO, SEFAZ ou outro cadastro.
 
-### 7. Contato, mídia e controle de publicação
+### 8. Contato, mídia e controle de publicação
 
 - `contato.telefone_declarado`
 - `contato.email_declarado`, previsto, sem campo identificado
@@ -131,7 +146,7 @@ Nenhuma variável inequívoca destes temas foi encontrada nas sete fontes atuais
 
 Telefone foi inventariado, mas não deve ser publicado por padrão. URLs de fotos entram como variáveis comuns úteis, ainda sujeitas a direitos, persistência do link e política de publicação.
 
-### 8. Proveniência e qualidade
+### 9. Proveniência e qualidade
 
 - `proveniencia.fonte`
 - `proveniencia.id_fonte`
@@ -139,12 +154,7 @@ Telefone foi inventariado, mas não deve ser publicado por padrão. URLs de foto
 - `proveniencia.descricao_fonte`
 - `proveniencia.data_coleta`
 - `proveniencia.metodo_recuperacao`
-- `proveniencia.consulta_geocodificacao`, interno
-- `proveniencia.tipo_objeto_osm_geocodificado`
 - `qualidade.status_geografico`
-- `qualidade.status_geocodificacao`
-- `qualidade.tipo_endereco_geocodificador`
-- `qualidade.confianca_geocodificacao`
 - `qualidade.metodo_classificacao`
 - `qualidade.avaliacao_fonte`
 - `qualidade.quantidade_avaliacoes_fonte`
@@ -154,10 +164,11 @@ Rating e quantidade de avaliações são métricas específicas de plataforma. P
 
 ## Achados da matriz
 
-- Foram identificadas 129 combinações de fonte e caminho original, correspondentes a 47 campos nacionais iniciais após agrupamento semântico.
+- Foram identificadas 129 combinações de fonte e caminho original, correspondentes a 50 campos nacionais candidatos após agrupamento semântico. O JSON separa contribuições aprovadas de pendentes e preserva regra e status de cada fonte-campo.
 - Os inputs são majoritariamente planos. O único array aninhado observado no conjunto Bahia é `fontes[]`, inventariado com marcador `[]` determinístico.
 - `rating` apresenta `int` e `float` em Google e CEAO. O modelo futuro deve aceitar número sem perder a representação original.
 - Existem 24 combinações fonte-campo presentes na estrutura, mas sem nenhum valor preenchido. Presença estrutural não deve ser confundida com coleta efetiva.
+- A avaliação recursiva de vazio não alterou essas contagens no snapshot: listas e objetos estruturais observados ou contêm algum valor real, ou já estavam vazios. `false` e `0` continuam preenchidos.
 - SEFAZ possui `lat` e `lng` estruturais sem preenchimento no snapshot. Esses campos nacionais permanecem `null` para seus registros.
 - Campos úteis exclusivos encontrados incluem descrição, método de recuperação, imagens, consulta de geocodificação, confiança e tipo de endereço do geocodificador.
 - Os contêineres `fontes` e `fontes[]` são preservados no payload original; somente seus filhos semânticos são candidatos ao formato comum.

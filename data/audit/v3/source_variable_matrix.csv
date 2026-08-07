@@ -13,7 +13,7 @@ bahia_google,lng,float,550,550,100.000000,localizacao_endereco,localizacao.longi
 bahia_google,metodo_classificacao,string,550,550,100.000000,proveniencia_qualidade,qualidade.metodo_classificacao,preservar_original,revisar,"Classificação derivada, não tratar como declaração."
 bahia_google,nacao_categoria,string,550,550,100.000000,identidade_religiosa,identidade_religiosa.categoria_normalizada,preservar_original,revisar,Campo derivado no agregado Bahia.
 bahia_google,nacao_componentes,,550,0,0.000000,identidade_religiosa,identidade_religiosa.componentes,preservar_original,revisar,Campo derivado no agregado Bahia.
-bahia_google,nacao_original,,550,0,0.000000,identidade_religiosa,identidade_religiosa.nacao_declarada,copiar_declarado,sim,Preferir ao campo derivado quando comprovadamente original.
+bahia_google,nacao_original,,550,0,0.000000,identidade_religiosa,identidade_religiosa.nacao_declarada,preservar_original,revisar,Destino candidato; origem e semântica precisam ser validadas por fonte.
 bahia_google,nacao_primaria,,550,0,0.000000,identidade_religiosa,identidade_religiosa.nacao_normalizada,preservar_original,revisar,Campo derivado no agregado Bahia.
 bahia_google,nome,string,550,550,100.000000,identificacao_nome,nome.declarado,copiar_declarado,sim,Não eleger nome preferido nesta etapa.
 bahia_google,rating,float|int,550,433,78.727273,proveniencia_qualidade,qualidade.avaliacao_fonte,preservar_original,revisar,"Métrica específica de plataforma, manter proveniência."
@@ -37,10 +37,10 @@ ceao,lat,float,1155,1155,100.000000,localizacao_endereco,localizacao.latitude,co
 ceao,lideranca,string,1155,1155,100.000000,organizacao_historia,organizacao.lideranca_declarada,copiar_declarado,sim,"Dado interno, controlar publicação."
 ceao,lng,float,1155,1155,100.000000,localizacao_endereco,localizacao.longitude,coordenada,sim,
 ceao,metodo_classificacao,string,1155,1155,100.000000,proveniencia_qualidade,qualidade.metodo_classificacao,preservar_original,revisar,"Classificação derivada, não tratar como declaração."
-ceao,nacao,string,1155,1155,100.000000,identidade_religiosa,identidade_religiosa.nacao_declarada,copiar_declarado,sim,Confirmar semântica declarada por fonte.
+ceao,nacao,string,1155,1155,100.000000,identidade_religiosa,identidade_religiosa.nacao_declarada,preservar_original,revisar,"Destino candidato; validar por fonte se é declaração, descrição editorial ou classificação de terceiro."
 ceao,nacao_categoria,string,1155,1155,100.000000,identidade_religiosa,identidade_religiosa.categoria_normalizada,preservar_original,revisar,Campo derivado no agregado Bahia.
 ceao,nacao_componentes,,1155,0,0.000000,identidade_religiosa,identidade_religiosa.componentes,preservar_original,revisar,Campo derivado no agregado Bahia.
-ceao,nacao_original,string,1155,1155,100.000000,identidade_religiosa,identidade_religiosa.nacao_declarada,copiar_declarado,sim,Preferir ao campo derivado quando comprovadamente original.
+ceao,nacao_original,string,1155,1155,100.000000,identidade_religiosa,identidade_religiosa.nacao_declarada,preservar_original,revisar,Destino candidato; origem e semântica precisam ser validadas por fonte.
 ceao,nacao_primaria,,1155,0,0.000000,identidade_religiosa,identidade_religiosa.nacao_normalizada,preservar_original,revisar,Campo derivado no agregado Bahia.
 ceao,nome,string,1155,1155,100.000000,identificacao_nome,nome.declarado,copiar_declarado,sim,Não eleger nome preferido nesta etapa.
 ceao,rating,float|int,1155,41,3.549784,proveniencia_qualidade,qualidade.avaliacao_fonte,preservar_original,revisar,"Métrica específica de plataforma, manter proveniência."
@@ -50,31 +50,31 @@ ceao,telefone,string,1155,1155,100.000000,contato_publicacao,contato.telefone_de
 cnpj,bairro,string,2673,2635,98.578376,localizacao_endereco,localizacao.bairro_declarado,normalizar_sem_substituir,sim,
 cnpj,cep,string,2673,2667,99.775533,localizacao_endereco,localizacao.cep_declarado,normalizar_sem_substituir,sim,
 cnpj,cnpj,string,2673,2673,100.000000,identificadores,identificadores.cnpj,identificador,sim,"Dado organizacional sujeito a validação, sem substituir o declarado."
-cnpj,codigo_municipio,string,2673,2673,100.000000,localizacao_endereco,localizacao.codigo_ibge_municipio,normalizar_sem_substituir,sim,Confirmar que a codificação é IBGE antes da adaptação.
-cnpj,data_inicio,string,2673,2673,100.000000,organizacao_historia,organizacao.data_fundacao_declarada,normalizar_sem_substituir,revisar,"Pode representar início cadastral, não necessariamente fundação religiosa."
-cnpj,lat,float,2673,2526,94.500561,localizacao_endereco,localizacao.latitude,coordenada,sim,
-cnpj,lng,float,2673,2526,94.500561,localizacao_endereco,localizacao.longitude,coordenada,sim,
+cnpj,codigo_municipio,string,2673,2673,100.000000,localizacao_endereco,localizacao.codigo_municipio_declarado,preservar_original,revisar,Código cadastral de domínio não confirmado; não tratar como IBGE sem validação da fonte.
+cnpj,data_inicio,string,2673,2673,100.000000,organizacao_historia,organizacao.data_inicio_cadastral_declarada,preservar_original,revisar,Data cadastral de semântica pendente; não representa fundação religiosa confirmada.
+cnpj,lat,float,2673,2526,94.500561,geocodificacao,geocodificacao.resultado.latitude,inferido_geocodificacao,sim,Coordenada do resultado de geocodificação do input CNPJ; não é coordenada declarada ou canônica da entidade.
+cnpj,lng,float,2673,2526,94.500561,geocodificacao,geocodificacao.resultado.longitude,inferido_geocodificacao,sim,Coordenada do resultado de geocodificação do input CNPJ; não é coordenada declarada ou canônica da entidade.
 cnpj,logradouro,string,2673,2673,100.000000,localizacao_endereco,localizacao.logradouro_declarado,normalizar_sem_substituir,sim,
 cnpj,nome_fantasia,string,2673,1357,50.766929,identificacao_nome,nome.declarado,copiar_declarado,sim,Nome fantasia cadastral.
 cnpj,numero,string,2673,2673,100.000000,localizacao_endereco,localizacao.numero_declarado,normalizar_sem_substituir,sim,
-cnpj,precision,string,2673,2526,94.500561,localizacao_endereco,localizacao.precisao,normalizar_sem_substituir,sim,
-cnpj,query_used,string,2673,2673,100.000000,proveniencia_qualidade,proveniencia.consulta_geocodificacao,preservar_original,revisar,Interno; pode reproduzir dados de endereço e não deve ser publicado automaticamente.
+cnpj,precision,string,2673,2526,94.500561,geocodificacao,geocodificacao.precisao,inferido_geocodificacao,sim,Precisão do processo de geocodificação do input CNPJ.
+cnpj,query_used,string,2673,2673,100.000000,geocodificacao,geocodificacao.consulta,inferido_geocodificacao,revisar,Consulta interna do processo de geocodificação; não publicar automaticamente.
 cnpj,razao_social,string,2673,2673,100.000000,identificacao_nome,nome.juridico_declarado,copiar_declarado,sim,
 cnpj,source,string,2673,2673,100.000000,proveniencia_qualidade,proveniencia.fonte,identificador,sim,
 cnpj,uf,string,2673,2672,99.962589,localizacao_endereco,localizacao.uf_declarada,normalizar_sem_substituir,sim,
 mapeando_axe,address_raw,string,3923,3923,100.000000,localizacao_endereco,localizacao.endereco_declarado,copiar_declarado,sim,Endereço livre declarado pela fonte.
 mapeando_axe,city,string,3923,3923,100.000000,localizacao_endereco,localizacao.municipio_declarado,normalizar_sem_substituir,sim,
 mapeando_axe,name,string,3923,3922,99.974509,identificacao_nome,nome.declarado,copiar_declarado,sim,Não eleger nome preferido nesta etapa.
-mapeando_axe,nominatim_addresstype,string,3923,1110,28.294672,proveniencia_qualidade,qualidade.tipo_endereco_geocodificador,preservar_original,revisar,Vocabulário específico do geocodificador.
-mapeando_axe,nominatim_confidence,float,3923,2828,72.087688,proveniencia_qualidade,qualidade.confianca_geocodificacao,normalizar_sem_substituir,sim,Escala precisa ser documentada antes da harmonização.
-mapeando_axe,nominatim_display_name,string,3923,2828,72.087688,localizacao_endereco,localizacao.endereco_geocodificado,copiar_declarado,sim,"Resultado do geocodificador, distinto do endereço declarado."
-mapeando_axe,nominatim_lat,float,3923,2828,72.087688,localizacao_endereco,localizacao.latitude,coordenada,sim,"Coordenada geocodificada, preservar método e fonte."
-mapeando_axe,nominatim_lng,float,3923,2828,72.087688,localizacao_endereco,localizacao.longitude,coordenada,sim,"Coordenada geocodificada, preservar método e fonte."
-mapeando_axe,nominatim_osm_id,int,3923,2828,72.087688,identificadores,identificadores.osm_id,identificador,sim,"ID retornado pelo geocodificador, não prova identidade da entidade."
-mapeando_axe,nominatim_osm_type,string,3923,2828,72.087688,proveniencia_qualidade,proveniencia.tipo_objeto_osm_geocodificado,preservar_original,sim,Qualifica o ID OSM retornado.
-mapeando_axe,nominatim_precision,string,3923,2828,72.087688,localizacao_endereco,localizacao.precisao,normalizar_sem_substituir,sim,
-mapeando_axe,nominatim_query,string,3923,3923,100.000000,proveniencia_qualidade,proveniencia.consulta_geocodificacao,preservar_original,revisar,Interno; pode reproduzir dados de endereço e não deve ser publicado automaticamente.
-mapeando_axe,nominatim_status,string,3923,3923,100.000000,proveniencia_qualidade,qualidade.status_geocodificacao,normalizar_sem_substituir,sim,
+mapeando_axe,nominatim_addresstype,string,3923,1110,28.294672,geocodificacao,geocodificacao.tipo_endereco,inferido_geocodificacao,revisar,Vocabulário específico do geocodificador.
+mapeando_axe,nominatim_confidence,float,3923,2828,72.087688,geocodificacao,geocodificacao.confianca,inferido_geocodificacao,sim,Escala precisa ser documentada antes da harmonização.
+mapeando_axe,nominatim_display_name,string,3923,2828,72.087688,geocodificacao,geocodificacao.resultado.endereco,inferido_geocodificacao,sim,Resultado auxiliar do geocodificador; não substitui endereço declarado.
+mapeando_axe,nominatim_lat,float,3923,2828,72.087688,geocodificacao,geocodificacao.resultado.latitude,inferido_geocodificacao,sim,"Coordenada do resultado do geocodificador, não coordenada declarada ou canônica da entidade."
+mapeando_axe,nominatim_lng,float,3923,2828,72.087688,geocodificacao,geocodificacao.resultado.longitude,inferido_geocodificacao,sim,"Coordenada do resultado do geocodificador, não coordenada declarada ou canônica da entidade."
+mapeando_axe,nominatim_osm_id,int,3923,2828,72.087688,geocodificacao,geocodificacao.resultado.osm_id,inferido_geocodificacao,sim,ID do objeto retornado pelo geocodificador; não prova identidade da entidade.
+mapeando_axe,nominatim_osm_type,string,3923,2828,72.087688,geocodificacao,geocodificacao.resultado.osm_tipo,inferido_geocodificacao,sim,Tipo do objeto retornado pelo geocodificador.
+mapeando_axe,nominatim_precision,string,3923,2828,72.087688,geocodificacao,geocodificacao.precisao,inferido_geocodificacao,sim,Precisão informada pelo processo de geocodificação.
+mapeando_axe,nominatim_query,string,3923,3923,100.000000,geocodificacao,geocodificacao.consulta,inferido_geocodificacao,revisar,Interno; pode reproduzir dados de endereço e não deve ser publicado automaticamente.
+mapeando_axe,nominatim_status,string,3923,3923,100.000000,geocodificacao,geocodificacao.status,inferido_geocodificacao,sim,Status do processo de geocodificação.
 mapeando_axe,postcode,string,3923,3827,97.552893,localizacao_endereco,localizacao.cep_declarado,normalizar_sem_substituir,sim,
 mapeando_axe,source_record_id,string,3923,3923,100.000000,identificadores,identificadores.id_nativo,identificador,sim,Identificador com namespace da fonte.
 mapeando_axe,state,string,3923,3923,100.000000,localizacao_endereco,localizacao.uf_declarada,normalizar_sem_substituir,sim,
@@ -92,7 +92,7 @@ osm,lng,float,20,20,100.000000,localizacao_endereco,localizacao.longitude,coorde
 osm,metodo_classificacao,string,20,20,100.000000,proveniencia_qualidade,qualidade.metodo_classificacao,preservar_original,revisar,"Classificação derivada, não tratar como declaração."
 osm,nacao_categoria,string,20,20,100.000000,identidade_religiosa,identidade_religiosa.categoria_normalizada,preservar_original,revisar,Campo derivado no agregado Bahia.
 osm,nacao_componentes,,20,0,0.000000,identidade_religiosa,identidade_religiosa.componentes,preservar_original,revisar,Campo derivado no agregado Bahia.
-osm,nacao_original,,20,0,0.000000,identidade_religiosa,identidade_religiosa.nacao_declarada,copiar_declarado,sim,Preferir ao campo derivado quando comprovadamente original.
+osm,nacao_original,,20,0,0.000000,identidade_religiosa,identidade_religiosa.nacao_declarada,preservar_original,revisar,Destino candidato; origem e semântica precisam ser validadas por fonte.
 osm,nacao_primaria,,20,0,0.000000,identidade_religiosa,identidade_religiosa.nacao_normalizada,preservar_original,revisar,Campo derivado no agregado Bahia.
 osm,nome,string,20,20,100.000000,identificacao_nome,nome.declarado,copiar_declarado,sim,Não eleger nome preferido nesta etapa.
 osm,rating,,20,0,0.000000,proveniencia_qualidade,qualidade.avaliacao_fonte,preservar_original,revisar,"Métrica específica de plataforma, manter proveniência."
@@ -110,7 +110,7 @@ sefaz,lng,,234,0,0.000000,localizacao_endereco,localizacao.longitude,coordenada,
 sefaz,metodo_classificacao,string,234,234,100.000000,proveniencia_qualidade,qualidade.metodo_classificacao,preservar_original,revisar,"Classificação derivada, não tratar como declaração."
 sefaz,nacao_categoria,string,234,234,100.000000,identidade_religiosa,identidade_religiosa.categoria_normalizada,preservar_original,revisar,Campo derivado no agregado Bahia.
 sefaz,nacao_componentes,,234,0,0.000000,identidade_religiosa,identidade_religiosa.componentes,preservar_original,revisar,Campo derivado no agregado Bahia.
-sefaz,nacao_original,,234,0,0.000000,identidade_religiosa,identidade_religiosa.nacao_declarada,copiar_declarado,sim,Preferir ao campo derivado quando comprovadamente original.
+sefaz,nacao_original,,234,0,0.000000,identidade_religiosa,identidade_religiosa.nacao_declarada,preservar_original,revisar,Destino candidato; origem e semântica precisam ser validadas por fonte.
 sefaz,nacao_primaria,,234,0,0.000000,identidade_religiosa,identidade_religiosa.nacao_normalizada,preservar_original,revisar,Campo derivado no agregado Bahia.
 sefaz,nome,string,234,234,100.000000,identificacao_nome,nome.declarado,copiar_declarado,sim,Não eleger nome preferido nesta etapa.
 sefaz,sefaz_codigo,int,234,234,100.000000,identificadores,identificadores.sefaz_codigo,identificador,sim,Identificador com namespace SEFAZ.
@@ -122,7 +122,7 @@ terreiros_brasil,id,int,260,260,100.000000,identificadores,identificadores.id_na
 terreiros_brasil,lat,float,260,259,99.615385,localizacao_endereco,localizacao.latitude,coordenada,sim,
 terreiros_brasil,link,string,260,260,100.000000,proveniencia_qualidade,proveniencia.url_registro,copiar_declarado,sim,
 terreiros_brasil,lng,float,260,259,99.615385,localizacao_endereco,localizacao.longitude,coordenada,sim,
-terreiros_brasil,nacao,string,260,260,100.000000,identidade_religiosa,identidade_religiosa.nacao_declarada,copiar_declarado,sim,Confirmar semântica declarada por fonte.
+terreiros_brasil,nacao,string,260,260,100.000000,identidade_religiosa,identidade_religiosa.nacao_declarada,preservar_original,revisar,"Destino candidato; validar por fonte se é declaração, descrição editorial ou classificação de terceiro."
 terreiros_brasil,nome,string,260,260,100.000000,identificacao_nome,nome.declarado,copiar_declarado,sim,Não eleger nome preferido nesta etapa.
 terreiros_brasil,precision,string,260,1,0.384615,localizacao_endereco,localizacao.precisao,normalizar_sem_substituir,sim,
 terreiros_brasil,recovery_method,string,260,1,0.384615,proveniencia_qualidade,proveniencia.metodo_recuperacao,preservar_original,sim,"Método de recuperação do registro, não atributo da entidade."
