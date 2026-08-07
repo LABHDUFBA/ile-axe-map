@@ -9,6 +9,27 @@ import pytest
 ROOT = Path(__file__).resolve().parents[2]
 SCHEMA_PATH = ROOT / "schemas/source-record-v3.schema.json"
 
+PORTAS_VALIDAS = (
+    "0",
+    "1",
+    "80",
+    "443",
+    "9999",
+    "10000",
+    "59999",
+    "60000",
+    "64999",
+    "65000",
+    "65499",
+    "65500",
+    "65529",
+    "65530",
+    "65535",
+)
+PORTAS_INVALIDAS = ("", "-1", "+80", "01", "65536", "70000", "abc")
+IPV6_VALIDOS = ("::", "::1", "2001:db8::1", "2001:db8:0:1:2:3:4:5")
+IPV6_INVALIDOS = ("", ":::", "12345::1", "1:2:3:4:5:6:7:8:9", "gggg::1")
+
 
 @pytest.fixture
 def schema():
@@ -165,6 +186,44 @@ def test_schema_aceita_url_http_absoluta_com_host(validator, registro_completo, 
     registro["identificadores"]["url"] = url
 
     validator.validate(registro)
+
+
+@pytest.mark.parametrize("porta", PORTAS_VALIDAS)
+def test_schema_aceita_porta_decimal_canonica_na_faixa(
+    validator, registro_completo, porta
+):
+    registro = copy.deepcopy(registro_completo)
+    registro["identificadores"]["url"] = f"https://example.org:{porta}/x"
+
+    validator.validate(registro)
+
+
+@pytest.mark.parametrize("porta", PORTAS_INVALIDAS)
+def test_schema_rejeita_porta_nao_canonica_ou_fora_da_faixa(
+    validator, registro_completo, porta
+):
+    registro = copy.deepcopy(registro_completo)
+    registro["identificadores"]["url"] = f"https://example.org:{porta}/x"
+
+    with pytest.raises(jsonschema.ValidationError):
+        validator.validate(registro)
+
+
+@pytest.mark.parametrize("host", IPV6_VALIDOS)
+def test_schema_aceita_ipv6_bracketed_valido(validator, registro_completo, host):
+    registro = copy.deepcopy(registro_completo)
+    registro["identificadores"]["url"] = f"https://[{host}]:443/x"
+
+    validator.validate(registro)
+
+
+@pytest.mark.parametrize("host", IPV6_INVALIDOS)
+def test_schema_rejeita_ipv6_bracketed_malformado(validator, registro_completo, host):
+    registro = copy.deepcopy(registro_completo)
+    registro["identificadores"]["url"] = f"https://[{host}]/x"
+
+    with pytest.raises(jsonschema.ValidationError):
+        validator.validate(registro)
 
 
 def test_schema_rejeita_data_invalida(validator, registro_completo):
