@@ -18,7 +18,7 @@ O registro retornado não compartilha referências mutáveis com os argumentos. 
 
 O JSON Schema valida CNPJ somente como `string|null`. O builder chama `valid_cnpj` para todo CNPJ não nulo. A função aceita máscara padrão ou 14 dígitos e verifica os dois dígitos verificadores. Os demais identificadores aceitam somente texto ou nulo.
 
-Validações de `date` e `uri` exigem `jsonschema.Draft202012Validator` com `jsonschema.FormatChecker()`. URLs aceitas são somente HTTP(S) absolutas com hostname não vazio. Domínios, IPv4, `localhost`, portas, userinfo não vazio, caminho, query, fragmento e IPv6 entre colchetes são aceitos sem consultar DNS.
+Validações de `date` e `uri` exigem `jsonschema.Draft202012Validator` com `jsonschema.FormatChecker()`. URLs aceitas são somente HTTP(S) absolutas com hostname não vazio. Domínios, IPv4, `localhost`, userinfo não vazio, caminho, query, fragmento e IPv6 hexadecimal válido entre colchetes são aceitos sem consultar DNS. A porta opcional deve ser um inteiro decimal canônico entre `0` e `65535`: `0` é aceito, zeros à esquerda e sinais são rejeitados.
 
 ## Privacidade
 

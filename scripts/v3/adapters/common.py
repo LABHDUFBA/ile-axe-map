@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 from datetime import date
 import hashlib
+from ipaddress import IPv6Address
 import json
 import math
 import re
@@ -30,6 +31,10 @@ AUDIT_FLAG_NAMES = (
     "remocao_heuristica_legada",
     "ambiguo_pendente",
     "dedup_legado_recuperado",
+)
+
+_PORT_PATTERN = re.compile(
+    r"(?:0|[1-9]\d{0,3}|[1-5]\d{4}|6[0-4]\d{3}|65[0-4]\d{2}|655[0-2]\d|6553[0-5])"
 )
 
 
@@ -214,6 +219,23 @@ def _validate_url(value: Any) -> None:
         or parsed.netloc.startswith("@")
     ):
         raise ValueError("url deve ser HTTP(S) absoluta com hostname")
+
+    authority = parsed.netloc.rsplit("@", 1)[-1]
+    if authority.startswith("["):
+        closing_bracket = authority.find("]")
+        try:
+            IPv6Address(parsed.hostname)
+        except ValueError as error:
+            raise ValueError("url contém IPv6 inválido") from error
+        port_suffix = authority[closing_bracket + 1 :]
+    else:
+        port_suffix = authority[authority.rfind(":") :] if ":" in authority else ""
+
+    if port_suffix and (
+        not port_suffix.startswith(":")
+        or not _PORT_PATTERN.fullmatch(port_suffix[1:])
+    ):
+        raise ValueError("url contém porta inválida")
 
 
 def build_base_source_record(

@@ -17,6 +17,27 @@ from scripts.v3.adapters.common import (
 
 ROOT = Path(__file__).resolve().parents[2]
 
+PORTAS_VALIDAS = (
+    "0",
+    "1",
+    "80",
+    "443",
+    "9999",
+    "10000",
+    "59999",
+    "60000",
+    "64999",
+    "65000",
+    "65499",
+    "65500",
+    "65529",
+    "65530",
+    "65535",
+)
+PORTAS_INVALIDAS = ("", "-1", "+80", "01", "65536", "70000", "abc")
+IPV6_VALIDOS = ("::", "::1", "2001:db8::1", "2001:db8:0:1:2:3:4:5")
+IPV6_INVALIDOS = ("", ":::", "12345::1", "1:2:3:4:5:6:7:8:9", "gggg::1")
+
 
 @pytest.mark.parametrize(
     ("value", "expected"),
@@ -410,6 +431,42 @@ def test_build_base_source_record_aceita_url_ipv6_bracketed():
     )
 
     assert record["identificadores"]["url"] == url
+
+
+@pytest.mark.parametrize(
+    ("url", "aceita"),
+    [
+        *((f"https://example.org:{porta}/x", True) for porta in PORTAS_VALIDAS),
+        *((f"https://example.org:{porta}/x", False) for porta in PORTAS_INVALIDAS),
+        *((f"https://[{host}]:443/x", True) for host in IPV6_VALIDOS),
+        *((f"https://[{host}]/x", False) for host in IPV6_INVALIDOS),
+    ],
+)
+def test_builder_e_schema_concordam_na_matriz_de_portas_e_ipv6(url, aceita):
+    schema = json.loads(
+        (ROOT / "schemas/source-record-v3.schema.json").read_text(encoding="utf-8")
+    )
+    validator = jsonschema.Draft202012Validator(
+        schema, format_checker=jsonschema.FormatChecker()
+    )
+    arguments = {
+        "fonte": "osm",
+        "id_fonte": "1",
+        "id_fonte_sintetico": False,
+        "nome_original": None,
+        "dados_originais": {},
+        "url": url,
+    }
+
+    if aceita:
+        record = build_base_source_record(**arguments)
+        assert list(validator.iter_errors(record)) == []
+    else:
+        with pytest.raises(ValueError, match="url"):
+            build_base_source_record(**arguments)
+        registro = build_base_source_record(**{**arguments, "url": None})
+        registro["identificadores"]["url"] = url
+        assert list(validator.iter_errors(registro))
 
 
 @pytest.mark.parametrize(
