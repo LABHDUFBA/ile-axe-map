@@ -11,6 +11,7 @@ from scripts.v3.inventory_source_variables import (
     build_inventory,
     flatten_record,
     infer_type,
+    is_filled,
     separate_bahia_sources,
     validate_logical_counts,
     write_outputs,
@@ -67,6 +68,72 @@ def test_inventario_ignora_null_e_vazios_em_preenchidos_e_tipos():
     assert by_field["objeto"]["tipos_observados"] == "object"
     assert by_field["objeto"]["preenchidos"] == 1
     assert by_field["objeto.x"]["tipos_observados"] == "bool"
+
+
+@pytest.mark.parametrize(
+    "value",
+    [None, "", "  ", [], [None, " ", {}], {}, {"x": None}, {"x": [" ", {}]}],
+)
+def test_is_filled_rejeita_vazios_recursivos(value):
+    assert is_filled(value) is False
+
+
+@pytest.mark.parametrize(
+    "value",
+    [False, 0, [None, 0], {"x": False}, {"x": [{"y": "valor"}]}],
+)
+def test_is_filled_aceita_valor_real_aninhado(value):
+    assert is_filled(value) is True
+
+
+def test_geocodificacao_nao_vira_atributo_da_entidade():
+    cnpj = {row["campo_original"]: row for row in build_inventory("cnpj", [{"lat": 0, "lng": 0, "precision": "x", "query_used": "x"}])}
+    nominatim = {
+        row["campo_original"]: row
+        for row in build_inventory(
+            "mapeando_axe",
+            [{
+                "nominatim_lat": 0,
+                "nominatim_lng": 0,
+                "nominatim_osm_id": 0,
+                "nominatim_osm_type": "node",
+                "nominatim_display_name": "x",
+            }],
+        )
+    }
+
+    assert cnpj["lat"]["campo_nacional"] == "geocodificacao.resultado.latitude"
+    assert cnpj["lng"]["campo_nacional"] == "geocodificacao.resultado.longitude"
+    assert cnpj["lat"]["regra_harmonizacao"] == "inferido_geocodificacao"
+    assert cnpj["precision"]["campo_nacional"] == "geocodificacao.precisao"
+    assert cnpj["query_used"]["campo_nacional"] == "geocodificacao.consulta"
+    assert nominatim["nominatim_lat"]["campo_nacional"] == "geocodificacao.resultado.latitude"
+    assert nominatim["nominatim_lng"]["campo_nacional"] == "geocodificacao.resultado.longitude"
+    assert nominatim["nominatim_osm_id"]["campo_nacional"] == "geocodificacao.resultado.osm_id"
+    assert nominatim["nominatim_osm_type"]["campo_nacional"] == "geocodificacao.resultado.osm_tipo"
+    assert nominatim["nominatim_display_name"]["campo_nacional"] == "geocodificacao.resultado.endereco"
+    assert all(row["regra_harmonizacao"] == "inferido_geocodificacao" for row in nominatim.values())
+
+
+def test_coordenadas_do_agregado_bahia_continuam_da_entidade():
+    rows = {row["campo_original"]: row for row in build_inventory("ceao", [{"lat": 0, "lng": 0}])}
+
+    assert rows["lat"]["campo_nacional"] == "localizacao.latitude"
+    assert rows["lng"]["campo_nacional"] == "localizacao.longitude"
+    assert rows["lat"]["regra_harmonizacao"] == "coordenada"
+
+
+def test_campos_cadastrais_e_nacao_ambigua_ficam_pendentes():
+    cnpj = {row["campo_original"]: row for row in build_inventory("cnpj", [{"codigo_municipio": 1, "data_inicio": "x"}])}
+    ceao = {row["campo_original"]: row for row in build_inventory("ceao", [{"nacao": "x", "nacao_original": "x"}])}
+
+    assert cnpj["codigo_municipio"]["campo_nacional"] == "localizacao.codigo_municipio_declarado"
+    assert cnpj["codigo_municipio"]["incluir_formato_nacional"] == "revisar"
+    assert cnpj["data_inicio"]["campo_nacional"] == "organizacao.data_inicio_cadastral_declarada"
+    assert cnpj["data_inicio"]["incluir_formato_nacional"] == "revisar"
+    assert ceao["nacao"]["campo_nacional"] == "identidade_religiosa.nacao_declarada"
+    assert ceao["nacao"]["incluir_formato_nacional"] == "revisar"
+    assert ceao["nacao_original"]["incluir_formato_nacional"] == "revisar"
 
 
 def test_separacao_bahia_nao_duplica_nem_omite():
@@ -153,6 +220,38 @@ def test_campo_nacional_ausente_permanece_null_sem_imputacao():
     assert policy["inferencia_exige_marcacao_explicita"] is True
 
 
+def test_agregacao_separa_contribuicoes_aprovadas_e_pendentes():
+    records = [{
+        "nome": "x",
+        "codigo_municipio": 1,
+        "data_inicio": "x",
+        "nacao": "x",
+        "nacao_categoria": "x",
+        "nominatim_lat": 0,
+    }]
+    rows = build_inventory("cnpj", records)
+    coverage = build_coverage_document(rows, {"cnpj": 1}, [], 1)
+    proposed = coverage["campos_nacionais_propostos"]
+
+    assert proposed["nome.declarado"]["contribuicoes_aprovadas"] == [{
+        "campo_original": "nome",
+        "fonte": "cnpj",
+        "incluir_formato_nacional": "sim",
+        "regra_harmonizacao": "copiar_declarado",
+    }]
+    for field in (
+        "localizacao.codigo_municipio_declarado",
+        "organizacao.data_inicio_cadastral_declarada",
+        "identidade_religiosa.nacao_declarada",
+        "identidade_religiosa.categoria_normalizada",
+    ):
+        assert proposed[field]["contribuicoes_aprovadas"] == []
+        assert proposed[field]["contribuicoes_pendentes"]
+        assert all(item["incluir_formato_nacional"] == "revisar" for item in proposed[field]["contribuicoes_pendentes"])
+    assert "geocodificacao.resultado.latitude" in proposed
+    assert "localizacao.latitude" not in proposed
+
+
 def test_execucao_real_fecha_8815_e_sete_fontes():
     root = Path(__file__).resolve().parents[2]
     coverage_path = root / "data/audit/v3/source_variable_coverage.json"
@@ -175,3 +274,33 @@ def test_execucao_real_fecha_8815_e_sete_fontes():
         "sefaz": 16,
         "terreiros_brasil": 14,
     }
+
+
+def test_outputs_reais_preservam_semantica_e_status_t2b():
+    root = Path(__file__).resolve().parents[2]
+    matrix = list(csv.DictReader((root / "data/audit/v3/source_variable_matrix.csv").open(encoding="utf-8")))
+    coverage = json.loads((root / "data/audit/v3/source_variable_coverage.json").read_text(encoding="utf-8"))
+    rows = {(row["fonte"], row["campo_original"]): row for row in matrix}
+
+    assert rows[("cnpj", "lat")]["campo_nacional"] == "geocodificacao.resultado.latitude"
+    assert rows[("mapeando_axe", "nominatim_osm_id")]["campo_nacional"] == "geocodificacao.resultado.osm_id"
+    assert rows[("ceao", "lat")]["campo_nacional"] == "localizacao.latitude"
+    for key in (
+        ("cnpj", "codigo_municipio"),
+        ("cnpj", "data_inicio"),
+        ("ceao", "nacao"),
+        ("ceao", "nacao_original"),
+        ("ceao", "nacao_categoria"),
+    ):
+        assert rows[key]["incluir_formato_nacional"] == "revisar"
+
+    proposed = coverage["campos_nacionais_propostos"]
+    assert "identificadores.osm_id" not in proposed
+    for field in (
+        "localizacao.codigo_municipio_declarado",
+        "organizacao.data_inicio_cadastral_declarada",
+        "identidade_religiosa.nacao_declarada",
+        "identidade_religiosa.categoria_normalizada",
+    ):
+        assert proposed[field]["contribuicoes_pendentes"]
+    assert proposed["geocodificacao.resultado.osm_id"]["contribuicoes_aprovadas"]

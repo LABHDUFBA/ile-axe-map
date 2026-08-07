@@ -59,8 +59,8 @@ SEMANTIC_FIELDS = {
     "cidade": ("localizacao_endereco", "localizacao.municipio_declarado", "normalizar_sem_substituir", "sim", ""),
     "city": ("localizacao_endereco", "localizacao.municipio_declarado", "normalizar_sem_substituir", "sim", ""),
     "cnpj": ("identificadores", "identificadores.cnpj", "identificador", "sim", "Dado organizacional sujeito a validação, sem substituir o declarado."),
-    "codigo_municipio": ("localizacao_endereco", "localizacao.codigo_ibge_municipio", "normalizar_sem_substituir", "sim", "Confirmar que a codificação é IBGE antes da adaptação."),
-    "data_inicio": ("organizacao_historia", "organizacao.data_fundacao_declarada", "normalizar_sem_substituir", "revisar", "Pode representar início cadastral, não necessariamente fundação religiosa."),
+    "codigo_municipio": ("localizacao_endereco", "localizacao.codigo_municipio_declarado", "preservar_original", "revisar", "Código cadastral de domínio não confirmado; não tratar como IBGE sem validação da fonte."),
+    "data_inicio": ("organizacao_historia", "organizacao.data_inicio_cadastral_declarada", "preservar_original", "revisar", "Data cadastral de semântica pendente; não representa fundação religiosa confirmada."),
     "descricao": ("identificacao_nome", "identificacao.descricao_declarada", "copiar_declarado", "sim", "Descrição exclusiva útil, mantida com proveniência."),
     "endereco": ("localizacao_endereco", "localizacao.endereco_declarado", "copiar_declarado", "sim", ""),
     "fonte": ("proveniencia_qualidade", "proveniencia.fonte", "identificador", "sim", ""),
@@ -77,24 +77,24 @@ SEMANTIC_FIELDS = {
     "lng": ("localizacao_endereco", "localizacao.longitude", "coordenada", "sim", ""),
     "logradouro": ("localizacao_endereco", "localizacao.logradouro_declarado", "normalizar_sem_substituir", "sim", ""),
     "metodo_classificacao": ("proveniencia_qualidade", "qualidade.metodo_classificacao", "preservar_original", "revisar", "Classificação derivada, não tratar como declaração."),
-    "nacao": ("identidade_religiosa", "identidade_religiosa.nacao_declarada", "copiar_declarado", "sim", "Confirmar semântica declarada por fonte."),
+    "nacao": ("identidade_religiosa", "identidade_religiosa.nacao_declarada", "preservar_original", "revisar", "Destino candidato; validar por fonte se é declaração, descrição editorial ou classificação de terceiro."),
     "nacao_categoria": ("identidade_religiosa", "identidade_religiosa.categoria_normalizada", "preservar_original", "revisar", "Campo derivado no agregado Bahia."),
     "nacao_componentes": ("identidade_religiosa", "identidade_religiosa.componentes", "preservar_original", "revisar", "Campo derivado no agregado Bahia."),
-    "nacao_original": ("identidade_religiosa", "identidade_religiosa.nacao_declarada", "copiar_declarado", "sim", "Preferir ao campo derivado quando comprovadamente original."),
+    "nacao_original": ("identidade_religiosa", "identidade_religiosa.nacao_declarada", "preservar_original", "revisar", "Destino candidato; origem e semântica precisam ser validadas por fonte."),
     "nacao_primaria": ("identidade_religiosa", "identidade_religiosa.nacao_normalizada", "preservar_original", "revisar", "Campo derivado no agregado Bahia."),
     "name": ("identificacao_nome", "nome.declarado", "copiar_declarado", "sim", "Não eleger nome preferido nesta etapa."),
     "nome": ("identificacao_nome", "nome.declarado", "copiar_declarado", "sim", "Não eleger nome preferido nesta etapa."),
     "nome_fantasia": ("identificacao_nome", "nome.declarado", "copiar_declarado", "sim", "Nome fantasia cadastral."),
-    "nominatim_addresstype": ("proveniencia_qualidade", "qualidade.tipo_endereco_geocodificador", "preservar_original", "revisar", "Vocabulário específico do geocodificador."),
-    "nominatim_confidence": ("proveniencia_qualidade", "qualidade.confianca_geocodificacao", "normalizar_sem_substituir", "sim", "Escala precisa ser documentada antes da harmonização."),
-    "nominatim_display_name": ("localizacao_endereco", "localizacao.endereco_geocodificado", "copiar_declarado", "sim", "Resultado do geocodificador, distinto do endereço declarado."),
-    "nominatim_lat": ("localizacao_endereco", "localizacao.latitude", "coordenada", "sim", "Coordenada geocodificada, preservar método e fonte."),
-    "nominatim_lng": ("localizacao_endereco", "localizacao.longitude", "coordenada", "sim", "Coordenada geocodificada, preservar método e fonte."),
-    "nominatim_osm_id": ("identificadores", "identificadores.osm_id", "identificador", "sim", "ID retornado pelo geocodificador, não prova identidade da entidade."),
-    "nominatim_osm_type": ("proveniencia_qualidade", "proveniencia.tipo_objeto_osm_geocodificado", "preservar_original", "sim", "Qualifica o ID OSM retornado."),
-    "nominatim_precision": ("localizacao_endereco", "localizacao.precisao", "normalizar_sem_substituir", "sim", ""),
-    "nominatim_query": ("proveniencia_qualidade", "proveniencia.consulta_geocodificacao", "preservar_original", "revisar", "Interno; pode reproduzir dados de endereço e não deve ser publicado automaticamente."),
-    "nominatim_status": ("proveniencia_qualidade", "qualidade.status_geocodificacao", "normalizar_sem_substituir", "sim", ""),
+    "nominatim_addresstype": ("geocodificacao", "geocodificacao.tipo_endereco", "inferido_geocodificacao", "revisar", "Vocabulário específico do geocodificador."),
+    "nominatim_confidence": ("geocodificacao", "geocodificacao.confianca", "inferido_geocodificacao", "sim", "Escala precisa ser documentada antes da harmonização."),
+    "nominatim_display_name": ("geocodificacao", "geocodificacao.resultado.endereco", "inferido_geocodificacao", "sim", "Resultado auxiliar do geocodificador; não substitui endereço declarado."),
+    "nominatim_lat": ("geocodificacao", "geocodificacao.resultado.latitude", "inferido_geocodificacao", "sim", "Coordenada do resultado do geocodificador, não coordenada declarada ou canônica da entidade."),
+    "nominatim_lng": ("geocodificacao", "geocodificacao.resultado.longitude", "inferido_geocodificacao", "sim", "Coordenada do resultado do geocodificador, não coordenada declarada ou canônica da entidade."),
+    "nominatim_osm_id": ("geocodificacao", "geocodificacao.resultado.osm_id", "inferido_geocodificacao", "sim", "ID do objeto retornado pelo geocodificador; não prova identidade da entidade."),
+    "nominatim_osm_type": ("geocodificacao", "geocodificacao.resultado.osm_tipo", "inferido_geocodificacao", "sim", "Tipo do objeto retornado pelo geocodificador."),
+    "nominatim_precision": ("geocodificacao", "geocodificacao.precisao", "inferido_geocodificacao", "sim", "Precisão informada pelo processo de geocodificação."),
+    "nominatim_query": ("geocodificacao", "geocodificacao.consulta", "inferido_geocodificacao", "revisar", "Interno; pode reproduzir dados de endereço e não deve ser publicado automaticamente."),
+    "nominatim_status": ("geocodificacao", "geocodificacao.status", "inferido_geocodificacao", "sim", "Status do processo de geocodificação."),
     "numero": ("localizacao_endereco", "localizacao.numero_declarado", "normalizar_sem_substituir", "sim", ""),
     "postcode": ("localizacao_endereco", "localizacao.cep_declarado", "normalizar_sem_substituir", "sim", ""),
     "precision": ("localizacao_endereco", "localizacao.precisao", "normalizar_sem_substituir", "sim", ""),
@@ -115,6 +115,12 @@ PATH_SEMANTIC_FIELDS = {
     "fontes[]": ("proveniencia_qualidade", "", "preservar_original", "nao", "Item estrutural do contêiner original."),
     "fontes[].fonte": ("proveniencia_qualidade", "proveniencia.fontes_relacionadas[].fonte", "identificador", "sim", ""),
     "fontes[].id": ("proveniencia_qualidade", "proveniencia.fontes_relacionadas[].id", "identificador", "sim", "Pode estar ausente no agregado; não inventar ID nativo."),
+}
+SOURCE_PATH_SEMANTIC_FIELDS = {
+    ("cnpj", "lat"): ("geocodificacao", "geocodificacao.resultado.latitude", "inferido_geocodificacao", "sim", "Coordenada do resultado de geocodificação do input CNPJ; não é coordenada declarada ou canônica da entidade."),
+    ("cnpj", "lng"): ("geocodificacao", "geocodificacao.resultado.longitude", "inferido_geocodificacao", "sim", "Coordenada do resultado de geocodificação do input CNPJ; não é coordenada declarada ou canônica da entidade."),
+    ("cnpj", "precision"): ("geocodificacao", "geocodificacao.precisao", "inferido_geocodificacao", "sim", "Precisão do processo de geocodificação do input CNPJ."),
+    ("cnpj", "query_used"): ("geocodificacao", "geocodificacao.consulta", "inferido_geocodificacao", "revisar", "Consulta interna do processo de geocodificação; não publicar automaticamente."),
 }
 
 
@@ -158,17 +164,21 @@ def flatten_record(record: dict[str, Any]) -> dict[str, list[Any]]:
     return {path: result[path] for path in sorted(result)}
 
 
-def _is_filled(value: Any) -> bool:
+def is_filled(value: Any) -> bool:
     if value is None:
         return False
     if isinstance(value, str):
         return bool(value.strip())
-    if isinstance(value, (list, dict)):
-        return bool(value)
+    if isinstance(value, list):
+        return any(is_filled(item) for item in value)
+    if isinstance(value, dict):
+        return any(is_filled(item) for item in value.values())
     return True
 
 
-def _semantic_mapping(path: str) -> tuple[str, str, str, str, str]:
+def _semantic_mapping(source: str, path: str) -> tuple[str, str, str, str, str]:
+    if (source, path) in SOURCE_PATH_SEMANTIC_FIELDS:
+        return SOURCE_PATH_SEMANTIC_FIELDS[(source, path)]
     if path in PATH_SEMANTIC_FIELDS:
         return PATH_SEMANTIC_FIELDS[path]
     root = path.split(".", 1)[0].removesuffix("[]")
@@ -191,13 +201,13 @@ def build_inventory(source: str, records: Iterable[dict[str, Any]]) -> list[dict
         flattened = flatten_record(record)
         for path, values in flattened.items():
             info = paths.setdefault(path, {"types": set(), "filled": 0})
-            filled_values = [value for value in values if _is_filled(value)]
+            filled_values = [value for value in values if is_filled(value)]
             if filled_values:
                 info["filled"] += 1
                 info["types"].update(infer_type(value) for value in filled_values)
     rows = []
     for path in sorted(paths):
-        group, national, rule, include, note = _semantic_mapping(path)
+        group, national, rule, include, note = _semantic_mapping(source, path)
         filled = paths[path]["filled"]
         rows.append(
             {
@@ -327,9 +337,24 @@ def build_coverage_document(
         if row["campo_nacional"]:
             item = national.setdefault(
                 row["campo_nacional"],
-                {"grupo_semantico": row["grupo_semantico"], "fontes": set()},
+                {
+                    "grupo_semantico": row["grupo_semantico"],
+                    "contribuicoes_aprovadas": [],
+                    "contribuicoes_pendentes": [],
+                },
             )
-            item["fontes"].add(row["fonte"])
+            contribution = {
+                "campo_original": row["campo_original"],
+                "fonte": row["fonte"],
+                "incluir_formato_nacional": row["incluir_formato_nacional"],
+                "regra_harmonizacao": row["regra_harmonizacao"],
+            }
+            key = (
+                "contribuicoes_aprovadas"
+                if row["incluir_formato_nacional"] == "sim"
+                else "contribuicoes_pendentes"
+            )
+            item[key].append(contribution)
     return {
         "metadados": {
             "versao": 3,
@@ -354,7 +379,8 @@ def build_coverage_document(
         "campos_nacionais_propostos": {
             field: {
                 "grupo_semantico": national[field]["grupo_semantico"],
-                "fontes_contribuintes": sorted(national[field]["fontes"]),
+                "contribuicoes_aprovadas": national[field]["contribuicoes_aprovadas"],
+                "contribuicoes_pendentes": national[field]["contribuicoes_pendentes"],
             }
             for field in sorted(national)
         },
