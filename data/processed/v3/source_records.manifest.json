@@ -1,0 +1,51 @@
+{
+  "counts": {
+    "bahia_google": 550,
+    "ceao": 1155,
+    "cnpj": 2673,
+    "mapeando_axe": 3923,
+    "osm": 20,
+    "sefaz": 234,
+    "terreiros_brasil": 260
+  },
+  "generated_at": "2026-08-07T02:09:28.998577Z",
+  "input_hashes": {
+    "bahia_v2": {
+      "count": 1959,
+      "path": "data/reference/v3_inputs/terreiros_all_sources_v2.json",
+      "sha256": "6d80e632128262b5f5c841cc0961d9ce20a0073490322083307796258fb7f539"
+    },
+    "cnpj": {
+      "count": 2673,
+      "path": "data/reference/v3_inputs/nominatim_results.json",
+      "sha256": "26942627e4d138cf127c433b5c7482fd0545466409ad8a0d2ce673715ab23c7b"
+    },
+    "mapeando_axe": {
+      "count": 3923,
+      "path": "data/reference/v3_inputs/unified_nominatim.json",
+      "sha256": "6131cc9c311df71a4bd9f307e89cfc5f85ff5525966f551d0be4f5e9cd0c72b3"
+    },
+    "terreiros_brasil": {
+      "count": 260,
+      "path": "data/reference/v3_inputs/terreirosdobrasil_recovered.json",
+      "sha256": "5e5822a4cc7297e43dffd0b15d8bdf57a0cf8aad75ffdc704935efffcba639dd"
+    }
+  },
+  "jsonl": {
+    "bytes": 11599613,
+    "path": "data/processed/v3/source_records.jsonl",
+    "sha256": "81ec25970498272c4e0fbd7305b721f57a8da05ef4ed521accb5c323c074b5d2"
+  },
+  "schema": "https://ileaxe.org/schemas/source-record-v3.schema.json",
+  "source_order": [
+    "mapeando_axe",
+    "cnpj",
+    "terreiros_brasil",
+    "ceao",
+    "bahia_google",
+    "osm",
+    "sefaz"
+  ],
+  "total": 8815,
+  "version": 3
+}
