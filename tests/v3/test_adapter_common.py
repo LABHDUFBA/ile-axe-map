@@ -35,8 +35,49 @@ PORTAS_VALIDAS = (
     "65535",
 )
 PORTAS_INVALIDAS = ("", "-1", "+80", "01", "65536", "70000", "abc")
-IPV6_VALIDOS = ("::", "::1", "2001:db8::1", "2001:db8:0:1:2:3:4:5")
-IPV6_INVALIDOS = ("", ":::", "12345::1", "1:2:3:4:5:6:7:8:9", "gggg::1")
+IPV6_VALIDOS = (
+    "::",
+    "::1",
+    "2001:db8::1",
+    "2001:db8:0:1:2:3:4:5",
+    "::ffff:192.0.2.128",
+    "::192.0.2.1",
+    "1:2:3:4:5:6:192.0.2.1",
+)
+IPV6_INVALIDOS = (
+    "",
+    ":::",
+    "12345::1",
+    "1:2:3:4:5:6:7:8:9",
+    "gggg::1",
+    "::ffff:256.0.0.1",
+    "::ffff:192.0.2",
+    "::ffff::192.0.2.1",
+    "1:2:3:4:5:6:7:192.0.2.1",
+)
+
+
+def _gerar_cnpj_sintetico(base: str) -> str:
+    """Gera dígitos verificadores para uma base explicitamente fictícia."""
+    assert len(base) == 12 and base.isdigit()
+
+    def digito(prefixo, pesos):
+        resto = sum(int(valor) * peso for valor, peso in zip(prefixo, pesos)) % 11
+        return "0" if resto < 2 else str(11 - resto)
+
+    primeiro = digito(base, (5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2))
+    segundo = digito(base + primeiro, (6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2))
+    return base + primeiro + segundo
+
+
+def _mascarar_cnpj(cnpj: str) -> str:
+    return f"{cnpj[:2]}.{cnpj[2:5]}.{cnpj[5:8]}/{cnpj[8:12]}-{cnpj[12:]}"
+
+
+CNPJS_SINTETICOS = tuple(
+    _gerar_cnpj_sintetico(base)
+    for base in ("999999990001", "888888880001", "777777770001")
+)
 
 
 @pytest.mark.parametrize(
@@ -110,9 +151,13 @@ def test_synthetic_source_id_rejeita_partes_fracas_nao_finitas_ou_estruturais(pa
 
 @pytest.mark.parametrize(
     "value",
-    ["04.858.642/0001-87", "05419205000120", "10.344.860/0001-04"],
+    [
+        _mascarar_cnpj(CNPJS_SINTETICOS[0]),
+        CNPJS_SINTETICOS[1],
+        _mascarar_cnpj(CNPJS_SINTETICOS[2]),
+    ],
 )
-def test_valid_cnpj_aceita_os_tres_cnpjs_validos_atuais(value):
+def test_valid_cnpj_aceita_cnpjs_sinteticos_validos_com_e_sem_mascara(value):
     assert valid_cnpj(value) is True
 
 
@@ -120,14 +165,14 @@ def test_valid_cnpj_aceita_os_tres_cnpjs_validos_atuais(value):
     "value",
     [
         "11.111.111/1111-11",
-        "04.858.642/0001-88",
-        "054192050001209",
+        CNPJS_SINTETICOS[0][:-1] + ("0" if CNPJS_SINTETICOS[0][-1] != "0" else "1"),
+        CNPJS_SINTETICOS[1] + "9",
         "123",
         "",
         None,
-        4858642000187,
-        ["04.858.642/0001-87"],
-        {"cnpj": "04.858.642/0001-87"},
+        int(CNPJS_SINTETICOS[0]),
+        [_mascarar_cnpj(CNPJS_SINTETICOS[1])],
+        {"cnpj": CNPJS_SINTETICOS[2]},
     ],
 )
 def test_valid_cnpj_rejeita_invalidos_repetidos_e_tipos_estruturais(value):
@@ -399,6 +444,8 @@ def test_build_base_source_record_rejeita_data_coleta_invalida(data_coleta):
         "https://@example.org",
         "https://user@",
         "https://user@:443/x",
+        "https://user@@example.org/x",
+        "https://@@example.org/x",
         "/relativa",
         "ftp://example.org/a",
         "https://exa mple.org",
@@ -440,9 +487,12 @@ def test_build_base_source_record_aceita_url_ipv6_bracketed():
         *((f"https://example.org:{porta}/x", False) for porta in PORTAS_INVALIDAS),
         *((f"https://[{host}]:443/x", True) for host in IPV6_VALIDOS),
         *((f"https://[{host}]/x", False) for host in IPV6_INVALIDOS),
+        ("https://user%40dominio@example.org/x", True),
+        ("https://user@@example.org/x", False),
+        ("https://@@example.org/x", False),
     ],
 )
-def test_builder_e_schema_concordam_na_matriz_de_portas_e_ipv6(url, aceita):
+def test_builder_e_schema_concordam_na_matriz_de_urls(url, aceita):
     schema = json.loads(
         (ROOT / "schemas/source-record-v3.schema.json").read_text(encoding="utf-8")
     )
@@ -475,7 +525,7 @@ def test_builder_e_schema_concordam_na_matriz_de_portas_e_ipv6(url, aceita):
         ("ceao_id", 123),
         ("osm_id", False),
         ("google_place_id", []),
-        ("cnpj", 4858642000187),
+        ("cnpj", int(CNPJS_SINTETICOS[0])),
     ],
 )
 def test_build_base_source_record_rejeita_identificador_nao_textual(campo, valor):
@@ -504,7 +554,14 @@ def test_build_base_source_record_rejeita_identificador_desconhecido():
         build_base_source_record(**arguments)
 
 
-@pytest.mark.parametrize("cnpj", ["04.858.642/0001-88", "11.111.111/1111-11", "123"])
+@pytest.mark.parametrize(
+    "cnpj",
+    [
+        CNPJS_SINTETICOS[0][:-1] + ("0" if CNPJS_SINTETICOS[0][-1] != "0" else "1"),
+        "11.111.111/1111-11",
+        "123",
+    ],
+)
 def test_build_base_source_record_rejeita_cnpj_invalido(cnpj):
     with pytest.raises(ValueError, match="cnpj"):
         build_base_source_record(
@@ -533,7 +590,7 @@ def test_build_base_source_record_rejeita_cnpj_invalido(cnpj):
         {"url": "https://usuario:senha@example.org:8443/a?b=c#d"},
         {
             "url": "https://[2001:db8::1]:8443/a?b=c",
-            "cnpj": "04.858.642/0001-87",
+            "cnpj": _mascarar_cnpj(CNPJS_SINTETICOS[0]),
         },
     ],
 )

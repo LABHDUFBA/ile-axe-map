@@ -213,14 +213,12 @@ def _validate_url(value: Any) -> None:
         parsed.port
     except ValueError as error:
         raise ValueError("url inválida") from error
-    if (
-        parsed.scheme not in {"http", "https"}
-        or not parsed.hostname
-        or parsed.netloc.startswith("@")
-    ):
+    userinfo, separator, authority = parsed.netloc.rpartition("@")
+    if separator and (not userinfo or "@" in userinfo):
+        raise ValueError("url contém userinfo inválido")
+    if parsed.scheme not in {"http", "https"} or not parsed.hostname:
         raise ValueError("url deve ser HTTP(S) absoluta com hostname")
 
-    authority = parsed.netloc.rsplit("@", 1)[-1]
     if authority.startswith("["):
         closing_bracket = authority.find("]")
         try:
