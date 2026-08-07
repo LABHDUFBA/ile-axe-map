@@ -19,3 +19,7 @@ data/processed/v3/entity_assignments_v3.jsonl
 data/processed/v3/entities_v3.jsonl
 data/processed/v3/google_pilot_results_v3.jsonl
 data/processed/v3/google_pilot_sample_v3.jsonl
+data/processed/v3/google_full_results_v3.jsonl
+data/processed/v3/google_full_sample_v3.jsonl
+data/processed/v3/google_pilot_valid_v3.jsonl
+data/processed/v3/google_pilot_falsepositives_v3.jsonl
