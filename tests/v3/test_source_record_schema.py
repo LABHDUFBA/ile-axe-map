@@ -27,8 +27,46 @@ PORTAS_VALIDAS = (
     "65535",
 )
 PORTAS_INVALIDAS = ("", "-1", "+80", "01", "65536", "70000", "abc")
-IPV6_VALIDOS = ("::", "::1", "2001:db8::1", "2001:db8:0:1:2:3:4:5")
-IPV6_INVALIDOS = ("", ":::", "12345::1", "1:2:3:4:5:6:7:8:9", "gggg::1")
+IPV6_VALIDOS = (
+    "::",
+    "::1",
+    "2001:db8::1",
+    "2001:db8:0:1:2:3:4:5",
+    "::ffff:192.0.2.128",
+    "::192.0.2.1",
+    "1:2:3:4:5:6:192.0.2.1",
+)
+IPV6_INVALIDOS = (
+    "",
+    ":::",
+    "12345::1",
+    "1:2:3:4:5:6:7:8:9",
+    "gggg::1",
+    "::ffff:256.0.0.1",
+    "::ffff:192.0.2",
+    "::ffff::192.0.2.1",
+    "1:2:3:4:5:6:7:192.0.2.1",
+)
+
+
+def _gerar_cnpj_sintetico(base: str) -> str:
+    """Gera dígitos verificadores para uma base explicitamente fictícia."""
+    assert len(base) == 12 and base.isdigit()
+
+    def digito(prefixo, pesos):
+        resto = sum(int(valor) * peso for valor, peso in zip(prefixo, pesos)) % 11
+        return "0" if resto < 2 else str(11 - resto)
+
+    primeiro = digito(base, (5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2))
+    segundo = digito(base + primeiro, (6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2))
+    return base + primeiro + segundo
+
+
+def _mascarar_cnpj(cnpj: str) -> str:
+    return f"{cnpj[:2]}.{cnpj[2:5]}.{cnpj[5:8]}/{cnpj[8:12]}-{cnpj[12:]}"
+
+
+CNPJ_SINTETICO = _gerar_cnpj_sintetico("999999990001")
 
 
 @pytest.fixture
@@ -75,7 +113,7 @@ def registro_completo():
             "denominacao": None,
         },
         "identificadores": {
-            "cnpj": "04.858.642/0001-87",
+            "cnpj": _mascarar_cnpj(CNPJ_SINTETICO),
             "ceao_id": "00123",
             "osm_id": None,
             "google_place_id": None,
@@ -158,6 +196,8 @@ def test_schema_rejeita_id_vazio(validator, registro_completo):
         "https://@",
         "https://user@",
         "https://user@:443/x",
+        "https://user@@example.org/x",
+        "https://@@example.org/x",
         "https://:443/caminho",
         "/caminho/relativo",
         "https://exa mple.org",
@@ -178,6 +218,7 @@ def test_schema_rejeita_url_invalida(validator, registro_completo, url):
         "http://127.0.0.1:8080/caminho?x=1",
         "http://localhost:8000/registro",
         "https://usuario:senha@example.org:8443/a?b=c#d",
+        "https://user%40dominio@example.org/x",
         "https://[2001:db8::1]:8443/a?b=c",
     ],
 )
