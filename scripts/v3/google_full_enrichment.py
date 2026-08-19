@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 
 WORKTREE = Path(__file__).resolve().parent.parent.parent
 CACHE_DIR = WORKTREE / "data" / "processed" / "v3"
-SAMPLE_FILE = CACHE_DIR / "google_full_sample_v3.jsonl"
+SAMPLE_FILE = CACHE_DIR / "google_national_remaining_v3.jsonl"
 CACHE_FILE = CACHE_DIR / "google_full_results_v3.jsonl"
 
 API_KEY = os.environ.get("GOOGLE_API_KEY") or ""
