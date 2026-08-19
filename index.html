@@ -18,8 +18,8 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script>
-    const DATASET_VERSION = 'v2.1';
-    const DATASET_DATE = '2026-07-25';
+    const DATASET_VERSION = 'v3.0';
+    const DATASET_DATE = '2026-08-19';
   </script>
   <style>
     /* === Paleta === */
@@ -355,25 +355,28 @@
     <div class="info-panel__head"><div class="info-panel__title">Sobre</div></div>
     <div class="info-panel__body">
       <h3>Projeto</h3>
-      <p>Atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia.</p>
+      <p>Atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros do Brasil. Mapeamento nacional, deduplicado entre múltiplas fontes.</p>
       <h3>Dataset</h3>
       <dl>
-        <dt>Versão</dt><dd>v2.1</dd>
-        <dt>Extração</dt><dd>2026-07-25</dd>
-        <dt>Total</dt><dd id="dataset-total">1.959 registros</dd>
-        <dt>Georreferenciados</dt><dd id="dataset-georef">1.725</dd>
+        <dt>Versão</dt><dd>v3.0</dd>
+        <dt>Extração</dt><dd>2026-08-19</dd>
+        <dt>Total</dt><dd id="dataset-total">8.565 entidades</dd>
+        <dt>Georreferenciados</dt><dd id="dataset-georef">4.689</dd>
         <dt>Nações</dt><dd>49 declarações do CEAO</dd>
       </dl>
       <h3>Fontes</h3>
       <p>
-        <a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a> — <span id="fonte-ceao">1.155</span> terreiros<br>
+        CEAO/UFBA — <span id="fonte-ceao">1.155</span> terreiros<br>
+        CNPJ (Receita Federal) — <span id="fonte-cnpj">2.673</span> registros<br>
+        Mapeando Axé — <span id="fonte-mapeando">3.699</span> registros<br>
         OSM + Google Places — <span id="fonte-osm">570</span> lugares<br>
+        Terreiros Brasil — <span id="fonte-tb">259</span> registros<br>
         SEFAZ/Salvador (SEMUR 2020) — <span id="fonte-sefaz">234</span> registros
       </p>
       <h3>Metodologia</h3>
       <p>
         <a href="metodologia.html" target="_blank">Nota técnico-metodológica</a><br>
-        <a href="data/terreiros_v2.geojson" download>Download GeoJSON</a><br>
+        <a href="data/terreiros_nacional.geojson" download>Download GeoJSON</a><br>
         <a href="data/terreiros_all_sources_v2.json" download>Dataset completo (JSON)</a>
       </p>
       <h3>Código</h3>
@@ -404,9 +407,9 @@
       for (let i = 0; i < category.length; i++) hash = ((hash << 5) - hash + category.charCodeAt(i)) | 0;
       return nationPalette[Math.abs(hash) % nationPalette.length];
     }
-    const fonteMap = { 'osm': 'OSM+Google', 'google': 'OSM+Google', 'ceao': 'CEAO/UFBA', 'sefaz': 'SEFAZ/Salvador' };
-    const fonteOrder = ['CEAO/UFBA', 'OSM+Google', 'SEFAZ/Salvador'];
-    const fonteColors = { 'CEAO/UFBA': '#0072B2', 'OSM+Google': '#009E73', 'SEFAZ/Salvador': '#E69F00' };
+    const fonteMap = { 'ceao': 'CEAO/UFBA', 'cnpj': 'CNPJ/Receita', 'mapeando_axe': 'Mapeando Axé', 'bahia_google': 'OSM+Google', 'osm': 'OSM+Google', 'google': 'OSM+Google', 'terreiros_brasil': 'Terreiros Brasil', 'sefaz': 'SEFAZ/Salvador' };
+    const fonteOrder = ['CEAO/UFBA', 'CNPJ/Receita', 'Mapeando Axé', 'OSM+Google', 'Terreiros Brasil', 'SEFAZ/Salvador'];
+    const fonteColors = { 'CEAO/UFBA': '#0072B2', 'CNPJ/Receita': '#D55E00', 'Mapeando Axé': '#009E73', 'OSM+Google': '#E69F00', 'Terreiros Brasil': '#CC79A7', 'SEFAZ/Salvador': '#56B4E9' };
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let themeOverride = 'light';
@@ -421,17 +424,17 @@
       return dark ? 'https://tiles.openfreemap.org/styles/dark/{z}/{x}/{y}.png' : 'https://tiles.openfreemap.org/styles/liberty/{z}/{x}/{y}.png';
     };
 
-    const BAHIA_BOUNDS = L.latLngBounds([[-18.0720445, -45.7973025], [-9.3685398, -37.8945924]]);
+    const BRASIL_BOUNDS = L.latLngBounds([[-33.8, -73.5], [5.5, -32.5]]);
     const initialPadding = window.innerWidth <= 768
       ? { top: 60, right: 40, bottom: 200, left: 20 }
       : { top: 60, right: 40, bottom: 40, left: 360 };
-    const map = L.map('map', { attributionControl: true, maxZoom: 16, minZoom: 5, zoomControl: false });
+    const map = L.map('map', { attributionControl: true, maxZoom: 16, minZoom: 4, zoomControl: false });
     L.control.zoom({ position: 'bottomright' }).addTo(map);
     L.control.scale({ position: 'bottomright', maxWidth: 110, imperial: false }).addTo(map);
-    map.fitBounds(BAHIA_BOUNDS, {
+    map.fitBounds(BRASIL_BOUNDS, {
       paddingTopLeft: [initialPadding.left, initialPadding.top],
       paddingBottomRight: [initialPadding.right, initialPadding.bottom],
-      maxZoom: 12, animate: false
+      maxZoom: 10, animate: false
     });
 
     let tileLayer = null, usingTileFallback = false;
@@ -828,18 +831,38 @@
     // === Load ===
     map.whenReady(async function() {
       try {
-        const [geoResponse, auditResponse] = await Promise.all([fetch('data/terreiros_v2.geojson'), fetch('data/auditoria_v2.json')]);
+        const geoResponse = await fetch('data/terreiros_nacional.geojson');
         if (!geoResponse.ok) throw new Error('GeoJSON ' + geoResponse.status);
-        if (!auditResponse.ok) throw new Error('Auditoria ' + auditResponse.status);
         const data = await geoResponse.json();
-        const audit = await auditResponse.json();
-        $('dataset-total').textContent = Number(audit.total_registros).toLocaleString('pt-BR') + ' registros';
-        $('dataset-georef').textContent = Number(audit.total_georreferenciados).toLocaleString('pt-BR');
-        // Fontes dinâmicas
-        const f = audit.fontes || {};
-        if (f.ceao) $('fonte-ceao').textContent = Number(f.ceao).toLocaleString('pt-BR');
-        if (f.google || f.osm) $('fonte-osm').textContent = Number((f.google || 0) + (f.osm || 0)).toLocaleString('pt-BR');
-        if (f.sefaz) $('fonte-sefaz').textContent = Number(f.sefaz).toLocaleString('pt-BR');
+        // Auditing data is optional for v3 — don't block the map if missing
+        let audit = null;
+        try {
+          const auditResponse = await fetch('data/auditoria_v2.json');
+          if (auditResponse.ok) audit = await auditResponse.json();
+        } catch (e) { /* audit optional */ }
+        // Populate dataset stats from the GeoJSON itself if no audit file
+        const totalFeatures = (data.features || []).length;
+        const georefCount = (data.features || []).filter(f => {
+          if (!f.geometry || !f.geometry.coordinates) return false;
+          const c = f.geometry.coordinates;
+          return Array.isArray(c) && c.length >= 2 && !(c[0] === 0 && c[1] === 0);
+        }).length;
+        const elTotal = $('dataset-total');
+        const elGeoref = $('dataset-georef');
+        if (elTotal) elTotal.textContent = totalFeatures.toLocaleString('pt-BR') + ' entidades';
+        if (elGeoref) elGeoref.textContent = georefCount.toLocaleString('pt-BR');
+        // Update font counts from the GeoJSON properties
+        const fontCounts = {};
+        (data.features || []).forEach(f => {
+          const p = f.properties || {};
+          const fonte = p['fonte'] || '';
+          if (fonte) fontCounts[fonte] = (fontCounts[fonte] || 0) + 1;
+        });
+        const fonteLabels = { 'ceao': 'fonte-ceao', 'cnpj': 'fonte-cnpj', 'mapeando_axe': 'fonte-mapeando', 'bahia_google': 'fonte-osm', 'osm': 'fonte-osm', 'google': 'fonte-osm', 'terreiros_brasil': 'fonte-tb', 'sefaz': 'fonte-sefaz' };
+        Object.keys(fontCounts).forEach(k => {
+          const elId = fonteLabels[k];
+          if (elId && $(elId)) $(elId).textContent = fontCounts[k].toLocaleString('pt-BR');
+        });
         features = data.features
           .filter(f => f.geometry && f.geometry.type === 'Point' && Array.isArray(f.geometry.coordinates))
           .map(f => ({ ...f, properties: { ...(f.properties || {}), _nacao: classify(f.properties || {}) } }));
@@ -853,7 +876,7 @@
         console.error('Erro ao carregar:', error);
         $('rail-list').innerHTML = '<div class="rail__empty">Não foi possível carregar os dados</div>';
         $('count-badge').textContent = 'erro';
-        showMapError('Os dados de auditoria ou o GeoJSON não puderam ser carregados.');
+        showMapError('O GeoJSON nacional não pôde ser carregado.');
       }
     });
   </script>
