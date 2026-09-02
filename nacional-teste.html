@@ -1,957 +1,1153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="color-scheme" content="dark light">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#050811">
-  <meta name="description" content="Atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros do Brasil. Versão de teste nacional.">
-  <title>Ilê Axé Map — Nacional (Teste)</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Ilê Axé Map</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
-  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
   <style>
-    /* === Theme tokens === */
     :root {
-      --color-night: #050811;
-      --color-ink: #0a0f1d;
-      --color-parchment: #ffffff;
-      --color-cream: #ffffff;
-      --color-accent: #f2b544;
-      --color-glow: #ffd88a;
-      --at-panel: #0a0f1d;
-      --at-card: #0b1120;
-      --at-ink: #ffffff;
-      --at-shadow: 0 10px 30px rgba(0,0,0,0.45);
-      --at-shadow-deep: 0 14px 40px rgba(0,0,0,0.55);
-      --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    }
-    html.light {
-      --color-night: #e7e0cd;
-      --color-ink: #faf7ef;
-      --color-parchment: #131a24;
-      --color-cream: #0a0e14;
-      --color-accent: #7a4f08;
-      --color-glow: #5e3d06;
-      --at-panel: #faf7ef;
-      --at-card: #ffffff;
-      --at-ink: #1c1710;
-      --at-shadow: 0 10px 30px rgba(60,50,25,0.16);
-      --at-shadow-deep: 0 14px 40px rgba(60,50,25,0.22);
+      --bg: #050811;
+      --panel: rgba(10,15,29,.82);
+      --panel-solid: #0a0f1d;
+      --text: #f8f4eb;
+      --muted: #9ba4b7;
+      --accent: #f2b544;
+      --border: rgba(255,255,255,.10);
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius: 1rem;
+      --top: 76px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { width: 100%; height: 100%; overflow: hidden; }
-    body {
-      background: var(--color-night);
-      font-family: var(--font-sans);
-      color: var(--color-parchment);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    a { color: var(--color-accent); text-decoration: none; }
-    a:hover { text-decoration: underline; color: var(--color-glow); }
-    button { font: inherit; cursor: pointer; }
+    * { box-sizing: border-box; }
 
-    /* === Map === */
-    #map { position: fixed; inset: 0; }
-    .maplibregl-canvas {
-      cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'><circle cx='11' cy='11' r='8' fill='none' stroke='rgba(0,0,0,0.45)' stroke-width='3'/><circle cx='11' cy='11' r='8' fill='none' stroke='rgba(255,255,255,0.95)' stroke-width='1.4'/><circle cx='11' cy='11' r='1.6' fill='white'/></svg>") 11 11, default;
-    }
-    .maplibregl-canvas:focus {
-      cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'><circle cx='13' cy='13' r='10' fill='rgba(242,181,68,0.2)' stroke='rgba(0,0,0,0.5)' stroke-width='3'/><circle cx='13' cy='13' r='10' fill='none' stroke='%23f2b544' stroke-width='1.6'/><circle cx='13' cy='13' r='2.2' fill='%23f2b544'/></svg>") 13 13, pointer;
-    }
-
-    /* MapLibre controls — glassmorphism */
-    .maplibregl-ctrl-group {
-      border: 1px solid color-mix(in srgb, var(--at-ink) 8%, transparent) !important;
-      background: color-mix(in srgb, var(--at-panel) 55%, transparent) !important;
-      border-radius: 10px !important;
-      backdrop-filter: blur(16px) saturate(160%);
-      -webkit-backdrop-filter: blur(16px) saturate(160%);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.4) !important;
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
       overflow: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Hanken Grotesk", sans-serif;
     }
-    .maplibregl-ctrl-group button {
-      background: transparent !important;
-      width: 38px !important; height: 38px !important;
-    }
-    .maplibregl-ctrl-group button+button {
-      border-top: 1px solid color-mix(in srgb, var(--at-ink) 8%, transparent) !important;
-    }
-    .maplibregl-ctrl-group button:hover {
-      background: color-mix(in srgb, var(--at-ink) 8%, transparent) !important;
-    }
-    .maplibregl-ctrl-group button .maplibregl-ctrl-icon {
-      filter: invert() opacity(0.8);
-    }
-    html.light .maplibregl-ctrl-group button .maplibregl-ctrl-icon {
-      filter: none;
-    }
-    .maplibregl-ctrl-attrib {
-      background: color-mix(in srgb, var(--color-night) 55%, transparent) !important;
-      color: color-mix(in srgb, var(--color-parchment) 50%, transparent) !important;
-      font-size: 10px !important;
-      border-radius: 6px 0 0 0;
-    }
-    .maplibregl-ctrl-attrib a {
-      color: color-mix(in srgb, var(--color-parchment) 75%, transparent) !important;
-    }
-    html.light .maplibregl-ctrl-attrib-button { filter: none; }
-    .maplibregl-ctrl-attrib-button { filter: invert() opacity(0.7); }
 
-    /* === Glass panels === */
+    button, input { font: inherit; }
+
+    button {
+      color: inherit;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    #map {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+    }
+
+    #map canvas {
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23f2b544' stroke-width='1.5'/%3E%3Cpath d='M16 3v7M16 22v7M3 16h7M22 16h7' stroke='%23f2b544' stroke-width='1.5' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='16' r='1.5' fill='%23f2b544'/%3E%3C/svg%3E") 16 16, crosshair;
+    }
+
     .glass {
-      border-radius: 1rem;
-      border: 1px solid color-mix(in srgb, var(--at-ink) 10%, transparent);
-      background: color-mix(in srgb, var(--at-panel) 70%, transparent);
-      backdrop-filter: blur(24px) saturate(150%);
-      -webkit-backdrop-filter: blur(24px) saturate(150%);
-      box-shadow: var(--at-shadow);
-    }
-    .glass-card {
-      border-radius: 1rem;
-      border: 1px solid color-mix(in srgb, var(--at-ink) 20%, transparent);
-      background: color-mix(in srgb, var(--at-card) 90%, transparent);
-      backdrop-filter: blur(24px) saturate(150%);
-      -webkit-backdrop-filter: blur(24px) saturate(150%);
-      box-shadow: var(--at-shadow-deep);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px) saturate(145%);
+      -webkit-backdrop-filter: blur(18px) saturate(145%);
     }
 
-    /* === Top bar === */
     .topbar {
-      position: fixed; z-index: 20; top: 0; left: 0; right: 0;
-      display: flex; align-items: center; gap: .75rem 1.15rem;
-      padding: .6rem 1rem;
-      background: color-mix(in srgb, var(--color-night) 60%, transparent);
-      backdrop-filter: blur(20px) saturate(140%);
-      -webkit-backdrop-filter: blur(20px) saturate(140%);
-      border-bottom: 1px solid color-mix(in srgb, var(--at-ink) 6%, transparent);
-    }
-    .topbar__brand {
-      display: flex; align-items: center; gap: .5rem;
-      font-weight: 800; font-size: 1.05rem; letter-spacing: -.01em;
-      white-space: nowrap;
-    }
-    .topbar__brand .accent { color: var(--color-accent); }
-    .topbar__badge {
-      font-size: .65rem; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--color-accent);
-      padding: .15rem .5rem; border-radius: 99px;
-      background: color-mix(in srgb, var(--color-accent) 12%, transparent);
-      border: 1px solid color-mix(in srgb, var(--color-accent) 25%, transparent);
-    }
-    .topbar__nav {
-      display: flex; align-items: center; gap: .35rem 1.15rem;
-      margin-left: auto;
-      scrollbar-width: none; overflow-x: auto;
-    }
-    .topbar__nav::-webkit-scrollbar { display: none; }
-    .topbar__nav a, .topbar__nav button {
-      white-space: nowrap; font-size: .875rem; font-weight: 600;
-      color: color-mix(in srgb, var(--color-parchment) 75%, transparent);
-      background: transparent; border: none; padding: 0;
-      transition: color .12s; display: inline-flex; align-items: center; min-height: 38px;
-    }
-    .topbar__nav a:hover, .topbar__nav button:hover {
-      color: var(--color-parchment); text-decoration: none;
-    }
-    .topbar__nav .active {
-      color: var(--color-parchment);
-      text-decoration: underline; text-decoration-color: var(--color-accent);
-      text-underline-offset: 6px; text-decoration-thickness: 2px;
+      position: fixed;
+      z-index: 20;
+      top: 12px;
+      left: 16px;
+      right: 16px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px 0 18px;
+      border-radius: 1rem;
     }
 
-    /* === Search bar (floating, top-left below topbar) === */
-    .search-wrap {
-      position: fixed; z-index: 15; top: 4rem; left: 1rem;
-      width: 20rem; max-width: calc(100vw - 2rem);
-    }
-    .search-input {
-      width: 100%; height: 42px; padding: 0 1rem 0 2.5rem;
-      border-radius: .75rem;
-      border: 1px solid color-mix(in srgb, var(--at-ink) 10%, transparent);
-      background: color-mix(in srgb, var(--at-panel) 70%, transparent);
-      backdrop-filter: blur(24px) saturate(150%);
-      -webkit-backdrop-filter: blur(24px) saturate(150%);
-      box-shadow: var(--at-shadow);
-      color: var(--color-parchment); font-size: .875rem; font-weight: 500;
-      transition: border-color .15s;
-    }
-    .search-input:focus {
-      outline: none;
-      border-color: color-mix(in srgb, var(--color-accent) 50%, transparent);
-    }
-    .search-input::placeholder { color: color-mix(in srgb, var(--color-parchment) 45%, transparent); }
-    .search-icon {
-      position: absolute; left: .85rem; top: 50%; transform: translateY(-50%);
-      width: 16px; height: 16px; color: color-mix(in srgb, var(--color-parchment) 50%, transparent);
-      pointer-events: none;
+    .brand {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+      gap: 11px;
+      font-weight: 800;
+      letter-spacing: -.035em;
+      font-size: 20px;
     }
 
-    /* === Layers panel (floating, below search) === */
-    .layers-wrap {
-      position: fixed; z-index: 15; top: 7.5rem; left: 1rem;
-      width: 20rem; max-width: calc(100vw - 2rem);
-      max-height: calc(100dvh - 10rem);
-      display: flex; flex-direction: column;
-    }
-    .layers-toggle {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: .6rem 1rem;
-      font-size: .7rem; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--color-parchment);
-    }
-    .layers-toggle .chevron {
-      width: 14px; height: 14px;
-      transition: transform .2s;
-      color: color-mix(in srgb, var(--color-parchment) 60%, transparent);
-    }
-    .layers-wrap.open .chevron { transform: rotate(180deg); }
-    .layers-body {
-      display: none; padding: 0 1rem .75rem;
-      max-height: calc(100dvh - 14rem); overflow-y: auto;
-      scrollbar-width: thin;
-      scrollbar-color: color-mix(in srgb, var(--at-ink) 16%, transparent) transparent;
-    }
-    .layers-wrap.open .layers-body { display: block; }
-    .layers-body::-webkit-scrollbar { width: 6px; }
-    .layers-body::-webkit-scrollbar-thumb {
-      background: color-mix(in srgb, var(--at-ink) 16%, transparent);
-      border-radius: 99px;
+    .brand-mark {
+      width: 29px;
+      height: 29px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(242,181,68,.55);
+      border-radius: 50%;
+      background: rgba(242,181,68,.10);
+      color: var(--accent);
+      flex: 0 0 auto;
     }
 
-    .layer-group { margin-bottom: .6rem; }
-    .layer-group__title {
-      font-size: .55rem; font-weight: 700; letter-spacing: .16em;
-      text-transform: uppercase; color: var(--color-accent);
-      margin: .6rem 0 .35rem;
-    }
-    .layer-opt {
-      display: flex; align-items: center; gap: .5rem;
-      padding: .3rem .5rem; border-radius: .5rem;
-      font-size: .78rem; font-weight: 500;
-      color: color-mix(in srgb, var(--color-parchment) 90%, transparent);
-      transition: background .12s;
-    }
-    .layer-opt:hover { background: color-mix(in srgb, var(--at-ink) 6%, transparent); }
-    .layer-opt input { accent-color: var(--color-accent); width: 15px; height: 15px; }
-    .layer-opt__dot {
-      width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
-    }
-    .layer-opt__count {
-      margin-left: auto; font-size: .68rem; font-weight: 600;
-      color: color-mix(in srgb, var(--color-parchment) 45%, transparent);
-    }
+    .brand-mark svg { width: 17px; height: 17px; }
 
-    /* === Count badge === */
-    .count-badge {
-      position: fixed; z-index: 15; bottom: 1rem; left: 1rem;
-      padding: .4rem .8rem; border-radius: 99px;
-      font-size: .72rem; font-weight: 700;
-      color: var(--color-parchment);
-    }
-
-    /* === Detail card (floating, right side) === */
-    .detail-card {
-      position: fixed; z-index: 25; top: 4rem; right: 1rem;
-      width: 24rem; max-width: calc(100vw - 2rem);
-      max-height: calc(100dvh - 6rem);
-      display: none; flex-direction: column;
+    .brand span:last-child {
       overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
-    .detail-card.open { display: flex; animation: .14s card-in; }
-    @keyframes card-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-    .detail-card__head {
-      padding: 1.25rem 1.25rem .75rem;
-      border-bottom: 1px solid color-mix(in srgb, var(--at-ink) 8%, transparent);
-      position: relative;
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .detail-card__close {
-      position: absolute; top: .75rem; right: .75rem;
-      width: 28px; height: 28px; border-radius: .5rem;
-      display: grid; place-items: center;
-      background: transparent; border: none;
-      color: color-mix(in srgb, var(--color-parchment) 50%, transparent);
-      font-size: 1.2rem; transition: color .12s, background .12s;
+
+    .icon-btn, .text-btn {
+      height: 36px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.045);
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      transition: .2s ease;
     }
-    .detail-card__close:hover {
-      color: var(--color-parchment);
-      background: color-mix(in srgb, var(--at-ink) 8%, transparent);
+
+    .icon-btn { width: 36px; padding: 0; }
+    .text-btn { padding: 0 14px; font-weight: 600; }
+
+    .icon-btn:hover, .text-btn:hover, .footer-pill:hover {
+      border-color: rgba(242,181,68,.5);
+      background: rgba(242,181,68,.1);
+      color: var(--accent);
     }
-    .detail-card__cat {
-      font-size: .55rem; font-weight: 700; letter-spacing: .16em;
-      text-transform: uppercase; color: var(--color-accent);
-      margin-bottom: .35rem;
+
+    .icon-btn svg, .text-btn svg { width: 17px; height: 17px; }
+
+    .search-box {
+      position: fixed;
+      z-index: 15;
+      left: 16px;
+      top: var(--top);
+      width: min(360px, calc(100vw - 32px));
+      height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 0 14px;
+      gap: 10px;
     }
-    .detail-card__title {
-      font-size: 1.15rem; font-weight: 700; line-height: 1.2;
-      padding-right: 2rem;
+
+    .search-box svg {
+      width: 19px;
+      height: 19px;
+      color: var(--accent);
+      flex: 0 0 auto;
     }
-    .detail-card__body {
-      padding: .75rem 1.25rem 1.25rem;
-      overflow-y: auto;
+
+    #search {
+      width: 100%;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      color: var(--text);
+      background: transparent;
+      font-size: 14px;
+    }
+
+    #search::placeholder { color: var(--muted); }
+
+    #clearSearch {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: none;
+      place-items: center;
+      font-size: 18px;
+    }
+
+    #clearSearch:hover { color: var(--text); background: rgba(255,255,255,.08); }
+
+    .layers-panel {
+      position: fixed;
+      z-index: 15;
+      left: 16px;
+      top: 134px;
+      width: min(300px, calc(100vw - 32px));
+      max-height: calc(100vh - 224px);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .layers-header {
+      min-height: 51px;
+      padding: 0 14px 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .layers-title {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .layers-title svg { width: 18px; color: var(--accent); }
+
+    .chevron { transition: transform .2s ease; }
+    .layers-panel.collapsed .chevron { transform: rotate(180deg); }
+    .layers-panel.collapsed .layers-content { display: none; }
+
+    .layers-content {
+      overflow: auto;
+      padding: 0 10px 12px;
       scrollbar-width: thin;
-      scrollbar-color: color-mix(in srgb, var(--at-ink) 16%, transparent) transparent;
+      scrollbar-color: rgba(255,255,255,.18) transparent;
     }
-    .detail-card__body::-webkit-scrollbar { width: 6px; }
-    .detail-card__body::-webkit-scrollbar-thumb {
-      background: color-mix(in srgb, var(--at-ink) 16%, transparent);
-      border-radius: 99px;
+
+    .filter-group {
+      border-top: 1px solid var(--border);
+      padding-top: 3px;
     }
-    .info-row {
-      display: flex; justify-content: space-between; gap: 1rem;
-      padding: .5rem 0;
-      border-bottom: 1px solid color-mix(in srgb, var(--at-ink) 6%, transparent);
-      font-size: .82rem;
+
+    .filter-group > summary {
+      cursor: pointer;
+      list-style: none;
+      height: 39px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7px;
+      font-size: 13px;
+      font-weight: 700;
     }
-    .info-row__label {
-      font-size: .65rem; font-weight: 700; letter-spacing: .1em;
-      text-transform: uppercase;
-      color: color-mix(in srgb, var(--color-parchment) 45%, transparent);
+
+    .filter-group > summary::-webkit-details-marker { display: none; }
+
+    .group-count {
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 11px;
+    }
+
+    .choices {
+      display: grid;
+      gap: 3px;
+      padding: 1px 4px 10px;
+      max-height: 174px;
+      overflow: auto;
+    }
+
+    .choice {
+      min-height: 30px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 4px 6px;
+      border-radius: 8px;
+      color: #d9deea;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .choice:hover { background: rgba(255,255,255,.055); }
+
+    .choice input {
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      margin: 0;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 4px;
+      background: rgba(255,255,255,.03);
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+
+    .choice input:checked {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .choice input:checked::after {
+      content: "";
+      width: 7px;
+      height: 4px;
+      border-left: 2px solid #171109;
+      border-bottom: 2px solid #171109;
+      transform: translateY(-1px) rotate(-45deg);
+    }
+
+    .choice-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex: 0 0 auto;
+    }
+
+    .choice-label {
+      overflow: hidden;
+      text-overflow: ellipsis;
       white-space: nowrap;
     }
-    .info-row__value {
-      text-align: right; overflow-wrap: anywhere;
-      color: color-mix(in srgb, var(--color-parchment) 90%, transparent);
-    }
-    .detail-card__link {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-top: .75rem; padding: .6rem .8rem;
-      border-radius: .6rem; border: 1px solid var(--color-accent);
-      color: var(--color-accent); font-size: .75rem; font-weight: 600;
-      transition: background .15s, color .15s;
-    }
-    .detail-card__link:hover {
-      background: var(--color-accent); color: var(--color-night);
-      text-decoration: none;
-    }
-    .inferred-note {
-      font-size: .68rem; color: var(--color-glow);
-      padding: .35rem 0; font-style: italic;
+
+    .count-badge {
+      position: fixed;
+      z-index: 14;
+      left: 16px;
+      bottom: 20px;
+      min-height: 46px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
     }
 
-    /* === Loading === */
-    #loading {
-      position: fixed; z-index: 30; inset: 0;
-      display: grid; place-items: center;
-      background: var(--color-night);
-      color: color-mix(in srgb, var(--color-parchment) 50%, transparent);
-      font-size: .9rem; font-weight: 600;
-      transition: opacity .3s;
+    .count-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 18px var(--accent);
     }
-    #loading.hidden { opacity: 0; pointer-events: none; }
 
-    /* === Footer / About section === */
-    #atlas-more {
-      background: var(--color-ink);
-      border-top: 1px solid color-mix(in srgb, var(--at-ink) 8%, transparent);
-      padding: 3.25rem 1.25rem 4rem;
-      font: 16px/1.7 var(--font-sans);
-      color: color-mix(in srgb, var(--color-parchment) 86%, transparent);
-      display: none;
-    }
-    #atlas-more .in { max-width: 80rem; margin: 0 auto; }
-    #atlas-more h2 {
-      font-weight: 700; font-size: 1.95rem; line-height: 1.15;
-      color: var(--color-parchment); margin: 0 0 .7rem;
-    }
-    #atlas-more h3 {
-      font-size: .7rem; font-weight: 700; letter-spacing: .2em;
-      text-transform: uppercase; color: var(--color-accent);
-      margin: 2.5rem 0 .9rem;
-    }
-    #atlas-more p { margin: 0 0 1rem; max-width: 44rem; }
-    #atlas-more strong { color: var(--color-parchment); font-weight: 600; }
-    #atlas-more a { color: var(--color-accent); }
-    #atlas-more a:hover { color: var(--color-glow); }
-    #atlas-more .pills { display: flex; flex-wrap: wrap; gap: .5rem; }
-    #atlas-more .pill {
-      border: 1px solid color-mix(in srgb, var(--at-ink) 12%, transparent);
-      border-radius: 99px; padding: .4rem .9rem;
-      font-size: .92rem; color: color-mix(in srgb, var(--color-parchment) 86%, transparent);
-      background: color-mix(in srgb, var(--at-ink) 3%, transparent);
-      transition: border-color .15s, color .15s;
-    }
-    #atlas-more .pill b { color: color-mix(in srgb, var(--color-parchment) 55%, transparent); font-weight: 600; }
-    #atlas-more .pill:hover {
-      border-color: color-mix(in srgb, var(--color-accent) 50%, transparent);
-      color: var(--color-parchment); text-decoration: none;
-    }
-    #atlas-more ul.cols {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
-      gap: .3rem 1.5rem; margin: 0; padding: 0; list-style: none;
-    }
-    #atlas-more ul.cols li { padding: .12rem 0; font-size: .95rem; }
-    #atlas-more ul.cols span { color: color-mix(in srgb, var(--color-parchment) 55%, transparent); font-size: .82rem; }
-    #atlas-more details.faq {
-      border-top: 1px solid color-mix(in srgb, var(--at-ink) 8%, transparent);
-      padding: .85rem 0;
-    }
-    #atlas-more details.faq:last-of-type { border-bottom: 1px solid color-mix(in srgb, var(--at-ink) 8%, transparent); }
-    #atlas-more summary { cursor: pointer; font-weight: 600; color: var(--color-parchment); font-size: 1.02rem; }
-    #atlas-more details p { margin: .65rem 0 0; }
-    #atlas-more .cta {
-      display: inline-block; margin-top: 1.7rem;
-      padding: .72rem 1.35rem; border-radius: .7rem;
-      background: var(--color-accent); color: var(--color-night);
-      font-weight: 700; transition: filter .15s;
-    }
-    #atlas-more .cta:hover { color: var(--color-night); text-decoration: none; filter: brightness(1.06); }
+    #count { font-weight: 800; color: var(--accent); }
 
-    /* === Popup (MapLibre) === */
-    .maplibregl-popup-content {
-      border-radius: .75rem;
-      background: color-mix(in srgb, var(--at-card) 90%, transparent);
-      backdrop-filter: blur(24px) saturate(150%);
-      -webkit-backdrop-filter: blur(24px) saturate(150%);
-      border: 1px solid color-mix(in srgb, var(--at-ink) 15%, transparent);
-      box-shadow: var(--at-shadow-deep);
-      padding: .6rem .8rem;
-      font-family: var(--font-sans);
-      color: var(--color-parchment);
-      font-size: .75rem;
+    .detail-card {
+      position: fixed;
+      z-index: 18;
+      right: 16px;
+      top: 82px;
+      width: min(390px, calc(100vw - 32px));
+      max-height: calc(100vh - 105px);
+      overflow: auto;
+      padding: 20px;
+      transform: translateX(calc(100% + 32px));
+      opacity: 0;
       pointer-events: none;
+      transition: transform .28s ease, opacity .2s ease;
     }
-    .maplibregl-popup-content b { font-size: .82rem; }
-    .maplibregl-popup-content .popup-meta {
-      font-size: .62rem; text-transform: uppercase; letter-spacing: .08em;
-      color: color-mix(in srgb, var(--color-parchment) 55%, transparent);
-      margin-top: .15rem;
-    }
-    .maplibregl-popup-tip {
-      background: color-mix(in srgb, var(--at-card) 90%, transparent) !important;
-    }
-    .maplibregl-popup-close-button { display: none; }
 
-    /* === Mobile === */
-    @media (max-width: 640px) {
-      .topbar { padding: .5rem .75rem; gap: .5rem; }
-      .topbar__brand { font-size: .9rem; }
-      .topbar__badge { display: none; }
-      .topbar__nav { gap: .5rem; }
-      .topbar__nav a, .topbar__nav button { font-size: .78rem; }
-      .search-wrap { top: 3.5rem; left: .75rem; right: .75rem; width: auto; }
-      .layers-wrap { top: 6.75rem; left: .75rem; right: .75rem; width: auto; max-height: 40vh; }
-      .layers-body { max-height: 30vh; }
-      .detail-card {
-        top: auto; bottom: 0; right: 0; left: 0;
-        width: 100%; max-width: 100%;
-        max-height: 55dvh;
-        border-radius: 1rem 1rem 0 0;
-      }
-      .detail-card.open { animation: .2s sheet-up; }
-      @keyframes sheet-up { from { transform: translateY(100%); } to { transform: none; } }
-      .count-badge { bottom: .5rem; left: .5rem; }
+    .detail-card.open {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: auto;
     }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+
+    .detail-close {
+      position: absolute;
+      right: 13px;
+      top: 13px;
+    }
+
+    .detail-kicker {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-weight: 800;
+      font-size: 10px;
+      margin-bottom: 9px;
+      padding-right: 40px;
+    }
+
+    .detail-card h2 {
+      margin: 0 38px 9px 0;
+      font-size: 24px;
+      line-height: 1.08;
+      letter-spacing: -.035em;
+    }
+
+    .detail-location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .detail-location svg { width: 15px; color: var(--accent); }
+
+    .detail-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 17px;
+    }
+
+    .tag {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.045);
+      padding: 6px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      color: #dce1ec;
+    }
+
+    .tag.accent {
+      color: var(--accent);
+      border-color: rgba(242,181,68,.3);
+      background: rgba(242,181,68,.08);
+    }
+
+    .detail-list {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .detail-row {
+      display: grid;
+      grid-template-columns: 105px 1fr;
+      gap: 12px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 12px;
+    }
+
+    .detail-row dt { color: var(--muted); }
+    .detail-row dd { margin: 0; overflow-wrap: anywhere; color: #edf0f6; }
+
+    .footer-nav {
+      position: fixed;
+      z-index: 13;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 7px;
+      padding: 5px;
+      border-radius: 999px;
+    }
+
+    .footer-pill {
+      border: 1px solid transparent;
+      background: transparent;
+      color: #d7dce6;
+      border-radius: 999px;
+      height: 35px;
+      padding: 0 13px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .maplibregl-ctrl-top-right { top: 76px; right: 6px; }
+
+    .maplibregl-ctrl-group {
+      overflow: hidden;
+      background: var(--panel) !important;
+      border: 1px solid var(--border);
+      border-radius: 12px !important;
+      box-shadow: var(--shadow) !important;
+      backdrop-filter: blur(18px);
+    }
+
+    .maplibregl-ctrl-group button {
+      background-color: transparent !important;
+      border-color: var(--border) !important;
+    }
+
+    .maplibregl-ctrl-group button:hover { background-color: rgba(242,181,68,.12) !important; }
+
+    .maplibregl-ctrl-group button .maplibregl-ctrl-icon {
+      filter: invert(1) sepia(.1);
+    }
+
+    .maplibregl-ctrl-attrib {
+      color: var(--muted);
+      background: rgba(10,15,29,.72) !important;
+      border-radius: 8px 0 0 0;
+    }
+
+    .maplibregl-ctrl-attrib a { color: var(--muted); }
+
+    .maplibregl-popup-content {
+      background: var(--panel-solid);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 11px 13px;
+      font-family: inherit;
+    }
+
+    .maplibregl-popup-tip { border-top-color: var(--panel-solid) !important; }
+    .popup-name { font-weight: 700; font-size: 13px; }
+    .popup-place { color: var(--muted); font-size: 11px; margin-top: 2px; }
+
+    dialog {
+      border: 1px solid var(--border);
+      padding: 0;
+      color: var(--text);
+      width: min(560px, calc(100vw - 30px));
+      max-height: min(720px, calc(100vh - 30px));
+      background: var(--panel);
+      border-radius: 1rem;
+      box-shadow: 0 30px 100px rgba(0,0,0,.65);
+      backdrop-filter: blur(24px);
+    }
+
+    dialog::backdrop { background: rgba(1,3,8,.7); backdrop-filter: blur(4px); }
+
+    .modal-content { padding: 23px; }
+    .modal-head { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+    .modal-head h2 { margin: 0; letter-spacing: -.03em; }
+    .modal-content p { color: #c4cad7; line-height: 1.6; font-size: 14px; }
+
+    .faq-item {
+      border-top: 1px solid var(--border);
+      padding: 13px 0;
+    }
+
+    .faq-item summary { cursor: pointer; font-weight: 700; }
+    .faq-item p { margin-bottom: 0; }
+
+    .loading {
+      position: fixed;
+      z-index: 30;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: rgba(5,8,17,.72);
+      transition: opacity .3s ease;
+    }
+
+    .loading.hidden { opacity: 0; pointer-events: none; }
+
+    .loader-card {
+      padding: 17px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+    }
+
+    .spinner {
+      width: 19px;
+      height: 19px;
+      border: 2px solid rgba(255,255,255,.16);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    body.light {
+      --panel: rgba(246,243,235,.85);
+      --panel-solid: #f6f3eb;
+      --text: #171b24;
+      --muted: #626a79;
+      --border: rgba(10,15,29,.13);
+      --shadow: 0 18px 50px rgba(22,28,40,.18);
+    }
+
+    body.light .choice { color: #29303d; }
+    body.light .detail-row dd { color: #202632; }
+    body.light .tag { color: #313846; }
+    body.light .maplibregl-ctrl-group button .maplibregl-ctrl-icon { filter: none; }
+
+    @media (max-width: 740px) {
+      :root { --top: 74px; }
+
+      .topbar { left: 10px; right: 10px; top: 9px; }
+      .text-btn span { display: none; }
+      .text-btn { width: 36px; padding: 0; }
+
+      .search-box { left: 10px; width: calc(100vw - 20px); }
+
+      .layers-panel {
+        left: 10px;
+        top: 132px;
+        width: min(280px, calc(100vw - 20px));
+        max-height: calc(100vh - 250px);
+      }
+
+      .count-badge { left: 10px; bottom: 75px; }
+      .footer-nav { bottom: 14px; }
+      .footer-pill { padding: 0 10px; }
+      .maplibregl-ctrl-top-right { display: none; }
+
+      .detail-card {
+        top: auto;
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+        width: auto;
+        max-height: min(69vh, 600px);
+        border-radius: 1.25rem;
+        padding: 22px 18px calc(20px + env(safe-area-inset-bottom));
+        transform: translateY(calc(100% + 20px));
+      }
+
+      .detail-card.open { transform: translateY(0); }
+
+      .detail-card::before {
+        content: "";
+        display: block;
+        width: 42px;
+        height: 4px;
+        background: rgba(255,255,255,.22);
+        border-radius: 10px;
+        margin: -10px auto 15px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand { font-size: 18px; }
+      .footer-pill:nth-child(2) { display: none; }
+      .layers-panel { width: calc(100vw - 20px); }
     }
   </style>
 </head>
 <body>
-  <div id="loading">Carregando o atlas…</div>
-  <div id="map"></div>
+  <div id="map" aria-label="Mapa interativo de terreiros"></div>
 
-  <!-- Top bar -->
-  <header class="topbar">
-    <div class="topbar__brand">Ilê Axé <span class="accent">Map</span> <span class="topbar__badge">Nacional · Teste</span></div>
-    <nav class="topbar__nav">
-      <a href="index.html">Mapa BA</a>
-      <a href="metodologia.html" target="_blank">Metodologia</a>
-      <a href="data/terreiros_nacional_teste.geojson" download>GeoJSON</a>
-      <button id="theme-btn" type="button" aria-label="Alternar tema">◐</button>
-      <button id="about-btn" type="button" aria-label="Sobre">Sobre</button>
+  <header class="topbar glass">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="7" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M12 2v5M12 17v5M2 12h5M17 12h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="12" cy="12" r="2" fill="currentColor"/>
+        </svg>
+      </span>
+      <span>Ilê Axé Map</span>
+    </div>
+    <nav class="top-actions" aria-label="Navegação">
+      <button id="themeToggle" class="icon-btn" aria-label="Alternar tema" title="Alternar tema">
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="none">
+          <path d="M20.4 15.4A8.7 8.7 0 0 1 8.6 3.6 8.7 8.7 0 1 0 20.4 15.4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="text-btn" data-modal="aboutDialog">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 11v6M12 7.5v.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Sobre</span>
+      </button>
     </nav>
   </header>
 
-  <!-- Search -->
-  <div class="search-wrap">
-    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-    <input type="text" class="search-input" id="search" placeholder="Buscar terreiro, cidade, estado…">
-  </div>
+  <label class="search-box glass">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.7"/>
+      <path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </svg>
+    <input id="search" type="search" autocomplete="off" placeholder="Buscar terreiro, município ou endereço…" aria-label="Buscar">
+    <button id="clearSearch" type="button" aria-label="Limpar busca">×</button>
+  </label>
 
-  <!-- Layers panel -->
-  <div class="layers-wrap glass" id="layers-wrap">
-    <button class="layers-toggle" type="button" id="layers-toggle" aria-expanded="false">
-      <span>Camadas</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+  <aside id="layersPanel" class="layers-panel glass">
+    <button id="layersToggle" class="layers-header" aria-expanded="true">
+      <span class="layers-title">
+        <svg viewBox="0 0 24 24" fill="none"><path d="m12 3 9 5-9 5-9-5 9-5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m4.5 12 7.5 4 7.5-4M4.5 16l7.5 4 7.5-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Camadas
+      </span>
+      <svg class="chevron" width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="m7 14 5-5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="layers-body" id="layers-body"></div>
-  </div>
-
-  <!-- Count badge -->
-  <div class="count-badge glass" id="count-badge">—</div>
-
-  <!-- Detail card -->
-  <aside class="detail-card glass-card" id="detail-card" aria-live="polite">
-    <div class="detail-card__head">
-      <button class="detail-card__close" id="detail-close" type="button" aria-label="Fechar">×</button>
-      <div class="detail-card__cat" id="detail-cat"></div>
-      <div class="detail-card__title" id="detail-title"></div>
+    <div class="layers-content">
+      <details class="filter-group" open>
+        <summary><span>Categoria</span><span id="catCount" class="group-count">—</span></summary>
+        <div id="categoryChoices" class="choices"></div>
+      </details>
+      <details class="filter-group">
+        <summary><span>Estado</span><span id="ufCount" class="group-count">—</span></summary>
+        <div id="ufChoices" class="choices"></div>
+      </details>
+      <details class="filter-group">
+        <summary><span>Fonte</span><span id="sourceCount" class="group-count">—</span></summary>
+        <div id="sourceChoices" class="choices"></div>
+      </details>
     </div>
-    <div class="detail-card__body" id="detail-body"></div>
   </aside>
 
-  <!-- Footer / About -->
-  <section id="atlas-more" aria-label="Sobre o projeto">
-    <div class="in">
-      <h2>O atlas nacional de teste dos terreiros de candomblé do Brasil</h2>
-      <p><strong>Ilê Axé Map Nacional</strong> é uma versão de teste com 4.689 terreiros e espaços religiosos afro-brasileiros georreferenciados em todo o Brasil, agregados a partir de fontes públicas. Pan e zoom no mapa acima, clique em qualquer ponto para ver os detalhes. Os dados ainda não foram validados — coordenadas e categorias podem conter erros.</p>
+  <div class="count-badge glass" aria-live="polite">
+    <span class="count-dot"></span>
+    <span><strong id="count">0</strong> terreiros encontrados</span>
+  </div>
 
-      <h3>Navegar por categoria</h3>
-      <div class="pills" id="cat-pills"></div>
+  <aside id="detailCard" class="detail-card glass" aria-live="polite">
+    <button id="detailClose" class="icon-btn detail-close" aria-label="Fechar detalhes">×</button>
+    <div class="detail-kicker">Terreiro selecionado</div>
+    <h2 id="detailName">—</h2>
+    <div id="detailLocation" class="detail-location"></div>
+    <div id="detailTags" class="detail-tags"></div>
+    <dl id="detailList" class="detail-list"></dl>
+  </aside>
 
-      <h3>Navegar por estado</h3>
-      <div class="pills" id="uf-pills"></div>
+  <footer class="footer-nav glass">
+    <button class="footer-pill" data-modal="aboutDialog">O projeto</button>
+    <button class="footer-pill" id="resetFilters">Limpar filtros</button>
+    <button class="footer-pill" data-modal="faqDialog">FAQ</button>
+  </footer>
 
-      <h3>Fontes dos dados</h3>
-      <div class="pills" id="fonte-pills"></div>
-
-      <h3>Perguntas frequentes</h3>
-      <details class="faq">
-        <summary>Quantos terreiros há no mapa?</summary>
-        <p>4.689 pontos georreferenciados de um total de 8.565 entidades consolidadas. Os 3.876 sem coordenadas não aparecem no mapa.</p>
-      </details>
-      <details class="faq">
-        <summary>De onde vêm os dados?</summary>
-        <p>Mapeando Axé (CEAO/UFBA), CNPJ Receita Federal, Google Places, Terreiros do Brasil, SEFAZ Salvador, OpenStreetMap. A consolidação usa deduplicação fuzzy e geocodificação automática (Nominatim/Google).</p>
-      </details>
-      <details class="faq">
-        <summary>Por que alguns estados têm poucos pontos?</summary>
-        <p>A cobertura segue as fontes. O Mapeando Axé 2010 cobre principalmente BA, RS, PE, PA e MG. Outros estados têm cobertura esparsa via CNPJ e Google Places.</p>
-      </details>
-      <details class="faq">
-        <summary>Os dados são confiáveis?</summary>
-        <p><strong>Não.</strong> Esta é uma versão de teste. A geocodificação é automática, a classificação por categoria é heurística (por nome), e a UF foi inferida por CEP para 1.032 pontos. Uma camada de validação humana está em desenvolvimento.</p>
-      </details>
-      <details class="faq">
-        <summary>Posso baixar os dados?</summary>
-        <p>Sim. O GeoJSON completo está disponível para download: <a href="data/terreiros_nacional_teste.geojson" download>baixar GeoJSON</a> (4.689 pontos, ~2.3MB).</p>
-      </details>
-
-      <h3>Sobre o projeto</h3>
-      <p>O Ilê Axé Map é um atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros, mantido pelo <a href="https://labhdufba.github.io/" target="_blank">LABHD/UFBA</a>. A versão de produção cobre apenas a Bahia (1.725 terreiros validados) em <a href="index.html">ile-axe-map</a>. Esta versão nacional é um experimento com dados não validados.</p>
-      <p>Terreiros são alvo recorrente de intolerância religiosa. Os dados aqui consolidados são de fontes públicas, mas a agregação em interface consultável reduz o custo de coleta. Uma camada de consentimento e agregação por setor está em desenvolvimento.</p>
-
-      <h3>Código e dados abertos</h3>
-      <p>
-        <a href="https://github.com/LABHDUFBA/ile-axe-map" target="_blank">github.com/LABHDUFBA/ile-axe-map</a><br>
-        LABHD/UFBA · Leonardo Fernandes Nascimento
-      </p>
-      <a class="cta" href="index.html">← Voltar para o mapa da Bahia</a>
+  <div id="loading" class="loading">
+    <div class="loader-card glass">
+      <span class="spinner"></span>
+      <span id="loadingText">Carregando 4.689 terreiros…</span>
     </div>
-  </section>
+  </div>
 
+  <dialog id="aboutDialog">
+    <div class="modal-content">
+      <div class="modal-head">
+        <h2>Sobre o Ilê Axé Map</h2>
+        <button class="icon-btn dialog-close" aria-label="Fechar">×</button>
+      </div>
+      <p>Um mapa interativo dedicado à visualização de terreiros e espaços de tradições afro-brasileiras em todo o território nacional.</p>
+      <p>Os registros são reunidos a partir de diferentes fontes públicas. Selecione um ponto no mapa para consultar endereço, categoria, fonte e demais informações disponíveis.</p>
+    </div>
+  </dialog>
+
+  <dialog id="faqDialog">
+    <div class="modal-content">
+      <div class="modal-head">
+        <h2>Perguntas frequentes</h2>
+        <button class="icon-btn dialog-close" aria-label="Fechar">×</button>
+      </div>
+      <details class="faq-item" open>
+        <summary>O que os pontos representam?</summary>
+        <p>Cada ponto representa um terreiro ou espaço religioso com coordenadas disponíveis no conjunto de dados.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Como utilizar os filtros?</summary>
+        <p>Abra as seções Categoria, Estado e Fonte. Os três grupos são combinados entre si, junto ao texto digitado na busca.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Os endereços são exatos?</summary>
+        <p>A precisão varia conforme a fonte original. Consulte os detalhes do registro antes de utilizar a localização.</p>
+      </details>
+    </div>
+  </dialog>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
   <script>
-  (function() {
-    'use strict';
+    const DARK_STYLE = "https://tiles.openfreemap.org/styles/dark";
+    const LIGHT_STYLE = "https://tiles.openfreemap.org/styles/liberty";
 
-    // === Category colors (Okabe-Ito) ===
-    const catColors = {
-      'Candomblé':       '#E69F00',
-      'Umbanda':         '#56B4E9',
-      'Ketu':            '#0072B2',
-      'Angola':          '#D55E00',
-      'Jeje':            '#009E73',
-      'Matriz Africana': '#CC79A7',
-      'Centro Espírita': '#6F4E7C',
-      'Terreiro':        '#8C564B',
-      'Outro':           '#999999'
-    };
-    const catOrder = ['Candomblé','Umbanda','Ketu','Angola','Jeje','Matriz Africana','Centro Espírita','Terreiro','Outro'];
-
-    const ufLabels = {
-      'BA':'Bahia','RS':'Rio Grande do Sul','PE':'Pernambuco','PA':'Pará',
-      'MG':'Minas Gerais','CE':'Ceará','SP':'São Paulo','RN':'Rio Grande do Norte',
-      'GO':'Goiás','PI':'Piauí','RJ':'Rio de Janeiro','SE':'Sergipe',
-      'ES':'Espírito Santo','PB':'Paraíba','MA':'Maranhão','MT':'Mato Grosso',
-      'DF':'Distrito Federal','TO':'Tocantins','PR':'Paraná','SC':'Santa Catarina'
+    const CATEGORY_COLORS = {
+      "Candomblé": "#E69F00",
+      "Umbanda": "#56B4E9",
+      "Ketu": "#0072B2",
+      "Angola": "#D55E00",
+      "Jeje": "#009E73",
+      "Matriz Africana": "#CC79A7",
+      "Centro Espírita": "#6F4E7C",
+      "Terreiro": "#8C564B"
     };
 
-    const fonteLabels = {
-      'Mapeando Axé': 'Mapeando Axé (CEAO/UFBA)',
-      'CEAO/UFBA': 'CEAO/UFBA',
-      'Google Places': 'Google Places',
-      'Terreiros do Brasil': 'Terreiros do Brasil',
-      'CNPJ': 'CNPJ (Receita)',
-      'OSM': 'OpenStreetMap',
-      'Mapeando Axé + CNPJ': 'Mapeando Axé + CNPJ',
-      'Outro': 'Outro'
-    };
+    const colorExpression = [
+      "match", ["get", "categoria"],
+      "Candomblé", "#E69F00",
+      "Umbanda", "#56B4E9",
+      "Ketu", "#0072B2",
+      "Angola", "#D55E00",
+      "Jeje", "#009E73",
+      "Matriz Africana", "#CC79A7",
+      "Centro Espírita", "#6F4E7C",
+      "Terreiro", "#8C564B",
+      "#999999"
+    ];
 
-    const $ = id => document.getElementById(id);
-    const esc = v => String(v ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
-    function getName(p) { return p.display_name || p.nome || p.name || 'Sem nome'; }
-    function getCat(p) { return p.categoria || 'Outro'; }
-    function getFonte(p) { return p.fonte_label || 'Outro'; }
-    function getUF(p) { return p.uf || '(sem UF)'; }
+    let geojson = null;
+    let currentTheme = "dark";
+    let searchText = "";
+    let activeCats = new Set();
+    let activeUFs = new Set();
+    let activeFontes = new Set();
+    let allCats = [];
+    let allUFs = [];
+    let allFontes = [];
+    let hoverPopup = null;
 
-    // === Theme ===
-    let isLight = false;
-    function applyTheme() {
-      document.documentElement.classList.toggle('light', isLight);
-      if (map && map.getStyle()) {
-        map.setStyle(isLight
-          ? 'https://tiles.openfreemap.org/styles/liberty'
-          : 'https://tiles.openfreemap.org/styles/dark'
-        );
-      }
-    }
-
-    // === Map init ===
     const map = new maplibregl.Map({
-      container: 'map',
-      style: 'https://tiles.openfreemap.org/styles/dark',
+      container: "map",
+      style: DARK_STYLE,
       center: [-50, -12],
       zoom: 3.2,
       minZoom: 2,
-      maxZoom: 18,
       maxBounds: [[-75, -35], [-30, 7]],
-      attributionControl: { compact: true }
-    });
-    map.addControl(new maplibregl.NavigationControl({ visualizePitch: false }), 'bottom-right');
-    map.addControl(new maplibregl.ScaleControl({ maxWidth: 120, unit: 'metric' }), 'bottom-right');
-
-    // === State ===
-    let features = [];
-    let activeCats = new Set(catOrder);
-    let activeUFs = new Set();
-    let activeFontes = new Set();
-    let searchQuery = '';
-    let selectedId = null;
-    let popup = null;
-
-    // === Color expression for circle-color ===
-    function colorExpr() {
-      const expr = ['match', ['get', 'categoria']];
-      catOrder.forEach(c => expr.push(c, catColors[c]));
-      expr.push('#999999');
-      return expr;
-    }
-
-    // === Filter expression ===
-    function filterExpr() {
-      const catFilter = ['in', ['get', 'categoria'], ...activeCats];
-      const ufFilter = activeUFs.size === 0 ? true : ['in', ['get', 'uf'], ...activeUFs];
-      const fonteFilter = activeFontes.size === 0 ? true : ['in', ['get', 'fonte_label'], ...activeFontes];
-      let searchFilter = true;
-      if (searchQuery) {
-        const q = searchQuery.toLowerCase();
-        searchFilter = ['any',
-          ['in', ['downcase', ['get', 'display_name']], q],
-          ['in', ['downcase', ['get', 'municipio']], q],
-          ['in', ['downcase', ['get', 'uf']], q],
-          ['in', ['downcase', ['get', 'endereco']], q]
-        ];
-      }
-      return ['all', catFilter, ufFilter, fonteFilter, searchFilter];
-    }
-
-    // === Load data ===
-    map.on('load', async function() {
-      try {
-        const resp = await fetch('data/terreiros_nacional_teste.geojson');
-        if (!resp.ok) throw new Error('HTTP ' + resp.status);
-        const data = await resp.json();
-        features = data.features.filter(f => f.geometry && f.geometry.coordinates && f.geometry.coordinates[0] !== 0);
-
-        // Add source
-        map.addSource('terreiros', { type: 'geojson', data: { type: 'FeatureCollection', features: features } });
-
-        // Glow layer (larger, low opacity, behind dots)
-        map.addLayer({
-          id: 'glow',
-          type: 'circle',
-          source: 'terreiros',
-          paint: {
-            'circle-color': colorExpr(),
-            'circle-radius': 8,
-            'circle-blur': 1.5,
-            'circle-opacity': 0.12
-          },
-          filter: filterExpr()
-        });
-
-        // Dot layer
-        map.addLayer({
-          id: 'dots',
-          type: 'circle',
-          source: 'terreiros',
-          paint: {
-            'circle-color': colorExpr(),
-            'circle-radius': [
-              'interpolate', ['linear'], ['zoom'],
-              3, 2.5,
-              6, 4,
-              10, 5.5,
-              14, 7
-            ],
-            'circle-opacity': 0.85,
-            'circle-stroke-width': 1,
-            'circle-stroke-color': isLight ? '#ffffff' : '#050811',
-            'circle-stroke-opacity': 0.6
-          },
-          filter: filterExpr()
-        });
-
-        // Hover interactions
-        map.on('mouseenter', 'dots', function() { map.getCanvas().style.cursor = 'pointer'; });
-        map.on('mouseleave', 'dots', function() { map.getCanvas().style.cursor = ''; });
-
-        map.on('click', 'dots', function(e) {
-          if (e.features && e.features.length > 0) {
-            showDetail(e.features[0]);
-          }
-        });
-
-        map.on('mouseenter', 'dots', function(e) {
-          if (e.features && e.features.length > 0) {
-            const f = e.features[0];
-            const p = f.properties;
-            const coords = f.geometry.coordinates;
-            if (popup) popup.remove();
-            popup = new maplibregl.Popup({
-              closeButton: false, closeOnClick: false,
-              offset: 8, anchor: 'bottom'
-            })
-              .setLngLat(coords)
-              .setHTML('<b>' + esc(getName(p)) + '</b><div class="popup-meta">' +
-                esc(getCat(p)) +
-                (p.municipio ? ' · ' + esc(p.municipio) : '') +
-                (p.uf ? '/' + esc(p.uf) : '') +
-                '</div>')
-              .addTo(map);
-          }
-        });
-        map.on('mouseleave', 'dots', function() {
-          if (popup) { popup.remove(); popup = null; }
-        });
-
-        // Build UI
-        buildLayerPanel();
-        buildPills();
-        updateCount();
-
-        // Hide loading
-        $('loading').classList.add('hidden');
-        setTimeout(() => $('loading').style.display = 'none', 300);
-
-        // Show footer
-        $('atlas-more').style.display = 'block';
-
-      } catch (err) {
-        console.error('Erro:', err);
-        $('loading').textContent = 'Erro ao carregar: ' + err.message;
-      }
+      attributionControl: true
     });
 
-    // === Build layer panel ===
-    function buildLayerPanel() {
-      const body = $('layers-body');
-      let html = '';
+    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
+    map.addControl(new maplibregl.FullscreenControl(), "top-right");
 
-      // Categoria
-      html += '<div class="layer-group"><div class="layer-group__title">Categoria</div>';
-      const catCounts = {};
-      features.forEach(f => { const c = getCat(f.properties); catCounts[c] = (catCounts[c] || 0) + 1; });
-      catOrder.forEach(c => {
-        if (!catCounts[c]) return;
-        html += `<label class="layer-opt"><input type="checkbox" data-type="cat" data-val="${esc(c)}" checked>` +
-          `<span class="layer-opt__dot" style="background:${catColors[c]}"></span>` +
-          `<span>${esc(c)}</span><span class="layer-opt__count">${catCounts[c]}</span></label>`;
-      });
-      html += '</div>';
+    function clean(value) {
+      return value === null || value === undefined ? "" : String(value).trim();
+    }
 
-      // Estado
-      html += '<div class="layer-group"><div class="layer-group__title">Estado</div>';
-      const ufCounts = {};
-      features.forEach(f => { const u = getUF(f.properties); ufCounts[u] = (ufCounts[u] || 0) + 1; });
-      Object.entries(ufCounts).sort((a,b) => b[1]-a[1]).forEach(([uf, count]) => {
-        const label = uf === '(sem UF)' ? '(sem UF)' : (ufLabels[uf] || uf) + ' (' + uf + ')';
-        activeUFs.add(uf);
-        html += `<label class="layer-opt"><input type="checkbox" data-type="uf" data-val="${esc(uf)}" checked>` +
-          `<span>${esc(label)}</span><span class="layer-opt__count">${count}</span></label>`;
-      });
-      html += '</div>';
+    function uniqueValues(property) {
+      return [...new Set(
+        geojson.features.map(f => clean(f.properties && f.properties[property])).filter(Boolean)
+      )].sort((a, b) => a.localeCompare(b, "pt-BR", { sensitivity: "base" }));
+    }
 
-      // Fonte
-      html += '<div class="layer-group"><div class="layer-group__title">Fonte</div>';
-      const fonteCounts = {};
-      features.forEach(f => { const fo = getFonte(f.properties); fonteCounts[fo] = (fonteCounts[fo] || 0) + 1; });
-      Object.entries(fonteCounts).sort((a,b) => b[1]-a[1]).forEach(([fo, count]) => {
-        activeFontes.add(fo);
-        html += `<label class="layer-opt"><input type="checkbox" data-type="fonte" data-val="${esc(fo)}" checked>` +
-          `<span class="layer-opt__dot" style="background:${catColors[fo] || '#999'}"></span>` +
-          `<span>${esc(fo)}</span><span class="layer-opt__count">${count}</span></label>`;
-      });
-      html += '</div>';
+    function createChoices(containerId, values, activeSet, property, withColors = false) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = "";
 
-      body.innerHTML = html;
+      values.forEach(value => {
+        const label = document.createElement("label");
+        label.className = "choice";
+        label.title = value;
 
-      // Event listeners
-      body.querySelectorAll('input[type=checkbox]').forEach(cb => {
-        cb.addEventListener('change', function() {
-          const type = this.dataset.type;
-          const val = this.dataset.val;
-          const set = type === 'cat' ? activeCats : type === 'uf' ? activeUFs : activeFontes;
-          if (this.checked) set.add(val); else set.delete(val);
+        const input = document.createElement("input");
+        input.type = "checkbox";
+        input.checked = activeSet.has(value);
+        input.dataset.property = property;
+        input.value = value;
+
+        input.addEventListener("change", () => {
+          if (input.checked) activeSet.add(value);
+          else activeSet.delete(value);
           applyFilters();
-          updateCount();
+          updateGroupCounts();
         });
-      });
-    }
 
-    // === Build pills in footer ===
-    function buildPills() {
-      // Categoria pills
-      const catCounts = {};
-      features.forEach(f => { const c = getCat(f.properties); catCounts[c] = (catCounts[c] || 0) + 1; });
-      let catHtml = '';
-      catOrder.filter(c => catCounts[c]).forEach(c => {
-        catHtml += `<a class="pill" href="#" onclick="return false">${esc(c)} <b>${catCounts[c]}</b></a>`;
-      });
-      $('cat-pills').innerHTML = catHtml;
+        label.appendChild(input);
 
-      // UF pills
-      const ufCounts = {};
-      features.forEach(f => { const u = getUF(f.properties); ufCounts[u] = (ufCounts[u] || 0) + 1; });
-      let ufHtml = '';
-      Object.entries(ufCounts).sort((a,b) => b[1]-a[1]).forEach(([uf, count]) => {
-        const label = uf === '(sem UF)' ? '(sem UF)' : (ufLabels[uf] || uf);
-        ufHtml += `<a class="pill" href="#" onclick="return false">${esc(label)} <b>${count}</b></a>`;
-      });
-      $('uf-pills').innerHTML = ufHtml;
-
-      // Fonte pills
-      const fonteCounts = {};
-      features.forEach(f => { const fo = getFonte(f.properties); fonteCounts[fo] = (fonteCounts[fo] || 0) + 1; });
-      let foHtml = '';
-      Object.entries(fonteCounts).sort((a,b) => b[1]-a[1]).forEach(([fo, count]) => {
-        foHtml += `<a class="pill" href="#" onclick="return false">${esc(fo)} <b>${count}</b></a>`;
-      });
-      $('fonte-pills').innerHTML = foHtml;
-    }
-
-    // === Apply filters to map ===
-    function applyFilters() {
-      const f = filterExpr();
-      map.setFilter('dots', f);
-      map.setFilter('glow', f);
-    }
-
-    // === Search ===
-    function applySearch() {
-      applyFilters();
-      updateCount();
-    }
-
-    // === Update count ===
-    function updateCount() {
-      const f = filterExpr();
-      const filtered = map.queryRenderedFeatures({ layers: ['dots'] });
-      // Use querySourceFeatures for accuracy
-      const sourceFeatures = map.getSource('terreiros')._data.features;
-      let count = 0;
-      const activeCatsArr = [...activeCats];
-      const activeUFsArr = [...activeUFs];
-      const activeFontesArr = [...activeFontes];
-      sourceFeatures.forEach(feat => {
-        const p = feat.properties;
-        if (!activeCatsArr.includes(getCat(p))) return;
-        if (activeUFsArr.length > 0 && !activeUFsArr.includes(getUF(p))) return;
-        if (activeFontesArr.length > 0 && !activeFontesArr.includes(getFonte(p))) return;
-        if (searchQuery) {
-          const q = searchQuery.toLowerCase();
-          const name = (getName(p) || '').toLowerCase();
-          const muni = (p.municipio || '').toLowerCase();
-          const uf = (p.uf || '').toLowerCase();
-          if (!name.includes(q) && !muni.includes(q) && !uf.includes(q)) return;
+        if (withColors) {
+          const dot = document.createElement("span");
+          dot.className = "choice-dot";
+          dot.style.background = CATEGORY_COLORS[value] || "#999999";
+          label.appendChild(dot);
         }
-        count++;
+
+        const text = document.createElement("span");
+        text.className = "choice-label";
+        text.textContent = value;
+        label.appendChild(text);
+        container.appendChild(label);
       });
-      $('count-badge').textContent = count.toLocaleString('pt-BR') + ' terreiros';
     }
 
-    // === Show detail card ===
-    function showDetail(feature) {
-      const p = feature.properties;
-      const coords = feature.geometry.coordinates;
-      selectedId = p.entity_id;
+    function setupFilters() {
+      allCats = uniqueValues("categoria");
+      allUFs = uniqueValues("uf");
+      allFontes = uniqueValues("fontes");
 
-      $('detail-cat').textContent = getCat(p);
-      $('detail-title').textContent = getName(p);
+      activeCats = new Set(allCats);
+      activeUFs = new Set(allUFs);
+      activeFontes = new Set(allFontes);
 
-      let html = '';
-      const seen = {};
-      [['municipio','Município'],['uf','Estado'],['endereco','Endereço'],['cep','CEP'],
-       ['fonte_label','Fonte'],['num_fontes','Nº fontes'],['ocorrencias','Ocorrências'],
-       ['entity_id','ID']].forEach(function(pair) {
-        var key = pair[0], label = pair[1];
-        if (!p[key]) return;
-        var val = String(p[key]);
-        if (seen[label]) return; seen[label] = true;
-        if (key === 'uf' && p[key]) val = (ufLabels[p[key]] || p[key]) + ' (' + p[key] + ')';
-        html += '<div class="info-row"><div class="info-row__label">' + label +
-          '</div><div class="info-row__value">' + esc(val) + '</div></div>';
-      });
-      html += '<div class="info-row"><div class="info-row__label">Coordenadas</div>' +
-        '<div class="info-row__value">' + coords[1].toFixed(6) + ', ' + coords[0].toFixed(6) + '</div></div>';
-      if (p.uf_inferred) html += '<div class="inferred-note">UF inferida por CEP</div>';
-      html += '<a class="detail-card__link" href="https://www.openstreetmap.org/?mlat=' + coords[1] +
-        '&mlon=' + coords[0] + '#map=18/' + coords[1] + '/' + coords[0] +
-        '" target="_blank" rel="noopener">Ver no OpenStreetMap ↗</a>';
-
-      $('detail-body').innerHTML = html;
-      $('detail-card').classList.add('open');
-
-      // Fly to point
-      map.flyTo({ center: coords, zoom: Math.max(map.getZoom(), 12), duration: 600 });
+      createChoices("categoryChoices", allCats, activeCats, "categoria", true);
+      createChoices("ufChoices", allUFs, activeUFs, "uf");
+      createChoices("sourceChoices", allFontes, activeFontes, "fontes");
+      updateGroupCounts();
     }
 
-    function closeDetail() {
-      $('detail-card').classList.remove('open');
-      selectedId = null;
+    function updateGroupCounts() {
+      document.getElementById("catCount").textContent = activeCats.size + "/" + allCats.length;
+      document.getElementById("ufCount").textContent = activeUFs.size + "/" + allUFs.length;
+      document.getElementById("sourceCount").textContent = activeFontes.size + "/" + allFontes.length;
     }
 
-    // === Events ===
-    $('detail-close').addEventListener('click', closeDetail);
-    $('layers-toggle').addEventListener('click', function() {
-      const wrap = $('layers-wrap');
-      const open = wrap.classList.toggle('open');
-      this.setAttribute('aria-expanded', String(open));
-    });
-    $('search').addEventListener('input', function(e) {
-      searchQuery = e.target.value.trim().toLowerCase();
-      applySearch();
-    });
-    $('search').addEventListener('click', function(e) { e.stopPropagation(); });
+    function buildFilterExpression() {
+      const catFilter = ["in", ["get", "categoria"], ...activeCats];
+      const ufFilter = ["in", ["get", "uf"], ...activeUFs];
+      const fonteFilter = ["in", ["get", "fontes"], ...activeFontes];
 
-    $('theme-btn').addEventListener('click', function() {
-      isLight = !isLight;
-      applyTheme();
-    });
+      const query = searchText.trim().toLocaleLowerCase("pt-BR");
+      const searchableText = [
+        "downcase",
+        [
+          "concat",
+          ["to-string", ["coalesce", ["get", "nome"], ""]], " ",
+          ["to-string", ["coalesce", ["get", "municipio"], ""]], " ",
+          ["to-string", ["coalesce", ["get", "uf"], ""]], " ",
+          ["to-string", ["coalesce", ["get", "endereco"], ""]], " ",
+          ["to-string", ["coalesce", ["get", "categoria"], ""]], " ",
+          ["to-string", ["coalesce", ["get", "display_name"], ""]]
+        ]
+      ];
 
-    $('about-btn').addEventListener('click', function() {
-      const more = $('atlas-more');
-      const isVisible = more.style.display === 'block';
-      if (isVisible) {
-        more.style.display = 'none';
-        more.scrollIntoView({ block: 'start' });
-      } else {
-        more.style.display = 'block';
-        more.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const searchFilter = query
+        ? [">=", ["index-of", query, searchableText], 0]
+        : true;
+
+      return ["all", catFilter, ufFilter, fonteFilter, searchFilter];
+    }
+
+    function featureMatches(feature) {
+      const p = feature.properties || {};
+      if (!activeCats.has(clean(p.categoria))) return false;
+      if (!activeUFs.has(clean(p.uf))) return false;
+      if (!activeFontes.has(clean(p.fontes))) return false;
+
+      if (searchText) {
+        const haystack = [
+          p.nome, p.municipio, p.uf, p.endereco,
+          p.categoria, p.display_name
+        ].map(clean).join(" ").toLocaleLowerCase("pt-BR");
+        if (!haystack.includes(searchText.toLocaleLowerCase("pt-BR"))) return false;
       }
+
+      return true;
+    }
+
+    function applyFilters() {
+      if (!geojson) return;
+      const expression = buildFilterExpression();
+
+      if (map.getLayer("glow")) map.setFilter("glow", expression);
+      if (map.getLayer("dots")) map.setFilter("dots", expression);
+
+      const total = geojson.features.reduce((sum, feature) => sum + (featureMatches(feature) ? 1 : 0), 0);
+      document.getElementById("count").textContent = total.toLocaleString("pt-BR");
+    }
+
+    function addTerreirosLayers() {
+      if (!geojson || !map.isStyleLoaded()) return;
+
+      if (map.getLayer("dots")) map.removeLayer("dots");
+      if (map.getLayer("glow")) map.removeLayer("glow");
+      if (map.getSource("terreiros")) map.removeSource("terreiros");
+
+      map.addSource("terreiros", {
+        type: "geojson",
+        data: geojson
+      });
+
+      map.addLayer({
+        id: "glow",
+        type: "circle",
+        source: "terreiros",
+        paint: {
+          "circle-radius": 8,
+          "circle-blur": 1.5,
+          "circle-opacity": 0.12,
+          "circle-color": colorExpression
+        }
+      });
+
+      map.addLayer({
+        id: "dots",
+        type: "circle",
+        source: "terreiros",
+        paint: {
+          "circle-radius": [
+            "interpolate", ["linear"], ["zoom"],
+            2, 2.5,
+            6, 3.4,
+            10, 5,
+            14, 7
+          ],
+          "circle-opacity": 0.85,
+          "circle-color": colorExpression,
+          "circle-stroke-width": 1,
+          "circle-stroke-color": "#050811"
+        }
+      });
+
+      map.on("click", "dots", onMarkerClick);
+      map.on("mouseenter", "dots", onMarkerEnter);
+      map.on("mouseleave", "dots", onMarkerLeave);
+      applyFilters();
+    }
+
+    function onMarkerClick(event) {
+      if (!event.features || !event.features.length) return;
+      const feature = event.features[0];
+      openDetail(feature.properties || {});
+      map.easeTo({
+        center: feature.geometry.coordinates,
+        zoom: Math.max(map.getZoom(), 8),
+        duration: 900,
+        offset: window.innerWidth > 740 ? [-170, 0] : [0, -120]
+      });
+    }
+
+    function onMarkerEnter(event) {
+      if (!event.features || !event.features.length) return;
+      const feature = event.features[0];
+      const p = feature.properties || {};
+
+      if (hoverPopup) hoverPopup.remove();
+      hoverPopup = new maplibregl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+        offset: 10
+      })
+      .setLngLat(feature.geometry.coordinates)
+      .setHTML(
+        '<div class="popup-name">' + escapeHTML(clean(p.nome) || "Sem nome") + '</div>' +
+        '<div class="popup-place">' + escapeHTML([clean(p.municipio), clean(p.uf)].filter(Boolean).join(" · ")) + '</div>'
+      )
+      .addTo(map);
+    }
+
+    function onMarkerLeave() {
+      if (hoverPopup) {
+        hoverPopup.remove();
+        hoverPopup = null;
+      }
+    }
+
+    function escapeHTML(value) {
+      return String(value).replace(/[&<>"']/g, char => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+      })[char]);
+    }
+
+    function openDetail(p) {
+      document.getElementById("detailName").textContent = clean(p.nome) || "Terreiro sem nome";
+
+      document.getElementById("detailLocation").innerHTML =
+        '<svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9" r="2.2" stroke="currentColor" stroke-width="1.7"/></svg>' +
+        '<span>' + escapeHTML([clean(p.municipio), clean(p.uf)].filter(Boolean).join(" — ") || "Localização não informada") + '</span>';
+
+      const tags = [];
+      if (clean(p.categoria)) tags.push('<span class="tag accent">' + escapeHTML(clean(p.categoria)) + '</span>');
+      if (clean(p.fontes)) tags.push('<span class="tag">' + escapeHTML(clean(p.fontes)) + '</span>');
+      if (clean(p.num_fontes)) tags.push('<span class="tag">' + escapeHTML(clean(p.num_fontes)) + ' fonte(s)</span>');
+      document.getElementById("detailTags").innerHTML = tags.join("");
+
+      const rows = [
+        ["Endereço", p.endereco],
+        ["CEP", p.cep],
+        ["Município", p.municipio],
+        ["Estado", p.uf],
+        ["Fonte", p.fonte_label || p.fontes],
+        ["Fonte da coordenada", p.fonte_coordenada],
+        ["Ocorrências", p.ocorrencias],
+        ["Identificador", p.entity_id]
+      ].filter(row => clean(row[1]));
+
+      document.getElementById("detailList").innerHTML = rows.map(row =>
+        '<div class="detail-row"><dt>' + escapeHTML(row[0]) + '</dt><dd>' + escapeHTML(clean(row[1])) + '</dd></div>'
+      ).join("");
+
+      document.getElementById("detailCard").classList.add("open");
+    }
+
+    document.getElementById("detailClose").addEventListener("click", () => {
+      document.getElementById("detailCard").classList.remove("open");
     });
 
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeDetail();
+    document.getElementById("layersToggle").addEventListener("click", () => {
+      const panel = document.getElementById("layersPanel");
+      panel.classList.toggle("collapsed");
+      document.getElementById("layersToggle").setAttribute("aria-expanded", !panel.classList.contains("collapsed"));
     });
 
-  })();
+    const searchInput = document.getElementById("search");
+    const clearSearch = document.getElementById("clearSearch");
+    let searchTimer;
+
+    searchInput.addEventListener("input", () => {
+      clearTimeout(searchTimer);
+      clearSearch.style.display = searchInput.value ? "grid" : "none";
+      searchTimer = setTimeout(() => {
+        searchText = searchInput.value.trim();
+        applyFilters();
+      }, 120);
+    });
+
+    clearSearch.addEventListener("click", () => {
+      searchInput.value = "";
+      searchText = "";
+      clearSearch.style.display = "none";
+      applyFilters();
+      searchInput.focus();
+    });
+
+    document.getElementById("resetFilters").addEventListener("click", () => {
+      activeCats = new Set(allCats);
+      activeUFs = new Set(allUFs);
+      activeFontes = new Set(allFontes);
+      searchText = "";
+      searchInput.value = "";
+      clearSearch.style.display = "none";
+
+      document.querySelectorAll(".choices input").forEach(input => input.checked = true);
+      updateGroupCounts();
+      applyFilters();
+    });
+
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      currentTheme = currentTheme === "dark" ? "light" : "dark";
+      document.body.classList.toggle("light", currentTheme === "light");
+
+      document.getElementById("themeIcon").innerHTML = currentTheme === "dark"
+        ? '<path d="M20.4 15.4A8.7 8.7 0 0 1 8.6 3.6 8.7 8.7 0 1 0 20.4 15.4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>'
+        : '<circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>';
+
+      map.setStyle(currentTheme === "dark" ? DARK_STYLE : LIGHT_STYLE);
+    });
+
+    map.on("style.load", () => {
+      if (geojson) addTerreirosLayers();
+    });
+
+    document.querySelectorAll("[data-modal]").forEach(button => {
+      button.addEventListener("click", () => {
+        document.getElementById(button.dataset.modal).showModal();
+      });
+    });
+
+    document.querySelectorAll(".dialog-close").forEach(button => {
+      button.addEventListener("click", () => button.closest("dialog").close());
+    });
+
+    document.querySelectorAll("dialog").forEach(dialog => {
+      dialog.addEventListener("click", event => {
+        const rect = dialog.getBoundingClientRect();
+        const inside = event.clientX >= rect.left && event.clientX <= rect.right &&
+                       event.clientY >= rect.top && event.clientY <= rect.bottom;
+        if (!inside) dialog.close();
+      });
+    });
+
+    async function loadData() {
+      try {
+        const response = await fetch("data/terreiros_nacional_teste.geojson");
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        geojson = await response.json();
+
+        if (!geojson || !Array.isArray(geojson.features)) {
+          throw new Error("GeoJSON inválido");
+        }
+
+        setupFilters();
+        if (map.isStyleLoaded()) addTerreirosLayers();
+        else map.once("load", addTerreirosLayers);
+
+        document.getElementById("loading").classList.add("hidden");
+      } catch (error) {
+        console.error(error);
+        document.getElementById("loadingText").textContent = "Não foi possível carregar os dados.";
+        document.querySelector(".spinner").style.display = "none";
+      }
+    }
+
+    loadData();
   </script>
 </body>
 </html>
