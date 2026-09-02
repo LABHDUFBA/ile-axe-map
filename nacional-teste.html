@@ -935,6 +935,8 @@
         data: geojson
       });
 
+      const strokeColor = currentTheme === "light" ? "#ffffff" : "#050811";
+
       map.addLayer({
         id: "glow",
         type: "circle",
@@ -962,7 +964,7 @@
           "circle-opacity": 0.85,
           "circle-color": colorExpression,
           "circle-stroke-width": 1,
-          "circle-stroke-color": "#050811"
+          "circle-stroke-color": strokeColor
         }
       });
 
@@ -1103,7 +1105,10 @@
     });
 
     map.on("style.load", () => {
-      if (geojson) addTerreirosLayers();
+      if (geojson) {
+        addTerreirosLayers();
+        applyFilters();
+      }
     });
 
     document.querySelectorAll("[data-modal]").forEach(button => {
