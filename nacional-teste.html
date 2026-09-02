@@ -606,11 +606,11 @@
     const map = new maplibregl.Map({
       container: 'map',
       style: 'https://tiles.openfreemap.org/styles/dark',
-      center: [-45, -10],
-      zoom: 3.8,
-      minZoom: 3,
+      center: [-50, -12],
+      zoom: 3.2,
+      minZoom: 2,
       maxZoom: 18,
-      maxBounds: [[-35, -75], [7, -30]],
+      maxBounds: [[-75, -35], [-30, 7]],
       attributionControl: { compact: true }
     });
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: false }), 'bottom-right');
