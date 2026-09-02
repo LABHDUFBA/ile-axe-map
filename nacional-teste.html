@@ -792,7 +792,7 @@
       center: [-50, -12],
       zoom: 3.2,
       minZoom: 2,
-      maxBounds: [[-75, -35], [-30, 7]],
+      maxBounds: [[-90, -40], [-25, 15]],
       attributionControl: true
     });
 
@@ -805,7 +805,10 @@
 
     function uniqueValues(property) {
       return [...new Set(
-        geojson.features.map(f => clean(f.properties && f.properties[property])).filter(Boolean)
+        geojson.features.map(f => {
+          const v = clean(f.properties && f.properties[property]);
+          return v || "(não informado)";
+        }).filter(Boolean)
       )].sort((a, b) => a.localeCompare(b, "pt-BR", { sensitivity: "base" }));
     }
 
@@ -851,7 +854,7 @@
     function setupFilters() {
       allCats = uniqueValues("categoria");
       allUFs = uniqueValues("uf");
-      allFontes = uniqueValues("fontes");
+      allFontes = uniqueValues("fonte_label");
 
       activeCats = new Set(allCats);
       activeUFs = new Set(allUFs);
@@ -859,7 +862,7 @@
 
       createChoices("categoryChoices", allCats, activeCats, "categoria", true);
       createChoices("ufChoices", allUFs, activeUFs, "uf");
-      createChoices("sourceChoices", allFontes, activeFontes, "fontes");
+      createChoices("sourceChoices", allFontes, activeFontes, "fonte_label");
       updateGroupCounts();
     }
 
@@ -870,36 +873,32 @@
     }
 
     function buildFilterExpression() {
-      const catFilter = ["in", ["get", "categoria"], ...activeCats];
-      const ufFilter = ["in", ["get", "uf"], ...activeUFs];
-      const fonteFilter = ["in", ["get", "fontes"], ...activeFontes];
+      const cats = [...activeCats];
+      const ufs = [...activeUFs];
+      const fontes = [...activeFontes];
+
+      if (cats.length === 0 || ufs.length === 0 || fontes.length === 0) {
+        return false;
+      }
+
+      const catFilter = ["in", ["get", "categoria"], ...cats];
+      const ufFilter = ["in", ["get", "uf"], ...ufs];
+      const fonteFilter = ["in", ["get", "fonte_label"], ...fontes];
 
       const query = searchText.trim().toLocaleLowerCase("pt-BR");
-      const searchableText = [
-        "downcase",
-        [
-          "concat",
-          ["to-string", ["coalesce", ["get", "nome"], ""]], " ",
-          ["to-string", ["coalesce", ["get", "municipio"], ""]], " ",
-          ["to-string", ["coalesce", ["get", "uf"], ""]], " ",
-          ["to-string", ["coalesce", ["get", "endereco"], ""]], " ",
-          ["to-string", ["coalesce", ["get", "categoria"], ""]], " ",
-          ["to-string", ["coalesce", ["get", "display_name"], ""]]
-        ]
-      ];
-
-      const searchFilter = query
-        ? [">=", ["index-of", query, searchableText], 0]
-        : true;
+      // Search is handled client-side in featureMatches() for accuracy.
+      // MapLibre filter only handles category/UF/fonte.
+      const searchFilter = true;
 
       return ["all", catFilter, ufFilter, fonteFilter, searchFilter];
     }
 
     function featureMatches(feature) {
       const p = feature.properties || {};
-      if (!activeCats.has(clean(p.categoria))) return false;
-      if (!activeUFs.has(clean(p.uf))) return false;
-      if (!activeFontes.has(clean(p.fontes))) return false;
+      const ufVal = clean(p.uf) || "(não informado)";
+      if (!activeCats.has(clean(p.categoria) || "(não informado)")) return false;
+      if (!activeUFs.has(ufVal)) return false;
+      if (!activeFontes.has(clean(p.fonte_label) || "(não informado)")) return false;
 
       if (searchText) {
         const haystack = [
@@ -914,13 +913,14 @@
 
     function applyFilters() {
       if (!geojson) return;
-      const expression = buildFilterExpression();
-
-      if (map.getLayer("glow")) map.setFilter("glow", expression);
-      if (map.getLayer("dots")) map.setFilter("dots", expression);
-
-      const total = geojson.features.reduce((sum, feature) => sum + (featureMatches(feature) ? 1 : 0), 0);
-      document.getElementById("count").textContent = total.toLocaleString("pt-BR");
+      // Always filter client-side for accuracy (handles empty values,
+      // substring search, and fonte_label cleanly).
+      const filtered = geojson.features.filter(featureMatches);
+      const source = map.getSource("terreiros");
+      if (source) {
+        source.setData({ type: "FeatureCollection", features: filtered });
+      }
+      document.getElementById("count").textContent = filtered.length.toLocaleString("pt-BR");
     }
 
     function addTerreirosLayers() {
