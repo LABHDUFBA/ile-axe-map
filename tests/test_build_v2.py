@@ -186,10 +186,10 @@ class SiteIntegrationTests(unittest.TestCase):
 
     def test_about_panel_reports_v2_reconciliation(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn("v2.1", html)
+        self.assertIn("v2.2", html)
         self.assertIn("1.155", html)
         self.assertIn("1.959 registros", html)
-        self.assertIn("1.725", html)
+        self.assertIn("1.951", html)
         self.assertIn("fetch('data/auditoria_v2.json')", html)
         self.assertIn("fonte-ceao", html)
         self.assertIn("fonte-osm", html)

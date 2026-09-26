@@ -26,9 +26,9 @@
     ],
     "total_unico": 2158,
     "criterio_deduplicacao": "Coordenadas <50m OU nome normalizado similar",
-    "versao": "2.1",
+    "versao": "2.2",
     "total_registros": 1959,
-    "total_georreferenciados": 1725,
+    "total_georreferenciados": 1951,
     "fonte_primaria": "CEAO/UFBA",
     "auditoria": "auditoria_v2.json"
   },
@@ -48082,12 +48082,12 @@
     },
     {
       "nome": "YLE ASE TY OGUM",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0513884,
+      "lng": -38.487869,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 4,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48102,12 +48102,12 @@
     },
     {
       "nome": "ONZO MEAM KAFUM DE UZAMBE",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9543345,
+      "lng": -38.4506304,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 7,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48122,12 +48122,12 @@
     },
     {
       "nome": "ILE ASE ORISANLA J'OMI - TERREIRO SÃO BENTO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.1137452,
+      "lng": -38.4784118,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 9,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48142,12 +48142,12 @@
     },
     {
       "nome": "YLE ASE IYA OMIM OSOGBO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0165328,
+      "lng": -38.4239425,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 10,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48162,12 +48162,12 @@
     },
     {
       "nome": "Yìê Asé Oyá Lecy",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9316465,
+      "lng": -38.4690962,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 16,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48182,12 +48182,12 @@
     },
     {
       "nome": "TERREIRO MANSU BANTU DO INKINAMSABA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0016689,
+      "lng": -38.465679,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 17,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48202,12 +48202,12 @@
     },
     {
       "nome": "UNZO KAWANI MESO MA WANZI JUNSARA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0616803,
+      "lng": -38.4830846,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 20,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48222,12 +48222,12 @@
     },
     {
       "nome": "TERREIRO DO CABOCLO SETE FLEXA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0898122,
+      "lng": -38.5048425,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 21,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48242,12 +48242,12 @@
     },
     {
       "nome": "CENTRO ESPÍRITA OGUM MARINHO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0747844,
+      "lng": -38.4294642,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 22,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48262,12 +48262,12 @@
     },
     {
       "nome": "ILE IYA OMI ASE IYAMASE - GANTOIS",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0970374,
+      "lng": -38.507715,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 23,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48282,12 +48282,12 @@
     },
     {
       "nome": "UNZÓ SASAGANZUA KATITEMBU KIATALALA MBA KATUALA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0088189,
+      "lng": -38.4062146,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 30,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48302,12 +48302,12 @@
     },
     {
       "nome": "TERREIRO MUTALESI YE MATAMBA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9506976,
+      "lng": -38.4567088,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 33,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48322,12 +48322,12 @@
     },
     {
       "nome": "ILE ASE OMI LAYO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0303759,
+      "lng": -38.4707491,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 36,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48342,12 +48342,12 @@
     },
     {
       "nome": "TERREIRO TAMBAMAZI MUKONGO JUCARA FILHO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0405329,
+      "lng": -38.4867956,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 40,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48362,12 +48362,12 @@
     },
     {
       "nome": "TERREIRO DE CANDOMBLE JÊJE D HOME IMBURACI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9665077,
+      "lng": -38.4271266,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 50,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48382,12 +48382,12 @@
     },
     {
       "nome": "ILE ORE OFE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0416176,
+      "lng": -38.3683417,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 52,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48402,12 +48402,12 @@
     },
     {
       "nome": "UNZO LECOUSI DE INZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9617017,
+      "lng": -38.4734061,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 53,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48422,12 +48422,12 @@
     },
     {
       "nome": "ILê ASE OSUN DEY ORISALA MUENDE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0798066,
+      "lng": -38.4857299,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 55,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48442,12 +48442,12 @@
     },
     {
       "nome": "ABASSa KAYAMACY LUANDEREGY D'UNZAMBY",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0619903,
+      "lng": -38.4874173,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 56,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48462,12 +48462,12 @@
     },
     {
       "nome": "MANSO SINAVURÙ MAMÊTO KAYÁLA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0843511,
+      "lng": -38.4906969,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 58,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48482,12 +48482,12 @@
     },
     {
       "nome": "ILE OYA BANAGI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9897245,
+      "lng": -38.4800247,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 59,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48502,12 +48502,12 @@
     },
     {
       "nome": "RUMPAYME DAN",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0339389,
+      "lng": -38.4915404,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 60,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48522,12 +48522,12 @@
     },
     {
       "nome": "ILE ASE OMI OLA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0632437,
+      "lng": -38.4798523,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 61,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48542,12 +48542,12 @@
     },
     {
       "nome": "UNZO KAVUNGO ZUNGARA DYA NZAAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9813727,
+      "lng": -38.4135938,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 63,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48562,12 +48562,12 @@
     },
     {
       "nome": "UNZO DYAZULE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0496975,
+      "lng": -38.4912568,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 65,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48582,12 +48582,12 @@
     },
     {
       "nome": "TERREIRO DUNDA KESSIMBE DE MZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9334007,
+      "lng": -38.4753178,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 66,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48602,12 +48602,12 @@
     },
     {
       "nome": "ILE ASE BABA OMIM SAFURAN HOMO JIFOKAN",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9803076,
+      "lng": -38.4692716,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 71,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48622,12 +48622,12 @@
     },
     {
       "nome": "TERREIRO OYA MESAN",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9312989,
+      "lng": -38.4715511,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 74,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48642,12 +48642,12 @@
     },
     {
       "nome": "ODô OMIM OBá AIRá",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0018658,
+      "lng": -38.4313018,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 83,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48662,12 +48662,12 @@
     },
     {
       "nome": "TANURI JUNSARA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0995937,
+      "lng": -38.4950631,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 85,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48682,12 +48682,12 @@
     },
     {
       "nome": "MANSU TATEETU KAVUUNGU DYA NAZAAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0355922,
+      "lng": -38.3667543,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 88,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48702,12 +48702,12 @@
     },
     {
       "nome": "TERREIRO IGAN LEMIN",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0530518,
+      "lng": -38.4689232,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 92,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48722,12 +48722,12 @@
     },
     {
       "nome": "OMO ALADE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0449785,
+      "lng": -38.373558,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 93,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48742,12 +48742,12 @@
     },
     {
       "nome": "ILÊ ASSÉ CAUNDÉ",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0283607,
+      "lng": -38.4941731,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 94,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48762,12 +48762,12 @@
     },
     {
       "nome": "TERREIRO DANDALONI MATUMBI LEMBACESSI NZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9763756,
+      "lng": -38.4071674,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 95,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48782,12 +48782,12 @@
     },
     {
       "nome": "UNZO KWA MPAANZU",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0236442,
+      "lng": -38.4379988,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 96,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48822,12 +48822,12 @@
     },
     {
       "nome": "TERREIRO INKOSSE LEMBA DIUZAMBE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0367955,
+      "lng": -38.4872385,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 103,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48842,12 +48842,12 @@
     },
     {
       "nome": "TERREIRO OYA GEBERÊ DE UNZAMBE",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9570279,
+      "lng": -38.4573347,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 104,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48862,12 +48862,12 @@
     },
     {
       "nome": "UNZó SASAGANZUá KANJOãNLOJOLO KANGUNGA KIASAMPALAKãNUA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0368763,
+      "lng": -38.4842744,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 109,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48882,12 +48882,12 @@
     },
     {
       "nome": "ARAKA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.1050342,
+      "lng": -38.4778052,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 117,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48902,12 +48902,12 @@
     },
     {
       "nome": "OLÉ AXÉ O PÔ ONIRÊ",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0052222,
+      "lng": -38.3675089,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 120,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48922,12 +48922,12 @@
     },
     {
       "nome": "TERREIRO VENCE TUDO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0000994,
+      "lng": -38.4670867,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 121,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48942,12 +48942,12 @@
     },
     {
       "nome": "UNZO NGUNZO KWA KAYONGO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0036729,
+      "lng": -38.3670731,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 123,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48962,12 +48962,12 @@
     },
     {
       "nome": "ILE ASE IJI ATI OYA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0920359,
+      "lng": -38.499867,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 126,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -48982,12 +48982,12 @@
     },
     {
       "nome": "UNZO MUTALABO Y SAMBANGO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0891292,
+      "lng": -38.501946,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 128,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49002,12 +49002,12 @@
     },
     {
       "nome": "MANSU GONGOBILA DE N'ZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0181739,
+      "lng": -38.4068381,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 133,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49022,12 +49022,12 @@
     },
     {
       "nome": "TUMBENCI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0483644,
+      "lng": -38.4508369,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 134,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49042,12 +49042,12 @@
     },
     {
       "nome": "Ilê Ajé IJê",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0736126,
+      "lng": -38.4530667,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 135,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49062,12 +49062,12 @@
     },
     {
       "nome": "TERREIRO BABAMACHO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0491817,
+      "lng": -38.44274,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 136,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49082,12 +49082,12 @@
     },
     {
       "nome": "TUMBA JUNSARA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0931984,
+      "lng": -38.5001199,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 138,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49102,12 +49102,12 @@
     },
     {
       "nome": "TERREIRO OYA UNIPO NETO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0705868,
+      "lng": -38.4237864,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 148,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49122,12 +49122,12 @@
     },
     {
       "nome": "TERREIRO ATIMSIMBIUDEUZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9861774,
+      "lng": -38.4675528,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 150,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49142,12 +49142,12 @@
     },
     {
       "nome": "TERREIRO INGUe ERVA JUNcARA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.1008388,
+      "lng": -38.4943346,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 152,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49162,12 +49162,12 @@
     },
     {
       "nome": "ILÊ OGODO OLONAN",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9889401,
+      "lng": -38.4811429,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 155,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49182,12 +49182,12 @@
     },
     {
       "nome": "FRATERNIDADE UMBANDISTA CAVALEIROS DE ARUANDA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0106885,
+      "lng": -38.363699,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 158,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49202,12 +49202,12 @@
     },
     {
       "nome": "ILE IGBA ORO",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9427014,
+      "lng": -38.4702845,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 164,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49222,12 +49222,12 @@
     },
     {
       "nome": "AWZIIDIJUNCARA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0841341,
+      "lng": -38.4871813,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 182,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49242,12 +49242,12 @@
     },
     {
       "nome": "ILÉ YÁ YALODEIYDÉ",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0581897,
+      "lng": -38.4577921,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 193,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49262,12 +49262,12 @@
     },
     {
       "nome": "YLE OMIM AXE D'OXUM",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9323107,
+      "lng": -38.4692264,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 194,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49282,12 +49282,12 @@
     },
     {
       "nome": "UNZO ONIMBOYA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.1031689,
+      "lng": -38.4978901,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 197,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49322,12 +49322,12 @@
     },
     {
       "nome": "UNZO BAKISE SASAGANZUA GONGARA KAYANGO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0432909,
+      "lng": -38.4632972,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 202,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49342,12 +49342,12 @@
     },
     {
       "nome": "KUNZO KWA TATETO MUTALOMBO BURUNGUZO GOMGOMBIRA MUTALE",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9504208,
+      "lng": -38.4574367,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 204,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49362,12 +49362,12 @@
     },
     {
       "nome": "OYA OMIM BALE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0572631,
+      "lng": -38.5008492,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 205,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49382,12 +49382,12 @@
     },
     {
       "nome": "TERREIRO UNIPÓ FILHO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0757405,
+      "lng": -38.4203712,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 207,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49402,12 +49402,12 @@
     },
     {
       "nome": "TERREIRO DE OBALUAE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0759591,
+      "lng": -38.4272093,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 208,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49422,12 +49422,12 @@
     },
     {
       "nome": "NZO KISIMBI KEUAMAZI DYA NZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9413004,
+      "lng": -38.46525,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 209,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49442,12 +49442,12 @@
     },
     {
       "nome": "MANSO BANTU MUNAN KAMEIAM",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0243381,
+      "lng": -38.4985035,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 212,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49462,12 +49462,12 @@
     },
     {
       "nome": "MANSO GONGOMBIRA DINHANGA NGIJI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0389709,
+      "lng": -38.4641409,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 213,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49482,12 +49482,12 @@
     },
     {
       "nome": "UNZó USOBA MATAMBA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9966238,
+      "lng": -38.4389135,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 216,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49502,12 +49502,12 @@
     },
     {
       "nome": "TERREIRO D DANDALUNDA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9981076,
+      "lng": -38.4109055,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 219,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49522,12 +49522,12 @@
     },
     {
       "nome": "ILE ASE OPO OYA BAZANE",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9771132,
+      "lng": -38.4650691,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 223,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49542,12 +49542,12 @@
     },
     {
       "nome": "TERREIRO OXUM OPARA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9818022,
+      "lng": -38.4717519,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 226,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49562,12 +49562,12 @@
     },
     {
       "nome": "ILE ALA INAKO",
-      "lat": null,
-      "lng": null,
+      "lat": -12.98279,
+      "lng": -38.4800256,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 228,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49582,12 +49582,12 @@
     },
     {
       "nome": "TERREIRO TUPINAMBA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0000179,
+      "lng": -38.4271296,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 231,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49602,12 +49602,12 @@
     },
     {
       "nome": "Ilê Asé Oni Ndako",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0468883,
+      "lng": -38.493246,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 232,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49622,12 +49622,12 @@
     },
     {
       "nome": "TERREIRO DO MALEMBA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0043406,
+      "lng": -38.3929457,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 234,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49642,12 +49642,12 @@
     },
     {
       "nome": "UNZO DE MAMETO KAIONGO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0002459,
+      "lng": -38.4001615,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 239,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49662,12 +49662,12 @@
     },
     {
       "nome": "IBA FAROMIM",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0458728,
+      "lng": -38.3624389,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 240,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49682,12 +49682,12 @@
     },
     {
       "nome": "ONZO GONGOBIRA DANDALUNDA DUNZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0426815,
+      "lng": -38.445712,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 242,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49722,12 +49722,12 @@
     },
     {
       "nome": "TERREIRO GONGOBIRA FILHO DO TUMBA JUNCARA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.974889,
+      "lng": -38.4698845,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 248,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49742,12 +49742,12 @@
     },
     {
       "nome": "TENDA DE CARIDADE DO REI DAS COBRAS CAINANAS",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0967576,
+      "lng": -38.507881,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 252,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49762,12 +49762,12 @@
     },
     {
       "nome": "ILE OLORUM AXE GIOCAN",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0199805,
+      "lng": -38.4739395,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 259,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49782,12 +49782,12 @@
     },
     {
       "nome": "ILE BIKONAN",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0128457,
+      "lng": -38.3968737,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 262,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49802,12 +49802,12 @@
     },
     {
       "nome": "TATETO ROJI KIAMBA JILEKAANGA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0333048,
+      "lng": -38.4624516,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 263,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49822,12 +49822,12 @@
     },
     {
       "nome": "IDE ODE KELESI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0520694,
+      "lng": -38.4958055,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 264,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49842,12 +49842,12 @@
     },
     {
       "nome": "TERREIRO DE ORIXALa",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0482755,
+      "lng": -38.49543,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 265,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49862,12 +49862,12 @@
     },
     {
       "nome": "ILE ASE OMINIFAM ONIBAHIN OLOROKE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0521689,
+      "lng": -38.4957734,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 267,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49882,12 +49882,12 @@
     },
     {
       "nome": "CENTRO ESPIRITA CABOCLO TUBAJUCARA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.03254,
+      "lng": -38.3711621,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 270,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49902,12 +49902,12 @@
     },
     {
       "nome": "UNZO DE KAGILE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0136958,
+      "lng": -38.4374686,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 277,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49922,12 +49922,12 @@
     },
     {
       "nome": "ILE TIBOJEMIM AXE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0233504,
+      "lng": -38.4152383,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 278,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49942,12 +49942,12 @@
     },
     {
       "nome": "OMINITA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.1135857,
+      "lng": -38.4783615,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 283,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49962,12 +49962,12 @@
     },
     {
       "nome": "MANSU BANZANGOLA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9855758,
+      "lng": -38.3885326,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 284,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -49982,12 +49982,12 @@
     },
     {
       "nome": "ILE IYA OMIM ORO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0810134,
+      "lng": -38.4856887,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 286,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50002,12 +50002,12 @@
     },
     {
       "nome": "NZO MAVULA NGUUNZO AMAZI DYA NZAAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0322902,
+      "lng": -38.4818456,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 288,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50022,12 +50022,12 @@
     },
     {
       "nome": "NZO MILONGA NZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0236122,
+      "lng": -38.4371288,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 291,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50042,12 +50042,12 @@
     },
     {
       "nome": "TERREIRO XAXARA KEWAZABA FILHO DO BATE FOLHINHA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0234967,
+      "lng": -38.4981162,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 292,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50062,12 +50062,12 @@
     },
     {
       "nome": "TERREIRO IMBANZANGOLÁ",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9957641,
+      "lng": -38.4352105,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 294,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50082,12 +50082,12 @@
     },
     {
       "nome": "TERREIRO UNZO MALAULA KUNA BATEFOLHINHA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9888152,
+      "lng": -38.4705392,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 298,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50102,12 +50102,12 @@
     },
     {
       "nome": "ILÉ ASÉ ODÉ SILÉ ÁGUAS DE EFAN",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9848972,
+      "lng": -38.4189402,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 300,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50122,12 +50122,12 @@
     },
     {
       "nome": "UNZÓ DE NKICE MUTAZINGUÊ TOMBENCI NETO",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9848969,
+      "lng": -38.4189403,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 301,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50142,12 +50142,12 @@
     },
     {
       "nome": "ILE SEGBONRANSI AWO SASARA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0497143,
+      "lng": -38.4948745,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 304,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50162,12 +50162,12 @@
     },
     {
       "nome": "TERREIRO BOIADEIRO MENINO",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9454013,
+      "lng": -38.4653988,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 305,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50182,12 +50182,12 @@
     },
     {
       "nome": "CENTRO UMBANDISTA IEMANJa OGUNTe",
-      "lat": null,
-      "lng": null,
+      "lat": -13.1011933,
+      "lng": -38.5125475,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 306,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50202,12 +50202,12 @@
     },
     {
       "nome": "TERREIRO DELEWI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9900577,
+      "lng": -38.413813,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 307,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50222,12 +50222,12 @@
     },
     {
       "nome": "ILE OMI OIA ODE CAFUNGE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0060189,
+      "lng": -38.3929399,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 308,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50242,12 +50242,12 @@
     },
     {
       "nome": "TERREIRO JUNSUN",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0135296,
+      "lng": -38.4769808,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 312,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50262,12 +50262,12 @@
     },
     {
       "nome": "TERREIRO LADE PADE MIN",
-      "lat": null,
-      "lng": null,
+      "lat": -13.032731,
+      "lng": -38.3735822,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 314,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50282,12 +50282,12 @@
     },
     {
       "nome": "ILÉ ASÉ ÌGBÁLÉ LEJI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.094178,
+      "lng": -38.5096067,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 319,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50302,12 +50302,12 @@
     },
     {
       "nome": "ILÉ ASE IANI DERECE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.102595,
+      "lng": -38.4779815,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 321,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50322,12 +50322,12 @@
     },
     {
       "nome": "KUZÓ ROXEKIAMBA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.009232,
+      "lng": -38.4316177,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 328,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50342,12 +50342,12 @@
     },
     {
       "nome": "UNZO Ofá MUCUMBI DEOMAZI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9888664,
+      "lng": -38.4156433,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 462,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50362,12 +50362,12 @@
     },
     {
       "nome": "SENZALA RELIGIOSA MUKKUNNDEWá",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9530458,
+      "lng": -38.4702437,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 463,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50382,12 +50382,12 @@
     },
     {
       "nome": "ESTRELA GUIA DAS SETE PONTAS CASA DE OGUM",
-      "lat": null,
-      "lng": null,
+      "lat": -13.1073044,
+      "lng": -38.496401,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 468,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50402,12 +50402,12 @@
     },
     {
       "nome": "CENTRO UMBANDISTA PAZ E JUSTIçA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0772356,
+      "lng": -38.4880665,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 469,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50422,12 +50422,12 @@
     },
     {
       "nome": "CENTRO DE CABOCLO ESTRELA DO ORIENTE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0245598,
+      "lng": -38.4043972,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 471,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50442,12 +50442,12 @@
     },
     {
       "nome": "UNZO DANDAMUTALE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.07785,
+      "lng": -38.4915732,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 472,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50462,12 +50462,12 @@
     },
     {
       "nome": "ILE ASE JAGUN",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9556152,
+      "lng": -38.4703197,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 473,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50482,12 +50482,12 @@
     },
     {
       "nome": "ILÊ MAROIALAGE ALAKETU",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0753369,
+      "lng": -38.4917475,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 475,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50502,12 +50502,12 @@
     },
     {
       "nome": "CENTRO DE OXOSSE MUTALAMBO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.1114427,
+      "lng": -38.5002449,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 478,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50522,12 +50522,12 @@
     },
     {
       "nome": "OMIN NATOSSE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0662531,
+      "lng": -38.4853881,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 479,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50542,12 +50542,12 @@
     },
     {
       "nome": "AXELOYA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9816315,
+      "lng": -38.3769245,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 486,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50562,12 +50562,12 @@
     },
     {
       "nome": "ILê OMIN AXé OLô YGENIA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0889128,
+      "lng": -38.5004387,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 487,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50582,12 +50582,12 @@
     },
     {
       "nome": "TERREIRO ALA OMIM AXÉ",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0839584,
+      "lng": -38.5029345,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 490,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50602,12 +50602,12 @@
     },
     {
       "nome": "ILE ASE ODE OLUAMI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0820495,
+      "lng": -38.4840312,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 491,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50622,12 +50622,12 @@
     },
     {
       "nome": "ILE OXUMARE ARAKA AXE OGODO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0951671,
+      "lng": -38.4990141,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 498,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50642,12 +50642,12 @@
     },
     {
       "nome": "LECY OMI ONI OKUTã LEWA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.940706,
+      "lng": -38.4705189,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 499,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50662,12 +50662,12 @@
     },
     {
       "nome": "UNZó BAMBURUCEMA TALê D'UNZAMBE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0157135,
+      "lng": -38.3974654,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 502,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50682,12 +50682,12 @@
     },
     {
       "nome": "TERREIRO TUMBALAGI JUNCARA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.099628,
+      "lng": -38.4975934,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 507,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50702,12 +50702,12 @@
     },
     {
       "nome": "YLÊ ASSÉ OMINIBU",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0827363,
+      "lng": -38.5023781,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 510,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50722,12 +50722,12 @@
     },
     {
       "nome": "ILÊ ASE OPO OYA ODE WURA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9603681,
+      "lng": -38.4738963,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 516,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50742,12 +50742,12 @@
     },
     {
       "nome": "UNZO DE MUTALAMBO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0527367,
+      "lng": -38.4497803,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 522,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50762,12 +50762,12 @@
     },
     {
       "nome": "ILE ASE OYE NANA ALAABONA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9806061,
+      "lng": -38.3868593,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 532,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50782,12 +50782,12 @@
     },
     {
       "nome": "OMIN LEUA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0300404,
+      "lng": -38.4990851,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 535,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50802,12 +50802,12 @@
     },
     {
       "nome": "NZO KAIAIA MENSU AMAZI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0500749,
+      "lng": -38.4951603,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 536,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50822,12 +50822,12 @@
     },
     {
       "nome": "TERREIRO DA VISAURA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0110391,
+      "lng": -38.4179488,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 537,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50842,12 +50842,12 @@
     },
     {
       "nome": "ESPADA ARCO E FLEXA OXUM",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0986038,
+      "lng": -38.4938828,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 538,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50862,12 +50862,12 @@
     },
     {
       "nome": "IKIN TOLOXE OMON ALABAXE",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9828459,
+      "lng": -38.3971174,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 539,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50882,12 +50882,12 @@
     },
     {
       "nome": "EWEW TINTUN",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0292213,
+      "lng": -38.433076,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 540,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50902,12 +50902,12 @@
     },
     {
       "nome": "TERREIRO ODe LOMIN",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0168822,
+      "lng": -38.4093615,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 541,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50922,12 +50922,12 @@
     },
     {
       "nome": "UNZÓ MUTALOMBÔ",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9370888,
+      "lng": -38.3640142,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 544,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50942,12 +50942,12 @@
     },
     {
       "nome": "LAJUOMIN",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0989345,
+      "lng": -38.4932019,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 549,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50962,12 +50962,12 @@
     },
     {
       "nome": "ILE ASE KAYODE AJASE OMOM BABA BOMIM",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0521065,
+      "lng": -38.4956446,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 551,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -50982,12 +50982,12 @@
     },
     {
       "nome": "Ilê Asé Opó Onirê",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0052902,
+      "lng": -38.3674583,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 552,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51002,12 +51002,12 @@
     },
     {
       "nome": "ILE ASE OBA BABA SERE - ILOBAXE",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9818747,
+      "lng": -38.4082944,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 553,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51022,12 +51022,12 @@
     },
     {
       "nome": "ILÊ ASÉ SÀPANÃ OYÁ BAGAN",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9808155,
+      "lng": -38.3688208,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 556,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51042,12 +51042,12 @@
     },
     {
       "nome": "ODÉ TAOMI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0328399,
+      "lng": -38.4952298,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 557,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51062,12 +51062,12 @@
     },
     {
       "nome": "OMIN AMBUKE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0423481,
+      "lng": -38.4918152,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 558,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51082,12 +51082,12 @@
     },
     {
       "nome": "Unzo Nkose Fokan Jifan",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0446102,
+      "lng": -38.4606995,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 561,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51102,12 +51102,12 @@
     },
     {
       "nome": "ILE OMITOIA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0425959,
+      "lng": -38.3627077,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 563,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51122,12 +51122,12 @@
     },
     {
       "nome": "TEMPLO UMBANDISTA CASA DE CARIDADE PAI MANOEL",
-      "lat": null,
-      "lng": null,
+      "lat": -13.035754,
+      "lng": -38.3630608,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 568,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51162,12 +51162,12 @@
     },
     {
       "nome": "TERREIRO SAKE DE LAZENZA DE UM ZAMBY",
-      "lat": null,
-      "lng": null,
+      "lat": -13.091991,
+      "lng": -38.5003071,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 571,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51182,12 +51182,12 @@
     },
     {
       "nome": "TERREIRO D'YEMANJA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0208664,
+      "lng": -38.4785455,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 576,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51202,12 +51202,12 @@
     },
     {
       "nome": "TERREIRO CASA DE OXUM.",
-      "lat": null,
-      "lng": null,
+      "lat": -13.022193,
+      "lng": -38.4772105,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 587,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51222,12 +51222,12 @@
     },
     {
       "nome": "UATI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9980891,
+      "lng": -38.4847124,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 594,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51242,12 +51242,12 @@
     },
     {
       "nome": "IEIE OMINLAXE",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9982013,
+      "lng": -38.4837316,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 595,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51262,12 +51262,12 @@
     },
     {
       "nome": "TERREIRO TATETA KAIANGUE DIUMZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9461741,
+      "lng": -38.4634892,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 597,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51282,12 +51282,12 @@
     },
     {
       "nome": "TERREIRO OMOLU XAPANAN",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0169915,
+      "lng": -38.4797856,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 613,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51302,12 +51302,12 @@
     },
     {
       "nome": "TENDA DE CABOCLO BOIADEIRO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0272719,
+      "lng": -38.4864173,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 616,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51322,12 +51322,12 @@
     },
     {
       "nome": "UNZO CAFUNGE DE UNZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9819715,
+      "lng": -38.4742827,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 619,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51342,12 +51342,12 @@
     },
     {
       "nome": "CEDAC - Terreiro de Ajunss",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0719555,
+      "lng": -38.5002322,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 620,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51362,12 +51362,12 @@
     },
     {
       "nome": "UNZO LEUSI DYA LUANZA MAVULA MATAMBA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9913256,
+      "lng": -38.4729556,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 621,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51382,12 +51382,12 @@
     },
     {
       "nome": "TERREIRO ESPADA GUERREIRA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9577817,
+      "lng": -38.4612623,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 623,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51402,12 +51402,12 @@
     },
     {
       "nome": "UNZO GANDOIA DE ZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9485114,
+      "lng": -38.4609486,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 633,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51422,12 +51422,12 @@
     },
     {
       "nome": "ILE YA OYA OMIM",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0635366,
+      "lng": -38.4835192,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 646,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51442,12 +51442,12 @@
     },
     {
       "nome": "UNZO DILONGATALA DE UNZAMBE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0166588,
+      "lng": -38.4651155,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 651,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51462,12 +51462,12 @@
     },
     {
       "nome": "ILE ASE ODE LUADEMIM",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9680258,
+      "lng": -38.4341489,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 654,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51482,12 +51482,12 @@
     },
     {
       "nome": "UNZO MANAMBE DE INZAMBE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0513499,
+      "lng": -38.4862438,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 659,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51502,12 +51502,12 @@
     },
     {
       "nome": "TERREIRO OMIN LEUI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0281797,
+      "lng": -38.5124283,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 663,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51522,12 +51522,12 @@
     },
     {
       "nome": "CENTRO DE CABOCLO TUPINIQUIM",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0683513,
+      "lng": -38.4626649,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 664,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51542,12 +51542,12 @@
     },
     {
       "nome": "TERREIRO INDEKENAN",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0451269,
+      "lng": -38.4613294,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 665,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51562,12 +51562,12 @@
     },
     {
       "nome": "CENTRO DE CABOCLO SETE PEDRA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0540103,
+      "lng": -38.487871,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 667,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51582,12 +51582,12 @@
     },
     {
       "nome": "ILE ASE OMIN OYA OBA NIRE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0627947,
+      "lng": -38.4883838,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 668,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51622,12 +51622,12 @@
     },
     {
       "nome": "ONZO ZAMBE NANGUE",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9895855,
+      "lng": -38.4055436,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 675,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51642,12 +51642,12 @@
     },
     {
       "nome": "TERREIRO DE OXOSSSI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.8800064,
+      "lng": -38.5308188,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 680,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51662,12 +51662,12 @@
     },
     {
       "nome": "ILE L'OBAREJI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9385224,
+      "lng": -38.3818351,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 682,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51682,12 +51682,12 @@
     },
     {
       "nome": "UNZO TATETO KITEMBO EWAZILE MA VILE NZAMBI - FILHO DE LEMBA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0573481,
+      "lng": -38.4864638,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 690,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51702,12 +51702,12 @@
     },
     {
       "nome": "ILE ASE OMO OBIRIBARA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.1095197,
+      "lng": -38.5110323,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 691,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51762,12 +51762,12 @@
     },
     {
       "nome": "UNZO MAIALA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0911325,
+      "lng": -38.50752,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 702,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51782,12 +51782,12 @@
     },
     {
       "nome": "UNZO MAIANBA DE INZAMBE",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9389628,
+      "lng": -38.4577266,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 705,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51802,12 +51802,12 @@
     },
     {
       "nome": "VODUN KWE TO ZO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0006159,
+      "lng": -38.403739,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 707,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51822,12 +51822,12 @@
     },
     {
       "nome": "DAOME MBURASI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.963621,
+      "lng": -38.4307224,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 708,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51842,12 +51842,12 @@
     },
     {
       "nome": "UNZO MUTALE DE UNZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9443492,
+      "lng": -38.4551338,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 710,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51862,12 +51862,12 @@
     },
     {
       "nome": "ILE ASE OBA KOSU IFA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9376966,
+      "lng": -38.4624531,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 711,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51882,12 +51882,12 @@
     },
     {
       "nome": "UNZO LEMBA JUNSSARA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0055158,
+      "lng": -38.4787231,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 712,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51902,12 +51902,12 @@
     },
     {
       "nome": "ILE OMIN OBA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0422239,
+      "lng": -38.4822696,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 714,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51922,12 +51922,12 @@
     },
     {
       "nome": "ONZO NIKAULE NKOSI D'UNZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9606326,
+      "lng": -38.4694458,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 729,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51942,12 +51942,12 @@
     },
     {
       "nome": "TERREIRO KEKERE YLE DE OGUN",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0909896,
+      "lng": -38.5049823,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 732,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51962,12 +51962,12 @@
     },
     {
       "nome": "ONZO KAIAJAMBA D'UNZAMBE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0019724,
+      "lng": -38.4819429,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 734,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -51982,12 +51982,12 @@
     },
     {
       "nome": "CENTRO DE ARUANDA DO CABOCLO BOIADEIRO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0504825,
+      "lng": -38.3594045,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 741,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52002,12 +52002,12 @@
     },
     {
       "nome": "ONZO ANGOROMIN D'UNZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.04922,
+      "lng": -38.4414535,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 743,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52022,12 +52022,12 @@
     },
     {
       "nome": "IYA OMIN EFAN",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0008233,
+      "lng": -38.4293358,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 748,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52042,12 +52042,12 @@
     },
     {
       "nome": "OJU TY OYA OMINIRE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0172684,
+      "lng": -38.399657,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 750,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52062,12 +52062,12 @@
     },
     {
       "nome": "Oluaie Oju Aiye",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0447177,
+      "lng": -38.4676673,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 751,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52082,12 +52082,12 @@
     },
     {
       "nome": "ABONY AJA KONDA APONDA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0756976,
+      "lng": -38.4651687,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 752,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52102,12 +52102,12 @@
     },
     {
       "nome": "CENTRO DE CABOCLO ATUMBANSE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0515578,
+      "lng": -38.4792644,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 753,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52122,12 +52122,12 @@
     },
     {
       "nome": "CENTRO DE CABOCLO ARCO VERDE",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9513933,
+      "lng": -38.4513686,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 754,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52142,12 +52142,12 @@
     },
     {
       "nome": "Unzo Amazi Danda Mutaleci",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0464283,
+      "lng": -38.4554802,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 759,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52162,12 +52162,12 @@
     },
     {
       "nome": "CENTRO DO CABOCLO TUPY DA SERRA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0374442,
+      "lng": -38.4951766,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 760,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52182,12 +52182,12 @@
     },
     {
       "nome": "CENTRO DE CARIDADE LUZ E PAZ",
-      "lat": null,
-      "lng": null,
+      "lat": -13.032009,
+      "lng": -38.4983461,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 762,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52202,12 +52202,12 @@
     },
     {
       "nome": "NZO MUNGONGO LEMBEUAJI JUNÇARA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.110122,
+      "lng": -38.5109552,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 770,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52222,12 +52222,12 @@
     },
     {
       "nome": "ONZO GONZO MISSANDANLUNDA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0142048,
+      "lng": -38.3576712,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 774,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52242,12 +52242,12 @@
     },
     {
       "nome": "TERREIRO MUTALÉ CONGO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0050535,
+      "lng": -38.3790387,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 775,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52262,12 +52262,12 @@
     },
     {
       "nome": "MANSU KAIANGO CAJANJA FILHO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0262761,
+      "lng": -38.4330284,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 776,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52282,12 +52282,12 @@
     },
     {
       "nome": "CENTRO DE CABOCLO VIDA E LUZ",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0421755,
+      "lng": -38.453266,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 778,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52302,12 +52302,12 @@
     },
     {
       "nome": "TERREIRO NANÃ ALODÊ DE UNZAMBI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9916894,
+      "lng": -38.4716868,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 781,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52322,12 +52322,12 @@
     },
     {
       "nome": "Uzo Unkuanxi Umuene Nongongo Anga kinue Vasambilua",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0437173,
+      "lng": -38.4604039,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 783,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52342,12 +52342,12 @@
     },
     {
       "nome": "Nzo Sassaganzua Nguzu Maza Mukongo ye Kalunga",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9847855,
+      "lng": -38.3939727,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 784,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52362,12 +52362,12 @@
     },
     {
       "nome": "UNZO MEAN RIA KAIAIA",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9578016,
+      "lng": -38.3551128,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 785,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52382,12 +52382,12 @@
     },
     {
       "nome": "TERREIRO DE BAMBURUCEMA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0513686,
+      "lng": -38.4897376,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 787,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52402,12 +52402,12 @@
     },
     {
       "nome": "KWE ACARA SOBO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0681375,
+      "lng": -38.4890999,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 789,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52422,12 +52422,12 @@
     },
     {
       "nome": "ILE AZE OYA OMI JADE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0057456,
+      "lng": -38.4081435,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 792,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52442,12 +52442,12 @@
     },
     {
       "nome": "MARLOM FRANCISCO CARDOSO BASTOS",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9221267,
+      "lng": -38.4807724,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 793,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52462,12 +52462,12 @@
     },
     {
       "nome": "YLÉ ASE OPO JAGUM",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0367714,
+      "lng": -38.3671829,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 796,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52482,12 +52482,12 @@
     },
     {
       "nome": "CENTRO OXOSSE GUERREIRO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0889024,
+      "lng": -38.4894578,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 801,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52502,12 +52502,12 @@
     },
     {
       "nome": "Templo dos Orixás",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0062374,
+      "lng": -38.4477628,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 802,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52522,12 +52522,12 @@
     },
     {
       "nome": "RISALVA HERMINIA DA ANUCIACAO",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9485954,
+      "lng": -38.4695974,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 819,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52542,12 +52542,12 @@
     },
     {
       "nome": "ONZO MUTA EUSI",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0616741,
+      "lng": -38.4906309,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 835,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52562,12 +52562,12 @@
     },
     {
       "nome": "CENTRO DO CABLOCO BOIADEIRO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.036052,
+      "lng": -38.4375354,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 846,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52582,12 +52582,12 @@
     },
     {
       "nome": "ILE D'BALE OYA GANDEGI",
-      "lat": null,
-      "lng": null,
+      "lat": -12.9764485,
+      "lng": -38.4622178,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 855,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52602,12 +52602,12 @@
     },
     {
       "nome": "Ilê Alaakoro Ase Omi",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0703652,
+      "lng": -38.4630452,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 857,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52622,12 +52622,12 @@
     },
     {
       "nome": "CENTRO DE CABLOCO PENACHO VERDE",
-      "lat": null,
-      "lng": null,
+      "lat": -13.001759,
+      "lng": -38.4312754,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 858,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52662,12 +52662,12 @@
     },
     {
       "nome": "Onzo Kaia Muta do Kalunga Mean",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0476669,
+      "lng": -38.4493692,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 865,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52682,12 +52682,12 @@
     },
     {
       "nome": "CENTRO CABLOCO BOIADEIRO",
-      "lat": null,
-      "lng": null,
+      "lat": -13.088301,
+      "lng": -38.5155826,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 869,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52702,12 +52702,12 @@
     },
     {
       "nome": "ILE ASE OMIN ALOYA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0172684,
+      "lng": -38.4014304,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 871,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52722,12 +52722,12 @@
     },
     {
       "nome": "ILE OYA KOSSUM",
-      "lat": null,
-      "lng": null,
+      "lat": -13.068702,
+      "lng": -38.4839486,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 879,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",
@@ -52742,12 +52742,12 @@
     },
     {
       "nome": "ILE ASE OMINIRE OLOGUN IFA BEMINGA",
-      "lat": null,
-      "lng": null,
+      "lat": -13.0128035,
+      "lng": -38.4156571,
       "fonte": "sefaz",
       "fonte_detalhe": "SEFAZ/Salvador - SEMUR 2020",
       "sefaz_codigo": 882,
-      "geo_status": "no_coords",
+      "geo_status": "in_bahia",
       "fontes": [
         {
           "fonte": "sefaz",

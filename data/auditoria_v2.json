@@ -1,18 +1,19 @@
 {
-  "versao": "2.1",
+  "versao": "2.2",
   "criterio": "CEAO completo como fonte primária; Google, OSM e SEFAZ preservados como complementares",
   "total_registros": 1959,
-  "total_georreferenciados": 1725,
+  "total_georreferenciados": 1951,
   "fontes": {
     "ceao": 1155,
-    "google": 550,
     "osm": 20,
+    "google": 550,
     "sefaz": 234
   },
   "fontes_georreferenciadas": {
     "ceao": 1155,
+    "osm": 20,
     "google": 550,
-    "osm": 20
+    "sefaz": 226
   },
   "classificacao_mapa": {
     "Keto": 668,
