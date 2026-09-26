@@ -2,7 +2,7 @@
 
 ## Ilê Axé Map — Terreiros de Candomblé e espaços religiosos afro-brasileiros da Bahia
 
-**Versão do conjunto de dados:** 1.3<br>
+**Versão do conjunto de dados:** 2.1<br>
 **Data de extração e integração:** 25 de julho de 2026<br>
 **Responsabilidade:** Leonardo Fernandes Nascimento — Laboratório de Humanidades Digitais da Universidade Federal da Bahia (LABHD/UFBA)<br>
 **Repositório:** <https://github.com/LABHDUFBA/ile-axe-map><br>
@@ -28,23 +28,23 @@ A unidade básica do projeto é o **registro de fonte**. Após normalização, c
 
 ---
 
-## 2. Síntese quantitativa da versão 1.3
+## 2. Síntese quantitativa da versão 2.1
 
 Os números abaixo foram apurados a partir dos artefatos efetivamente preservados no repositório e da contagem dos registros contidos nos arquivos — e não apenas dos metadados declarativos de versões anteriores.
 
 ### 2.1. Composição por fonte
 
-| Fonte | Registros materializados antes da consolidação entre fontes | Registros na base consolidada v1.3 | Registros com coordenadas na camada cartográfica |
+| Fonte | Registros materializados antes da consolidação entre fontes | Registros na base consolidada v2.1 | Registros com coordenadas na camada cartográfica |
 |---|---:|---:|---:|
 | OpenStreetMap | 44 | 20 | 20 |
-| Google Places | 1.408 | 693 | 693 |
-| CEAO/UFBA | 1.155 | 682 | 682 |
+| Google Places | 1.408 | 550 | 550 |
+| CEAO/UFBA | 1.155 | 1.155 | 1.155 |
 | SEMUR — SEFAZ/Salvador | 635 | 234 | 0 |
-| **Total** | **3.242** | **1.629** | **1.395** |
+| **Total** | **3.242** | **1.959** | **1.725** |
 
 A coluna inicial descreve as ocorrências persistidas nos artefatos que antecederam a consolidação entre fontes. Ela não deve ser confundida com o número transitório de respostas produzidas pelas APIs durante a coleta. A coluna intermediária registra a fonte principal do registro sobrevivente após a deduplicação; ela não preserva, na versão atual, toda a cadeia de sobreposições entre fontes.
 
-Os totais de **1.629 registros consolidados** e **1.395 feições publicadas** foram recalculados diretamente dos arrays presentes no commit auditado. Os blocos de metadados internos de `data/terreiros_all_sources.json` e `data/terreiros.geojson` ainda conservam contagens de etapas anteriores e não devem ser utilizados como retrato da versão corrente.
+Os totais de **1.959 registros consolidados** e **1.725 feições publicadas** foram recalculados diretamente dos arrays presentes no commit auditado. Os blocos de metadados internos de `data/terreiros_all_sources_v2.json` e `data/terreiros_v2.geojson` ainda conservam contagens de etapas anteriores e não devem ser utilizados como retrato da versão corrente.
 
 ### 2.2. Fluxo de processamento
 
@@ -55,19 +55,17 @@ Os totais de **1.629 registros consolidados** e **1.395 feições publicadas** f
         ▼
 2.158 registros consolidados
         │
-        ├── remoção heurística de 499 falsos positivos prováveis
-        ▼
-1.659 registros após a limpeza semântica
-        │
+        ├── CEAO/UFBA torna-se fonte primária (1.155 registros completos)
+        ├── remoção heurística de 499 falsos positivos prováveis (Google/OSM)
         ├── remoção de 30 registros externos ao recorte operacional
         ▼
-1.629 registros na base consolidada v1.3
+1.959 registros na base consolidada v2.1
         │
-        ├── 1.395 registros com coordenadas no recorte operacional da Bahia
+        ├── 1.725 registros com coordenadas no recorte operacional da Bahia
         └──   234 registros SEMUR sem coordenadas extraídas
 ```
 
-O total de **1.629 registros** não equivale a 1.629 terreiros presencialmente verificados. Ele expressa o resultado atual de um pipeline de integração, deduplicação e filtragem. Os **1.395 pontos cartográficos** correspondem ao subconjunto com coordenadas que permaneceu após a aplicação do recorte territorial operacional.
+O total de **1.959 registros** não equivale a 1.959 terreiros presencialmente verificados. Ele expressa o resultado atual de um pipeline de integração, deduplicação e filtragem. Os **1.725 pontos cartográficos** correspondem ao subconjunto com coordenadas que permaneceu após a aplicação do recorte territorial operacional.
 
 ---
 
@@ -122,7 +120,7 @@ A redução entre os 1.155 registros de origem e os 682 registros atribuídos ao
 
 A quarta fonte é um mapa cartográfico da **Secretaria Municipal da Reparação de Salvador (SEMUR)**, publicado em 2020 e distribuído pela infraestrutura geográfica da SEFAZ/Salvador. A lista nominal foi extraída por reconhecimento óptico de caracteres e revisão estrutural, resultando em **635 pares de código e nome**.
 
-O documento original apresenta informação cartográfica em sistema UTM, fuso 24S, referida ao SIRGAS 2000. Essas coordenadas não foram extraídas para a versão atual. Em consequência, os registros SEMUR participam da base consolidada e do processo de deduplicação nominal, mas não aparecem como pontos no mapa interativo. Após a comparação com as demais fontes, **234 registros SEMUR sem coordenadas** permanecem na base v1.3.
+O documento original apresenta informação cartográfica em sistema UTM, fuso 24S, referida ao SIRGAS 2000. Essas coordenadas não foram extraídas para a versão atual. Em consequência, os registros SEMUR participam da base consolidada e do processo de deduplicação nominal, mas não aparecem como pontos no mapa interativo. Após a comparação com as demais fontes, **234 registros SEMUR sem coordenadas** permanecem na base v2.1.
 
 A diferença entre contagens apresentadas em documentos derivados e a lista OCR deve ser tratada como questão de proveniência, não resolvida por simples inferência. A versão atual adota como referência operacional os 635 registros efetivamente estruturados no arquivo de origem preservado no repositório.
 
@@ -150,13 +148,13 @@ A deduplicação combina proximidade geográfica e semelhança nominal. Segundo 
 2. igualdade dos nomes após normalização;
 3. inclusão substancial de uma forma nominal na outra, desde que a sequência comparada tenha mais de cinco caracteres.
 
-Quando há correspondência, procura-se conservar o registro com maior densidade informacional e incorporar campos complementares da outra ocorrência. Esse procedimento reduziu **3.242 ocorrências de fonte a 2.158 registros consolidados**, isto é, reuniu 1.084 ocorrências consideradas redundantes.
+Quando há correspondência, procura-se conservar o registro com maior densidade informacional e incorporar campos complementares da outra ocorrência. Esse procedimento reduziu **3.242 ocorrências de fonte a 1.959 registros consolidados** na versão 2.1, isto é, reuniu ocorrências consideradas redundantes.
 
 A equivalência produzida por esse método é uma hipótese operacional. A proximidade espacial não garante identidade institucional, sobretudo em territórios com forte concentração de comunidades religiosas; nomes semelhantes também podem designar casas distintas, linhagens relacionadas ou mudanças históricas de denominação. Inversamente, mudanças de endereço, abreviações e diferenças ortográficas podem impedir a reunião de registros que se referem à mesma comunidade.
 
 ### 4.3. Proveniência após a fusão
 
-Na versão 1.3, o campo `fonte` indica a procedência principal do registro sobrevivente. Ele não funciona como uma relação exaustiva de todas as fontes que contribuíram para aquela entrada. Consequentemente, as contagens por fonte descrevem a **atribuição final de proveniência**, e não o grau real de sobreposição entre as bases.
+Na versão 1.3, o campo `fonte` indica a procedência principal do registro sobrevivente. Na versão 2.1, o campo `fonte` foi refinado para refletir a CEAO/UFBA como fonte primária (1.155 registros completos), com Google, OSM e SEFAZ como complementares. Ele não funciona como uma relação exaustiva de todas as fontes que contribuíram para aquela entrada. Consequentemente, as contagens por fonte descrevem a **atribuição final de proveniência**, e não o grau real de sobreposição entre as bases.
 
 Uma modelagem futura deverá preservar a relação muitos-para-muitos entre entidades consolidadas e registros de origem, com identificadores, datas de acesso, decisões de correspondência e histórico de alterações. Essa mudança permitiria auditar cada fusão sem depender apenas do registro final.
 
@@ -200,7 +198,7 @@ Por essa razão, as exclusões devem ser entendidas como **decisões heurística
 
 ### 6.1. Origem das coordenadas
 
-As coordenadas publicadas foram herdadas das fontes OSM, Google Places e CEAO/UFBA. Não houve, na versão 1.3, geocodificação dos 234 registros SEMUR remanescentes. A camada cartográfica contém, portanto, **1.395 feições pontuais**.
+As coordenadas publicadas foram herdadas das fontes OSM, Google Places e CEAO/UFBA. Não houve, na versão 2.1, geocodificação dos 234 registros SEMUR remanescentes. A camada cartográfica contém, portanto, **1.725 feições pontuais**.
 
 O projeto não atribui a todas as coordenadas o mesmo grau de precisão. Dependendo da fonte, um ponto pode representar a entrada do imóvel, o centro de uma edificação, uma posição fornecida por plataforma colaborativa ou uma localização aproximada. A presença de coordenadas não deve ser interpretada automaticamente como confirmação da posição exata da comunidade.
 
@@ -213,7 +211,7 @@ longitude: -46,7 a -37,3
 latitude:  -18,4 a  -8,5
 ```
 
-Esse *bounding box* funciona como teste de plausibilidade e enquadramento visual; ele não substitui o polígono administrativo oficial do estado. Na camada v1.3, **1.395 pontos** estão dentro do retângulo operacional e possuem o marcador `geo_status: in_bahia`. Os **234 registros SEMUR** permanecem sem coordenadas.
+Esse *bounding box* funciona como teste de plausibilidade e enquadramento visual; ele não substitui o polígono administrativo oficial do estado. Na camada v2.1, **1.725 pontos** estão dentro do retângulo operacional e possuem o marcador `geo_status: in_bahia`. Os **234 registros SEMUR** permanecem sem coordenadas.
 
 Uma etapa anterior continha 30 pontos do Google Places fora desse recorte. Eles foram removidos da base consolidada e da camada publicada no commit `5b6b5bb`, permanecendo recuperáveis no histórico do repositório para fins de auditoria. Na versão corrente, não há feições externas ao recorte operacional.
 
@@ -256,14 +254,14 @@ Solicitações de correção, atualização ou retirada podem ser encaminhadas a
 
 ## 9. Reprodutibilidade e artefatos públicos
 
-A reprodutibilidade da versão 1.3 é **parcial**. O repositório permite inspecionar a camada publicada, os registros consolidados, os arquivos de origem preservados para CEAO e SEMUR, a consulta OSM e as regras de detecção e remoção de falsos positivos. Contudo, não estão integralmente disponíveis os scripts que produziram a coleta Google Places, a extração CEAO, o OCR SEMUR e a consolidação inicial entre as quatro fontes.
+A reprodutibilidade da versão 2.1 é **parcial**. O repositório permite inspecionar a camada publicada, os registros consolidados, os arquivos de origem preservados para CEAO e SEMUR, a consulta OSM e as regras de detecção e remoção de falsos positivos. Contudo, não estão integralmente disponíveis os scripts que produziram a coleta Google Places, a extração CEAO, o OCR SEMUR e a consolidação inicial entre as quatro fontes.
 
 ### 9.1. Principais artefatos
 
 | Caminho | Função |
 |---|---|
-| `data/terreiros.geojson` | Camada carregada pela interface; 1.395 pontos na versão 1.3 |
-| `data/terreiros_all_sources.json` | Base consolidada com 1.629 registros, incluindo 234 sem coordenadas |
+| `data/terreiros_v2.geojson` | Camada carregada pela interface; 1.725 pontos na versão 2.1 |
+| `data/terreiros_all_sources_v2.json` | Base consolidada com 1.959 registros, incluindo 234 sem coordenadas |
 | `data/terreiros_all.geojson` | Instantâneo intermediário anterior à limpeza de falsos positivos |
 | `data/falsos_positivos_suspeitos.json` | Resultado da varredura semântica inicial |
 | `data/falsos_positivos_removidos.json` | Lista auditável das 499 exclusões |
