@@ -1,0 +1,29 @@
+{
+  "total": 3923,
+  "geocoded": 2721,
+  "no_match": 1202,
+  "coverage_percent": 69.36,
+  "precision": {
+    "street": 2458,
+    "house_number": 263
+  },
+  "selected_source": {
+    "v2_simplified_address": 1110,
+    "v1_full_address": 1611
+  },
+  "by_state": {
+    "PE": 831,
+    "PA": 660,
+    "RS": 959,
+    "MG": 271
+  },
+  "v2_processed": 2205,
+  "v2_matched": 1110,
+  "provider": "Nominatim / OpenStreetMap",
+  "attribution": "© OpenStreetMap contributors",
+  "public_geojson_excludes": [
+    "leadership",
+    "email"
+  ],
+  "method": "logradouro e município/UF compatíveis; house_number exige número confirmado"
+}

@@ -1,0 +1,892 @@
+nome,cidade,uf,classificacao,fonte,lat,lng,google_nome,similaridade,distancia_m
+Abaça Oyá Togum,Recife,PE,google_melhor,google,-8.0188082,-34.9275774,ABASSA TOYA TOGUM,0.875,2201
+Abassá Afro-Brasileiro Axé Omin Kaiá,Ananindeua,PA,novo_google,google,-1.3448454,-48.3988456,Abassá Afro Brasileiro Maza Kaiala,0.829,None
+Abassá Afro-Brasileiro Konzenzala de Kafungê,Belém,PA,nominatim_melhor,nominatim,-1.4067323,-48.4685174,,None,None
+Abassá Afro-Brasileiro Leko Saponan,Belém,PA,match_ruim,google,-23.4492715,-51.98159709999999,Abassá de Oyá,0.356,None
+Abassá Afro-Brasileiro Ngunzo de Kavungo,Belém,PA,nominatim_melhor,nominatim,-1.4450003,-48.4928399,,None,None
+Abassá Afro-Brasileiro Ogun-Já,Marituba,PA,nominatim_melhor,nominatim,-1.356988,-48.3411935,,None,None
+Abassá Afro-Brasileiro Omin Kaiadeuáci,Belém,PA,nominatim_melhor,nominatim,-1.4349278,-48.4764313,Terreiro de Umbanda Pai Xangô e Caboclo Rompe Mato,0.259,739
+Abassá Axé Enssabas D'Un Zamby,Jaboatão dos Guararapes,PE,nominatim_melhor,nominatim,-8.1687885,-34.9270024,Centro Espírita de Angola Abassá de Oyá,0.356,7533
+Abassá Axé Odara da Oxum Apará,Belém,PA,google_melhor,google,-1.398893,-48.45676900000001,Ilê Axé Obá Opô Aganjú,0.49,8719
+Abassá Axé Ogum Bará Oya Lemim,Recife,PE,nominatim_melhor,nominatim,-8.1229392,-34.9512456,Egbé Yabá Omí,0.326,12980
+Abassá Axé Oxum Omitaladê,Recife,PE,google_melhor,google,-8.0783656,-34.9433977,Abassá da Oxum,0.611,7438
+Abassá Axé Oyá Balé Omin,Recife,PE,google_melhor,google,-8.0398404,-34.9630001,Ilê Axé Oyá Igbalé Funan,0.625,8149
+Abassá Axé Ya Ogunté Oyá Lecy,Recife,PE,nominatim_melhor,nominatim,-8.1109635,-34.9489656,Ilé axe oyá guere,0.435,10948
+Àbassá D'Dêmindewá,Olinda,PE,nominatim_melhor,nominatim,-8.0250566,-34.8733408,Centro Histórico de Olinda,0.308,2760
+Abassá da Oiá,Paulista,PE,novo_google,google,-8.2343427,-34.9442561,Centro Espírita de Angola Abassá de Oyá,0.667,None
+Abassá das Águas,Recife,PE,google_melhor,google,-8.0584821,-34.9387623,Rua Princesa das Águas,0.684,7145
+Abassá das Issabas de Oxóssi,Recife,PE,google_melhor,google,-8.0783656,-34.9433977,Abassá da Oxum,0.5,8417
+Abassá de Angola Omulu Oba Milacy,Recife,PE,novo_google_possivel,google,-8.1048756,-34.9125436,Entidade Afrocultural Abassa Omin Axe de Dandalunda Casaatriz de Angola,0.356,None
+Abassá de Iansã Amessã,Canoas,RS,nominatim_melhor,nominatim,-29.9096216,-51.2177165,Centro ilê Iansã nique e Abasse de Maria Padilha,0.344,2377
+Abassá de Mina Gegê Nagô de Toy Lissá e Abê Manjá Huevy,Belém,PA,novo_google,google,-1.3531134,-48.4473984,Instituição Religiosa Grande De Mina Djeje Nagô De Toy Lissà & Abê Manjá - Huevy,0.706,None
+Abassá de Mina Jejê Nagô de Oxaguian Navê e Yemanjá,Belém,PA,novo_google_possivel,google,-1.3602511,-48.46844919999999,Terreiro De Mina Nagô De Toya Jarina,0.427,None
+Abassá de Obá Afonjá,Contagem,MG,google_melhor,google,-19.942989,-44.0486182,Ile ásé óbà óná nzó,0.556,3014
+Abassá de Obaluaê,Belém,PA,novo_google_possivel,google,-1.4365098,-48.4804446,Terreiro Casa de Axé Templo da Cigana,0.311,None
+Abassá de Ogum Megê e Abê Manjá,Belém,PA,google_melhor,google,-1.4698958,-48.49168359999999,Terreiro Ogum Xoroquê e Yemanjá,0.542,8233
+Abassá de Ogunté,Cabo de Santo Agostinho,PE,nominatim_melhor,nominatim,-8.2398343,-34.9804302,ILÈ ASÉ OTÁ LÁ IYÁ - CASA DE YEMONJA OGUNTE,0.431,6279
+Abassá de Oxum Aladè,Recife,PE,google_melhor,google,-8.0783656,-34.9433977,Abassá da Oxum,0.786,8869
+Abassá de Oxum Mywá e Oxum Pandá,Porto Alegre,RS,google_melhor,google,-30.0380242,-51.1056915,Casa de Oxum - Mãe Sayonara,0.627,13070
+Abassá de Santa Bárbara,Ananindeua,PA,google_melhor,google,-1.3625578,-48.3811607,Abassá de Khéviôssô E Bárbara Soeira.,0.604,4693
+Abassá de Toy Badê,Belém,PA,novo_google,google,-1.4276883,-48.4727557,Casa Axé da Bahia,0.483,None
+Abassá de Xangô Airá,Recife,PE,novo_google,google,-8.0293142,-34.8674854,Ilê Axé Xangô Ayrá Igbonã,0.524,None
+Abassá de Yansã e Ogum,Belém,PA,divergente_inconclusivo,nominatim,-1.4227679,-48.4690204,Axé Abassá de Ogum,0.647,1696810
+Abassá D´Agelu Omadê,Canoas,RS,google_melhor,google,-29.9115733,-51.1917329,Abassá Àse Oxum e Oya,0.634,3785
+Abassá D´Oxum Mywá e Oxum Pandá,Porto Alegre,RS,google_melhor,google,-30.0380242,-51.1056915,Casa de Oxum - Mãe Sayonara,0.604,13070
+Abassá Gruta de Cáritas,Ananindeua,PA,google_melhor,google,-1.3602954,-48.3992943,Santuário Santa Rita de Cássia,0.468,1940
+Abassá Matamba Egunitá,Recife,PE,nominatim_melhor,nominatim,-8.0120546,-34.921057,Centro Espírita de Angola Abassá de Oyá,0.41,24849
+Abassá Nifê Ifê Olomi,Canoas,RS,nominatim_melhor,nominatim,-29.9116706,-51.209287,Sede Bahá’í de Canoas,0.308,5995
+Abassá Noxi D´Otá,Belém,PA,nominatim_melhor,nominatim,-1.4257234,-48.4648423,Terreiro de Umbanda Pai Xangô e Caboclo Rompe Mato,0.125,2026
+Abassá Obá Orum Xangô Baru,Recife,PE,novo_google,google,-8.0783656,-34.9433977,Abassá da Oxum,0.541,None
+Abassá Omim Axé de Dandalunda,Recife,PE,confirmado,google,-8.1048756,-34.9125436,Entidade Afrocultural Abassa Omin Axe de Dandalunda Casaatriz de Angola,0.725,5
+Abassá Omim D'Akorodan,Recife,PE,google_melhor,google,-8.1048756,-34.9125436,Entidade Afrocultural Abassa Omin Axe de Dandalunda Casaatriz de Angola,0.476,7666
+Abassá To Igballet,Recife,PE,nominatim_melhor,nominatim,-8.0345904,-34.9298292,Ballet Gonzalez,0.364,10022
+Abassá Xangô e Iemanjá,Camaragibe,PE,confirmado,google,-8.0161129,-34.9927709,Abassá xangô e iemanjá,1.0,42
+Abassá Yamim Ayrá Sessum Gilé,Recife,PE,google_melhor,google,-8.0188082,-34.9275774,ABASSA TOYA TOGUM,0.522,10803
+Abassé de Oxalufam,Belo Horizonte,MG,nominatim_melhor,nominatim,-19.9021575,-43.9214673,Terreiro de Umbanda Luz de Oxalá,0.39,17519
+Abassé de Zé Pelintra,Alvorada,RS,google_melhor,google,-30.03160849999999,-51.0831671,Flora Zé Pilintra e Sete Sais,0.511,3948
+Aclo - Associação Caritativa Luzeiro dos Orixás,São Jerônimo,RS,novo_google,google,-30.0251453,-51.0832621,Associação Cultural Religiosa Benef São Jerônimo,0.473,None
+Adã Milacó,Recife,PE,nominatim_melhor,nominatim,-8.067694,-34.8894408,Sítio de Pai Adão - Ilê Ọba Ògúnté,0.359,5257
+Adê Kayodé Ogunitá,Camaragibe,PE,nominatim_melhor,nominatim,-8.0005745,-35.0120933,Sítio de Pai Adão - Ilê Ọba Ògúnté,0.426,12980
+Afro-Centro de Umbanda Ogum Megê e Reino de Oxalá,Cachoeirinha,RS,google_melhor,google,-29.9060248,-51.0834792,Centro afro ogum Onira,0.492,3723
+Agamahossu,Belém,PA,novo_google,google,-1.0740781,-48.4069165,Pousada Marahú,0.5,None
+Agrupamento de Umbanda  Estrela Azul Choupana do Caboclo Cobra Coral,Belo Horizonte,MG,confirmado,google,-19.8131129,-43.947609,AUEA – Agrupamento de Umbanda da Estrela Azul,0.653,31
+Aldeia de Tabocá da Cabocla Jaciara,Belém,PA,novo_google_possivel,google,-1.441251,-48.4743724,Terreiro de Umbanda Pai Xangô e Caboclo Rompe Mato,0.368,None
+Aldeia de Zé Raimundo,Santa Bárbara,PA,match_ruim,google,-8.716685,-42.6018821,Parque Nacional Serra da Capivara,0.292,None
+Aldeia do Bom Destino,Contagem,MG,divergente_inconclusivo,nominatim,-19.9329625,-44.0250824,Laticínios Bom Destino,0.7,109979
+Aldeia do Caboclo Pena Azul,Ananindeua,PA,google_melhor,google,-1.3638241,-48.38515169999999,Aldeia de caboclo perna azul,0.98,4968
+Aldeia do Caboclo Rompe Mato,Belém,PA,novo_google,google,-1.2158199,-48.5383453,Templo de Umbanda Caboclo Rompe Mato,0.759,None
+Aqueleomã,Belém,PA,confirmado_proximo,google,-1.3178539,-48.44068069999999,Aqueleomã - Casa de Mina Jêje Nagô,0.474,229
+Àrá  Asé Ayê Okê,Recife,PE,novo_google,google,-8.159562,-34.9334234,Ilé Àse Oyá Orirí,0.5,None
+Arca Brasileira Jacutá de Iansã,Belo Horizonte,MG,nominatim_melhor,nominatim,-19.9165485,-44.0059129,Casa de Pai Ogum e Seara do Mestre Sibamba,0.344,1049
+Ashé Ilê Olu Babá Otoguyãn,Belém,PA,confirmado_proximo,google,-1.3240064,-48.4668485,ILÊ ASÉ BABÁ OTOGYAN,0.739,165
+Associação Africana São Miguel Arcanjo,Porto Alegre,RS,google_melhor,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.69,3838
+Associação Afro Religiosa Filhos do Axé,Gravataí,RS,google_melhor,google,-29.9205752,-50.9298552,Ilê fFilhos do Axé,0.51,6541
+Associação Afro Umbandista São Miguel Arcanjo,Porto Alegre,RS,google_melhor,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.593,15377
+Associação Beneficente Africana Santo Antônio de Categero Bará Lodê e Obá - Centro de Ogum Megê das Almas e Povo Cigano do Oriente,São Leopoldo,RS,novo_google_possivel,google,-29.7671444,-51.1150583,Terreiro de Umbanda Casa de Ogum e Oxum Abassé de Exu Marabô,0.294,None
+Associação Beneficente Afro de Cabocla Mariana,Belém,PA,google_melhor,google,-1.4475012,-48.4620074,Terreiro de Umbanda Cabocla Mariana e São Benedito,0.489,2437
+Associação Beneficente Centro Espírita Ogum Iara,Belo Horizonte,MG,confirmado,google,-19.9527635,-43.9887686,Associação Espírita Ogum Yara,0.754,93
+Associação Beneficente Cultural  Inzo Musambu Inkisi Kaia,Guaíba,RS,nominatim_melhor,nominatim,-30.1187345,-51.3280782,CTG Caudilho Guaibense,0.231,3444
+Associação Beneficente Cultural Africana Templo de Yemanjá,Guaíba,RS,confirmado_proximo,google,-30.0903323,-51.3222062,Associação Beneficente Africana Oxalá e Yemanjá,0.804,418
+Associação Beneficente O Além dos Orixás,Contagem,MG,confirmado,google,-19.9547508,-44.0490672,Associação Beneficente O Além dos Orixás,1.0,72
+Associação Beneficente Ogum Rompe Mato,Ananindeua,PA,novo_google,google,-1.3319269,-48.3711104,Seara de umbanda de Toya Jarina e Ogum Rompe Mato,0.543,None
+Associação Beneficente Pai Caetano,Contagem,MG,novo_google,google,-19.9547508,-44.0490672,Associação Beneficente O Além dos Orixás,0.703,None
+Associação Centro de Umbanda Oxossi e Oxalá,Gravataí,RS,google_melhor,google,-29.9160257,-51.0507771,Centro de Umbanda Mensageiros de Oxalá,0.639,7145
+Associação Comunitária Cabana Espírita Umbandista Pai João Baiano,Contagem,MG,google_melhor,google,-19.8905184,-44.0835483,C.E.U Pai João Baiano,0.488,7795
+Associação Cultural Afro-Brasileira do Ilê Axé Babá Abuque,Belém,PA,novo_google_possivel,google,-1.4548189,-48.4556572,Ilê Axé Toy Azaká e Oxum,0.304,None
+Associação Cultural Afro-Brasileira Taligenin,Belo Horizonte,MG,google_melhor,google,-19.9230221,-43.9367118,Acibra MG - Associação de Cultura Ítalo-Brasileira de Minas Gerais,0.699,8216
+Associação Cultural Beneficente Afro Santa Joana D'Arc,Belém,PA,nominatim_melhor,nominatim,-1.4508157,-48.4634374,,None,None
+Associação Cultural Beneficente Afro São Sebastião,Belém,PA,google_melhor,google,-1.4151461,-48.4720056,Paróquia São Sebastião,0.5,4079
+Associação Cultural Ilê Axé Iemanjá e Oxalá,Gravataí,RS,nominatim_melhor,nominatim,-29.919222,-51.0382361,Ilê Axé Orixá Omí,0.4,2389
+Associação Cultural Oca Tupinarê,Belo Horizonte,MG,google_melhor,google,-19.9939524,-44.0086477,Associação Cultural Religiosa Oca Tupinarê Candomblé E Umbanda,0.681,17094
+Associação Cultural Religiosa Ilê Axé Oyá Ajumbê,Belo Horizonte,MG,nominatim_melhor,nominatim,-19.9683672,-44.0015679,Ile Asé Ode & Oya,0.317,12767
+Associação Cultural Ylê Axé Babaibifunfun,Belo Horizonte,MG,nominatim_melhor,nominatim,-19.9006625,-43.9396378,Ilê Asé Odé Ayó,0.286,26813
+Associação Espírita Caboclo Oxóssi Ylê de Xangô,Abreu e Lima,PE,divergente_inconclusivo,nominatim,-7.8991115,-34.8996933,Centro Espírita Caboclo Oxóssi,0.483,33039
+Associação Espírita Casa de Iemanjá,Belo Horizonte,MG,google_melhor,google,-19.9246926,-43.9659177,Associação Espírita Célia Xavier,0.781,11276
+Associação Espírita Cultural Ilê Axé Oyá Egum,Olinda,PE,nominatim_melhor,nominatim,-8.024092,-34.8582014,ILÊ AXE OYA EGBALE,0.444,2478
+Associação Espírita de Umbanda Cacique Templo de Oxum,São Leopoldo,RS,google_melhor,google,-29.7410876,-51.15489299999999,Centro de umbanda Cacique Jurema,0.526,3703
+Associação Espírita Umbandista Esperança e Luz,Sabara,MG,nominatim_melhor,nominatim,-19.8947596,-43.7938218,Casa de Auxilio e Fraternidade Olhos da Luz,0.386,4862
+Associação Religiosa e Cultural de Culto Afro Brasileiro Ñzo Matujinan Mutakalambo Danda Lunda,Belo Horizonte,MG,nominatim_melhor,nominatim,-19.827073,-43.9358653,,None,None
+Associação Religiosa e Cultural de Culto Afro-Brasileiros Seara dos Pretos Velhos Mãe Rosa,Belo Horizonte,MG,divergente_inconclusivo,nominatim,-19.8144387,-43.9418479,Casa Espírita Seara dos Pretos Velhos,0.532,343154
+Associação Social e Cultural Bakisi Umkambo Ameã,Ribeirao das Neves,MG,nominatim_melhor,nominatim,-19.8325643,-44.042946,,None,None
+Associação Terreiro de Umbanda Cabocla Rosalina,Belém,PA,novo_google,google,-1.2387923,-48.559655,Terreiro de Umbanda Casa de Mãe Herondina,0.658,None
+Ato Egbe Egbarisá Odu Solá,Olinda,PE,match_ruim,google,-8.0208687,-34.8960041,Sítio de Pai Adão - Ilê Ọba Ògúnté,0.327,None
+Aueira de Mariana,Belém,PA,nominatim_melhor,nominatim,-1.163177,-48.4672635,,None,None
+Axé Adomen Ilê Oloxumyá Opará,Recife,PE,novo_google,google,-8.0221583,-34.8748999,Ilê axé Omín Oxum opará Ogum mejéjé,0.562,None
+Axé do Ache Ilê Laganji,Recife,PE,nominatim_melhor,nominatim,-8.0705451,-34.9176765,Achecomérciope,0.353,5543
+Axé Doloxum Ilê Funfun,Olinda,PE,google_melhor,google,-7.9790605,-34.8575642,Ilê Axé Oxum Ipondá,0.537,4376
+Axé Ilê Aganju Beré,São Lourenço da Mata,PE,google_melhor,google,-7.9938085,-35.0334531,Axé-ilê aganjú berê,1.0,2108
+Axé Ilê Araimbona,Olinda,PE,confirmado,google,-8.0293142,-34.8674854,Ilê Axé Xangô Ayrá Igbonã,0.571,28
+Axé Ilê da Loyá,Olinda,PE,google_melhor,google,-7.990697000000001,-34.9087851,Ilê axé inã dewá ayê,0.5,6169
+Axé Ilê de Iemanjá Ogunté,Recife,PE,nominatim_melhor,nominatim,-8.009077,-34.8889995,Ilé Axé Oyá Égunita / Terreiro Mensageiros Da Fé,0.338,14067
+Axé Ilê de Oyá,Recife,PE,google_melhor,google,-8.0945077,-34.9423699,Ilê Axé Oyá Bery,0.519,11143
+Axé Ilê Ofá Loxé,Cabo de Santo Agostinho,PE,nominatim_melhor,nominatim,-8.2445802,-34.9871237,Ilê Axé Xangô Afonjá,0.389,7008
+Axé Ilê Omilaxé,Recife,PE,nominatim_melhor,nominatim,-8.020233,-34.900961,Ilê Axé Ônin-Sabá,0.438,11155
+Axé Ilê Omim Taladê,Olinda,PE,google_melhor,google,-7.992515299999999,-34.8858762,Ilê Axé Laré Omim Dewá,0.683,2965
+Axé Ilê Oxosse Acueran,Recife,PE,novo_google,google,-8.1105695,-34.9450223,Ilê Axé Ônin-Sabá,0.462,None
+Axé Ilê Oxum Monjobe,Recife,PE,novo_google_possivel,google,-8.1104899,-34.945493,Ilê Axé Ôxum Pandá e Xangô Lairá,0.385,None
+Axé Ilê Oxum Pandá,Recife,PE,google_melhor,google,-8.1104899,-34.945493,Ilê Axé Ôxum Pandá e Xangô Lairá,0.56,8122
+Axé Ilê Xangô Imolê,Recife,PE,google_melhor,google,-8.0937819,-34.937735,Ilê axé xangô ABÔNI,0.579,9526
+Axé Ilé Xangô Onytun Nykere,Recife,PE,confirmado,google,-8.037178200000001,-34.9512208,Ilé axé xangô onotun nikere,0.778,40
+Axé Ileomim Jêje Mahin,Ribeirao das Neves,MG,nominatim_melhor,nominatim,-19.7456656,-44.0623599,Ilê Axé Ògúnsade Ati Omidayó,0.36,6455
+Axé Omulu Genã,Olinda,PE,confirmado_proximo,google,-8.000623299999999,-34.8837896,Axe omulu gena,1.0,127
+Axé Oxalá Obocum,VIamão,RS,novo_google,google,-30.062847,-51.0831864,Ilê axé oxalá obocum e oyá timboá,0.653,None
+Bakiso de Dandalunda Laxoque,Contagem,MG,divergente_inconclusivo,nominatim,-19.902763,-44.0750667,Bakisso Diá N'Dandalunda,0.694,7660
+Bakysso Kassange Maza Kunkueto e Wula Bamburusema,Belo Horizonte,MG,nominatim_melhor,nominatim,-19.9042494,-43.989724,,None,None
+Barracão de Opará,Olinda,PE,novo_google,google,-8.014529999999999,-34.8530925,Bar do Amparo,0.583,None
+Barracão do Boiadeiro,Olinda,PE,nominatim_melhor,nominatim,-8.0072343,-34.88437,Bodega de Veio - Olinda,0.389,3487
+Cabana de Alaketu,Belo Horizonte,MG,nominatim_melhor,nominatim,-19.8507356,-43.8856087,Cabana Espírita Umbandista Caboclo Flecha Dourada,0.349,13321
+Cabana de Cachoeira,Paulista,PE,novo_google_possivel,google,-22.6689736,-45.0010826,Pousada Boa Vista; Hotel - Cachoeira Paulista SP/ Canção Nova,0.384,None
+Cabana de Jurema,Belém,PA,divergente_inconclusivo,nominatim,-1.4335258,-48.4821244,Cabana da Jurema,1.0,328845
+Cabana de Jurema,Belém,PA,match_ruim,google,0.029376,-51.0526011,Cabana da Jurema,1.0,None
+Cabana Espírita Pai Jerônimo,Belo Horizonte,MG,google_melhor,google,-19.9007506,-44.0248725,Centro Espiritualista Pai Joaquim,0.656,10601
+Cabana Espírita Pai Xangô,Betim,MG,google_melhor,google,-19.9706932,-44.1748695,Casa De Umbanda Pai José De Angola,0.566,8501
+Cabana Espírita Umbandista Caboclo Flecha Dourada,Belo Horizonte,MG,google_melhor,google,-19.938014,-43.9728789,Cabana Espírita Umbandista Caboclo Flecha Dourada,1.0,1144
+Cabana Espírita Umbandista Caboclo Pena Azul,Belo Horizonte,MG,google_melhor,google,-19.9124845,-43.95531930000001,Cabana Espirita Umbandista Caboclo Pena Azul,1.0,5645
+Cabana Espírita Umbandista Nossa Senhora da Glória,Belo Horizonte,MG,confirmado,google,-19.8690697,-44.0120673,Cabana Senhora da Glória,0.618,20
+Cabana Espírita Umbandista São Sebastião Okê,Belo Horizonte,MG,google_melhor,google,-19.9013193,-43.9168031,Cabana Espírita Umbandista Caboclo Quinta da Serra,0.725,6187
+Cabana Umbandista Iansã,Belo Horizonte,MG,novo_google,google,-19.9013193,-43.9168031,Cabana Espírita Umbandista Caboclo Quinta da Serra,0.629,None
+Caboclo Rei de Yorubá,Recife,PE,nominatim_melhor,nominatim,-8.0572113,-34.9158181,Centro Umbandista Caboclo Ubirajara,0.415,3540
+Caminhos Iluminados de Loiá,Paulista,PE,nominatim_melhor,nominatim,-7.925008,-34.8672091,,None,None
+Candomblé Santa Bárbara,Camaragibe,PE,nominatim_melhor,nominatim,-8.0235149,-34.9839656,Quilombo dos Camarás,0.419,7749
+Canto do Cigano do Oriente,Porto Alegre,RS,google_melhor,google,-30.0144015,-51.1154757,Atelie Luz do Oriente,0.579,9713
+Casa Africana Bará Lanã e Iansã,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.615,893
+Casa Africana Menino Jesus de Praga - Reino de Oxalá e Oxum,São Leopoldo,RS,nominatim_melhor,nominatim,-29.7856353,-51.1307463,Ilê Axé Reino de Xangô e Oxalá,0.385,8378
+Casa Africana Ogum da Lua,Porto Alegre,RS,google_melhor,google,-30.0780059,-51.2053521,CENTRO DE UMBANDA PAI OGUM DA LUA,0.612,14856
+Casa Africana Oyá e Sapatá,Alvorada,RS,google_melhor,google,-30.0221923,-51.04164859999999,Casa Africana Reino de osanha,0.731,4240
+Casa Africana Reino de Ogum,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.517,3545
+Casa Africana Reino de Xangô,Alvorada,RS,google_melhor,google,-30.0221923,-51.04164859999999,Casa Africana Reino de osanha,0.863,4203
+Casa Africana Reino de Xangô Mantenedora de Casas Comunitárias e Espiritual,Alvorada,RS,novo_google_possivel,google,-29.9911586,-51.08115489999999,Morada de Xangô | Jogo de Cartas e Búzios,0.392,None
+Casa Africana Reino dos Orixás Oxalá e Oxum,São Leopoldo,RS,google_melhor,google,-29.7601443,-51.0894907,Casa de religião matriz africana ILÊ Oxum Olobá,0.506,6978
+Casa Africana Reino Oiá e Xangô Aganju,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.556,3095
+Casa Africana Santo Antônio,São Leopoldo,RS,divergente_inconclusivo,nominatim,-29.7877493,-51.1305767,Casa Africana Reino de Oxalá- Pai Zeca de Xangô,0.507,29288
+Casa Africana Santo Antônio Oya e Iansã,Porto Alegre,RS,google_melhor,google,-30.0391219,-51.2213426,Casa Africana Reino de Oxalá- Pai Zeca de Xangô,0.608,6317
+Casa Africana São Miguel e Nossa Senhora da Glória,Canoas,RS,divergente_inconclusivo,nominatim,-29.9079683,-51.2122604,Centro Africano São Miguel Arcanjo Pai Alfredo,0.495,14937
+Casa Africana Xangô e Oxum,VIamão,RS,google_melhor,google,-30.0986733,-51.0467087,CASA DE AXÉ XANGÔ & OXUM,0.756,3525
+Casa Africana Yaogunté,Igarassu,PE,novo_google_possivel,google,-7.833549100000001,-34.9064035,Casa Igarassu -Passeios Turísticos,0.364,None
+Casa Afro Ogum das Matas,Porto Alegre,RS,google_melhor,google,-30.0040353,-51.1304519,Centro de Umbanda Morada da Iansã,0.51,13128
+Casa Beneficente Africana Ylê de Oxalá Obocum,VIamão,RS,google_melhor,google,-30.0844828,-51.0469115,Sociedade beneficente Centro Africano Oxalá Lerum e Oxalá Bocum,0.724,5549
+Casa Boiadero de Angola,Recife,PE,nominatim_melhor,nominatim,-8.0115543,-34.897132,Entidade Afrocultural Abassa Omin Axe de Dandalunda Casaatriz de Angola,0.381,10515
+Casa Branca de Vomissan,Belém,PA,google_melhor,google,-1.4593752,-48.492565,Casablanca Belém,0.611,5240
+Casa Cabocla Ita,Belém,PA,confirmado_proximo,google,-1.4319727,-48.4839803,Terreiro da cabocla Ita,0.667,198
+Casa Cultural Espírita e Umbandista Boiadeiro Leão do Norte,Belo Horizonte,MG,novo_google,google,-19.9068317,-43.9471899,Casa de Caridade Pai Jacob do Oriente,0.46,None
+Casa da Cabocla Herondina,Belém,PA,google_melhor,google,-1.4395143,-48.47858410000001,Templo de oxalá/Cabocla Herondina,0.769,3961
+Casa da Cabocla Jandira,Belém,PA,match_ruim,google,-3.1433627,-60.5021861,Hostel Casa da Cabocla,0.615,None
+Casa da Dona Jacirena,Belém,PA,google_melhor,google,-1.4522078,-48.4868962,Casa de Elna na Amazônia Restaurante,0.51,2702
+Casa da Jurema,Belo Horizonte,MG,novo_google_possivel,google,-19.9093163,-43.9994677,Casa de Pai Ogum e Seara do Mestre Sibamba,0.426,None
+Casa da Mãe Zeli de Xangô,Porto Alegre,RS,nominatim_melhor,nominatim,-30.1584684,-51.1373509,Reino de Xangô - PAI JÚNIOR,0.39,14002
+Casa da Mestra Paulina,Olinda,PE,novo_google_possivel,google,-7.9929038,-34.8986331,Templo Das Matas Caboclo Pena branca Mestre Sibamba e Mestra Paulina,0.437,None
+Casa da Oyá,Recife,PE,nominatim_melhor,nominatim,-8.0255437,-34.8855844,CASA OXALA - Artigos Religiosos - Recife,0.318,4692
+Casa da Oyá,Belém,PA,google_melhor,google,-1.4276883,-48.4727557,Casa Axé da Bahia,0.545,3907
+Casa das Águas,Olinda,PE,google_melhor,google,-8.02637,-34.8742646,Casa das Águas,1.0,1802
+Casa das Minas Toy Averekete Ni Kuala Mukongo,Belém,PA,confirmado,google,-1.3331585,-48.43612479999999,CASA DAS MINAS TOY AVEREKETE,0.767,36
+Casa de Axé Canto da Sereia,Belo Horizonte,MG,novo_google,google,-19.9517611,-43.9922714,Canto Da Sereia Lingerie,0.571,None
+Casa de Axé Mina-Nagô Légua Bogi Buá e Joana Gunça,Belém,PA,novo_google_possivel,google,-1.4365098,-48.4804446,Terreiro Casa de Axé Templo da Cigana,0.41,None
+Casa de Badé Zoro Gama,Belém,PA,novo_google_possivel,google,-1.3531134,-48.4473984,Instituição Religiosa Grande De Mina Djeje Nagô De Toy Lissà & Abê Manjá - Huevy,0.315,None
+Casa de Cabocla Jurema,Belém,PA,nominatim_melhor,nominatim,-1.4326778,-48.4783255,Terreiro de Umbanda Pai Xangô e Caboclo Rompe Mato,0.424,1050
+Casa de Candomblé  Oxum Apará,Vespasiano,MG,google_melhor,google,-19.6910321,-43.92698439999999,Casa De Umbanda N.Sra.Aparecida,0.566,7631
+Casa de Candomblé Axé Ebomi Xangô Airá,Recife,PE,novo_google,google,-8.1104899,-34.945493,Ilê Axé Ôxum Pandá e Xangô Lairá,0.567,None
+Casa de Caridade Cosme e Damião,Belo Horizonte,MG,novo_google,google,-19.8565851,-43.9449751,Casa Cosme e Damião,0.809,None
+Casa de Caridade da Mãe Iemanjá e Oxalá,Canoas,RS,novo_google,google,-29.9050506,-51.23902930000001,Soc. Africana Mãe Yemanja e Pai Oxalá.,0.638,None
+Casa de Caridade Ogum Beira Mar,Belo Horizonte,MG,google_melhor,google,-19.8570553,-43.9291767,Casa Ogum Beira Mar,0.809,5919
+Casa de Caridade Pai Jacob do Oriente,Belo Horizonte,MG,confirmado,google,-19.9068317,-43.9471899,Casa de Caridade Pai Jacob do Oriente,1.0,82
+Casa de Caridade Paz e Amor,VIamão,RS,nominatim_melhor,nominatim,-30.0680131,-51.108314,Fraternidade Espírita Dr. Bezerra de Menezes,0.406,1541
+Casa de Caridade Pogo Ladê,Ibirité,MG,confirmado_proximo,google,-19.9971541,-44.0898139,Casa De Caridade Poco Lade Umbanda E Candomble,0.667,321
+Casa de Caridade União Espírita Pai Xangô,Contagem,MG,nominatim_melhor,nominatim,-19.8604459,-44.0278064,Centro de Umbanda Morada de Xangô,0.4,11850
+Casa de Caridade Vovô Pedro de Aruanda,Contagem,MG,confirmado,google,-19.8595642,-44.0324084,CAVOP - Casa de Vô Pedro de Aruanda,0.712,76
+Casa de Cultura Afro Brasileira Folhas de Guiné,Santa Luzia,MG,nominatim_melhor,nominatim,-19.756701,-43.8468892,Nzo Katalelu Menha,0.271,7905
+Casa de Cura Rei Sebastião,Belém,PA,novo_google,google,-1.3870893,-48.43681950000001,Terreiro de Rei Sebastião e Toya Jarina,0.508,None
+Casa de Esperança e Caridade,Ananindeua,PA,google_melhor,google,-1.3523906,-48.3593469,Casa de Umbanda Fé e Caridade - CAUFC,0.667,5789
+Casa de Força Marujo de Oliveira,Ananindeua,PA,nominatim_melhor,nominatim,-1.3787688,-48.3694252,SEGEF ananindeua,0.143,3003
+Casa de Força São Jorge Guerreiro,Marituba,PA,novo_google,google,-23.4704929,-46.5269547,Casa São Jorge Guerreiro,0.889,None
+Casa de Herondina,Belém,PA,novo_google,google,-1.2387923,-48.559655,Terreiro de Umbanda Casa de Mãe Herondina,0.571,None
+Casa de Iansã com Xangô,São Leopoldo,RS,google_melhor,google,-29.720851,-51.1750659,Ilê Axé Reino de Xangô e Oxalá,0.468,3143
+Casa de Iansã e Ogum,Alvorada,RS,nominatim_melhor,nominatim,-30.0035512,-51.0652377,Centro Africano Ogum Onira e Iansã,0.353,1881
+Casa de Iansã e Ogum Megê,São Leopoldo,RS,google_melhor,google,-29.7132492,-51.1825392,C.E.U OGUM MEGÊ E IANSÃ,0.578,9078
+Casa de Jurema Caboclo Oxosse e Canindé Menino,Recife,PE,nominatim_melhor,nominatim,-7.9814063,-34.919079,Tenda de Jurema Santa Luzia 🌿,0.388,17567
+Casa de Luz Ogum e Iansã,Marituba,PA,novo_google_possivel,google,-1.3763844,-48.3220199,Ilê axé casa de Iemanjá e Ogum,0.417,None
+Casa de Maria Luziara,Olinda,PE,novo_google,google,-8.1408796,-34.9337307,Casarão Mestra Luziara,0.8,None
+Casa de Mariana,Belém,PA,novo_google,google,-1.4434844,-48.4600703,Casa de Mariana,1.0,None
+Casa de Mina Cabocla Herondina,Marituba,PA,google_melhor,google,-1.3837456,-48.311342,Casarão cabocla herondina,0.885,2929
+Casa de Mina Caboclo Zé Raimundo,Ananindeua,PA,novo_google,google,-1.3476594,-48.3719425,CASA DE MINA DE CABOCLO UBIRAJARA,0.714,None
+Casa de Mina do Caboclo Zé Pelintra,Belém,PA,novo_google,google,-1.3126131,-48.4785636,Casa de mina Malandro Zé Pelintra,0.847,None
+Casa de Mina do Rei Sebastião,Belém,PA,novo_google,google,-1.3870893,-48.43681950000001,Terreiro de Rei Sebastião e Toya Jarina,0.508,None
+Casa de Mina Estrela do Oriente,Benevides,PA,confirmado_proximo,google,-1.3081012,-48.3044877,Casa De Mina Estrela do Oriente,1.0,470
+Casa de Mina Jêje Nagô de D. Miguel,Belém,PA,novo_google,google,-1.3178539,-48.44068069999999,Aqueleomã - Casa de Mina Jêje Nagô,0.667,None
+Casa de Mina Jêje Nagô de Ogum e Iyemanjá,Ananindeua,PA,novo_google,google,-1.3436859,-48.4265833,Casa de Mina nagô Ogum mejê e Yemanjá Oguntè,0.763,None
+Casa de Mina Morada dos Encantados,Belém,PA,google_melhor,google,-1.4667309,-48.4664084,Terreiro de Mina Dois Irmãos,0.464,18220
+Casa de Mina Nagô Caboclo Ubirajara,Marituba,PA,google_melhor,google,-1.3591923,-48.3296701,Terreiro de mina nagô pena e maracá Cabocla Mariana e João da mata,0.457,1533
+Casa de Mina Nagô Estrela Dalva,Ananindeua,PA,google_melhor,google,-1.3511668,-48.3910018,Casa da Dona Joana do Guajará,0.51,747
+Casa de Mina Nagô Estrela Guia,Ananindeua,PA,divergente_inconclusivo,nominatim,-1.3339045,-48.4008724,Casa de Mina Nagô ESTRELA GUIA,1.0,18034
+Casa de Mina Nagô Olupandecy,Marituba,PA,divergente_inconclusivo,nominatim,-1.3611519,-48.3451809,Casa de Mina Nagô ESTRELA GUIA,0.692,18419
+Casa de Mina Nagô Rainha Yansã,Belém,PA,novo_google,google,-1.3384013,-48.47790819999999,CASA DE MINA NAGÔ XANGÔ E YEMANJÁ,0.772,None
+Casa de Mina Nagô Rei Sebastião,Marituba,PA,match_ruim,google,-1.3531134,-48.4473984,Instituição Religiosa Grande De Mina Djeje Nagô De Toy Lissà & Abê Manjá - Huevy,0.367,None
+Casa de Mina Nagô Xangô e Yemanjá,Ananindeua,PA,google_melhor,google,-1.3436859,-48.4265833,Casa de Mina nagô Ogum mejê e Yemanjá Oguntè,0.732,6645
+Casa de Mina Nagô Xangô e Yemanjá,Ananindeua,PA,novo_google,google,-1.3436859,-48.4265833,Casa de Mina nagô Ogum mejê e Yemanjá Oguntè,0.732,None
+Casa de Mina Nossa Senhora de Fátima,Ananindeua,PA,nominatim_melhor,nominatim,-1.3336071,-48.410223,Instituição Religiosa Grande De Mina Djeje Nagô De Toy Lissà & Abê Manjá - Huevy,0.4,4667
+Casa de Mina Rosa Légua,Belém,PA,nominatim_melhor,nominatim,-1.4706969,-48.4876695,Terreiro de Mina Dois Irmãos,0.4,2404
+Casa de Mineiro e Mineira,Belém,PA,google_melhor,google,-1.4552123,-48.4945604,A Casa Jambu Mineiro,0.571,4094
+Casa de Nação Ossanha e Obá,Porto Alegre,RS,google_melhor,google,-30.0983575,-51.2434086,Casa de Oxalá- Mãe Moça de Oxalá,0.49,11450
+Casa de Nossa Senhora do Perpétuo Socorro,Belém,PA,novo_google,google,-1.4574487,-48.4608616,Nossa Senhora Do Perpétuo Socorro,0.923,None
+Casa de Ogum Guerreiro Fraternidade de Oxum,Cachoeirinha,RS,novo_google,google,-29.8895234,-51.08998099999999,Reino de Xangô e Oxum,0.473,None
+Casa de Ogum Rompe Mato,Cachoeirinha,RS,nominatim_melhor,nominatim,-29.9142217,-51.0793972,Curso de Baralho Cigano Lenormand - Mãe Mirta de Ogum,0.246,580
+Casa de Omolu,Belém,PA,nominatim_melhor,nominatim,-1.2570619,-48.4571761,Casa Axé da Bahia,0.417,19052
+Casa de Oração do Caboclo Ubirajara e Pai Severo de Moçambique,Vespasiano,MG,nominatim_melhor,nominatim,-19.7760847,-43.9609606,,None,None
+Casa de Oração Rei Corisco,Raposos,MG,nominatim_melhor,nominatim,-19.9578917,-43.8060852,Paróquia de Nossa Senhora da Conceição - Raposos MG,0.394,1089
+Casa de Oração Sete Flechas,Belo Horizonte,MG,nominatim_melhor,nominatim,-19.9885104,-44.0406443,Tenda de Umbanda Caboclo Flecheiro e Sr.7 Pedreiras,0.361,18303
+Casa de Oração Vó Catarina,Belo Horizonte,MG,google_melhor,google,-19.8855261,-43.9380005,Casa de Vó Sebastiana,0.634,11122
+Casa de Oxalá,Igarassu,PE,nominatim_melhor,nominatim,-7.8148845,-34.9164467,Templo Umbandista Pai Oxalá TUPO,0.429,7422
+Casa de Oxalá e Oxum,Canoas,RS,google_melhor,google,-29.9369328,-51.1649031,Casa de Oxum e Oxalá,0.706,2937
+Casa de Oxalá Reino de Iemanjá,Porto Alegre,RS,google_melhor,google,-30.0009846,-51.1000112,Reino de Iemanjá,0.703,17748
+Casa de Oxóssi,Belo Horizonte,MG,google_melhor,google,-19.90782,-43.913924,Casa Oxossi,1.0,7241
+Casa de Oxossy,Marituba,PA,nominatim_melhor,nominatim,-1.3523647,-48.3474841,,None,None
+Casa de Oxum,Belo Horizonte,MG,google_melhor,google,-19.8308617,-43.996621,Casa de Caridade Águas de Oxum,0.545,871
+Casa de Oxum,São Lourenço da Mata,PE,google_melhor,google,-8.0056346,-35.0628527,Casa de Luz de Pai Oxalá,0.519,2261
+Casa de Oxumaré,Ribeirao das Neves,MG,novo_google_possivel,google,-19.785304,-43.9925952,Oxumare ile axe Pai Wellington,0.333,None
+Casa de Oxumaré,São Lourenço da Mata,PE,google_melhor,google,-8.0056346,-35.0628527,Casa de Luz de Pai Oxalá,0.533,3859
+Casa de Oyá,Belém,PA,novo_google,google,-1.4276883,-48.4727557,Casa Axé da Bahia,0.545,None
+Casa de Oyá,Belém,PA,novo_google,google,-1.4276883,-48.4727557,Casa Axé da Bahia,0.545,None
+Casa de Pai Benedito,Belo Horizonte,MG,google_melhor,google,-19.9227578,-43.9965748,Fraternidade Espírita Pai Benedito,0.627,13003
+Casa de Pai Kibá,Sabara,MG,nominatim_melhor,nominatim,-19.8807857,-43.8430112,Barril Chopperia Pizzaria e Churrascaria,0.34,3936
+Casa de Pai Oxalá,Porto Alegre,RS,google_melhor,google,-29.9886379,-51.125259,Casa Axé de Oxalá,0.857,2291
+Casa de Religião Africana Odé Taian Craot,Canoas,RS,novo_google,google,-29.91363459999999,-51.2052835,Casa De Religião Africana Ode Taiam,0.886,None
+Casa de Religião Africana Reino de Xapanã,Porto Alegre,RS,google_melhor,google,-30.1164264,-51.15152579999999,Casa Azul Reino Africano de Yemanja e Xapana,0.711,9115
+Casa de Santo Expedito,Rio Acima,MG,nominatim_melhor,nominatim,-20.0823705,-43.7906271,,None,None
+Casa de Umbanda Caboclo Tupiaçu,Marituba,PA,novo_google,google,-1.4302116,-48.4832748,Casa de Cabocla Mariana;Dom José Tupinambá e Zé Raimundo.,0.469,None
+Casa de Umbanda de Dona Carmita,Belém,PA,proximo_nome_diferente,nominatim,-1.4396791,-48.4706701,Terreiro de Umbanda Pai Xangô e Caboclo Rompe Mato,0.444,447
+Casa de Umbanda de Oxossi,Belém,PA,google_melhor,google,-1.336131,-48.4389994,Tenda de Umbanda Pai Oxóssi Caçador,0.627,7995
+Casa de Umbanda e Mina Nagô Yansã e Xangô,Belém,PA,google_melhor,google,-1.4650755,-48.4782866,Terreiro de mina yansã e xangô,0.615,1929
+Casa de Umbanda Jurema do Juremeiro e Destranca Rua das Almas,Sapucaia do Sul,RS,nominatim_melhor,nominatim,-29.8164156,-51.1393304,Centro Espírita Casa de Jurema,0.333,1096532
+Casa de Umbanda Mestre Gavião,Jaboatão dos Guararapes,PE,google_melhor,google,-8.1107792,-35.0204394,Casa Cobra Coral,0.476,12381
+Casa de Umbanda Ponto de Jurema,Belém,PA,novo_google,google,-1.3397083,-48.4463902,Templo de Umbanda Mãe Jurema e Pai Rompe Mato,0.478,None
+Casa de Umbanda São Sebastião,Ananindeua,PA,google_melhor,google,-1.3527805,-48.359552,Casa Umbanda Rei Sebastião,0.885,1685
+Casa de Vodun Kue Toy Gbadé,Belém,PA,nominatim_melhor,nominatim,-1.4630996,-48.4626366,Instituição Religiosa Grande De Mina Djeje Nagô De Toy Lissà & Abê Manjá - Huevy,0.298,12347
+Casa de Xangô Alafin,Recife,PE,nominatim_melhor,nominatim,-8.0198738,-34.9019578,Templo Espiritualista Pai Oxoce - A casa do Amigo.,0.262,10197
+Casa de Xangô Seara da Cabocla Jurema,São Jerônimo,RS,match_ruim,google,-22.913331,-43.270006,Centro Espírita Casa de Jurema,0.524,None
+Casa de Yansã,Olinda,PE,google_melhor,google,-8.0141878,-34.8501114,Palácio de Yemanjá,0.48,756
+Casa de Zé Raimundo,Belém,PA,novo_google,google,-1.4016443,-48.37070689999999,casa de zé Raimundo,1.0,None
+Casa do Amigo Pai Oxóssi,Recife,PE,proximo_nome_diferente,nominatim,-8.1093293,-34.9221988,Templo Espiritualista Pai Oxoce - A casa do Amigo.,0.308,3
+Casa do Caboclo Arranca Toco,Belém,PA,google_melhor,google,-1.4302116,-48.4832748,Casa de Cabocla Mariana;Dom José Tupinambá e Zé Raimundo.,0.462,4041
+Casa do Caboclo José Raimundo,Ananindeua,PA,google_melhor,google,-1.3324137,-48.401415,Casa De Umbanda Cabocla Herondina,0.5,2807
+Casa do Exu Bará Lodê,VIamão,RS,novo_google,google,-30.0496395,-51.10257499999999,Ile Bará Lodê,0.71,None
+Casa do Mestre Umbanda Branca Renovada,São Lourenço da Mata,PE,novo_google,google,-8.004382,-35.0318087,Casa dos Mestres Umbanda Branca Renovada,0.933,None
+Casa do Pai Tomé,Belém,PA,nominatim_melhor,nominatim,-1.4258799,-48.4724768,CASA DE VÓ BENEDITA e PAI OGUM das MATAS,0.4,10983
+Casa do Pescador Zé Raimundo,Belém,PA,nominatim_melhor,nominatim,-1.2675573,-48.5622733,,None,None
+Casa Espírita de Caridade Vovó Camélia,Esmeraldas,MG,divergente_inconclusivo,nominatim,-19.7615252,-44.3003418,Casa De Caridade Vovô Candinho,0.71,31702
+Casa Espírita de Umbanda São Jorge,Recife,PE,google_melhor,google,-8.068814699999999,-34.927251,Centro de Umbanda Paz e Luz,0.545,4520
+Casa Espírita Pai Xangô,Eldorado do Sul,CE,match_ruim,google,-19.9146747,-43.964518,Centro Espírita Pai Xangô,0.562,None
+Casa Légua Bogi,Belém,PA,novo_google,google,-1.3701881,-48.43801089999999,Casa de axé Caboclo Légua boji boá,0.609,None
+Casa Mamãe Oxum,Belém,PA,nominatim_melhor,nominatim,-1.4193465,-48.4821868,Terreiro de Umbanda Madrepérola,0.279,2996
+Casa Nagô Oxum Mirim,Olinda,PE,novo_google,google,-8.0026882,-34.93762,Roça Oxaguiã Oxum Iponda,0.545,None
+Casa Oxalá dos Montes Altos,Belo Horizonte,MG,novo_google,google,-19.9082144,-43.9473142,Casa Oxalá dos Montes Altos,1.0,None
+Casa Reino de Oxum e Xangô,Guaíba,RS,google_melhor,google,-30.1285148,-51.3398063,Reino de Oxum e Xangô,0.878,4471
+Casa Senhor do Bonfim,Contagem,MG,divergente_inconclusivo,nominatim,-19.8464869,-44.0254814,Casa Senhor do Bonfim - Pituba - Salvador/Ba,0.655,964538
+Castelo de Iansã,São Lourenço da Mata,PE,novo_google,google,-7.994460900000001,-35.0525621,Castelo de Iansã,1.0,None
+Castelo de Iansã,São Lourenço da Mata,PE,google_melhor,google,-7.994460900000001,-35.0525621,Castelo de Iansã,1.0,994
+Ceara Espírita Umbandista Pai José de Aruanda Caboclo Pedra Coral,Belo Horizonte,MG,google_melhor,google,-19.9128251,-43.9093483,Centro Espírita e Umbandista Irmãos de Luz – Tenda Pai José de Aruanda,0.537,1376
+Centro  Africano Pai Xangô,Gravataí,RS,confirmado_proximo,google,-29.921899,-51.052946,Centro africano Xangô agodô,0.808,197
+Centro  de Umbanda Sete Penas Brancas,Porto Alegre,RS,google_melhor,google,-30.00972,-51.13854000000001,Centro Espírita de Umbanda Sete Raios de Luz,0.582,2186
+Centro  Espírita Afro Umbandista Cabocla Rosinha,Araçoiaba,PE,nominatim_melhor,nominatim,-7.7840433,-35.0892356,,None,None
+Centro Africano  Xapanã e Oyá,Gravataí,RS,google_melhor,google,-29.921899,-51.052946,Centro africano Xangô agodô,0.727,1389
+Centro Africano 12 de Outubro,Alvorada,RS,google_melhor,google,-30.0158104,-51.08177509999999,Centro Africano,0.732,906
+Centro Africano 30 de Abril Ilê Xapanã e Oxum,Porto Alegre,RS,google_melhor,google,-29.99836,-51.195909,Centro Africano Oxum Pandá e Ogum Onira,0.642,11947
+Centro Africano Axé de Oxum Pandá; Ibeji e Exu Maria Navalha,Alvorada,RS,novo_google,google,-30.01035559999999,-51.0800778,Centro Africano Oxum e Xangô - Mae Etiene de Yemanjá,0.602,None
+Centro Africano Bará Agelu,Alvorada,RS,google_melhor,google,-29.9990533,-51.0843769,Centro africano bara lode,0.863,3590
+Centro Africano Bará Agelu,Alvorada,RS,novo_google,google,-29.9990533,-51.0843769,Centro africano bara lode,0.863,None
+Centro Africano Bará Agelu e Oxum Pandá,VIamão,RS,google_melhor,google,-30.0172538,-51.0183079,centro africano bara e oxum,0.818,9436
+Centro Africano Bará e Iemanjá,Gravataí,RS,google_melhor,google,-29.9286811,-50.931025,Centro de Umbanda Ogum Beira Mar e Mãe Iemanjá,0.658,12640
+Centro Africano Bará e Oiá,Alvorada,RS,google_melhor,google,-29.9990533,-51.0843769,Centro africano bara lode,0.863,2327
+Centro Africano Bará e Oxum,Porto Alegre,RS,google_melhor,google,-30.0183086,-51.0943574,Centro Africano Bará Lodê & Oyá,0.857,4660
+Centro Africano Bará Lodê com Oxum,Porto Alegre,RS,google_melhor,google,-30.0670174,-51.1594929,Centro Africano de Bara Lodê e Oba,0.862,9326
+Centro Africano Bará Lodê e Iansã,Alvorada,RS,google_melhor,google,-29.9990533,-51.0843769,Centro africano bara lode,0.862,506
+Centro Africano Bará Lodê e Oxum Nanã Borocô,Gravataí,RS,google_melhor,google,-29.926304,-51.0151663,Centro Afro do Reino de Xangô e Oxum,0.622,2266
+Centro Africano Beneficente Pai Oxalá e Mãe Iemanjá,VIamão,RS,novo_google,google,-30.1403983,-51.0808592,Centro Africano Reino de Oxalá - Pai Beto de Oxalá,0.624,None
+Centro Africano Cabocla Iara,Porto Alegre,RS,google_melhor,google,-30.0426786,-51.1571732,Centro de umbanda cabocla iara,0.8,5185
+Centro Africano Cacique Pena Branca Abassé Exu Veludo,Montenegro,RS,nominatim_melhor,nominatim,-29.6746076,-51.4698474,T. Q. E.V Templo de Quimbanda Exu veludo,0.432,839651
+Centro Africano Casa Pai Ogum,VIamão,RS,google_melhor,google,-30.0855761,-51.0165437,Centro Religioso Africano Ogum Onira,0.615,4041
+Centro Africano Cultural Beneficente Ilê da Mãe Oxum,Alvorada,RS,google_melhor,google,-30.0201426,-51.076272,Centro Africano Oxum E Xangô - Ilê Bara e Oxum,0.667,1354
+Centro Africano das Mães Iemanjá e Oxum - Taba de Pai Ogum,Porto Alegre,RS,google_melhor,google,-30.0517388,-51.1473218,Centro africano do reino de Ogum e oxum . Abasse cigano Juan e Maria Quitéria,0.557,5417
+Centro Africano de Iansã,Gravataí,RS,novo_google,google,-29.9235403,-51.0356096,Centro africanos de xangô e Iansã,0.824,None
+Centro Africano de Iansã e Ogum,Guaíba,RS,novo_google_possivel,google,-30.1549978,-51.32563099999999,Centro De Umbanda E Kimbanda Reino De Ogum E Iansã,0.444,None
+Centro Africano de Iemanjá e Ogum Beira Mar,Gravataí,RS,google_melhor,google,-29.9352717,-51.0626922,CENTRO DE RELIGIÃO AFRICANA REINO DE OGUN ONIRA,0.642,1814
+Centro Africano de Iemanjá e Xangô,Porto Alegre,RS,google_melhor,google,-30.0678514,-51.1779449,Centro Africano Ilê Asé Yemanjá Yabomi,0.754,3011
+Centro Africano de Iemanjá Lomi com Oxalá,Porto Alegre,RS,google_melhor,google,-30.2252316,-51.0908664,Centro Africano de Iemanjá e Oxalá,0.87,13173
+Centro Africano de Ilê Ogum Onira,Novo Hamburgo,RS,nominatim_melhor,nominatim,-29.6656366,-51.1030869,Instituto Cultural Omi Nirê -Reino de Oxum,0.353,7135
+Centro Africano de Nação Cabinda Bará e Oxalá,Porto Alegre,RS,google_melhor,google,-30.0796815,-51.2243894,Centro Africano Oxalá e Iemanjá - Nação Cabinda - Pai Fábio de Oxalá,0.718,8254
+Centro Africano de Obá Ossin,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.678,4177
+Centro Africano de Odé e Oxum - Centro de Umbanda Guerreiros da Paz Caboclo Rompe Mato e Jurema,Guaíba,RS,novo_google,google,-29.7962972,-51.12857220000001,Centro de Umbanda Ogum Rompe Mato,0.491,None
+Centro Africano de Ogum,Porto Alegre,RS,google_melhor,google,-30.1691498,-51.1809176,Centro Africano Ogum Onira,0.87,14051
+Centro Africano de Ogum e Iansã,Porto Alegre,RS,google_melhor,google,-30.1691498,-51.1809176,Centro Africano Ogum Onira,0.852,10494
+Centro Africano de Ogum e Iemanjá,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.844,3731
+Centro Africano de Ogum Onira e Oxum Pandá,VIamão,RS,google_melhor,google,-30.0642242,-51.0997553,Centro Africano Ogum Onira Clansè Daniel,0.785,6748
+Centro Africano de Ossanha,Porto Alegre,RS,novo_google,google,-30.156698,-51.13781549999999,Centro Afro Reino de Oxalá,0.739,None
+Centro Africano de Oxalá e Oxum,Gravataí,RS,google_melhor,google,-29.9405234,-51.0670739,Centro Africano Reino Xangô E Oxum,0.839,13279
+Centro Africano de Oxum Pandá e Centro de Umbanda Jurema da Justiça,Sapiranga,RS,divergente_inconclusivo,nominatim,-29.6357281,-51.0009442,Centro Africano Oxum Pandá e Ogum Onira,0.66,44494
+Centro Africano de Oxum Pandá Sociedade Afro Beneficente Sete Encruzilhadas das Almas,Sapucaia do Sul,RS,proximo_nome_diferente,nominatim,-29.8200395,-51.1519626,Afrobras - Centro Ogum Elefa Oxum e Ossanha,0.293,249
+Centro Africano de Oyá,Porto Alegre,RS,google_melhor,google,-30.00909729999999,-51.1136334,Centro Africano Raios De Oyá,0.864,11049
+Centro Africano de Umbanda e Nação Reino de Bará e Iansã,Porto Alegre,RS,novo_google,google,-30.156698,-51.13781549999999,Centro Afro Reino de Oxalá,0.548,None
+Centro Africano de Umbanda Nossa Senhora dos Navegantes Fraternidade Ogum Iara Abassé de Maria Mulambo,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.462,3450
+Centro Africano de Umbanda Ogum Beira Mar e Iansã,VIamão,RS,novo_google,google,-30.0535082,-51.1032168,Centro de Umbanda Ogum e Iansã,0.74,None
+Centro Africano de Umbanda Ogum Naruê,Porto Alegre,RS,novo_google,google,-29.99836,-51.195909,Centro Africano Oxum Pandá e Ogum Onira,0.822,None
+Centro Africano de Umbanda Santa Bárbara Fraternidade Cabocla Jurema Abassé de Pomba Gira Dama da Noite,Alvorada,RS,nominatim_melhor,nominatim,-29.9990738,-51.0520158,Centro Africano Ogum Onira e Iansã,0.406,3020
+Centro Africano de Umbanda Xangô Aganju e Oxum Pandá,Porto Alegre,RS,google_melhor,google,-30.1688347,-51.18224,CENTRO AFRICANO XANGÔ AGANJU E OXUM PANDA,0.911,11814
+Centro Africano de Xangô,Alvorada,RS,google_melhor,google,-30.0118254,-51.0386569,Centro Africano e Umbandista Xangô e Obá,0.689,2921
+Centro Africano de Xangô Angajú,Porto Alegre,RS,google_melhor,google,-30.1688347,-51.18224,CENTRO AFRICANO XANGÔ AGANJU E OXUM PANDA,0.783,10071
+Centro Africano de Xangô e Oiá,Alvorada,RS,google_melhor,google,-30.0118254,-51.0386569,Centro Africano e Umbandista Xangô e Obá,0.776,3987
+Centro Africano Divino Espírito Santo,Porto Alegre,RS,google_melhor,google,-30.03654299999999,-51.2100832,Irmandade do Divino Espírito Santo,0.735,25859
+Centro Africano do Bará,VIamão,RS,google_melhor,google,-30.1530614,-51.07474310000001,Centro africano bara aguelu,0.851,4407
+Centro Africano e Umbanda Mamãe Oxum,Novo Hamburgo,RS,nominatim_melhor,nominatim,-29.7275889,-51.1370955,Centro de umbanda Oxum das cachoeiras e Xangô das pedreiras,0.413,1568
+Centro Africano e Umbandista Pai Oxalá e Oxum e Pai Ogum,VIamão,RS,google_melhor,google,-30.0747823,-51.1101947,Centro Afro De Umbanda Estrelas De Oxalá,0.6,10398
+Centro Africano Filhos de Xangô,Alvorada,RS,google_melhor,google,-30.001986,-51.0488071,CAFF Centro Africano Filhos de Fé,0.793,1902
+Centro Africano Filhos do Silêncio,Nova Santa Rita,RS,novo_google_possivel,google,-29.8324748,-51.2504031,CEU Luz da Nova Era,0.298,None
+Centro Africano Guardiões de Oxalá,Guaíba,RS,google_melhor,google,-30.1254998,-51.357238,Ilê Africano De Oxum Panda E Oxala Bocum,0.618,5864
+Centro Africano Iansã e Bará,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.677,2227
+Centro Africano Iansã e Ogum,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.677,2207
+Centro Africano Iemanjá Cacique Sete Flechas,VIamão,RS,google_melhor,google,-30.0803086,-51.102269,Centro de Umbanda Cacique Sete Flechas,0.785,4169
+Centro Africano Iemanjá e Oxalá,Canoas,RS,novo_google,google,-29.903577,-51.218996,Centro Africano Mae Oxum E Pai Oxala,0.776,None
+Centro Africano Iemanjá e Oxalá Fraternidade Ogum Beira Mar,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.559,2186
+Centro Africano Ilê Axé Iemanjá,Porto Alegre,RS,confirmado,google,-30.053606,-51.1499087,Centro Africano Ilê Axé Iemanjá Omidarewá,0.861,52
+Centro Africano Ilê de Oxum e Xangô,Porto Alegre,RS,google_melhor,google,-30.0219365,-51.1290071,Centro Africano Xango e Oxum,0.733,3435
+Centro Africano Ilê de Xangô e Oxum,Porto Alegre,RS,novo_google,google,-30.0219365,-51.1290071,Centro Africano Xango e Oxum,0.933,None
+Centro Africano Ilê Iemanjá e Oxalá,Alvorada,RS,google_melhor,google,-30.0178213,-51.0566397,Reino Africano Oxalá e Iemanjá,0.708,2596
+Centro Africano Inhansã e Ogum,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.656,1031
+Centro Africano Jaldemir de Aganjú,Porto Alegre,RS,google_melhor,google,-29.9937556,-51.1219836,Centro Africano Xangô Agadjú Deí,0.73,8631
+Centro Africano José Filintra,Camaragibe,PE,novo_google_possivel,google,-8.0279016,-34.9804389,Terreiro de Jurema Reino dos Mares,0.433,None
+Centro Africano Mãe Iemanjá,Porto Alegre,RS,google_melhor,google,-30.1035472,-51.2264411,Centro Africano Reini de Iemanja,0.893,10046
+Centro Africano Mãe Iemanjá,São Leopoldo,RS,novo_google_possivel,google,-29.7688332,-51.1676831,Ilê Afro Umbandista Reino de Iemanjá - Mãe Cássia de Iemanjá,0.405,None
+Centro Africano Mãe Iemanjá e Cabocla Jurema,VIamão,RS,google_melhor,google,-30.0579628,-51.0913179,Centro de Umbanda IEMANJÁ E OGUM,0.63,8910
+Centro Africano Mãe Iemanjá Fraternidade de Jurema,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.568,1265
+Centro Africano Mãe Oxum e Pai Xangô,Alvorada,RS,novo_google,google,-30.0201426,-51.076272,Centro Africano Oxum E Xangô - Ilê Bara e Oxum,0.7,None
+Centro Africano Mãe Oxum Pandá,Porto Alegre,RS,confirmado_proximo,google,-30.0816553,-51.1934579,Centro Africano Oxum Panda,0.929,191
+Centro Africano Mãe Yansã e Pai Xangô,Porto Alegre,RS,google_melhor,google,-30.0391219,-51.2213426,Casa Africana Reino de Oxalá- Pai Zeca de Xangô,0.597,5556
+Centro Africano Mãe Yemanjá,Porto Alegre,RS,google_melhor,google,-30.0678514,-51.1779449,Centro Africano Ilê Asé Yemanjá Yabomi,0.8,2375
+Centro Africano Mensageiro da Paz,Esteio,RS,google_melhor,google,-29.8553534,-51.1685789,Centro Africano São Sebastião,0.712,1782
+Centro Africano Nagô Mina Bará e Iansã,VIamão,RS,google_melhor,google,-30.0535082,-51.1032168,Centro de Umbanda Ogum e Iansã,0.585,4094
+Centro Africano Nossa Senhora Aparecida,Porto Alegre,RS,google_melhor,google,-30.0130732,-51.198145,Centro Espírita de Umbanda Nossa Senhora Aparecida,0.743,7020
+Centro Africano Nossa Senhora Aparecida Fraternidade Mãe Jurema,Canoas,RS,google_melhor,google,-29.9328384,-51.1758758,Terreira de Mãe Maria Fraternidade Caboclo Sete Flechas,0.539,3989
+Centro Africano Nossa Senhora da Conceição,Canoas,RS,google_melhor,google,-29.90587799999999,-51.1310663,Centro Africano Reino de Oxum,0.615,6865
+Centro Africano Nossa Senhora da Conceição,Porto Alegre,RS,google_melhor,google,-30.1108353,-51.2395593,Mãe Ana da Oxum - Centro Africano Nossa Senhora da Conceição,0.857,8860
+Centro Africano Nossa Senhora das Graças,Canoas,RS,novo_google,google,-29.9284089,-51.198807,Centro Africano Reino De Pai Xangô,0.62,None
+Centro Africano Nossa Senhora das Graças e São Miguel Arcanjo,Porto Alegre,RS,google_melhor,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.636,9489
+Centro Africano Nossa Senhora dos Navegantes e Umbanda Mãe Yara,Porto Alegre,RS,google_melhor,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.459,5566
+Centro Africano Nossa Senhora dos Passos,Novo Hamburgo,RS,nominatim_melhor,nominatim,-29.7330669,-51.133799,Brilhos de Oxum - Yeshua,0.237,5163
+Centro Africano Nosso Senhor do Bonfim,Porto Alegre,RS,google_melhor,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.593,6819
+Centro Africano Odé e Otim,Porto Alegre,RS,google_melhor,google,-30.0219365,-51.1290071,Centro Africano Xango e Oxum,0.815,9168
+Centro Africano Ogum Adiolá,Canoas,RS,google_melhor,google,-29.90516319999999,-51.2324869,Centro Africano Ogum e Iemanja,0.807,2147
+Centro Africano Ogum Beira Mar,Montenegro,RS,divergente_inconclusivo,nominatim,-29.687214,-51.463077,Centro Espírita de Umbanda São Jorge - Ogum Beira mar,0.613,45803
+Centro Africano Ogum e Iansã,Canoas,RS,google_melhor,google,-29.90516319999999,-51.2324869,Centro Africano Ogum e Iemanja,0.931,1967
+Centro Africano Ogum e Iansã,Canoas,RS,google_melhor,google,-29.90516319999999,-51.2324869,Centro Africano Ogum e Iemanja,0.931,884
+Centro Africano Ogum e Iansã,VIamão,RS,google_melhor,google,-30.0213585,-51.0200057,Centro Africano Xangô e Iansã,0.877,9181
+Centro Africano Ogum e Inhançã,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.844,836
+Centro Africano Ogum e Inhansã,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.875,669
+Centro Africano Ogum e Matamba,Porto Alegre,RS,nominatim_melhor,nominatim,-30.1769091,-51.1754066,Centro de Umbanda Morada da Iansã,0.386,19703
+Centro Africano Ogum e Oxum,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.754,859
+Centro Africano Ogum e Oyá,Gravataí,RS,google_melhor,google,-29.9405234,-51.0670739,Centro Africano Reino Xangô E Oxum,0.733,3565
+Centro Africano Ogum e Yemanjá,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.812,3232
+Centro Africano Ogum Guerreiro,Porto Alegre,RS,novo_google,google,-30.0517388,-51.1473218,Centro africano do reino de Ogum e oxum . Abasse cigano Juan e Maria Quitéria,0.525,None
+Centro Africano Ogum Iara Reino de Ogum Onira,Cachoeirinha,RS,novo_google,google,-29.9060248,-51.0834792,Centro afro ogum Onira,0.688,None
+Centro Africano Ogum Megê e Reino do Exu Morcego,Arroio dos Ratos,RS,nominatim_melhor,nominatim,-30.0827697,-51.7506292,Associação Beneficiente Reino de Oxum Maré e Falangeiros de Ogum Megê,0.296,62432
+Centro Africano Ogum Onira e Yansã,Porto Alegre,RS,google_melhor,google,-30.1691498,-51.1809176,Centro Africano Ogum Onira,0.867,8672
+Centro Africano Ogum Onira no Reino de Yansã,Gravataí,RS,google_melhor,google,-29.901397,-50.99126,Centro Afro do Reino de Yansã,0.719,6681
+Centro Africano Ogum Onire e Oyá Niké,Gravataí,RS,google_melhor,google,-29.9352717,-51.0626922,CENTRO DE RELIGIÃO AFRICANA REINO DE OGUN ONIRA,0.667,3057
+Centro Africano Oiá e Ogum,Porto Alegre,RS,google_melhor,google,-29.99836,-51.195909,Centro Africano Oxum Pandá e Ogum Onira,0.769,17143
+Centro Africano Oxalá e Iemanjá,VIamão,RS,google_melhor,google,-30.0823738,-51.1082085,Centro Africano Reino de Oxalá,0.724,11305
+Centro Africano Oxalá e Iemanjá Fraternidade de Ogum Megê e Oxóssi,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.515,2186
+Centro Africano Oxalá e Oxum,Canoas,RS,google_melhor,google,-29.90587799999999,-51.1310663,Centro Africano Reino de Oxum,0.815,824
+Centro Africano Oxalá e Oxum,Alvorada,RS,google_melhor,google,-30.0201426,-51.076272,Centro Africano Oxum E Xangô - Ilê Bara e Oxum,0.778,3752
+Centro Africano Oxalá e Oxum Caboclo Ogum Megê e Iansã - Abassé de Exu Tata Caveira,Canoas,RS,novo_google_possivel,google,-29.90587799999999,-51.1310663,Centro Africano Reino de Oxum,0.423,None
+Centro Africano Oxalá e Oyá,Porto Alegre,RS,novo_google,google,-30.156698,-51.13781549999999,Centro Afro Reino de Oxalá,0.76,None
+Centro Africano Oxum Bomi Docô,Porto Alegre,RS,google_melhor,google,-30.0816553,-51.1934579,Centro Africano Oxum Panda,0.786,5257
+Centro Africano Oxum Docô,Porto Alegre,RS,google_melhor,google,-30.0816553,-51.1934579,Centro Africano Oxum Panda,0.863,10915
+Centro Africano Oxum Docô Xangô Agodô,Porto Alegre,RS,novo_google,google,-30.0219365,-51.1290071,Centro Africano Xango e Oxum,0.708,None
+Centro Africano Oxum e Iemanjá,Porto Alegre,RS,google_melhor,google,-30.053606,-51.1499087,Centro Africano Ilê Axé Iemanjá Omidarewá,0.732,11521
+Centro Africano Oxum e Oxalá e Mãe Jurema,Porto Alegre,RS,google_melhor,google,-30.15527759999999,-51.1799057,Sociedade Africana Reino de Mãe Oxum e Cabocla Jurema,0.637,9012
+Centro Africano Oxum e Xangô,Alvorada,RS,google_melhor,google,-30.0201426,-51.076272,Centro Africano Oxum E Xangô - Ilê Bara e Oxum,0.778,1475
+Centro Africano Oxum e Xangô,VIamão,RS,google_melhor,google,-30.0333905,-51.0505144,Centro Africano Oxum Olobomí,0.786,5295
+Centro Africano Oxum e Xangô,Canoas,RS,google_melhor,google,-29.9284089,-51.198807,Centro Africano Reino De Pai Xangô,0.814,6299
+Centro Africano Oxum e Xangô,Porto Alegre,RS,google_melhor,google,-30.0219365,-51.1290071,Centro Africano Xango e Oxum,0.75,10197
+Centro Africano Oxum Epandá e Xangô Aganjú,VIamão,RS,google_melhor,google,-30.0575597,-51.1085103,Centro Africano De Oxum Pandá e Ogum Adiolá,0.805,8969
+Centro Africano Oxum no Reino de Oxalá,Porto Alegre,RS,google_melhor,google,-30.156698,-51.13781549999999,Centro Afro Reino de Oxalá,0.793,1494
+Centro Africano Oxum Pai Xangô,Porto Alegre,RS,google_melhor,google,-30.0572973,-51.1474519,Centro Africano Pai Luiz de Oxalá,0.733,12112
+Centro Africano Oxum Panda,Porto Alegre,RS,google_melhor,google,-30.0816553,-51.1934579,Centro Africano Oxum Panda,1.0,9382
+Centro Africano Oxum Pandá,Esteio,RS,google_melhor,google,-29.8421807,-51.1537303,Centro africano Reino de Odé e Obá,0.667,1858
+Centro Africano Oxum Pandá e Xangô Aganjú,Porto Alegre,RS,confirmado_proximo,google,-30.0816553,-51.1934579,Centro Africano Oxum Panda,0.776,163
+Centro Africano Oxum Pandá e Xangô Aganjú,Gravataí,RS,google_melhor,google,-29.921899,-51.052946,Centro africano Xangô agodô,0.706,1255
+Centro Africano Oxum Pandá e Xangô Aganju,São Leopoldo,RS,google_melhor,google,-29.7659875,-51.0927587,Centro De Umbanda Xango Da Mata Virgem,0.603,2251
+Centro Africano Oxum Pandamirê,Porto Alegre,RS,google_melhor,google,-30.0816553,-51.1934579,Centro Africano Oxum Panda,0.929,4547
+Centro Africano Oyá e Ogum,Gravataí,RS,google_melhor,google,-29.9438488,-51.0371916,Ilê Africano Reino de Obá e Ogum,0.727,3990
+Centro Africano Oyá e Ogum - Abassé de Pomba Gira Rosa Caveira,Canoas,RS,novo_google,google,-29.90587799999999,-51.1310663,Centro Africano Reino de Oxum,0.506,None
+Centro Africano Oyá e Oxalá Abasse Exu Tranca Ruas,VIamão,RS,google_melhor,google,-30.0906943,-51.06877919999999,Centro Africano Xangô Aganju e Oxalá Bocum,0.63,17897
+Centro Africano Oyá e Xangô,São Leopoldo,RS,google_melhor,google,-29.7659875,-51.0927587,Centro De Umbanda Xango Da Mata Virgem,0.542,2471
+Centro Africano Oyá Timboá,Guaíba,RS,nominatim_melhor,nominatim,-30.0921764,-51.3337032,Manzo Maza Mpenza - Terreiro Águas Claras,0.277,5976
+Centro Africano Oya Timboá Fraternidade Iansã das Sete Cachoeiras,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.525,836
+Centro Africano Pai Luiz de Oxalá e Exu Tiriri,Porto Alegre,RS,google_melhor,google,-30.0572973,-51.1474519,Centro Africano Pai Luiz de Oxalá,0.822,819
+Centro Africano Pai Ogum Onira,Gravataí,RS,google_melhor,google,-29.9352717,-51.0626922,CENTRO DE RELIGIÃO AFRICANA REINO DE OGUN ONIRA,0.732,2817
+Centro Africano Pai Oxalá,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.678,1317
+Centro Africano Pai Oxalá,Porto Alegre,RS,google_melhor,google,-30.0572973,-51.1474519,Centro Africano Pai Luiz de Oxalá,0.909,7361
+Centro Africano Pai Oxalá,Porto Alegre,RS,google_melhor,google,-30.0572973,-51.1474519,Centro Africano Pai Luiz de Oxalá,0.909,1320
+Centro Africano Pai Oxalá e Mãe Iemanjá,Canoas,RS,google_melhor,google,-29.903577,-51.218996,Centro Africano Mae Oxum E Pai Oxala,0.667,8039
+Centro Africano Pai Xangô e Mãe Oxum,Porto Alegre,RS,google_melhor,google,-30.0219365,-51.1290071,Centro Africano Xango e Oxum,0.875,9110
+Centro Africano Pai Xapanã,Alvorada,RS,google_melhor,google,-30.0278997,-51.049085,Pai Mauro de Xapanã Sapata/ Centro-Africano,0.462,3992
+Centro Africano Pai Xapanã,Porto Alegre,RS,google_melhor,google,-30.0391219,-51.2213426,Casa Africana Reino de Oxalá- Pai Zeca de Xangô,0.545,5367
+Centro Africano Pajé Guarani,Sapucaia do Sul,RS,google_melhor,google,-29.8415796,-51.1498409,Templo Afro yemanja e Ogum,0.519,3589
+Centro Africano Potocó de Oyá,Alvorada,RS,google_melhor,google,-30.0158104,-51.08177509999999,Centro Africano,0.732,1351
+Centro Africano Rei de Urubá,Recife,PE,novo_google,google,-8.068814699999999,-34.927251,Centro de Umbanda Paz e Luz,0.531,None
+Centro Africano Reino da  Iemanjá,Gravataí,RS,google_melhor,google,-29.901397,-50.99126,Centro Afro do Reino de Yansã,0.808,7172
+Centro Africano Reino da Mãe Oxum Fraternidade Cabocla Jurema,Porto Alegre,RS,google_melhor,google,-30.15527759999999,-51.1799057,Sociedade Africana Reino de Mãe Oxum e Cabocla Jurema,0.778,9056
+Centro Africano Reino de Aganjú Fraternidade Xangô das Cachoeiras,Porto Alegre,RS,google_melhor,google,-30.0391219,-51.2213426,Casa Africana Reino de Oxalá- Pai Zeca de Xangô,0.549,6723
+Centro Africano Reino de Bará,VIamão,RS,confirmado,google,-30.1021793,-51.0680366,Centro Africano Reino de Bará Agelú,0.897,97
+Centro Africano Reino de Iansã,Canoas,RS,novo_google,google,-29.90587799999999,-51.1310663,Centro Africano Reino de Oxum,0.83,None
+Centro Africano Reino de Iansã e Xangô,VIamão,RS,novo_google,google,-30.0744716,-51.1049917,Centro africano reino de Iansã e Xapanã,0.93,None
+Centro Africano Reino de Iemanjá e Oxalá,Porto Alegre,RS,google_melhor,google,-30.2252316,-51.0908664,Centro Africano de Iemanjá e Oxalá,0.912,8734
+Centro Africano Reino de Mãe Oxum,Porto Alegre,RS,google_melhor,google,-30.1681585,-51.1389537,Centro Africano Reino De Oxum Panda E Xapanã,0.732,6416
+Centro Africano Reino de Mãe Oxum,Estância Velha,RS,google_melhor,google,-29.9160055,-51.1362703,Ilê Africano d' Oxum - Mãe Cris d' Oxum,0.689,28018
+Centro Africano Reino de Odé,Gravataí,RS,google_melhor,google,-29.9405234,-51.0670739,Centro Africano Reino Xangô E Oxum,0.814,1548
+Centro Africano Reino de Ogum,Porto Alegre,RS,google_melhor,google,-30.0516183,-51.1472163,Centro africano Reino de Ogum e Oxum,0.881,2922
+Centro Africano Reino de Ogum e Obá,Canoas,RS,google_melhor,google,-29.9398709,-51.1649596,Centro Africano Reino de Ogum e Oxum,0.923,2569
+Centro Africano Reino de Oxalá,Porto Alegre,RS,google_melhor,google,-30.156698,-51.13781549999999,Centro Afro Reino de Oxalá,0.92,13328
+Centro Africano Reino de Oxalá,Porto Alegre,RS,google_melhor,google,-30.156698,-51.13781549999999,Centro Afro Reino de Oxalá,0.92,12385
+Centro Africano Reino de Oxalá,Gravataí,RS,google_melhor,google,-29.901397,-50.99126,Centro Afro do Reino de Yansã,0.8,7172
+Centro Africano Reino de Oxalá,Guaíba,RS,google_melhor,google,-30.0903323,-51.3222062,Associação Beneficente Africana Oxalá e Yemanjá,0.486,5397
+Centro Africano Reino de Oxalá e Iemanjá,Canoas,RS,google_melhor,google,-29.90587799999999,-51.1310663,Centro Africano Reino de Oxum,0.794,7923
+Centro Africano Reino de Oxum Docô,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.615,2426
+Centro Africano Reino de Oxum e Oxalá,Porto Alegre,RS,google_melhor,google,-30.1681585,-51.1389537,Centro Africano Reino De Oxum Panda E Xapanã,0.853,12713
+Centro Africano Reino de Oxum e Oxalá,Porto Alegre,RS,google_melhor,google,-30.1681585,-51.1389537,Centro Africano Reino De Oxum Panda E Xapanã,0.853,12666
+Centro Africano Reino de Oxum e Xangô,Porto Alegre,RS,novo_google,google,-30.1681585,-51.1389537,Centro Africano Reino De Oxum Panda E Xapanã,0.853,None
+Centro Africano Reino de Oxum Pandá,Porto Alegre,RS,google_melhor,google,-30.0816553,-51.1934579,Centro Africano Oxum Panda,0.897,4187
+Centro Africano Reino de Xangô,Guaíba,RS,novo_google_possivel,google,-30.123442,-51.3158132,C.E.U Reino de Xangô e Cabocla Jurema Flecheira - Umbanda,0.38,None
+Centro Africano Reino de Xangô,Eldorado do Sul,RS,divergente_inconclusivo,nominatim,-29.9967211,-51.310311,Centro Africano Reino de Oxum,0.868,20007
+Centro Africano Reino de Xangô,Porto Alegre,RS,google_melhor,google,-30.0647106,-51.2035233,Centro Afro Brasileiro Reino de Xangô,0.787,4779
+Centro Africano Reino de Xangô Agodô,Gravataí,RS,google_melhor,google,-29.921899,-51.052946,Centro africano Xangô agodô,0.9,4863
+Centro Africano Reino de Xangô e Obá,Canoas,RS,google_melhor,google,-29.9284089,-51.198807,Centro Africano Reino De Pai Xangô,0.844,4288
+Centro Africano Reino de Xangô e Oxum,Canoas,RS,google_melhor,google,-29.9398709,-51.1649596,Centro Africano Reino de Ogum e Oxum,0.896,5839
+Centro Africano Reino de Xapanã e Oxum,Canoas,RS,google_melhor,google,-29.9398709,-51.1649596,Centro Africano Reino de Ogum e Oxum,0.882,5108
+Centro Africano Reino de Yansã e Ogum,Porto Alegre,RS,google_melhor,google,-30.1597168,-51.1410245,Centro Africano Reino de Iansã,0.852,8898
+Centro Africano Reino de Yemanjá,Canoas,RS,google_melhor,google,-29.90587799999999,-51.1310663,Centro Africano Reino de Oxum,0.836,9155
+Centro Africano Reino de Yemanjá,VIamão,RS,google_melhor,google,-30.1511234,-50.8638789,Centro Africano Reino de Iansa,0.893,24664
+Centro Africano Religião de Umbanda Mãe Oxum e Pai Ogum,Porto Alegre,RS,google_melhor,google,-30.0517388,-51.1473218,Centro africano do reino de Ogum e oxum . Abasse cigano Juan e Maria Quitéria,0.612,5996
+Centro Africano Santa Bárbara,VIamão,RS,google_melhor,google,-30.1021793,-51.0680366,Centro Africano Reino de Bará Agelú,0.754,1240
+Centro Africano Santa Bárbara e São Miguel,VIamão,RS,nominatim_melhor,nominatim,-30.084909,-51.0886954,Sociedade beneficente Centro Africano Oxalá Lerum e Oxalá Bocum,0.419,4021
+Centro Africano Santa Catarina,Porto Alegre,RS,google_melhor,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.605,3270
+Centro Africano Santo Antônio,Porto Alegre,RS,novo_google,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.667,None
+Centro Africano Santo Antônio,Gravataí,RS,google_melhor,google,-29.926304,-51.0151663,Centro Afro do Reino de Xangô e Oxum,0.644,3771
+Centro Africano Santo Antônio,Porto Alegre,RS,google_melhor,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.667,11408
+Centro Africano Santo Antônio - Ilê Bará Lanã,Porto Alegre,RS,google_melhor,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.607,9405
+Centro Africano São Jerônimo,Porto Alegre,RS,google_melhor,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.622,5108
+Centro Africano São João Batista,Olinda,PE,novo_google,google,-7.964285899999999,-34.8443704,Centro Africano São João Batista,1.0,None
+Centro Africano São João Batista,Gravataí,RS,google_melhor,google,-29.9502938,-51.0677221,Ilê Africano de Xangô Agodô Pai Luis,0.615,3580
+Centro Africano São João Batista,Olinda,PE,google_melhor,google,-7.964285899999999,-34.8443704,Centro Africano São João Batista,1.0,6534
+Centro Africano São Jorge,Alvorada,RS,google_melhor,google,-30.001986,-51.0488071,CAFF Centro Africano Filhos de Fé,0.691,4795
+Centro Africano São Miguel,VIamão,RS,novo_google_possivel,google,-30.0844828,-51.0469115,Sociedade beneficente Centro Africano Oxalá Lerum e Oxalá Bocum,0.449,None
+Centro Africano São Miguel Arcanjo,Porto Alegre,RS,confirmado,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.85,25
+Centro Africano São Miguel Arcanjo,Alvorada,RS,google_melhor,google,-29.9989526,-51.08581969999999,Centro Africano São Miguel Arcanjo - Fraternidade Pai Ogum,0.756,3576
+Centro Africano São Miguel Arcanjo,Porto Alegre,RS,google_melhor,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.85,9589
+Centro Africano São Miguel Arcanjo e Mãe Oxum,Porto Alegre,RS,google_melhor,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.813,6376
+Centro Africano São Miguel e Oyá Fraternidade Ogum Iara,Alvorada,RS,novo_google,google,-29.9989526,-51.08581969999999,Centro Africano São Miguel Arcanjo - Fraternidade Pai Ogum,0.829,None
+Centro Africano São Miguel Fraternidade Pai Ogum,Alvorada,RS,confirmado_proximo,google,-29.9989526,-51.08581969999999,Centro Africano São Miguel Arcanjo - Fraternidade Pai Ogum,0.923,199
+Centro Africano São Pedro,VIamão,RS,google_melhor,google,-30.095951,-51.0675454,Centro de Religião Africana Oxalá e Oxum,0.548,1376
+Centro Africano São Pedro e Santa Bárbara,VIamão,RS,novo_google,google,-30.0844828,-51.0469115,Sociedade beneficente Centro Africano Oxalá Lerum e Oxalá Bocum,0.519,None
+Centro Africano São Sebastião Odé e Oxum,Esteio,RS,google_melhor,google,-29.8553534,-51.1685789,Centro Africano São Sebastião,0.841,1176
+Centro Africano Sol Nascente e Mãe Yemanjá,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.684,1874
+Centro Africano Tiriri Lanã,Porto Alegre,RS,novo_google,google,-30.0691095,-51.1465561,Templo tiriri lana,0.622,None
+Centro Africano Umbanda e Quimbanda de Mãe Iansã,Guaíba,RS,novo_google,google,-30.1549978,-51.32563099999999,Centro De Umbanda E Kimbanda Reino De Ogum E Iansã,0.719,None
+Centro Africano Xangô Agandju,Porto Alegre,RS,google_melhor,google,-29.9937556,-51.1219836,Centro Africano Xangô Agadjú Deí,0.918,16804
+Centro Africano Xangô Aganjú,Porto Alegre,RS,google_melhor,google,-29.9937556,-51.1219836,Centro Africano Xangô Agadjú Deí,0.9,17538
+Centro Africano Xangô Aganju e Iemanjá Bomi,Novo Hamburgo,RS,divergente_inconclusivo,nominatim,-29.7127501,-51.1148189,Reino de Xangô Ibeji e Iemanjá Bomi,0.72,33530
+Centro Africano Xangô Aganjú e Oyá,VIamão,RS,google_melhor,google,-30.0532024,-51.0676822,Centro africano xangô aganju & oyá,0.97,5086
+Centro Africano Xangô Agodô e Oxum Pandá,VIamão,RS,google_melhor,google,-30.0906943,-51.06877919999999,Centro Africano Xangô Aganju e Oxalá Bocum,0.756,1354
+Centro Africano Xangô e Iansã Fraternidade de Oxóssi,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.602,1348
+Centro Africano Xangô e Iansã no Reino de Iemanjá,Cachoeirinha,RS,google_melhor,google,-29.8895234,-51.08998099999999,Reino de Xangô e Oxum,0.469,3176
+Centro Africano Xangô e Iansã no Reino de Iemanjá,Cachoeirinha,RS,google_melhor,google,-29.8895234,-51.08998099999999,Reino de Xangô e Oxum,0.469,3751
+Centro Africano Xangô e Oxum Fraternidade Exu Catatumba,Alvorada,RS,novo_google,google,-30.01035559999999,-51.0800778,Centro Africano Oxum e Xangô - Mae Etiene de Yemanjá,0.588,None
+Centro Africano Xangô e Oyá,Porto Alegre,RS,novo_google,google,-30.0219365,-51.1290071,Centro Africano Xango e Oxum,0.909,None
+Centro Africano Xangô e Yansã Casa de Umbanda Ogum das Matas,Gravataí,RS,google_melhor,google,-29.921899,-51.052946,Centro africano Xangô agodô,0.595,887
+Centro Africano Xapanã Belujá,Novo Hamburgo,RS,nominatim_melhor,nominatim,-29.7179163,-51.1369773,CTG Terra Nativa,0.311,4304
+Centro Africano Xapanã Belujá e Oxum Olobá,Canoas,RS,google_melhor,google,-29.90587799999999,-51.1310663,Centro Africano Reino de Oxum,0.647,4740
+Centro Africano Xapanã e Oxum,Alvorada,RS,google_melhor,google,-30.0201426,-51.076272,Centro Africano Oxum E Xangô - Ilê Bara e Oxum,0.74,3253
+Centro Africano Xapanã e Oxum,VIamão,RS,google_melhor,google,-30.0172538,-51.0183079,centro africano bara e oxum,0.893,8950
+Centro Africano Xapanã e Oxum,Eldorado do Sul,RS,nominatim_melhor,nominatim,-29.9937101,-51.315936,Flora Lírios de Oxum,0.435,909
+Centro Africano Xapanã e Oxum,Esteio,RS,google_melhor,google,-29.8499763,-51.1655136,Yle Africano Axé Casa de Xango Agadjú e Oxum D' Gama,0.587,1656
+Centro Africano Xapanã; Oxum  e Ogum,Esteio,RS,novo_google_possivel,google,-29.8500919,-51.14880540000001,Centro Espírita de Umbanda Ogum Tibiri Reino de Oxum e Xangô,0.417,None
+Centro Africano Yansã e Xangô,VIamão,RS,novo_google,google,-30.0213585,-51.0200057,Centro Africano Xangô e Iansã,0.724,None
+Centro Africano Yemanjá Oxalá Fraternidade Ogum Megê,Alvorada,RS,google_melhor,google,-30.0201426,-51.076272,Centro Africano Oxum E Xangô - Ilê Bara e Oxum,0.521,1025
+Centro Africano Ylê de Ogum Fraternidade Exu Veludo,Porto Alegre,RS,google_melhor,google,-30.0517388,-51.1473218,Centro africano do reino de Ogum e oxum . Abasse cigano Juan e Maria Quitéria,0.513,4573
+Centro Afro Africano Nossa Senhora das Graças,Porto Alegre,RS,nominatim_melhor,nominatim,-30.0717314,-51.1790332,Centro africano do reino de Ogum e oxum . Abasse cigano Juan e Maria Quitéria,0.439,3776
+Centro Afro Bará Laná e Mãe Oyá Yabace de Exu Tiriri e Pomba Gira Rainha,Alvorada,RS,novo_google_possivel,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.369,None
+Centro Afro Brasileiro Reino de Iemanjá e Ogum,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.468,3160
+Centro Afro Brasileiro Xangô Aganju e Caboclo Pena Verde,Porto Alegre,RS,google_melhor,google,-30.079646,-51.1962905,Centro Afro Brasileiro Filhos de Xango Agandjú e Caboclo Pena Verde - Casa 29 de Novembro - Família Tayó,0.747,5391
+Centro Afro de Cabinda,Gravataí,RS,google_melhor,google,-29.901397,-50.99126,Centro Afro do Reino de Yansã,0.714,4478
+Centro Afro de Cultura Pai Oxalá e Cacique Sete Flechas,Gravataí,RS,google_melhor,google,-29.926304,-51.0151663,Centro Afro do Reino de Xangô e Oxum,0.463,1685
+Centro Afro de Ogum,Porto Alegre,RS,google_melhor,google,-30.1587731,-51.14194070000001,Centro Afro Ilê Ijexá de Ogum,0.762,1534
+Centro Afro de Umbanda e Quimbanda Ogum,Porto Alegre,RS,novo_google,google,-30.1124865,-51.2428524,Centro de Umbanda e Quimbanda Guias da Vida,0.795,None
+Centro Afro de Umbanda Iansã e Ogum Fraternidade Oyá e Xangô,Sapucaia do Sul,RS,google_melhor,google,-29.8415796,-51.1498409,Templo Afro yemanja e Ogum,0.458,1888
+Centro Afro de Umbanda Nosso Senhor dos Passos,Porto Alegre,RS,novo_google_possivel,google,-30.0364229,-51.2214962,Centro Afro Brasileiro Oxalá Lerum e Pai Cipriano,0.435,None
+Centro Afro de Umbanda Ogum Beira Mar e Cacique Ventania,Porto Alegre,RS,google_melhor,google,-30.0076614,-51.1646796,Centro Espírita de Umbanda São Jorge - Ogum Beira mar,0.518,11087
+Centro Afro de Umbanda Oyá e Xangô Fraternidade Ogum Rompe Mata,Porto Alegre,RS,google_melhor,google,-29.9925455,-51.1066836,Centro de umbanda cacique ogum rompe mato e mãe iemanjá,0.607,15565
+Centro Afro de Umbanda Pai Ogum da Lua,Porto Alegre,RS,google_melhor,google,-30.0780059,-51.2053521,CENTRO DE UMBANDA PAI OGUM DA LUA,0.915,5565
+Centro Afro e Umbanda Ogum e Cabocla Jurema e Pai Ogum,Gravataí,RS,google_melhor,google,-29.9205617,-51.0710938,Centro de Umbanda Cabocla Jurema Flecheira,0.688,1247
+Centro Afro Iansã e Xangô,Novo Hamburgo,RS,confirmado_proximo,google,-29.710046,-51.1148894,Centro Afro Iansã e Xangô,1.0,301
+Centro Afro Iemanjá,Porto Alegre,RS,google_melhor,google,-30.053606,-51.1499087,Centro Africano Ilê Axé Iemanjá Omidarewá,0.633,9640
+Centro Afro Ilê de Ogum Onira Abassá de Exú Caveira,Canoas,RS,google_melhor,google,-29.9612402,-51.1993911,Centro de umbanda pai Ogum Megê,0.493,3395
+Centro Afro Ilê de Oxum Docô e Fraternidade Exu da Meia Noite,VIamão,RS,novo_google,google,-30.0787081,-51.0914246,Centro Afro Ylê Oxum Docô e Yemanjá Boci,0.695,None
+Centro Afro Ilê de Yemanjá e Mãe Oxum,Porto Alegre,RS,google_melhor,google,-30.053606,-51.1499087,Centro Africano Ilê Axé Iemanjá Omidarewá,0.667,4827
+Centro Afro Ilê Oxalá Orumilaia e Iemanjá,Canoas,RS,google_melhor,google,-29.9279422,-51.1680836,Ilê de Oxalá e Yemanjá,0.6,3866
+Centro Afro Ilê Pai Xangô e Mãe Oxum,Charqueadas,RS,google_melhor,google,-29.984213,-51.635182,Centro de umbanda Cabocla jurema e oxum doco,0.519,3008
+Centro Afro Mãe Iansã Abassé Maria Mulambo,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.526,2989
+Centro Afro Mãe Iansã Reino de Xangô,Cachoeirinha,RS,novo_google,google,-29.901397,-50.99126,Centro Afro do Reino de Yansã,0.714,None
+Centro Afro Odé e Oxum,VIamão,RS,google_melhor,google,-30.0585657,-51.1061792,Centro Africano Reino De Oxum,0.75,4355
+Centro Afro Ogum e Yemanjá,Taquara,RS,google_melhor,google,-29.6349719,-50.8017711,Centro Africano Reino de Oxum,0.577,3767
+Centro Afro Ossanha e Oxum Demum,Porto Alegre,RS,confirmado_proximo,google,-30.156698,-51.13781549999999,Centro Afro Reino de Oxalá,0.582,393
+Centro Afro Oxalá e Iemanjá,Alvorada,RS,google_melhor,google,-30.0178213,-51.0566397,Reino Africano Oxalá e Iemanjá,0.842,2320
+Centro Afro Oxum Demum Abassé de João Caveira e Cigana Saraiana,Porto Alegre,RS,google_melhor,google,-30.0364229,-51.2214962,Centro Afro Brasileiro Oxalá Lerum e Pai Cipriano,0.514,7946
+Centro Afro Oxum Pandá,Porto Alegre,RS,google_melhor,google,-30.0816553,-51.1934579,Centro Africano Oxum Panda,0.917,7114
+Centro Afro Oxum Xangô,São Leopoldo,RS,novo_google,google,-29.7659875,-51.0927587,Centro De Umbanda Xango Da Mata Virgem,0.556,None
+Centro Afro Oyá e Aganjú,Porto Alegre,RS,google_melhor,google,-30.0364229,-51.2214962,Centro Afro Brasileiro Oxalá Lerum e Pai Cipriano,0.548,4332
+Centro Afro Oyá e Xangô,Gravataí,RS,google_melhor,google,-29.926304,-51.0151663,Centro Afro do Reino de Xangô e Oxum,0.717,4304
+Centro Afro Reino da Mãe Oxum,Porto Alegre,RS,google_melhor,google,-30.156698,-51.13781549999999,Centro Afro Reino de Oxalá,0.816,8415
+Centro Afro Reino da Oxum e Jureti,Gravataí,RS,novo_google,google,-29.9090125,-51.0496609,Centro Afro do Reino de Ossain,0.727,None
+Centro Afro Reino de Jurema Oxum e Xangô,Eldorado do Sul,RS,divergente_inconclusivo,nominatim,-29.9943373,-51.3104233,Centro Afro do Reino de Xangô e Oxum,0.716,29433
+Centro Afro Reino de Ogum e Xangô,Cachoeirinha,RS,novo_google,google,-29.9146407,-51.0828008,Centro afro reino de Ogum e Xangô,1.0,None
+Centro Afro Reino de Oxum Fraternidade Zé Pelintra,Guaíba,RS,nominatim_melhor,nominatim,-30.172321,-51.390279,C.E.U Reino de Xangô e Cabocla Jurema Flecheira - Umbanda,0.343,8989
+Centro Afro Reino de Xangô e Iansã,Canoas,RS,novo_google,google,-29.9495439,-51.1988072,Centro de umbanda reino de xangô e oxum mina nago,0.73,None
+Centro Afro Umbandista de Oxum Pandá e Ogum Beira Mar,Cachoeirinha,RS,google_melhor,google,-29.9188797,-51.0840276,Centro Afro Mãe Oxum Epandá e Centro Espirita de Ogum Beira Mar,0.894,2108
+Centro Afro Umbandista Ilê Xangô Aganju,Porto Alegre,RS,google_melhor,google,-30.1453467,-51.2162051,Centro de Umbanda Fraternidade de Oxalá / Ylê Axé Reino de Oxalá e Yemanjá,0.49,12742
+Centro Afro Umbandista Morada dos Orixás,Eldorado do Sul,RS,nominatim_melhor,nominatim,-29.995399,-51.3016733,Ilê dos Orixás,0.444,33195
+Centro Afro Umbandista Ogum da Lua,Alvorada,RS,novo_google,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.585,None
+Centro Afro Umbandista Pai Ossanha Ogum Sete Ondas e Maria Padilha,Porto Alegre,RS,nominatim_melhor,nominatim,-30.1683245,-51.1473569,Centro Afro Brasileiro Oxalá Lerum e Pai Cipriano,0.383,16309
+Centro Afro Umbandista Santo Antônio,Canoas,RS,google_melhor,google,-29.9612402,-51.1993911,Centro de umbanda pai Ogum Megê,0.562,1762
+Centro Afro Umbandista Xangô e Oxum Pai Congo e Mãe Oxum,Alvorada,RS,google_melhor,google,-29.9931986,-51.0753411,Centro Espírita De Umbanda Xangó Agodo E Oxum Pandá,0.568,3811
+Centro Afro Xangô Aganju e Cabocla Jurema,Guaíba,RS,novo_google,google,-30.123442,-51.3158132,C.E.U Reino de Xangô e Cabocla Jurema Flecheira - Umbanda,0.581,None
+Centro Afro Xangô e Oxum,Porto Alegre,RS,google_melhor,google,-30.0219365,-51.1290071,Centro Africano Xango e Oxum,0.923,7421
+Centro Afro Xangô e Xapanã,Porto Alegre,RS,google_melhor,google,-30.0219365,-51.1290071,Centro Africano Xango e Oxum,0.778,15709
+Centro Afro Ylê de Oxum,Guaíba,RS,google_melhor,google,-30.1341803,-51.36640370000001,AUSVE ALDEIA DE OGUM E OXUM,0.5,5929
+Centro Afro-Brasileiro Bará Lodê Fraternidade Zé Pelintra,VIamão,RS,google_melhor,google,-30.101942,-51.06198999999999,Centro Afro-Brasileiro Bará Lode/Odé Eremi e Guerreiros do Humaitá,0.7,6343
+Centro Afro-Brasileiro Iansã e Xangô,VIamão,RS,google_melhor,google,-30.0213585,-51.0200057,Centro Africano Xangô e Iansã,0.615,9181
+Centro Afro-Brasileiro Mãe Iemanjá,Alvorada,RS,novo_google,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.618,None
+Centro Afro-Brasileiro Nossa Senhora das Dores,Porto Alegre,RS,google_melhor,google,-30.0324584,-51.2354393,Basílica Nossa Senhora das Dores,0.769,7502
+Centro Afro-Brasileiro Nosso Senhor do Bonfim Fraternidade de Oxóssi,Alvorada,RS,nominatim_melhor,nominatim,-30.0070845,-51.0672174,CAFF Centro Africano Filhos de Fé,0.413,1861
+Centro Afro-Brasileiro Nzo Oiá Oderim,Belo Horizonte,MG,nominatim_melhor,nominatim,-19.811332,-43.9935406,,None,None
+Centro Afro-Brasileiro Reino da Mãe Yansã,Porto Alegre,RS,google_melhor,google,-30.0647106,-51.2035233,Centro Afro Brasileiro Reino de Xangô,0.861,808
+Centro Afro-Brasileiro São Miguel Arcanjo,Cachoeirinha,RS,google_melhor,google,-29.9063754,-51.0676178,Centro De Luz São Miguel Arcanjo,0.771,1976
+Centro Afro-Reino dos Orixás,VIamão,RS,google_melhor,google,-30.0747823,-51.1101947,Centro Afro De Umbanda Estrelas De Oxalá,0.613,905
+Centro Beneficente Nossa Senhora Aparecida,Cachoeirinha,RS,google_melhor,google,-29.9405673,-51.098499,Lar de Idosas Nossa Senhora Aparecida,0.684,4975
+Centro Cabocla Jacira,Recife,PE,google_melhor,google,-8.0183385,-34.906731,Terreiro caboclo Taquaracy e cabocla Jacira,0.562,763
+Centro Cabocla Jacira,Recife,PE,novo_google,google,-8.0183385,-34.906731,Terreiro caboclo Taquaracy e cabocla Jacira,0.562,None
+Centro Cabocla Jacira,Recife,PE,google_melhor,google,-8.0183385,-34.906731,Terreiro caboclo Taquaracy e cabocla Jacira,0.562,1673
+Centro Cabocla Rosa Maria,Olinda,PE,nominatim_melhor,nominatim,-8.026067,-34.8740519,Centro Espirita de Candomblé Caboclo Canindé - CECCC,0.393,4939
+Centro Caboclo Jataitan - Ilé D'Oyá,Recife,PE,google_melhor,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.545,7964
+Centro Caboclo Oxóssi,Camaragibe,PE,novo_google_possivel,google,-8.0279016,-34.9804389,Terreiro de Jurema Reino dos Mares,0.385,None
+Centro Caboclo Pena Branca,Porto Alegre,RS,divergente_inconclusivo,nominatim,-30.0345299,-51.1195736,Templo Caboclo Pena Branca - Umbanda,0.733,858152
+Centro Caboclo Pena Branca,Recife,PE,google_melhor,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.623,8800
+Centro Cacique Cobral Coral,São Leopoldo,RS,google_melhor,google,-29.7410876,-51.15489299999999,Centro de umbanda Cacique Jurema,0.607,3634
+Centro Cacique Ogum Iara,São Leopoldo,RS,google_melhor,google,-29.7410876,-51.15489299999999,Centro de umbanda Cacique Jurema,0.642,5844
+Centro Culto Afro de Umbanda Pai Oxalá e Mãe Iemanjá,Porto Alegre,RS,google_melhor,google,-30.0364229,-51.2214962,Centro Afro Brasileiro Oxalá Lerum e Pai Cipriano,0.592,10513
+Centro Cultural Afro-Brasileiro Logun Edé,Belo Horizonte,MG,nominatim_melhor,nominatim,-19.9861901,-44.0470567,Casa de Candomblé - Ilé Asè Omi Ogunsade,0.421,18874
+Centro Cultural Beneficente Ilê do Pai Bará e Ossanha,Alvorada,RS,nominatim_melhor,nominatim,-29.9889756,-51.0568566,CAFF Centro Africano Filhos de Fé,0.375,1641
+Centro Cultural de Umbanda Caboclo Mariano e Toya Jarina,Belém,PA,google_melhor,google,-1.4279184,-48.4906649,Casa de Mina Caboclo Pena Verde e Toya Jarina,0.589,29072
+Centro Cultural Ilê Axé Força das Águas,Igarassu,PE,novo_google,google,-7.8231344,-34.9224165,CENTRO CULTURAL ILE AXE FORCA DAS AGUAS -,1.0,None
+Centro Cultural Ilê Axé Oxum Omimtaladé,Paulista,PE,nominatim_melhor,nominatim,-7.8881114,-34.8369092,Ilê Axé Oyá T'Ogum,0.386,3043
+Centro Cultural Ilê Axé Oyá e Xangô,Gravataí,RS,google_melhor,google,-29.9279239,-51.0665481,Ilê Axé Oyá e Xangô,0.704,10789
+Centro Cultural Junco Verde Ilê Odé e Iemanjá,Gravataí,RS,nominatim_melhor,nominatim,-29.9178901,-51.065425,Centro Afro do Reino de Xangô e Oxum,0.427,4933
+Centro da Mãe Iemanjá e Pai Coral,Gravataí,RS,google_melhor,google,-29.9160257,-51.0507771,Centro de Umbanda Mensageiros de Oxalá,0.548,760
+Centro de  Umbanda Ogum Beira Mar e Mãe Iemanjá,Gravataí,RS,novo_google,google,-29.9286811,-50.931025,Centro de Umbanda Ogum Beira Mar e Mãe Iemanjá,1.0,None
+Centro de Angola Oxum Akarê,Olinda,PE,novo_google,google,-8.0109394,-34.8538053,Centro de Capoeira Luz Di Angola,0.491,None
+Centro de Caridade Espiritual Mãe Iemanjá e Ogum Beira Mar,Porto Alegre,RS,google_melhor,google,-29.9925455,-51.1066836,Centro de umbanda cacique ogum rompe mato e mãe iemanjá,0.486,10255
+Centro de Caridade Santo Antônio Templo dos Orixás,Alvorada,RS,google_melhor,google,-29.9958334,-51.0673073,Mercadão dos Orixás,0.545,2455
+Centro de Cultos Africanos Nossa Senhora de Santana - Ilê Iemonjá Ogunté,Recife,PE,proximo_nome_diferente,nominatim,-8.0219238,-34.8947155,Sítio de Pai Adão - Ilê Ọba Ògúnté,0.409,184
+Centro de Cultura Afro-Brasileiro de São Sebastião e Pena Verde,Belém,PA,google_melhor,google,-1.4271583,-48.4806703,Ponto de Cultura Terreiro de Umbanda Maria Quitéria e Zé Pelintra,0.517,11627
+Centro de Cultura Ilê Africano Oiá Dirã e Ogum; Cabocla Iemanjá Abasse Pomba Gira Cigana,Capela de Santana,RS,novo_google,google,-29.70687229999999,-52.4516018,Centro Cultural de Umbanda Ogum das Matas e Iemanjá,0.515,None
+Centro de Cultura Mina Nagô Recanto de Xangô e Oxum,Belém,PA,novo_google,google,-1.4530751,-48.4946384,Centro Cultural Banco da Amazônia,0.56,None
+Centro de Iemanjá e Ogum Megê,Porto Alegre,RS,novo_google,google,-30.086541,-51.12296310000001,Centro de Umbanda Ogum Megê,0.84,None
+Centro de Irradiação Espírita Umbandista Mãe Maria Conga,Belo Horizonte,MG,novo_google,google,-19.904289,-43.8935174,Terreiro de Umbanda Vó Maria Conga,0.571,None
+Centro de Irradiação Nossa Senhora do Rosário de Fátima,Belo Horizonte,MG,novo_google,google,-19.892376,-43.9526246,TENDA ESPIRITA NOSSA SENHORA DO ROSÁRIO,0.683,None
+Centro de Irradiação Umbandista Pai Joaquim da Bahia,Belo Horizonte,MG,google_melhor,google,-19.9007506,-44.0248725,Centro Espiritualista Pai Joaquim,0.658,9102
+Centro de Mamãe Oxum,São Lourenço da Mata,PE,nominatim_melhor,nominatim,-8.0066056,-35.0181646,Casa de Luz de Pai Oxalá,0.343,4922
+Centro de Nação Oxalá e Iemanjá,Porto Alegre,RS,google_melhor,google,-30.2252316,-51.0908664,Centro Africano de Iemanjá e Oxalá,0.644,20049
+Centro de Ogum e Iansã,Guaíba,RS,google_melhor,google,-30.1549978,-51.32563099999999,Centro De Umbanda E Kimbanda Reino De Ogum E Iansã,0.603,3746
+Centro de Ogum Megê,Novo Hamburgo,RS,nominatim_melhor,nominatim,-29.6876602,-51.1263178,Brilhos de Oxum - Yeshua,0.4,1447
+Centro de Ogum Megê no Reino da Oxum,Gravataí,RS,google_melhor,google,-29.926304,-51.0151663,Centro Afro do Reino de Xangô e Oxum,0.633,2376
+Centro de Ogum Rompe Mato,Belém,PA,google_melhor,google,-1.4740901,-48.4877428,Terreiro de São Jorge Ogum Rompe Mato,0.679,22768
+Centro de Ogum Sete Espadas e Exu Capa Preta,Montenegro,RS,nominatim_melhor,nominatim,-29.6740566,-51.4674478,Templo de Umbanda Sereia 7 Ondas,0.371,2420
+Centro de Ogum Sete Espadas e Iansã,Porto Alegre,RS,google_melhor,google,-30.0040353,-51.1304519,Centro de Umbanda Morada da Iansã,0.576,12850
+Centro de Oxalá e Yansã,Sapiranga,RS,nominatim_melhor,nominatim,-29.6873964,-50.9924225,Núcleo Espírita Ciranda de Luz,0.383,5949
+Centro de Oxalá Fraternidade São José da Praia,Porto Alegre,RS,google_melhor,google,-30.1453467,-51.2162051,Centro de Umbanda Fraternidade de Oxalá / Ylê Axé Reino de Oxalá e Yemanjá,0.602,12162
+Centro de Oyá e Ogum,Porto Alegre,RS,google_melhor,google,-30.0040353,-51.1304519,Centro de Umbanda Morada da Iansã,0.5,11151
+Centro de Parapsicologia Cosme e Damião,Belo Horizonte,MG,google_melhor,google,-19.8883353,-44.0133135,Centro umbandista Virtude e caridade de Cosme e Damião,0.575,8214
+Centro de Quimbanda Rainha das Rainhas e Exu Tiriri,VIamão,RS,nominatim_melhor,nominatim,-30.099605,-51.0572682,Templo Espiritual Exú Tiriri - Quimbanda,0.372,47757
+Centro de Raízes Afro Xangô e Oxum,VIamão,RS,google_melhor,google,-30.095951,-51.0675454,Centro de Religião Africana Oxalá e Oxum,0.676,5475
+Centro de Referência e Estudos da Tradição e Cultura Afro-Brasileira do Ilê Axé Pilão Odara,Santa Luzia,MG,nominatim_melhor,nominatim,-19.7893841,-43.9152518,Casa de Cultura Lodé Apará,0.362,1822
+Centro de Religião Africana no Reino de Obá e Xangô,Gravataí,RS,google_melhor,google,-29.9352717,-51.0626922,CENTRO DE RELIGIÃO AFRICANA REINO DE OGUN ONIRA,0.767,1550
+Centro de Religião Africana Ogum Onira,Gravataí,RS,novo_google,google,-29.9352717,-51.0626922,CENTRO DE RELIGIÃO AFRICANA REINO DE OGUN ONIRA,0.921,None
+Centro de Religião Africana Oxalá e Oxum,VIamão,RS,novo_google,google,-30.095951,-51.0675454,Centro de Religião Africana Oxalá e Oxum,1.0,None
+Centro de Religião Africana Reino de Oxalá,Gravataí,RS,google_melhor,google,-29.9352717,-51.0626922,CENTRO DE RELIGIÃO AFRICANA REINO DE OGUN ONIRA,0.857,7702
+Centro de Religião Africana Reino de Oyá,Canoas,RS,google_melhor,google,-29.90587799999999,-51.1310663,Centro Africano Reino de Oxum,0.733,7127
+Centro de Religião Africana São Miguel Arcanjo,Porto Alegre,RS,google_melhor,google,-30.0420061,-51.2225616,Centro Africano São Miguel Arcanjo Pai Alfredo,0.742,5404
+Centro de Religião Nossa Senhora Aparecida,Novo Hamburgo,RS,google_melhor,google,-29.6596568,-51.1114918,Paróquia Nossa Senhora Aparecida,0.789,2001
+Centro de Religiosidade Afro Kuê Ceja Hundo Besen Larundelê,Belém,PA,nominatim_melhor,nominatim,-1.3266504,-48.4525362,,None,None
+Centro de Tradições Afrodescendente Aldeia N'Godô,Porto Alegre,RS,nominatim_melhor,nominatim,-30.1570218,-51.1383298,Afro-Sul/Odomode,0.29,12860
+Centro de Umbanda  São Benedito,Belém,PA,google_melhor,google,-1.4386189,-48.4499471,Tenda de Umbanda Sao Benedito,0.868,4473
+Centro de Umbanda Africano Reino de Iansã Oxalá e Xangô,Porto Alegre,RS,google_melhor,google,-30.0391219,-51.2213426,Casa Africana Reino de Oxalá- Pai Zeca de Xangô,0.697,9154
+Centro de Umbanda Afro Cacique Jacarandá Ilê de Bará; Iansã e Oxum,Porto Alegre,RS,novo_google_possivel,google,-30.0391219,-51.2213426,Casa Africana Reino de Oxalá- Pai Zeca de Xangô,0.343,None
+Centro de Umbanda Afro Nagô Africana,Porto Alegre,RS,google_melhor,google,-30.0040353,-51.1304519,Centro de Umbanda Morada da Iansã,0.7,23172
+Centro de Umbanda Afro Nanã e Oxum,São Leopoldo,RS,google_melhor,google,-29.7421188,-51.1543415,Centro de Umbanda Cacique Oxossi das matas,0.6,6387
+Centro de Umbanda Afro Pai Ogum e Mãe Oxum,Canoas,RS,google_melhor,google,-29.9193891,-51.13915799999999,Centro de umbanda pai ogum das matas e mãe oxum,0.819,5130
+Centro de Umbanda Águas de Iemanjá,Eldorado do Sul,RS,nominatim_melhor,nominatim,-29.9982344,-51.3268823,Águas de Iemanjá Centro De Cursos Livres Jogos de Cartas; Baralho Cigano Oráculo de Maria Padilha,0.232,821014
+Centro de Umbanda Arranca Toco e Jurema,Canoas,RS,google_melhor,google,-29.9325498,-51.1910803,Centro De Umbanda Ogum Guerreiro e Iansã,0.603,3184
+Centro de Umbanda Bará com Iansã,Porto Alegre,RS,google_melhor,google,-30.0040353,-51.1304519,Centro de Umbanda Morada da Iansã,0.821,3344
+Centro de Umbanda Bará; Odé; Xangô e Iansã,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.563,2451
+Centro de Umbanda Cabocla Genoveva,Paulista,PE,google_melhor,google,-7.9084786,-34.8409862,Centro Espírita de Umbanda Caboclo Tupinambá,0.571,5088
+Centro de Umbanda Cabocla Iansã,Porto Alegre,RS,novo_google,google,-30.0040353,-51.1304519,Centro de Umbanda Morada da Iansã,0.836,None
+Centro de Umbanda Cabocla Iansã,Porto Alegre,RS,google_melhor,google,-30.0040353,-51.1304519,Centro de Umbanda Morada da Iansã,0.836,12390
+Centro de Umbanda Cabocla Jacira,Olinda,PE,novo_google,google,-8.0219509,-34.9897555,Centro Espírita Cabocla Jacira,0.651,None
+Centro de Umbanda Cabocla Janaína,Igarassu,PE,google_melhor,google,-7.8611486,-34.88309650000001,Centro Espírita Cabocla Daiana,0.5,3105
+Centro de Umbanda Cabocla Janaína Abassé Destranca Rua das Almas e Cigana,Sapucaia do Sul,RS,nominatim_melhor,nominatim,-29.8316539,-51.1356539,Ilê Orixá Iemanja Boci e Xangô Agodo,0.34,2153
+Centro de Umbanda Cabocla Jandira,Recife,PE,google_melhor,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.769,9334
+Centro de Umbanda Cabocla Jurema,Porto Alegre,RS,novo_google,google,-30.0216326,-51.1025691,Centro Umbandista Cacique cabocla Jurema,0.841,None
+Centro de Umbanda Cabocla Jurema,VIamão,RS,novo_google,google,-30.0928698,-51.0870946,Casa de Umbanda Cabocla Jurema,0.857,None
+Centro de Umbanda Cabocla Jurema,Porto Alegre,RS,google_melhor,google,-30.0216326,-51.1025691,Centro Umbandista Cacique cabocla Jurema,0.841,14014
+Centro de Umbanda Cabocla Jurema,Porto Alegre,RS,google_melhor,google,-30.0216326,-51.1025691,Centro Umbandista Cacique cabocla Jurema,0.841,14914
+Centro de Umbanda Cabocla Jurema,Gravataí,RS,google_melhor,google,-29.9205617,-51.0710938,Centro de Umbanda Cabocla Jurema Flecheira,0.853,7432
+Centro de Umbanda Cabocla Jurema e Ilê Africano Ogum Ad´Olá e Oxum Demum,Gravataí,RS,google_melhor,google,-29.9205617,-51.0710938,Centro de Umbanda Cabocla Jurema Flecheira,0.611,3522
+Centro de Umbanda Cabocla Jurema e Oxóssi,Porto Alegre,RS,nominatim_melhor,nominatim,-30.0214216,-51.0977708,Terreiro de Umbanda e Quimbanda Caboclo Roxo Exú 7 Encruzilhadas e Maria Padilha,0.417,11887
+Centro de Umbanda Cabocla Jurema e Reino de Pomba Gira Cigana,Porto Alegre,RS,google_melhor,google,-30.1499552,-51.1483893,T.U. Cabocla Jurema e Reino de Pomba gira Rainha das Almas,0.752,6160
+Centro de Umbanda Cabocla Jurema Fraternidade Ogum Onira,Porto Alegre,RS,google_melhor,google,-30.0641542,-51.1685598,Centro Espiritualista e Umbanda Reino de Ogum Onira,0.574,11126
+Centro de Umbanda Cabocla Jurema Mãe Oxum e Exu Calunga,Gravataí,RS,google_melhor,google,-29.9205617,-51.0710938,Centro de Umbanda Cabocla Jurema Flecheira,0.681,6694
+Centro de Umbanda Cabocla Jurema Rainha das Matas e Reino de Oxum e Oxalá,Eldorado do Sul,RS,divergente_inconclusivo,nominatim,-30.0413849,-51.3150974,Centro de Umbanda Guerreiros da Luz ogum Beira Mar e Cabocla Jurema,0.453,42685
+Centro de Umbanda Cabocla Jurema Reino Mãe Oxum e Xangô,Porto Alegre,RS,google_melhor,google,-30.15527759999999,-51.1799057,Sociedade Africana Reino de Mãe Oxum e Cabocla Jurema,0.51,15710
+Centro de Umbanda Caboclo Girassol,Porto Alegre,RS,novo_google,google,-30.1445163,-51.1148391,Centro Espiritualista da Santa Umbanda Cristã Caboclo Pedra Roxa,0.565,None
+Centro de Umbanda Caboclo José Tupinambá,Belém,PA,google_melhor,google,-1.4302116,-48.4832748,Casa de Cabocla Mariana;Dom José Tupinambá e Zé Raimundo.,0.578,6802
+Centro de Umbanda Caboclo Oxóssi,Recife,PE,google_melhor,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.75,8335
+Centro de Umbanda Caboclo Oxóssi,Recife,PE,google_melhor,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.75,8744
+Centro de Umbanda Caboclo Pena Roxa e Reino de Xapanã,VIamão,RS,nominatim_melhor,nominatim,-30.1165199,-51.0720239,Sociedade Africana Reino de Xangô Deí,0.395,5380
+Centro de Umbanda Caboclo Roxo das Matas,São Leopoldo,RS,novo_google,google,-29.7421188,-51.1543415,Centro de Umbanda Cacique Oxossi das matas,0.842,None
+Centro de Umbanda Caboclo Tupinambá,Jaboatão dos Guararapes,PE,divergente_inconclusivo,nominatim,-8.1304151,-34.9617468,Centro Espírita de Umbanda Caboclo Tupinambá,0.877,28032
+Centro de Umbanda Caboclo Zé Raimundo,Marituba,PA,divergente_inconclusivo,nominatim,-1.3541558,-48.3468789,Terreiro de Zé Raimundo,0.556,25567
+Centro de Umbanda Cacique Ogum Beira Mar,Porto Alegre,RS,novo_google,google,-30.0385562,-51.1412151,Tenda de cacique Ogum beira mar,0.831,None
+Centro de Umbanda Cacique Oxóssi,Alvorada,RS,nominatim_melhor,nominatim,-30.0253395,-51.0528274,Ilê Axé Oloboci,0.364,1132
+Centro de Umbanda Cacique Peri,São Leopoldo,RS,google_melhor,google,-29.7410876,-51.15489299999999,Centro de umbanda Cacique Jurema,0.857,1017
+Centro de Umbanda Cacique Umbata,Porto Alegre,RS,google_melhor,google,-29.9925455,-51.1066836,Centro de umbanda cacique ogum rompe mato e mãe iemanjá,0.691,15708
+Centro de Umbanda de Ogum Beira Mar,Camaragibe,PE,google_melhor,google,-8.0279016,-34.9804389,Terreiro de Jurema Reino dos Mares,0.467,1049
+Centro de Umbanda e Afro Renascer,Gravataí,RS,google_melhor,google,-29.901397,-50.99126,Centro Afro do Reino de Yansã,0.642,5144
+Centro de Umbanda e Centro Africano Pai Ogum Beira Mar,Sapucaia do Sul,RS,google_melhor,google,-29.8292084,-51.12731700000001,CENTRO DE UMBANDA PAI OGUM BEIRA MAR & PAI JOÃO DE ANGOLA,0.66,3306
+Centro de Umbanda e Nação Reino de Odé e Pai Serapião,Porto Alegre,RS,google_melhor,google,-30.1453467,-51.2162051,Centro de Umbanda Fraternidade de Oxalá / Ylê Axé Reino de Oxalá e Yemanjá,0.582,12349
+Centro de Umbanda e Quimbanda Cabocla Jurema e Exu Tiriri,Porto Alegre,RS,google_melhor,google,-30.062852,-51.211616,Terreiro de Umbanda e Quimbanda Caboclo Roxo Exú 7 Encruzilhadas e Maria Padilha,0.626,11586
+Centro de Umbanda e Quimbanda Ilê Oxum Olobô,São Leopoldo,RS,novo_google,google,-29.761312,-51.0943619,Centro de Umbanda Cacique da Lua e Oxum das Cachoeiras,0.629,None
+Centro de Umbanda e Quimbanda Mãe Nina de Oxum e Maria Mulambo,VIamão,RS,google_melhor,google,-30.0535082,-51.1032168,Centro de Umbanda Ogum e Iansã,0.554,8959
+Centro de Umbanda e Quimbanda Ogum Beira Mar e Oxum Docô,Porto Alegre,RS,google_melhor,google,-30.0076614,-51.1646796,Centro Espírita de Umbanda São Jorge - Ogum Beira mar,0.565,14732
+Centro de Umbanda e Quimbanda Ogum de Lei e Yansã Cabala de Táta Caveira e Maria Mulambo,Alvorada,RS,nominatim_melhor,nominatim,-29.9983109,-51.0601606,Centro Africano Ogum Onira e Iansã,0.442,2622
+Centro de Umbanda e Quimbanda Ogum Guerreiro e Cigano Yago,Porto Alegre,RS,novo_google,google,-30.0040353,-51.1304519,Centro de Umbanda Morada da Iansã,0.585,None
+Centro de Umbanda e Quimbanda Ogum Megê e Tranca Rua das Almas,Alvorada,RS,novo_google,google,-30.04908799999999,-51.0682568,Casa de Quimbanda Reino das Sete Encruzilhadas - Exú Destranca Rua e Pombagira Rainha,0.518,None
+Centro de Umbanda e Quimbanda Xangô Pena Branca,Guaíba,RS,novo_google,google,-30.09412339999999,-51.3414902,Centro de umbanda e quimbanda Jurema flecheira e Maria mulambo,0.641,None
+Centro de Umbanda e Religião Africana Pai Ogum e Mãe Maria Reino de Iemanjá e Oxalá,Canoas,RS,google_melhor,google,-29.9043352,-51.1408387,Centro de umbanda ogum beira mar #Reino de Oxalá pai Cristian,0.58,6090
+Centro de Umbanda e Religião Africana Xangô Aganjú e Oxum Pandá - Cura,VIamão,RS,novo_google,google,-30.0906943,-51.06877919999999,Centro Africano Xangô Aganju e Oxalá Bocum,0.636,None
+Centro de Umbanda Espírito Santo Fraternidade de Oxum,Alvorada,RS,google_melhor,google,-29.9931986,-51.0753411,Centro Espírita De Umbanda Xangó Agodo E Oxum Pandá,0.481,1507
+Centro de Umbanda Estrela Guia,Porto Alegre,RS,novo_google,google,-30.0623832,-51.1638117,Centro de Umbanda Estrela Guia,1.0,None
+Centro de Umbanda Filhos da Luz,Porto Alegre,RS,google_melhor,google,-30.1072318,-51.2418163,Terreiro de Umbanda Raios de Luz,0.745,6873
+Centro de Umbanda Filhos da Mata,Porto Alegre,RS,google_melhor,google,-30.0524738,-51.2248817,Templo Escola de Umbanda Filhos do Vento,0.633,5706
+Centro de Umbanda Iansã das Matas,Alvorada,RS,novo_google,google,-30.0068368,-51.0822705,Centro de Umbanda Magia Cigana,0.667,None
+Centro de Umbanda Iansã e Centro Africanista Iansã,VIamão,RS,novo_google,google,-30.0535082,-51.1032168,Centro de Umbanda Ogum e Iansã,0.649,None
+Centro de Umbanda Iansã e Oxum,Porto Alegre,RS,novo_google,google,-30.0040353,-51.1304519,Centro de Umbanda Morada da Iansã,0.741,None
+Centro de Umbanda Iansã e Xangô,Esteio,RS,novo_google,google,-29.8500919,-51.14880540000001,Centro Espírita de Umbanda Ogum Tibiri Reino de Oxum e Xangô,0.545,None
+Centro de Umbanda Iansã Girando no Reino Pomba Gira Rainha,Porto Alegre,RS,nominatim_melhor,nominatim,-30.0701196,-51.2221255,Reino de Iansã e Cigana do Pandeiro,0.405,1592
+Centro de Umbanda Indú Jundaí,Camaragibe,PE,divergente_inconclusivo,nominatim,-8.0255607,-34.9900644,Centro de Umbanda Paz e Luz,0.64,8424
+Centro de Umbanda Jandira e Oxalá e Oxum,Gravataí,RS,google_melhor,google,-29.9160257,-51.0507771,Centro de Umbanda Mensageiros de Oxalá,0.696,6511
+Centro de Umbanda José Esplandim,Igarassu,PE,nominatim_melhor,nominatim,-7.8686203,-34.9186475,Centro Espírita Cabocla Daiana,0.279,4003
+Centro de Umbanda Jurema da Mata VIrgem,Porto Alegre,RS,google_melhor,google,-30.1538468,-51.1802206,Reino da Mãe Jurema,0.531,6835
+Centro de Umbanda Jurema das Matas,Porto Alegre,RS,google_melhor,google,-30.1135417,-51.2405193,Centro De Umbanda Mãe Oxum e Oxóssi Das Matas,0.74,6513
+Centro de Umbanda Jurema e Ogum das Matas,Gravataí,RS,google_melhor,google,-29.8953248,-51.0158723,Centro de Umbanda Mae Oxum e Ogum Rompe Mato,0.734,8762
+Centro de Umbanda Jurema Flecheira,Gravataí,RS,google_melhor,google,-29.9205617,-51.0710938,Centro de Umbanda Cabocla Jurema Flecheira,0.886,4949
+Centro de Umbanda Luz e Sabedoria,Guaíba,RS,proximo_nome_diferente,nominatim,-30.0999373,-51.3182196,Reino de Iemanjá - Centro de Umbanda e Candomblé Nagô (Mãe Líbia de Iemanjá e Pai Geraldo de Ogum),0.411,373
+Centro de Umbanda Mãe Iara e Mãe Iansã,Alvorada,RS,novo_google,google,-30.0068368,-51.0822705,Centro de Umbanda Magia Cigana,0.774,None
+Centro de Umbanda Mãe Jurema,Gravataí,RS,google_melhor,google,-29.8953248,-51.0158723,Centro de Umbanda Mae Oxum e Ogum Rompe Mato,0.727,7159
+Centro de Umbanda Mãe Jurema e Pai Ogum,Porto Alegre,RS,google_melhor,google,-30.1538468,-51.1802206,Reino da Mãe Jurema,0.538,7463
+Centro de Umbanda Mãe Jurema e Pai Ogum no Reino da Oxum e Xapanã,Gravataí,RS,google_melhor,google,-29.9286811,-50.931025,Centro de Umbanda Ogum Beira Mar e Mãe Iemanjá,0.608,12726
+Centro de Umbanda Mãe Jurema Fraternidade Mãe Oxum,Porto Alegre,RS,nominatim_melhor,nominatim,-30.1210948,-51.2170205,Centro Espírita de Umbanda Nossa Senhora Aparecida,0.41,12148
+Centro de Umbanda Mãe Maria e Pai Oxossi,Porto Alegre,RS,novo_google,google,-30.1135417,-51.2405193,Centro De Umbanda Mãe Oxum e Oxóssi Das Matas,0.734,None
+Centro de Umbanda Mãe Oxum,Alvorada,RS,novo_google,google,-30.0201426,-51.076272,Centro Africano Oxum E Xangô - Ilê Bara e Oxum,0.567,None
+Centro de Umbanda Mãe Oxum Abassé Pomba Gira da Praia,Porto Alegre,RS,google_melhor,google,-30.0040353,-51.1304519,Centro de Umbanda Morada da Iansã,0.568,5790
+Centro de Umbanda Mãe Oxum da Cachoeira Fraternidade Ogum Beira Mar,Porto Alegre,RS,google_melhor,google,-30.0076614,-51.1646796,Centro Espírita de Umbanda São Jorge - Ogum Beira mar,0.602,4331
+Centro de Umbanda Mãe Oxum e Pai Ogum de Ronda,Porto Alegre,RS,google_melhor,google,-30.0780059,-51.2053521,CENTRO DE UMBANDA PAI OGUM DA LUA,0.746,5298
+Centro de Umbanda Mãe Oxum e Pai Oxalá,Alvorada,RS,google_melhor,google,-29.9842418,-51.07718329999999,Ile de Candomblé Oxum e Oxala,0.623,3014
+Centro de Umbanda Maria,Recife,PE,novo_google,google,-8.0445618,-34.9303778,TERREIRO FILHOS DE MARIA,0.488,None
+Centro de Umbanda Mestre José do Bonfim,Araçoiaba,PE,nominatim_melhor,nominatim,-7.7895449,-35.0864824,,None,None
+Centro de Umbanda Nanã e Xangô,Belo Horizonte,MG,novo_google,google,-19.9971566,-43.9956763,Centro de umbanda nanã e xangô,1.0,None
+Centro de Umbanda Nossa Senhora Aparecida,Porto Alegre,RS,google_melhor,google,-30.0130732,-51.198145,Centro Espírita de Umbanda Nossa Senhora Aparecida,0.899,6211
+Centro de Umbanda Nossa Senhora da Conceição,Recife,PE,novo_google,google,-8.0192783,-34.915567,Santuário de Nossa Senhora da Conceição,0.789,None
+Centro de Umbanda Nossa Senhora do Carmo,Paulista,PE,novo_google_possivel,google,-7.937416,-34.827334,Grupo Espírita Seara de Deus,0.373,None
+Centro de Umbanda Nossa Senhora do Carmo,Camaragibe,PE,google_melhor,google,-8.0272727,-34.9860508,ILÊ AXÉ NOSSA SENHORA DO CARMO,0.754,741
+Centro de Umbanda Ogum,Igarassu,PE,google_melhor,google,-7.8798875,-34.9317667,Templo Umbandista Pai Oxalá TUPO,0.51,5316
+Centro de Umbanda Ogum  Beira Mar Fraternidade de Oxalá,Alvorada,RS,google_melhor,google,-29.9952348,-51.0809975,Centro de Umbanda Ogum Beira Mar e Abassé de Exu Morcego 🦇,0.673,1976
+Centro de Umbanda Ogum Beira Mar,Canoas,RS,novo_google,google,-29.902882,-51.20182699999999,Templo de Umbanda de Ogum Beira Mar,0.862,None
+Centro de Umbanda Ogum Beira Mar,Alvorada,RS,novo_google,google,-29.9952348,-51.0809975,Centro de Umbanda Ogum Beira Mar e Abassé de Exu Morcego 🦇,0.734,None
+Centro de Umbanda Ogum Beira Mar,Alvorada,RS,google_melhor,google,-29.9952348,-51.0809975,Centro de Umbanda Ogum Beira Mar e Abassé de Exu Morcego 🦇,0.734,4315
+Centro de Umbanda Ogum Beira Mar e Cabocla Iansã,VIamão,RS,google_melhor,google,-30.0535082,-51.1032168,Centro de Umbanda Ogum e Iansã,0.75,7325
+Centro de Umbanda Ogum Beira Mar e Exu Zé Pelintra,Porto Alegre,RS,nominatim_melhor,nominatim,-30.1144458,-51.2390239,,None,None
+Centro de Umbanda Ogum Beira Mar e Iemanjá,Glorinha,RS,divergente_inconclusivo,nominatim,-29.914196,-50.753882,Centro de Umbanda Ogum Beira Mar e Mãe Iemanjá,0.951,17148
+Centro de Umbanda Ogum Beira Mar e Jurema,Gravataí,RS,google_melhor,google,-29.9286811,-50.931025,Centro de Umbanda Ogum Beira Mar e Mãe Iemanjá,0.864,2297
+Centro de Umbanda Ogum Beira Mar e Jurema,Porto Alegre,RS,google_melhor,google,-30.1276255,-51.11628959999999,Centro de Umbanda Ogum beira- mar & Iemanjá,0.88,3841
+Centro de Umbanda Ogum Beira Mar e Oxum,Alvorada,RS,google_melhor,google,-29.9952348,-51.0809975,Centro de Umbanda Ogum Beira Mar e Abassé de Exu Morcego 🦇,0.814,2036
+Centro de Umbanda Ogum Beira Mar e Oxum,Guaíba,RS,novo_google,google,-30.0923634,-51.3391998,Centro De Umbanda Ogum Beira Mar E Oxum Panda,0.923,None
+Centro de Umbanda Ogum Beira Mar Reino Africano de Ogum e Oiá,Porto Alegre,RS,google_melhor,google,-30.0076614,-51.1646796,Centro Espírita de Umbanda São Jorge - Ogum Beira mar,0.506,6530
+Centro de Umbanda Ogum da Lua,VIamão,RS,google_melhor,google,-30.150987,-50.899656,Centro Umbandista Ogum da Lua,0.939,15082
+Centro de Umbanda Ogum da Lua Cabocla Jurema das Matas,Porto Alegre,RS,google_melhor,google,-30.0780059,-51.2053521,CENTRO DE UMBANDA PAI OGUM DA LUA,0.613,2206
+Centro de Umbanda Ogum das Matas,Gravataí,RS,google_melhor,google,-29.9286811,-50.931025,Centro de Umbanda Ogum Beira Mar e Mãe Iemanjá,0.694,4681
+Centro de Umbanda Ogum das Matas Mamãe Oxum,Porto Alegre,RS,google_melhor,google,-30.0914005,-51.1730187,Centro de Umbanda Pai Ogum Beira Mar - Religião Africana Mãe Oxum,0.7,7410
+Centro de Umbanda Ogum de Ronda e Preto Velho Pai Joaquim de Angola,VIamão,RS,nominatim_melhor,nominatim,-30.1232988,-51.0566831,Instituto Caminhos do Oriente,0.119,10047
+Centro de Umbanda Ogum e Iansã,Porto Alegre,RS,google_melhor,google,-30.0040353,-51.1304519,Centro de Umbanda Morada da Iansã,0.815,16887
+Centro de Umbanda Ogum e Iansã,Gravataí,RS,google_melhor,google,-29.9286811,-50.931025,Centro de Umbanda Ogum Beira Mar e Mãe Iemanjá,0.743,10181
+Centro de Umbanda Ogum e Jurema Reino de Xangô,Porto Alegre,RS,nominatim_melhor,nominatim,-30.1220069,-51.1015462,Centro Espírita de Umbanda Nossa Senhora Aparecida,0.394,15269
+Centro de Umbanda Ogum Flecheiro das Matas,São Leopoldo,RS,novo_google,google,-29.7452438,-51.1372252,Centro de Umbanda Mistério das Matas,0.778,None
+Centro de Umbanda Ogum Guerreiro,Alvorada,RS,confirmado_proximo,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.54,409
+Centro de Umbanda Ogum Guerreiro e Abassé de Tranca Rua das Almas,Alvorada,RS,google_melhor,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.495,1638
+Centro de Umbanda Ogum Iara,Guaíba,RS,novo_google,google,-30.1549978,-51.32563099999999,Centro De Umbanda E Kimbanda Reino De Ogum E Iansã,0.676,None
+Centro de Umbanda Ogum Iara,São Leopoldo,RS,novo_google,google,-29.7901141,-51.1354066,Centro de Umbanda Ogum Iara e Cigana do Jarro,0.762,None
+Centro de Umbanda Ogum Iara,Esteio,RS,google_melhor,google,-29.8573568,-51.13359029999999,Centro De Umbanda OGUM BEIRA MAR,0.868,924
+Centro de Umbanda Ogum Iara,Novo Hamburgo,RS,google_melhor,google,-29.7249112,-51.1337141,Centro De Umbanda Iara Beira Mar,0.717,6251
+Centro de Umbanda Ogum Iara,Porto Alegre,RS,google_melhor,google,-29.9822238,-51.1962404,Centro de umbanda ogum beira mar e cabocla iara,0.706,14711
+Centro de Umbanda Ogum Iara e Yansã,VIamão,RS,novo_google,google,-30.0535082,-51.1032168,Centro de Umbanda Ogum e Iansã,0.881,None
+Centro de Umbanda Ogum Megê,Alvorada,RS,google_melhor,google,-29.9986209,-51.0727035,Centro de Umbanda Reino de Ogum Megê,0.889,3832
+Centro de Umbanda Ogum Megê,Porto Alegre,RS,google_melhor,google,-30.086541,-51.12296310000001,Centro de Umbanda Ogum Megê,1.0,7113
+Centro de Umbanda Ogum Megê,Alvorada,RS,google_melhor,google,-29.9986209,-51.0727035,Centro de Umbanda Reino de Ogum Megê,0.889,1993
+Centro de Umbanda Ogum Megê e Jurema das Matas,Alvorada,RS,google_melhor,google,-30.0068368,-51.0822705,Centro de Umbanda Magia Cigana,0.571,2205
+Centro de Umbanda Ogum Megê no Reino de Iemanjá,Gravataí,RS,google_melhor,google,-29.9286811,-50.931025,Centro de Umbanda Ogum Beira Mar e Mãe Iemanjá,0.762,10188
+Centro de Umbanda Ogum Rompe Mato,São Leopoldo,RS,confirmado,google,-29.7962972,-51.12857220000001,Centro de Umbanda Ogum Rompe Mato,1.0,34
+Centro de Umbanda Ogum Sete Encruzilhadas Ilê de Oxalá,Sapucaia do Sul,RS,nominatim_melhor,nominatim,-29.8157796,-51.1446295,Ilê de Ogum e Oxum; Nação Ijexa';umbanda;quimbanda;búzios; cartas;tarot;atendimentos com cigana carmen e cigano pablo!,0.34,35309
+Centro de Umbanda Ogum Sete Espadas,Porto Alegre,RS,google_melhor,google,-30.127504,-51.1111617,Centro de umbanda Ogum sete espadas,1.0,11404
+Centro de Umbanda Ogum Sete Espadas,Alvorada,RS,divergente_inconclusivo,nominatim,-30.0210625,-51.0833817,Centro de umbanda Ogum sete espadas,1.0,12134
+Centro de Umbanda Ogum Sete Espadas,Porto Alegre,RS,novo_google,google,-30.127504,-51.1111617,Centro de umbanda Ogum sete espadas,1.0,None
+Centro de Umbanda Ogum Sete Espadas e Mãe Oxum,Alvorada,RS,novo_google,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.519,None
+Centro de Umbanda Ogum Sete Espadas e Oxum,Porto Alegre,RS,novo_google,google,-30.00972,-51.13854000000001,Centro Espírita de Umbanda Sete Raios de Luz,0.557,None
+Centro de Umbanda Ogum Supremo da Montanha e Oxum,São Leopoldo,RS,novo_google,google,-29.7671444,-51.1150583,Terreiro de Umbanda Casa de Ogum e Oxum Abassé de Exu Marabô,0.489,None
+Centro de Umbanda Oxalá e Iemanjá,Porto Alegre,RS,google_melhor,google,-30.1453467,-51.2162051,Centro de Umbanda Fraternidade de Oxalá / Ylê Axé Reino de Oxalá e Yemanjá,0.624,1628
+Centro de Umbanda Oxalá e Iemanjá,Porto Alegre,RS,google_melhor,google,-30.1453467,-51.2162051,Centro de Umbanda Fraternidade de Oxalá / Ylê Axé Reino de Oxalá e Yemanjá,0.624,17528
+Centro de Umbanda Oxóssi da Mata VIrgem,Porto Alegre,RS,google_melhor,google,-30.1135417,-51.2405193,Centro De Umbanda Mãe Oxum e Oxóssi Das Matas,0.693,5017
+Centro de Umbanda Oxóssi da Mata VIrgem Reino de Xangô,Gravataí,RS,google_melhor,google,-29.92151999999999,-51.048249,Centro de Umbanda e Quimbanda Reino de Iemanjá e Oxossi,0.617,2791
+Centro de Umbanda Oxóssi das Matas,Porto Alegre,RS,google_melhor,google,-30.1135417,-51.2405193,Centro De Umbanda Mãe Oxum e Oxóssi Das Matas,0.849,14048
+Centro de Umbanda Oxossi e Mata VIrgem,Novo Hamburgo,RS,google_melhor,google,-29.66915659999999,-51.097113,Templo de Umbanda ILÈ Oxalá e Iansã,0.537,7373
+Centro de Umbanda Oxum Abotô,Recife,PE,nominatim_melhor,nominatim,-8.039673,-34.9338507,Abassá da Oxum,0.444,4429
+Centro de Umbanda Oxum Docô,Porto Alegre,RS,novo_google_possivel,google,-30.0380242,-51.1056915,Casa de Oxum - Mãe Sayonara,0.435,None
+Centro de Umbanda Pai Joaquim,Porto Alegre,RS,novo_google,google,-29.9807288,-51.1297116,Casa Pai Joaquim De Cambinda,0.588,None
+Centro de Umbanda Pai Ogum Beira Mar e Oxum,Alvorada,RS,google_melhor,google,-29.9952348,-51.0809975,Centro de Umbanda Ogum Beira Mar e Abassé de Exu Morcego 🦇,0.778,3710
+Centro de Umbanda Pai Ogum Beira Mar Religião Africana Mãe Oxum,Porto Alegre,RS,confirmado_proximo,google,-30.0914005,-51.1730187,Centro de Umbanda Pai Ogum Beira Mar - Religião Africana Mãe Oxum,1.0,414
+Centro de Umbanda Pai Ogum Beira Mar; Mãe Iansã; Pai Xangô e Mãe Oxum,Porto Alegre,RS,google_melhor,google,-30.009139,-51.1375018,Templo Escola de Umbanda Ogum Megê e Iansã Do Balê,0.519,15166
+Centro de Umbanda Pai Ogum e Mãe Oxum,Alvorada,RS,novo_google,google,-29.9931986,-51.0753411,Centro Espírita De Umbanda Xangó Agodo E Oxum Pandá,0.545,None
+Centro de Umbanda Pai Ogum e Oxum,Alvorada,RS,google_melhor,google,-29.9931986,-51.0753411,Centro Espírita De Umbanda Xangó Agodo E Oxum Pandá,0.581,1061
+Centro de Umbanda Pai Ogum e Reino de Bará,Porto Alegre,RS,google_melhor,google,-30.0586865,-51.2151696,Centro Espírito de Umbanda Ogum de Ronda,0.657,6555
+Centro de Umbanda Pai Ogum Megê e Abasse de Destranca Rua das Almas,Porto Alegre,RS,novo_google,google,-30.009139,-51.1375018,Templo Escola de Umbanda Ogum Megê e Iansã Do Balê,0.514,None
+Centro de Umbanda Pai Ogum Megê e Mãe Oxum,Alvorada,RS,novo_google,google,-30.0188965,-51.0734485,Centro Africano Ogum Onira e Iansã,0.521,None
+Centro de Umbanda Pai Oxóssi,Triunfo,RS,novo_google,google,-29.9430501,-51.7179856,Centro místico,0.513,None
+Centro de Umbanda Pai Oxóssi das Matas e Caboclo Guarani,Porto Alegre,RS,nominatim_melhor,nominatim,-30.1840674,-51.2194036,Centro Africano Xango e Oxum,0.37,20016
+Centro de Umbanda Pai Sete Flechas e Mãe Iemanjá,Guaíba,RS,google_melhor,google,-30.1032205,-51.3174011,Reino de Iemanjá - Centro de Umbanda e Candomblé Nagô (Mãe Líbia de Iemanjá e Pai Geraldo de Ogum),0.504,3860
+Centro de Umbanda Pai Xangô e Exu Tiriri no Reino Afro de Xangô Aganju e Oxum Pandá,Gravataí,RS,novo_google_possivel,google,-29.926304,-51.0151663,Centro Afro do Reino de Xangô e Oxum,0.411,None
+Centro de Umbanda Paz e Amor,Guaíba,RS,novo_google,google,-30.1554816,-51.3421501,CENTRO UMBANDA MAE MARIA,0.816,None
+Centro de Umbanda Quimbanda e Oriente de Letícia de Oyá,Porto Alegre,RS,confirmado_proximo,google,-30.1124865,-51.2428524,Centro de Umbanda e Quimbanda Guias da Vida,0.699,352
+Centro de Umbanda Rainha das Flores,Igarassu,PE,google_melhor,google,-7.8798875,-34.9317667,Templo Umbandista Pai Oxalá TUPO,0.5,5730
+Centro de Umbanda Recanto de Ogum Guerreiro,Canoas,RS,google_melhor,google,-29.9325498,-51.1910803,Centro De Umbanda Ogum Guerreiro e Iansã,0.784,4619
+Centro de Umbanda Rei Baba Cacique Tupinambá,Alvorada,RS,nominatim_melhor,nominatim,-30.0116659,-51.07857,Sociedade Espírita de Umbanda Tupinambá das Matas Virgens,0.442,18047
+Centro de Umbanda Reino da Mãe Oxum,Porto Alegre,RS,google_melhor,google,-30.0040353,-51.1304519,Centro de Umbanda Morada da Iansã,0.679,8135
+Centro de Umbanda Reino da Mãe Oxum - Culto Africano Ilê Iyá Omin Axé,Porto Alegre,RS,nominatim_melhor,nominatim,-30.0687218,-51.2139137,Centro de Umbanda Fraternidade de Oxalá / Ylê Axé Reino de Oxalá e Yemanjá,0.387,8523
+Centro de Umbanda Reino de Iemanjá,Porto Alegre,RS,google_melhor,google,-30.0707415,-51.1969358,Centro de Umbanda Luz de Iemanjá,0.852,2688
+Centro de Umbanda Reino de Inhansã Abassé de Pomba Gira Cigana,Alvorada,RS,confirmado_proximo,google,-30.0272308,-51.0661789,Reino de Yansã e Oxum (Abasse de Exu Maré e Menina),0.5,286
+Centro de Umbanda Reino de Jurema e Oxossi Ilê de Oxum Pandá e Xangô Aganju,Alvorada,RS,novo_google,google,-29.9931986,-51.0753411,Centro Espírita De Umbanda Xangó Agodo E Oxum Pandá,0.51,None
+Centro de Umbanda Reino de Ogum Beira Mar,Eldorado do Sul,RS,divergente_inconclusivo,nominatim,-29.9949326,-51.3017975,C.U.Q. Reino de Ogum beira mar,0.787,126981
+Centro de Umbanda Reino de Ogum e Abassé Exu Rei e Pomba Gira Cigana,Montenegro,RS,novo_google_possivel,google,-29.6927115,-51.4545506,Templo de Umbanda Sereia 7 Ondas,0.418,None
+Centro de Umbanda Reino de Oxóssi,São Leopoldo,RS,google_melhor,google,-29.7421188,-51.1543415,Centro de Umbanda Cacique Oxossi das matas,0.697,841
+Centro de Umbanda Reino de Oxum,Gravataí,RS,google_melhor,google,-29.9159072,-50.9108782,Centro de umbanda xangô no reino de oxum,0.847,14770
+Centro de Umbanda Reino de Yemanjá e Oxossi,Porto Alegre,RS,google_melhor,google,-30.0781624,-51.163149,Centro de Umbanda Ogum Mege Reino de Yemanjá,0.747,10434
+Centro de Umbanda Reino do Ogum Megê e Xangô Aganju,Porto Alegre,RS,google_melhor,google,-30.009139,-51.1375018,Templo Escola de Umbanda Ogum Megê e Iansã Do Balê,0.607,12315
+Centro de Umbanda Reino Indaiá e Ogum Megê,Porto Alegre,RS,google_melhor,google,-30.0641542,-51.1685598,Centro Espiritualista e Umbanda Reino de Ogum Onira,0.598,16212
+Centro de Umbanda Reino Jurema e Xangô,Canoas,RS,google_melhor,google,-29.9114905,-51.2230037,Centro de Umbanda Reino De Iemanja E Xango,0.901,1657
+Centro de Umbanda Reino Pai Xangô e Ilê Pai Xapanã,São Leopoldo,RS,google_melhor,google,-29.720851,-51.1750659,Ilê Axé Reino de Xangô e Oxalá,0.568,2697
+Centro de Umbanda Santa Bárbara,Recife,PE,google_melhor,google,-8.1217843,-34.9466322,Sociedade Espírita Santa Bárbara,0.6,7401
+Centro de Umbanda Santa Bárbara,Recife,PE,novo_google,google,-8.1217843,-34.9466322,Sociedade Espírita Santa Bárbara,0.6,None
+Centro de Umbanda Santo Antônio e Santa Bárbara,Gravataí,RS,google_melhor,google,-29.9311824,-51.0444739,Centro de Umbanda e Quimbanda Reino de Ogum e Insã,0.568,1194
+Centro de Umbanda São João Batista,São Lourenço da Mata,PE,google_melhor,google,-7.998077599999999,-35.0375537,Terreiros de São Lourenço Da Mata,0.483,1014
+Centro de Umbanda Senhor do Bonfim,Olinda,PE,novo_google,google,-8.0096138,-34.8681707,CENTRO XAMBÁ SENHOR DO BONFIM,0.889,None
+Centro de Umbanda Sete Lanças,Porto Alegre,RS,google_melhor,google,-30.0586588,-51.2127251,Agrupamento de Umbanda do Sr Ogum Sete Lanças,0.738,4144
+Centro de Umbanda Toia Jarina,Marituba,PA,novo_google,google,-1.3602511,-48.46844919999999,Terreiro De Mina Nagô De Toya Jarina,0.679,None
+Centro de Umbanda Tupinambá e Iemanjá,Alvorada,RS,novo_google,google,-30.0068368,-51.0822705,Centro de Umbanda Magia Cigana,0.59,None
+Centro de Umbanda Unidos Pela Mãe de Cristo,Novo Hamburgo,RS,google_melhor,google,-29.7249112,-51.1337141,Centro De Umbanda Iara Beira Mar,0.697,710
+Centro de Umbanda Xangô  Fraternidade  Rainha do Mar,Alvorada,RS,google_melhor,google,-29.9931986,-51.0753411,Centro Espírita De Umbanda Xangó Agodo E Oxum Pandá,0.5,1147
+Centro de Umbanda Xangô Aganjú e Mãe Oxum Pandá,Alvorada,RS,confirmado_proximo,google,-29.9931986,-51.0753411,Centro Espírita De Umbanda Xangó Agodo E Oxum Pandá,0.763,116
+Centro de Umbanda Xangô e Jurema,Porto Alegre,RS,google_melhor,google,-30.0130732,-51.198145,Centro Espírita de Umbanda Nossa Senhora Aparecida,0.5,9047
+Centro de Umbanda Xangô e Ogum das Matas,São Leopoldo,RS,novo_google,google,-29.7452438,-51.1372252,Centro de Umbanda Mistério das Matas,0.743,None
+Centro Energético Reino de Ogum  Rompe Mata e Iansã,São Jerônimo,RS,confirmado,google,-29.9635748,-51.6696094,Centro Energético,0.531,57
+Centro Energético Reino do Xangô,Estância Velha,RS,proximo_nome_diferente,nominatim,-29.6573554,-51.1667969,Babalorixá Lauro de Xangô Aira - Buzio e Tarô,0.29,79
+Centro Espírita  Jesus de Nazareno,Pedro Leopoldo,MG,nominatim_melhor,nominatim,-19.62427,-44.0463627,Centro Espírita Luiz Gonzaga,0.385,625
+Centro Espírita Abassá Axé Oiá Gigá,Recife,PE,google_melhor,google,-8.0783656,-34.9433977,Abassá da Oxum,0.533,8069
+Centro Espírita Abassá da Oxum,Recife,PE,novo_google,google,-8.0783656,-34.9433977,Abassá da Oxum,1.0,None
+Centro Espírita Abassá da Oxum,Moreno,PE,divergente_inconclusivo,nominatim,-8.1233537,-35.1009658,Abassá da Oxum,1.0,18053
+Centro Espirita Africano Oyá Gigan,Recife,PE,nominatim_melhor,nominatim,-7.9987646,-34.9292906,Asé Oyá Gìgán - Asé Casa Vermelha,0.408,5630
+Centro Espírita Afro Umbanda da Mestra Paulina,Recife,PE,google_melhor,google,-8.0792738,-34.923358,Centro de Jurema Mestra Juvina,0.667,1693
+Centro Espírita Afro Umbandista Mãe Balbina,Recife,PE,google_melhor,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.613,3888
+Centro Espírita Afro Umbandista Oiá Onira,Recife,PE,google_melhor,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.633,4328
+Centro Espírita Afro Umbandista Rei dos Índios,São Lourenço da Mata,PE,novo_google_possivel,google,-7.9940826,-35.0334235,Lar de Obaluayê,0.333,None
+Centro Espírita Alakaya de Ogum,Betim,MG,nominatim_melhor,nominatim,-19.9984039,-44.1161353,Tenda Cigana Guerreiros de Ogum (Umbanda Cigana),0.291,5496
+Centro Espírita Aldeia de Canjira,Mário Campos,MG,confirmado_proximo,google,-20.0535309,-44.1822794,Centro Espírita Aldeia de Canjira,1.0,113
+Centro Espírita Arranca Toco,Recife,PE,novo_google_possivel,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.128,None
+Centro Espírita Axé de Aloyá,Moreno,PE,novo_google_possivel,google,-8.127739199999999,-35.1094282,Ilê Axé Ogum Ribavam,0.414,None
+Centro Espírita Boiadeiro do Pará,Jaboatão dos Guararapes,PE,novo_google,google,-8.1053518,-34.9856323,Centro espírita casa de boiadeiro,0.643,None
+Centro Espírita Cabloco Canindé,Olinda,PE,google_melhor,google,-7.9924625,-34.8447243,Centro Espirita de Candomblé Caboclo Canindé - CECCC,0.609,1053
+Centro Espírita Cabocla Amélia,Recife,PE,novo_google_possivel,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.367,None
+Centro Espírita Cabocla Aurora,Recife,PE,divergente_inconclusivo,nominatim,-8.0662635,-34.901083,Casa Cobra Coral,0.533,14041
+Centro Espírita Cabocla Aurora,Recife,PE,divergente_inconclusivo,nominatim,-8.0260563,-34.9029274,Casa Cobra Coral,0.533,16004
+Centro Espírita Cabocla Aurora,Recife,PE,divergente_inconclusivo,nominatim,-8.0051579,-34.8950522,Casa Cobra Coral,0.533,18125
+Centro Espirita Cabocla Aurora,Recife,PE,novo_google,google,-8.1107792,-35.0204394,Casa Cobra Coral,0.533,None
+Centro Espírita Cabocla Aurora,Olinda,PE,confirmado_proximo,google,-7.985325599999999,-34.8578933,Tenda de Jurema cabocla ourora,0.634,219
+Centro Espírita Cabocla Aurora Canindé,Jaboatão dos Guararapes,PE,novo_google,google,-8.187536399999999,-34.9546029,Terreiro Centro de Umbanda Cabocla Aurora Canindé,0.647,None
+Centro Espírita Cabocla Caçadora,Recife,PE,nominatim_melhor,nominatim,-8.0705375,-34.9311321,CECAM - Cenáculo Espírita Casa de Maria,0.4,6911
+Centro Espírita Cabocla Ceci,Camaragibe,PE,divergente_inconclusivo,nominatim,-8.0127122,-34.9741056,Centro Espirita de Candomblé Caboclo Canindé - CECCC,0.512,14423
+Centro Espírita Cabocla Ceci,Abreu e Lima,PE,novo_google,google,-7.915630599999999,-34.8294734,Tenda Espírita Cabocla Cecí,0.615,None
+Centro Espírita Cabocla Cecy,Olinda,PE,google_melhor,google,-7.9924625,-34.8447243,Centro Espirita de Candomblé Caboclo Canindé - CECCC,0.512,3349
+Centro Espírita Cabocla de Pena,Recife,PE,nominatim_melhor,nominatim,-8.006799,-34.927494,Centro Umbandista Caboclo Ubirajara,0.34,9098
+Centro Espírita Cabocla Genoveva,Recife,PE,novo_google_possivel,google,-8.0405494,-34.8921022,Federação Espírita Pernambucana,0.34,None
+Centro Espírita Cabocla Guaraci,Recife,PE,novo_google_possivel,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.4,None
+Centro Espírita Cabocla Iracema,Recife,PE,divergente_inconclusivo,nominatim,-8.1178048,-34.9393762,Centro espírita cabocla iracema,1.0,13868
+Centro Espírita Cabocla Iracema,Jaboatão dos Guararapes,PE,google_melhor,google,-8.1339401,-34.9729922,Centro Espírita Cabocla Iracema - Ilé Aṣẹ́ Ọ̀ṣún T’alade,0.577,6026
+Centro Espírita Cabocla Iracema Ilê da Oxum,Recife,PE,divergente_inconclusivo,nominatim,-8.0217781,-34.8983133,Centro Espírita Cabocla Iracema - Ilé Aṣẹ́ Ọ̀ṣún T’alade,0.689,14938
+Centro Espírita Cabocla Iraci,Recife,PE,nominatim_melhor,nominatim,-8.0517714,-34.9142749,Centro Umbandista Caboclo Ubirajara,0.417,4167
+Centro Espírita Cabocla Jaçaraci,Recife,PE,nominatim_melhor,nominatim,-8.0761355,-34.9224997,Centro Umbandista Caboclo Ubirajara,0.431,1370
+Centro Espírita Cabocla Jaci,Camaragibe,PE,novo_google,google,-8.3669504,-35.2313948,Centro espírita Caboclo Canidé,0.615,None
+Centro Espírita Cabocla Jaciara,Jaboatão dos Guararapes,PE,google_melhor,google,-8.1293708,-34.9564358,Templo de Jurema Cabocla Jacira,0.651,3123
+Centro Espírita Cabocla Jacira,Recife,PE,divergente_inconclusivo,nominatim,-7.9892201,-34.929448,Centro Espírita Cabocla Jacira,1.0,7572
+Centro Espírita Cabocla Jacira,Recife,PE,novo_google,google,-8.0219509,-34.9897555,Centro Espírita Cabocla Jacira,1.0,None
+Centro Espírita Cabocla Jacira,Recife,PE,divergente_inconclusivo,nominatim,-8.0282057,-34.8840744,Centro Espírita Cabocla Jacira,1.0,11657
+Centro Espírita Cabocla Jacira,Recife,PE,divergente_inconclusivo,nominatim,-7.9936483,-34.9155303,Centro Espírita Cabocla Jacira,1.0,8758
+Centro Espírita Cabocla Jacira,Paulista,PE,novo_google,google,-7.9075585,-34.8432128,Tenda da cabocla jacira,0.824,None
+Centro Espírita Cabocla Jacira,Recife,PE,divergente_inconclusivo,nominatim,-7.9974933,-34.9245455,Centro Espírita Cabocla Jacira,1.0,7678
+Centro Espírita Cabocla Jacira,Camaragibe,PE,novo_google,google,-8.0219509,-34.9897555,Centro Espírita Cabocla Jacira,1.0,None
+Centro Espírita Cabocla Jacira,Recife,PE,divergente_inconclusivo,nominatim,-8.1243103,-34.9394692,Centro Espírita Cabocla Jacira,1.0,12657
+Centro Espírita Cabocla Jacira,Recife,PE,divergente_inconclusivo,nominatim,-8.0565707,-34.9371115,Centro Espírita Cabocla Jacira,1.0,6958
+Centro Espírita Cabocla Jacira,Olinda,PE,divergente_inconclusivo,nominatim,-8.0048611,-34.8543606,Centro Espírita Cabocla Jacira,1.0,15029
+Centro Espírita Cabocla Jacira,Recife,PE,novo_google,google,-8.0219509,-34.9897555,Centro Espírita Cabocla Jacira,1.0,None
+Centro Espírita Cabocla Jacira,Olinda,PE,divergente_inconclusivo,nominatim,-8.0259956,-34.8742253,Centro Espírita Cabocla Jacira,1.0,12729
+Centro Espírita Cabocla Jacira,Olinda,PE,divergente_inconclusivo,nominatim,-8.0098175,-34.8633306,Centro Espírita Cabocla Jacira,1.0,13986
+Centro Espírita Cabocla Jacira,São Lourenço da Mata,PE,divergente_inconclusivo,nominatim,-8.0046985,-35.034324,Centro Espírita Cabocla Jacira,1.0,5269
+Centro Espírita Cabocla Jacira,Moreno,PE,divergente_inconclusivo,nominatim,-8.1147501,-35.1094272,Templo Casa de Oração Cabocla Jacira,0.596,3085577
+Centro Espírita Cabocla Jacira,Paulista,PE,google_melhor,google,-7.9075585,-34.8432128,Tenda da cabocla jacira,0.824,5399
+Centro Espírita Cabocla Jacira,Paulista,PE,google_melhor,google,-7.9075585,-34.8432128,Tenda da cabocla jacira,0.824,1733
+Centro Espírita Cabocla Jacira,Jaboatão dos Guararapes,PE,novo_google,google,-8.1293708,-34.9564358,Templo de Jurema Cabocla Jacira,0.667,None
+Centro Espírita Cabocla Jacira,Olinda,PE,novo_google,google,-8.0219509,-34.9897555,Centro Espírita Cabocla Jacira,1.0,None
+Centro Espírita Cabocla Jacira,Jaboatão dos Guararapes,PE,google_melhor,google,-8.1293708,-34.9564358,Templo de Jurema Cabocla Jacira,0.667,7719
+Centro Espírita Cabocla Jacira,Olinda,PE,novo_google,google,-8.0219509,-34.9897555,Centro Espírita Cabocla Jacira,1.0,None
+Centro Espírita Cabocla Jacyara,Recife,PE,nominatim_melhor,nominatim,-8.0686609,-34.9212625,Centro Umbandista Caboclo Ubirajara,0.44,2202
+Centro Espírita Cabocla Jaguaracira,Recife,PE,novo_google_possivel,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.407,None
+Centro Espírita Cabocla Jandaraí,Recife,PE,nominatim_melhor,nominatim,-8.0769916,-34.9195306,Centro Umbandista Caboclo Ubirajara,0.431,1304
+Centro Espírita Cabocla Jandira,Recife,PE,divergente_inconclusivo,nominatim,-8.0143756,-34.9287688,CENTRO DE UMBANDA CABOCLA JANDIRA,0.667,1867245
+Centro Espírita Cabocla Jandira,Recife,PE,match_ruim,google,-27.4808263,-48.5174528,Tenda Espírita Cabocla Jandira - TEJ Floripa,0.526,None
+Centro Espírita Cabocla Jandira,Olinda,PE,novo_google_possivel,google,-7.9924625,-34.8447243,Centro Espirita de Candomblé Caboclo Canindé - CECCC,0.435,None
+Centro Espírita Cabocla Jandira,Igarassu,PE,google_melhor,google,-7.8611486,-34.88309650000001,Centro Espírita Cabocla Daiana,0.759,7170
+Centro Espírita Cabocla Jandira,Olinda,PE,nominatim_melhor,nominatim,-7.9955131,-34.8929069,Centro Espirita de Candomblé Caboclo Canindé - CECCC,0.435,5316
+Centro Espírita Cabocla Jandira Ilê Axé Oxum Opará,Olinda,PE,match_ruim,google,-22.824259,-43.1687044,CENTRO DE UMBANDA CABOCLA JANDIRA,0.469,None
+Centro Espírita Cabocla Jatyacy,Recife,PE,nominatim_melhor,nominatim,-8.081558,-34.9480539,Centro Umbandista Caboclo Ubirajara,0.4,2963
+Centro Espírita Cabocla Jupiara,Igarassu,PE,google_melhor,google,-7.8611486,-34.88309650000001,Centro Espírita Cabocla Daiana,0.759,3593
+Centro Espírita Cabocla Jupira,Recife,PE,google_melhor,google,-8.0217847,-34.8761377,Centro Espírita Cabocla Jupira,1.0,5366
+Centro Espírita Cabocla Jupira,Abreu e Lima,PE,divergente_inconclusivo,nominatim,-7.9176355,-34.9297361,Centro Espírita Cabocla Jupira,1.0,12998
+Centro Espírita Cabocla Jurandá,Recife,PE,nominatim_melhor,nominatim,-8.0837566,-34.9300013,Centro Umbandista Caboclo Ubirajara,0.44,1019
+Centro Espírita Cabocla Jurema,Recife,PE,novo_google_possivel,google,-8.0298911,-34.8772253,Cidade dos Encantados da Jurema Sagrada,0.4,None
+Centro Espírita Cabocla Jurema,Recife,PE,novo_google_possivel,google,-8.0298911,-34.8772253,Cidade dos Encantados da Jurema Sagrada,0.4,None
+Centro Espírita Cabocla Jurema,São Lourenço da Mata,PE,novo_google_possivel,google,-8.0115961,-35.0393281,Pai Ytallo da Cigana,0.194,None
+Centro Espírita Cabocla Jurema - Ilê Ogum Tayo,Recife,PE,nominatim_melhor,nominatim,-8.0208666,-34.9060916,Cidade dos Encantados da Jurema Sagrada,0.406,3333
+Centro Espírita Cabocla Jurema e Pomba Gira das Almas,Porto Alegre,RS,google_melhor,google,-30.1499552,-51.1483893,T.U. Cabocla Jurema e Reino de Pomba gira Rainha das Almas,0.813,7997
+Centro Espírita Cabocla Jutiaci,Olinda,PE,google_melhor,google,-8.014635199999999,-34.8493794,centro espirita cabocla jupiracy,0.839,597
+Centro Espírita Cabocla Laurinda,Abreu e Lima,PE,nominatim_melhor,nominatim,-7.9163615,-34.9236448,,None,None
+Centro Espírita Cabocla Madalena,Recife,PE,nominatim_melhor,nominatim,-8.0249317,-34.9249684,Centro Umbandista Caboclo Ubirajara,0.353,7070
+Centro Espírita Cabocla Maria Alice,Moreno,PE,match_ruim,google,-22.8345997,-43.0808616,CEIMA ( Casa Espírita Irmã Maria Alice),0.545,None
+Centro Espírita Cabocla Menina,Recife,PE,novo_google_possivel,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.327,None
+Centro Espírita Cabocla Neci,Itamaracá,PE,novo_google,google,-7.9924625,-34.8447243,Centro Espirita de Candomblé Caboclo Canindé - CECCC,0.465,None
+Centro Espírita Cabocla Neci,Recife,PE,nominatim_melhor,nominatim,-8.0540838,-34.9375348,Centro Umbandista Caboclo Ubirajara,0.298,4184
+Centro Espírita Cabocla Necy,Recife,PE,nominatim_melhor,nominatim,-8.1235939,-34.9416072,Centro Umbandista Caboclo Ubirajara,0.298,4462
+Centro Espírita Cabocla Sucuri,Contagem,MG,nominatim_melhor,nominatim,-19.9395409,-44.0346268,Associação Beneficente O Além dos Orixás,0.333,2267
+Centro Espírita Cabocla Tapaciara,Olinda,PE,novo_google_possivel,google,-7.9924625,-34.8447243,Centro Espirita de Candomblé Caboclo Canindé - CECCC,0.375,None
+Centro Espírita Cabocla Tapúia,Paulista,PE,match_ruim,google,-12.9785251,-38.4395793,Centro de Umbanda Caboclo Taperoa,0.5,None
+Centro Espírita Cabocla Tapuia,Olinda,PE,divergente_inconclusivo,nominatim,-7.9900457,-34.9074068,Centro espírita cabocla tapuia,1.0,10562
+Centro Espírita Cabocla Tapúia,Paulista,PE,divergente_inconclusivo,nominatim,-7.9304857,-34.8539877,Centro de Umbanda Caboclo Taperoa,0.5,684611
+Centro Espírita Cabocla Tapuia de Canindé,Olinda,PE,novo_google,google,-7.9924625,-34.8447243,Centro Espirita de Candomblé Caboclo Canindé - CECCC,0.528,None
+Centro Espírita Cabocla Tupinagi,Recife,PE,novo_google_possivel,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.314,None
+Centro Espírita Cabocla Tupinajara,Olinda,PE,google_melhor,google,-7.999031899999999,-34.8967585,Tenda de Jurema Caboclo Tupinambá,0.583,1979
+Centro Espírita Cabocla Tupiracira,Recife,PE,novo_google,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.491,None
+Centro Espírita Caboclo  Jupiracy,Olinda,PE,novo_google,google,-8.014635199999999,-34.8493794,centro espirita cabocla jupiracy,0.938,None
+Centro Espírita Caboclo Andreino Africano,Recife,PE,novo_google_possivel,google,-8.0884462,-34.9220533,Centro Umbandista Caboclo Ubirajara,0.367,None
+Centro Espírita Caboclo Antônio do Amazona,Paulista,PE,google_melhor,google,-7.889047700000001,-34.8310281,Centro Espírita Caboclo Do Amazonas,0.769,2459
+Centro Espírita Caboclo Candidé,Olinda,PE,confirmado_proximo,google,-7.9924625,-34.8447243,Centro Espirita de Candomblé Caboclo Canindé - CECCC,0.609,404
+Centro Espírita Caboclo Cangaruçú,Paulista,PE,google_melhor,google,-7.9084786,-34.8409862,Centro Espírita de Umbanda Caboclo Tupinambá,0.476,6793

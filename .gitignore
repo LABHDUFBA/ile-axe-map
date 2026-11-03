@@ -2,3 +2,7 @@ data/ceao/fotos_grandes.zip
 data/sefaz/sefaz_salvador_map.pdf
 scripts/__pycache__/
 tests/__pycache__/
+data/mapeando_axe/raw/
+tmp_national_map.html
+tmp_national_map_v2.html
+.hermes/

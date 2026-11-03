@@ -1,0 +1,27 @@
+{
+  "total": 3923,
+  "raw_coordinate_results": 1718,
+  "verified_public_coordinates": 1717,
+  "needs_review": 1,
+  "no_match": 2205,
+  "verified_rate_percent": 43.77,
+  "verified_by_state": {
+    "PA": 329,
+    "PE": 531,
+    "RS": 676,
+    "MG": 181
+  },
+  "confidence_verified": {
+    "min": 0.75,
+    "median": 0.8,
+    "max": 1.0
+  },
+  "geojson_features": 3923,
+  "geojson_points": 1717,
+  "public_geojson_excludes": [
+    "leadership",
+    "email"
+  ],
+  "provider": "Nominatim / OpenStreetMap",
+  "attribution": "© OpenStreetMap contributors"
+}
