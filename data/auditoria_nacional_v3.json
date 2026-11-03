@@ -1,0 +1,40 @@
+{
+  "versao": "nacional_v3",
+  "input": "terreiros_nacional_teste.geojson",
+  "total_input": 7755,
+  "total_output": 7755,
+  "excluidos_curados": 0,
+  "excluidos_nomes": [],
+  "coords_herdadas_v2": 1290,
+  "centroide_suspeito": 2225,
+  "uf_divergente": 268,
+  "geo_status_counts": {
+    "herdado_v2_validado": 363,
+    "herdado_v2_centroide_substituido": 927,
+    "centroide_suspeito": 2156,
+    "csv": 3552,
+    "uf_divergente": 218,
+    "nominatim_fixed": 59,
+    "heranca_v2_uf_divergente_rejeitada|centroide_suspeito": 22,
+    "heranca_v2_uf_divergente_rejeitada": 28,
+    "uf_divergente|centroide_suspeito": 47,
+    "nominatim": 380,
+    "heranca_v2_uf_divergente_rejeitada|uf_divergente": 3
+  },
+  "por_uf": {
+    "RS": 1494,
+    "SP": 1341,
+    "PE": 1322,
+    "BA": 1191,
+    "PI": 817,
+    "?": 483,
+    "MG": 451,
+    "PA": 263,
+    "RJ": 204,
+    "CE": 72,
+    "GO": 60,
+    "AC": 43,
+    "RN": 11,
+    "TO": 3
+  }
+}
