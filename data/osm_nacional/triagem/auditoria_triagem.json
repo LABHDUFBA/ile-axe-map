@@ -1,0 +1,11 @@
+{
+  "total_osm": 1301,
+  "tiers": {
+    "provavel_terreiro": 129,
+    "nao_terreiro_ou_insuficiente": 989,
+    "revisar_natureza": 37,
+    "ja_na_v4": 146
+  },
+  "metodo": "provável = tag religion afro/matriz ou amenity=place_of_worship com nome religioso; duplicata = mesmo nome ou <=500 m da v4. Não incorporado automaticamente.",
+  "nota": "OSM é ODbL; crédito OpenStreetMap contributors obrigatório caso incorporado."
+}
