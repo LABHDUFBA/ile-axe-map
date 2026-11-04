@@ -6,3 +6,7 @@ data/mapeando_axe/raw/
 tmp_national_map.html
 tmp_national_map_v2.html
 .hermes/
+# Coleta CNPJ: bruto contém CNPJ, contatos e endereços completos. Mantido apenas local.
+data/cnpj_nacional/terreiros_cnpj_nacional.csv
+data/cnpj_nacional/raizes_alvo.json
+data/cnpj_nacional/razoes_sociais_alvo.json

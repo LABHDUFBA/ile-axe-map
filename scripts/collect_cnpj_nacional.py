@@ -32,14 +32,16 @@ TMP = Path("/home/hermes/.hermes/cache/scratch")
 
 MIRROR = "https://dados-abertos-rf-cnpj.casadosdados.com.br/arquivos/2026-10-13"
 
-KEYWORDS = [
-    "candombl", "umbanda", "terreiro", "ile ax", "axé de", "axe de",
-    "orixá", "orixa", "batuque", "jurema", "tambor de mina", "babalorix",
-    "ialorix", "casa de orix", "macumba", "quimbanda", "catimbó", "catimbo",
-    # Forma contextual: recupera Nzo Boya/Nzo ... (Angola), sem capturar Enzo/Lorenzo.
-    "nzo ", "egun", "vodu",
+# Termos com fronteiras de palavra. Isso evita falsos positivos como RENZO e SEGUNDO.
+KEYWORD_PATTERNS = [
+    r"\bcandombl\w*\b", r"\bumbanda\b", r"\bterreiro\b",
+    r"\bil[eê]\s+ax[eé]\b", r"\bax[eé]\s+de\b", r"\borix[áa]s?\b",
+    r"\bbatuque\b", r"\bjurema\b", r"\btambor\s+de\s+min[áa]\b",
+    r"\bbabalorix\w*\b", r"\bialorix\w*\b", r"\bcasa\s+de\s+orix\w*\b",
+    r"\bmacumba\b", r"\bquimbanda\b", r"\bcatimb[óo]\b", r"\bnzo\b",
+    r"\begun(?:gun)?\b", r"\bvodu\b",
 ]
-KW_RE = re.compile("|".join(re.escape(k) for k in KEYWORDS), re.IGNORECASE)
+KW_RE = re.compile("|".join(KEYWORD_PATTERNS), re.IGNORECASE)
 
 # CNAE 9491-0/00 = organizações religiosas (usado só como sinal extra, não filtro único)
 CNAE_RELIGIOSO = "9491"
