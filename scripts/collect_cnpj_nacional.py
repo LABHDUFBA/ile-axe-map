@@ -36,7 +36,8 @@ KEYWORDS = [
     "candombl", "umbanda", "terreiro", "ile ax", "axé de", "axe de",
     "orixá", "orixa", "batuque", "jurema", "tambor de mina", "babalorix",
     "ialorix", "casa de orix", "macumba", "quimbanda", "catimbó", "catimbo",
-    "egun", "vodu",
+    # Forma contextual: recupera Nzo Boya/Nzo ... (Angola), sem capturar Enzo/Lorenzo.
+    "nzo ", "egun", "vodu",
 ]
 KW_RE = re.compile("|".join(re.escape(k) for k in KEYWORDS), re.IGNORECASE)
 
