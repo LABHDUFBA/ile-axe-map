@@ -1,0 +1,21 @@
+{
+  "base_v4": 7873,
+  "osm": {
+    "provaveis_entrada": 129,
+    "adicionados": 122,
+    "rejeitados_por_dedupe": 7
+  },
+  "cnpj": {
+    "precision_forte_entrada": 124,
+    "adicionados": 50,
+    "uf_divergente": 1,
+    "rejeitados_por_dedupe_espacial_ou_nominal": 73
+  },
+  "total_v4_1_candidata": 8045,
+  "novas_entidades": 172,
+  "por_fonte_nova": {
+    "osm": 122,
+    "receita_federal_cnpj": 50
+  },
+  "nota": "CANDIDATA: v4 publicada permanece inalterada. CNPJ sem CNPJ/endereço/contato. Demais CNPJ e OSM aguardam revisão."
+}
