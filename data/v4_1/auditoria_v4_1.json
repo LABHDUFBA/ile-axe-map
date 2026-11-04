@@ -1,0 +1,26 @@
+{
+  "base_v4": 7873,
+  "osm": {
+    "provaveis_entrada": 129,
+    "adicionados": 113,
+    "rejeitados": {
+      "religiao_osm_conflitante": 3,
+      "duplicata_interna": 7,
+      "evidencia_osm_insuficiente": 2,
+      "nome_comercial_ou_altar": 4
+    }
+  },
+  "cnpj": {
+    "precision_forte_entrada": 124,
+    "adicionados": 50,
+    "uf_divergente": 1,
+    "rejeitados_por_dedupe_espacial_ou_nominal": 73
+  },
+  "total_v4_1": 8036,
+  "novas_entidades": 163,
+  "por_fonte_nova": {
+    "osm": 113,
+    "receita_federal_cnpj": 50
+  },
+  "nota": "v4.1: CNPJ sem CNPJ/endereço/contato. Demais CNPJ e OSM aguardam revisão."
+}

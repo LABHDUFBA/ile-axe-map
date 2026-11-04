@@ -360,26 +360,25 @@
       <p>Atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros do Brasil.</p>
       <h3>Dataset</h3>
       <dl>
-        <dt>Versão</dt><dd>v4 (unificada)</dd>
+        <dt>Versão</dt><dd>v4.1 (unificada)</dd>
         <dt>Modelo</dt><dd>entidade ↔ ocorrência (multi-fonte)</dd>
-        <dt>Total</dt><dd id="dataset-total">7.873 entidades</dd>
-        <dt>Com coordenada</dt><dd id="dataset-georef">7.873</dd>
+        <dt>Total</dt><dd id="dataset-total">8.036 entidades</dd>
+        <dt>Com coordenada</dt><dd id="dataset-georef">8.036</dd>
         <dt>Fontes</dt><dd>CEAO/UFBA · CNPJ/RFB · Mapeando Axé · Google Places · OSM · SEFAZ · CEAP</dd>
       </dl>
       <h3>Fontes</h3>
       <p>
         <a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a> — 2.228 ocorrências<br>
-        CNPJ/Receita Federal — 2.442 ocorrências<br>
+        CNPJ/Receita Federal — 2.492 ocorrências<br>
         Mapeando Axé — 4.042 ocorrências<br>
-        Google Places + OSM — 768 ocorrências<br>
+        Google Places + OSM — 881 ocorrências<br>
         SEFAZ/Salvador — 223 ocorrências<br>
         <a href="https://mapadoaxe.ceapoficial.org.br/" target="_blank" rel="noopener">CEAP — Mapa do Axé</a> — 286 ocorrências
       </p>
       <h3>Metodologia</h3>
       <p>
         <a href="metodologia.html" target="_blank">Nota técnico-metodológica</a><br>
-        <a href="data/v4/terreiros_nacional_v4.geojson" download>Download GeoJSON (v4)</a><br>
-        <a href="data/v4/entities.jsonl" download>Entidades (JSONL)</a> · <a href="data/v4/occurrences.jsonl" download>Ocorrências (JSONL)</a>
+        <a href="data/v4_1/terreiros_nacional_v4_1.geojson" download>Download GeoJSON (v4.1)</a><br>
       </p>
       <h3>Código</h3>
       <p>
@@ -502,7 +501,7 @@
 
     function getName(p) { return p.nome || p.name || p.title || 'Terreiro sem nome'; }
     function getFonteLabel(p) {
-      // v4: sempre deriva do array de fontes da entidade (rank de confiabilidade)
+      // GeoJSON unificado: fonte principal da entidade, com prioridade de confiabilidade
       if (Array.isArray(p.fontes) && p.fontes.length) {
         const rank = ['ceao','google_places','google','ceap','osm','receita_federal_cnpj','mapeando_axe_csv','sefaz'];
         for (const f of rank) if (p.fontes.includes(f)) return fonteMap[f] || f;
@@ -859,7 +858,7 @@
     // === Load ===
     map.whenReady(async function() {
       try {
-        const [geoResponse] = await Promise.all([fetch('data/v4/terreiros_nacional_v4.geojson')]);
+        const [geoResponse] = await Promise.all([fetch('data/v4_1/terreiros_nacional_v4_1.geojson')]);
         if (!geoResponse.ok) throw new Error('GeoJSON ' + geoResponse.status);
         const data = await geoResponse.json();
         $('dataset-total').textContent = data.features.length.toLocaleString('pt-BR') + ' registros';

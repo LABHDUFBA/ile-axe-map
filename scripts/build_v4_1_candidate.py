@@ -8,7 +8,7 @@ Adições estritas:
 
 Saída pública sanitizada em data/v4_1/. A cache CNPJ privada nunca é publicada.
 """
-import json, math, sys
+import json, math, re, sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -64,21 +64,35 @@ def main():
     existing_grid = grid_index(v4)
     selected, audit = [], {"base_v4":len(v4), "osm":{}, "cnpj":{}}
 
-    # OSM, já filtrado por tags/natureza
+    # OSM: requer evidência religiosa direta ou local de culto + nome inequívoco.
+    # Metadados conflitantes (ex. muslim/hindu/buddhist) e nomes comerciais não entram.
     osm = json.loads((D/"osm_nacional/triagem/osm_nacional_triagem.geojson").read_text(encoding="utf-8"))["features"]
     osm_high = [f for f in osm if f["properties"].get("tier")=="provavel_terreiro"]
+    religion_direct = re.compile(r"(umbanda|candomble|afro|matriz|tambor|jurema)", re.I)
+    name_religious = re.compile(r"\b(umbanda|candomble|terreiro|ile axe|ile ase|tenda|quimbanda|mina|jurema|abassa)\b", re.I)
+    commercial_name = re.compile(r"\b(artigos|bazar|flora|consultorio|altar)\b", re.I)
+    conflicting_religions = {"muslim", "hindu", "buddhist", "christian", "jewish"}
+    osm_rejected = Counter()
     for f in osm_high:
         p=f["properties"]; name=p.get("nome") or ""
+        religion = norm(p.get("religion") or "")
+        worship = p.get("amenity") == "place_of_worship"
+        if religion in conflicting_religions:
+            osm_rejected["religiao_osm_conflitante"] += 1; continue
+        if commercial_name.search(name):
+            osm_rejected["nome_comercial_ou_altar"] += 1; continue
+        if not (religion_direct.search(religion) or (worship and name_religious.search(norm(name)))):
+            osm_rejected["evidencia_osm_insuficiente"] += 1; continue
         if norm(name) in v4_names or near(f, existing_grid):
-            continue
+            osm_rejected["duplicata_v4"] += 1; continue
         lon, lat = f["geometry"]["coordinates"]
         out=candidate_feature(name, lon, lat, p.get("uf") or "", "osm", "fonte_osm_alta_confianca")
         # dedupe intra-lote: mesmo nome ou <=500 m
         selgrid=grid_index(selected)
         if norm(name) in {norm(x["properties"]["nome"]) for x in selected} or near(out, selgrid):
-            continue
+            osm_rejected["duplicata_interna"] += 1; continue
         selected.append(out)
-    audit["osm"]={"provaveis_entrada":len(osm_high),"adicionados":len(selected),"rejeitados_por_dedupe":len(osm_high)-len(selected)}
+    audit["osm"]={"provaveis_entrada":len(osm_high),"adicionados":len(selected),"rejeitados":dict(osm_rejected)}
 
     # CNPJ, cache privado local. A saída não inclui CNPJ, query nem endereço.
     cache_path=D/"cnpj_nacional/geocoding_v41/cache_privado.jsonl"
@@ -102,9 +116,9 @@ def main():
 
     all_features=v4+selected
     result={"type":"FeatureCollection","features":all_features}
-    (OUT/"terreiros_nacional_v4_1_candidata.geojson").write_text(json.dumps(result,ensure_ascii=False),encoding="utf-8")
-    audit.update({"total_v4_1_candidata":len(all_features),"novas_entidades":len(selected),"por_fonte_nova":dict(Counter(f["properties"]["coord_origin"] for f in selected)),"nota":"CANDIDATA: v4 publicada permanece inalterada. CNPJ sem CNPJ/endereço/contato. Demais CNPJ e OSM aguardam revisão."})
-    (OUT/"auditoria_v4_1_candidata.json").write_text(json.dumps(audit,ensure_ascii=False,indent=2),encoding="utf-8")
+    (OUT/"terreiros_nacional_v4_1.geojson").write_text(json.dumps(result,ensure_ascii=False),encoding="utf-8")
+    audit.update({"total_v4_1":len(all_features),"novas_entidades":len(selected),"por_fonte_nova":dict(Counter(f["properties"]["coord_origin"] for f in selected)),"nota":"v4.1: CNPJ sem CNPJ/endereço/contato. Demais CNPJ e OSM aguardam revisão."})
+    (OUT/"auditoria_v4_1.json").write_text(json.dumps(audit,ensure_ascii=False,indent=2),encoding="utf-8")
     print(json.dumps(audit,ensure_ascii=False,indent=2))
 
 if __name__=="__main__":
