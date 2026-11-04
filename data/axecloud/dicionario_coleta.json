@@ -1,0 +1,40 @@
+{
+  "fonte": "AxéCloud — diretório público de terreiros (SaaS comercial de gestão, R$ 69,90/mês; diretório é funil de aquisição)",
+  "site": "https://axecloud.com.br/terreiros",
+  "api_mapa": "https://axecloud.com.br/api/v1/public/diretorio/mapa",
+  "api_perfil": "https://axecloud.com.br/api/v1/public/diretorio/terreiro/{slug}",
+  "data_coleta": "2026-11-03",
+  "total_registros": 14015,
+  "escala_coordenadas": "micrograus x1e5 (arrays 'a'=lat, 'o'=lng)",
+  "PROVENIENCIA": {
+    "evidencia": [
+      "campo coordinateSource='google_maps_url' na maioria dos perfis amostrados (10/12); resto 'address_geocoded'",
+      "fotos hospedadas em supabase storage sob path perfil_fotos/diretorio/scraped/",
+      "linkMaps em cada perfil aponta para o registro correspondente do Google Maps (place_id e feature_id presentes)",
+      "campo 'verificada': false em 100% da amostra; 'gerenciada': false",
+      "criadaEm em lotes: jun-set/2026 (campanhas de scraping do Google Maps)"
+    ],
+    "conclusao": "Base construída majoritariamente por SCRAPING de registros do Google Maps (place listings), sem verificação humana visível. Não é cadastro comunitário como o CEAP; não é curadoria acadêmica. É uma agregação comercial de dados do Google.",
+    "implicacao_etica": "redistribuir dados raspados do Google Maps pode violar os ToS do Google; incorporação exige análise jurídica antes de qualquer uso"
+  },
+  "qualidade_geografica_amostral": {
+    "fora_do_brasil": 0,
+    "coord_fora_da_uf_declarada": "170 (1.2%)",
+    "empilhamento_em_centroide": "184 (1.3%)",
+    "nota": "coords do Google Maps são de qualidade alta por construção (endereço do próprio estabelecimento no Maps)"
+  },
+  "comparacao": {
+    "vs_nossa_v3": "só 1.145 de 14.015 (8%) batem por nome normalizado; cobertura deles ~2x a nossa",
+    "vs_ceap": "88 de 286 em comum",
+    "por_uf_top": {
+      "SP": 3472,
+      "RJ": 2426,
+      "RS": 1456,
+      "BA": 1242,
+      "MG": 907,
+      "PR": 663,
+      "SC": 543
+    }
+  },
+  "status": "coletado, NÃO incorporado; análise de validação e jurídica posterior acordada com Leonardo (03/11/2026)"
+}
