@@ -1,0 +1,16 @@
+{
+  "versao_v4_comparada": "v4",
+  "metodo": "sobreposição por nome normalizado exato, sem coordenadas CNPJ; números de 'novos' são candidatos, não entidades confirmadas",
+  "cnpj": {
+    "provaveis_ou_confirmados": 3176,
+    "ja_na_v4_por_nome": 935,
+    "candidatos_novos_por_nome": 2241
+  },
+  "osm": {
+    "provaveis": 129,
+    "ja_na_v4_por_nome": 0,
+    "candidatos_novos_por_nome": 129
+  },
+  "potencial_maximo_antes_de_geocodificacao_e_dedupe": 10243,
+  "nota": "O potencial máximo soma 7.873 entidades v4 + 2.241 candidatos CNPJ + 129 OSM. A deduplicação por município/endereço/coordenada reduzirá esse número. Não incorporado automaticamente."
+}
