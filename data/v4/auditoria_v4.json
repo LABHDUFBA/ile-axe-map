@@ -3,9 +3,20 @@
   "versao": "v4",
   "modelo": "entidade ↔ ocorrência; merges conservadores (nome idêntico + município/UF ou <500 m); AxéCloud = flag de evidência, nunca fonte",
   "total_ocorrencias": 10002,
-  "total_entidades": 7886,
+  "total_entidades": 7873,
   "entidades_multi_fonte": 222,
-  "entidades_com_coordenada": 7886,
+  "entidades_com_coordenada": 7873,
+  "exclusoes_curadas_aplicadas": 0,
+  "exclusoes_exemplos": [],
+  "removidas_diaspora": 13,
+  "geo_status_entidades": {
+    "herdado_v2_validado": 1914,
+    "centroide_suspeito": 2437,
+    "uf_divergente": 208,
+    "fonte_propria_receita_federal_cnpj": 662,
+    "fonte_propria_mapeando_axe_csv": 2384,
+    "fonte_propria_ceap": 268
+  },
   "ocorrencias_por_fonte": {
     "ceao": 2228,
     "osm": 20,
@@ -25,7 +36,7 @@
     "PI": 745,
     "MG": 427,
     "PA": 265,
-    "?": 249,
+    "?": 236,
     "RJ": 181,
     "CE": 84,
     "GO": 64,
@@ -52,5 +63,5 @@
     "corroborado": 452,
     "nome_divergente": 683
   },
-  "nota": "v4 é candidata; site continua em v3 até validação e decisão de Leonardo. CEAP entra como fonte (crédito obrigatório). AxéCloud não republicável (ToS Google)."
+  "nota": "v4: site único nacional; diáspora excluída por decisão de Leonardo (04/11/2026); exclusões curadas aplicadas por entidade."
 }

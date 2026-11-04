@@ -249,6 +249,66 @@ def main():
     multi = sum(1 for e in entities if len(e["fontes"]) > 1)
     com_coords = sum(1 for e in entities if e["lat"] is not None)
 
+    # --- item 1: SINALIZAÇÃO geo_status por entidade ---
+    # herda a pior evidência entre as ocorrências da entidade:
+    #   herdado_v2/v2_validado (coords da base validada) > centroide_suspeito/uf_divergente
+    occ_by_ent = defaultdict(list)
+    for o in occ_out:
+        occ_by_ent[o["entity_id"]].append(o)
+
+    def entity_geo_status(e):
+        occs_e = occ_by_ent.get(e["entity_id"], [])
+        statuses = [str(o.get("geo_status") or "") for o in occs_e]
+        if any("centroide_suspeito" in s for s in statuses):
+            return "centroide_suspeito"
+        if any("uf_divergente" in s for s in statuses):
+            return "uf_divergente"
+        if any("herdado_v2" in s or "v2_validado" in s for s in statuses):
+            return "herdado_v2_validado"
+        if e["coord_origin"] in ("v2_validado",):
+            return "herdado_v2_validado"
+        return "fonte_propria_" + (e["coord_origin"] or "desconhecida")
+
+    for e in entities:
+        e["geo_status"] = entity_geo_status(e)
+
+    # --- campos de exibição: herda da melhor ocorrência (prioridade de fonte) ---
+    FIELDS = ["nacao", "categoria", "endereco", "cep", "telefone", "linha_religiosa", "bairro", "nacao_categoria"]
+    for e in entities:
+        occs_e = sorted(occ_by_ent.get(e["entity_id"], []),
+                        key=lambda o: NOME_PRIORITY.get(o["fonte"], 9))
+        for f in FIELDS:
+            for o in occs_e:
+                if o.get(f) and str(o.get(f)).strip() and "revisar" not in str(o.get(f))[:20]:
+                    e[f] = o[f]
+                    break
+        # fonte_label para exibição
+        LABELS = {"ceao": "CEAO/UFBA", "google": "Google Places", "google_places": "Google Places",
+                  "osm": "OSM", "sefaz": "SEFAZ/Salvador", "receita_federal_cnpj": "CNPJ/Receita Federal",
+                  "mapeando_axe_csv": "Mapeando Axé (CSV)", "ceap": "CEAP/Mapa do Axé"}
+        e["fonte_label"] = LABELS.get(e["coord_origin"], e["coord_origin"])
+        if not e.get("categoria") and not e.get("nacao"):
+            e["categoria"] = "Não informado"
+
+    # --- item 2: EXCLUSÕES CURADAS por entidade ---
+    excl = list(csv.DictReader((D / "exclusoes_curadas.csv").open(encoding="utf-8"))) if (D / "exclusoes_curadas.csv").exists() else []
+    excl_names = {norm(r["nome"]) for r in excl if r.get("nome")}
+    entities_out, removed_curadas, removed_diaspora = [], [], []
+    for e in entities:
+        if e["nome_norm"] in excl_names:
+            removed_curadas.append(e["nome"])
+            continue
+        # item 2b: DIÁSPORA — Leo decidiu NÃO usar (04/11/2026)
+        if "ceap_diaspora" in e["fontes"] or (e["lat"] is not None and not (-74 <= e["lon"] <= -30 and -34 <= e["lat"] <= 6)):
+            removed_diaspora.append(e["nome"])
+            continue
+        entities_out.append(e)
+    entities = entities_out
+
+    # recontabiliza após as remoções
+    multi = sum(1 for e in entities if len(e["fontes"]) > 1)
+    com_coords = sum(1 for e in entities if e["lat"] is not None)
+
     with open(OUT / "entities.jsonl", "w", encoding="utf-8") as f:
         for e in entities:
             d = dict(e)
@@ -269,7 +329,12 @@ def main():
                 "entity_id": e["entity_id"], "nome": e["nome"],
                 "municipio": e["municipio"], "uf": e["uf"],
                 "fontes": sorted(e["fontes"]), "num_fontes": len(e["fontes"]),
-                "coord_origin": e["coord_origin"], "match_axecloud": e["match_axecloud"],
+                "coord_origin": e["coord_origin"], "geo_status": e["geo_status"],
+                "fonte_label": e.get("fonte_label"),
+                "nacao": e.get("nacao"), "categoria": e.get("categoria"),
+                "endereco": e.get("endereco"), "cep": e.get("cep"),
+                "linha_religiosa": e.get("linha_religiosa"),
+                "match_axecloud": e["match_axecloud"],
                 "versao": "v4",
             },
         })
@@ -287,10 +352,14 @@ def main():
         "total_entidades": len(entities),
         "entidades_multi_fonte": multi,
         "entidades_com_coordenada": com_coords,
+        "exclusoes_curadas_aplicadas": len(removed_curadas),
+        "exclusoes_exemplos": removed_curadas[:10],
+        "removidas_diaspora": len(removed_diaspora),
+        "geo_status_entidades": dict(Counter(e["geo_status"] for e in entities)),
         "ocorrencias_por_fonte": dict(Counter(o["fonte"] for o in occ_out)),
         "entidades_por_uf": dict(Counter(e["uf"] or "?" for e in entities).most_common(30)),
         "flag_axecloud": dict(acs_stats),
-        "nota": "v4 é candidata; site continua em v3 até validação e decisão de Leonardo. CEAP entra como fonte (crédito obrigatório). AxéCloud não republicável (ToS Google).",
+        "nota": "v4: site único nacional; diáspora excluída por decisão de Leonardo (04/11/2026); exclusões curadas aplicadas por entidade.",
     }
     (OUT / "auditoria_v4.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(audit, ensure_ascii=False, indent=2))

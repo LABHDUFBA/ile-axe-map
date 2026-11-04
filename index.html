@@ -7,7 +7,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <meta name="description" content="Atlas aberto de terreiros de candomblé da Bahia.">
-  <title>Ilê Axé Map — Terreiros de Candomblé da Bahia</title>
+  <title>Ilê Axé Map — Terreiros de Candomblé e Umbanda do Brasil</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,6 +103,7 @@
     }
     .topbar__labhd img { display: block; width: 34px; height: 34px; object-fit: contain; }
     .topbar__count { font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 3px 10px; border-radius: 99px; background: var(--accent-soft); white-space: nowrap; }
+    .topbar__validation { font-size: 11px; font-weight: 700; color: var(--text-muted); letter-spacing: .06em; text-transform: uppercase; padding: 3px 10px; border: 1px dashed var(--accent); border-radius: 99px; white-space: nowrap; }
     .topbar__spacer { flex: 1; }
     .topbar__btn {
       display: grid; place-items: center; width: 34px; height: 34px;
@@ -323,8 +324,8 @@
       </svg>
     </div>
     <div class="topbar__count" id="count-badge" aria-live="polite">—</div>
+    <span class="topbar__validation" title="Base nacional em processo de validação">dados em validação</span>
     <div class="topbar__spacer"></div>
-    <a class="topbar__btn info-btn" href="nacional.html" title="Mapa nacional (dados em validação)">Nacional ⚠</a>
     <button class="topbar__btn" id="theme-btn" type="button" aria-label="Alternar tema" title="Tema">◐</button>
     <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Sobre o projeto" aria-expanded="false" aria-controls="info-panel">Sobre</button>
   </header>
@@ -335,7 +336,7 @@
       <span>Filtros e lista</span><span class="rail__handle-icon" aria-hidden="true">⌃</span>
     </button>
     <div class="rail__search">
-      <input type="text" id="search" placeholder="Buscar terreiro…" aria-label="Buscar">
+      <input type="text" id="search" placeholder="Buscar terreiro, município, estado…" aria-label="Buscar">
     </div>
     <div class="filters" id="filters"></div>
     <div class="rail__viewport-label" id="viewport-label"><span>Todos os terreiros</span></div>
@@ -356,26 +357,29 @@
     <div class="info-panel__head"><div class="info-panel__title">Sobre</div></div>
     <div class="info-panel__body">
       <h3>Projeto</h3>
-      <p>Atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia.</p>
+      <p>Atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros do Brasil.</p>
       <h3>Dataset</h3>
       <dl>
-        <dt>Versão</dt><dd>v2.2</dd>
-        <dt>Extração</dt><dd>2026-07-25</dd>
-        <dt>Total</dt><dd id="dataset-total">1.959 registros</dd>
-        <dt>Georreferenciados</dt><dd id="dataset-georef">1.951</dd>
-        <dt>Nações</dt><dd>49 declarações do CEAO</dd>
+        <dt>Versão</dt><dd>v4 (unificada)</dd>
+        <dt>Modelo</dt><dd>entidade ↔ ocorrência (multi-fonte)</dd>
+        <dt>Total</dt><dd id="dataset-total">7.873 entidades</dd>
+        <dt>Com coordenada</dt><dd id="dataset-georef">7.873</dd>
+        <dt>Fontes</dt><dd>CEAO/UFBA · CNPJ/RFB · Mapeando Axé · Google Places · OSM · SEFAZ · CEAP</dd>
       </dl>
       <h3>Fontes</h3>
       <p>
-        <a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a> — <span id="fonte-ceao">1.155</span> terreiros<br>
-        OSM + Google Places — <span id="fonte-osm">570</span> lugares<br>
-        SEFAZ/Salvador (SEMUR 2020) — <span id="fonte-sefaz">234</span> registros
+        <a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a> — 2.228 ocorrências<br>
+        CNPJ/Receita Federal — 2.442 ocorrências<br>
+        Mapeando Axé — 4.042 ocorrências<br>
+        Google Places + OSM — 768 ocorrências<br>
+        SEFAZ/Salvador — 223 ocorrências<br>
+        <a href="https://mapadoaxe.ceapoficial.org.br/" target="_blank" rel="noopener">CEAP — Mapa do Axé</a> — 286 ocorrências
       </p>
       <h3>Metodologia</h3>
       <p>
         <a href="metodologia.html" target="_blank">Nota técnico-metodológica</a><br>
-        <a href="data/terreiros_v2.geojson" download>Download GeoJSON</a><br>
-        <a href="data/terreiros_all_sources_v2.json" download>Dataset completo (JSON)</a>
+        <a href="data/v4/terreiros_nacional_v4.geojson" download>Download GeoJSON (v4)</a><br>
+        <a href="data/v4/entities.jsonl" download>Entidades (JSONL)</a> · <a href="data/v4/occurrences.jsonl" download>Ocorrências (JSONL)</a>
       </p>
       <h3>Código</h3>
       <p>
@@ -405,9 +409,9 @@
       for (let i = 0; i < category.length; i++) hash = ((hash << 5) - hash + category.charCodeAt(i)) | 0;
       return nationPalette[Math.abs(hash) % nationPalette.length];
     }
-    const fonteMap = { 'osm': 'OSM+Google', 'google': 'OSM+Google', 'ceao': 'CEAO/UFBA', 'sefaz': 'SEFAZ/Salvador' };
-    const fonteOrder = ['CEAO/UFBA', 'OSM+Google', 'SEFAZ/Salvador'];
-    const fonteColors = { 'CEAO/UFBA': '#0072B2', 'OSM+Google': '#009E73', 'SEFAZ/Salvador': '#E69F00' };
+    const fonteMap = { 'ceao': 'CEAO/UFBA', 'receita_federal_cnpj': 'CNPJ/Receita Federal', 'terreirosdobrasil.com.br': 'Terreiros do Brasil', 'google': 'Google Places', 'google_places': 'Google Places', 'osm': 'OSM', 'sefaz': 'SEFAZ/Salvador', 'mapeando_axe_csv': 'Mapeando Axé', 'ceap': 'CEAP/Mapa do Axé' };
+    const fonteOrder = ['CEAO/UFBA', 'CNPJ/Receita Federal', 'Mapeando Axé', 'Google Places', 'OSM', 'SEFAZ/Salvador', 'CEAP/Mapa do Axé', 'Terreiros do Brasil', 'Outro'];
+    const fonteColors = { 'CEAO/UFBA': '#0072B2', 'CNPJ/Receita Federal': '#D55E00', 'Mapeando Axé': '#8C564B', 'Google Places': '#E69F00', 'OSM': '#56B4E9', 'SEFAZ/Salvador': '#CC79A7', 'CEAP/Mapa do Axé': '#009E73', 'Terreiros do Brasil': '#6F4E7C', 'Outro': '#999999' };
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let themeOverride = 'light';
@@ -422,18 +426,20 @@
       return dark ? 'https://tiles.openfreemap.org/styles/dark/{z}/{x}/{y}.png' : 'https://tiles.openfreemap.org/styles/liberty/{z}/{x}/{y}.png';
     };
 
-    const BAHIA_BOUNDS = L.latLngBounds([[-18.0720445, -45.7973025], [-9.3685398, -37.8945924]]);
+    const BRASIL_BOUNDS = L.latLngBounds([[-33.9, -62.0], [4.5, -34.0]]); // Brasil continental
     const initialPadding = window.innerWidth <= 768
       ? { top: 60, right: 40, bottom: 200, left: 20 }
-      : { top: 60, right: 40, bottom: 40, left: 360 };
-    const map = L.map('map', { attributionControl: true, maxZoom: 16, minZoom: 5, zoomControl: false });
+      : { top: 60, right: 60, bottom: 60, left: 340 };
+    // padding extra: o painel lateral cobre o lado esquerdo; o maxBounds (abaixo) impede sair do Brasil
+    const map = L.map('map', { attributionControl: true, maxZoom: 16, minZoom: 3, zoomControl: false });
     L.control.zoom({ position: 'bottomright' }).addTo(map);
     L.control.scale({ position: 'bottomright', maxWidth: 110, imperial: false }).addTo(map);
-    map.fitBounds(BAHIA_BOUNDS, {
+    map.fitBounds(BRASIL_BOUNDS, {
       paddingTopLeft: [initialPadding.left, initialPadding.top],
       paddingBottomRight: [initialPadding.right, initialPadding.bottom],
-      maxZoom: 12, animate: false
+      maxZoom: 6, animate: false
     });
+    map.setMaxBounds(L.latLngBounds([[-36.0, -74.0], [6.0, -28.0]])); // travar no Brasil
 
     let tileLayer = null, usingTileFallback = false;
     function setTileLayer() {
@@ -481,13 +487,29 @@
     }
 
     function classify(p) {
-      if (p.nacao_categoria) return p.nacao_categoria;
-      const declared = String(p.nacao || '').trim().replace(/\s+/g, ' ');
-      return declared && !/^n[aã]o informado$/i.test(declared) ? declared : 'Não informado';
+      if (p.categoria && p.categoria !== 'Outro') return p.categoria;
+      let declared = String(p.nacao || '').trim().replace(/\s+/g, ' ');
+      // série de curadoria embutida: extrai o valor declarado
+      if (declared.startsWith('[{')) {
+        try {
+          const series = JSON.parse(declared.replace(/""/g, '"'));
+          const nacaoEntry = series.find(e => e && e.campo_original === 'nacao');
+          declared = nacaoEntry && nacaoEntry.valor ? String(nacaoEntry.valor).trim() : '';
+        } catch (e) { declared = ''; }
+      }
+      return declared && !/^n[aã]o (informado|declarado)$/i.test(declared) ? declared : 'Não informado';
     }
 
     function getName(p) { return p.nome || p.name || p.title || 'Terreiro sem nome'; }
-    function getFonteLabel(p) { return fonteMap[p.fonte] || 'Outro'; }
+    function getFonteLabel(p) {
+      // v4: sempre deriva do array de fontes da entidade (rank de confiabilidade)
+      if (Array.isArray(p.fontes) && p.fontes.length) {
+        const rank = ['ceao','google_places','google','ceap','osm','receita_federal_cnpj','mapeando_axe_csv','sefaz'];
+        for (const f of rank) if (p.fontes.includes(f)) return fonteMap[f] || f;
+        return fonteMap[p.fontes[0]] || p.fontes[0];
+      }
+      return fonteMap[p.fonte] || 'Outro';
+    }
 
     /* === Build filter UI === */
     function buildFilters() {
@@ -586,15 +608,13 @@
         fonteBody.appendChild(opt.el);
       });
 
-      // Fontes presentes no dataset completo, mas ainda sem coordenadas no mapa.
-      if (!features.some(feat => getFonteLabel(feat.properties) === 'SEFAZ/Salvador')) {
-        const opt = makeCheckbox('fonte-sefaz-indisponivel', 'SEFAZ/Salvador (SEMUR 2020)', fonteColors['SEFAZ/Salvador'], false, function() {});
-        opt.checkbox.disabled = true;
-        opt.el.classList.add('is-disabled');
-        opt.el.title = '234 registros no dataset completo, ainda sem coordenadas para exibição no mapa';
-        opt.el.querySelector('.filter-opt__label').innerHTML += ' <span class="filter-opt__count">234 · sem coordenadas</span>';
-        fonteBody.appendChild(opt.el);
-      }
+      // Filtro de localizações aproximadas (centróides de município)
+      const approx = makeCheckbox('hide-approx', 'Ocultar localizações aproximadas', '#E69F00', true, function() {
+        hideApprox = document.getElementById('hide-approx').checked;
+        updateMarkers(); updateList();
+      });
+      approx.el.classList.add('filter-opt--all');
+      fonteBody.appendChild(approx.el);
 
       fonteGroup.querySelector('.filter-group__title').addEventListener('click', function() {
         const collapsed = fonteGroup.classList.toggle('collapsed');
@@ -715,7 +735,10 @@
         html += '<img class="detail__photo" src="' + escapeHtml(src) + '" alt="' + escapeHtml(getName(p)) + '" loading="lazy" onerror="this.style.display=\'none\'">';
       }
       var seen = {};
-      [['lideranca','Liderança'],['nacao','Nação'],['regente','Orixá Regente'],['ano_fundacao','Fundação'],['start_date','Fundação'],['endereco','Endereço'],['addr:street','Endereço'],['bairro','Bairro'],['addr:suburb','Bairro'],['addr:city','Cidade'],['cep','CEP'],['addr:postcode','CEP'],['telefone','Telefone'],['phone','Telefone']].forEach(function(pair) {
+      if (p.geo_status && String(p.geo_status).indexOf('centroide_suspeito') !== -1) p = { ...p, geo_status: 'Localização aproximada (centro do município) — em validação' };
+      else if (p.geo_status && String(p.geo_status).indexOf('uf_divergente') !== -1) p = { ...p, geo_status: 'Coordenada fora do estado declarado — em validação' };
+      else if (p.geo_status && String(p.geo_status).indexOf('herdado_v2') !== -1) p = { ...p, geo_status: 'Georreferenciado pela base validada da Bahia' };
+      [['nacao','Nação'],['categoria','Categoria'],['endereco','Endereço'],['municipio','Município'],['uf','Estado'],['cep','CEP'],['telefone','Telefone'],['phone','Telefone'],['geo_status','Precisão da localização']].forEach(function(pair) {
         var key = pair[0], label = pair[1];
         if (!p[key]) return;
         var val = String(p[key]);
@@ -739,8 +762,15 @@
       lastTrigger = null;
     }
 
+    let hideApprox = true;
     function getVisibleFeatures() {
-      return features.filter(f => activeNacao.has(f.properties._nacao) && activeFonte.has(getFonteLabel(f.properties)));
+      return features.filter(f => {
+        if (hideApprox) {
+          const gs = String(f.properties.geo_status || '');
+          if (gs.indexOf('centroide_suspeito') !== -1 || gs.indexOf('uf_divergente') !== -1) return false;
+        }
+        return activeNacao.has(f.properties._nacao) && activeFonte.has(getFonteLabel(f.properties));
+      });
     }
 
     function updateList() {
@@ -750,7 +780,7 @@
         const q = searchQuery.toLowerCase();
         filtered = all.filter(f => {
           const p = f.properties;
-          return (getName(p) || '').toLowerCase().includes(q) || (p.nacao || '').toLowerCase().includes(q) || (p.bairro || p['addr:suburb'] || '').toLowerCase().includes(q) || (p.lideranca || '').toLowerCase().includes(q);
+          return (getName(p) || '').toLowerCase().includes(q) || (p.nacao || '').toLowerCase().includes(q) || (p.municipio || '').toLowerCase().includes(q) || (p.uf || '').toLowerCase().includes(q) || (p.endereco || '').toLowerCase().includes(q);
         });
       }
       let inViewport = filtered;
@@ -775,8 +805,8 @@
         var p = f.properties;
         var name = escapeHtml(getName(p));
         var meta = escapeHtml(p._nacao);
-        if (p.bairro) meta += ' · ' + escapeHtml(p.bairro);
-        else if (p['addr:suburb']) meta += ' · ' + escapeHtml(p['addr:suburb']);
+        if (p.municipio) meta += ' · ' + escapeHtml(p.municipio);
+        if (p.uf) meta += ' (' + escapeHtml(p.uf) + ')';
         var photo = '';
         if (p.foto_thumb) {
           var src = p.foto_thumb;
@@ -829,18 +859,10 @@
     // === Load ===
     map.whenReady(async function() {
       try {
-        const [geoResponse, auditResponse] = await Promise.all([fetch('data/terreiros_v2.geojson'), fetch('data/auditoria_v2.json')]);
+        const [geoResponse] = await Promise.all([fetch('data/v4/terreiros_nacional_v4.geojson')]);
         if (!geoResponse.ok) throw new Error('GeoJSON ' + geoResponse.status);
-        if (!auditResponse.ok) throw new Error('Auditoria ' + auditResponse.status);
         const data = await geoResponse.json();
-        const audit = await auditResponse.json();
-        $('dataset-total').textContent = Number(audit.total_registros).toLocaleString('pt-BR') + ' registros';
-        $('dataset-georef').textContent = Number(audit.total_georreferenciados).toLocaleString('pt-BR');
-        // Fontes dinâmicas
-        const f = audit.fontes || {};
-        if (f.ceao) $('fonte-ceao').textContent = Number(f.ceao).toLocaleString('pt-BR');
-        if (f.google || f.osm) $('fonte-osm').textContent = Number((f.google || 0) + (f.osm || 0)).toLocaleString('pt-BR');
-        if (f.sefaz) $('fonte-sefaz').textContent = Number(f.sefaz).toLocaleString('pt-BR');
+        $('dataset-total').textContent = data.features.length.toLocaleString('pt-BR') + ' registros';
         features = data.features
           .filter(f => f.geometry && f.geometry.type === 'Point' && Array.isArray(f.geometry.coordinates))
           .map(f => ({ ...f, properties: { ...(f.properties || {}), _nacao: classify(f.properties || {}) } }));
