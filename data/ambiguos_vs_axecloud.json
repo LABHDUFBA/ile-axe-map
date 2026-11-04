@@ -1,0 +1,804 @@
+[
+ {
+  "nome": "ABAPA | Associação Baiana dos Produtores de Algodão",
+  "review_id": "a3282b461fdf6500",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "ABAPA(Nova sede)",
+  "review_id": "0db55989a4c53dac",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Arraial Santana",
+  "review_id": "55a4051e54cd4356",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Associação Baiana de Avicultura",
+  "review_id": "4d270aa0ae936466",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Associação de Mães, Pais e Amigos dos Autistas de Serrinha",
+  "review_id": "7aace4948876e789",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Associação do Culto Afro Itabunense",
+  "review_id": "01f60c2435ea0de7",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "corroborado_axecloud",
+  "dist_m": 0.6,
+  "slug": "associacao-do-culto-afro-itabunense"
+ },
+ {
+  "nome": "Ateliê das festas",
+  "review_id": "b666723b33b6a613",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Açai Expresso da Ilha",
+  "review_id": "02ced03197032d37",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Cachoeira Ferro Doido",
+  "review_id": "a0df98e1cd41f609",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Campo Bahia",
+  "review_id": "eb1c644d2c9d4831",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Cultural Reggae",
+  "review_id": "2fc859ed0bad99aa",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa da Criança - Guanambi",
+  "review_id": "5043ec7391474a6e",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa da Lavoura LEM - Irrigação, Motores e Ferramentas",
+  "review_id": "2737e3b784313001",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa da Robótica",
+  "review_id": "bcc30c5210830fe5",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa da Sereia Arembepe",
+  "review_id": "51164da3e71b10ad",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa da Susan",
+  "review_id": "41465a15cc512a4c",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa das baterias Ipiaú",
+  "review_id": "f8b124a80b4743e4",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa das Ervas Santa Bárbara",
+  "review_id": "0cb7077a84773df5",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa das Histórias de Salvador",
+  "review_id": "d865eff7d03b43ab",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa das Noivas",
+  "review_id": "a72f24be2f44deea",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa das Quentinhas",
+  "review_id": "b74bd179032b31e3",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "CASA DAS RESISTÊNCIAS",
+  "review_id": "4bc550afa3e60a3c",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa de Castro Alves",
+  "review_id": "e7d66c96ebc5c019",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa de Câmara e Cadeia",
+  "review_id": "46be3060553976b4",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa de ervas 7 linhas",
+  "review_id": "536a71bdf1cd7e86",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa De Ervas Pai Joaquim",
+  "review_id": "d2d0f49d4e066163",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa de ervas Santo Antônio",
+  "review_id": "d59d5e6231bc1b70",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa de ervas são Jorge",
+  "review_id": "7eeb7abdbfc9c012",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa De Ervas São Pedro",
+  "review_id": "b8cbf40c97bbbefc",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa de Raçao Santo Antonio",
+  "review_id": "0abf5242dd618fd6",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa de Saúde Maria José Souza Santos",
+  "review_id": "1c3a79c3745914b0",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa de Saúde Santo Antônio",
+  "review_id": "f945cd5880ee5973",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa do acarajé didy e Shell",
+  "review_id": "405c9fcd6ff1dcea",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa do Caçador",
+  "review_id": "57f65e2ad318a7d8",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "CASA DO COURO LTDA",
+  "review_id": "63a1e7f27b938a25",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa do irmão Santos e Val",
+  "review_id": "577aacb052ea62c6",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Do Lavrador",
+  "review_id": "54aa6e238232676d",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa do Puxador",
+  "review_id": "38631a908b62a2a2",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa do Pão",
+  "review_id": "94d214bd3d6145c3",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa do sans",
+  "review_id": "c02ce05f565993ce",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa do Vaqueiro",
+  "review_id": "561aaff0081406e1",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa dos cabos SBA - Materiais elétricos",
+  "review_id": "deb1d6750360c8f9",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa dos santos",
+  "review_id": "12394d08828e3880",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Ecumênica Pai José",
+  "review_id": "8a3963c63affd620",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "corroborado_axecloud",
+  "dist_m": 0.4,
+  "slug": "casa-ecumenica-pai-jose"
+ },
+ {
+  "nome": "Casa em Jacobina",
+  "review_id": "daf0eef9103ed991",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Maria Mãe Dos Pobres",
+  "review_id": "9c73add0efcae306",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Na Rocha",
+  "review_id": "489b61556e966cea",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Pequenina da Colina",
+  "review_id": "a566c6cc86a1384d",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Rainha do Mar",
+  "review_id": "ce37b49a24a7a9c5",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Rio de Contas - Renovada e Ampliada - Three-Bedroom Home",
+  "review_id": "19d685a6ac873368",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Rio Paraguaçu",
+  "review_id": "c186aa454c5fdc02",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Rosada Eventos",
+  "review_id": "2434ad395822f6a3",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Rústica Irecê - Móveis e decoração de madeira de demolição",
+  "review_id": "8394fcad4c80cedd",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Santo Antônio",
+  "review_id": "f11dc55839c5da3e",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Santos - Materiais de Construção",
+  "review_id": "4d7c31a4af545a2a",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa São Cristovão",
+  "review_id": "a76a652302aa992d",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa São Francisco",
+  "review_id": "b34232a43b780e83",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa São João",
+  "review_id": "64747dbc035c0db0",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casas de Retiro",
+  "review_id": "396e34ee4cf49d3b",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casas Rio de Contas",
+  "review_id": "a7dd2051ba272b9b",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "CATEDRAL - UNIVERSAL DIAS D’ÁVILA",
+  "review_id": "afbf6a42b0f66fde",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "CAVALCANTI Madeira e Construção",
+  "review_id": "493f43b695820f9f",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "CEASA VITÓRIA DA CONQUISTA - CEAVIC",
+  "review_id": "396e17deb09e85e3",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Central de Adubos - Matriz Juazeiro",
+  "review_id": "66e4cc9ce2548c7f",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Centro Comunitário Dom Ricardo - Luís Eduardo Magalhães - Com. Sta. Catarina",
+  "review_id": "aa6dd12d3c1c074a",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Centro Cultural de Jacobina",
+  "review_id": "38ca8c7b6c50a94b",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Centro Cultural Tribo Bahia Capoeira - Itacaré",
+  "review_id": "a654e388113acb6c",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Centro de Treinamento & Tecnologia da Abapa",
+  "review_id": "3344e56d0692fe08",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Centro Histórico de Belmonte",
+  "review_id": "bf1b25abd813c333",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Cidade histórica Porto Seguro",
+  "review_id": "aa7eabb8605ae1c2",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Coletivo de Entidades Negras",
+  "review_id": "cd8eb5f4ef820109",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Comunidade Caxuté",
+  "review_id": "b2f90827c0d08548",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Comunidade Quilombola Santo Antônio",
+  "review_id": "192b86b0077bc8e8",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Condomínio Cidade do Ouro",
+  "review_id": "d92f3334b408f56a",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Condomínio Spazio Sunrise",
+  "review_id": "349dc1828e9bcf2e",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Duarte drinks",
+  "review_id": "c309bfbdb763d3ed",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Eco Água Ilhéus",
+  "review_id": "bc68dde4b518a921",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Espaço de Eventos Monte Santo",
+  "review_id": "24afb0a48eeda730",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Espetinho do Santo",
+  "review_id": "63d959f06ff1e794",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Estância Santo Antônio",
+  "review_id": "740f40e3e3c97cd9",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Festejos De Todos Os Santos",
+  "review_id": "150d4cfcc7c9a375",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Hiper Santo Antonio",
+  "review_id": "a3e48503fcde98c1",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Home of the Giants",
+  "review_id": "080013945993b198",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "House of Artists",
+  "review_id": "ed3b024b945b92e2",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Ilha do cascalho",
+  "review_id": "c4f24dc1bb4c1f8e",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Ilha do fogo",
+  "review_id": "45947340b5d73f81",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Ilha do pescador",
+  "review_id": "5468afd6ef609c66",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "IlhaBela",
+  "review_id": "bcbc290155feebb8",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Império do Real",
+  "review_id": "b125ad0ede30a730",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Itaparica Island",
+  "review_id": "c0f48ea93d933a92",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Laticínios Santana Lauro de Freitas",
+  "review_id": "36115ef2792a26ee",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Loja Santa Bárbara",
+  "review_id": "412b2bf4be48f537",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Loja Santo André - CAMAMU",
+  "review_id": "c2efe10fc99eb07b",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Lojas Santo Antônio",
+  "review_id": "23ae9ae8fd4e2a90",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Lojão Central",
+  "review_id": "b5d31166860bf2e8",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Mansão Drinks",
+  "review_id": "6932bab83389fd5b",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Materiais de Construção Santo Antônio",
+  "review_id": "c45821d61cc50196",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "METODO SUPERA LUIS EDUARDO MAGALHÃES",
+  "review_id": "0e3c84e837a95a3d",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Mundo Do Real",
+  "review_id": "34e0b054db3ba3e7",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Nossa Casa Itacaré",
+  "review_id": "07d4746bb9c49dc5",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Núcleo Histórico Ferroviário de Santa Inês-BA",
+  "review_id": "10df1aa8e53873e7",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Palacio de Oyo Lauro",
+  "review_id": "038fefcba64b6833",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Paróquia Catedral São Thomaz de Cantuária",
+  "review_id": "8ee0670350c07b2c",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Paróquia de Santo Antônio das Queimadas",
+  "review_id": "f63a9dfe9d268493",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Paróquia Santo Antônio",
+  "review_id": "230b8621f5a6e134",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Paróquia São Domingos de Gusmão - Centro",
+  "review_id": "8de7a10d4b375801",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Posto Jitauna",
+  "review_id": "987cc4bd94d61211",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "R. Alto da Capelinha, 37 - Cs",
+  "review_id": "ea7b65b970fd7728",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Retiro de Itaparica",
+  "review_id": "55492d21a91f3ec2",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Rodoviária de Valença BA",
+  "review_id": "7622b44b58c0b39a",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Sac De Senhor Do Bonfim",
+  "review_id": "a089bc20e2221197",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Santos de Fé",
+  "review_id": "ba8746b49a4b42f1",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "SB dos Santos Barbosa",
+  "review_id": "8c8698bde296393f",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Semprelar Centro - Luís Eduardo Magalhães",
+  "review_id": "154d680a0d85f067",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Sesi Candeias",
+  "review_id": "0b79429b32dc5314",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Sinos De Belem",
+  "review_id": "0f28754494c2ec2c",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Spiritual Center Porto da Paz",
+  "review_id": "4b8b6dd4b5c0c1b3",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Super Santo Antonio Centro",
+  "review_id": "d729a51513c46f90",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Sítio do Quinto",
+  "review_id": "5c59a459491ac46e",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Sítio Santana",
+  "review_id": "5d547198e74e76b1",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Sítio Santo Antônio",
+  "review_id": "50f51aab5446459e",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Templo Atuaro do Amanhecer - Luis Eduardo Magalhães BA",
+  "review_id": "ff53b8c40ff028b2",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Umburana de Dionísio",
+  "review_id": "c2aacc88132943ea",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "UPAMC - UNIÃO CULTURAL DOS SACERDOTES AFRO DO MUNICÍPIO DE CAMAÇARI",
+  "review_id": "9677b684d8a91d2f",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa das Espumas",
+  "review_id": "d17b0deb9082e3b7",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa do Campo",
+  "review_id": "44b8e86f0b64ed1d",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa Rural - Materiais de Construção e Agro veterinária",
+  "review_id": "1e637ae84651c1f8",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa São Luiz Materiais De Construção",
+  "review_id": "7dbec25c87035477",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casa São Paulo",
+  "review_id": "afd7e0fe23295e10",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Casas Freire",
+  "review_id": "e32ac56783c2651b",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "CRAS - Itaguaçu da Bahia",
+  "review_id": "626529d020323223",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "R. Castro Alves, 169 - Cs A",
+  "review_id": "654edaa8222140d8",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ },
+ {
+  "nome": "Sítio Arqueológico Pilão Arcado Velho",
+  "review_id": "fe6ee4767e91f731",
+  "motivo_sugestao": "Sem kw religiosa",
+  "cruzamento": "nao_encontrado"
+ }
+]
