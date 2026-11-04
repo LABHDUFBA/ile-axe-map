@@ -26,8 +26,8 @@ URLS = [
     "https://overpass.kumi.systems/api/interpreter",
 ]
 
-# bbox Brasil continental
-BR = "-74.0,-34.0,-32.5,5.5"
+# bbox Overpass: sul, oeste, norte, leste (lat,lon,lat,lon)
+BR = "-34.0,-74.0,5.5,-32.5"
 
 QUERIES = {
     "candombl": f'[out:json][timeout:180];nwr["name"~"candombl",i]({BR});out center tags;',
