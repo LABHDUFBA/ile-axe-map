@@ -114,6 +114,12 @@
     }
     .topbar__btn:hover { border-color: var(--accent); color: var(--accent); }
     .topbar__btn.info-btn { width: auto; padding: 0 12px; }
+    .topbar__btn.contact-btn {
+      width: auto; padding: 0 12px; font-size: 12px; white-space: nowrap;
+      text-decoration: none; display: inline-flex; align-items: center;
+      border-color: var(--accent); color: var(--accent); font-weight: 700;
+    }
+    .topbar__btn.contact-btn:hover { background: var(--accent-soft); }
 
     /* === Left rail === */
     .rail {
@@ -280,7 +286,8 @@
       .topbar { padding: 0 10px; gap: 8px; }
       .topbar__title { font-size: 15px; }
       .topbar__count { display: none; }
-      .topbar__btn:not(.info-btn) { display: none; }
+      .topbar__btn:not(.info-btn):not(.contact-btn) { display: none; }
+      .topbar__btn.contact-btn { font-size: 11px; padding: 0 8px; }
       .rail { width: 100%; top: auto; bottom: 0; height: auto; max-height: 75vh; border-right: none; border-top: 1px solid var(--border); border-radius: 16px 16px 0 0; transform: translateY(calc(100% - 52px)); }
       .rail.expanded { transform: translateY(0); }
       .rail__handle {
@@ -326,7 +333,7 @@
     <div class="topbar__count" id="count-badge" aria-live="polite">—</div>
     <span class="topbar__validation" title="Base nacional em processo de validação">dados em validação</span>
     <div class="topbar__spacer"></div>
-    <a class="topbar__btn" href="https://forms.gle/FORM-LINK" target="_blank" rel="noopener" title="Solicitar alteração, inclusão ou exclusão de terreiro">Solicitar alteração / exclusão</a>
+    <a class="topbar__btn contact-btn" href="https://forms.gle/FORM-LINK" target="_blank" rel="noopener" title="Solicitar alteração, inclusão ou exclusão de terreiro">Solicitar alteração / exclusão</a>
     <button class="topbar__btn" id="theme-btn" type="button" aria-label="Alternar tema" title="Tema">◐</button>
     <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Sobre o projeto" aria-expanded="false" aria-controls="info-panel">Sobre</button>
   </header>
@@ -383,6 +390,9 @@
         <a href="https://github.com/LABHDUFBA/ile-axe-map" target="_blank" rel="noopener">github.com/LABHDUFBA/ile-axe-map</a><br>
         LABHD/UFBA · Leonardo Fernandes Nascimento
       </p>
+      <h3>Solicitações</h3>
+      <p><a href="https://forms.gle/FORM-LINK" target="_blank" rel="noopener"><strong>Solicitar alteração, inclusão ou exclusão</strong></a><br>
+      Lideranças, membros e quaisquer pessoas afetadas podem pedir correção ou retirada de dados. A exclusão não exige justificativa (até 7 dias); alterações e inclusões em até 30 dias. Alternativa: leofn@ufba.br.</p>
       <h3>Aviso</h3>
       <p style="font-size: 12px; color: var(--text-faint)">
         Terreiros são alvo recorrente de intolerância religiosa. Os dados aqui consolidados são de fontes públicas, mas a agregação em interface consultável reduz o custo de coleta. Uma camada de consentimento e agregação por setor está em desenvolvimento.
