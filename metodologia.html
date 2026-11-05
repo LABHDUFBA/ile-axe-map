@@ -187,11 +187,11 @@
   <main id="conteudo">
     <section class="hero" aria-labelledby="document-title">
       <div class="hero__inner">
-        <p class="eyebrow">Documentação · conjunto de dados v2.2</p>
+        <p class="eyebrow">Documentação · conjunto de dados v4.1</p>
         <h1 id="document-title">Nota técnico-metodológica</h1>
-        <p class="hero__subtitle">Ilê Axé Map — Terreiros de Candomblé e espaços religiosos afro-brasileiros da Bahia</p>
-        <div class="document-meta"><p><strong>Versão do conjunto de dados:</strong> 2.1<br/>
-<strong>Data de extração e integração:</strong> 25 de julho de 2026<br/>
+        <p class="hero__subtitle">Ilê Axé Map — Terreiros de Candomblé e espaços religiosos afro-brasileiros do Brasil</p>
+        <div class="document-meta"><p><strong>Versão do conjunto de dados:</strong> 4.1<br/>
+<strong>Data de extração e integração:</strong> 4 de novembro de 2026<br/>
 <strong>Responsabilidade:</strong> Leonardo Fernandes Nascimento — Laboratório de Humanidades Digitais da Universidade Federal da Bahia (LABHD/UFBA)<br/>
 <strong>Repositório:</strong> <a href="https://github.com/LABHDUFBA/ile-axe-map">https://github.com/LABHDUFBA/ile-axe-map</a><br/>
 <strong>Mapa:</strong> <a href="https://labhdufba.github.io/ile-axe-map/">https://labhdufba.github.io/ile-axe-map/</a></p></div>
@@ -217,113 +217,86 @@
 
 
 <h2 id="1-finalidade-e-escopo">1. Finalidade e escopo</h2>
-<p>O <strong>Ilê Axé Map</strong> é um atlas digital de acesso público dedicado à reunião, à organização e à visualização de informações públicas sobre terreiros de candomblé e outros espaços religiosos afro-brasileiros relacionados à Bahia. O projeto procura reduzir a dispersão informacional entre bases institucionais, plataformas cartográficas e cadastros de natureza distinta, oferecendo uma camada integrada para consulta, pesquisa e documentação.</p>
+<p>O <strong>Ilê Axé Map</strong> é um atlas digital de acesso público dedicado à reunião, à organização e à visualização de informações públicas sobre terreiros de candomblé e outros espaços religiosos afro-brasileiros. O projeto procura reduzir a dispersão informacional entre bases institucionais, plataformas cartográficas e cadastros de natureza distinta, oferecendo uma camada integrada para consulta, pesquisa e documentação.</p>
 <p>A proposta combina três objetivos:</p>
 <ol>
 <li><strong>documental</strong>, ao aproximar registros que se encontram fragmentados em diferentes fontes;</li>
 <li><strong>analítico</strong>, ao permitir a observação exploratória de distribuições territoriais, lacunas de cobertura e diferenças entre bases;</li>
 <li><strong>infraestrutural</strong>, ao disponibilizar dados e código em formatos inspecionáveis, passíveis de crítica, correção e atualização.</li>
 </ol>
-<p>O universo empírico é formado por ocorrências recuperadas em quatro fontes: OpenStreetMap, Google Places, Centro de Estudos Afro-Orientais da Universidade Federal da Bahia (CEAO/UFBA) e levantamento da Secretaria Municipal da Reparação de Salvador, distribuído pela SEFAZ/Salvador. Essas fontes não foram produzidas com a mesma finalidade, no mesmo período ou segundo os mesmos critérios. Sua integração, portanto, não elimina as diferenças de origem: torna-as metodologicamente visíveis.</p>
-<p>A unidade básica do projeto é o <strong>registro de fonte</strong>. Após normalização, comparação e deduplicação, um ou mais registros podem ser reunidos em uma única entrada consolidada. Essa operação é técnica e probabilística: comunidades distintas podem apresentar nomes semelhantes, enquanto a mesma comunidade pode aparecer com grafias, endereços ou coordenadas diferentes.</p>
+<p>A partir da versão 4, o universo empírico deixou de se restringir à Bahia e passou a abranger o <strong>território nacional</strong>. As ocorrências são recuperadas em sete fontes heterogêneas: OpenStreetMap, Google Places, Centro de Estudos Afro-Orientais da UFBA (CEAO/UFBA), CNPJ/Receita Federal, levantamento Mapeando Axé, distribuição da SEFAZ/Salvador e CEAP/Mapa do Axé. Essas fontes não foram produzidas com a mesma finalidade, no mesmo período ou segundo os mesmos critérios. Sua integração, portanto, não elimina as diferenças de origem: torna-as metodologicamente visíveis.</p>
+<p>A unidade básica do projeto adotou, na v4, o modelo <strong>entidade ↔ ocorrência</strong>: cada fonte contribui com <em>ocorrências</em> (o registro tal como recuperado na origem), que podem ser associadas a uma mesma <em>entidade</em> (a comunidade religiosa) quando critérios explícitos de correspondência são satisfeitos. Essa arquitetura preserva a proveniência integral e permite revisão das decisões de deduplicação — inclusive as many-to-many — sem perda de informação.</p>
+<p>As correspondências produzidas por esse método são hipóteses operacionais. Comunidades distintas podem apresentar nomes semelhantes, enquanto a mesma comunidade pode aparecer com grafias, endereços ou coordenadas diferentes. Toda decisão é auditável nos artefatos descritos na Seção 9.</p>
 <hr/>
-<h2 id="2-sintese-quantitativa-da-versao-21">2. Síntese quantitativa da versão 2.2</h2>
+<h2 id="2-sintese-quantitativa-da-versao-21">2. Síntese quantitativa da versão 4.1</h2>
 <p>Os números abaixo foram apurados a partir dos artefatos efetivamente preservados no repositório e da contagem dos registros contidos nos arquivos — e não apenas dos metadados declarativos de versões anteriores.</p>
 <h3 id="21-composicao-por-fonte">2.1. Composição por fonte</h3>
 <div aria-label="Tabela com rolagem horizontal" class="table-wrap" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th scope="col">Fonte</th>
-<th scope="col" style="text-align: right;">Registros materializados antes da consolidação entre fontes</th>
-<th scope="col" style="text-align: right;">Registros na base consolidada v2.2</th>
-<th scope="col" style="text-align: right;">Registros com coordenadas na camada cartográfica</th>
+<th scope="col" style="text-align: right;">Ocorrências materializadas</th>
+<th scope="col">Contribuição à base consolidada v4.1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>OpenStreetMap</td>
-<td style="text-align: right;">44</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">20</td>
-</tr>
-<tr>
-<td>Google Places</td>
-<td style="text-align: right;">1.408</td>
-<td style="text-align: right;">682</td>
-<td style="text-align: right;">682</td>
-</tr>
-<tr>
 <td>CEAO/UFBA</td>
-<td style="text-align: right;">1.155</td>
-<td style="text-align: right;">1.155</td>
-<td style="text-align: right;">1.155</td>
+<td style="text-align: right;">2.228</td>
+<td>Fonte de maior densidade histórico-descritiva para Salvador</td>
 </tr>
 <tr>
-<td>SEMUR — SEFAZ/Salvador</td>
-<td style="text-align: right;">635</td>
-<td style="text-align: right;">234</td>
-<td style="text-align: right;">0</td>
+<td>CNPJ/Receita Federal</td>
+<td style="text-align: right;">2.492</td>
+<td>Triagem por natureza societária e geocodificação de alta precisão</td>
 </tr>
 <tr>
-<td><strong>Total</strong></td>
-<td style="text-align: right;"><strong>3.242</strong></td>
-<td style="text-align: right;"><strong>1.959</strong></td>
-<td style="text-align: right;"><strong>1.951</strong></td>
+<td>Mapeando Axé</td>
+<td style="text-align: right;">4.042</td>
+<td>Maior volume de ocorrências do conjunto</td>
+</tr>
+<tr>
+<td>Google Places + OSM</td>
+<td style="text-align: right;">881</td>
+<td>Coleta nacional por evidência religiosa explícita</td>
+</tr>
+<tr>
+<td>SEFAZ/Salvador</td>
+<td style="text-align: right;">223</td>
+<td>Levantamento municipal SEMUR</td>
+</tr>
+<tr>
+<td>CEAP/Mapa do Axé</td>
+<td style="text-align: right;">286</td>
+<td>Mapa colaborativo do CEAP</td>
+</tr>
+<tr>
+<td><strong>Total consolidado</strong></td>
+<td style="text-align: right;"><strong>10.152</strong></td>
+<td><strong>8.036 entidades na camada v4.1</strong></td>
 </tr>
 </tbody>
 </table></div>
-<p>A coluna inicial descreve as ocorrências persistidas nos artefatos que antecederam a consolidação. A coluna intermediária registra os registros preservados por fonte na v2.2. Esses totais não devem ser interpretados automaticamente como entidades únicas entre fontes, pois correspondências interfontes ainda exigem revisão com proveniência muitos-para-muitos.</p>
-<p>Os totais de <strong>1.959 registros</strong> e <strong>1.951 feições publicadas</strong> foram recalculados diretamente dos artefatos v2. O CEAO é a fonte primária e todos os seus 1.155 registros estão representados.</p>
-<h3 id="22-fluxo-de-processamento">2.2. Fluxo de processamento</h3>
-<pre><code class="language-text">1.629 registros preservados na base v1.3
-        │
-        ├── substituição de 682 registros CEAO pelo acervo completo de 1.155
-        ├── manutenção de 682 Google, 20 OSM e 234 SEMUR já filtrados
-        ▼
-1.959 registros na base v2.2
-        │
-        ├── 1.951 registros com coordenadas no recorte operacional da Bahia
-        └──   8 registros SEMUR sem coordenadas extraídas
-</code></pre>
-<p>O total de <strong>1.959 registros</strong> não equivale a 1.959 terreiros presencialmente verificados ou necessariamente únicos entre fontes. Os <strong>1.951 pontos cartográficos</strong> correspondem ao subconjunto com coordenadas válidas no recorte territorial operacional.</p>
+<p>Esses totais não devem ser interpretados automaticamente como entidades únicas entre fontes, pois correspondências interfontes ainda exigem revisão com proveniência muitos-para-muitos. As <strong>8.036 entidades</strong> publicadas resultam da deduplicação descrita na Seção 4.</p>
 <hr/>
 <h2 id="3-fontes-e-procedimentos-de-aquisicao">3. Fontes e procedimentos de aquisição</h2>
-<h3 id="31-openstreetmap">3.1. OpenStreetMap</h3>
-<p>O OpenStreetMap (OSM) é uma base geográfica colaborativa e aberta. A coleta foi realizada por meio da <strong>Overpass API</strong>, com uma consulta composta por diferentes combinações de atributos e expressões nominais relacionadas ao universo de interesse. Entre os critérios empregados estão:</p>
-<ul>
-<li><code>amenity=place_of_worship</code> associado a <code>religion=candomblé</code>;</li>
-<li><code>amenity=place_of_worship</code> associado a <code>religion=afro_brazilian</code>;</li>
-<li><code>denomination=candomblé</code>;</li>
-<li>nomes contendo expressões como <em>terreiro</em>, <em>candomblé</em>, <em>ilê axé</em>, <em>ilê asé</em> e <em>centro de umbanda</em>.</li>
-</ul>
-<p>O coletor versionado consulta apenas objetos do tipo <strong>nó</strong> (<code>node</code>). Caminhos (<code>way</code>) e relações (<code>relation</code>) não integram essa rotina. O script converte os resultados para GeoJSON e preserva, quando disponíveis, identificador OSM, nome, categoria, denominação, endereço, telefone, sítio eletrônico e demais etiquetas de origem.</p>
-<p>A camada pré-consolidação arquivada contém <strong>44 registros OSM</strong>; após a comparação com as demais fontes e a etapa de filtragem, <strong>20 registros</strong> permanecem na versão 2.2. Como o OpenStreetMap é continuamente editado, a repetição da consulta em outra data pode produzir resultados diferentes.</p>
-<h3 id="32-google-places">3.2. Google Places</h3>
-<p>A coleta no Google Places foi estruturada como uma busca textual multipassagem, combinando expressões relacionadas a terreiros e religiões afro-brasileiras com referências territoriais a municípios e localidades baianas. Entre as expressões registradas nos dados recuperados estão <em>terreiro de candomblé</em>, <em>candomblé</em>, <em>ilê</em>, <em>ilê asé</em>, <em>abassá</em>, <em>inzo</em>, <em>casa de santo</em>, <em>centro de candomblé</em> e <em>centro religioso afro-brasileiro</em>.</p>
-<p>A camada persistida antes da consolidação contém <strong>1.408 identificadores <code>place_id</code> distintos</strong>. Os registros incluem, quando retornados pelo serviço, nome, endereço, coordenadas, categorias da plataforma, avaliação, número de avaliações, situação operacional, localidade e expressão de busca associada.</p>
-<p>Após a deduplicação entre fontes, a filtragem de falsos positivos prováveis, a curadoria manual e a remoção de ocorrências externas ao recorte operacional, <strong>682 registros atribuídos ao Google Places</strong> permanecem na base consolidada.</p>
-<p>A interface de busca do Google Places favorece entidades com presença digital e tende a incorporar estabelecimentos que apenas compartilham palavras frequentes com o vocabulário religioso — por exemplo, “casa”, “axé”, “santo” ou nomes de municípios. Por essa razão, os resultados dessa fonte foram submetidos a uma etapa específica de controle semântico, descrita na Seção 5.</p>
-<p>O repositório preserva os resultados incorporados, mas não contém, na versão auditada, o script completo de coleta, os logs de paginação nem o histórico integral das requisições. A reprodução exata dessa etapa é, portanto, limitada.</p>
-<h3 id="33-ceaoufba">3.3. CEAO/UFBA</h3>
-<p>A base pública <strong>Mapeamento dos Terreiros de Salvador</strong>, vinculada ao Centro de Estudos Afro-Orientais da UFBA, constitui a fonte de maior densidade histórico-descritiva do projeto. Seu universo declarado é a cidade de Salvador. As páginas preservadas utilizam uma estimativa populacional de 2005 e organizam os mapas históricos até o intervalo 2001–2006; esses marcadores situam temporalmente o levantamento, mas não permitem atribuir a todos os registros uma única data de observação. A extração digital para o Ilê Axé Map ocorreu em 2026 e não deve ser confundida com a produção original das informações.</p>
-<p>Foram materializados <strong>1.155 registros</strong>, acompanhados, em diferentes níveis de completude, por campos como:</p>
-<ul>
-<li>nome da comunidade;</li>
-<li>liderança religiosa;</li>
-<li>nação ou tradição declarada;</li>
-<li>orixá ou entidade regente;</li>
-<li>ano de fundação;</li>
-<li>endereço, bairro e CEP;</li>
-<li>telefone;</li>
-<li>coordenadas geográficas;</li>
-<li>imagens em miniatura e em maior resolução.</li>
-</ul>
-<p>No arquivo estruturado, <strong>1.135 registros possuem referências preenchidas nos campos <code>foto_thumb</code> e <code>foto_grande</code></strong>, enquanto o repositório conserva <strong>1.081 miniaturas fotográficas</strong> obtidas durante a coleta. Referência remota e arquivo efetivamente preservado são, portanto, métricas distintas.</p>
-<p>A auditoria da v1.3 demonstrou que 473 registros CEAO com coordenadas e metadados válidos não estavam representados na camada publicada. A v2.2 corrige essa perda: <strong>os 1.155 registros CEAO estão presentes, com 1.155 identificadores únicos e nenhum ausente</strong>. O arquivo <code>data/auditoria_v2.json</code> registra essa reconciliação.</p>
-<h3 id="34-semur-sefazsalvador">3.4. SEMUR — SEFAZ/Salvador</h3>
-<p>A quarta fonte é um mapa cartográfico da <strong>Secretaria Municipal da Reparação de Salvador (SEMUR)</strong>, publicado em 2020 e distribuído pela infraestrutura geográfica da SEFAZ/Salvador. A lista nominal foi extraída por reconhecimento óptico de caracteres e revisão estrutural, resultando em <strong>635 pares de código e nome</strong>.</p>
-<p>O documento original apresenta informação cartográfica em sistema UTM, fuso 24S, referida ao SIRGAS 2000. Essas coordenadas não foram extraídas para a versão atual. Em consequência, os registros SEMUR participam da base consolidada e 226 dos 234 agora aparecem como pontos no mapa interativo. <strong>8 registros SEMUR sem coordenadas</strong> permanecem na base v2.2.</p>
-<p>A diferença entre contagens apresentadas em documentos derivados e a lista OCR deve ser tratada como questão de proveniência, não resolvida por simples inferência. A versão atual adota como referência operacional os 635 registros efetivamente estruturados no arquivo de origem preservado no repositório.</p>
+<h3 id="31-ceaoufba">3.1. CEAO/UFBA</h3>
+<p>A base pública <strong>Mapeamento dos Terreiros de Salvador</strong>, vinculada ao Centro de Estudos Afro-Orientais da UFBA, constitui a fonte de maior densidade histórico-descritiva do projeto para o recorte de Salvador. Seu universo declarado é a cidade de Salvador. As páginas preservadas utilizam uma estimativa populacional de 2005 e organizam os mapas históricos até o intervalo 2001–2006; esses marcadores situam temporalmente o levantamento, mas não permitem atribuir a todos os registros uma única data de observação. A extração digital para o Ilê Axé Map ocorreu em 2026 e não deve ser confundida com a produção original das informações.</p>
+<p>Na v4, a fonte contribui com <strong>2.228 ocorrências</strong>, acompanhadas, em diferentes níveis de completude, por nome da comunidade, liderança religiosa, nação ou tradição declarada, orixá ou entidade regente, ano de fundação, endereço, bairro, CEP, telefone, coordenadas geográficas e imagens em miniatura.</p>
+<h3 id="32-cnpjreceita-federal">3.2. CNPJ/Receita Federal</h3>
+<p>Os registros cadastrais do <strong>CNPJ</strong> foram triados por natureza societária associada a terreiros e comunidades afro-brasileiras (razão social e nome fantasia contendo expressões como <em>terreiro</em>, <em>ilê axé</em>, <em>umbanda</em>, <em>candomblé</em>, <em>quimbanda</em>, <em>tenda</em>, <em>nzo</em>, <em>abassá</em>), com exigência de situação cadastral ativa. A v4.1 contribui com <strong>2.492 ocorrências</strong>.</p>
+<p>Para a localização, os endereços declarados foram geocodificados via Nominatim, com registro da <strong>classe de precisão</strong> retornada (house, place_of_worship, apartments, residential, postcode etc.). Apenas as classes de alta precisão (house, place_of_worship, apartments) com coerência entre a UF declarada e a coordenada retornada, e sem duplicata espacial ou nominal na base, integram a camada publicada. Retornos de precisão fraca — centróides de CEP, de rua ou POIs vizinhos — permanecem em validação e <strong>não são publicados</strong>. O arquivo público sanitizado não expõe CNPJ, endereço completo, CEP, telefone, e-mail ou termos de consulta: apenas nome, UF e coordenada da entidade.</p>
+<p>Essa fonte introduz um viés específico: comunidades formalizadas juridicamente têm maior chance de aparecer do que comunidades sem registro civil, e o endereço declarado fiscalmente pode divergir do local de culto.</p>
+<h3 id="33-mapeando-axe">3.3. Mapeando Axé</h3>
+<p>Levantamento colaborativo de alcance nacional que contribui com <strong>4.042 ocorrências</strong>, o maior volume do conjunto. Seus registros aportam nome, localização e, em parte dos casos, tradição declarada. Como base de contribuição voluntária, está sujeita a variações de critério e atualidade entre contribuidores.</p>
+<h3 id="34-google-places-e-openstreetmap">3.4. Google Places e OpenStreetMap</h3>
+<p>A coleta no <strong>Google Places</strong> foi estruturada como busca textual multipassagem, combinando expressões relacionadas a terreiros e religiões afro-brasileiras com referências territoriais. A interface de busca favorece entidades com presença digital e tende a incorporar estabelecimentos que apenas compartilham palavras frequentes com o vocabulário religioso; por essa razão, os resultados passaram por controle semântico específico (Seção 5).</p>
+<p>A coleta no <strong>OpenStreetMap</strong> foi realizada por meio da <strong>Overpass API</strong> com cobertura nacional, combinando <code>amenity=place_of_worship</code> associado a <code>religion</code> de interesse e buscas nominais. Na v4.1, apenas registros com <strong>evidência religiosa explícita</strong> integram a camada: ou a etiqueta <code>religion</code> indica tradição afro-brasileira, ou o objeto é local de culto (<code>place_of_worship</code>) com nome inequivocamente religioso. Registros com etiquetas de religião conflitantes (por exemplo, muslim, hindu, buddhist), estabelecimentos comerciais e nomes ambíguos foram excluídos na auditoria de publicação.</p>
+<p>Em conjunto, Google Places e OSM contribuem com <strong>881 ocorrências</strong>.</p>
+<h3 id="35-semur--sefazsalvador">3.5. SEMUR — SEFAZ/Salvador</h3>
+<p>Mapa cartográfico da <strong>Secretaria Municipal da Reparação de Salvador (SEMUR)</strong>, publicado em 2020 e distribuído pela infraestrutura geográfica da SEFAZ/Salvador. A lista nominal foi extraída por reconhecimento óptico de caracteres e revisão estrutural. Na v4, <strong>223 ocorrências</strong> foram geocodificadas e integradas.</p>
+<h3 id="36-ceap--mapa-do-axe">3.6. CEAP — Mapa do Axé</h3>
+<p>O <strong>Mapa do Axé</strong>, mantido pelo CEAP (Centro de Apoio às Populações Afro-descendentes), é um mapa colaborativo nacional de terreiros. A contribuição de <strong>286 ocorrências</strong> foi incorporada com sua proveniência preservada.</p>
 <hr/>
 <h2 id="4-normalizacao-integracao-e-deduplicacao">4. Normalização, integração e deduplicação</h2>
 <h3 id="41-padronizacao-minima">4.1. Padronização mínima</h3>
@@ -406,7 +379,16 @@ latitude:  -18,4 a  -8,5
 <li><strong>consulta comunitária</strong>, incorporando representantes das tradições mapeadas à definição das regras de publicação;</li>
 <li><strong>avaliação periódica de risco</strong>, considerando que mudanças no contexto político e tecnológico podem alterar os efeitos da exposição.</li>
 </ol>
-<p>Solicitações de correção, atualização ou retirada podem ser encaminhadas a <strong>leofn@ufba.br</strong>. Uma política pública de governança, com prazos, critérios e modalidades de resposta, deverá acompanhar as próximas versões.</p>
+<h3 id="81-canal-de-solicitacao">8.1. Canal de solicitação: alteração, inclusão e exclusão</h3>
+<p>O Ilê Axé Map mantém um <strong>canal público de solicitação</strong> para comunidades, lideranças, membros e qualquer pessoa afetada pelos dados. O canal aceita três modalidades, com tratamentos deliberadamente assimétricos:</p>
+<ul>
+<li><strong>Exclusão de um terreiro do mapa.</strong> A exclusão <strong>não exige justificativa</strong> e pode ser solicitada por qualquer pessoa afetada ou por representante. O compromisso de tratamento é de até <strong>7 dias</strong>. A identidade do solicitante só é verificada diante de sinal claro de má-fé; a solicitação de boa-fé é atendida sem contraprova. A exclusão oculta o registro da camada publicada, que permanece preservado no repositório para auditoria interna, sem dados pessoais do solicitante.</li>
+<li><strong>Alteração ou correção de informações.</strong> A correção informada (nome, endereço, tradição, coordenada) é aplicada após verificação simples de consistência, com prazo de até <strong>30 dias</strong>.</li>
+<li><strong>Inclusão de um terreiro.</strong> A inclusão passa pelos critérios metodológicos descritos nesta nota (evidência religiosa, geocodificação com classe de precisão forte, ausência de duplicata), com prazo de até <strong>30 dias</strong>. Inclusões aprovadas entram na base com fonte própria de <em>solicitação comunitária</em>.</li>
+</ul>
+<p>O canal opera por <strong>formulário eletrônico estruturado</strong> (link visível na interface do mapa e nesta documentação) e, como alternativa, por e-mail para <strong>leofn@ufba.br</strong>, com assunto no padrão <code>[Ilê Axé Map] EXCLUSÃO/ALTERAÇÃO/INCLUSÃO — nome do terreiro</code>. O formulário não exige login nem e-mail: sem e-mail, a alteração é aplicada e publicada, mas não há confirmação individual. As respostas são armazenadas em planilha <strong>privada</strong>, jamais publicada, e toda decisão aplicada é registrada em artefato de auditoria interno, sem dados pessoais.</p>
+<p>A assimetria entre os fluxos é uma escolha ética: o ônus da precisão é do projeto, não das comunidades. A fricção mínima na exclusão reconhece que o custo de um erro de exposição é muito maior do que o custo de ocultar um registro válido.</p>
+<p>Uma política pública de governança, com registro sistemático de prazos cumpridos e estatísticas de atendimento, acompanhará as próximas versões.</p>
 <hr/>
 <h2 id="9-reprodutibilidade-e-artefatos-publicos">9. Reprodutibilidade e artefatos públicos</h2>
 <p>A geração da base v2.2 a partir dos artefatos preservados é reproduzível por <code>scripts/build_v2.py</code> e coberta por testes automatizados. A reprodução das coletas históricas continua parcial, pois não estão integralmente disponíveis os scripts que produziram a coleta Google Places, a extração original CEAO e o OCR SEMUR.</p>
@@ -575,7 +557,7 @@ latitude:  -18,4 a  -8,5
 <li><strong>Laboratório de Humanidades Digitais da UFBA.</strong> Repositório do projeto. Disponível em: <a href="https://github.com/LABHDUFBA/ile-axe-map" rel="noopener noreferrer" target="_blank">https://github.com/LABHDUFBA/ile-axe-map</a>.</li>
 </ul>
 <hr/>
-<p><em>Documento atualizado para a versão 2.2 e auditado em 25 de julho de 2026.</em></p></article>
+<p><em>Documento atualizado para a versão 4.1 em 4 de novembro de 2026. Seções 1 a 3 e 8 revisadas para o escopo nacional; as demais seções conservam a redação da v2.2 e serão revisadas nas próximas etapas.</em></p></article>
       </div>
     </div>
   </main>
