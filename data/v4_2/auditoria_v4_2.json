@@ -1,0 +1,28 @@
+{
+  "base": "v4.1",
+  "candidata": "v4.2",
+  "total_v4_1": 8036,
+  "total_v4_2": 8036,
+  "pontos_na_agua_regiao": 173,
+  "marcados_coordenada_agua": 174,
+  "borderline_nao_marcados": 4,
+  "criterio_confianca_m": 250,
+  "bbox_costa": [
+    -13.6,
+    -39.3,
+    -12.3,
+    -37.7
+  ],
+  "bbox_pontos": [
+    -39.0,
+    -38.0,
+    -13.3,
+    -12.4
+  ],
+  "por_geo_status_anterior": {
+    "herdado_v2_validado": 169,
+    "fonte_propria_ceap": 5
+  },
+  "nota": "v4.2: coordenadas que caem no mar/baía (ray-casting contra coastline OSM, cobertura litoral nacional, banda de confiança 250 m) recebem geo_status=coordenada_agua e ficam ocultas por padrão; registro preservado. Sanitização: campos endereco/cep removidos do arquivo público (7.873 endereços, 7.873 CEPs).",
+  "cobertura": "litoral nacional (bbox -35,-55,4,-32)"
+}
