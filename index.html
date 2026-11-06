@@ -746,6 +746,7 @@
       else if (p.geo_status && String(p.geo_status).indexOf('geocode_divergente') !== -1) displayProps.geo_status = 'Coordenada divergente — em validação';
       else if (p.geo_status && String(p.geo_status).indexOf('places_v4') !== -1) displayProps.geo_status = 'Localização revalidada (Google Places + controle municipal)';
       else if (p.geo_status && String(p.geo_status).indexOf('geocode_cnpj_v46') !== -1) displayProps.geo_status = 'Localização revalidada (endereço oficial CNPJ, precisão de via)';
+      else if (p.geo_status && String(p.geo_status).indexOf('coordenada_validada_responsavel') !== -1) displayProps.geo_status = 'Localização confirmada pela equipe responsável';
       else if (p.geo_status && String(p.geo_status).indexOf('herdado_v2') !== -1) displayProps.geo_status = 'Georreferenciado pela base validada da Bahia';
       const [lng, lat] = feature.geometry.coordinates;
       $('detail-nacao').textContent = p._nacao;
