@@ -23,3 +23,7 @@ data/cnpj_nacional/geocoding_v41/
 **/.impeccable/questions/
 **/.impeccable/live/
 # impeccable-ignore-end
+
+# caches de re-geocodificacao (contem queries, Place IDs e endereços; nunca públicos)
+data/geocode_cache_v43.json
+data/places_cache_v44.json

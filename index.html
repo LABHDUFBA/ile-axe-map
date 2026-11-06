@@ -18,8 +18,8 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script>
-    const DATASET_VERSION = 'v4.2';
-    const DATASET_DATE = '2026-11-05';
+    const DATASET_VERSION = 'v4.5';
+    const DATASET_DATE = '2026-11-06';
   </script>
   <style>
     /* === Paleta === */
@@ -375,7 +375,7 @@
       <p>Atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros do Brasil.</p>
       <h3>Dataset</h3>
       <dl>
-        <dt>Versão</dt><dd>v4.2 (auditoria de coordenadas em água)</dd>
+        <dt>Versão</dt><dd>v4.5 (re-geocodificação Places com validação municipal)</dd>
         <dt>Modelo</dt><dd>entidade ↔ ocorrência (multi-fonte)</dd>
         <dt>Total</dt><dd id="dataset-total">8.036 entidades</dd>
         <dt>Com coordenada</dt><dd id="dataset-georef">8.036</dd>
@@ -742,6 +742,9 @@
       const displayProps = Object.assign({}, p);
       if (p.geo_status && String(p.geo_status).indexOf('centroide_suspeito') !== -1) displayProps.geo_status = 'Localização aproximada (centro do município) — em validação';
       else if (p.geo_status && String(p.geo_status).indexOf('uf_divergente') !== -1) displayProps.geo_status = 'Coordenada fora do estado declarado — em validação';
+      else if (p.geo_status && String(p.geo_status).indexOf('geocode_nao_resolvido') !== -1) displayProps.geo_status = 'Localização em validação — não exibida no mapa por padrão';
+      else if (p.geo_status && String(p.geo_status).indexOf('geocode_divergente') !== -1) displayProps.geo_status = 'Coordenada divergente — em validação';
+      else if (p.geo_status && String(p.geo_status).indexOf('places_v4') !== -1) displayProps.geo_status = 'Localização revalidada (Google Places + controle municipal)';
       else if (p.geo_status && String(p.geo_status).indexOf('herdado_v2') !== -1) displayProps.geo_status = 'Georreferenciado pela base validada da Bahia';
       const [lng, lat] = feature.geometry.coordinates;
       $('detail-nacao').textContent = p._nacao;
@@ -783,7 +786,7 @@
       return features.filter(f => {
         if (hideApprox) {
           const gs = String(f.properties.geo_status || '');
-          if (gs.indexOf('centroide_suspeito') !== -1 || gs.indexOf('uf_divergente') !== -1 || gs.indexOf('coordenada_agua') !== -1) return false;
+          if (gs.indexOf('centroide_suspeito') !== -1 || gs.indexOf('uf_divergente') !== -1 || gs.indexOf('coordenada_agua') !== -1 || gs.indexOf('geocode_nao_resolvido') !== -1 || gs.indexOf('geocode_divergente') !== -1) return false;
         }
         if (q) {
           const p = f.properties;
@@ -872,7 +875,7 @@
     // === Load ===
     map.whenReady(async function() {
       try {
-        const [geoResponse] = await Promise.all([fetch('data/v4_2/terreiros_nacional_v4_2.geojson')]);
+        const [geoResponse] = await Promise.all([fetch('data/v4_5/terreiros_nacional_v4_5.geojson')]);
         if (!geoResponse.ok) throw new Error('GeoJSON ' + geoResponse.status);
         const data = await geoResponse.json();
         $('dataset-total').textContent = data.features.length.toLocaleString('pt-BR') + ' registros';

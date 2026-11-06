@@ -1,0 +1,38 @@
+{
+  "base": "v4.2",
+  "candidata": "v4.5 (merge final)",
+  "total": 8036,
+  "places_validados_total": 252,
+  "places_v44": 112,
+  "places_v45": 140,
+  "por_status_final": {
+    "fonte_propria_mapeando_axe_csv": 2342,
+    "centroide_suspeito": 1892,
+    "herdado_v2_validado": 1745,
+    "fonte_propria_receita_federal_cnpj": 662,
+    "geocode_nao_resolvido": 534,
+    "fonte_propria_ceap": 262,
+    "uf_divergente": 184,
+    "places_v45_validado": 140,
+    "fonte_osm_alta_confianca": 113,
+    "places_v44_validado": 112,
+    "geocodificado_endereco_alta_confianca": 50
+  },
+  "correcoes_municipio_bairro_salvador": 4,
+  "ceap_martins_rn_marcado_nao_resolvido": 1,
+  "gates": {
+    "agua": "0 places-validados em agua (ray casting validado, 4 controles OK)",
+    "municipal": "0 visiveis >60km do municipio declarado",
+    "privacidade": "0 campos vedados (endereco/cep/telefone/cnpj/email/place_id)",
+    "integridade": "8.036 features preservadas (v4.2 -> v4.5)"
+  },
+  "visiveis_por_padrao": 5426,
+  "criterio": {
+    "tipo_obrigatorio": "place_of_worship",
+    "tipo_vedado": "church",
+    "tokens_compartilhados_min": 2,
+    "cobertura_nominal_min": 0.5,
+    "distancia_max_km_municipio": 60
+  },
+  "nota": "v4.5: 252 registros re-geocodificados com Places API (New) e Place ID (cache privado gitignored). 533 permanecem geocode_nao_resolvido, preservados e ocultos por padrao. 4 registros herdado_v2 com bairro no campo municipio corrigidos para Salvador (coords reais validadas). 1 registro CEAP com 73km de divergencia ocultado. Nada apagado."
+}
