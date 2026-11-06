@@ -188,10 +188,10 @@
   <main id="conteudo">
     <section class="hero" aria-labelledby="document-title">
       <div class="hero__inner">
-        <p class="eyebrow">Documentação · conjunto de dados v4.5</p>
+        <p class="eyebrow">Documentação · conjunto de dados v4.6</p>
         <h1 id="document-title">Nota técnico-metodológica</h1>
         <p class="hero__subtitle">Ilê Axé Map — Terreiros de Candomblé e espaços religiosos afro-brasileiros do Brasil</p>
-        <div class="document-meta"><p><strong>Versão do conjunto de dados:</strong> 4.5<br/>
+        <div class="document-meta"><p><strong>Versão do conjunto de dados:</strong> 4.6<br/>
 <strong>Data de extração e integração:</strong> 6 de novembro de 2026<br/>
 <strong>Responsabilidade:</strong> Leonardo Fernandes Nascimento — Laboratório de Humanidades Digitais da Universidade Federal da Bahia (LABHD/UFBA)<br/>
 <strong>Repositório:</strong> <a href="https://github.com/LABHDUFBA/ile-axe-map">https://github.com/LABHDUFBA/ile-axe-map</a><br/>
@@ -283,6 +283,7 @@
 <p><strong>Nota da v4.2 (novembro de 2026).</strong> Auditoria geométrica detectou <strong>174 registros</strong> cujas coordenadas caem no mar ou em baías (paridade de cruzamentos contra a linha de costa do OpenStreetMap, com cobertura do litoral nacional; banda de confiança de 250 m). Esses registros foram preservados e retirados da exibição padrão até revisão — nenhum registro foi apagado. A v4.2 também remove dos dados públicos os campos de endereço e CEP, mantendo-os apenas em artefatos internos.</p>
 <p><strong>Nota da v4.3 (novembro de 2026).</strong> A base inteira foi auditada contra centróides municipais do IBGE. Para os casos prioritários, a Geocoding API do Google foi usada sob critério conservador: só foram aceitos <strong>7 resultados</strong> com <code>partial_match=false</code>, classificação <code>place_of_worship</code> e precisão <code>ROOFTOP</code> ou <code>GEOMETRIC_CENTER</code>, além de distância de até 60 km do município declarado. Outros <strong>369 registros</strong> foram preservados com <code>geo_status=geocode_nao_resolvido</code> e ficam ocultos por padrão; não são apagados nem convertidos em centróides.</p>
 <p><strong>Nota da v4.5 (novembro de 2026).</strong> Re-geocodificação com Places API (New) do Google: <strong>252 registros</strong> receberam coordenadas validadas por <em>Place ID</em>, sob critério de classificação religiosa (<code>place_of_worship</code>, com rejeição explícita de <code>church</code> para evitar casamento com paróquias católicas), correspondência nominal mínima de dois tokens distintivos e 50% de cobertura sobre o nome do registro, além de distância de até 60 km do centróide do município declarado. Outros <strong>534 registros</strong> permanecem <code>geocode_nao_resolvido</code>, preservados e ocultos por padrão. Quatro registros da base herdada com bairro no campo município foram corrigidos para Salvador. As Place IDs e endereços completos ficam apenas em cache interno, nunca publicados.</p>
+<p><strong>Nota da v4.6 (novembro de 2026).</strong> <strong>1.454 registros</strong> da fonte CNPJ/Receita Federal que estavam sem município validável foram geocodificados a partir do endereço oficial do registro (logradouro, número, bairro, CEP), com precisão de via ou de número de porta (<code>ROOFTOP</code>/<code>RANGE_INTERPOLATED</code>, sem correspondência parcial). O município e a UF desses registros foram preenchidos a partir do endereço validado. Os demais — sem endereço utilizável no cadastro ou com geocode de qualidade insuficiente — permanecem <code>geocode_nao_resolvido</code>, preservados e ocultos por padrão. Endereços completos existem apenas em artefatos internos, nunca nos dados públicos.</p>
 <hr/>
 <h2 id="3-fontes-e-procedimentos-de-aquisicao">3. Fontes e procedimentos de aquisição</h2>
 <h3 id="31-ceaoufba">3.1. CEAO/UFBA</h3>

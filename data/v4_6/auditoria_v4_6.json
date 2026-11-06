@@ -1,0 +1,22 @@
+{
+  "base": "v4.5",
+  "candidata": "v4.6",
+  "total": 8036,
+  "alvos": 1932,
+  "com_endereco": 1829,
+  "consultas_novas": 1065,
+  "aceitos": 1454,
+  "rejeitados_qualidade": 375,
+  "sem_resultado": 0,
+  "sem_endereco_bruto": 103,
+  "criterio": {
+    "partial_match": false,
+    "loc_type": [
+      "ROOFTOP",
+      "RANGE_INTERPOLATED",
+      "GEOMETRIC_CENTER+place_of_worship"
+    ],
+    "uf_coerente": true
+  },
+  "nota": "Onda 3 CNPJ: Geocoding API por endereco completo do bruto local (gitignored). Municipio/UF preenchidos a partir do endereco validado. Rejeitados preservados e ocultos."
+}
