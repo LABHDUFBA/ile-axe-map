@@ -18,7 +18,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script>
-    const DATASET_VERSION = 'v4.6';
+    const DATASET_VERSION = 'v4.7';
     const DATASET_DATE = '2026-11-06';
   </script>
   <style>
@@ -375,12 +375,16 @@
       <p>Atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros do Brasil.</p>
       <h3>Dataset</h3>
       <dl>
-        <dt>Versão</dt><dd>v4.6 (geocodificação de endereços CNPJ com precisão de porta)</dd>
+        <dt>Versão</dt><dd>v4.7 (camada editorial: fotos CEAO, fundação e orixá regente)</dd>
         <dt>Modelo</dt><dd>entidade ↔ ocorrência (multi-fonte)</dd>
         <dt>Total</dt><dd id="dataset-total">8.036 entidades</dd>
         <dt>Com coordenada</dt><dd id="dataset-georef">8.036</dd>
         <dt>Fontes</dt><dd>CEAO/UFBA · CNPJ/RFB · Mapeando Axé · Google Places · OSM · SEFAZ · CEAP</dd>
       </dl>
+      <h3>As nações no mapa</h3>
+      <p style="font-size:12.5px;line-height:1.55">No candomblé, <em>nação</em> é uma forma de nomear linhagens e referências rituais compartilhadas; não corresponde de modo simples a países atuais nem define tradições rígidas ou isoladas.</p>
+      <p style="font-size:12.5px;line-height:1.55"><strong>Keto (Queto)</strong> reúne casas ligadas sobretudo a matrizes iorubás, com centralidade dos orixás e repertórios próprios de língua, cantos e práticas. <strong>Angola</strong> vincula-se a matrizes bantas da África Central, com referências aos inquices e formas rituais transmitidas por suas comunidades. <strong>Jeje</strong> identifica linhagens relacionadas a matrizes ewe-fon e à reverência aos voduns. <strong>Keto Angola</strong> é adotada por casas que reconhecem a articulação entre as heranças Keto e Angola. A <strong>Umbanda</strong> aparece como categoria distinta: não é uma nação do candomblé, mas uma religião afro-brasileira com identidade própria.</p>
+      <p style="font-size:12.5px;line-height:1.55">A classificação é autodeclarada, e o mapa respeita a maneira como cada casa se identifica.</p>
       <h3>Fontes</h3>
       <p>
         <a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a> — 2.228 ocorrências<br>
@@ -758,7 +762,7 @@
         html += '<img class="detail__photo" src="' + escapeHtml(src) + '" alt="' + escapeHtml(getName(p)) + '" loading="lazy" onerror="this.style.display=\'none\'">';
       }
       var seen = {};
-      [['nacao','Nação'],['categoria','Categoria'],['municipio','Município'],['uf','Estado'],['geo_status','Precisão da localização']].forEach(function(pair) {
+      [['nacao','Nação'],['categoria','Categoria'],['ano_fundacao','Fundação'],['regente','Orixá regente'],['municipio','Município'],['uf','Estado'],['geo_status','Precisão da localização']].forEach(function(pair) {
         var key = pair[0], label = pair[1];
         if (!displayProps[key]) return;
         var val = String(displayProps[key]);
@@ -877,7 +881,7 @@
     // === Load ===
     map.whenReady(async function() {
       try {
-        const [geoResponse] = await Promise.all([fetch('data/v4_6/terreiros_nacional_v4_6.geojson')]);
+        const [geoResponse] = await Promise.all([fetch('data/v4_7/terreiros_nacional_v4_7.geojson')]);
         if (!geoResponse.ok) throw new Error('GeoJSON ' + geoResponse.status);
         const data = await geoResponse.json();
         $('dataset-total').textContent = data.features.length.toLocaleString('pt-BR') + ' registros';
