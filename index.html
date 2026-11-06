@@ -6,7 +6,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <meta name="description" content="Atlas aberto de terreiros de candomblé da Bahia.">
+  <meta name="description" content="Atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros do Brasil.">
   <title>Ilê Axé Map — Terreiros de Candomblé e Umbanda do Brasil</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,8 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script>
-    const DATASET_VERSION = 'v2.2';
-    const DATASET_DATE = '2026-07-25';
+    const DATASET_VERSION = 'v4.1';
+    const DATASET_DATE = '2026-11-05';
   </script>
   <style>
     /* === Paleta === */
@@ -120,6 +120,7 @@
       border-color: var(--accent); color: var(--accent); font-weight: 700;
     }
     .topbar__btn.contact-btn:hover { background: var(--accent-soft); }
+    .contact-btn__short { display: none; }
 
     /* === Left rail === */
     .rail {
@@ -235,6 +236,8 @@
     .detail__link + .detail__link { margin-top: 8px; }
     .detail__link--warm { border-color: var(--warm); color: var(--warm); }
     .detail__link--warm:hover { background: var(--warm); color: var(--bg-elevated); }
+    .rail__clear-btn { margin-top: 8px; padding: 6px 12px; border: 1px solid var(--accent); border-radius: var(--radius-sm); background: var(--bg-elevated); color: var(--accent); cursor: pointer; font: 600 12px var(--font-body); }
+    .rail__clear-btn:hover { background: var(--accent-soft); }
 
     /* === Info panel === */
     .info-panel {
@@ -286,8 +289,12 @@
       .topbar { padding: 0 10px; gap: 8px; }
       .topbar__title { font-size: 15px; }
       .topbar__count { display: none; }
+      .topbar__validation { display: none; }
       .topbar__btn:not(.info-btn):not(.contact-btn) { display: none; }
-      .topbar__btn.contact-btn { font-size: 11px; padding: 0 8px; }
+      .topbar__btn.contact-btn { font-size: 12px; padding: 0 10px; }
+      .topbar__btn.contact-btn:hover { background: var(--accent-soft); }
+      .contact-btn__full { display: none; }
+      .contact-btn__short { display: inline; }
       .rail { width: 100%; top: auto; bottom: 0; height: auto; max-height: 75vh; border-right: none; border-top: 1px solid var(--border); border-radius: 16px 16px 0 0; transform: translateY(calc(100% - 52px)); }
       .rail.expanded { transform: translateY(0); }
       .rail__handle {
@@ -333,7 +340,7 @@
     <div class="topbar__count" id="count-badge" aria-live="polite">—</div>
     <span class="topbar__validation" title="Base nacional em processo de validação">dados em validação</span>
     <div class="topbar__spacer"></div>
-    <a class="topbar__btn contact-btn" href="https://forms.gle/FORM-LINK" target="_blank" rel="noopener" title="Solicitar alteração, inclusão ou exclusão de terreiro">Solicitar alteração / exclusão</a>
+    <a class="topbar__btn contact-btn" href="mailto:ileaxemap@gmail.com?subject=Solicita%C3%A7%C3%A3o%20Il%C3%AA%20Ax%C3%A9%20Map%20%E2%80%94%20altera%C3%A7%C3%A3o%2C%20inclus%C3%A3o%20ou%20exclus%C3%A3o" title="Solicitar alteração, inclusão ou exclusão de terreiro — a exclusão não exige justificativa e sai em até 7 dias"><span class="contact-btn__full">Solicitar alteração / exclusão</span><span class="contact-btn__short">Solicitações</span></a>
     <button class="topbar__btn" id="theme-btn" type="button" aria-label="Alternar tema" title="Tema">◐</button>
     <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Sobre o projeto" aria-expanded="false" aria-controls="info-panel">Sobre</button>
   </header>
@@ -391,8 +398,8 @@
         LABHD/UFBA · Leonardo Fernandes Nascimento
       </p>
       <h3>Solicitações</h3>
-      <p><a href="https://forms.gle/FORM-LINK" target="_blank" rel="noopener"><strong>Solicitar alteração, inclusão ou exclusão</strong></a><br>
-      Lideranças, membros e quaisquer pessoas afetadas podem pedir correção ou retirada de dados. A exclusão não exige justificativa (até 7 dias); alterações e inclusões em até 30 dias. Alternativa: leofn@ufba.br.</p>
+      <p><a href="mailto:ileaxemap@gmail.com?subject=Solicita%C3%A7%C3%A3o%20Il%C3%AA%20Ax%C3%A9%20Map%20%E2%80%94%20altera%C3%A7%C3%A3o%2C%20inclus%C3%A3o%20ou%20exclus%C3%A3o"><strong>Solicitar alteração, inclusão ou exclusão</strong></a><br>
+      Lideranças, membros e quaisquer pessoas afetadas podem pedir correção ou retirada de dados. A exclusão não exige justificativa (até 7 dias); alterações e inclusões em até 30 dias. E-mail: ileaxemap@gmail.com · alternativa: leofn@ufba.br.</p>
       <h3>Aviso</h3>
       <p style="font-size: 12px; color: var(--text-faint)">
         Terreiros são alvo recorrente de intolerância religiosa. Os dados aqui consolidados são de fontes públicas, mas a agregação em interface consultável reduz o custo de coleta. Uma camada de consentimento e agregação por setor está em desenvolvimento.
@@ -732,6 +739,10 @@
       if (popup) popup.remove();
       selectedFeature = feature; lastTrigger = trigger || lastTrigger || map.getContainer();
       const p = feature.properties;
+      const displayProps = Object.assign({}, p);
+      if (p.geo_status && String(p.geo_status).indexOf('centroide_suspeito') !== -1) displayProps.geo_status = 'Localização aproximada (centro do município) — em validação';
+      else if (p.geo_status && String(p.geo_status).indexOf('uf_divergente') !== -1) displayProps.geo_status = 'Coordenada fora do estado declarado — em validação';
+      else if (p.geo_status && String(p.geo_status).indexOf('herdado_v2') !== -1) displayProps.geo_status = 'Georreferenciado pela base validada da Bahia';
       const [lng, lat] = feature.geometry.coordinates;
       $('detail-nacao').textContent = p._nacao;
       $('detail-title').textContent = getName(p);
@@ -742,21 +753,18 @@
         html += '<img class="detail__photo" src="' + escapeHtml(src) + '" alt="' + escapeHtml(getName(p)) + '" loading="lazy" onerror="this.style.display=\'none\'">';
       }
       var seen = {};
-      if (p.geo_status && String(p.geo_status).indexOf('centroide_suspeito') !== -1) p = { ...p, geo_status: 'Localização aproximada (centro do município) — em validação' };
-      else if (p.geo_status && String(p.geo_status).indexOf('uf_divergente') !== -1) p = { ...p, geo_status: 'Coordenada fora do estado declarado — em validação' };
-      else if (p.geo_status && String(p.geo_status).indexOf('herdado_v2') !== -1) p = { ...p, geo_status: 'Georreferenciado pela base validada da Bahia' };
-      [['nacao','Nação'],['categoria','Categoria'],['endereco','Endereço'],['municipio','Município'],['uf','Estado'],['cep','CEP'],['telefone','Telefone'],['phone','Telefone'],['geo_status','Precisão da localização']].forEach(function(pair) {
+      [['nacao','Nação'],['categoria','Categoria'],['municipio','Município'],['uf','Estado'],['geo_status','Precisão da localização']].forEach(function(pair) {
         var key = pair[0], label = pair[1];
-        if (!p[key]) return;
-        var val = String(p[key]);
+        if (!displayProps[key]) return;
+        var val = String(displayProps[key]);
         if (/^n[aã]o (tem|informado)/i.test(val)) return;
         if (seen[label]) return; seen[label] = true;
         html += '<div class="info-row"><div class="info-row__label">' + label + '</div><div class="info-row__value">' + escapeHtml(val) + '</div></div>';
       });
-      html += '<div class="info-row"><div class="info-row__label">Coordenadas</div><div class="info-row__value">' + lat.toFixed(6) + ', ' + lng.toFixed(6) + '</div></div>';
       if (p.fonte) html += '<div class="info-row"><div class="info-row__label">Fonte</div><div class="info-row__value">' + escapeHtml(getFonteLabel(p)) + '</div></div>';
       html += '<a class="detail__link" href="https://www.openstreetmap.org/?mlat=' + lat + '&mlon=' + lng + '#map=18/' + lat + '/' + lng + '" target="_blank" rel="noopener">Ver no OpenStreetMap ↗</a>';
       if (p.ceao_id) html += '<a class="detail__link detail__link--warm" href="https://terreiros.ceao.ufba.br/detalhe/' + p.ceao_id + '" target="_blank" rel="noopener">Ver no CEAO/UFBA ↗</a>';
+      html += '<a class="detail__link detail__link--warm" href="mailto:ileaxemap@gmail.com?subject=' + encodeURIComponent('Solicitação sobre registro no Ilê Axé Map — ' + getName(p)) + '">Este registro afeta sua comunidade? Solicitar correção ou retirada ↗</a>';
       $('detail-body').innerHTML = html;
       $('detail').classList.add('open'); $('detail').setAttribute('aria-hidden', 'false'); $('detail-close').focus();
       if (!reduceMotion) map.flyTo([lat, lng], Math.max(map.getZoom(), 13), { duration: .6 });
@@ -771,25 +779,23 @@
 
     let hideApprox = true;
     function getVisibleFeatures() {
+      const q = searchQuery ? searchQuery.toLowerCase() : '';
       return features.filter(f => {
         if (hideApprox) {
           const gs = String(f.properties.geo_status || '');
           if (gs.indexOf('centroide_suspeito') !== -1 || gs.indexOf('uf_divergente') !== -1) return false;
+        }
+        if (q) {
+          const p = f.properties;
+          const haystack = ((getName(p) || '') + ' ' + (p.nacao || '') + ' ' + (p.municipio || '') + ' ' + (p.uf || '')).toLowerCase();
+          if (!haystack.includes(q)) return false;
         }
         return activeNacao.has(f.properties._nacao) && activeFonte.has(getFonteLabel(f.properties));
       });
     }
 
     function updateList() {
-      const all = getVisibleFeatures();
-      let filtered = all;
-      if (searchQuery) {
-        const q = searchQuery.toLowerCase();
-        filtered = all.filter(f => {
-          const p = f.properties;
-          return (getName(p) || '').toLowerCase().includes(q) || (p.nacao || '').toLowerCase().includes(q) || (p.municipio || '').toLowerCase().includes(q) || (p.uf || '').toLowerCase().includes(q) || (p.endereco || '').toLowerCase().includes(q);
-        });
-      }
+      const filtered = getVisibleFeatures();
       let inViewport = filtered;
       const vl = $('viewport-label');
       if (map.getZoom() > 10) {
@@ -806,7 +812,7 @@
 
     function renderList(items) {
       const holder = $('rail-list');
-      if (items.length === 0) { holder.innerHTML = '<div class="rail__empty">Nenhum terreiro encontrado</div>'; return; }
+      if (items.length === 0) { holder.innerHTML = '<div class="rail__empty">Nenhum terreiro encontrado. <button type="button" class="rail__clear-btn" id="clear-search-btn">Limpar busca e filtros</button></div>'; var cb = $('clear-search-btn'); if (cb) cb.addEventListener('click', function() { $('search').value = ''; searchQuery = ''; activeNacao = new Set(categoryOrder); activeFonte = new Set(fonteOrder.filter(function(fnt) { return features.some(function(feat) { return getFonteLabel(feat.properties) === fnt; }); })); document.querySelectorAll('#filters input[type=checkbox]').forEach(function(c) { if (c.id !== 'all-nacao' && c.id !== 'all-fonte' && c.id !== 'hide-approx') c.checked = true; }); var an = document.getElementById('all-nacao'); if (an) an.checked = true; var af = document.getElementById('all-fonte'); if (af) af.checked = true; var ha = document.getElementById('hide-approx'); if (ha) ha.checked = true; hideApprox = true; updateMarkers(); updateList(); $('search').focus(); }); return; }
       var html = '';
       items.forEach(function(f) {
         var p = f.properties;
@@ -835,7 +841,7 @@
 
     // === Events ===
     $('detail-close').addEventListener('click', closeDetail);
-    $('search').addEventListener('input', function(e) { searchQuery = e.target.value.trim(); updateList(); });
+    $('search').addEventListener('input', function(e) { searchQuery = e.target.value.trim(); updateMarkers(); updateList(); });
     $('theme-btn').addEventListener('click', function() {
       const isDark = (themeOverride === 'dark') || (!themeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches);
       themeOverride = isDark ? 'light' : 'dark';

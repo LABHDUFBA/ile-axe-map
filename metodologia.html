@@ -34,7 +34,7 @@
         /* Tema escuro desabilitado — metodologia sempre clara */
         color-scheme: light;
         --bg: #faf7f2; --surface: #fff; --text: #1c1917;
-        --muted: #6b6358; --faint: #8a8177;
+        --muted: #6b6358; --faint: #6f675f;
         --border: #e0d8cd; --border-strong: #c9c0b3;
         --accent: #29405b; --accent-hover: #1e3247;
         --accent-soft: rgba(41,64,91,.08);
@@ -69,6 +69,7 @@
     a:hover { color: var(--accent-hover); }
     a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3px solid var(--warm); outline-offset: 3px; }
     .skip-link { position: fixed; z-index: 100; top: 8px; left: 8px; transform: translateY(-160%); padding: 8px 12px; border-radius: 5px; background: var(--text); color: var(--bg); text-decoration: none; }
+    .skip-link:hover { color: var(--bg); background: var(--warm); }
     .skip-link:focus { transform: translateY(0); }
 
     .site-header { position: sticky; z-index: 20; top: 0; height: var(--header-h); border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(12px); }
@@ -197,7 +198,7 @@
 <strong>Mapa:</strong> <a href="https://labhdufba.github.io/ile-axe-map/">https://labhdufba.github.io/ile-axe-map/</a></p></div>
         <div class="reading-note">
 <p><strong>Nota de leitura.</strong> O Ilê Axé Map não constitui um censo, um cadastro oficial nem um inventário exaustivo das comunidades religiosas afro-brasileiras. Trata-se de uma infraestrutura cartográfica de pesquisa que integra registros oriundos de fontes públicas heterogêneas. Cada ponto representa um <strong>registro consolidado</strong>, com diferentes graus de completude e validação — não a certificação definitiva da existência, da identidade religiosa ou da situação atual de uma comunidade.</p>
-<p><strong>É sua comunidade no mapa?</strong> Lideranças, membros e quaisquer pessoas afetadas podem solicitar <a href="https://forms.gle/FORM-LINK" rel="noopener noreferrer" target="_blank"><strong>alteração, inclusão ou exclusão</strong></a> pelo formulário do projeto (alternativa: leofn@ufba.br). A <a href="#81-canal-de-solicitacao">Seção 8.1</a> descreve prazos e critérios — a exclusão não exige justificativa.</p>
+<p><strong>É sua comunidade no mapa?</strong> Lideranças, membros e quaisquer pessoas afetadas podem solicitar <a href="mailto:ileaxemap@gmail.com?subject=Solicita%C3%A7%C3%A3o%20Il%C3%AA%20Ax%C3%A9%20Map%20%E2%80%94%20altera%C3%A7%C3%A3o%2C%20inclus%C3%A3o%20ou%20exclus%C3%A3o"><strong>alteração, inclusão ou exclusão</strong></a> por e-mail (ileaxemap@gmail.com · alternativa: leofn@ufba.br). A <a href="#81-canal-de-solicitacao">Seção 8.1</a> descreve prazos e critérios — a exclusão não exige justificativa.</p>
 </div>
       </div>
     </section>
@@ -387,7 +388,7 @@ latitude:  -18,4 a  -8,5
 <li><strong>Alteração ou correção de informações.</strong> A correção informada (nome, endereço, tradição, coordenada) é aplicada após verificação simples de consistência, com prazo de até <strong>30 dias</strong>.</li>
 <li><strong>Inclusão de um terreiro.</strong> A inclusão passa pelos critérios metodológicos descritos nesta nota (evidência religiosa, geocodificação com classe de precisão forte, ausência de duplicata), com prazo de até <strong>30 dias</strong>. Inclusões aprovadas entram na base com fonte própria de <em>solicitação comunitária</em>.</li>
 </ul>
-<p>O canal opera por <strong>formulário eletrônico estruturado</strong> (link visível na interface do mapa e nesta documentação) e, como alternativa, por e-mail para <strong>leofn@ufba.br</strong>, com assunto no padrão <code>[Ilê Axé Map] EXCLUSÃO/ALTERAÇÃO/INCLUSÃO — nome do terreiro</code>. O formulário não exige login nem e-mail: sem e-mail, a alteração é aplicada e publicada, mas não há confirmação individual. As respostas são armazenadas em planilha <strong>privada</strong>, jamais publicada, e toda decisão aplicada é registrada em artefato de auditoria interno, sem dados pessoais.</p>
+<p>O canal opera por <strong>formulário eletrônico estruturado</strong> (link visível na interface do mapa e nesta documentação) e, como alternativa, por e-mail para <strong>ileaxemap@gmail.com</strong> (alternativa institucional: leofn@ufba.br), com assunto no padrão <code>[Ilê Axé Map] EXCLUSÃO/ALTERAÇÃO/INCLUSÃO — nome do terreiro</code>. O formulário não exige login nem e-mail: sem e-mail, a alteração é aplicada e publicada, mas não há confirmação individual. As respostas são armazenadas em planilha <strong>privada</strong>, jamais publicada, e toda decisão aplicada é registrada em artefato de auditoria interno, sem dados pessoais.</p>
 <p>A assimetria entre os fluxos é uma escolha ética: o ônus da precisão é do projeto, não das comunidades. A fricção mínima na exclusão reconhece que o custo de um erro de exposição é muito maior do que o custo de ocultar um registro válido.</p>
 <p>Uma política pública de governança, com registro sistemático de prazos cumpridos e estatísticas de atendimento, acompanhará as próximas versões.</p>
 <hr/>

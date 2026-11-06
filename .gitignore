@@ -11,3 +11,15 @@ data/cnpj_nacional/terreiros_cnpj_nacional.csv
 data/cnpj_nacional/raizes_alvo.json
 data/cnpj_nacional/razoes_sociais_alvo.json
 data/cnpj_nacional/geocoding_v41/
+
+# impeccable-ignore-start
+# Ephemeral output, runtime state, and per-dev overrides.
+# Shared artifacts stay tracked: config.json, design.json, critique/*.md.
+**/.impeccable/config.local.json
+**/.impeccable/hook.cache.json
+**/.impeccable/hook.pending.json
+**/.impeccable/*.png
+**/.impeccable/review/
+**/.impeccable/questions/
+**/.impeccable/live/
+# impeccable-ignore-end
