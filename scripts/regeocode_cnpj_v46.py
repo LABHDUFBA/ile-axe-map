@@ -132,7 +132,15 @@ def main():
         if not cands:
             no_addr.append(i)
             continue
-        r = cands[0]
+        r = cands[0] if len(cands) == 1 else None
+        # homônimos: só aceitar row cuja UF case com a da entidade
+        euf = (p.get("uf") or "").strip().upper()
+        same_uf = [c for c in cands if (c.get("uf") or "").strip().upper() == euf]
+        if same_uf:
+            r = same_uf[0]
+        else:
+            no_addr.append(i)  # homônimo de outro estado: sem evidência de vínculo
+            continue
         if not (r.get("logradouro") or "").strip() or not (r.get("numero") or "").strip():
             no_addr.append(i)
             continue

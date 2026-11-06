@@ -18,5 +18,12 @@
     ],
     "uf_coerente": true
   },
-  "nota": "Onda 3 CNPJ: Geocoding API por endereco completo do bruto local (gitignored). Municipio/UF preenchidos a partir do endereco validado. Rejeitados preservados e ocultos."
+  "nota": "Onda 3 CNPJ: Geocoding API por endereco completo do bruto local (gitignored). Municipio/UF preenchidos a partir do endereco validado. Rejeitados preservados e ocultos.",
+  "notas_pos_v461": {
+    "gantois": "coordenada autoritativa do responsável aplicada a 2 registros (14,5 km e 636 m); status coordenada_validada_responsavel",
+    "homonimos_cnpj": "2 registros ocultados (LUZ DIVINA SP/MG, CENTRO ESPIRITUALISTA PI/PR) + script endurecido com gate UF entidade↔bruto",
+    "banda_costeira": "12 pontos em faixa de água: 3 corrigidos via Places (≥2 tokens), 9 ocultados com motivo (match familiar insuficiente ou coord empilhada)",
+    "limitacao_ray_casting": "paridade falha em ilhas (Itamaracá, Ilha de Maré): validar por Places/terreno, não por paridade isolada"
+  },
+  "visiveis_por_padrao": 6211
 }
