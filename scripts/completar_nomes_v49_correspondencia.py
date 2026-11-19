@@ -21,6 +21,13 @@ def readcsv(p):
     with p.open("r", newline="", encoding="utf-8") as fh:
         return list(csv.DictReader(fh))
 
+def _hash(x, n=12):
+    """Referência não reversível: a política do projeto não publica CNPJ/CEP,
+    mas a auditoria precisa reencontrar o registro na fonte."""
+    import hashlib
+    limpo = "".join(c for c in str(x or "") if c.isdigit())
+    return hashlib.sha256(limpo.encode()).hexdigest()[:n]
+
 def writecsv(p, rows, columns):
     tmp = p.with_suffix(p.suffix + ".tmp")
     with tmp.open("w", newline="", encoding="utf-8") as fh:
@@ -99,7 +106,7 @@ def main():
             "uf_fonte_cnpj": source.get("uf"),
             "uf_divergente_fonte": source.get("uf") != p.get("uf"),
             "fonte_nome_recuperado": "data/cnpj/geocoding/terreiros_cnpj_geocoded.csv",
-            "cnpj_referencia_nome": source.get("cnpj"),
+            "cnpj_ref_sha256": _hash(source.get("cnpj")),
             "validacao_comunitaria": "pendente"
         })
 

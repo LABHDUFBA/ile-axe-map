@@ -19,6 +19,12 @@ def readgeo(path):
 def cep(x):
     return "".join(c for c in str(x or "") if c.isdigit())
 
+def _hash(x, n=12):
+    """Referência não reversível para CEP/CNPJ: a política do projeto não
+    publica identificadores, mas a auditoria precisa reencontrar o registro."""
+    import hashlib
+    return hashlib.sha256(cep(x).encode()).hexdigest()[:n]
+
 def hav(a,b):
     import math
     ax,ay=a["geometry"]["coordinates"]
@@ -83,7 +89,7 @@ def run():
             "nacao":p.get("nacao") or None,
             "categoria":p.get("categoria") or "Não informado",
             "endereco":p.get("endereco") or "",
-            "cep":cep(p.get("cep")),
+            "cep_ref_sha256":_hash(p.get("cep")),
             "linha_religiosa":None,
             "match_axecloud":"nao_verificado",
             "versao":"v4.9_candidata",

@@ -4,14 +4,12 @@
   "fonte": "mapeando_axe_2010",
   "source_url": "https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm",
   "nome_na_fonte": "",
-  "lideranca": "Iracema Pereira dos Reis",
-  "regentes": "Dona Conceição; Sapa Encantada",
-  "endereco_original": "Rua Magalhães Barata, 130, Vila Nova - Ilha de Cotijuba, Belém, PA",
   "coordenadas_v3": [
     -48.5530148,
     -1.2455034
   ],
   "coordenada_endereco": "Divergencia potencial: fonte geocodificou rua em Outeiro, endereço menciona Cotijuba",
   "status": "Identidade da fonte rastreada; nome do terreiro nao declarado, requer pesquisa comunitaria",
-  "nao_inventar_nome": true
+  "nao_inventar_nome": true,
+  "nota_privacidade": "Nomes de liderança e endereço original omitidos por política de privacidade do projeto; consulta interna ao registro 130 da fonte."
 }

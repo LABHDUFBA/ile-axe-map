@@ -28,6 +28,13 @@ def loadcsv(path):
     with path.open(encoding="utf-8", newline="") as fh:
         return list(csv.DictReader(fh))
 
+def _hash(x, n=12):
+    """Referência não reversível para CNPJ/CEP: a política do projeto não
+    publica identificadores, mas a auditoria precisa reencontrar o registro."""
+    import hashlib
+    limpo = "".join(c for c in str(x or "") if c.isdigit())
+    return hashlib.sha256(limpo.encode()).hexdigest()[:n]
+
 def savecsv(path, rows, columns):
     with path.open("w", encoding="utf-8", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=columns, extrasaction="ignore")
@@ -117,7 +124,7 @@ def main():
             "nome":name, "recuperacao_status":"recuperado_fonte_cnpj",
             "recuperacao_metodo":"alinhamento_sequencial_bidirecional_cep",
             "fonte_nome_recuperado":"data/cnpj/geocoding/terreiros_cnpj_geocoded.csv",
-            "cnpj_referencia_nome":s["cnpj"],
+            "cnpj_ref_sha256":_hash(s["cnpj"]),
             "uf_fonte_cnpj":s["uf"],
             "uf_divergente_fonte":s["uf"] != p.get("uf"),
             "coordenada_divergente_fonte":not coordinates_match(v3[idx],s),
@@ -125,7 +132,7 @@ def main():
         })
         generated.append({
             "indice_v3_zero_based":idx,"indice_csv_fonte_zero_based":forward[i],
-            "cnpj":s["cnpj"],"cep":s["cep"],"nome_recuperado":name,
+            "cnpj_sha256":_hash(s["cnpj"]),"cep_sha256":_hash(s["cep"]),"nome_recuperado":name,
             "uf_v3":v3[idx]["properties"].get("uf"),"uf_fonte":s["uf"],
             "coordenadas_concordantes":str(coordinates_match(v3[idx],s)).lower(),
             "metodo":"subsequencia_CNPJ_CEP_ordem_original_bidirecional"
@@ -161,17 +168,16 @@ def main():
     other = other_matches[0]["properties"]
     other.update({
         "source_record_id":"130","fonte_identidade":"mapeando_axe_2010",
-        "lideranca_documentada":"Iracema Pereira dos Reis",
-        "regentes_documentados":"Dona Conceição; Sapa Encantada",
+        "tem_lideranca_documentada":True,
         "nome_oficial":"nao_consta_na_fonte",
-        "identificacao_descritiva":"Registro 130 do Mapeando Axé, sob liderança de Iracema Pereira dos Reis",
+        "identificacao_descritiva":"Registro 130 do Mapeando Axé; nomes de liderança e endereço original não publicados (política de privacidade do projeto)",
         "recuperacao_status":"pendente_nome_oficial",
         "revisao_geografica_pendente":True,
         "nome_original_v3":"Sem nome"
     })
     lastAudit = [x for x in audit if x["indice_v3_zero_based"]=="7488"]
     assert len(lastAudit)==1
-    lastAudit[0]["motivo"]="Fonte original Mapeando Axé 2010 (registro 130) sem nome da casa; liderança: Iracema Pereira dos Reis"
+    lastAudit[0]["motivo"]="Fonte original Mapeando Axé 2010 (registro 130) sem nome da casa; liderança documentada, não publicada por política de privacidade"
 
     for r in dest:
         a=ref[int(r["indice_v3_agrupado"])]["properties"]
@@ -201,7 +207,7 @@ def main():
         "n_recuperados_entre_537":537,"n_pendentes_entre_537":0,
         "n_grupos_com_dois_nomes_recuperados_diferentes":sum(bool(r["nome_agrupado_recuperado"]) and bool(r["nome_representante_recuperado"]) and r["nome_agrupado_recuperado"]!=r["nome_representante_recuperado"] for r in dest),
         "ultimo_registro_sem_nome_oficial":{"indice_v3":7488,"fonte":"mapeando_axe_2010",
-          "id_fonte":"130","nome_na_fonte":"", "lideranca":"Iracema Pereira dos Reis"},
+          "id_fonte":"130","nome_na_fonte":"", "lideranca_nome_omitido":True},
         "ressalva":"1.237 nomes CNPJ documentais candidatos. Um registro de outra fonte sem nome oficial; não inventar nome. 97 coordenadas de terceira passagem divergentes, preservar local original e revisar antes da publicação."
     })
     candidate["metadata"].update({
@@ -220,9 +226,8 @@ def main():
     OUTRO.write_text(json.dumps({
         "indice_v3":7488,"source_record_id":"130","fonte":"mapeando_axe_2010",
         "source_url":"https://www.mapeandoaxe.org.br/cd/paginas/terreiros.htm",
-        "nome_na_fonte":"","lideranca":"Iracema Pereira dos Reis",
-        "regentes":"Dona Conceição; Sapa Encantada",
-        "endereco_original":"Rua Magalhães Barata, 130, Vila Nova - Ilha de Cotijuba, Belém, PA",
+        "nome_na_fonte":"","tem_lideranca_documentada":True,
+        "nota_privacidade":"Nomes de liderança e endereço original omitidos por política de privacidade do projeto; consulta interna ao registro 130 da fonte.",
         "coordenadas_v3":[-48.5530148,-1.2455034],
         "coordenada_endereco":"Divergencia potencial: fonte geocodificou rua em Outeiro, endereço menciona Cotijuba",
         "status":"Identidade da fonte rastreada; nome do terreiro nao declarado, requer pesquisa comunitaria",

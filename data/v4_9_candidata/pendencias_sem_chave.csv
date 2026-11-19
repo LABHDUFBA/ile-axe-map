@@ -1,2 +1,2 @@
-indice_v3_zero_based,fonte,cep,uf_v3,nome_antes,status,motivo
+indice_v3_zero_based,fonte,cep_sha256,uf_v3,nome_antes,status,motivo
 7488,Outro,,,Sem nome,PENDENTE,"Origem Mapeando Axé 2010 id 130 contém nome vazio; liderança identificada, nome da casa não fornecido"
