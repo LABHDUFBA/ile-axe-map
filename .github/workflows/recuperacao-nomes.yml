@@ -1,0 +1,62 @@
+name: Recuperacao de nomes (candidata)
+on:
+  push:
+    branches: [correcao-nomes-auditoria-2026-11-19]
+    paths:
+      - "scripts/build_v4_9_nomes.py"
+      - "scripts/completar_nomes_v49_correspondencia.py"
+      - "scripts/recuperar_nomes_v49_alinhamento_original.py"
+      - ".github/workflows/recuperacao-nomes.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reconstruir-validar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout da branch candidata
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Reconstruir GeoJSON e validar contagens
+        run: |
+          python scripts/build_v4_9_nomes.py
+          python scripts/completar_nomes_v49_correspondencia.py
+          python scripts/recuperar_nomes_v49_alinhamento_original.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/v4_9_candidata/terreiros_nacional_v4_9_candidata.geojson')
+          j=json.loads(p.read_text(encoding='utf-8'))
+          f=j['features']
+          assert len(f)==8573, len(f)
+          rec=[x for x in f if x.get('properties',{}).get('recuperacao_status')=='recuperado_fonte_cnpj']
+          pend=[x for x in f if x.get('properties',{}).get('recuperacao_status')=='pendente_revisao']
+          assert (len(rec),len(pend)) == (1237,0)
+          assert len([x for x in rec if x['properties'].get('recuperacao_metodo')=='cep_e_coordenada_exclusivos_segunda_passagem'])==43
+          ids=[x['properties']['entity_id'] for x in f if x['properties'].get('indice_v3') is not None]
+          assert len(ids)==len(set(ids))==1237
+          assert all(x['properties'].get('nome')!='Sem nome' for x in rec)
+          print(f"VALIDADO: {len(f)} pontos, {len(rec)} nomes recuperados, {len(pend)} pendencias")
+          PY
+      - name: Guardar artefato reconstruido
+        uses: actions/upload-artifact@v4
+        with:
+          name: ile-axe-map-v4-9-candidata
+          path: data/v4_9_candidata/terreiros_nacional_v4_9_candidata.geojson
+          retention-days: 30
+      - name: Publicar somente na branch de auditoria
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/v4_9_candidata/
+          if ! git diff --cached --quiet; then
+            git commit -m "build: gerar v4.9 candidata auditada (nao publicada)"
+            git push origin HEAD:correcao-nomes-auditoria-2026-11-19
+          fi

@@ -46,25 +46,52 @@ def rows_in_zip(path):
 
 def main():
     candidates = OUT / "terreiros_cnpj_nacional.csv"
-    roots = set(json.loads((OUT / "raizes_alvo.json").read_text()))
+    # Raízes selecionadas na coleta efetiva, inclusive apenas por nome fantasia.
+    # Não utilizar raizes_alvo.json: ele cobre só correspondências por razão social.
+    if not candidates.exists():
+        raise FileNotFoundError(f"CSV de candidatos ausente: {candidates}")
+    with candidates.open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        if not reader.fieldnames or "raiz" not in reader.fieldnames:
+            raise ValueError("CSV de candidatos sem coluna raiz")
+        roots = set()
+        for lineno, row in enumerate(reader, start=2):
+            raiz = (row.get("raiz") or "").strip()
+            if not re.fullmatch(r"\d{8}", raiz):
+                raise ValueError(f"Raiz CNPJ inválida na linha {lineno}")
+            roots.add(raiz)
+    if not roots:
+        raise ValueError("CSV sem raízes; abortando enriquecimento")
+    TMP.mkdir(parents=True, exist_ok=True)
     mapping = {}
     for i in range(10):
         zp = TMP / f"Empresas{i}.zip"
-        download(f"{MIRROR}/Empresas{i}.zip", zp)
-        found = 0
-        for row in rows_in_zip(zp):
-            if len(row) >= 2 and row[0] in roots:
-                mapping[row[0]] = row[1]
-                found += 1
-        zp.unlink()
-        print(f"Empresas{i}: {found} razões recuperadas", flush=True)
+        try:
+            download(f"{MIRROR}/Empresas{i}.zip", zp)
+            found = 0
+            for row in rows_in_zip(zp):
+                if len(row) >= 2 and row[0] in roots:
+                    mapping[row[0]] = row[1]
+                    found += 1
+            print(f"Empresas{i}: {found} razões recuperadas", flush=True)
+        finally:
+            zp.unlink(missing_ok=True)
+
+    # Não publicar CSV parcialmente preenchido se qualquer raiz estiver ausente.
+    missing = roots - set(mapping)
+    if missing:
+        raise RuntimeError(
+            f"Enriquecimento incompleto: {len(missing)} de {len(roots)} raízes sem razão social. "
+            "CSV original preservado."
+        )
 
     (OUT / "razoes_sociais_alvo.json").write_text(json.dumps(mapping, ensure_ascii=False), encoding="utf-8")
     tmp = candidates.with_suffix(".enriquecido.tmp")
     with open(candidates, encoding="utf-8") as inp, open(tmp, "w", newline="", encoding="utf-8") as out:
         reader = csv.DictReader(inp)
         cols = list(reader.fieldnames or [])
-        writer = csv.DictWriter(out, fieldnames=cols + ["termos_match_razao", "termos_match_fantasia"])
+        extra = [c for c in ("termos_match_razao", "termos_match_fantasia") if c not in cols]
+        writer = csv.DictWriter(out, fieldnames=cols + extra)
         writer.writeheader()
         for r in reader:
             razao = mapping.get(r["raiz"], "")
@@ -73,7 +100,7 @@ def main():
             r["termos_match_fantasia"] = "|".join(sorted(set(m.group(0).lower() for m in KW_RE.finditer(r["nome_fantasia"]))))
             writer.writerow(r)
     tmp.replace(candidates)
-    print(f"OK: {len(mapping)} razões recuperadas e {candidates.name} enriquecido", flush=True)
+    print(f"OK: {len(roots)} raízes do CSV verificadas; {candidates.name} enriquecido", flush=True)
 
 
 if __name__ == "__main__":
