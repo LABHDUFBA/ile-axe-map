@@ -382,12 +382,13 @@
       <p>Atlas aberto de terreiros de candomblé e espaços religiosos afro-brasileiros do Brasil.</p>
       <h3>Dataset</h3>
       <dl>
-        <dt>Versão</dt><dd>v4.8 (taxonomia em três níveis: tradição → nação → raiz; camada editorial: fotos CEAO, fundação e orixá regente)</dd>
+        <dt>Versão</dt><dd>v4.9 (taxonomia em três níveis; camada editorial: fotos CEAO, fundação e orixá regente; 1.237 nomes documentais recuperados por CNPJ)</dd>
         <dt>Modelo</dt><dd>entidade ↔ ocorrência (multi-fonte)</dd>
         <dt>Total</dt><dd id="dataset-total">8.036 entidades</dd>
         <dt>Com coordenada</dt><dd id="dataset-georef">8.036</dd>
         <dt>Fontes</dt><dd>CEAO/UFBA · CNPJ/RFB · Mapeando Axé · Google Places · OSM · SEFAZ · CEAP</dd>
       </dl>
+      <p id="precision-note" style="font-size:12.5px;line-height:1.5;opacity:.85"></p>
       <h3>As nações no mapa</h3>
       <p style="font-size:12.5px;line-height:1.55">O mapa organiza a classificação em três níveis: a <strong>tradição</strong> (candomblé, umbanda, jurema, tambor de mina, batuque, terecô, omoloko, entre outras), a <strong>nação</strong> — forma de nomear linhagens e referências rituais compartilhadas — e a <strong>raiz</strong> ou família, quando a casa a declara. Uma casa pode declarar mais de uma tradição ou nação; nesse caso, todas ficam registradas, sem escolher uma como definitiva.</p>
       <p style="font-size:12.5px;line-height:1.55"><strong>Keto (Queto)</strong> reúne casas ligadas sobretudo a matrizes iorubás, com centralidade dos orixás e repertórios próprios de língua, cantos e práticas. <strong>Angola</strong> vincula-se a matrizes bantas da África Central, com referências aos inquices e formas rituais transmitidas por suas comunidades. <strong>Jeje</strong> identifica linhagens relacionadas a matrizes ewe-fon e à reverência aos voduns. <strong>Keto Angola</strong> é adotada por casas que reconhecem a articulação entre as heranças Keto e Angola. A <strong>Umbanda</strong> aparece como categoria distinta: não é uma nação do candomblé, mas uma religião afro-brasileira com identidade própria.</p>
@@ -485,7 +486,7 @@
     }
     setTileLayer();
 
-    let features = [], sourceReady = false;
+    let features = [], sourceReady = false, geoData = null;
     let activeTrad = new Set(), activeNacao = new Set(), activeFonte = new Set();
     let nacaoOrder = [];
     let selectedFeature = null, popup = null, lastTrigger = null;
@@ -717,8 +718,44 @@
       });
       markerCluster.on('clusterclick', function(event) { event.layer.zoomToBounds({ padding: [40, 40] }); });
       map.addLayer(markerCluster);
+      addAgregadoLayer();
       sourceReady = true;
       updateMarkers();
+    }
+
+    /* Camada de contagem municipal: registros que só se sabe estar no município.
+       Evita 700 pontos empilhados no mesmo centróide e diz a verdade ao usuário. */
+    let agregadoLayer = null;
+    function addAgregadoLayer() {
+      if (agregadoLayer || typeof geoData === 'undefined' || !geoData.agregados_municipais) return;
+      const feats = geoData.agregados_municipais.features || [];
+      agregadoLayer = L.layerGroup();
+      feats.forEach(function(f) {
+        const c = f.geometry.coordinates;
+        const p = f.properties;
+        const raio = p.total_registros < 20 ? 14 : p.total_registros < 100 ? 20 : p.total_registros < 500 ? 26 : 32;
+        const circulo = L.circleMarker([c[1], c[0]], {
+          radius: raio, color: '#567F49', weight: 2, dashArray: '4 3',
+          fillColor: '#F2C944', fillOpacity: .35, keyboard: true
+        });
+        const rotulo = p.municipio && p.municipio !== '(sem município)'
+          ? p.municipio + (p.uf && p.uf !== '(sem UF)' ? '/' + p.uf : '')
+          : 'Município não declarado' + (p.uf && p.uf !== '(sem UF)' ? '/' + p.uf : '');
+        circulo.bindTooltip(p.total_registros + ' registros · ' + rotulo + ' (precisão municipal)', { direction: 'top' });
+        circulo.on('click', function() {
+          $('detail-title').textContent = rotulo;
+          $('detail-body').innerHTML =
+            '<div class="info-row"><div class="info-row__label">Registros neste município</div><div class="info-row__value">' + p.total_registros + '</div></div>' +
+            '<div class="info-row"><div class="info-row__label">Precisão</div><div class="info-row__value">Município — endereço em verificação</div></div>' +
+            '<p style="margin-top:10px;font-size:13px;line-height:1.5;opacity:.85">' +
+            'Estes registros constam em fontes públicas (CNPJ/Receita Federal), mas a localização exata da casa ainda não foi confirmada. ' +
+            'O ponto mostra o centro do município, não o endereço.</p>' +
+            '<a class="detail__link detail__link--warm" href="metodologia.html#precisao">Como tratamos a precisão ↗</a>';
+          $('detail').classList.add('open'); $('detail').setAttribute('aria-hidden', 'false');
+        });
+        agregadoLayer.addLayer(circulo);
+      });
+      map.addLayer(agregadoLayer);
     }
 
     function updateMarkers() {
@@ -997,12 +1034,21 @@
     // === Load ===
     map.whenReady(async function() {
       try {
-        const [geoResponse] = await Promise.all([fetch('data/v4_8/terreiros_nacional_v4_8.geojson')]);
+        const [geoResponse] = await Promise.all([fetch('data/v4_9/terreiros_nacional_v4_9.geojson')]);
         if (!geoResponse.ok) throw new Error('GeoJSON ' + geoResponse.status);
         const data = await geoResponse.json();
+        geoData = data;
         $('dataset-total').textContent = data.features.length.toLocaleString('pt-BR') + ' registros';
+        const nAgreg = (data.agregados_municipais && data.agregados_municipais.features || [])
+          .reduce((s, a) => s + (a.properties.total_registros || 0), 0);
+        const elPrec = document.getElementById('precision-note');
+        if (elPrec && nAgreg) {
+          elPrec.innerHTML = nAgreg.toLocaleString('pt-BR') + ' registros têm localização apenas no nível do município ' +
+            '(mostrados como área de contagem, não como ponto) — <a href="metodologia.html#precisao">ver metodologia</a>.';
+        }
         features = data.features
           .filter(f => f.geometry && f.geometry.type === 'Point' && Array.isArray(f.geometry.coordinates))
+          .filter(f => (f.properties || {}).renderizacao !== 'agregada')
           .map(f => ({ ...f, properties: { ...(f.properties || {}), _tradicao: classify(f.properties || {}), _nacoes: nacoesOf(f.properties || {}) } }));
         buildFilters();
         addMapLayers();
