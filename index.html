@@ -386,7 +386,7 @@
         <dt>Modelo</dt><dd>entidade ↔ ocorrência (multi-fonte)</dd>
         <dt>Total</dt><dd id="dataset-total">8.036 entidades</dd>
         <dt>Com coordenada</dt><dd id="dataset-georef">8.036</dd>
-        <dt>Fontes</dt><dd>CEAO/UFBA · CNPJ/RFB · Mapeando Axé · Google Places · OSM · SEFAZ · CEAP</dd>
+        <dt>Fontes</dt><dd>CEAO/UFBA · CNPJ/RFB · Mapeando Axé · Google Places · OSM · SEFAZ · CEAP <span style="color:var(--text-faint)">(+ Atlas do Axé/AM e AXÉS/LHS-UnB/DF em preparação)</span></dd>
       </dl>
       <h3>As nações no mapa</h3>
       <p style="font-size:12.5px;line-height:1.55">O mapa organiza a classificação em três níveis: a <strong>tradição</strong> (candomblé, umbanda, jurema, tambor de mina, batuque, terecô, omoloko, entre outras), a <strong>nação</strong> — forma de nomear linhagens e referências rituais compartilhadas — e a <strong>raiz</strong> ou família, quando a casa a declara. Uma casa pode declarar mais de uma tradição ou nação; nesse caso, todas ficam registradas, sem escolher uma como definitiva.</p>
@@ -395,14 +395,19 @@
       <h3>Colabore</h3>
       <p style="font-size:12.5px;line-height:1.55">Sua comunidade está no mapa? <a href="colaborar.html"><strong>Veja como colaborar</strong></a> — correção de localização, foto da fachada, ano de fundação, nação e histórico do terreiro. Contribuições das comunidades têm prioridade.</p>
       <h3>Fontes</h3>
-      <p>
+      <p style="font-size:12.5px;line-height:1.6">
         <a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a> — 2.228 ocorrências<br>
-        CNPJ/Receita Federal — 2.492 ocorrências<br>
-        Mapeando Axé — 4.042 ocorrências<br>
-        Google Places + OSM — 881 ocorrências<br>
-        SEFAZ/Salvador — 223 ocorrências<br>
+        <a href="https://dados.gov.br/dados/conjuntos-dados/cadastro-nacional-da-pessoa-juridica---cnpj" target="_blank" rel="noopener">CNPJ/Receita Federal</a> — 2.492 ocorrências<br>
+        <a href="https://www.mapeandoaxe.org.br/" target="_blank" rel="noopener">Mapeando Axé</a> — 4.042 ocorrências<br>
+        <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">Google Places + OpenStreetMap</a> — 881 ocorrências<br>
+        <a href="https://www.sefaz.salvador.ba.gov.br/geosalvador" target="_blank" rel="noopener">SEFAZ/Salvador (SEMUR)</a> — 223 ocorrências<br>
         <a href="https://mapadoaxe.ceapoficial.org.br/" target="_blank" rel="noopener">CEAP — Mapa do Axé</a> — 286 ocorrências
       </p>
+      <p style="font-size:12.5px;line-height:1.6"><strong>Em preparação para a próxima versão.</strong> Já coletadas e normalizadas, ainda fora da camada publicada:<br>
+        <a href="https://atlasdoaxe.lovable.app/" target="_blank" rel="noopener">Atlas do Axé</a> (Amazonas) — 177 registros, 175 após exclusão de lojas de artigos religiosos; 173 novos<br>
+        <a href="https://lhs.unb.br/axes-social" target="_blank" rel="noopener">AXÉS — LHS/UnB</a> (DF) — 8 comunidades, com ficha descritiva
+      </p>
+      <p style="font-size:12.5px;line-height:1.6"><strong>Avaliado e não incorporado.</strong> <a href="https://axecloud.com.br/terreiros" target="_blank" rel="noopener">AxéCloud</a>: diretório comercial cujas coordenadas provêm de plataformas de mapas, sem cadastro comunitário — incluí-lo aumentaria o volume sem acrescentar evidência independente. Ver <a href="metodologia.html#37-axecloud">Seção 3.7 da metodologia</a>.</p>
       <h3>Metodologia</h3>
       <p><a href="metodologia.html" target="_blank">Nota técnico-metodológica</a></p>
       <h3>Código</h3>
@@ -438,9 +443,9 @@
       for (let i = 0; i < category.length; i++) hash = ((hash << 5) - hash + category.charCodeAt(i)) | 0;
       return nationPalette[Math.abs(hash) % nationPalette.length];
     }
-    const fonteMap = { 'ceao': 'CEAO/UFBA', 'receita_federal_cnpj': 'CNPJ/Receita Federal', 'terreirosdobrasil.com.br': 'Terreiros do Brasil', 'google': 'Google Places', 'google_places': 'Google Places', 'osm': 'OSM', 'sefaz': 'SEFAZ/Salvador', 'mapeando_axe_csv': 'Mapeando Axé', 'ceap': 'CEAP/Mapa do Axé' };
-    const fonteOrder = ['CEAO/UFBA', 'CNPJ/Receita Federal', 'Mapeando Axé', 'Google Places', 'OSM', 'SEFAZ/Salvador', 'CEAP/Mapa do Axé', 'Terreiros do Brasil', 'Outro'];
-    const fonteColors = { 'CEAO/UFBA': '#0072B2', 'CNPJ/Receita Federal': '#D55E00', 'Mapeando Axé': '#8C564B', 'Google Places': '#E69F00', 'OSM': '#56B4E9', 'SEFAZ/Salvador': '#CC79A7', 'CEAP/Mapa do Axé': '#009E73', 'Terreiros do Brasil': '#6F4E7C', 'Outro': '#999999' };
+    const fonteMap = { 'ceao': 'CEAO/UFBA', 'receita_federal_cnpj': 'CNPJ/Receita Federal', 'terreirosdobrasil.com.br': 'Terreiros do Brasil', 'google': 'Google Places', 'google_places': 'Google Places', 'osm': 'OSM', 'sefaz': 'SEFAZ/Salvador', 'mapeando_axe_csv': 'Mapeando Axé', 'ceap': 'CEAP/Mapa do Axé', 'atlas_axe': 'Atlas do Axé (AM)', 'axes_unb': 'AXÉS/LHS-UnB (DF)' };
+    const fonteOrder = ['CEAO/UFBA', 'CNPJ/Receita Federal', 'Mapeando Axé', 'Google Places', 'OSM', 'SEFAZ/Salvador', 'CEAP/Mapa do Axé', 'Atlas do Axé (AM)', 'AXÉS/LHS-UnB (DF)', 'Terreiros do Brasil', 'Outro'];
+    const fonteColors = { 'CEAO/UFBA': '#0072B2', 'CNPJ/Receita Federal': '#D55E00', 'Mapeando Axé': '#8C564B', 'Google Places': '#E69F00', 'OSM': '#56B4E9', 'SEFAZ/Salvador': '#CC79A7', 'CEAP/Mapa do Axé': '#009E73', 'Atlas do Axé (AM)': '#00796B', 'AXÉS/LHS-UnB (DF)': '#5E60CE', 'Terreiros do Brasil': '#6F4E7C', 'Outro': '#999999' };
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let themeOverride = 'light';
