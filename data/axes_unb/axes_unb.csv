@@ -1,0 +1,9 @@
+entity_id,nome,uf,municipio,localidade,tradicao,nacao,linhagem,ano_fundacao,membros_declarados,publica_contato,tem_historia_fundacao,tem_projetos_sociais,categoria,lat,lon,geo_status
+axes_d1787a40db50,TUBNA (Tenda de Umbanda Boiadeiro Navizala) e Casa de Tiriri e Cacurucaia,DF,Brasília,Ceilândia,Umbanda e Quimbanda,Quimbanda Congo,Quimbanda Congo do povo Bantu,2025,33,True,True,True,terreiro,-15.8095,-48.1075,centroide_ceilandia
+axes_9282e3e80c63,TEMPLO ESPIRITA CABOCLO TUPINAMBA,DF,Brasília,Paranoá,UMBANDA,JUREMA,Tradição de Matriz Africana Brasileira - UMBANDA,2003,64,True,True,True,terreiro,-15.777,-47.777,centroide_paranoa
+axes_a1fb90b9b648,Ilê Asé Oxum Apará,DF,Brasília,Recanto das Emas,Candomblé,Ketu,,2005,120,True,True,True,terreiro,-15.905,-48.062,centroide_recanto_das_emas
+axes_078f0a6353a9,Casa espírita Sócio Cultural Maria Conga da Cachoeira,DF,Brasília,Núcleo Bandeirante,Umbanda,Ketu,não há ,2018,80,True,True,False,terreiro,-15.87,-47.97,centroide_nucleo_bandeirante
+axes_bff82a95255f,Nzo Kia Angurusemavulu,DF,Brasília,Brasília,Candomblé,Angola,Ndanji Bate Folha,1980,80,True,True,True,terreiro,-15.7939,-47.8828,centroide_brasilia
+axes_d18a7e1d1dfe,Ilé Àse Odé Fún Mi Láyó,DF,Brasília,Sobradinho II,Candomblé,Ketu,Ilé Àse Orìsà Dewy,1994,180,True,True,False,terreiro,-15.652,-47.79,centroide_sobradinho
+axes_794cd8ffd6c5,Atlas dos Terreiros,DF,Brasília,Brasília,-,-,-,2026,15,True,True,True,projeto/plataforma,-15.7579956,-47.8713539,nominatim_endereco
+axes_e9bbb1df7e98,Ilê Axé T'ojú Labá,DF,Brasília,Tororó,Candomblé,Ketu,,2006,40,True,True,True,terreiro,,,sem_coordenada

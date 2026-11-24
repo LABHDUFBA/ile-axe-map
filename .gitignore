@@ -27,3 +27,9 @@ data/cnpj_nacional/geocoding_v41/
 # caches de re-geocodificacao (contem queries, Place IDs e endereços; nunca públicos)
 data/geocode_cache_v43.json
 data/places_cache_v44.json
+
+# Fontes externas com dados pessoais (dirigentes, contatos, endereços completos): só local.
+data/atlas_axe/raw_payload.json
+data/atlas_axe/casas.json
+data/axes_unb/raw_communities.json
+data/axes_unb/geocode_cache.json

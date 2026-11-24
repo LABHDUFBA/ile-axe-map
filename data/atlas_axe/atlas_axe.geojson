@@ -1,0 +1,5822 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.0163,
+     -3.0272
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_0c9a91e91634",
+    "nome": "Abassa Ngola Nguzu Nengwa Taumbire (Abassa N'angola Nguzo Taumbirè)",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "Angola",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Lírio do Vale",
+    "geo_status": "Baixa (≈100 m)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.0272%2C-60.0163",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "entity_id": "atlas_1d3e01da5b1b",
+    "nome": "Associação umbandista ilê iwosan EMI Pai Ogum",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Associação / entidade",
+    "bairro": "",
+    "geo_status": "Sem coordenada",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Associa%C3%A7%C3%A3o%20umbandista%20il%C3%AA%20iwosan%20EMI%20Pai%20Ogum%2C%20Manaus%2C%20AM",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.00471102074,
+     -3.035180011315
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_ab0f9121ac61",
+    "nome": "Axé OmiLayê",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Colônia Santo Antônio",
+    "geo_status": "Aproximada pelo endereço",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.035180011315%2C-60.00471102074",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.958933,
+     -3.006634
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_be788db86ef7",
+    "nome": "Barracão Santa Bárbara",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade de Deus",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.006634%2C-59.958933",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "entity_id": "atlas_240171161781",
+    "nome": "Casa da herondina",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tarumã",
+    "geo_status": "Sem coordenada",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Casa%20da%20herondina%2C%20Manaus%2C%20AM",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.004323,
+     -3.115861
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_87bc76e3f8b0",
+    "nome": "Casa de Axé Mãe Nana da Cabocla Mariana",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "São Francisco",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.115861%2C-60.004323",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.950478,
+     -3.047442
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_c8bb8a8cd8b1",
+    "nome": "CASA DE ORIXÁS TUCO - Templo de Umbanda em Manaus",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Novo Aleixo",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.047442%2C-59.950478",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.05223,
+     -3.058765
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_e35e7304ba01",
+    "nome": "Casa de Santo OYÁ",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Redenção",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.058765%2C-60.05223",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.930611,
+     -3.067554
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_a9a5d03ffc5b",
+    "nome": "Casa de Umbanda Caboclo Flecheiro",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "São José Operário",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.067554%2C-59.930611",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.061887,
+     -3.105316
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_7d810185ce9f",
+    "nome": "Casa de Umbanda Iansã e Caboclo Rompe Mato",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Compensa",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.105316%2C-60.061887",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.970605,
+     -3.048287
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_f6a772870327",
+    "nome": "Casa de umbanda - Nossa Senhora Imaculada da Conceição - Cabocla Iracema",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Parque Dez de Novembro",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.048287%2C-59.970605",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.986494,
+     -3.034735
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_bc38c96f9d19",
+    "nome": "Casa de Umbanda Timbiras",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.034735%2C-59.986494",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.036423,
+     -3.082824
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_4c8653528928",
+    "nome": "CASA PENA BRANCA",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Alvorada",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.082824%2C-60.036423",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.023,
+     -3.132
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_5613aa2bac0d",
+    "nome": "Casa São José",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Loja de artigos religiosos (a confirmar)",
+    "bairro": "Centro",
+    "geo_status": "Baixa (≈100 m)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.132%2C-60.023",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.07783,
+     -2.988143
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_99f8bf6cd636",
+    "nome": "Centro de Doutrinação Umbandista do Amazonas",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tarumã Açu",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.988143%2C-60.07783",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.008337,
+     -3.007296
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_cf05cf31f7bf",
+    "nome": "Centro de umbanda cabocla brava",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Colônia Terra Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.007296%2C-60.008337",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.955121,
+     -3.046991
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_978cdb45ccab",
+    "nome": "Centro de umbanda cabocla Janaina",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.046991%2C-59.955121",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.0251,
+     -3.112156
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_f3e2b601787e",
+    "nome": "Centro de Umbanda Cabocla Jurema",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "São Geraldo",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.112156%2C-60.0251",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.988988,
+     -3.114105
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_b59de508d1ad",
+    "nome": "Centro de umbanda caboclo José Raimundo légua",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Japiim",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.114105%2C-59.988988",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "entity_id": "atlas_624a6a46a41f",
+    "nome": "centro de Umbanda caboclo Ulbirajara",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "N S De Fatima",
+    "geo_status": "Sem coordenada",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=centro%20de%20Umbanda%20caboclo%20Ulbirajara%2C%20Manaus%2C%20AM",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.978859,
+     -3.016188
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_baf277b1c423",
+    "nome": "Centro de Umbanda Caboclo Ventania",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.016188%2C-59.978859",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.980182,
+     -3.023797
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_bee35d88854e",
+    "nome": "Centro de Umbanda Casa de Cura Vó Maria Conga",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.023797%2C-59.980182",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.045514,
+     -3.013643
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_6569225bda84",
+    "nome": "Centro de Umbanda Casa Jurema",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tarumã",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.013643%2C-60.045514",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.002226,
+     -3.043008
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_00259a90da46",
+    "nome": "Centro de Umbanda do Caboclo Juremeiro",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Flores",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.043008%2C-60.002226",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.018,
+     -3.105
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_07531b77eaaf",
+    "nome": "Centro de umbanda e quimbanda ze pilintra da lapa",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "Umbanda e Quimbanda",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Vila da Prata",
+    "geo_status": "Baixa (≈100 m)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.105%2C-60.018",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.986774,
+     -3.030254
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_e1aa71ae6690",
+    "nome": "Centro de Umbanda Em Manaus - Dona Mariana",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.030254%2C-59.986774",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.045728,
+     -3.014097
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_45b316f967f1",
+    "nome": "Centro de Umbanda Filhos de Mariana",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tarumã",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.014097%2C-60.045728",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.036773,
+     -3.063929
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_58e5b455e0b8",
+    "nome": "Centro de Umbanda Flor de Jurema",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Alvorada",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.063929%2C-60.036773",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.009614,
+     -3.034839
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_4e1298fbb8d9",
+    "nome": "Centro de umbanda gira menina e Tata mulambo",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Colônia Santo Antônio",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.034839%2C-60.009614",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.037334,
+     -3.114759
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_80f0229d002a",
+    "nome": "Centro de Umbanda Iemanjá",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Santo Antônio",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.114759%2C-60.037334",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.964251,
+     -3.082109
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_81bb740ad489",
+    "nome": "CENTRO DE UMBANDA MÃE ILMA",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Coroado",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.082109%2C-59.964251",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.985749,
+     -2.979041
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_c11043e5b1eb",
+    "nome": "Centro de Umbanda Maria Mulambo & Zé Pilintra",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.979041%2C-59.985749",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.01,
+     -3.06
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_fe7d34b87b6c",
+    "nome": "Centro de Umbanda Maria Padilha do Cruzeiro",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Coroado",
+    "geo_status": "Baixa (≈100 m)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.06%2C-60.01",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.010926,
+     -3.007124
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_7dba460d2dba",
+    "nome": "Centro de umbanda marinheiro Fernando",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Colônia Terra Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.007124%2C-60.010926",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.050975,
+     -3.108979
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_19bab9653c2b",
+    "nome": "Centro de Umbanda Mestre Zé Pilintra",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Vila da Prata",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.108979%2C-60.050975",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.024577,
+     -2.973729
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_da8ce73cf440",
+    "nome": "Centro de Umbanda Mina Nagô São Jorge Guerreiro",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda e Mina",
+    "nacao": "Mina Nagô",
+    "linha_religiosa": "Umbanda e Mina",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tarumã",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.973729%2C-60.024577",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.054435,
+     -3.062104
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_845cf71ee4d3",
+    "nome": "CENTRO DE UMBANDA NEGO GERSON FEITICEIRO",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Planalto",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.062104%2C-60.054435",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.949181,
+     -3.073969
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_ff37eef85fdf",
+    "nome": "Centro de Umbanda Nossa Senhora da Conceição",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Zumbi dos Palmares",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.073969%2C-59.949181",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.948037,
+     -3.035595
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_a0517918a041",
+    "nome": "Centro de umbanda Nossa Senhora das Candeias",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nossa Senhora de Fátima",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.035595%2C-59.948037",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.983886,
+     -3.018184
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_2955875748e1",
+    "nome": "Centro de Umbanda Ogum",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.018184%2C-59.983886",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.046837,
+     -3.113175
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_47c05c70b4cc",
+    "nome": "Centro de umbanda Ogum Rompe Mata",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Santo Antônio",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.113175%2C-60.046837",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.932023,
+     -3.070757
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_a6a6bf4ea99a",
+    "nome": "Centro de Umbanda Pai Joaquim de Angola",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "Angola",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Gilberto Mestrinho",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.070757%2C-59.932023",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.966771,
+     -3.025079
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_3c567a98e2ea",
+    "nome": "Centro de Umbanda Rei das Pedreiras (CURP)",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.025079%2C-59.966771",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.919964,
+     -3.02339
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_13ba0b827bb7",
+    "nome": "Centro de Umbanda Tenda de São Jorge",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Jorge Teixeira",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.02339%2C-59.919964",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.989897,
+     -2.996379
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_316db7bb09cd",
+    "nome": "Centro de Umbanda Tereza das Almas",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Monte das Oliveiras",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.996379%2C-59.989897",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.972458,
+     -3.043997
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_eec1f852b04f",
+    "nome": "Centro de Umbanda Zé Pelintra - Filhos do Axé",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.043997%2C-59.972458",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.004923,
+     -3.023283
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_f77d210a1b07",
+    "nome": "Centro Espírita de Umbanda Pai Joaquim de Angola, Nossa Senhora da Conceição e Rei Sibamba",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "Angola",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Novo Israel",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.023283%2C-60.004923",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.050683,
+     -3.067123
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_f2dc3608d7dd",
+    "nome": "Centro Espírita Tenda do Caboclo Pena Branca",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Planalto",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.067123%2C-60.050683",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.957231,
+     -3.04833
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_3cb455cb514d",
+    "nome": "Centro Umbandista Rei de Oxóssi",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Novo Aleixo",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.04833%2C-59.957231",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.000992,
+     -3.113593
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_9d1102ca2586",
+    "nome": "Centro Umbandista Santa Luzia",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "São Francisco",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.113593%2C-60.000992",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.969622,
+     -3.049464
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_ccac1ab4e443",
+    "nome": "CEUMI - Centro Espírita Umbandista Mãe Ita",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Novo Aleixo",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.049464%2C-59.969622",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.0217,
+     -3.119
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_11dd7f0adcb7",
+    "nome": "Ilê Asé Aafiin Oba",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Praça 14 de Janeiro",
+    "geo_status": "Baixa (≈100 m)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.119%2C-60.0217",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.014392,
+     -3.142425
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_6101d18cc42d",
+    "nome": "Ilê Asé Abaça de Santa Luzia",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Educandos",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.142425%2C-60.014392",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.973367,
+     -3.017918
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_c69193a0199f",
+    "nome": "Ilé Axé Akologi Ire",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.017918%2C-59.973367",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.943548,
+     -3.092762
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_69e313dee6a2",
+    "nome": "ILÊ AXÉ ARAKÁ OJI BAYIN",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Armando Mendes",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.092762%2C-59.943548",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.076909,
+     -2.993327
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_3a8ac7a303b6",
+    "nome": "Ilê Axé Arawé Ajúnsún",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tarumã Açu",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.993327%2C-60.076909",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.940936,
+     -3.058456
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_9df2979db67a",
+    "nome": "Ile Àse Bàbá Omi Oba Orun",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tancredo Neves",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.058456%2C-59.940936",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.990248,
+     -2.987083
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_d0a7fef45957",
+    "nome": "ILÊ AXÉ BARÁ LONÃ",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Monte das Oliveiras",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.987083%2C-59.990248",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.015511,
+     -3.119784
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_1dac00d8d9dd",
+    "nome": "Ilê Axé de Dan",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Praça 14 de Janeiro",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.119784%2C-60.015511",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.0388,
+     -3.0964
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_a2bd8f655bb6",
+    "nome": "Ilê Ase FunFun Orun - Casa Branca",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Redenção",
+    "geo_status": "Baixa (≈100 m)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.0964%2C-60.0388",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.933478,
+     -3.007108
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_25e082c0e30b",
+    "nome": "Ilê Asé Iyá Omín Tauexê",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade de Deus",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.007108%2C-59.933478",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.925416,
+     -3.04589
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_94c908642d3a",
+    "nome": "Ilê Axé Izo Omin (Mãe Valkiria de Oya)",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Jorge Teixeira",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.04589%2C-59.925416",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.977524,
+     -2.994143
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_0a035bbd79d9",
+    "nome": "Ilé Axé Nan Oju Orum",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.994143%2C-59.977524",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.001803831664,
+     -3.126479295455
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_3af86d3b585e",
+    "nome": "Ilê Asé Obá Ajaosí",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Japiim",
+    "geo_status": "Aproximada pelo endereço",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.126479295455%2C-60.001803831664",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.939523,
+     -3.078314
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_f72d596de0ba",
+    "nome": "Ilê Axé Obá Ala Tun Zuê",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Zumbi dos Palmares",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.078314%2C-59.939523",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.991203,
+     -3.1094
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_7e10c991da32",
+    "nome": "Ylé asé obá amacú",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Petrópolis",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.1094%2C-59.991203",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.044404,
+     -3.057921
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_7fcd93dcb711",
+    "nome": "ILÊ AXÉ OBA BARU",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Redenção",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.057921%2C-60.044404",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.991926,
+     -3.022337
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_f695dbe60669",
+    "nome": "Ilê Asé Obá Ezô Orum",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.022337%2C-59.991926",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.041081,
+     -3.126224
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_efb4c309051a",
+    "nome": "Ilé Asé Obá Omí Orún",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "São Raimundo",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.126224%2C-60.041081",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.98307,
+     -2.980593
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_e6ebcd7d3ff8",
+    "nome": "Ilé Asé Oba Opô Aganju",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Novo Aleixo",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.980593%2C-59.98307",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.955382,
+     -3.04286
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_0fc4ec9d07c2",
+    "nome": "Ilê asé obá otá inã",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade Nova",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.04286%2C-59.955382",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.949552,
+     -3.024194
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_76466b34c114",
+    "nome": "ILE AŞE OBA OTITO",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.024194%2C-59.949552",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.999446012079,
+     -3.020488001881
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_04777804663a",
+    "nome": "Ilê Asé Odé Ofá Wurá",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Colônia Santo Antônio",
+    "geo_status": "Aproximada pelo endereço",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.020488001881%2C-59.999446012079",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.041705,
+     -3.12044
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_71ce3ef026d4",
+    "nome": "Ilê Axé Odô Iná",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "São Raimundo",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.12044%2C-60.041705",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.000753,
+     -3.070383
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_893ee80cb87e",
+    "nome": "Ilê Asé Ofarodé",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Parque Dez de Novembro",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.070383%2C-60.000753",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "entity_id": "atlas_d92a3e103f98",
+    "nome": "Ilê Asé Ogum Onirê",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Redenção",
+    "geo_status": "Sem coordenada",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Il%C3%AA%20As%C3%A9%20Ogum%20Onir%C3%AA%2C%20Manaus%2C%20AM",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.007487,
+     -3.028794
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_d0b62175d522",
+    "nome": "Ilê Axé Olodô Wurá",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Novo Israel",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.028794%2C-60.007487",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.941883,
+     -3.083444
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_c54762d31a48",
+    "nome": "Ilê Ase Oluaie Babaayonon",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Zumbi dos Palmares",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.083444%2C-59.941883",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.026449,
+     -3.114026
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_15304bf7d4d6",
+    "nome": "Ile asé omi ibu oke",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "São Geraldo",
+    "geo_status": "Aproximada pelo endereço",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.114026%2C-60.026449",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.013389,
+     -2.968079
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_2a19b06cfd55",
+    "nome": "Ilê Axé Omi Karê Igbô",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Lago Azul",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.968079%2C-60.013389",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.059042,
+     -3.058234
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_5e390f137ae6",
+    "nome": "ILÊ ASÉ OMIDEIIY",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade de Deus",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.058234%2C-60.059042",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.979094,
+     -3.008597
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_c13bfd34b728",
+    "nome": "Ilê Asé Omo Ajagunã",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.008597%2C-59.979094",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.058879,
+     -3.108919
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_7ec854421558",
+    "nome": "Ile Ase Omo Odé",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Compensa",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.108919%2C-60.058879",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.050380993658,
+     -2.985262006049
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_d06924b01184",
+    "nome": "Ilê Asé Ómò Odé Hein Erin",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tarumã",
+    "geo_status": "Aproximada pelo endereço",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.985262006049%2C-60.050380993658",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.050412,
+     -3.076145
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_7670f02c3440",
+    "nome": "Ilê Asé Omobinrin Bagan",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Alvorada",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.076145%2C-60.050412",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.982083,
+     -2.986713
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_5673087dd8b2",
+    "nome": "Ilé asé Opará Obaomi Tola",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Colônia Santo Antônio",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.986713%2C-59.982083",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.939315,
+     -3.048842
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_a8c548673339",
+    "nome": "Ilê Axé Opô Akueran",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.048842%2C-59.939315",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.966178,
+     -3.007088
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_8282c48001aa",
+    "nome": "ILÊ ASÉ OPÔ ELEYÈ OMOLADÉ",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.007088%2C-59.966178",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.043448,
+     -3.061806
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_173d7c1916fb",
+    "nome": "Ilê Asé Opó Obá Ajagunã",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.061806%2C-60.043448",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.044705411355,
+     -3.058402986676
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_dccd34c7061f",
+    "nome": "Ile ase opo ogodo",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Redenção",
+    "geo_status": "Aproximada pelo endereço",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.058402986676%2C-60.044705411355",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.958963,
+     -3.011621
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_d5ba4a3056af",
+    "nome": "Ilê Axé Opo Onin Guian",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade de Deus",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.011621%2C-59.958963",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.006794,
+     -3.033892
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_a2cd89c5a6ee",
+    "nome": "Ilê Asé Opô Onondoìyá",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Colônia Santo Antônio",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.033892%2C-60.006794",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.932133,
+     -3.015928
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_82048aa11af2",
+    "nome": "Ilê Axé Opô Oyá Onirá",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Jorge Teixeira",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.015928%2C-59.932133",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.045542,
+     -3.012838
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_56eb5fbfe797",
+    "nome": "Ilê Axé Oxoguian Koredê",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tarumã",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.012838%2C-60.045542",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.939533,
+     -3.096961
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_10209ac4eccd",
+    "nome": "Ilê Ase Oya Moba",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Armando Mendes",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.096961%2C-59.939533",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.077368,
+     -2.984364
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_f0b1555a5457",
+    "nome": "Ilê Axé Oyá Topé",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tarumã",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.984364%2C-60.077368",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.043324,
+     -2.990037
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_6a386877c8ac",
+    "nome": "Ile Ase Possun - Axé Pé de Serra Manaus",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tarumã",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.990037%2C-60.043324",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.995093,
+     -2.992977
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_639b7da9de03",
+    "nome": "Ilê Axé Reino das Almas",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Monte das Oliveiras",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.992977%2C-59.995093",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.013316,
+     -3.11739
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_d97b34f7694f",
+    "nome": "Ilê Axê Sakapata Aynon",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Praça 14 de Janeiro",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.11739%2C-60.013316",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.935757,
+     -3.007356
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_c20916567c51",
+    "nome": "Ilê Asé Sesu Toyan (Candomblé)",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.007356%2C-59.935757",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.952734,
+     -3.045247
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_26bd0fc56d16",
+    "nome": "Ylê Axé Ty Ajagunã",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.045247%2C-59.952734",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.02421,
+     -3.004877
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_8f148a4681a3",
+    "nome": "Ilê Asé ty Odé Ofá bayo",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Novo Israel",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.004877%2C-60.02421",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.95074,
+     -3.023661
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_f0fb36cf29db",
+    "nome": "Ilê Axé Xorokê Lonan - Axé Alto de Ogum",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade de Deus",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.023661%2C-59.95074",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.003603,
+     -3.111475
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_5db5b310427a",
+    "nome": "Ilê Asé Ya Mi Osun Layo",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "São Francisco",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.111475%2C-60.003603",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.002534,
+     -3.009505
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_07f81c62711c",
+    "nome": "Ilé Axé Yá Omim Ibu Kolé",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Colônia Terra Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.009505%2C-60.002534",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.93955,
+     -3.111289
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_ad0092f5ee1e",
+    "nome": "Ile Axe Ya Omin Oke",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Mauazinho",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.111289%2C-59.93955",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.005915,
+     -3.009249
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_5daa8d4b01e0",
+    "nome": "Ilê Axé Ya Ominibu",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Colônia Terra Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.009249%2C-60.005915",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.924885,
+     -3.07454
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_3663a088a23b",
+    "nome": "Ilê Asé Yalódê Omim Orun",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Jorge Teixeira",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.07454%2C-59.924885",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.93272,
+     -3.035756
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_5e7c0fa4b06e",
+    "nome": "ILÊ AXÉ YÁLÓÓDÊ OMIM ORUN",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Jorge Teixeira",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.035756%2C-59.93272",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.929556,
+     -3.023938
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_5e7c0fa4b06e",
+    "nome": "Ilê axé Yálóódê omim orun",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Jorge Teixeira",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.023938%2C-59.929556",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.927987018567,
+     -3.035438006295
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_f5116ff8a328",
+    "nome": "Ilê Yá Olomim Odayó",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Jorge Teixeira",
+    "geo_status": "Aproximada pelo endereço",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.035438006295%2C-59.927987018567",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.028217,
+     -2.974627
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_8cb6153e87bc",
+    "nome": "MALOCA DOS ORIXÁS",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tarumã",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.974627%2C-60.028217",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.003656,
+     -3.143112
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_6fcfe38a310e",
+    "nome": "Recanto de Preta Mina Ilê de Iansã (Instituto Preta Mina)",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Tambor de Mina",
+    "nacao": "",
+    "linha_religiosa": "Tambor de Mina",
+    "categoria": "Terreiro / templo",
+    "bairro": "Educandos",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.143112%2C-60.003656",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.038796,
+     -2.913544
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_5b3f46c2cfda",
+    "nome": "Recanto dos Orixás",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tarumã Açu",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.913544%2C-60.038796",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.981882991261,
+     -3.087334014982
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_b2f06ec11d98",
+    "nome": "Templo de cabocla Mariana & Toya Jarina",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Coroado",
+    "geo_status": "Aproximada pelo endereço",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.087334014982%2C-59.981882991261",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.921249,
+     -3.075896
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_7a572312ad04",
+    "nome": "Templo de Candomblé Ilê Asé Opò Dàngbálà",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Gilberto Mestrinho",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.075896%2C-59.921249",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.024282,
+     -3.112634
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_e5ea7bfcdf21",
+    "nome": "Templo de Candomblé Terreiro de Santa Bárbara Ilê Axé Opô Messán Orun",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "São Geraldo",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.112634%2C-60.024282",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.951673,
+     -3.066687
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_74efb472f93b",
+    "nome": "Templo de Umbanda IXÉ YBYRÁ",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "São José Operário",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.066687%2C-59.951673",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.926538,
+     -3.028525
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_85f6e4bf48f1",
+    "nome": "Templo de Umbanda Ogum Beira-Mar",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Jorge Teixeira",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.028525%2C-59.926538",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.984664,
+     -2.998179
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_d8b5676f31d8",
+    "nome": "Templo de Umbanda Raiz de Jurema",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.998179%2C-59.984664",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.04411,
+     -3.064346
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_99a08242cee8",
+    "nome": "Templo de Umbanda Universalista Rosa dos Ventos",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Alvorada",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.064346%2C-60.04411",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.98334,
+     -3.115982
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_a25ee7ba2191",
+    "nome": "Templo Lua Branca",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "São José Operário",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.115982%2C-59.98334",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.052488,
+     -3.101004
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_be6d0a1a92ab",
+    "nome": "Templo Umbanda e Quimbanda Exu Odara",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "Umbanda e Quimbanda",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Compensa",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.101004%2C-60.052488",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.977002,
+     -3.040818
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_bc63751c3b7e",
+    "nome": "Tenda de São Jorge",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.040818%2C-59.977002",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.990247,
+     -2.986972
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_4dc201465c51",
+    "nome": "Tenda de Umbanda Caminho da Fé",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Monte das Oliveiras",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.986972%2C-59.990247",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.943238,
+     -3.095145
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_5c201c1c31d0",
+    "nome": "Tenda de Umbanda São José",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Armando Mendes",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.095145%2C-59.943238",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.962417,
+     -3.014425
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_e23591eba536",
+    "nome": "Tenda Espírita Caboclo Arruda",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.014425%2C-59.962417",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.068647,
+     -3.068606
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_b05aa961cfc1",
+    "nome": "Tenda Espiritualista Caboclo Samambaia",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Planalto",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.068606%2C-60.068647",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.048,
+     -3.108
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_0854b3b88382",
+    "nome": "Tenda Pai Xangô Compensa",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Loja de artigos religiosos (a confirmar)",
+    "bairro": "Compensa",
+    "geo_status": "Baixa (≈100 m)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.108%2C-60.048",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.99244,
+     -3.113957
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_da8789f47371",
+    "nome": "Tenda Umbandista São Sebastião",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Petrópolis",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.113957%2C-59.99244",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.030082,
+     -3.105011
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_549f0a9d01b3",
+    "nome": "Terreiro de Candomblé (sem nome próprio no cadastro)",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "São Jorge",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.105011%2C-60.030082",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.004991982135,
+     -3.10836500633
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_b03d4ef42919",
+    "nome": "Terreiro de Mina jeje naho",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Tambor de Mina",
+    "nacao": "Jeje / Mina",
+    "linha_religiosa": "Tambor de Mina",
+    "categoria": "Terreiro / templo",
+    "bairro": "São Francisco",
+    "geo_status": "Aproximada pelo endereço",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.10836500633%2C-60.004991982135",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.983312,
+     -3.040724
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_56762b51bdb5",
+    "nome": "Terreiro de Mina - Kwê Mina Gêgê Nagô Vodum Boço Jara e Nochê Oxum",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Tambor de Mina",
+    "nacao": "Jeje / Mina",
+    "linha_religiosa": "Tambor de Mina",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.040724%2C-59.983312",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.05896,
+     -3.105684
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_fdc696882e15",
+    "nome": "Terreiro de Umbanda (sem nome próprio no cadastro)",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Compensa",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.105684%2C-60.05896",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.02671,
+     -3.107808
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_fdc696882e15",
+    "nome": "Terreiro de Umbanda (sem nome próprio no cadastro)",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "São Geraldo",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.107808%2C-60.02671",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.932989,
+     -3.069848
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_7c7088ef0814",
+    "nome": "Terreiro de Umbanda Cabocla Brava (Mãe Sinara de Nego Gerson)",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "São José Operário",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.069848%2C-59.932989",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.935574,
+     -3.075826
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_107fc4e3aec3",
+    "nome": "Terreiro de Umbanda Cabocla Jurema e Mestre Zé Pilintra",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Gilberto Mestrinho",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.075826%2C-59.935574",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.974341,
+     -3.080896
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_2dcc2c1d5859",
+    "nome": "Terreiro de Umbanda Cabocla Urandi",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Coroado",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.080896%2C-59.974341",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.947381,
+     -3.009863
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_698db8f7929b",
+    "nome": "Terreiro de Umbanda Caboclo Girassol",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Cidade de Deus",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.009863%2C-59.947381",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.917554,
+     -3.04707
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_f0770b966fb5",
+    "nome": "Terreiro de Umbanda Caboclo Sete Flechas (casa)",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Jorge Teixeira",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.04707%2C-59.917554",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.978516,
+     -3.018759
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_056a0e7926ff",
+    "nome": "Terreiro de Umbanda do Pai Hugo",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.018759%2C-59.978516",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.043014,
+     -3.072886
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_7c28034477f3",
+    "nome": "Terreiro de Umbanda Filhos do Sagrado",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Alvorada",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.072886%2C-60.043014",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.036992,
+     -3.084613
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_7545317455ea",
+    "nome": "Terreiro de Umbanda Zé Pelintra",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Dom Pedro",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.084613%2C-60.036992",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.031756,
+     -3.068555
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_a264ee932568",
+    "nome": "Terreiro do Murilo",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Alvorada",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.068555%2C-60.031756",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.011552,
+     -3.009099
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_ae4de24804d0",
+    "nome": "Terreiro do Pai Patrick - Casa de Oxalá",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Colônia Terra Nova",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.009099%2C-60.011552",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.999228,
+     -3.079213
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_6fdee03d6ead",
+    "nome": "Terreiro Eira de Mina Nagô",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Tambor de Mina",
+    "nacao": "Mina Nagô",
+    "linha_religiosa": "Tambor de Mina",
+    "categoria": "Terreiro / templo",
+    "bairro": "Parque Dez de Novembro",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.079213%2C-59.999228",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.019932,
+     -3.091324
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_a82fef5dfa47",
+    "nome": "Terreiro Eira de Mina Nagô Oyá",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Tambor de Mina",
+    "nacao": "Mina Nagô",
+    "linha_religiosa": "Tambor de Mina",
+    "categoria": "Terreiro / templo",
+    "bairro": "Parque Dez de Novembro",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.091324%2C-60.019932",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.962389,
+     -3.028532
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_09cd7e6e7f55",
+    "nome": "Terreiro Ilê Àsé Àfèfé Omi",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.028532%2C-59.962389",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.000105,
+     -3.102834
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_fbb48094c16c",
+    "nome": "Terreiro Pai Oxóssi",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Aleixo",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.102834%2C-60.000105",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.962009,
+     -3.026534
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_e23af52e4cfc",
+    "nome": "TUCABA - Tenda de Umbanda Cabocla Braba",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.026534%2C-59.962009",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.058574,
+     -3.075269
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_a3a816b561d0",
+    "nome": "Umbanda, Mina & Jurema Caboclo 7 Flechas",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda e Mina",
+    "nacao": "",
+    "linha_religiosa": "Umbanda e Mina",
+    "categoria": "Terreiro / templo",
+    "bairro": "Alvorada",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.075269%2C-60.058574",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.962445,
+     -3.020913
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_552015f12232",
+    "nome": "Xwê Ná Sín Fifá",
+    "municipio": "Manaus",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Tambor de Mina",
+    "nacao": "Jeje / Mina",
+    "linha_religiosa": "Tambor de Mina",
+    "categoria": "Terreiro / templo",
+    "bairro": "Nova Cidade",
+    "geo_status": "Alta",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.020913%2C-59.962445",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -57.065793,
+     -2.792719
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_99a4a4ffcdf5",
+    "nome": "Terreiro Mãe Iemanja",
+    "municipio": "Barreirinha",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Centro",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.792719%2C-57.065793",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.012158,
+     -4.38013
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_fc452b4b26dc",
+    "nome": "Casa de umbanda Pai joaquim de Angola",
+    "municipio": "Benjamin Constant",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "Angola",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Conjunto Alzenir Magalhães",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-4.38013%2C-70.012158",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.011932,
+     -4.380102
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_22242a404141",
+    "nome": "Templo de umbanda São Bartolomeu tango Antônio Légua",
+    "municipio": "Benjamin Constant",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Bom Jardim",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-4.380102%2C-70.011932",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.023974,
+     -4.378443
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_7c1374c92da5",
+    "nome": "Terreiro de Yemanja",
+    "municipio": "Benjamin Constant",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Coimbra",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-4.378443%2C-70.023974",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.164194,
+     -3.256268
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_c6158ed99851",
+    "nome": "Centro de Umbanda Caboclo Ubirajara Peito de Aço",
+    "municipio": "Iranduba",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.256268%2C-60.164194",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.162994,
+     -3.227341
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_a8a805d15097",
+    "nome": "Centro de Umbanda Mãe Mariana – Iranduba",
+    "municipio": "Iranduba",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.227341%2C-60.162994",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.162515,
+     -3.261444
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_f81a9b6a901b",
+    "nome": "ILÊ AXÉ OPÔ OPARÁ",
+    "municipio": "Iranduba",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.261444%2C-60.162515",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -58.430283,
+     -3.140403
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_e2efc885da75",
+    "nome": "Casa de Umbanda",
+    "municipio": "Itacoatiara",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Tiradentes",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.140403%2C-58.430283",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -58.430076,
+     -3.119978
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_b18078101ad7",
+    "nome": "Centro De Umbanda São Sebastião",
+    "municipio": "Itacoatiara",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "São Francisco",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.119978%2C-58.430076",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -58.425225,
+     -3.12362
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_adf08ad25a19",
+    "nome": "Ilê Asé Ajunsum Olutapà",
+    "municipio": "Itacoatiara",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Candomblé",
+    "nacao": "",
+    "linha_religiosa": "Candomblé",
+    "categoria": "Terreiro / templo",
+    "bairro": "Eduardo Braga II",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.12362%2C-58.425225",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -58.454748,
+     -3.143226
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_38f39817a394",
+    "nome": "Pai josé",
+    "municipio": "Itacoatiara",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Colônia",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.143226%2C-58.454748",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -57.694287,
+     -3.408322
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_aab69a2c7378",
+    "nome": "Centro de Umbanda Santa Bárbara",
+    "municipio": "Maués",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-3.408322%2C-57.694287",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60.377366,
+     -5.118913
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_2a2f4c99cb40",
+    "nome": "Terreiro de Umbanda São Jorge",
+    "municipio": "Novo Aripuanã",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Centro",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-5.118913%2C-60.377366",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.750766,
+     -2.652081
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_f4a3b3e93e6b",
+    "nome": "Centro Cultural e Terreiro São Sebastião",
+    "municipio": "Parintins",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Jacareacanga",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.652081%2C-56.750766",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.730441,
+     -2.66498
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_e63e4fea20d9",
+    "nome": "Centro de Umbanda Maria Mulambo",
+    "municipio": "Parintins",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Residencial",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.66498%2C-56.730441",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.730652,
+     -2.65226
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_6d67bbe5c7d2",
+    "nome": "Ponto de Cultura e Centro Cultural Ogum Beira-Mar e Cabocla Mariana",
+    "municipio": "Parintins",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.65226%2C-56.730652",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.724944,
+     -2.632825
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_1232bea2029f",
+    "nome": "Terreiro Caboclo Pena Verde",
+    "municipio": "Parintins",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Palmares",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.632825%2C-56.724944",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.746121,
+     -2.642109
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_9cc39ad60e26",
+    "nome": "Terreiro Cosme e Damião",
+    "municipio": "Parintins",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Itaúna I",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.642109%2C-56.746121",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.729543,
+     -2.648994
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_bebb1133c4ce",
+    "nome": "Terreiro de Umbanda Ogum Beira-Mar e Cabocla Mariana",
+    "municipio": "Parintins",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.648994%2C-56.729543",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.738534,
+     -2.652498
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_6589a218f9a7",
+    "nome": "Terreiro de Umbanda Seara da Cabocla Mariana",
+    "municipio": "Parintins",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.652498%2C-56.738534",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.739408,
+     -2.650828
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_58012808d550",
+    "nome": "Terreiro Mãe Sandra",
+    "municipio": "Parintins",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "Itaúna II",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-2.650828%2C-56.739408",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -67.083313,
+     -0.106572
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_a892e97f2939",
+    "nome": "Casa da Cabocla Erundina",
+    "municipio": "São Gabriel da Cachoeira",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Não especificado",
+    "nacao": "",
+    "linha_religiosa": "Não especificado",
+    "categoria": "Terreiro / templo",
+    "bairro": "",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-0.106572%2C-67.083313",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -69.932747,
+     -4.239305
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_a07b2a4faaf0",
+    "nome": "Casa de Umbanda Cabocla Herondina",
+    "municipio": "Tabatinga",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-4.239305%2C-69.932747",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -69.938813,
+     -4.228947
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_83d70128efc3",
+    "nome": "Terreiro da Cabocla Jurema",
+    "municipio": "Tabatinga",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Umbanda",
+    "nacao": "",
+    "linha_religiosa": "Umbanda",
+    "categoria": "Terreiro / templo",
+    "bairro": "Centro",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-4.228947%2C-69.938813",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -69.931645,
+     -4.216895
+    ]
+   },
+   "properties": {
+    "entity_id": "atlas_ca8812f0bce1",
+    "nome": "Casa da Cabocla Mariana",
+    "municipio": "Tabatinga",
+    "uf": "AM",
+    "fontes": [
+     "atlas_axe"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "Atlas do Axé (AM)",
+    "fonte_url": "https://atlasdoaxe.lovable.app/",
+    "fonte_atualizado_em": "2026-11-24T21:21:18.587Z",
+    "tradicao": "Tambor de Mina",
+    "nacao": "",
+    "linha_religiosa": "Tambor de Mina",
+    "categoria": "Terreiro / templo",
+    "bairro": "Santa Rosa",
+    "geo_status": "Alta (ponto do Google Maps)",
+    "coord_origin": "atlas_axe",
+    "situacao_fonte": "A verificar",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=-4.216895%2C-69.931645",
+    "versao": "v5_staging"
+   }
+  }
+ ]
+}

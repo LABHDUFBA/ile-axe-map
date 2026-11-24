@@ -1,0 +1,271 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -48.1075,
+     -15.8095
+    ]
+   },
+   "properties": {
+    "entity_id": "axes_d1787a40db50",
+    "nome": "TUBNA (Tenda de Umbanda Boiadeiro Navizala) e Casa de Tiriri e Cacurucaia",
+    "municipio": "Brasília",
+    "uf": "DF",
+    "fontes": [
+     "axes_unb"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "AXÉS / LHS-UnB (DF)",
+    "fonte_url": "https://lhs.unb.br/axes-social/communities",
+    "tradicao": "Umbanda e Quimbanda",
+    "nacao": "Quimbanda Congo",
+    "linha_religiosa": "Quimbanda Congo do povo Bantu",
+    "categoria": "terreiro",
+    "ano_fundacao": 2025,
+    "membros_declarados": 33,
+    "localidade": "Ceilândia",
+    "geo_status": "centroide_ceilandia",
+    "coord_origin": "axes_unb",
+    "plataforma_id": "cmsenlaw4000ihna6icv60yr8",
+    "criado_em": "2026-08-04T12:47:47.044Z",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -47.777,
+     -15.777
+    ]
+   },
+   "properties": {
+    "entity_id": "axes_9282e3e80c63",
+    "nome": "TEMPLO ESPIRITA CABOCLO TUPINAMBA",
+    "municipio": "Brasília",
+    "uf": "DF",
+    "fontes": [
+     "axes_unb"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "AXÉS / LHS-UnB (DF)",
+    "fonte_url": "https://lhs.unb.br/axes-social/communities",
+    "tradicao": "UMBANDA",
+    "nacao": "JUREMA",
+    "linha_religiosa": "Tradição de Matriz Africana Brasileira - UMBANDA",
+    "categoria": "terreiro",
+    "ano_fundacao": 2003,
+    "membros_declarados": 64,
+    "localidade": "Paranoá",
+    "geo_status": "centroide_paranoa",
+    "coord_origin": "axes_unb",
+    "plataforma_id": "cmscc2yta000ahna6wxk8imc3",
+    "criado_em": "2026-08-02T21:50:03.454Z",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -48.062,
+     -15.905
+    ]
+   },
+   "properties": {
+    "entity_id": "axes_a1fb90b9b648",
+    "nome": "Ilê Asé Oxum Apará",
+    "municipio": "Brasília",
+    "uf": "DF",
+    "fontes": [
+     "axes_unb"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "AXÉS / LHS-UnB (DF)",
+    "fonte_url": "https://lhs.unb.br/axes-social/communities",
+    "tradicao": "Candomblé",
+    "nacao": "Ketu",
+    "linha_religiosa": null,
+    "categoria": "terreiro",
+    "ano_fundacao": 2005,
+    "membros_declarados": 120,
+    "localidade": "Recanto das Emas",
+    "geo_status": "centroide_recanto_das_emas",
+    "coord_origin": "axes_unb",
+    "plataforma_id": "cmsaizfqa0005hna6lfgmib7h",
+    "criado_em": "2026-08-01T15:27:43.714Z",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -47.97,
+     -15.87
+    ]
+   },
+   "properties": {
+    "entity_id": "axes_078f0a6353a9",
+    "nome": "Casa espírita Sócio Cultural Maria Conga da Cachoeira",
+    "municipio": "Brasília",
+    "uf": "DF",
+    "fontes": [
+     "axes_unb"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "AXÉS / LHS-UnB (DF)",
+    "fonte_url": "https://lhs.unb.br/axes-social/communities",
+    "tradicao": "Umbanda",
+    "nacao": "Ketu",
+    "linha_religiosa": "não há ",
+    "categoria": "terreiro",
+    "ano_fundacao": 2018,
+    "membros_declarados": 80,
+    "localidade": "Núcleo Bandeirante",
+    "geo_status": "centroide_nucleo_bandeirante",
+    "coord_origin": "axes_unb",
+    "plataforma_id": "cmsadvpvz0003hna6e44b9cjt",
+    "criado_em": "2026-08-01T13:04:52.175Z",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -47.8828,
+     -15.7939
+    ]
+   },
+   "properties": {
+    "entity_id": "axes_bff82a95255f",
+    "nome": "Nzo Kia Angurusemavulu",
+    "municipio": "Brasília",
+    "uf": "DF",
+    "fontes": [
+     "axes_unb"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "AXÉS / LHS-UnB (DF)",
+    "fonte_url": "https://lhs.unb.br/axes-social/communities",
+    "tradicao": "Candomblé",
+    "nacao": "Angola",
+    "linha_religiosa": "Ndanji Bate Folha",
+    "categoria": "terreiro",
+    "ano_fundacao": 1980,
+    "membros_declarados": 80,
+    "localidade": "Brasília",
+    "geo_status": "centroide_brasilia",
+    "coord_origin": "axes_unb",
+    "plataforma_id": "cms6t5iry0001hna6osb6ltn9",
+    "criado_em": "2026-07-30T01:01:19.055Z",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -47.79,
+     -15.652
+    ]
+   },
+   "properties": {
+    "entity_id": "axes_d18a7e1d1dfe",
+    "nome": "Ilé Àse Odé Fún Mi Láyó",
+    "municipio": "Brasília",
+    "uf": "DF",
+    "fontes": [
+     "axes_unb"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "AXÉS / LHS-UnB (DF)",
+    "fonte_url": "https://lhs.unb.br/axes-social/communities",
+    "tradicao": "Candomblé",
+    "nacao": "Ketu",
+    "linha_religiosa": "Ilé Àse Orìsà Dewy",
+    "categoria": "terreiro",
+    "ano_fundacao": 1994,
+    "membros_declarados": 180,
+    "localidade": "Sobradinho II",
+    "geo_status": "centroide_sobradinho",
+    "coord_origin": "axes_unb",
+    "plataforma_id": "cms58vobe0000k6a60qelhs49",
+    "criado_em": "2026-07-28T22:46:01.178Z",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -47.8713539,
+     -15.7579956
+    ]
+   },
+   "properties": {
+    "entity_id": "axes_794cd8ffd6c5",
+    "nome": "Atlas dos Terreiros",
+    "municipio": "Brasília",
+    "uf": "DF",
+    "fontes": [
+     "axes_unb"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "AXÉS / LHS-UnB (DF)",
+    "fonte_url": "https://lhs.unb.br/axes-social/communities",
+    "tradicao": "-",
+    "nacao": "-",
+    "linha_religiosa": "-",
+    "categoria": "projeto/plataforma",
+    "ano_fundacao": 2026,
+    "membros_declarados": 15,
+    "localidade": "Brasília",
+    "geo_status": "nominatim_endereco",
+    "coord_origin": "axes_unb",
+    "plataforma_id": "cms0s5yer000370a6nes5plph",
+    "criado_em": "2026-07-25T19:47:02.643Z",
+    "versao": "v5_staging"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "entity_id": "axes_e9bbb1df7e98",
+    "nome": "Ilê Axé T'ojú Labá",
+    "municipio": "Brasília",
+    "uf": "DF",
+    "fontes": [
+     "axes_unb"
+    ],
+    "num_fontes": 1,
+    "fonte_label": "AXÉS / LHS-UnB (DF)",
+    "fonte_url": "https://lhs.unb.br/axes-social/communities",
+    "tradicao": "Candomblé",
+    "nacao": "Ketu",
+    "linha_religiosa": null,
+    "categoria": "terreiro",
+    "ano_fundacao": 2006,
+    "membros_declarados": 40,
+    "localidade": "Tororó",
+    "geo_status": "sem_coordenada",
+    "coord_origin": "axes_unb",
+    "plataforma_id": "cmpyna5ou0005hj7ehs9ejn40",
+    "criado_em": "2026-06-03T22:35:23.598Z",
+    "versao": "v5_staging"
+   }
+  }
+ ]
+}

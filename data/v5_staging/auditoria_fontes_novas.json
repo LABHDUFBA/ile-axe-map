@@ -1,0 +1,76 @@
+{
+ "base": {
+  "versao": "v4.8",
+  "n": 8036
+ },
+ "fontes": {
+  "atlas_axe": {
+   "registros": 177,
+   "ufs": [
+    "AM"
+   ],
+   "municipios": {
+    "Manaus": 152,
+    "Parintins": 8,
+    "Itacoatiara": 4,
+    "Benjamin Constant": 3,
+    "Iranduba": 3,
+    "Tabatinga": 3,
+    "Barreirinha": 1,
+    "Maués": 1,
+    "Novo Aripuanã": 1,
+    "São Gabriel da Cachoeira": 1
+   },
+   "com_coordenada": 173,
+   "casados_com_base": 2,
+   "novos": 175,
+   "match_por_uf": {
+    "base": 8
+   },
+   "detalhe_casados": [
+    {
+     "nome": "ILÊ AXÉ BARÁ LONÃ",
+     "municipio": "Manaus",
+     "lat": -2.987083,
+     "lon": -59.990248,
+     "geo_status": "Alta (ponto do Google Maps)",
+     "match": {
+      "entity_id": "e_35f6a2858afe_AM",
+      "nome": "ILÊ AXÉ BARÁ LONÃ",
+      "sim": 1.0,
+      "dist_m": 15078
+     }
+    },
+    {
+     "nome": "Ilê Axé de Dan",
+     "municipio": "Manaus",
+     "lat": -3.119784,
+     "lon": -60.015511,
+     "geo_status": "Alta (ponto do Google Maps)",
+     "match": {
+      "entity_id": "e_434f6db62202_AM",
+      "nome": "Ilê Axé de Dan",
+      "sim": 1.0,
+      "dist_m": 692
+     }
+    }
+   ]
+  },
+  "axes_unb": {
+   "registros": 8,
+   "ufs": [
+    "DF"
+   ],
+   "municipios": {
+    "Brasília": 8
+   },
+   "com_coordenada": 7,
+   "casados_com_base": 0,
+   "novos": 8,
+   "match_por_uf": {
+    "base": 7
+   },
+   "detalhe_casados": []
+  }
+ }
+}
