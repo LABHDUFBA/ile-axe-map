@@ -2,11 +2,14 @@
 
 ## Ilê Axé Map — Terreiros de Candomblé e espaços religiosos afro-brasileiros da Bahia
 
-**Versão do conjunto de dados:** 2.1<br>
-**Data de extração e integração:** 25 de julho de 2026<br>
+**Versão do conjunto de dados:** 2.1 (texto-base deste arquivo)<br>
+**Versão publicada e atualizada:** 4.8 — ver <https://labhdufba.github.io/ile-axe-map/metodologia.html><br>
+**Data de extração e integração:** 25 de julho de 2026; fontes adicionais incorporadas até 24 de novembro de 2026<br>
 **Responsabilidade:** Leonardo Fernandes Nascimento — Laboratório de Humanidades Digitais da Universidade Federal da Bahia (LABHD/UFBA)<br>
 **Repositório:** <https://github.com/LABHDUFBA/ile-axe-map><br>
 **Mapa:** <https://labhdufba.github.io/ile-axe-map/>
+
+> **Nota de versão.** Este arquivo conserva o texto-base da versão 2.1, de recorte baiano e quatro fontes. A versão publicada e efetivamente atualizada é `metodologia.html` (conjunto de dados v4.8, escopo nacional). Para que a proveniência não dependa de metadados dispersos, as fontes incorporadas nas versões 3 e 4 estão documentadas nas Seções 3.5 a 3.10, com suas datas de coleta e limites, e a lista de referências da Seção 13 foi ampliada para incluir todos os sites consultados.
 
 > **Nota de leitura.** O Ilê Axé Map não constitui um censo, um cadastro oficial nem um inventário exaustivo das comunidades religiosas afro-brasileiras da Bahia. Trata-se de uma infraestrutura cartográfica de pesquisa que integra registros oriundos de fontes públicas heterogêneas. Cada ponto representa um **registro consolidado**, com diferentes graus de completude e validação — não a certificação definitiva da existência, da identidade religiosa ou da situação atual de uma comunidade.
 
@@ -123,6 +126,32 @@ A quarta fonte é um mapa cartográfico da **Secretaria Municipal da Reparação
 O documento original apresenta informação cartográfica em sistema UTM, fuso 24S, referida ao SIRGAS 2000. Essas coordenadas não foram extraídas para a versão atual. Em consequência, os registros SEMUR participam da base consolidada e do processo de deduplicação nominal, mas não aparecem como pontos no mapa interativo. Após a comparação com as demais fontes, **234 registros SEMUR sem coordenadas** permanecem na base v2.1.
 
 A diferença entre contagens apresentadas em documentos derivados e a lista OCR deve ser tratada como questão de proveniência, não resolvida por simples inferência. A versão atual adota como referência operacional os 635 registros efetivamente estruturados no arquivo de origem preservado no repositório.
+
+### 3.5. CNPJ/Receita Federal
+
+Os registros cadastrais do **CNPJ** (Receita Federal do Brasil, dados abertos: <https://dados.gov.br/dados/conjuntos-dados/cadastro-nacional-da-pessoa-juridica---cnpj>) foram triados por natureza societária associada a terreiros e comunidades afro-brasileiras — razão social ou nome fantasia contendo expressões como *terreiro*, *ilê axé*, *umbanda*, *candomblé*, *quimbanda*, *tenda*, *nzo*, *abassá* —, com exigência de situação cadastral ativa. A localização foi obtida por geocodificação dos endereços declarados (Nominatim e, nas versões seguintes, Places API com critérios conservadores), com registro explícito da classe de precisão. Apenas retornos de alta precisão integram a camada publicada; centróides de CEP, de rua ou de pontos vizinhos permanecem em validação. O arquivo público não expõe CNPJ, endereço completo, CEP, telefone ou e-mail. A fonte introduz viés específico: comunidades formalizadas juridicamente têm mais chance de aparecer, e o endereço fiscal pode divergir do local de culto.
+
+### 3.6. Mapeando Axé
+
+Levantamento colaborativo de alcance nacional (<https://www.mapeandoaxe.org.br/>), maior volume de ocorrências do conjunto. Aporta nome, localização e, em parte dos casos, tradição e nação declaradas; na v4.8, o campo de nação e linha dessa fonte foi recomposto a partir do registro original, sem inferência. Como base de contribuição voluntária, está sujeita a variação de critério e atualidade entre contribuidores.
+
+### 3.7. CEAP — Mapa do Axé
+
+Mapa colaborativo nacional mantido pelo CEAP — Centro de Apoio às Populações Afro-descendentes (<https://mapadoaxe.ceapoficial.org.br/>). A contribuição de **286 ocorrências** foi incorporada com proveniência preservada, proveniente de cadastro autodeclarado em plataforma aberta.
+
+### 3.8. AxéCloud — avaliado e não incorporado
+
+O **AxéCloud** (<https://axecloud.com.br/terreiros>) mantém diretório com cerca de 14 mil perfis públicos. A avaliação de proveniência de novembro de 2026 concluiu que se trata de **diretório comercial derivado de plataforma**, não de cadastro comunitário: coordenadas majoritariamente oriundas de `google_maps_url`, fotos em diretório de conteúdo coletado e totalidade da amostra auditada com `verificada: false`. Foi **deliberadamente não incorporado**: aumentaria o volume sem acrescentar evidência independente.
+
+### 3.9. Atlas do Axé — Amazonas (incorporado em staging, novembro de 2026)
+
+O **Atlas do Axé** (<https://atlasdoaxe.lovable.app/>) reúne **177 registros em 10 municípios do Amazonas**, 152 deles em Manaus. Coleta em 24 de novembro de 2026 a partir da função pública que serve os dados da aplicação, com decodificação do formato de serialização e script versionado (`scripts/ingest_atlas_axe.py`). Composição: 174 terreiros ou templos, 2 lojas de artigos religiosos (a confirmar) e 1 associação. Por decisão editorial, **estabelecimentos comerciais não integram o mapa**: as duas lojas foram excluídas da camada normalizada, restando **175 registros, 171 com coordenada**; a associação foi mantida. Limites: 100% dos registros com `situacao = "A verificar"`, precisão de coordenada majoritariamente "ponto do Google Maps" e ausência de licença declarada. Na auditoria contra a v4.8, **173 dos 175 registros são novos**.
+
+### 3.10. AXÉS — LHS/UnB, Distrito Federal (incorporado em staging, novembro de 2026)
+
+A plataforma **AXÉS**, do Laboratório de Habilidades Sociais da UnB (<https://lhs.unb.br/axes-social>), mantém cadastro **autodeclarado** de comunidades. Em 24 de novembro de 2026 o conjunto público continha **8 comunidades no Distrito Federal**, com fichas densas: ano de fundação, nação e linhagem, história de fundação (8 de 8), projetos sociais (6 de 8) e número declarado de membros. O payload não traz coordenadas; a localização foi obtida por geocodificação (Nominatim) com registro do nível de precisão — 1 em nível de endereço, 6 em centroide de região administrativa e 1 sem coordenada —, de modo que esses pontos **não devem ser publicados como localização exata**. Telefones, e-mails, endereços completos e nomes de dirigentes, embora publicados pela fonte, não são migrados. Um registro é a própria plataforma e é classificado como `projeto/plataforma`.
+
+> **Estatuto das incorporações 3.9 e 3.10.** Os registros estão em **staging** (`data/v5_staging/`), não na camada publicada. O conjunto preparado soma **8.217 entidades** (8.036 da v4.8 + 173 do Amazonas + 8 do Distrito Federal). A publicação depende da integração à taxonomia de três níveis e da revisão de duplicatas internas.
 
 ---
 
@@ -370,12 +399,21 @@ Ao utilizar registros específicos, recomenda-se citar também a fonte de origem
 ## 13. Referências e fontes
 
 - **Centro de Estudos Afro-Orientais da Universidade Federal da Bahia.** *Mapeamento dos Terreiros de Salvador*. Disponível em: <https://terreiros.ceao.ufba.br/>.
+- **Receita Federal do Brasil.** *Cadastro Nacional da Pessoa Jurídica (CNPJ) — dados abertos*. Disponível em: <https://dados.gov.br/dados/conjuntos-dados/cadastro-nacional-da-pessoa-juridica---cnpj>.
+- **Mapeando Axé.** Levantamento colaborativo nacional de terreiros. Disponível em: <https://www.mapeandoaxe.org.br/>.
+- **CEAP — Centro de Apoio às Populações Afro-descendentes.** *Mapa do Axé*. Disponível em: <https://mapadoaxe.ceapoficial.org.br/>.
+- **AxéCloud.** *Diretório de terreiros* — avaliado e não incorporado (ver Seção 3.8). Disponível em: <https://axecloud.com.br/terreiros>.
+- **Atlas do Axé.** *Terreiros e templos do Amazonas* — incorporado em staging (ver Seção 3.9). Disponível em: <https://atlasdoaxe.lovable.app/>.
+- **Laboratório de Habilidades Sociais da Universidade de Brasília.** *AXÉS — comunidades* — incorporado em staging (ver Seção 3.10). Disponível em: <https://lhs.unb.br/axes-social>.
 - **OpenStreetMap contributors.** *OpenStreetMap*. Disponível em: <https://www.openstreetmap.org/>.
 - **Overpass API.** Interface de consulta ao OpenStreetMap. Disponível em: <https://overpass-api.de/>.
-- **Prefeitura Municipal de Salvador — Secretaria Municipal da Reparação.** Mapa cartográfico de terreiros de Salvador, 2020. Documento distribuído pela infraestrutura geográfica da SEFAZ/Salvador.
+- **Nominatim.** Serviço de geocodificação do OpenStreetMap, utilizado na localização de registros do CNPJ e do AXÉS/LHS-UnB. Disponível em: <https://nominatim.openstreetmap.org/>.
+- **Prefeitura Municipal de Salvador — Secretaria Municipal da Reparação.** Mapa cartográfico de terreiros de Salvador, 2020. Documento distribuído pela infraestrutura geográfica da SEFAZ/Salvador. Disponível em: <https://www.sefaz.salvador.ba.gov.br/geosalvador>.
 - **Google.** *Google Places*. Fonte de registros de lugares consultada no processo de coleta.
 - **Laboratório de Humanidades Digitais da UFBA.** Repositório do projeto. Disponível em: <https://github.com/LABHDUFBA/ile-axe-map>.
 
 ---
 
 *Documento revisto a partir dos arquivos públicos da versão 1.3, commit `be63bf88046276d10ade2e27b220550de8288182`, auditado em 25 de julho de 2026.*
+
+*Seções 3.5 a 3.10 e lista de referências atualizadas em 24 de novembro de 2026, com o registro das fontes incorporadas ao conjunto em staging (v5).*
