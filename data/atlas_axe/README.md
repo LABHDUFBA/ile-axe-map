@@ -29,6 +29,16 @@ Distribuições:
 - precisão declarada: alta (ponto do Google Maps) 157 · aproximada pelo endereço 9 · baixa (≈100 m) 7 · sem coordenada 4
 - `situacao`: "A verificar" em **100%** dos registros — a própria fonte declara que os dados estão em verificação junto às casas.
 
+## Regra de inclusão (decisão de 24/11/2026)
+O mapa é de **casas de axé**, não de comércio religioso. Ficam fora da camada normalizada
+as categorias de loja (`EXCLUIR_CATEGORIAS` em `scripts/ingest_atlas_axe.py`):
+- *Casa São José* — loja de artigos religiosos (a confirmar)
+- *Tenda Pai Xangô Compensa* — loja de artigos religiosos (a confirmar)
+
+Os dois registros continuam no payload bruto (recuperáveis) e a exclusão é reversível por
+parâmetro. Resultado: **175 registros na camada** (171 com coordenada), dos quais 1 é
+"Associação / entidade" — mantido, pendente de decisão.
+
 ## Proveniência e limites (leitura crítica)
 1. **Origem declarada:** "planilhas do projeto", atualizadas manualmente. Não há indicação
    pública de quem mantém a planilha, metodologia de coleta ou consentimento por casa.
@@ -46,9 +56,10 @@ Distribuições:
 
 ## Situação frente à base v4.8
 - Base v4.8 tem **8 registros no AM** (5 CNPJ + 3 CEAP, vários com coordenada de município repetida).
-- Auditoria conservadora (`scripts/audit_new_sources_v5.py`): **175 dos 177 são novos**;
+- Auditoria conservadora (`scripts/audit_new_sources_v5.py`): **173 dos 175 são novos**;
   2 casam com a base (ILÊ AXÉ BARÁ LONÃ; Ilê Axé de Dan).
-- Impacto: o AM passa de 8 para ~183 registros — a maior lacuna regional da base atual.
+- Impacto: o AM passa de 8 para ~181 registros — a maior lacuna regional da base atual.
+- Staging resultante: 8.036 + 173 (AM) + 8 (DF) = **8.217**.
 
 ## Reproduzir
 ```bash

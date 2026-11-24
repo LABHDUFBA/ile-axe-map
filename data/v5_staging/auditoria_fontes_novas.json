@@ -5,12 +5,12 @@
  },
  "fontes": {
   "atlas_axe": {
-   "registros": 177,
+   "registros": 175,
    "ufs": [
     "AM"
    ],
    "municipios": {
-    "Manaus": 152,
+    "Manaus": 150,
     "Parintins": 8,
     "Itacoatiara": 4,
     "Benjamin Constant": 3,
@@ -21,9 +21,9 @@
     "Novo Aripuanã": 1,
     "São Gabriel da Cachoeira": 1
    },
-   "com_coordenada": 173,
+   "com_coordenada": 171,
    "casados_com_base": 2,
-   "novos": 175,
+   "novos": 173,
    "match_por_uf": {
     "base": 8
    },

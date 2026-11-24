@@ -28,6 +28,10 @@ SERVER_FN = "/_serverFn/1465697dfd8c8cb40d565648cbc66d2d3a8c4e398eb8d504d9e573ab
 FONTE_LABEL = "Atlas do Axé (AM)"
 FONTE_URL = "https://atlasdoaxe.lovable.app/"
 
+# Categorias excluídas da camada normalizada (decisão de 24/11/2026: o mapa é de casas de axé,
+# não de comércio religioso). Os registros seguem no payload bruto, recuperáveis.
+EXCLUIR_CATEGORIAS = ("loja de artigos",)
+
 
 def fetch_payload():
     req = urllib.request.Request(
@@ -106,7 +110,12 @@ def main():
     )
 
     feats = []
+    excluidos = []
     for c in casas:
+        cat = (c.get("categoria") or "").lower()
+        if any(x in cat for x in EXCLUIR_CATEGORIAS):
+            excluidos.append({"nome": c.get("nome"), "categoria": c.get("categoria")})
+            continue
         lat, lng = c.get("lat"), c.get("lng")
         tem_coord = bool(lat) and bool(lng)
         props = {
@@ -144,7 +153,10 @@ def main():
 
     n = len(casas)
     ncoord = sum(1 for f in feats if f["geometry"])
-    print(f"Atlas do Axé: {n} casas | {ncoord} com coordenada | atualizadoEm={atualizado}")
+    print(f"Atlas do Axé: {n} registros na fonte | {len(feats)} na camada "
+          f"({ncoord} com coordenada) | {len(excluidos)} excluídos por categoria")
+    for e in excluidos:
+        print(f"  excluído: {e['nome']} — {e['categoria']}")
     print(f"UF: {sorted({c.get('uf') for c in casas})}")
 
 
