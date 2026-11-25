@@ -388,6 +388,16 @@ Não se recomenda utilizá-lo, sem validação adicional, para:
 - realizar visitas, contatos ou intervenções sem mediação ética;
 - redistribuir dados pessoais ou coordenadas fora da finalidade de pesquisa.
 
+### Equipe do projeto
+
+**Coordenação:** Leonardo Nascimento (LABHD/UFBA).
+
+**Pesquisadores:** Eric Brasil · Luciana Duccini · Ricardo Andrade · Rosana Moore.
+
+**Estudantes:** Caroline Barros · Daniel Sena · Lidia Belas · Taíse Cruz.
+
+Pesquisadores e estudantes estão em ordem alfabética. A coordenação responde pela concepção, curadoria e manutenção do conjunto; contribuições de correção e de fichas enviadas pelas comunidades são incorporadas pela equipe.
+
 ### Citação sugerida
 
 > NASCIMENTO, Leonardo Fernandes; LABORATÓRIO DE HUMANIDADES DIGITAIS DA UFBA. **Ilê Axé Map: terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia**. Versão 5.0. Salvador: Universidade Federal da Bahia, 2026. Disponível em: <https://labhdufba.github.io/ile-axe-map/>. Acesso em: dia mês ano.
