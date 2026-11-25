@@ -110,7 +110,7 @@ ferramentas históricas de curadoria e permanecem no repositório como registro 
 - **Pesquisadores:** Eric Brasil · Luciana Duccini · Ricardo Andrade · Rosana Moore
 - **Estudantes:** Caroline Barros · Daniel Sena · Lidia Belas · Taíse Cruz
 - **Design gráfico:** Ícaro Bernardes
-- **Apoio e autoria:** Darlan Gomes
+- **Apoio e autoria:** Darlan Gomes ([@abacostecnolgia](https://www.instagram.com/abacostecnolgia/)) · Ábaco
 
 ## Citação
 
