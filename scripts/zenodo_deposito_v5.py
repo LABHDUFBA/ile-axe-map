@@ -103,20 +103,48 @@ def main():
             sys.exit(f"resposta sem id: {r}")
         print("draft criado:", rid)
 
+    def retry(method, path, **kw):
+        """Repete em 5xx: o Zenodo devolve 500 transitório com alguma frequência."""
+        last = (None, None)
+        for tent in range(4):
+            st, r = call(method, path, tok, **kw)
+            if st < 500:
+                return st, r
+            last = (st, r)
+            time.sleep(2 + 2 * tent)
+        return last
+
+    st, listing = call("GET", f"/records/{rid}/draft/files", tok)
+    existentes = {}
+    if st == 200 and isinstance(listing, dict):
+        existentes = {e.get("key"): e for e in listing.get("entries", [])}
+
     for p, key in ARQUIVOS:
-        st, r = call("POST", f"/records/{rid}/draft/files", tok, data=[{"key": key}])
-        if st not in (200, 201):
-            sys.exit(f"falha ao anunciar {key}: {st} {r}")
+        atual = existentes.get(key)
+        if atual and atual.get("status") == "completed":
+            print("  já estava no draft:", key)
+            continue
+        if not atual:
+            st, r = retry("POST", f"/records/{rid}/draft/files", data=[{"key": key}])
+            if st not in (200, 201):
+                sys.exit(f"falha ao anunciar {key}: {st} {r}")
         with open(p, "rb") as fh:
-            st, r = call("PUT", f"/records/{rid}/draft/files/{key}/content", tok,
-                         raw=fh.read(), content_type="application/octet-stream")
+            st, r = retry("PUT", f"/records/{rid}/draft/files/{key}/content", raw=fh.read(),
+                          content_type="application/octet-stream")
         if st not in (200, 201):
             sys.exit(f"falha no upload de {key}: {st} {r}")
-        call("POST", f"/records/{rid}/draft/files/{key}/commit", tok, data={})
+        st, r = retry("POST", f"/records/{rid}/draft/files/{key}/commit", data={})
+        if st not in (200, 201):
+            sys.exit(f"falha ao confirmar {key}: {st} {r}")
         print("  enviado:", key)
         time.sleep(1)
 
-    st, r = call("PUT", f"/records/{rid}/draft", tok, data={"metadata": meta})
+    corpo = {
+        "access": {"record": "public", "files": "restricted"},
+        "metadata": {k: v for k, v in meta.items() if k not in ("access_right", "access_conditions", "notes")},
+    }
+    corpo["metadata"]["notes"] = meta.get("access_conditions", "")
+    st, r = call("PUT", f"/records/{rid}/draft", tok, data=corpo)
     if st not in (200, 201):
         sys.exit(f"falha nos metadados: {st} {r}")
     print("metadados aplicados")

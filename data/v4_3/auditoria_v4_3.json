@@ -1,0 +1,19 @@
+{
+  "base": "v4.2",
+  "candidata": "v4.3",
+  "ondas": [
+    1,
+    2
+  ],
+  "total": 8036,
+  "regeocodificados_validados": 7,
+  "rejeitados_geocode_divergente": 0,
+  "sem_resultado_nao_resolvido": 369,
+  "criterio_validacao_km": 60.0,
+  "por_metodo": {
+    "geocoding_api": 7,
+    "cache": 0,
+    "sem": 197
+  },
+  "nota": "v4.3: Geocoding API do Google com gate estrito: somente partial_match=false, place_of_worship e ROOFTOP/GEOMETRIC_CENTER, além de validação municipal IBGE (<=60 km). Corrigidos recebem geo_status=regeocode_v43_validado; demais ficam ocultos como geocode_nao_resolvido. Nada é apagado; status anterior preservado. Places API (New) permanece pendente para ampliar a cobertura com Place IDs."
+}

@@ -1,0 +1,22 @@
+{
+  "base": "v4.2",
+  "candidata": "v4.4",
+  "total": 8036,
+  "alvos_mapeando_axe_divergentes": 199,
+  "alvos_coordenada_agua": 174,
+  "alvos_unicos": 373,
+  "places_validados": 112,
+  "nao_resolvidos": 261,
+  "sem_contexto_seguro": 0,
+  "criterio": {
+    "tipo_obrigatorio": "place_of_worship",
+    "tokens_compartilhados_min": 2,
+    "cobertura_nominal_min": 0.5,
+    "distancia_max_km_municipio": 60,
+    "distancia_max_km_sefaz_salvador": 35
+  },
+  "por_metodo": {
+    "places_api_new": 373
+  },
+  "nota": "Place IDs, endereços e resposta bruta permanecem apenas no cache privado gitignored. A candidata pública preserva registros não resolvidos e os oculta por padrão, sem apagar dados."
+}

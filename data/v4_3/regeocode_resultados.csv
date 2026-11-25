@@ -1,0 +1,8 @@
+nome,municipio,uf,nova_lat,nova_lon,metodo,endereco_google
+Casa Oxalá dos Montes Altos,Belo Horizonte,MG,-19.908214,-43.947314,geocoding_api,"Rua 15 de Abril, 8 - Lagoinha, Belo Horizonte - MG, 31210-280, Brasil"
+Centro de Umbanda Cabocla Jurema,Porto Alegre,RS,-30.149913,-51.211142,geocoding_api,"R. Prof. Antônio José Remião - Espírito Santo, Porto Alegre - RS, 91770-670, Brasil"
+Centro de Umbanda Nanã e Xangô,Belo Horizonte,MG,-19.997157,-43.995676,geocoding_api,"Av. Menelick de Carvalho, 1030 - Flávio Marques Lisboa, Belo Horizonte - MG, 30624-230, Brasil"
+Centro Espírita Pai Joaquim de Aruanda,Brumadinho,MG,-20.144723,-44.201164,geocoding_api,"R. Pres. Vargas, 367 - Centro, Brumadinho - MG, 35460-000, Brasil"
+Centro São João Batista,Jaboatão dos Guararapes,PE,-8.143144,-34.932727,geocoding_api,"R. São João Batista - Jardim Jordão, Jaboatão dos Guararapes - PE, 54320-110, Brasil"
+Ilê Axé Obá Ayrá,Recife,PE,-8.141468,-34.927025,geocoding_api,"Av. Beira Rio, 42 - Jardim Jordão, Jaboatão dos Guararapes - PE, 51210-902, Brasil"
+Ile Axé Oxum Pandá,Jaboatão dos Guararapes,PE,-8.196798,-34.937589,geocoding_api,"R. Bom Pastor, 900 - Candeias, Jaboatão dos Guararapes - PE, 54430-010, Brasil"
