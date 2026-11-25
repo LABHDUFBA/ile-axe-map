@@ -25,6 +25,13 @@ linhas, e por isso a soma excede o total.
 | OpenStreetMap | 133 |
 | AXÉS/LHS-UnB (Distrito Federal) | 7 |
 
+Sobre a fonte SEMUR/SEFAZ-Salvador: o cadastro da rede municipal de terreiros (886 registros,
+atualizado em 2020) é publicado pela Prefeitura de Salvador no GeoSalvador —
+<https://www.sefaz.salvador.ba.gov.br/geosalvador/home/item.html?id=1ff59c26223c43769751b874b8316e11>.
+A publicação municipal é de **uso irrestrito, com duas condições**: vedada a comercialização dos
+dados e obrigatória a citação da Prefeitura Municipal do Salvador como fonte. O PDF cartográfico
+usado no OCR não fica no repositório: consulte o original no link acima.
+
 A interface carrega `data/v5/terreiros_nacional_v5.geojson`. As versões anteriores ficam
 preservadas em `data/v4_8/` e nos demais diretórios `data/v*`, de modo que qualquer publicação
 é reversível. `data/v5_staging/` é histórico do processo, substituído pela v5.
