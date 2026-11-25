@@ -402,7 +402,9 @@ Não se recomenda utilizá-lo, sem validação adicional, para:
 
 **Estudantes:** Caroline Barros · Daniel Sena · Lidia Belas · Taíse Cruz.
 
-Pesquisadores e estudantes estão em ordem alfabética. A coordenação responde pela concepção, curadoria e manutenção do conjunto; contribuições de correção e de fichas enviadas pelas comunidades são incorporadas pela equipe.
+**Design e interface:** Ícaro Bernardes.
+
+Pesquisadores e estudantes estão em ordem alfabética. A coordenação responde pela concepção, curadoria e manutenção do conjunto; o desenho da interface e a identidade visual do mapa são de Ícaro Bernardes. Contribuições de correção e de fichas enviadas pelas comunidades são incorporadas pela equipe.
 
 ### Citação sugerida
 

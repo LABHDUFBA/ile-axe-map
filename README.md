@@ -109,6 +109,7 @@ ferramentas históricas de curadoria e permanecem no repositório como registro 
 - **Coordenação:** Leonardo Nascimento
 - **Pesquisadores:** Eric Brasil · Luciana Duccini · Ricardo Andrade · Rosana Moore
 - **Estudantes:** Caroline Barros · Daniel Sena · Lidia Belas · Taíse Cruz
+- **Design e interface:** Ícaro Bernardes
 
 ## Citação
 
