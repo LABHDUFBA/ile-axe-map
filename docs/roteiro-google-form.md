@@ -4,7 +4,7 @@
 
 Este roteiro substitui a versão anterior (8 perguntas genéricas). O formulário agora reproduz **a mesma ficha campo a campo** que o mapa pré-preenche no link *"Completar estas informações"*: quem chega pelo painel de um registro encontra o nome, o ID e a localização já preenchidos e só completa o que sabe.
 
-O e-mail (`ileaxemap@gmail.com`) continua valendo como caminho alternativo e para anexos.
+O e-mail (`leofn@ufba.br`) continua valendo como caminho alternativo e para anexos.
 
 ---
 

@@ -155,7 +155,7 @@ A plataforma **AXÉS**, do Laboratório de Habilidades Sociais da UnB (<https://
 
 ### 3.11. Terreiros do Brasil — coletada e não incorporada
 
-O **Terreiros do Brasil** (<https://www.terreirosdobrasil.com.br/>) é uma plataforma colaborativa de cadastro de casas. Em agosto de 2026 o projeto coletou **260 registros**, dos quais **138 com coordenadas**, preservados em `data/terreirosdobrasil/`. A fonte foi considerada na primeira rotina de unificação, mas **não integra nenhuma camada publicada**: não está na v2, nem na v3, nem nas versões 4 e 5.
+O **Terreiros do Brasil** (<https://www.terreirosdobrasil.com.br/>) é uma plataforma colaborativa de cadastro de casas. Em agosto de 2026 o projeto coletou **260 registros**, dos quais **259 trazem coordenada** e **138 trazem endereço textual**; os arquivos estão preservados em `data/terreirosdobrasil/`, com resíduos da marcação HTML da origem nos endereços. A fonte foi considerada na primeira rotina de unificação, mas **não integra nenhuma camada publicada**: não está na v2, nem na v3, nem nas versões 4 e 5.
 
 A ausência fica registrada por razão de método: uma lista de fontes que só mostra o que entrou sugere que tudo o que foi consultado foi incorporado — e não foi. Os 260 registros continuam no repositório e podem ser reavaliados.
 
@@ -422,7 +422,7 @@ Ao utilizar registros específicos, recomenda-se citar também a fonte de origem
 - **Atlas do Axé.** *Terreiros e templos do Amazonas* — incorporado na v5 (ver Seção 3.9). Disponível em: <https://atlasdoaxe.lovable.app/>.
 - **Laboratório de Habilidades Sociais da Universidade de Brasília.** *AXÉS — comunidades* — incorporado na v5 (ver Seção 3.10). Disponível em: <https://lhs.unb.br/axes-social>.
 - **Terreiros do Brasil.** Plataforma colaborativa de cadastro de terreiros — coletada e não incorporada (ver Seção 3.11). Disponível em: <https://www.terreirosdobrasil.com.br/>.
-- **Instituto Brasileiro de Geografia e Estatística (IBGE).** Malhas e centróides municipais, utilizados no controle territorial e na auditoria de coordenadas. Disponível em: <https://www.ibge.gov.br/>.
+- **Instituto Brasileiro de Geografia e Estatística (IBGE).** Centróides municipais, utilizados na validação de coordenadas por município (tolerância de até 60 km). Disponível em: <https://www.ibge.gov.br/>.
 - **OpenStreetMap contributors.** *OpenStreetMap*. Disponível em: <https://www.openstreetmap.org/>.
 - **Overpass API.** Interface de consulta ao OpenStreetMap. Disponível em: <https://overpass-api.de/>.
 - **Nominatim.** Serviço de geocodificação do OpenStreetMap, utilizado na localização de registros do CNPJ e do AXÉS/LHS-UnB. Disponível em: <https://nominatim.openstreetmap.org/>.
