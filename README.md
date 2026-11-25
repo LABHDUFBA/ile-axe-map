@@ -1,73 +1,104 @@
-# Ilê Axé Map — Terreiros de Candomblé da Bahia
+# Ilê Axé Map
 
-Mapa interativo de terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia.
+Mapa aberto de terreiros de candomblé e espaços religiosos afro-brasileiros no Brasil.
+**Versão 5.0** — camada de 25 de novembro de 2026.
 
-## Dataset v2.1
+- **Mapa:** https://labhdufba.github.io/ile-axe-map/
+- **Nota técnico-metodológica:** https://labhdufba.github.io/ile-axe-map/metodologia.html
+- **Como colaborar:** https://labhdufba.github.io/ile-axe-map/colaborar.html
 
-- **Fonte primária:** CEAO/UFBA, com os 1.155 registros extraídos e georreferenciados.
-- **Fontes complementares:** Google Places (682), OpenStreetMap (20) e SEMUR/SEFAZ Salvador (234 sem coordenadas).
-- **Total:** 1.959 registros, dos quais 1.725 aparecem no mapa.
-- A v1 permanece preservada; a interface carrega `data/terreiros_v2.geojson`.
+## Dataset v5
 
-Os totais representam registros preservados por fonte e não devem ser interpretados automaticamente como entidades únicas entre fontes.
+8.215 entidades, resultado da consolidação de fontes públicas heterogêneas. Os totais por
+fonte contam registros por ocorrência: uma entidade presente em duas fontes aparece nas duas
+linhas, e por isso a soma excede o total.
 
-### Declarações de nação
+| Fonte | Registros |
+|---|---|
+| Mapeando Axé | 3.814 |
+| CNPJ/Receita Federal | 1.951 |
+| CEAO/UFBA | 1.111 |
+| Google Places (Places API e Geocoding API) | 748 |
+| CEAP — Mapa do Axé | 280 |
+| SEMUR/SEFAZ-Salvador | 223 |
+| Atlas do Axé (Amazonas) | 172 |
+| OpenStreetMap | 133 |
+| AXÉS/LHS-UnB (Distrito Federal) | 7 |
 
-- O filtro apresenta as declarações literais do CEAO, sem reunir Keto, Alaketo ou rótulos compostos.
-- `Keto Angola`, `Jêje Nagô`, `KetoTapa` e demais valores permanecem separados.
-- Apenas espaços duplicados são removidos para exibição.
-- Registros sem campo de nação declarado aparecem como `Não informado`; nomes não são usados para inferir pertencimento.
-- As cores servem à navegação e não representam parentesco entre tradições.
+A interface carrega `data/v5/terreiros_nacional_v5.geojson`. As versões anteriores ficam
+preservadas em `data/v4_8/` e nos demais diretórios `data/v*`, de modo que qualquer publicação
+é reversível. `data/v5_staging/` é histórico do processo, substituído pela v5.
 
-## Estrutura principal
+### O que o mapa não faz
+
+- Não é censo, cadastro oficial nem inventário exaustivo: cada ponto é um registro consolidado,
+  com graus diferentes de completude e validação.
+- Não infere nação, tradição ou orixá a partir de nome, endereço ou vizinhança. Campo vazio
+  permanece vazio e aparece como "ficha incompleta" na interface.
+- Não publica nome de dirigente, telefone, e-mail, redes sociais nem endereço completo.
+- Não publica localização aproximada sem avisar: aproximações ficam ocultas por padrão e o
+  painel de detalhe declara a precisão do ponto (`geo_status`).
+
+## Estrutura
 
 ```text
-├── index.html
-├── revisao-google.html
-├── metodologia.html
+├── index.html              mapa, painel Sobre e fichas
+├── colaborar.html          canal de contribuição
+├── metodologia.html        nota técnico-metodológica (versão vigente)
 ├── data/
-│   ├── terreiros_v2.geojson
-│   ├── terreiros_all_sources_v2.json
-│   ├── auditoria_v2.json
-│   ├── revisao_humana_nacao_v2.csv
-│   ├── revisao_google.json
-│   └── ceao/terreiros_ceao_complete.json
-├── scripts/
-│   ├── build_v2.py
-│   ├── build_google_review.py
-│   └── collect_osm.py
-└── tests/
-    ├── test_build_v2.py
-    └── test_google_review.py
+│   ├── v5/                 camada publicada + auditoria da integração
+│   ├── v4_8/               versão anterior (rollback)
+│   ├── atlas_axe/          camada normalizada do Amazonas + README de proveniência
+│   ├── axes_unb/           camada normalizada do DF + README de proveniência
+│   └── ...                 fontes e artefatos por versão
+├── scripts/                coleta, geocodificação, auditoria e build
+├── tests/                  testes das etapas de build e coleta
+└── docs/                   roteiro do formulário, notas operacionais
 ```
 
-## Revisão humana das entradas Google
-
-A página `revisao-google.html` apresenta as 693 entradas Google em uma fila de
-curadoria. Os 133 casos ambíguos da triagem anterior aparecem primeiro. Cada
-registro pode ser marcado como `manter`, `falso_positivo` ou `pendente`.
-
-As decisões são salvas no navegador e podem ser exportadas ou importadas em
-CSV. Sugestões automáticas não removem registros. Após a conferência da lista,
-os falsos positivos confirmados devem ser incorporados a
-`data/exclusoes_curadas.csv`; somente então o build v2 aplica as exclusões aos
-artefatos publicados. Os dados brutos permanecem preservados.
-
-## Regerar e validar
+## Regerar a camada publicada
 
 ```bash
-python3 scripts/build_v2.py
-python3 scripts/build_google_review.py
+python3 scripts/ingest_atlas_axe.py     # Atlas do Axé (AM)
+python3 scripts/ingest_axes_unb.py      # AXÉS/LHS-UnB (DF)
+python3 scripts/build_v5.py             # v4.8 + fontes novas → data/v5/
 python3 -m unittest discover -s tests -v
 ```
 
+`scripts/build_v5.py` lê a base anterior e não a altera; a auditoria da integração fica em
+`data/v5/auditoria_v5.json`, e as regras de merge estão em `data/v5/README.md`.
+
+## Privacidade e proteção de dados
+
+O repositório é público, então a política é aplicada na origem: payloads brutos das fontes que
+trazem contatos, dirigentes ou endereços completos ficam **fora do Git** (ver `.gitignore`), e as
+camadas publicadas não contêm esses campos. Pedidos de correção, inclusão ou exclusão são
+atendidos por `ileaxemap@gmail.com`; a exclusão não exige justificativa e tem compromisso de
+tratamento em até 7 dias. Critérios na
+[Seção 8.1 da metodologia](https://labhdufba.github.io/ile-axe-map/metodologia.html#81-canal-de-solicitacao).
+
 ## Stack
 
-- MapLibre GL JS 4.7.1
-- OpenFreeMap
-- HTML, CSS e JavaScript sem build
+- Leaflet 1.9.4 + Leaflet.markercluster 1.5.3 (via CDN)
+- HTML, CSS e JavaScript sem etapa de build
 - GitHub Pages
+
+As páginas `revisao-google.html`, `nacional.html` e os arquivos `validation_*.html` são
+ferramentas históricas de curadoria e permanecem no repositório como registro do processo.
+
+## Equipe
+
+- **Coordenação:** Leonardo Nascimento
+- **Pesquisadores:** Eric Brasil · Luciana Duccini · Ricardo Andrade · Rosana Moore
+- **Estudantes:** Caroline Barros · Daniel Sena · Lidia Belas · Taíse Cruz
+
+## Citação
+
+> NASCIMENTO, Leonardo Fernandes; LABORATÓRIO DE HUMANIDADES DIGITAIS DA UFBA. **Ilê Axé Map:
+> terreiros de candomblé e espaços religiosos afro-brasileiros**. Versão 5.0. Salvador: LABHD/UFBA,
+> 2026. Disponível em: https://labhdufba.github.io/ile-axe-map/.
 
 ## Responsabilidade
 
-Leonardo Fernandes Nascimento — Laboratório de Humanidades Digitais da Universidade Federal da Bahia (LABHD/UFBA).
+Laboratório de Humanidades Digitais da Universidade Federal da Bahia (LABHD/UFBA).
+Contato: ileaxemap@gmail.com.
