@@ -404,7 +404,9 @@ Não se recomenda utilizá-lo, sem validação adicional, para:
 
 **Design gráfico:** Ícaro Bernardes.
 
-Pesquisadores e estudantes estão em ordem alfabética. A coordenação responde pela concepção, curadoria e manutenção do conjunto; o design gráfico, a identidade visual e a tipografia do mapa são de Ícaro Bernardes. Contribuições de correção e de fichas enviadas pelas comunidades são incorporadas pela equipe.
+**Desenvolvimento:** Darlan Gomes.
+
+Pesquisadores e estudantes estão em ordem alfabética. A coordenação responde pela concepção, curadoria e manutenção do conjunto; o design gráfico, a identidade visual e a tipografia do mapa são de Ícaro Bernardes. O desenvolvimento dos pipelines de correção geográfica, da integração contínua e dos controles de qualidade é de Darlan Gomes. Contribuições de correção e de fichas enviadas pelas comunidades são incorporadas pela equipe.
 
 ### Citação sugerida
 

@@ -134,6 +134,15 @@
           ]
         },
         "affiliations": []
+      },
+      {
+        "person_or_org": {
+          "type": "personal",
+          "given_name": "Darlan",
+          "family_name": "Gomes",
+          "identifiers": []
+        },
+        "affiliations": []
       }
     ],
     "keywords": [
@@ -172,5 +181,6 @@
     "metodologia.html (nota técnico-metodológica)"
   ],
   "_convencoes": "Segue o padrão do registro 10.5281/zenodo.24505394 (Digital Methods Skills): afiliação em inglês, ORCID quando conhecido, licença declarada, versão explícita. ORCID de Leonardo conferido no próprio registro do Zenodo (0000-0003-2929-1115); os demais ficam sem ORCID até que os números sejam informados — não se inventa identificador.",
-  "_nota_design": "Ícaro Bernardes dos Santos Coutinho (github.com/IcaroBernardes, ORCID 0000-0003-1988-6190) responde pelo design gráfico e pela identidade visual do mapa. O nome completo segue o registro ORCID, conferido em pub.orcid.org; no site o crédito usa a forma curta 'Ícaro Bernardes'."
+  "_nota_design": "Ícaro Bernardes dos Santos Coutinho (github.com/IcaroBernardes, ORCID 0000-0003-1988-6190) responde pelo design gráfico e pela identidade visual do mapa. O nome completo segue o registro ORCID, conferido em pub.orcid.org; no site o crédito usa a forma curta 'Ícaro Bernardes'.",
+  "_nota_desenvolvimento": "Darlan Gomes (github.com/1aifa) responde pelo desenvolvimento dos pipelines de correção geográfica, da integração contínua e dos controles de qualidade, com 47 commits no repositório. Sem ORCID declarado."
 }
