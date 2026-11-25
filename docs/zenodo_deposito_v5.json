@@ -1,5 +1,5 @@
 {
-  "_comentario": "Metadados do depósito Zenodo da camada v5. Nada aqui foi enviado ainda. access_right, license e creativecommons precisam de decisão do Leo antes do publish.",
+  "_comentario": "Metadados do depósito Zenodo da camada v5 — acesso RESTRITO, licença CC BY-NC 4.0 (aprovados 25/11/2026).",
   "metadata": {
     "title": "Ilê Axé Map — base consolidada de terreiros de candomblé e espaços religiosos afro-brasileiros no Brasil (v5)",
     "upload_type": "dataset",
@@ -13,40 +13,108 @@
           "family_name": "Nascimento",
           "identifiers": []
         },
-        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }],
+        "affiliations": [
+          {
+            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+          }
+        ],
         "role": "coordinator"
       },
       {
-        "person_or_org": { "type": "personal", "given_name": "Eric", "family_name": "Brasil" },
-        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+        "person_or_org": {
+          "type": "personal",
+          "given_name": "Eric",
+          "family_name": "Brasil"
+        },
+        "affiliations": [
+          {
+            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+          }
+        ]
       },
       {
-        "person_or_org": { "type": "personal", "given_name": "Luciana", "family_name": "Duccini" },
-        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+        "person_or_org": {
+          "type": "personal",
+          "given_name": "Luciana",
+          "family_name": "Duccini"
+        },
+        "affiliations": [
+          {
+            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+          }
+        ]
       },
       {
-        "person_or_org": { "type": "personal", "given_name": "Ricardo", "family_name": "Andrade" },
-        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+        "person_or_org": {
+          "type": "personal",
+          "given_name": "Ricardo",
+          "family_name": "Andrade"
+        },
+        "affiliations": [
+          {
+            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+          }
+        ]
       },
       {
-        "person_or_org": { "type": "personal", "given_name": "Rosana", "family_name": "Moore" },
-        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+        "person_or_org": {
+          "type": "personal",
+          "given_name": "Rosana",
+          "family_name": "Moore"
+        },
+        "affiliations": [
+          {
+            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+          }
+        ]
       },
       {
-        "person_or_org": { "type": "personal", "given_name": "Caroline", "family_name": "Barros" },
-        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+        "person_or_org": {
+          "type": "personal",
+          "given_name": "Caroline",
+          "family_name": "Barros"
+        },
+        "affiliations": [
+          {
+            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+          }
+        ]
       },
       {
-        "person_or_org": { "type": "personal", "given_name": "Daniel", "family_name": "Sena" },
-        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+        "person_or_org": {
+          "type": "personal",
+          "given_name": "Daniel",
+          "family_name": "Sena"
+        },
+        "affiliations": [
+          {
+            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+          }
+        ]
       },
       {
-        "person_or_org": { "type": "personal", "given_name": "Lidia", "family_name": "Belas" },
-        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+        "person_or_org": {
+          "type": "personal",
+          "given_name": "Lidia",
+          "family_name": "Belas"
+        },
+        "affiliations": [
+          {
+            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+          }
+        ]
       },
       {
-        "person_or_org": { "type": "personal", "given_name": "Taíse", "family_name": "Cruz" },
-        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+        "person_or_org": {
+          "type": "personal",
+          "given_name": "Taíse",
+          "family_name": "Cruz"
+        },
+        "affiliations": [
+          {
+            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+          }
+        ]
       }
     ],
     "keywords": [
@@ -59,7 +127,7 @@
       "geodados",
       "patrimônio"
     ],
-    "access_right": "open",
+    "access_right": "restricted",
     "license": "cc-by-nc-4.0",
     "language": "por",
     "related_identifiers": [
@@ -75,7 +143,8 @@
       }
     ],
     "version": "5",
-    "notes": "Depósito preparado em 25/11/2026. Acesso restrito por decisão do projeto? ainda não confirmado."
+    "notes": "Acesso restrito e licença CC BY-NC 4.0 aprovados em 25/11/2026. Metadados públicos para citação; arquivos liberados sob solicitação.",
+    "access_conditions": "Acesso aos arquivos por solicitação. A camada completa é liberada para pesquisa acadêmica, ensino e formulação de políticas públicas, com atribuição e sem uso comercial. Pedidos de acesso integral passam pela curadoria do LABHD/UFBA (ileaxemap@gmail.com); a versão interativa do mapa permanece pública em https://labhdufba.github.io/ile-axe-map/. A restrição existe para evitar a republicação da base como produto próprio, não para limitar a pesquisa."
   },
   "arquivos_previstos": [
     "terreiros_nacional_v5.geojson (5,8 MB — camada publicada)",
