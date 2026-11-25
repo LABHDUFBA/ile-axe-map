@@ -3,6 +3,11 @@
 Mapa aberto de terreiros de candomblé e espaços religiosos afro-brasileiros no Brasil.
 **Versão 5.0** — camada de 25 de novembro de 2026.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24529233.svg)](https://doi.org/10.5281/zenodo.24529233)
+
+Base arquivada no Zenodo (acesso restrito, licença CC BY-NC 4.0): DOI **10.5281/zenodo.24529233**.
+Este é o *concept DOI* — cita a versão mais recente. Para citar exatamente a v5, use 10.5281/zenodo.24529234.
+
 - **Mapa:** https://labhdufba.github.io/ile-axe-map/
 - **Nota técnico-metodológica:** https://labhdufba.github.io/ile-axe-map/metodologia.html
 - **Como colaborar:** https://labhdufba.github.io/ile-axe-map/colaborar.html
@@ -75,6 +80,12 @@ python3 -m unittest discover -s tests -v
 `scripts/build_v5.py` lê a base anterior e não a altera; a auditoria da integração fica em
 `data/v5/auditoria_v5.json`, e as regras de merge estão em `data/v5/README.md`.
 
+## Acesso aos dados
+
+A base completa está depositada no Zenodo com **metadados públicos e arquivos restritos**: o registro é citável e o DOI resolve, mas o download exige solicitação, atendida pela curadoria do LABHD/UFBA para pesquisa, ensino e formulação de políticas públicas, com atribuição e sem uso comercial (CC BY-NC 4.0). A restrição existe para impedir a republicação da base como produto próprio — não para limitar pesquisa. O mapa interativo segue público.
+
+A leitura programática é feita por uma API com recorte geográfico e paginação (`api/worker/`), que não oferece rota de download integral.
+
 ## Privacidade e proteção de dados
 
 O repositório é público, então a política é aplicada na origem: payloads brutos das fontes que
@@ -101,9 +112,9 @@ ferramentas históricas de curadoria e permanecem no repositório como registro 
 
 ## Citação
 
-> NASCIMENTO, Leonardo Fernandes; LABORATÓRIO DE HUMANIDADES DIGITAIS DA UFBA. **Ilê Axé Map:
-> terreiros de candomblé e espaços religiosos afro-brasileiros**. Versão 5.0. Salvador: LABHD/UFBA,
-> 2026. Disponível em: https://labhdufba.github.io/ile-axe-map/.
+> NASCIMENTO, Leonardo Fernandes et al. **Ilê Axé Map: base consolidada de terreiros de candomblé
+> e espaços religiosos afro-brasileiros no Brasil**. Versão 5. DOI: 10.5281/zenodo.24529233.
+> Salvador: LABHD/UFBA, 2026. Disponível em: https://labhdufba.github.io/ile-axe-map/.
 
 ## Responsabilidade
 

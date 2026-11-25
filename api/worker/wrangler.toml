@@ -6,7 +6,7 @@ compatibility_date = "2026-11-01"
 # `wrangler kv namespace create TERREIROS` devolve o id que entra aqui.
 [[kv_namespaces]]
 binding = "TERREIROS"
-id = "PREENCHER_COM_O_ID_DO_KV"
+id = "08d3e1fe28fa439fa8dd4f47584ef97a"
 
 [vars]
 ALLOWED_ORIGINS = "https://labhdufba.github.io,http://127.0.0.1:8765,http://localhost:8765"
