@@ -153,6 +153,12 @@ A plataforma **AXÉS**, do Laboratório de Habilidades Sociais da UnB (<https://
 
 > **Estatuto das incorporações 3.9 e 3.10.** As duas fontes estão na camada publicada desde a **v5** (25/11/2026), construída por `scripts/build_v5.py` e auditada em `data/v5/auditoria_v5.json`. A v5 reúne **8.215 entidades**: 8.036 da v4.8 + **172 do Amazonas** + **7 do Distrito Federal**. O Atlas entrou com 177 registros menos duas lojas de artigos religiosos (comércio não integra o mapa) e menos uma duplicata interna fundida; o AXÉS entrou com 8 comunidades menos o registro da própria plataforma. Das 179 entidades novas, 159 aparecem por padrão e 20 ficam ocultas até revisão (9 aproximações declaradas pela fonte, 4 centróides municipais e as 7 do Distrito Federal em centróide de região administrativa). A v4.8 permanece preservada, o que torna a operação reversível.
 
+### 3.11. Terreiros do Brasil — coletada e não incorporada
+
+O **Terreiros do Brasil** (<https://www.terreirosdobrasil.com.br/>) é uma plataforma colaborativa de cadastro de casas. Em agosto de 2026 o projeto coletou **260 registros**, dos quais **138 com coordenadas**, preservados em `data/terreirosdobrasil/`. A fonte foi considerada na primeira rotina de unificação, mas **não integra nenhuma camada publicada**: não está na v2, nem na v3, nem nas versões 4 e 5.
+
+A ausência fica registrada por razão de método: uma lista de fontes que só mostra o que entrou sugere que tudo o que foi consultado foi incorporado — e não foi. Os 260 registros continuam no repositório e podem ser reavaliados.
+
 ---
 
 ## 4. Normalização, integração e deduplicação
@@ -415,11 +421,13 @@ Ao utilizar registros específicos, recomenda-se citar também a fonte de origem
 - **AxéCloud.** *Diretório de terreiros* — avaliado e não incorporado (ver Seção 3.8). Disponível em: <https://axecloud.com.br/terreiros>.
 - **Atlas do Axé.** *Terreiros e templos do Amazonas* — incorporado na v5 (ver Seção 3.9). Disponível em: <https://atlasdoaxe.lovable.app/>.
 - **Laboratório de Habilidades Sociais da Universidade de Brasília.** *AXÉS — comunidades* — incorporado na v5 (ver Seção 3.10). Disponível em: <https://lhs.unb.br/axes-social>.
+- **Terreiros do Brasil.** Plataforma colaborativa de cadastro de terreiros — coletada e não incorporada (ver Seção 3.11). Disponível em: <https://www.terreirosdobrasil.com.br/>.
+- **Instituto Brasileiro de Geografia e Estatística (IBGE).** Malhas e centróides municipais, utilizados no controle territorial e na auditoria de coordenadas. Disponível em: <https://www.ibge.gov.br/>.
 - **OpenStreetMap contributors.** *OpenStreetMap*. Disponível em: <https://www.openstreetmap.org/>.
 - **Overpass API.** Interface de consulta ao OpenStreetMap. Disponível em: <https://overpass-api.de/>.
 - **Nominatim.** Serviço de geocodificação do OpenStreetMap, utilizado na localização de registros do CNPJ e do AXÉS/LHS-UnB. Disponível em: <https://nominatim.openstreetmap.org/>.
 - **Prefeitura Municipal de Salvador — Secretaria Municipal da Reparação.** Mapa cartográfico de terreiros de Salvador, 2020. Documento distribuído pela infraestrutura geográfica da SEFAZ/Salvador. Disponível em: <https://www.sefaz.salvador.ba.gov.br/geosalvador>.
-- **Google.** *Google Places*. Fonte de registros de lugares consultada no processo de coleta.
+- **Google.** *Places API e Geocoding API*. Fontes de registros de lugares e de revalidação de coordenadas consultadas no processo de coleta.
 - **Laboratório de Humanidades Digitais da UFBA.** Repositório do projeto. Disponível em: <https://github.com/LABHDUFBA/ile-axe-map>.
 
 ---
