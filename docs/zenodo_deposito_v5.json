@@ -11,11 +11,16 @@
           "type": "personal",
           "given_name": "Leonardo",
           "family_name": "Nascimento",
-          "identifiers": []
+          "identifiers": [
+            {
+              "identifier": "0000-0003-2929-1115",
+              "scheme": "orcid"
+            }
+          ]
         },
         "affiliations": [
           {
-            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+            "name": "Digital Humanities Laboratory (LABHDUFBA), Federal University of Bahia"
           }
         ],
         "role": "coordinator"
@@ -28,7 +33,7 @@
         },
         "affiliations": [
           {
-            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+            "name": "Digital Humanities Laboratory (LABHDUFBA), Federal University of Bahia"
           }
         ]
       },
@@ -40,7 +45,7 @@
         },
         "affiliations": [
           {
-            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+            "name": "Digital Humanities Laboratory (LABHDUFBA), Federal University of Bahia"
           }
         ]
       },
@@ -52,7 +57,7 @@
         },
         "affiliations": [
           {
-            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+            "name": "Digital Humanities Laboratory (LABHDUFBA), Federal University of Bahia"
           }
         ]
       },
@@ -64,7 +69,7 @@
         },
         "affiliations": [
           {
-            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+            "name": "Digital Humanities Laboratory (LABHDUFBA), Federal University of Bahia"
           }
         ]
       },
@@ -76,7 +81,7 @@
         },
         "affiliations": [
           {
-            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+            "name": "Digital Humanities Laboratory (LABHDUFBA), Federal University of Bahia"
           }
         ]
       },
@@ -88,7 +93,7 @@
         },
         "affiliations": [
           {
-            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+            "name": "Digital Humanities Laboratory (LABHDUFBA), Federal University of Bahia"
           }
         ]
       },
@@ -100,7 +105,7 @@
         },
         "affiliations": [
           {
-            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+            "name": "Digital Humanities Laboratory (LABHDUFBA), Federal University of Bahia"
           }
         ]
       },
@@ -112,7 +117,7 @@
         },
         "affiliations": [
           {
-            "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)"
+            "name": "Digital Humanities Laboratory (LABHDUFBA), Federal University of Bahia"
           }
         ]
       }
@@ -151,5 +156,6 @@
     "auditoria_v5.json (regras, exclusões, fusões, status de precisão)",
     "README_v5.md (regras de merge e dicionário)",
     "metodologia.html (nota técnico-metodológica)"
-  ]
+  ],
+  "_convencoes": "Segue o padrão do registro 10.5281/zenodo.24505394 (Digital Methods Skills): afiliação em inglês, ORCID quando conhecido, licença declarada, versão explícita. ORCID de Leonardo conferido no próprio registro do Zenodo (0000-0003-2929-1115); os demais ficam sem ORCID até que os números sejam informados — não se inventa identificador."
 }
