@@ -36,3 +36,11 @@ data/atlas_axe/raw_payload.json
 data/atlas_axe/casas.json
 data/axes_unb/raw_communities.json
 data/axes_unb/geocode_cache.json
+
+# payload da API (mesmo dado da camada, fora do diretório público)
+data/v5/kv_payload.json
+
+# Cloudflare Worker: dependências e estado local
+api/worker/node_modules/
+api/worker/.wrangler/
+api/worker/.dev.vars

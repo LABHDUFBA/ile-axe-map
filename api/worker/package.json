@@ -1,0 +1,19 @@
+{
+  "name": "ile-axe-api",
+  "version": "1.0.0",
+  "description": "API de leitura da camada v5 do Ilê Axé Map (Cloudflare Worker)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "wrangler dev --local --port 8787",
+    "deploy": "wrangler deploy",
+    "seed": "wrangler kv key put v5 --binding=TERREIROS --path=../../data/v5/kv_payload.json --remote",
+    "seed:local": "wrangler kv key put v5 --binding=TERREIROS --path=../../data/v5/kv_payload.json --local"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^4.168.0"
+  },
+  "private": true
+}

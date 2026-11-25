@@ -1,0 +1,25 @@
+name = "ile-axe-api"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+# A camada v5 vive no KV, não no repositório público.
+# `wrangler kv namespace create TERREIROS` devolve o id que entra aqui.
+[[kv_namespaces]]
+binding = "TERREIROS"
+id = "PREENCHER_COM_O_ID_DO_KV"
+
+[vars]
+ALLOWED_ORIGINS = "https://labhdufba.github.io,http://127.0.0.1:8765,http://localhost:8765"
+MAX_SPAN_DEG = "4"
+DEFAULT_LIMIT = "250"
+MAX_LIMIT = "500"
+
+# Limite de requisições por IP. Requer a binding de rate limit do Cloudflare;
+# sem ela o Worker funciona, apenas sem throttling.
+# [[ratelimits]]
+# name = "LIMITER"
+# namespace_id = "1001"
+# simple = { limit = 60, period = 60 }
+
+[observability]
+enabled = true
