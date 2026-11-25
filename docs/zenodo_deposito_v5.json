@@ -1,0 +1,86 @@
+{
+  "_comentario": "Metadados do depósito Zenodo da camada v5. Nada aqui foi enviado ainda. access_right, license e creativecommons precisam de decisão do Leo antes do publish.",
+  "metadata": {
+    "title": "Ilê Axé Map — base consolidada de terreiros de candomblé e espaços religiosos afro-brasileiros no Brasil (v5)",
+    "upload_type": "dataset",
+    "publication_date": "2026-11-25",
+    "description": "<p>Base consolidada do <strong>Ilê Axé Map</strong>, infraestrutura cartográfica de pesquisa do Laboratório de Humanidades Digitais da UFBA (LABHD/UFBA). Reúne <strong>8.215 entidades</strong> em todo o território brasileiro, integradas a partir de fontes públicas heterogêneas: Mapeando Axé (3.814 registros), CNPJ/Receita Federal (1.951), CEAO/UFBA (1.111), Google Places (748), CEAP — Mapa do Axé (280), SEMUR/SEFAZ-Salvador (223), Atlas do Axé/AM (172), OpenStreetMap (133) e AXÉS/LHS-UnB/DF (7). Uma mesma entidade pode ocorrer em mais de uma fonte, e por isso a soma por fonte excede o total.</p><p><strong>O que a base não é.</strong> Não é censo, cadastro oficial nem inventário exaustivo: cada ponto é um registro consolidado, com graus distintos de completude e validação. Nação, tradição e orixá não são inferidos a partir do nome da casa; quando a fonte não declara, o campo permanece vazio. Localizações aproximadas são sinalizadas em <code>geo_status</code> e ficam ocultas por padrão na interface.</p><p><strong>Proteção de dados.</strong> A camada publicada não contém nome de dirigente, telefone, e-mail, redes sociais nem endereço completo. Payloads brutos das fontes com esses campos ficam fora do repositório e do arquivo. Pedidos de correção, inclusão ou exclusão são atendidos por ileaxemap@gmail.com, sem exigência de justificativa para exclusão.</p><p><strong>Consolidação.</strong> Regras de deduplicação, exclusões (duas lojas de artigos religiosos) e fusões estão documentadas em <code>data/v5/README.md</code> e auditadas em <code>data/v5/auditoria_v5.json</code>, incluídos neste depósito. A nota técnico-metodológica completa está em https://labhdufba.github.io/ile-axe-map/metodologia.html.</p><p><strong>Como citar.</strong> NASCIMENTO, Leonardo et al. Ilê Axé Map: base consolidada de terreiros de candomblé e espaços religiosos afro-brasileiros no Brasil. Versão 5. Salvador: LABHD/UFBA, 2026.</p>",
+    "creators": [
+      {
+        "person_or_org": {
+          "type": "personal",
+          "given_name": "Leonardo",
+          "family_name": "Nascimento",
+          "identifiers": []
+        },
+        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }],
+        "role": "coordinator"
+      },
+      {
+        "person_or_org": { "type": "personal", "given_name": "Eric", "family_name": "Brasil" },
+        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+      },
+      {
+        "person_or_org": { "type": "personal", "given_name": "Luciana", "family_name": "Duccini" },
+        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+      },
+      {
+        "person_or_org": { "type": "personal", "given_name": "Ricardo", "family_name": "Andrade" },
+        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+      },
+      {
+        "person_or_org": { "type": "personal", "given_name": "Rosana", "family_name": "Moore" },
+        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+      },
+      {
+        "person_or_org": { "type": "personal", "given_name": "Caroline", "family_name": "Barros" },
+        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+      },
+      {
+        "person_or_org": { "type": "personal", "given_name": "Daniel", "family_name": "Sena" },
+        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+      },
+      {
+        "person_or_org": { "type": "personal", "given_name": "Lidia", "family_name": "Belas" },
+        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+      },
+      {
+        "person_or_org": { "type": "personal", "given_name": "Taíse", "family_name": "Cruz" },
+        "affiliations": [{ "name": "Laboratório de Humanidades Digitais, Universidade Federal da Bahia (LABHD/UFBA)" }]
+      }
+    ],
+    "keywords": [
+      "candomblé",
+      "umbanda",
+      "terreiros",
+      "religiões afro-brasileiras",
+      "mapeamento",
+      "dados abertos",
+      "geodados",
+      "patrimônio"
+    ],
+    "access_right": "open",
+    "license": "cc-by-nc-4.0",
+    "language": "por",
+    "related_identifiers": [
+      {
+        "identifier": "https://labhdufba.github.io/ile-axe-map/",
+        "relation_type": "isSupplementedBy",
+        "scheme": "url"
+      },
+      {
+        "identifier": "https://github.com/LABHDUFBA/ile-axe-map",
+        "relation_type": "isSupplementedBy",
+        "scheme": "url"
+      }
+    ],
+    "version": "5",
+    "notes": "Depósito preparado em 25/11/2026. Acesso restrito por decisão do projeto? ainda não confirmado."
+  },
+  "arquivos_previstos": [
+    "terreiros_nacional_v5.geojson (5,8 MB — camada publicada)",
+    "auditoria_v5.json (regras, exclusões, fusões, status de precisão)",
+    "README_v5.md (regras de merge e dicionário)",
+    "metodologia.html (nota técnico-metodológica)"
+  ]
+}
