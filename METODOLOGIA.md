@@ -404,7 +404,7 @@ Não se recomenda utilizá-lo, sem validação adicional, para:
 
 **Design gráfico:** Ícaro Bernardes.
 
-**Apoio e autoria:** Darlan Gomes (@abacostecnolgia) · Ábaco.
+**Apoio e autoria:** Darlan Gomes (@abacotecnologia) · Ábaco.
 
 Pesquisadores e estudantes estão em ordem alfabética. A coordenação responde pela concepção, curadoria e manutenção do conjunto; o design gráfico, a identidade visual e a tipografia do mapa são de Ícaro Bernardes. Darlan Gomes integra a autoria do conjunto, com apoio ao longo do desenvolvimento do projeto, e a Ábaco atuará em colaboração com o mapa. Contribuições de correção e de fichas enviadas pelas comunidades são incorporadas pela equipe.
 
