@@ -42,8 +42,13 @@ Riqueza qualitativa alta: **8/8** com história de fundação, **6/8** com proje
    administrativa; o payload bruto e o cache de geocodificação ficam **fora do Git** (`.gitignore`).
 5. **Sem licença de uso declarada**; uso acadêmico com atribuição e contato prévio com a equipe.
 
-## Situação frente à base v4.8
-- Base v4.8 tem **7 registros no DF**; nenhum casa por nome com as 8 comunidades → **8 novos**.
+## Situação frente à base (v5)
+- A v4.8 tinha **7 registros no DF**; nenhuma das 8 comunidades casa por nome com eles.
+- Na v5 (`scripts/build_v5.py`), entram **7 entidades**: as 8 comunidades menos o registro da
+  própria plataforma ("Atlas dos Terreiros", categoria `projeto/plataforma`).
+- **Todas as 7 entram ocultas por padrão**, porque a fonte não fornece coordenadas: 6 estão em
+  centróide de região administrativa e 1 no centróide do município. Aparecem quando o usuário
+  desmarca "Ocultar localizações aproximadas" — e o painel de detalhe diz isso explicitamente.
 - Valor principal não é volume: são **fichas descritivas** (história, projetos sociais,
   linhagem) que servem de modelo de campo e de fonte qualitativa para verbetes.
 

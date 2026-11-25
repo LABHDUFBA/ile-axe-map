@@ -37,7 +37,8 @@ as categorias de loja (`EXCLUIR_CATEGORIAS` em `scripts/ingest_atlas_axe.py`):
 
 Os dois registros continuam no payload bruto (recuperáveis) e a exclusão é reversível por
 parâmetro. Resultado: **175 registros na camada** (171 com coordenada), dos quais 1 é
-"Associação / entidade" — mantido, pendente de decisão.
+"Associação / entidade" — mantida por decisão de 25/11/2026, por ser entidade religiosa e
+não comercial.
 
 ## Proveniência e limites (leitura crítica)
 1. **Origem declarada:** "planilhas do projeto", atualizadas manualmente. Não há indicação
@@ -54,12 +55,15 @@ parâmetro. Resultado: **175 registros na camada** (171 com coordenada), dos qua
 5. **Sem licença de uso declarada.** Uso acadêmico com atribuição; não redistribuir a
    camada bruta sem contato com a equipe do Atlas.
 
-## Situação frente à base v4.8
-- Base v4.8 tem **8 registros no AM** (5 CNPJ + 3 CEAP, vários com coordenada de município repetida).
-- Auditoria conservadora (`scripts/audit_new_sources_v5.py`): **173 dos 175 são novos**;
-  2 casam com a base (ILÊ AXÉ BARÁ LONÃ; Ilê Axé de Dan).
-- Impacto: o AM passa de 8 para ~181 registros — a maior lacuna regional da base atual.
-- Staging resultante: 8.036 + 173 (AM) + 8 (DF) = **8.217**.
+## Situação frente à base (v5)
+- A v4.8 tinha **8 registros no AM** (5 CNPJ + 3 CEAP, vários com coordenada de município repetida).
+- Auditoria: **173 dos 175 são novos**; 2 casam com a base (ILÊ AXÉ BARÁ LONÃ; Ilê Axé de Dan).
+- Na construção da v5 (`scripts/build_v5.py`), uma **duplicata interna** foi fundida
+  ("ILÊ AXÉ YÁLÓÓDÊ OMIM ORUN" e "Ilê axé Yálóódê omim orun", mesma casa, 1,36 km), resultando
+  em **172 entidades publicadas**. O AM passa de 8 para **180 entidades** no mapa.
+- Visibilidade: 159 das 172 aparecem por padrão; 13 ficam ocultas até revisão (9 aproximadas
+  pelo endereço e 4 no centróide de Manaus, por não trazerem coordenada).
+- Detalhes e auditoria em `data/v5/README.md` e `data/v5/auditoria_v5.json`.
 
 ## Reproduzir
 ```bash

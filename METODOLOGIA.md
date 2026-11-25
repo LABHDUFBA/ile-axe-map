@@ -3,13 +3,13 @@
 ## Ilê Axé Map — Terreiros de Candomblé e espaços religiosos afro-brasileiros da Bahia
 
 **Versão do conjunto de dados:** 2.1 (texto-base deste arquivo)<br>
-**Versão publicada e atualizada:** 4.8 — ver <https://labhdufba.github.io/ile-axe-map/metodologia.html><br>
+**Versão publicada e atualizada:** 5.0 — ver <https://labhdufba.github.io/ile-axe-map/metodologia.html><br>
 **Data de extração e integração:** 25 de julho de 2026; fontes adicionais incorporadas até 24 de novembro de 2026<br>
 **Responsabilidade:** Leonardo Fernandes Nascimento — Laboratório de Humanidades Digitais da Universidade Federal da Bahia (LABHD/UFBA)<br>
 **Repositório:** <https://github.com/LABHDUFBA/ile-axe-map><br>
 **Mapa:** <https://labhdufba.github.io/ile-axe-map/>
 
-> **Nota de versão.** Este arquivo conserva o texto-base da versão 2.1, de recorte baiano e quatro fontes. A versão publicada e efetivamente atualizada é `metodologia.html` (conjunto de dados v4.8, escopo nacional). Para que a proveniência não dependa de metadados dispersos, as fontes incorporadas nas versões 3 e 4 estão documentadas nas Seções 3.5 a 3.10, com suas datas de coleta e limites, e a lista de referências da Seção 13 foi ampliada para incluir todos os sites consultados.
+> **Nota de versão.** Este arquivo conserva o texto-base da versão 2.1, de recorte baiano e quatro fontes. A versão publicada e efetivamente atualizada é `metodologia.html` (conjunto de dados v5, escopo nacional). Para que a proveniência não dependa de metadados dispersos, as fontes incorporadas nas versões 3 e 4 estão documentadas nas Seções 3.5 a 3.10, com suas datas de coleta e limites, e a lista de referências da Seção 13 foi ampliada para incluir todos os sites consultados.
 
 > **Nota de leitura.** O Ilê Axé Map não constitui um censo, um cadastro oficial nem um inventário exaustivo das comunidades religiosas afro-brasileiras da Bahia. Trata-se de uma infraestrutura cartográfica de pesquisa que integra registros oriundos de fontes públicas heterogêneas. Cada ponto representa um **registro consolidado**, com diferentes graus de completude e validação — não a certificação definitiva da existência, da identidade religiosa ou da situação atual de uma comunidade.
 
@@ -143,15 +143,15 @@ Mapa colaborativo nacional mantido pelo CEAP — Centro de Apoio às Populaçõe
 
 O **AxéCloud** (<https://axecloud.com.br/terreiros>) mantém diretório com cerca de 14 mil perfis públicos. A avaliação de proveniência de novembro de 2026 concluiu que se trata de **diretório comercial derivado de plataforma**, não de cadastro comunitário: coordenadas majoritariamente oriundas de `google_maps_url`, fotos em diretório de conteúdo coletado e totalidade da amostra auditada com `verificada: false`. Foi **deliberadamente não incorporado**: aumentaria o volume sem acrescentar evidência independente.
 
-### 3.9. Atlas do Axé — Amazonas (incorporado em staging, novembro de 2026)
+### 3.9. Atlas do Axé — Amazonas (na base desde a v5)
 
 O **Atlas do Axé** (<https://atlasdoaxe.lovable.app/>) reúne **177 registros em 10 municípios do Amazonas**, 152 deles em Manaus. Coleta em 24 de novembro de 2026 a partir da função pública que serve os dados da aplicação, com decodificação do formato de serialização e script versionado (`scripts/ingest_atlas_axe.py`). Composição: 174 terreiros ou templos, 2 lojas de artigos religiosos (a confirmar) e 1 associação. Por decisão editorial, **estabelecimentos comerciais não integram o mapa**: as duas lojas foram excluídas da camada normalizada, restando **175 registros, 171 com coordenada**; a associação foi mantida. Limites: 100% dos registros com `situacao = "A verificar"`, precisão de coordenada majoritariamente "ponto do Google Maps" e ausência de licença declarada. Na auditoria contra a v4.8, **173 dos 175 registros são novos**.
 
-### 3.10. AXÉS — LHS/UnB, Distrito Federal (incorporado em staging, novembro de 2026)
+### 3.10. AXÉS — LHS/UnB, Distrito Federal (na base desde a v5)
 
 A plataforma **AXÉS**, do Laboratório de Habilidades Sociais da UnB (<https://lhs.unb.br/axes-social>), mantém cadastro **autodeclarado** de comunidades. Em 24 de novembro de 2026 o conjunto público continha **8 comunidades no Distrito Federal**, com fichas densas: ano de fundação, nação e linhagem, história de fundação (8 de 8), projetos sociais (6 de 8) e número declarado de membros. O payload não traz coordenadas; a localização foi obtida por geocodificação (Nominatim) com registro do nível de precisão — 1 em nível de endereço, 6 em centroide de região administrativa e 1 sem coordenada —, de modo que esses pontos **não devem ser publicados como localização exata**. Telefones, e-mails, endereços completos e nomes de dirigentes, embora publicados pela fonte, não são migrados. Um registro é a própria plataforma e é classificado como `projeto/plataforma`.
 
-> **Estatuto das incorporações 3.9 e 3.10.** Os registros estão em **staging** (`data/v5_staging/`), não na camada publicada. O conjunto preparado soma **8.217 entidades** (8.036 da v4.8 + 173 do Amazonas + 8 do Distrito Federal). A publicação depende da integração à taxonomia de três níveis e da revisão de duplicatas internas.
+> **Estatuto das incorporações 3.9 e 3.10.** As duas fontes estão na camada publicada desde a **v5** (25/11/2026), construída por `scripts/build_v5.py` e auditada em `data/v5/auditoria_v5.json`. A v5 reúne **8.215 entidades**: 8.036 da v4.8 + **172 do Amazonas** + **7 do Distrito Federal**. O Atlas entrou com 177 registros menos duas lojas de artigos religiosos (comércio não integra o mapa) e menos uma duplicata interna fundida; o AXÉS entrou com 8 comunidades menos o registro da própria plataforma. Das 179 entidades novas, 159 aparecem por padrão e 20 ficam ocultas até revisão (9 aproximações declaradas pela fonte, 4 centróides municipais e as 7 do Distrito Federal em centróide de região administrativa). A v4.8 permanece preservada, o que torna a operação reversível.
 
 ---
 
@@ -390,7 +390,7 @@ Não se recomenda utilizá-lo, sem validação adicional, para:
 
 ### Citação sugerida
 
-> NASCIMENTO, Leonardo Fernandes; LABORATÓRIO DE HUMANIDADES DIGITAIS DA UFBA. **Ilê Axé Map: terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia**. Versão 1.3. Salvador: Universidade Federal da Bahia, 2026. Disponível em: <https://labhdufba.github.io/ile-axe-map/>. Acesso em: dia mês ano.
+> NASCIMENTO, Leonardo Fernandes; LABORATÓRIO DE HUMANIDADES DIGITAIS DA UFBA. **Ilê Axé Map: terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia**. Versão 5.0. Salvador: Universidade Federal da Bahia, 2026. Disponível em: <https://labhdufba.github.io/ile-axe-map/>. Acesso em: dia mês ano.
 
 Ao utilizar registros específicos, recomenda-se citar também a fonte de origem correspondente — OpenStreetMap, Google Places, CEAO/UFBA ou SEMUR/SEFAZ — e informar a versão do conjunto consultado.
 
@@ -403,8 +403,8 @@ Ao utilizar registros específicos, recomenda-se citar também a fonte de origem
 - **Mapeando Axé.** Levantamento colaborativo nacional de terreiros. Disponível em: <https://www.mapeandoaxe.org.br/>.
 - **CEAP — Centro de Apoio às Populações Afro-descendentes.** *Mapa do Axé*. Disponível em: <https://mapadoaxe.ceapoficial.org.br/>.
 - **AxéCloud.** *Diretório de terreiros* — avaliado e não incorporado (ver Seção 3.8). Disponível em: <https://axecloud.com.br/terreiros>.
-- **Atlas do Axé.** *Terreiros e templos do Amazonas* — incorporado em staging (ver Seção 3.9). Disponível em: <https://atlasdoaxe.lovable.app/>.
-- **Laboratório de Habilidades Sociais da Universidade de Brasília.** *AXÉS — comunidades* — incorporado em staging (ver Seção 3.10). Disponível em: <https://lhs.unb.br/axes-social>.
+- **Atlas do Axé.** *Terreiros e templos do Amazonas* — incorporado na v5 (ver Seção 3.9). Disponível em: <https://atlasdoaxe.lovable.app/>.
+- **Laboratório de Habilidades Sociais da Universidade de Brasília.** *AXÉS — comunidades* — incorporado na v5 (ver Seção 3.10). Disponível em: <https://lhs.unb.br/axes-social>.
 - **OpenStreetMap contributors.** *OpenStreetMap*. Disponível em: <https://www.openstreetmap.org/>.
 - **Overpass API.** Interface de consulta ao OpenStreetMap. Disponível em: <https://overpass-api.de/>.
 - **Nominatim.** Serviço de geocodificação do OpenStreetMap, utilizado na localização de registros do CNPJ e do AXÉS/LHS-UnB. Disponível em: <https://nominatim.openstreetmap.org/>.
@@ -416,4 +416,4 @@ Ao utilizar registros específicos, recomenda-se citar também a fonte de origem
 
 *Documento revisto a partir dos arquivos públicos da versão 1.3, commit `be63bf88046276d10ade2e27b220550de8288182`, auditado em 25 de julho de 2026.*
 
-*Seções 3.5 a 3.10 e lista de referências atualizadas em 24 de novembro de 2026, com o registro das fontes incorporadas ao conjunto em staging (v5).*
+*Seções 3.5 a 3.10 e lista de referências atualizadas em 24 de novembro de 2026; Atlas do Axé e AXÉS/LHS-UnB integrados à camada publicada na v5, em 25 de novembro de 2026.*

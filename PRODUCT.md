@@ -29,8 +29,8 @@ O Ilê Axé Map é um atlas público, gratuito e de código aberto dos terreiros
 
 ## Capabilities and Constraints
 
-- **Versão pública atual: v4.1** — `data/v4_1/terreiros_nacional_v4_1.geojson`, 8.036 entidades em todo o Brasil; filtros por fonte, nação e UF; ocultação de localizações aproximadas ativada por padrão.
-- Fontes com rank de confiabilidade: CEAO/UFBA (prioridade de coordenada), OpenStreetMap (ODbL, triagem religião explícita), CNPJ/dados abertos da Receita (evidência textual religiosa + geocode de precisão forte), CEAP (fonte comunitária com crédito), solicitação comunitária.
+- **Versão pública atual: v5** — `data/v5/terreiros_nacional_v5.geojson`, 8.215 entidades em todo o Brasil (8.036 da v4.8 + 172 do Amazonas + 7 do DF); filtros por fonte, nação e UF; ocultação de localizações aproximadas ativada por padrão. Build reproduzível por `scripts/build_v5.py`, com auditoria em `data/v5/auditoria_v5.json`.
+- Fontes com rank de confiabilidade: CEAO/UFBA (prioridade de coordenada), OpenStreetMap (ODbL, triagem religião explícita), CNPJ/dados abertos da Receita (evidência textual religiosa + geocode de precisão forte), CEAP (fonte comunitária com crédito), Atlas do Axé/AM e AXÉS/LHS-UnB/DF (fontes novas da v5, declaração da fonte preservada; comércio religioso não integra o mapa), solicitação comunitária.
 - **Vedações de privacidade (inegociáveis):** o GeoJSON público jamais contém CNPJ, razão social, endereço, CEP, telefone, e-mail ou query de geocodificação; nenhum link público de download do dataset; IDs pessoais crus nunca aparecem em relatórios públicos.
 - **Recorte territorial:** Brasil (nacional desde a v4). Toda adição exige evidência religiosa explícita; metadados religiosos conflitantes implicam exclusão, nunca "correção".
 - Canal de solicitações: Google Form (placeholder até Leonardo criar o form real — nunca inventar URL) + e-mail leofn@ufba.br; respostas em planilha privada; decisões registradas em artefato de auditoria interno sem dados pessoais.
@@ -44,7 +44,7 @@ O Ilê Axé Map é um atlas público, gratuito e de código aberto dos terreiros
 
 ## Evidence on Hand
 
-- GeoJSON público v4.1 com 8.036 entidades e auditoria por fonte; metodologia publicada em `metodologia.html` (deve sempre refletir a release vigente).
+- GeoJSON público v5 com 8.215 entidades e auditoria por fonte; metodologia publicada em `metodologia.html` (deve sempre refletir a release vigente).
 - `docs/nota_tecnica_metodologica.md`, `docs/roteiro-google-form.md`, `README.md` e `METODOLOGIA.md` no repo.
 - Ausências a não fabricar: nenhuma estatística de público, depoimento de comunidade ou patrocínio existe; não citar números além dos das auditorias versionadas.
 

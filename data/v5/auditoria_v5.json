@@ -1,0 +1,85 @@
+{
+ "gerado_em": "2026-11-25T02:35:27+00:00",
+ "base": {
+  "arquivo": "v4_8",
+  "n": 8036
+ },
+ "fontes": {
+  "atlas_axe": {
+   "entrada": 175,
+   "excluidos": [],
+   "fundidos": [
+    {
+     "fonte": "atlas_axe",
+     "mantido": "ILÊ AXÉ YÁLÓÓDÊ OMIM ORUN",
+     "fundido": "Ilê axé Yálóódê omim orun",
+     "dist_m": 1360
+    }
+   ],
+   "publicados": 172,
+   "por_status": {
+    "fonte_declarada_baixa": 5,
+    "centroide_municipio_atlas_axe": 4,
+    "fonte_declarada_aproximada": 9,
+    "fonte_declarada_alta": 154
+   },
+   "por_tradicao": {
+    "Candomblé": 72,
+    "Umbanda": 71,
+    "Não especificada": 22,
+    "Tambor de Mina": 7
+   },
+   "por_uf": {
+    "AM": 172
+   },
+   "com_coordenada": 172,
+   "revisar_nacao": {
+    "Mina Nagô": 3,
+    "Jeje": 3,
+    "Mina": 3
+   }
+  },
+  "axes_unb": {
+   "entrada": 8,
+   "excluidos": [
+    {
+     "nome": "Atlas dos Terreiros",
+     "motivo": "categoria projeto plataforma"
+    }
+   ],
+   "fundidos": [],
+   "publicados": 7,
+   "por_status": {
+    "centroide_suspeito_axes": 6,
+    "centroide_municipio_axes_unb": 1
+   },
+   "por_tradicao": {
+    "Umbanda": 3,
+    "Candomblé": 4
+   },
+   "por_uf": {
+    "DF": 7
+   },
+   "com_coordenada": 7,
+   "revisar_nacao": {
+    "Quimbanda Congo": 1,
+    "JUREMA": 1,
+    "Ketu": 1
+   }
+  }
+ },
+ "total": {
+  "v4_8": 8036,
+  "novos": 179,
+  "camada_v5": 8215,
+  "sem_geometria": [],
+  "por_uf_novos": {
+   "AM": 172,
+   "DF": 7
+  },
+  "por_fonte": {
+   "atlas_axe": 172,
+   "axes_unb": 7
+  }
+ }
+}
