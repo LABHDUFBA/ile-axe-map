@@ -86,6 +86,7 @@
     .reading-note p { margin: 0; }
     .reading-note strong { color: var(--text); }
 
+    .document h2[id] { scroll-margin-top: calc(var(--header-h) + 18px); }
     .page-layout { max-width: 1180px; margin: 0 auto; padding: 64px 24px 96px; display: grid; grid-template-columns: 230px minmax(0,780px); gap: 72px; align-items: start; }
     .toc { position: sticky; top: calc(var(--header-h) + 28px); max-height: calc(100vh - var(--header-h) - 56px); overflow: auto; padding-right: 12px; scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
     .toc__label { margin: 0 0 14px; color: var(--faint); font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
@@ -188,7 +189,15 @@
     </section>
 
     <div class="page-layout">
+      <aside class="toc" aria-label="Sumário da página">
+        <p class="toc__label">Nesta página</p>
+        <ol class="toc-list"><li><a href="#o-que-enviar">O que pode ser enviado, campo a campo</a></li><li><a href="#campos-faltantes">Preencher o que falta no mapa</a></li><li><a href="#como-enviar">Como enviar</a></li><li><a href="#solicitacoes">Correção ou retirada de um registro</a></li><li><a href="#privacidade">Privacidade, sempre</a></li><li><a href="#contato-cta">Escreva para a gente</a></li></ol>
+      </aside>
       <div class="document">
+        <details class="mobile-toc">
+          <summary>Nesta página</summary>
+          <ol class="mobile-toc-list"><li><a href="#o-que-enviar">O que pode ser enviado, campo a campo</a></li><li><a href="#campos-faltantes">Preencher o que falta no mapa</a></li><li><a href="#como-enviar">Como enviar</a></li><li><a href="#solicitacoes">Correção ou retirada de um registro</a></li><li><a href="#privacidade">Privacidade, sempre</a></li><li><a href="#contato-cta">Escreva para a gente</a></li></ol>
+        </details>
 
         <p class="reading-note"><strong>Quem conhece melhor um terreiro é a própria comunidade</strong> que o constrói, preserva e transforma no dia a dia. Convidamos as comunidades de terreiro a consultar seus registros no Ilê Axé Map e nos dizer o que precisa ser atualizado. Se uma informação estiver incorreta, incompleta ou não deva permanecer no mapa, qualquer pessoa afetada pode solicitar a correção, a adição ou a retirada de um registro — o pedido é gratuito e não exige justificativa. Fotos e descrições enviadas pelas próprias comunidades terão prioridade, pois ajudam a apresentar cada casa a partir de sua voz e de sua história. Também cuidamos da privacidade: o mapa nunca publica endereço, telefone ou dados pessoais. Ao encontrar seu terreiro, envie apenas o que considerar adequado — cada contribuição ajuda a tornar o atlas mais preciso, responsável e útil.</p>
 
