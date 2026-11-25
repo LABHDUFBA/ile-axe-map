@@ -11,7 +11,7 @@ DATA_FILE = Path(__file__).parent.parent / "data" / "terreirosdobrasil" / "terre
 OUTPUT_FILE = Path(__file__).parent.parent / "data" / "terreirosdobrasil" / "terreirosdobrasil_recovered.json"
 
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
-HEADERS = {"User-Agent": "IlêAxéMap-Recovery/1.0 (research@labhdufba.org)", "Accept": "application/json"}
+HEADERS = {"User-Agent": "IlêAxéMap-Recovery/1.0 (labhdufba@gmail.com)", "Accept": "application/json"}
 DELAY = 1.0
 
 # Palavras-chave que indicam anúncio comercial (não terreiro)

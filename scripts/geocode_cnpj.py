@@ -28,7 +28,7 @@ RESULTS_DIR = CACHE_DIR
 
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 HEADERS = {
-    "User-Agent": "IlêAxéMap-CNPJ-Geocoder/1.0 (research@labhdufba.org)",
+    "User-Agent": "IlêAxéMap-CNPJ-Geocoder/1.0 (labhdufba@gmail.com)",
     "Accept": "application/json",
 }
 DELAY = 1.0  # 1 req/seg

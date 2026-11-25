@@ -180,7 +180,7 @@ def geocode_nominatim(address: str, cidade: str = "", uf: str = "") -> tuple:
         "countrycodes": "br",
     }
     headers = {
-        "User-Agent": "TerreirosDoBrasil-Scraper/1.0 (research@labhdufba.org)",
+        "User-Agent": "TerreirosDoBrasil-Scraper/1.0 (labhdufba@gmail.com)",
     }
     try:
         _time.sleep(1.0)  # Respeitar política de uso do Nominatim (1 req/seg)
