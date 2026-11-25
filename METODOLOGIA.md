@@ -283,7 +283,7 @@ A governança responsável do atlas deve compreender:
 5. **consulta comunitária**, incorporando representantes das tradições mapeadas à definição das regras de publicação;
 6. **avaliação periódica de risco**, considerando que mudanças no contexto político e tecnológico podem alterar os efeitos da exposição.
 
-Solicitações de correção, atualização ou retirada podem ser encaminhadas a **leofn@ufba.br**. Uma política pública de governança, com prazos, critérios e modalidades de resposta, deverá acompanhar as próximas versões.
+Solicitações de correção, atualização ou retirada podem ser encaminhadas a **ileaxemap@gmail.com**. Uma política pública de governança, com prazos, critérios e modalidades de resposta, deverá acompanhar as próximas versões.
 
 ---
 

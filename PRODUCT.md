@@ -33,7 +33,7 @@ O Ilê Axé Map é um atlas público, gratuito e de código aberto dos terreiros
 - Fontes com rank de confiabilidade: CEAO/UFBA (prioridade de coordenada), OpenStreetMap (ODbL, triagem religião explícita), CNPJ/dados abertos da Receita (evidência textual religiosa + geocode de precisão forte), CEAP (fonte comunitária com crédito), Atlas do Axé/AM e AXÉS/LHS-UnB/DF (fontes novas da v5, declaração da fonte preservada; comércio religioso não integra o mapa), solicitação comunitária.
 - **Vedações de privacidade (inegociáveis):** o GeoJSON público jamais contém CNPJ, razão social, endereço, CEP, telefone, e-mail ou query de geocodificação; nenhum link público de download do dataset; IDs pessoais crus nunca aparecem em relatórios públicos.
 - **Recorte territorial:** Brasil (nacional desde a v4). Toda adição exige evidência religiosa explícita; metadados religiosos conflitantes implicam exclusão, nunca "correção".
-- Canal de solicitações: Google Form (placeholder até Leonardo criar o form real — nunca inventar URL) + e-mail leofn@ufba.br; respostas em planilha privada; decisões registradas em artefato de auditoria interno sem dados pessoais.
+- Canal de solicitações: Google Form (placeholder até Leonardo criar o form real — nunca inventar URL) + e-mail ileaxemap@gmail.com; respostas em planilha privada; decisões registradas em artefato de auditoria interno sem dados pessoais.
 - Cores dos filtros servem à navegação e não representam parentesco entre tradições; declarações de nação permanecem literais (Keto, Alaketo, Jêje Nagô, compostos), sem inferência por nome.
 
 ## Brand Commitments

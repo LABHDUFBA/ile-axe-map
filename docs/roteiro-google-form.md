@@ -4,7 +4,7 @@
 
 Este roteiro substitui a versão anterior (8 perguntas genéricas). O formulário agora reproduz **a mesma ficha campo a campo** que o mapa pré-preenche no link *"Completar estas informações"*: quem chega pelo painel de um registro encontra o nome, o ID e a localização já preenchidos e só completa o que sabe.
 
-O e-mail (`leofn@ufba.br`) continua valendo como caminho alternativo e para anexos.
+O e-mail (`ileaxemap@gmail.com`) continua valendo como caminho alternativo e para anexos.
 
 ---
 
@@ -189,7 +189,7 @@ https://docs.google.com/forms/d/e/<ID>/viewform?usp=pp_url
 ## 10. Planilha de respostas (privada)
 
 - Google Sheets vinculado: **`respostas-ile-axe-map`** — privado, nunca publicado, sem link público de download.
-- Notificação por e-mail para `leofn@ufba.br` a cada resposta.
+- Notificação por e-mail para `ileaxemap@gmail.com` a cada resposta.
 - Colunas de trabalho na planilha (além das respostas brutas): `entity_id`, `aplicado_em`, `versao_aplicada`, `decisao` (`aplicado` / `recusado` / `pendente`), `motivo_recusa`, `origem_dado`.
 
 ---
