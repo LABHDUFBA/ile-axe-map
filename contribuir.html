@@ -207,6 +207,29 @@
     .ok p { margin: 0 0 12px; font-size: 14.5px; line-height: 1.65; color: var(--muted); }
     .ok a { color: var(--accent); }
     .ok textarea { width: 100%; box-sizing: border-box; min-height: 200px; font: 12.5px ui-monospace, monospace; padding: 10px; border: 1px solid var(--border-strong); border-radius: 6px; background: var(--bg); color: var(--text); }
+    /* ---- busca de registro ---- */
+    .combo { position: relative; }
+    .combo__campo { position: relative; }
+    .combo__list { position: absolute; z-index: 40; left: 0; right: 0; top: calc(100% + 4px);
+      margin: 0; padding: 4px 4px 6px; list-style: none; max-height: 320px; overflow-y: auto;
+      overscroll-behavior: contain; background: var(--bg); border: 1px solid var(--border-strong);
+      border-radius: 8px; box-shadow: 0 14px 32px rgba(0,0,0,.16), 0 2px 6px rgba(0,0,0,.06);
+      scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
+    .combo__list::-webkit-scrollbar { width: 9px; }
+    .combo__list::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 9px; }
+    .combo__list::-webkit-scrollbar-track { background: transparent; }
+    .combo__opt { padding: 9px 11px; border-radius: 5px; cursor: pointer; line-height: 1.35; }
+    .combo__opt[aria-selected="true"] { background: var(--accent-soft); }
+    .combo__nome { display: block; font-size: 15px; color: var(--text); }
+    .combo__meta { display: block; font-size: 12.5px; color: var(--faint); margin-top: 2px; }
+    .combo__opt mark { background: #F3D9A8; color: #3A2A16; font-weight: 700; padding: 0 1px; border-radius: 2px; }
+    .combo__status { margin: 6px 0 0; font-size: 12.5px; line-height: 1.5; color: var(--faint); min-height: 1.2em; }
+    .combo__status--ok { color: var(--accent); font-weight: 600; }
+    .combo__rodape { position: sticky; bottom: -6px; margin: 2px 0 0; padding: 7px 11px 6px;
+      font-size: 12px; line-height: 1.4; color: var(--faint); background: var(--bg);
+      border-top: 1px solid var(--border); }
+    .combo__vazio { padding: 14px 12px; font-size: 13.5px; line-height: 1.55; color: var(--muted); }
+    .combo__vazio strong { color: var(--text); }
     [hidden] { display: none !important; }
   </style>
 <body data-endpoint="https://formspree.io/f/moedbljd">
@@ -255,15 +278,20 @@
           <fieldset>
             <legend>Qual registro</legend>
             <div class="field">
-              <label for="registro">Terreiro, centro ou casa</label>
-              <span class="hint">Lista com os registros publicados. Se não encontrar, escreva o nome no campo seguinte.</span>
-              <select id="registro" name="registro">
-                <option value="">— escolha na lista —</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="registro_manual">Ou escreva o nome, se não estiver na lista</label>
-              <input type="text" id="registro_manual" name="registro_manual" autocomplete="off">
+              <label for="registro_busca">Terreiro, centro ou casa</label>
+              <span class="hint">Digite parte do nome, do município ou a sigla do estado. Acentos e maiúsculas não atrapalham.</span>
+              <div class="combo">
+                <div class="combo__campo">
+                  <input type="text" id="registro_busca" name="registro_busca" role="combobox"
+                         aria-expanded="false" aria-controls="lista-registros" aria-autocomplete="list"
+                         aria-describedby="registro-status" autocomplete="off" spellcheck="false"
+                         placeholder="ex.: tolori, mapele, salvador">
+                  <ul id="lista-registros" class="combo__list" role="listbox" aria-label="Registros encontrados" hidden></ul>
+                </div>
+                <p id="registro-status" class="combo__status" aria-live="polite"></p>
+                <input type="hidden" id="registro" name="registro">
+                <input type="hidden" id="registro_manual" name="registro_manual">
+              </div>
             </div>
             <div class="field">
               <span class="label required">O que você quer fazer</span>

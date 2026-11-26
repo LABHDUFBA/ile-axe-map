@@ -11,47 +11,245 @@
   var tipoCasa = document.querySelectorAll('input[name="tipo_casa"]');
   var blocoNoMapa = document.getElementById('bloco-no-mapa');
   var blocoForaMapa = document.getElementById('bloco-fora-mapa');
-  var selRegistro = document.getElementById('registro');
+  var campoBusca = document.getElementById('registro_busca');
+  var listaRegistros = document.getElementById('lista-registros');
+  var statusRegistro = document.getElementById('registro-status');
+  var idRegistro = document.getElementById('registro');
+  var textoManual = document.getElementById('registro_manual');
   var saida = document.getElementById('resultado');
   var btn = document.getElementById('enviar');
-  var registros = [];
+  var registros = null;      // [{id, nome, mun, uf}] — carregado sob demanda
+  var carregando = false;
+  var resultados = [];
+  var ativo = -1;
+  var selecionado = null;
+  var preId = null;
 
-  // ---- lista de registros, lida do próprio GeoJSON do mapa -------------------
-  fetch('data/v5/terreiros_nacional_v5.geojson')
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (g) {
-      if (!g || !g.features) return;
-      registros = g.features.map(function (f) {
-        var p = f.properties || {};
-        return {
-          id: p.entity_id || '',
-          nome: p.nome || 'Terreiro sem nome',
-          local: [p.municipio, p.uf].filter(Boolean).join('/')
-        };
-      }).filter(function (r) { return r.id; })
-        .sort(function (a, b) { return a.nome.localeCompare(b.nome, 'pt-BR'); });
+  // ---- busca de registro -----------------------------------------------------
+  // O índice é compacto (data/v5/indice_busca.json, ~490 KB contra 5,8 MB do GeoJSON) e só é
+  // baixado quando alguém começa a digitar: quem abre o formulário para corrigir o próprio
+  // terreiro não deve pagar o download de um seletor com 8 mil opções.
 
-      registros.forEach(function (r) {
-        var o = document.createElement('option');
-        o.value = r.id;
-        o.textContent = r.nome + (r.local ? ' — ' + r.local : '');
-        selRegistro.appendChild(o);
-      });
-      // A lista chega depois do parse da URL; sem isto, o <select> não aceita um valor que
-      // ainda não existe e a pré-seleção do link da ficha se perde.
-      if (preIdPendente) selRegistro.value = preIdPendente;
-    })
-    .catch(function () { /* sem a lista, o campo de texto continua valendo */ });
+  function normalizar(t) {
+    return String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  }
+
+  function carregar() {
+    if (registros || carregando) return;
+    carregando = true;
+    status('Carregando a lista de registros…');
+    fetch('data/v5/indice_busca.json')
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || !d.e) return;
+        var m = d.m || [];
+        registros = d.e.map(function (e) {
+          return {
+            id: e[0], nome: e[1],
+            mun: m[e[2]] || '', uf: e[3] || '',
+            alt: e[4] || '',
+            _nome: normalizar(e[1]),
+            _alvo: normalizar([e[1], m[e[2]] || '', e[3] || '', e[4] || ''].join(' '))
+          };
+        });
+        if (preId) {
+          var achado = registros.filter(function (r) { return r.id === preId; })[0];
+          if (achado) escolher(achado, true);
+        }
+        // Se a seleção já veio do link da ficha, o campo está resolvido: não reabrir a lista
+        // nem trocar o status de "Selecionado" por uma contagem de resultados.
+        if (!selecionado) { status(''); renderizar(); }
+      })
+      .catch(function () { status('Não foi possível carregar a lista. Escreva o nome da casa à mão.'); })
+      .then(function () { carregando = false; });
+  }
+
+  function status(texto, ok) {
+    if (!statusRegistro) return;
+    statusRegistro.textContent = texto || '';
+    statusRegistro.className = 'combo__status' + (ok ? ' combo__status--ok' : '');
+  }
+
+  // Ranqueia: nome igual > nome começa > palavra do nome começa > contém no nome > só no
+  // município/UF. Assim "salvador" acha as casas de Salvador e "casa de xango" acha o nome.
+  function pontuar(r, termos) {
+    var total = 0;
+    for (var i = 0; i < termos.length; i++) {
+      var t = termos[i];
+      var p = r._nome.indexOf(t);
+      if (p === 0 && r._nome.length === t.length) total += 0;
+      else if (p === 0) total += 1;
+      else if (p > 0 && r._nome.charAt(p - 1) === ' ') total += 2;
+      else if (p > 0) total += 3;
+      else if (r._alvo.indexOf(t) >= 0) total += 5;
+      else return -1;   // o termo não aparece: fora
+    }
+    return total;
+  }
+
+  function buscar(termo) {
+    if (!registros) return [];
+    var termos = normalizar(termo).split(/\s+/).filter(Boolean);
+    if (!termos.length) return [];
+    var achados = [];
+    for (var i = 0; i < registros.length; i++) {
+      var p = pontuar(registros[i], termos);
+      if (p >= 0) achados.push([p, registros[i]]);
+    }
+    achados.sort(function (a, b) {
+      if (a[0] !== b[0]) return a[0] - b[0];
+      return a[1].nome.localeCompare(b[1].nome, 'pt-BR');
+    });
+    return achados.slice(0, 40).map(function (x) { return x[1]; });
+  }
+
+  function marcar(texto, termos) {
+    var out = '', baixo = normalizar(texto), i = 0;
+    var posicoes = [];
+    termos.forEach(function (t) {
+      var de = 0, p;
+      while ((p = baixo.indexOf(t, de)) >= 0) { posicoes.push([p, p + t.length]); de = p + t.length; }
+    });
+    if (!posicoes.length) return esc(texto);
+    posicoes.sort(function (a, b) { return a[0] - b[0]; });
+    var ate = 0;
+    posicoes.forEach(function (par) {
+      if (par[0] < ate) return;             // sobreposição: ignora
+      out += esc(texto.slice(i, par[0])) + '<mark>' + esc(texto.slice(par[0], par[1])) + '</mark>';
+      i = par[1]; ate = par[1];
+    });
+    return out + esc(texto.slice(i));
+  }
+
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function renderizar() {
+    if (!listaRegistros || !campoBusca) return;
+    if (selecionado && campoBusca.value.trim() === selecionado.nome) { fechar(); return; }
+    var termo = campoBusca.value.trim();
+    var termos = normalizar(termo).split(/\s+/).filter(Boolean);
+    resultados = buscar(termo);
+    ativo = -1;
+    listaRegistros.innerHTML = '';
+
+    if (!termo) { fechar(); status(registros ? '' : ''); return; }
+    if (!registros) { fechar(); return; }
+
+    if (!resultados.length) {
+      fechar();
+      status('Nenhum registro com “' + termo + '”. Deixe assim mesmo: o nome escrito vai na contribuição.');
+      return;
+    }
+
+    resultados.forEach(function (r, i) {
+      var li = document.createElement('li');
+      li.className = 'combo__opt';
+      li.id = 'opt-' + i;
+      li.setAttribute('role', 'option');
+      li.setAttribute('aria-selected', 'false');
+      var local = [r.mun, r.uf].filter(Boolean).join('/');
+      li.innerHTML = '<span class="combo__nome">' + marcar(r.nome, termos) + '</span>' +
+        (local ? '<span class="combo__meta">' + esc(local) +
+          (r.alt ? ' · antes: ' + esc(r.alt) : '') + '</span>' : '');
+      li.addEventListener('mousedown', function (ev) { ev.preventDefault(); escolher(r, true); });
+      listaRegistros.appendChild(li);
+    });
+
+    var rodape = document.createElement('li');
+    rodape.className = 'combo__rodape';
+    rodape.setAttribute('role', 'presentation');
+    rodape.textContent = resultados.length === 40
+      ? 'Mostrando os 40 mais prováveis — refine a busca'
+      : resultados.length + (resultados.length === 1 ? ' registro encontrado' : ' registros encontrados');
+    listaRegistros.appendChild(rodape);
+
+    listaRegistros.hidden = false;
+    campoBusca.setAttribute('aria-expanded', 'true');
+    status(resultados.length + (resultados.length === 1 ? ' resultado' : ' resultados') +
+      ' — use as setas e Enter para escolher.');
+  }
+
+  function fechar() {
+    if (listaRegistros) listaRegistros.hidden = true;
+    if (campoBusca) {
+      campoBusca.setAttribute('aria-expanded', 'false');
+      campoBusca.removeAttribute('aria-activedescendant');
+    }
+    ativo = -1;
+  }
+
+  function realcar(i) {
+    var itens = listaRegistros.querySelectorAll('.combo__opt');
+    Array.prototype.forEach.call(itens, function (el, k) {
+      el.setAttribute('aria-selected', k === i ? 'true' : 'false');
+    });
+    if (i >= 0 && itens[i]) {
+      campoBusca.setAttribute('aria-activedescendant', itens[i].id);
+      itens[i].scrollIntoView({ block: 'nearest' });
+    }
+  }
+
+  function escolher(r, fecharLista) {
+    selecionado = r;
+    if (idRegistro) idRegistro.value = r.id;
+    if (textoManual) textoManual.value = '';
+    if (campoBusca) campoBusca.value = r.nome;
+    var local = [r.mun, r.uf].filter(Boolean).join('/');
+    status('Selecionado: ' + r.nome + (local ? ' — ' + local : '') + '.', true);
+    if (fecharLista) fechar();
+  }
+
+  function limparSelecao() {
+    selecionado = null;
+    if (idRegistro) idRegistro.value = '';
+    if (textoManual) textoManual.value = '';
+    if (campoBusca) campoBusca.value = '';
+    status('');
+    fechar();
+  }
+
+  if (campoBusca) {
+    var debounce = null;
+    campoBusca.addEventListener('focus', carregar);
+    campoBusca.addEventListener('input', function () {
+      carregar();
+      // Sem seleção da lista, o texto digitado ainda vale como nome — nada se perde.
+      selecionado = null;
+      if (idRegistro) idRegistro.value = '';
+      if (textoManual) textoManual.value = campoBusca.value.trim();
+      if (!campoBusca.value.trim()) status('');
+      clearTimeout(debounce);
+      debounce = setTimeout(renderizar, 110);
+    });
+    campoBusca.addEventListener('keydown', function (ev) {
+      if (ev.key === 'ArrowDown' || ev.key === 'ArrowUp') {
+        if (!resultados.length) return;
+        ev.preventDefault();
+        ativo = ev.key === 'ArrowDown'
+          ? (ativo + 1) % resultados.length
+          : (ativo <= 0 ? resultados.length - 1 : ativo - 1);
+        realcar(ativo);
+      } else if (ev.key === 'Enter') {
+        if (ativo >= 0 && resultados[ativo]) { ev.preventDefault(); escolher(resultados[ativo], true); }
+        else if (resultados.length === 1) { ev.preventDefault(); escolher(resultados[0], true); }
+        else fechar();
+      } else if (ev.key === 'Escape') {
+        fechar();
+      } else if (ev.key === 'Tab') {
+        fechar();
+      }
+    });
+    campoBusca.addEventListener('blur', function () { setTimeout(fechar, 120); });
+  }
 
   // ---- estado inicial a partir da URL --------------------------------------
   var qs = new URLSearchParams(location.search);
-  var preId = qs.get('registro') || qs.get('id');
-  var preIdPendente = preId;
+  preId = qs.get('registro') || qs.get('id');
   if (preId) {
     marcarTipo('no_mapa');
-    selRegistro.value = preId;
-    var manual = document.getElementById('registro_manual');
-    if (manual) manual.value = preId;
+    carregar();   // resolve o nome a partir do id; o campo mostra o nome assim que a lista chega
     var acao = qs.get('acao');
     if (acao) {
       var alvo = document.querySelector('input[name="acao"][value="' + acao + '"]');
@@ -90,11 +288,14 @@
   }
 
   function rotuloRegistro() {
-    var id = selRegistro.value;
-    var nomeManual = v('registro_manual');
-    if (!id) return nomeManual || '(não informado)';
-    var r = registros.filter(function (x) { return x.id === id; })[0];
-    return (r ? r.nome : (nomeManual || id)) + ' [' + id + (r && r.local ? ' — ' + r.local : '') + ']';
+    if (selecionado) {
+      var local = [selecionado.mun, selecionado.uf].filter(Boolean).join('/');
+      return selecionado.nome + ' [' + selecionado.id + (local ? ' — ' + local : '') + ']';
+    }
+    var digitado = v('registro_manual');
+    if (digitado) return digitado + ' (não escolhido na lista)';
+    if (preId) return preId + ' (registro do link, nome não carregado)';
+    return '(não informado)';
   }
 
   function montar() {
@@ -189,7 +390,7 @@
     fetch(ENDPOINT, { method: 'POST', body: dados, headers: { Accept: 'application/json' } })
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); })
       .then(function () {
-        form.reset(); atualizar();
+        form.reset(); atualizar(); limparSelecao();
         btn.disabled = false; btn.textContent = 'Enviar contribuição';
         mostrarOk('enviado', corpo);
       })
@@ -198,10 +399,6 @@
         mostrarOk('falhou', corpo);
       });
   });
-
-  function esc(s) {
-    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  }
 
   function mostrarOk(modo, corpo) {
     form.hidden = true;

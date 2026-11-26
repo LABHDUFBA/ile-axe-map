@@ -441,6 +441,11 @@ def main():
     json.dump(auditoria, open(os.path.join(OUT_DIR, "auditoria_v5.json"), "w",
                               encoding="utf-8"), ensure_ascii=False, indent=1)
 
+    # O seletor de registro do formulário de contribuição lê um índice próprio, não o GeoJSON.
+    # Regerado aqui para não haver como o índice sobreviver a uma mudança de base.
+    from build_indice_busca import construir as construir_indice
+    construir_indice()
+
     print(f"v4.8 {len(base)} + novos {len(novos)} = {len(camada['features'])} entidades")
     for fonte, a in auditoria["fontes"].items():
         print(f"  {fonte}: entrada {a['entrada']} | excluídos {len(a['excluidos'])} | "
