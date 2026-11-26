@@ -8,6 +8,7 @@ execução; se o CSS da metodologia mudar, basta rodar de novo.
 
 Uso: python3 scripts/build_paginas_contribuicao.py
 """
+import hashlib
 import json
 import os
 import re
@@ -118,7 +119,7 @@ CSS_FORM = """
 # ---------------------------------------------------------------------------
 # 2. contribuir.html
 # ---------------------------------------------------------------------------
-CORPO_FORM = """<body data-endpoint="">
+CORPO_FORM = """<body data-endpoint="" data-indice="">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <header class="site-header">
     <div class="site-header__inner">
@@ -387,6 +388,18 @@ def endpoint_configurado():
         return ""
 
 
+def assinatura(caminho):
+    """Hash curto do conteúdo de um arquivo publicado. Vai na URL para que o navegador não
+    reutilize uma versão anterior: o GitHub Pages serve tudo com max-age=600, e HTML novo com
+    JS antigo é uma combinação que já apareceu em produção — o campo de busca existia e o
+    comportamento não."""
+    try:
+        with open(caminho, "rb") as fh:
+            return hashlib.sha256(fh.read()).hexdigest()[:10]
+    except OSError:
+        return "0"
+
+
 def gerar_contribuir():
     html = cabecalho(
         "Contribuir",
@@ -394,7 +407,12 @@ def gerar_contribuir():
         "Contribuir")
     html = html[:html.index("</style>")] + CSS_FORM + "  </style>" + html[html.index("</style>") + len("</style>"):]
     ep = endpoint_configurado()
+    v_js = assinatura(os.path.join(REPO, "data", "contribuir.js"))
+    v_indice = assinatura(os.path.join(REPO, "data", "v5", "indice_busca.json"))
     corpo = CORPO_FORM.replace('data-endpoint=""', 'data-endpoint="%s"' % ep)
+    corpo = corpo.replace('data-indice=""', 'data-indice="%s"' % v_indice)
+    corpo = corpo.replace('<script src="data/contribuir.js"></script>',
+                          '<script src="data/contribuir.js?v=%s"></script>' % v_js)
     if ep:
         corpo = corpo.replace(
             "<p class=\"actions__note\">O envio abre seu aplicativo de e-mail com a mensagem já preenchida — e nada em branco.</p>",

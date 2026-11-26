@@ -4,6 +4,7 @@
   // Preenchido quando houver um serviço de formulário (Formspree ou equivalente).
   // Vazio = envio por e-mail, com o corpo montado aqui.
   var ENDPOINT = (document.body && document.body.getAttribute('data-endpoint')) || '';
+  var V_INDICE = (document.body && document.body.getAttribute('data-indice')) || '';
 
   var form = document.getElementById('form');
   if (!form) return;
@@ -31,14 +32,16 @@
   // terreiro não deve pagar o download de um seletor com 8 mil opções.
 
   function normalizar(t) {
-    return String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    var s = String(t || '');
+    if (s.normalize) s = s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    return s.toLowerCase();
   }
 
   function carregar() {
     if (registros || carregando) return;
     carregando = true;
     status('Carregando a lista de registros…');
-    fetch('data/v5/indice_busca.json')
+    fetch('data/v5/indice_busca.json' + (V_INDICE ? '?v=' + V_INDICE : ''))
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (d) {
         if (!d || !d.e) return;
@@ -60,7 +63,9 @@
         // nem trocar o status de "Selecionado" por uma contagem de resultados.
         if (!selecionado) { status(''); renderizar(); }
       })
-      .catch(function () { status('Não foi possível carregar a lista. Escreva o nome da casa à mão.'); })
+      .catch(function () {
+        status('A lista de registros não carregou. Escreva o nome da casa no campo acima — ele vai na contribuição.');
+      })
       .then(function () { carregando = false; });
   }
 
@@ -214,6 +219,9 @@
     var debounce = null;
     campoBusca.addEventListener('focus', carregar);
     campoBusca.addEventListener('input', function () {
+      try { tratarDigitacao(); } catch (e) { status('A busca falhou neste navegador (' + e.message + '). Escreva o nome da casa e siga — ele vai na contribuição.'); }
+    });
+    function tratarDigitacao() {
       carregar();
       // Sem seleção da lista, o texto digitado ainda vale como nome — nada se perde.
       selecionado = null;
@@ -221,8 +229,10 @@
       if (textoManual) textoManual.value = campoBusca.value.trim();
       if (!campoBusca.value.trim()) status('');
       clearTimeout(debounce);
-      debounce = setTimeout(renderizar, 110);
-    });
+      debounce = setTimeout(function () {
+        try { renderizar(); } catch (e) { status('A busca falhou neste navegador (' + e.message + '). Escreva o nome da casa e siga.'); }
+      }, 110);
+    }
     campoBusca.addEventListener('keydown', function (ev) {
       if (ev.key === 'ArrowDown' || ev.key === 'ArrowUp') {
         if (!resultados.length) return;
