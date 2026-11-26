@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-25T02:35:27+00:00",
+ "gerado_em": "2026-11-26T11:42:42+00:00",
  "base": {
   "arquivo": "v4_8",
   "n": 8036
@@ -65,6 +65,30 @@
     "Quimbanda Congo": 1,
     "JUREMA": 1,
     "Ketu": 1
+   }
+  }
+ },
+ "reparos": {
+  "colapso_mossoro_v46": {
+   "registros": 700,
+   "entity_ids": [
+    "e_5f460de11578_AC",
+    "e_5f460de11578_BA",
+    "e_5f460de11578_CE",
+    "e_5f460de11578_GO",
+    "e_5f460de11578_MG",
+    "e_5f460de11578_PE",
+    "e_5f460de11578_PI",
+    "e_5f460de11578_RJ",
+    "e_5f460de11578_RN",
+    "e_5f460de11578_RS",
+    "e_5f460de11578_SP"
+   ],
+   "origem_do_reparo": "data/v4_5/terreiros_nacional_v4_5.geojson (estado anterior ao v46)",
+   "regra": "coordenada/município/UF/geo_status restaurados; pareamento por ordem dentro do entity_id",
+   "por_status_resultante": {
+    "centroide_suspeito": 664,
+    "uf_divergente": 36
    }
   }
  },

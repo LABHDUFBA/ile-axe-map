@@ -391,9 +391,12 @@
         <dt>Versão</dt><dd>v5 (base v4.8 + Atlas do Axé/AM e AXÉS/LHS-UnB/DF; taxonomia em três níveis: tradição → nação → raiz)</dd>
         <dt>Modelo</dt><dd>entidade ↔ ocorrência (multi-fonte)</dd>
         <dt>Total</dt><dd id="dataset-total">8.215 entidades</dd>
-        <dt>Com coordenada</dt><dd id="dataset-georef">8.215</dd>
+        <dt>Com coordenada</dt><dd id="dataset-georef">—</dd>
         <dt>Fontes</dt><dd>CEAO/UFBA · CNPJ/RFB · Mapeando Axé · Google Places · OSM · SEFAZ · CEAP · Atlas do Axé (AM) · AXÉS/LHS-UnB (DF)</dd>
       </dl>
+      <h3>Quantos terreiros o mapa mostra</h3>
+      <p style="font-size:12.5px;line-height:1.6">O total é <strong>8.215 registros</strong>; por padrão aparecem <strong>5.670</strong>. Os demais têm apenas localização aproximada — centróide de município, endereço que não resolveu ou UF divergente do endereço — e ficam ocultos para não sugerir uma precisão que não existe. Quem decide é a caixa <em>Ocultar localizações aproximadas</em>: desmarcada, todos aparecem no mapa. Quando um número do atlas for citado fora daqui, diga qual dos dois está sendo usado.</p>
+      <p style="font-size:12.5px;line-height:1.6"><strong>Correção de novembro de 2026.</strong> Setecentos registros da fonte CNPJ haviam sido gravados numa única coordenada, no centro de Mossoró/RN, e marcados como validados — apareciam empilhados num ponto só. Eles voltaram ao estado anterior (localização aproximada, oculta por padrão) e estão marcados no dado com o campo <code>reparo</code>. Ver <a href="metodologia.html#correcao-mossoro">metodologia</a>.</p>
       <h3>As nações no mapa</h3>
       <p style="font-size:12.5px;line-height:1.55">O mapa organiza a classificação em três níveis: a <strong>tradição</strong> (candomblé, umbanda, jurema, tambor de mina, batuque, terecô, omoloko, entre outras), a <strong>nação</strong> — forma de nomear linhagens e referências rituais compartilhadas — e a <strong>raiz</strong> ou família, quando a casa a declara. Uma casa pode declarar mais de uma tradição ou nação; nesse caso, todas ficam registradas, sem escolher uma como definitiva.</p>
       <p style="font-size:12.5px;line-height:1.55"><strong>Keto (Queto)</strong> reúne casas ligadas sobretudo a matrizes iorubás, com centralidade dos orixás e repertórios próprios de língua, cantos e práticas. <strong>Angola</strong> vincula-se a matrizes bantu da África Central, com referências aos inquices e formas rituais transmitidas por suas comunidades. <strong>Jeje</strong> identifica linhagens relacionadas a matrizes ewe-fon e à reverência aos voduns. <strong>Keto Angola</strong> é adotada por casas que reconhecem a articulação entre as heranças Keto e Angola. A <strong>Umbanda</strong> aparece como categoria distinta: não é uma nação do candomblé, mas uma religião afro-brasileira com identidade própria.</p>
@@ -755,7 +758,17 @@
           markerCluster.addLayer(marker);
         });
       }
-      $('count-badge').textContent = visibleFeatures.length.toLocaleString('pt-BR') + ' terreiros';
+      const totalReg = features.length;
+      const vis = visibleFeatures.length;
+      if (vis === totalReg) {
+        $('count-badge').textContent = vis.toLocaleString('pt-BR') + ' terreiros';
+        $('count-badge').removeAttribute('title');
+      } else {
+        // O número divulgado é o total de registros; o mapa, por padrão, esconde os que só têm
+        // localização aproximada. Mostrar os dois evita a leitura de que o atlas "perdeu" terreiros.
+        $('count-badge').textContent = vis.toLocaleString('pt-BR') + ' de ' + totalReg.toLocaleString('pt-BR') + ' terreiros';
+        $('count-badge').title = (totalReg - vis).toLocaleString('pt-BR') + ' registros têm apenas localização aproximada (centroide de município) e ficam ocultos por padrão. Desmarque "Ocultar localizações aproximadas" para vê-los.';
+      }
     }
 
     function onPointClick(feature, marker) {
@@ -919,13 +932,18 @@
     }
 
     let hideApprox = true;
+    // Uma lista só: o filtro do mapa, a contagem do cabeçalho e a ficha "Sobre" precisam concordar
+    // sobre o que é localização aproximada — três cópias da mesma regra divergem na primeira edição.
+    const STATUS_APROXIMADO = ['centroide_suspeito', 'centroide_municipio', 'uf_divergente', 'coordenada_agua',
+                               'geocode_nao_resolvido', 'geocode_divergente', 'fonte_declarada_aproximada'];
+    function isAproximado(props) {
+      const gs = String((props && props.geo_status) || '');
+      return STATUS_APROXIMADO.some(function(s) { return gs.indexOf(s) !== -1; });
+    }
     function getVisibleFeatures() {
       const q = searchQuery ? searchQuery.toLowerCase() : '';
       return features.filter(f => {
-        if (hideApprox) {
-          const gs = String(f.properties.geo_status || '');
-          if (gs.indexOf('centroide_suspeito') !== -1 || gs.indexOf('centroide_municipio') !== -1 || gs.indexOf('uf_divergente') !== -1 || gs.indexOf('coordenada_agua') !== -1 || gs.indexOf('geocode_nao_resolvido') !== -1 || gs.indexOf('geocode_divergente') !== -1 || gs.indexOf('fonte_declarada_aproximada') !== -1) return false;
-        }
+        if (hideApprox && isAproximado(f.properties)) return false;
         if (q) {
           const p = f.properties;
           const haystack = ((getName(p) || '') + ' ' + (p.nacao || '') + ' ' + (p.municipio || '') + ' ' + (p.uf || '')).toLowerCase();
@@ -1020,6 +1038,9 @@
         features = data.features
           .filter(f => f.geometry && f.geometry.type === 'Point' && Array.isArray(f.geometry.coordinates))
           .map(f => ({ ...f, properties: { ...(f.properties || {}), _tradicao: classify(f.properties || {}), _nacoes: nacoesOf(f.properties || {}) } }));
+        const nAprox = features.filter(f => isAproximado(f.properties)).length;
+        $('dataset-georef').textContent = (features.length - nAprox).toLocaleString('pt-BR') + ' precisas · ' +
+          nAprox.toLocaleString('pt-BR') + ' aproximadas (ocultas por padrão)';
         buildFilters();
         addMapLayers();
         updateMarkers();

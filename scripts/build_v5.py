@@ -161,11 +161,81 @@ def dedupe_interno(feats, fonte):
     return mantidos, fundidos
 
 
+def reparar_colapso_mossoro(base, auditoria):
+    """Desfaz o colapso da onda de geocodificação v46: 700 registros CNPJ, 11 `entity_id`
+    distintos, todos gravados na mesma coordenada de Mossoró/RN e promovidos a
+    `geocode_cnpj_v46_validado` — portanto visíveis por padrão no mapa.
+
+    A chave do passo v46 era o `entity_id`, que colide para esses registros (o nome estava
+    vazio e o hash do nome é o mesmo para todos). O resultado: a coordenada de um registro
+    foi escrita 700 vezes.
+
+    Reparo: cada registro volta ao estado anterior ao v46 (coordenada, município, UF e
+    `geo_status`) conforme a v4_5, pareado por ordem dentro do mesmo `entity_id`. O pareamento
+    é determinístico e não afirma qual registro é qual — a identidade já se perdeu na ingestão;
+    como os pontos restaurados são centróides aproximados e ficam ocultos por padrão, o pareamento
+    por ordem basta para não publicar coordenada falsa. Cada registro reparado recebe
+    `reparo: colapso_mossoro_v46` para ser auditável.
+    """
+    MOS_LAT, MOS_LON = -5.1756, -37.3358
+    alvo = [i for i, f in enumerate(base)
+            if abs(f["geometry"]["coordinates"][1] - MOS_LAT) < 0.01
+            and abs(f["geometry"]["coordinates"][0] - MOS_LON) < 0.01
+            and f["properties"].get("geo_status") == "geocode_cnpj_v46_validado"]
+    if not alvo:
+        return base
+
+    v45 = json.load(open(os.path.join(REPO, "data", "v4_5", "terreiros_nacional_v4_5.geojson"),
+                        encoding="utf-8"))["features"]
+    por_id = collections.defaultdict(list)
+    for f in v45:
+        por_id[f["properties"].get("entity_id")].append(f)
+
+    usados = collections.Counter()
+    por_status = collections.Counter()
+    for i in alvo:
+        p = base[i]["properties"]
+        eid = p.get("entity_id")
+        fila = por_id.get(eid, [])
+        k = usados[eid]
+        if k >= len(fila):
+            # sem correspondente: o mínimo honesto é ocultar, sem inventar coordenada
+            p["geo_status"] = "centroide_suspeito"
+            p["reparo"] = "colapso_mossoro_v46"
+            por_status["centroide_suspeito (sem correspondente)"] += 1
+            usados[eid] += 1
+            continue
+        ref = fila[k]
+        usados[eid] += 1
+        base[i]["geometry"]["coordinates"] = list(ref["geometry"]["coordinates"])
+        rp = ref["properties"]
+        p["municipio"] = rp.get("municipio", "")
+        p["uf"] = rp.get("uf", p.get("uf"))
+        p["geo_status"] = rp.get("geo_status") or "centroide_suspeito"
+        p["coord_origin"] = rp.get("coord_origin") or p.get("coord_origin")
+        for campo in ("geo_status_anterior", "municipio_anterior", "uf_anterior"):
+            p.pop(campo, None)
+        p["reparo"] = "colapso_mossoro_v46"
+        por_status[p["geo_status"]] += 1
+
+    auditoria["reparos"] = {
+        "colapso_mossoro_v46": {
+            "registros": len(alvo),
+            "entity_ids": sorted({base[i]["properties"].get("entity_id") for i in alvo}),
+            "origem_do_reparo": "data/v4_5/terreiros_nacional_v4_5.geojson (estado anterior ao v46)",
+            "regra": "coordenada/município/UF/geo_status restaurados; pareamento por ordem dentro do entity_id",
+            "por_status_resultante": dict(por_status),
+        }
+    }
+    return base
+
+
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     base = json.load(open(BASE, encoding="utf-8"))["features"]
     novos, auditoria = [], {"gerado_em": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                             "base": {"arquivo": "v4_8", "n": len(base)}, "fontes": {}}
+    base = reparar_colapso_mossoro(base, auditoria)
 
     for fonte, path in FONTES.items():
         feats = json.load(open(path, encoding="utf-8"))["features"]

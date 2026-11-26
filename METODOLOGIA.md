@@ -258,6 +258,34 @@ O mapa é adequado para exploração, localização de registros e formulação 
 
 ---
 
+### 6.4. Correção de novembro de 2026: colapso de coordenadas na fonte CNPJ
+
+Setecentos registros da fonte CNPJ estavam gravados numa única coordenada — -5,1756 / -37,3358, o
+centro de Mossoró (RN) — e marcados como `geocode_cnpj_v46_validado`, estado que a interface exibe
+por padrão. O efeito visível era um bloco de setecentos marcadores empilhados num ponto, sem nome.
+
+**Causa.** A onda de regeocodificação v46 (`scripts/regeocode_cnpj_v46.py`) usava o `entity_id` como
+chave de junção. Para os registros cujo nome estava vazio, o identificador — gerado a partir do nome —
+colide: são onze `entity_id` para setecentos registros. Uma única resposta do geocodificador foi
+escrita setecentas vezes e o status foi promovido de aproximado para validado.
+
+**Correção aplicada.** Os setecentos registros voltaram ao estado anterior à v46 (coordenada,
+município, UF e `geo_status`), tomado da camada v4_5 e pareado por ordem dentro de cada `entity_id`:
+664 voltaram a `centroide_suspeito` e 36 a `uf_divergente`, todos ocultos por padrão. Cada registro
+reparado carrega `reparo: colapso_mossoro_v46`; a operação está em `data/v5/auditoria_v5.json` e é
+reproduzida por `scripts/build_v5.py` a cada execução — o GeoJSON não foi editado à mão.
+
+**Efeito nos totais.** A camada continua com 8.215 registros; os visíveis por padrão passam de 6.370
+para 5.670. Nenhum outro registro foi alterado: ordem e coordenadas dos 7.515 restantes foram
+comparadas antes e depois.
+
+**O que a correção não resolve.** A identidade individual dos setecentos segue perdida — todos
+compartilham o mesmo `entity_id` e o vínculo com a linha correspondente no bruto de CNPJ não pode ser
+refeito sem reamarrar a chave na ingestão. O reparo devolve cada registro a uma localização aproximada
+do estado correto, não à casa correta. O mesmo defeito aparece em menor escala fora do bloco: 178
+identificadores repetidos somam 468 registros excedentes, e outros 163 registros não têm identificador
+nenhum. Ambos permanecem no mapa e estão listados para auditoria.
+
 ## 7. Categorias de navegação
 
 A interface produz uma categoria derivada para permitir filtros e diferenciação visual. Essa classificação é calculada no navegador e não substitui os campos originais das fontes.
