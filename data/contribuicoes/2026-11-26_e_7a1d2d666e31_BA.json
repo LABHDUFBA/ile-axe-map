@@ -1,0 +1,30 @@
+{
+  "entity_id": "e_7a1d2d666e31_BA",
+  "recebida_em": "2026-11-26",
+  "canal": "formulário de completar ficha (e-mail)",
+  "relacao": "lideranca",
+  "autorizacao": "sim — exceto os itens marcados como não publicados",
+  "itens_nao_publicados": [
+    "nome civil da liderança (item 1 do formulário)",
+    "nome da liderança responsável (item 4)"
+  ],
+  "campos_publicos": {
+    "nome": "Ilè Asé Tòlorí Jàgún Ejí Egbé",
+    "nome_anterior": "Ile Asé Tolorí Jagún",
+    "tradicao": "Candomblé",
+    "nacao": "Nagô Vodun",
+    "nacoes": ["Nagô Vodun"],
+    "raiz": "Nagô Vodun",
+    "ano_fundacao": 2014,
+    "municipio": "Simões Filho",
+    "uf": "BA",
+    "endereco": "R. Sal, 3 — Mapele, Simões Filho/BA, 43700-000",
+    "ponto_referencia": "na rua do Sal, em frente ao campo",
+    "instagram": "https://www.instagram.com/tolorijagun"
+  },
+  "nota": "A casa declara tradição Nagô Vodun com forte influência ketu. O formulário respondeu o mesmo valor para nação (item 6) e raiz/família (item 6b); ambos foram registrados como declarados.",
+  "pendencias": [
+    "foto da fachada: o formulário marcou 'envio em anexo', mas nenhum arquivo chegou — pedir novamente",
+    "conferir se 'Simões Filho' é o município correto do CEP 43700-000 (bate com o ponto do Google)"
+  ]
+}

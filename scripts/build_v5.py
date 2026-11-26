@@ -230,6 +230,108 @@ def reparar_colapso_mossoro(base, auditoria):
     return base
 
 
+def aplicar_contribuicoes(base, auditoria):
+    """Aplica as fichas enviadas pelas casas, em data/contribuicoes/*.json.
+
+    Dois tipos:
+      - override: o arquivo traz `entity_id` e sobrescreve os campos públicos do registro;
+      - inclusao: o arquivo traz `tipo: inclusao` e um registro novo é criado, com `entity_id`
+        derivado de uma chave estável (slug + UF) — nunca do nome vazio, que foi a causa do
+        colapso de Mossoró.
+
+    Cada arquivo traz só os campos públicos: nome civil, contato e demais itens marcados como
+    não publicados ficam fora do repositório, que é público. O registro ganha `contribuicao`
+    com data, canal e autorização, para que a proveniência sobreviva a qualquer reconstrução.
+
+    """
+    pasta = os.path.join(REPO, "data", "contribuicoes")
+    if not os.path.isdir(pasta):
+        return base
+    indice = {f["properties"].get("entity_id"): f for f in base}
+    aplicadas, criadas, ausentes = [], [], []
+    for nome_arq in sorted(os.listdir(pasta)):
+        if not nome_arq.endswith(".json"):
+            continue
+        with open(os.path.join(pasta, nome_arq), encoding="utf-8") as fh:
+            c = json.load(fh)
+        campos = c.get("campos_publicos") or {}
+        meta = {
+            "tipo": c.get("tipo") or "override",
+            "recebida_em": c.get("recebida_em"),
+            "canal": c.get("canal"),
+            "relacao": c.get("relacao"),
+            "autorizacao": c.get("autorizacao"),
+            "itens_nao_publicados": c.get("itens_nao_publicados", []),
+        }
+
+        if c.get("tipo") == "inclusao":
+            coord = c.get("coordenada") or {}
+            if coord.get("lat") is None or coord.get("lon") is None:
+                ausentes.append(c.get("chave"))
+                continue
+            eid = "e_" + hashlib.sha1(("%s|%s" % (c.get("chave", nome_arq),
+                                                  campos.get("uf", ""))).encode()).hexdigest()[:12] \
+                  + "_" + (campos.get("uf") or "XX")
+            if eid in indice:
+                aplicadas.append(eid)  # já existe: trata como override, para o script ser idempotente
+                continue
+            props = {
+                "entity_id": eid,
+                "nome": campos.get("nome"),
+                "municipio": campos.get("municipio", ""),
+                "uf": campos.get("uf", ""),
+                "fontes": ["contribuicao_casa"],
+                "num_fontes": 1,
+                "coord_origin": "cnefe_endereco",
+                "geo_status": "contribuicao_lideranca",
+                "fonte_label": "Contribuição da casa",
+                "nacao": campos.get("nacao"),
+                "categoria": "Não informado",
+                "linha_religiosa": campos.get("linha_religiosa"),
+                "match_axecloud": "nao_encontrado",
+                "versao": "v5",
+                "tradicao": campos.get("tradicao"),
+                "tradicoes_adicionais": campos.get("tradicoes_adicionais", []),
+                "nacoes": campos.get("nacoes", []),
+                "raiz": campos.get("raiz"),
+                "linhas": campos.get("linhas", []),
+                "pratica": None,
+                "cruzamento": False,
+                "classificacao_origem": "contribuicao_casa",
+                "coord_confirmada_por": "lideranca",
+                "contribuicao": meta,
+                "geo_cnefe": {"nivel": coord.get("nivel"), "fonte": coord.get("fonte"),
+                              "cod_unico_endereco": coord.get("cod_unico_endereco")},
+            }
+            for k, v in campos.items():
+                if k not in props and v is not None:
+                    props[k] = v
+            novo = {"type": "Feature",
+                    "geometry": {"type": "Point", "coordinates": [coord["lon"], coord["lat"]]},
+                    "properties": props}
+            base.append(novo)
+            indice[eid] = novo
+            criadas.append(eid)
+            continue
+
+        eid = c.get("entity_id")
+        alvo = indice.get(eid)
+        if alvo is None:
+            ausentes.append(eid)
+            continue
+        p = alvo["properties"]
+        for campo, valor in campos.items():
+            p[campo] = valor
+        p["geo_status"] = "contribuicao_lideranca"
+        p["coord_confirmada_por"] = "lideranca"
+        p["contribuicao"] = meta
+        aplicadas.append(eid)
+    if aplicadas or criadas or ausentes:
+        auditoria["contribuicoes"] = {"aplicadas": aplicadas, "criadas": criadas,
+                                      "entity_id_ausente": ausentes}
+    return base
+
+
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     base = json.load(open(BASE, encoding="utf-8"))["features"]
@@ -324,6 +426,9 @@ def main():
         }
 
     sem_geo = [c["properties"]["nome"] for c in novos if c["geometry"] is None]
+    # As fichas enviadas pelas casas entram por último: são override sobre qualquer fonte e
+    # precisam sobreviver a mudanças de base, por isso ficam aqui e não no começo do build.
+    base = aplicar_contribuicoes(base, auditoria)
     camada = {"type": "FeatureCollection", "features": base + novos}
     json.dump(camada, open(os.path.join(OUT_DIR, "terreiros_nacional_v5.geojson"), "w",
                            encoding="utf-8"), ensure_ascii=False)

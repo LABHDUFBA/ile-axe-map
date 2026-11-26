@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-26T11:42:42+00:00",
+ "gerado_em": "2026-11-26T13:12:41+00:00",
  "base": {
   "arquivo": "v4_8",
   "n": 8036
@@ -92,10 +92,19 @@
    }
   }
  },
+ "contribuicoes": {
+  "aplicadas": [
+   "e_7a1d2d666e31_BA"
+  ],
+  "criadas": [
+   "e_32944cc76d8b_SC"
+  ],
+  "entity_id_ausente": []
+ },
  "total": {
-  "v4_8": 8036,
+  "v4_8": 8037,
   "novos": 179,
-  "camada_v5": 8215,
+  "camada_v5": 8216,
   "sem_geometria": [],
   "por_uf_novos": {
    "AM": 172,

@@ -239,6 +239,7 @@
     .detail__missing { margin-top: 18px; padding: 14px; border: 1px dashed var(--warm); border-radius: var(--radius-sm); background: var(--warm-soft, rgba(168,70,15,.05)); }
     .detail__missing__title { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--warm); }
     .detail__missing__text { font-size: 12px; line-height: 1.5; color: var(--text-muted); margin: 6px 0 0; }
+    .detail__note { font-size: 11px; line-height: 1.5; color: var(--text-muted); margin: 10px 0 0; padding-top: 8px; border-top: 1px solid var(--line); }
     .detail__missing__list { margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
     .detail__missing__list li { font-size: 11px; padding: 3px 8px; border: 1px solid var(--warm); border-radius: 100px; color: var(--warm); }
     .rail__clear-btn { margin-top: 8px; padding: 6px 12px; border: 1px solid var(--accent); border-radius: var(--radius-sm); background: var(--bg-elevated); color: var(--accent); cursor: pointer; font: 600 12px var(--font-body); }
@@ -453,9 +454,9 @@
       for (let i = 0; i < category.length; i++) hash = ((hash << 5) - hash + category.charCodeAt(i)) | 0;
       return nationPalette[Math.abs(hash) % nationPalette.length];
     }
-    const fonteMap = { 'ceao': 'CEAO/UFBA', 'receita_federal_cnpj': 'CNPJ/Receita Federal', 'terreirosdobrasil.com.br': 'Terreiros do Brasil', 'google': 'Google Places', 'google_places': 'Google Places', 'osm': 'OSM', 'sefaz': 'SEFAZ/Salvador', 'mapeando_axe_csv': 'Mapeando Axé', 'ceap': 'CEAP/Mapa do Axé', 'atlas_axe': 'Atlas do Axé (AM)', 'axes_unb': 'AXÉS/LHS-UnB (DF)' };
-    const fonteOrder = ['CEAO/UFBA', 'CNPJ/Receita Federal', 'Mapeando Axé', 'Google Places', 'OSM', 'SEFAZ/Salvador', 'CEAP/Mapa do Axé', 'Atlas do Axé (AM)', 'AXÉS/LHS-UnB (DF)', 'Terreiros do Brasil', 'Outro'];
-    const fonteColors = { 'CEAO/UFBA': '#0072B2', 'CNPJ/Receita Federal': '#D55E00', 'Mapeando Axé': '#8C564B', 'Google Places': '#E69F00', 'OSM': '#56B4E9', 'SEFAZ/Salvador': '#CC79A7', 'CEAP/Mapa do Axé': '#009E73', 'Atlas do Axé (AM)': '#00796B', 'AXÉS/LHS-UnB (DF)': '#5E60CE', 'Terreiros do Brasil': '#6F4E7C', 'Outro': '#999999' };
+    const fonteMap = { 'ceao': 'CEAO/UFBA', 'receita_federal_cnpj': 'CNPJ/Receita Federal', 'terreirosdobrasil.com.br': 'Terreiros do Brasil', 'google': 'Google Places', 'google_places': 'Google Places', 'osm': 'OSM', 'sefaz': 'SEFAZ/Salvador', 'mapeando_axe_csv': 'Mapeando Axé', 'ceap': 'CEAP/Mapa do Axé', 'atlas_axe': 'Atlas do Axé (AM)', 'axes_unb': 'AXÉS/LHS-UnB (DF)', 'contribuicao_casa': 'Contribuição da casa' };
+    const fonteOrder = ['CEAO/UFBA', 'CNPJ/Receita Federal', 'Mapeando Axé', 'Google Places', 'OSM', 'SEFAZ/Salvador', 'CEAP/Mapa do Axé', 'Atlas do Axé (AM)', 'AXÉS/LHS-UnB (DF)', 'Contribuição da casa', 'Terreiros do Brasil', 'Outro'];
+    const fonteColors = { 'CEAO/UFBA': '#0072B2', 'CNPJ/Receita Federal': '#D55E00', 'Mapeando Axé': '#8C564B', 'Google Places': '#E69F00', 'OSM': '#56B4E9', 'SEFAZ/Salvador': '#CC79A7', 'CEAP/Mapa do Axé': '#009E73', 'Atlas do Axé (AM)': '#00796B', 'AXÉS/LHS-UnB (DF)': '#5E60CE', 'Contribuição da casa': '#A8460F', 'Terreiros do Brasil': '#6F4E7C', 'Outro': '#999999' };
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let themeOverride = 'light';
@@ -570,7 +571,7 @@
     function getFonteLabel(p) {
       // GeoJSON unificado: fonte principal da entidade, com prioridade de confiabilidade
       if (Array.isArray(p.fontes) && p.fontes.length) {
-        const rank = ['ceao','google_places','google','ceap','osm','receita_federal_cnpj','mapeando_axe_csv','sefaz'];
+        const rank = ['contribuicao_casa','ceao','google_places','google','ceap','osm','receita_federal_cnpj','mapeando_axe_csv','sefaz'];
         for (const f of rank) if (p.fontes.includes(f)) return fonteMap[f] || f;
         return fonteMap[p.fontes[0]] || p.fontes[0];
       }
@@ -879,6 +880,7 @@
       else if (p.geo_status && String(p.geo_status).indexOf('geocode_divergente') !== -1) displayProps.geo_status = 'Coordenada divergente — em validação';
       else if (p.geo_status && String(p.geo_status).indexOf('places_v4') !== -1) displayProps.geo_status = 'Localização revalidada (Google Places + controle municipal)';
       else if (p.geo_status && String(p.geo_status).indexOf('geocode_cnpj_v46') !== -1) displayProps.geo_status = 'Localização revalidada (endereço oficial CNPJ, precisão de via)';
+      else if (p.geo_status && String(p.geo_status).indexOf('contribuicao_lideranca') !== -1) displayProps.geo_status = 'Localização e dados confirmados pela liderança da casa';
       else if (p.geo_status && String(p.geo_status).indexOf('coordenada_validada_responsavel') !== -1) displayProps.geo_status = 'Localização confirmada pela equipe responsável';
       else if (p.geo_status && String(p.geo_status).indexOf('herdado_v2') !== -1) displayProps.geo_status = 'Georreferenciado pela base validada da Bahia';
       else if (p.geo_status && String(p.geo_status).indexOf('fonte_declarada_alta') !== -1) displayProps.geo_status = 'Localização declarada pela fonte (ponto de mapa)';
@@ -897,11 +899,13 @@
       var linhasFicha = [
         ['Tradição', p._tradicao && p._tradicao !== 'Não especificada' ? p._tradicao : ''],
         ['Nação', (p._nacoes && p._nacoes.length) ? p._nacoes.join(' · ') : ''],
-        ['Raiz / linhagem', p.raiz || ''],
+        ['Raiz / linhagem', (p.raiz && String(p.raiz).trim().toLowerCase() !== String(p.nacao || '').trim().toLowerCase()) ? p.raiz : ''],
         ['Linhas', (p.linhas && p.linhas.length) ? p.linhas.join(' · ') : ''],
         ['Fundação', p.ano_fundacao || ''],
         ['Orixá regente', p.regente || ''],
         ['Município', p.municipio || ''],
+        ['Endereço', p.endereco || ''],
+        ['Referência', p.ponto_referencia || ''],
         ['Estado', p.uf || ''],
         ['Precisão da localização', displayProps.geo_status || '']
       ];
@@ -910,6 +914,17 @@
         html += '<div class="info-row"><div class="info-row__label">' + par[0] + '</div><div class="info-row__value">' + escapeHtml(String(par[1])) + '</div></div>';
       });
       if (p.fonte) html += '<div class="info-row"><div class="info-row__label">Fonte</div><div class="info-row__value">' + escapeHtml(getFonteLabel(p)) + '</div></div>';
+      if (p.instagram) {
+        var ig = String(p.instagram);
+        var igArroba = ig.replace(/\/+$/, '').split('/').pop();
+        html += '<a class="detail__link" href="' + escapeHtml(ig) + '" target="_blank" rel="noopener">Instagram — @' + escapeHtml(igArroba) + ' ↗</a>';
+      }
+      if (p.contribuicao && p.contribuicao.recebida_em) {
+        var d = String(p.contribuicao.recebida_em).split('-');
+        var verbo = (p.contribuicao.tipo === 'inclusao') ? 'Registro incluído' : 'Ficha completada';
+        html += '<p class="detail__note">' + verbo + ' pela própria casa em ' + d[2] + '/' + d[1] + '/' + d[0] +
+          '. Nome e contato de quem respondeu não são publicados.</p>';
+      }
       // --- espaço para a comunidade corrigir e completar ---
       var faltando = missingFields(p);
       if (faltando.length) {
@@ -952,7 +967,7 @@
         if (hideApprox && isAproximado(f.properties)) return false;
         if (q) {
           const p = f.properties;
-          const haystack = ((getName(p) || '') + ' ' + (p.nacao || '') + ' ' + (p.municipio || '') + ' ' + (p.uf || '')).toLowerCase();
+          const haystack = ((getName(p) || '') + ' ' + (p.nome_anterior || '') + ' ' + (p.nacao || '') + ' ' + (p.municipio || '') + ' ' + (p.endereco || '') + ' ' + (p.uf || '')).toLowerCase();
           if (!haystack.includes(q)) return false;
         }
         return activeTrad.has(f.properties._tradicao) && passaNacao(f.properties) && activeFonte.has(getFonteLabel(f.properties));
@@ -972,12 +987,21 @@
         vl.innerHTML = '<span>' + filtered.length + ' terreiros</span><span style="font-weight:400;opacity:.6">aproxime p/ filtrar área</span>';
       }
       listSubset = inViewport;
-      renderList(inViewport);
+      // Quando a busca acha algo fora da área visível, a lista fica vazia e a mensagem dizia
+      // "nenhum terreiro encontrado" — falso. Passamos o primeiro resultado para oferecer o salto.
+      renderList(inViewport, (inViewport.length === 0 && filtered.length) ? { primeiro: filtered[0], total: filtered.length } : null);
     }
 
-    function renderList(items) {
+    function renderList(items, foraDaArea) {
       const holder = $('rail-list');
-      if (items.length === 0) { holder.innerHTML = '<div class="rail__empty">Nenhum terreiro encontrado. <button type="button" class="rail__clear-btn" id="clear-search-btn">Limpar busca e filtros</button></div>'; var cb = $('clear-search-btn'); if (cb) cb.addEventListener('click', function() { $('search').value = ''; searchQuery = ''; activeTrad = new Set(categoryOrder); activeNacao = new Set(nacaoOrder); activeFonte = new Set(fonteOrder.filter(function(fnt) { return features.some(function(feat) { return getFonteLabel(feat.properties) === fnt; }); })); document.querySelectorAll('#filters input[type=checkbox]').forEach(function(c) { if (c.id !== 'all-nacao' && c.id !== 'all-trad' && c.id !== 'all-fonte' && c.id !== 'hide-approx') c.checked = true; }); var at = document.getElementById('all-trad'); if (at) at.checked = true; var an = document.getElementById('all-nacao'); if (an) an.checked = true; var af = document.getElementById('all-fonte'); if (af) af.checked = true; var ha = document.getElementById('hide-approx'); if (ha) ha.checked = true; hideApprox = true; updateMarkers(); updateList(); $('search').focus(); }); return; }
+      if (items.length === 0) {
+        var msgFora = '';
+        if (foraDaArea) {
+          var nomeFora = escapeHtml(getName(foraDaArea.primeiro.properties));
+          msgFora = '<div class="rail__empty">' + foraDaArea.total + (foraDaArea.total === 1 ? ' terreiro encontrado' : ' terreiros encontrados') +
+            ' fora desta área. <button type="button" class="rail__clear-btn" id="ir-resultado-btn">Ir para ' + nomeFora + '</button></div>';
+        }
+        holder.innerHTML = msgFora + '<div class="rail__empty">Nenhum terreiro nesta área. <button type="button" class="rail__clear-btn" id="clear-search-btn">Limpar busca e filtros</button></div>'; var cb = $('clear-search-btn'); if (cb) cb.addEventListener('click', function() { $('search').value = ''; searchQuery = ''; activeTrad = new Set(categoryOrder); activeNacao = new Set(nacaoOrder); activeFonte = new Set(fonteOrder.filter(function(fnt) { return features.some(function(feat) { return getFonteLabel(feat.properties) === fnt; }); })); document.querySelectorAll('#filters input[type=checkbox]').forEach(function(c) { if (c.id !== 'all-nacao' && c.id !== 'all-trad' && c.id !== 'all-fonte' && c.id !== 'hide-approx') c.checked = true; }); var at = document.getElementById('all-trad'); if (at) at.checked = true; var an = document.getElementById('all-nacao'); if (an) an.checked = true; var af = document.getElementById('all-fonte'); if (af) af.checked = true; var ha = document.getElementById('hide-approx'); if (ha) ha.checked = true; hideApprox = true; updateMarkers(); updateList(); $('search').focus(); }); var ir = $('ir-resultado-btn'); if (ir) ir.addEventListener('click', function() { var c = foraDaArea.primeiro.geometry.coordinates; map.setView([c[1], c[0]], 16); }); return; }
       var html = '';
       items.forEach(function(f) {
         var p = f.properties;
