@@ -44,3 +44,8 @@ data/v5/kv_payload.json
 api/worker/node_modules/
 api/worker/.wrangler/
 api/worker/.dev.vars
+
+# CNEFE 2022 (IBGE): arquivos por UF, ~1,5 GB, baixados sob demanda por scripts/geocode_cnpj_cnefe.py
+data/cnefe/*.zip
+data/cnefe/*.part
+data/cnefe/progresso.json
