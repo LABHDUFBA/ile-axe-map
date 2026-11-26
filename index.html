@@ -767,7 +767,13 @@
         // O número divulgado é o total de registros; o mapa, por padrão, esconde os que só têm
         // localização aproximada. Mostrar os dois evita a leitura de que o atlas "perdeu" terreiros.
         $('count-badge').textContent = vis.toLocaleString('pt-BR') + ' de ' + totalReg.toLocaleString('pt-BR') + ' terreiros';
-        $('count-badge').title = (totalReg - vis).toLocaleString('pt-BR') + ' registros têm apenas localização aproximada (centroide de município) e ficam ocultos por padrão. Desmarque "Ocultar localizações aproximadas" para vê-los.';
+        const motivos = [];
+        if (searchQuery) motivos.push('busca ativa');
+        if (hideApprox) {
+          const nAprox = features.filter(f => isAproximado(f.properties)).length;
+          if (nAprox) motivos.push(nAprox.toLocaleString('pt-BR') + ' com localização aproximada, ocultos por padrão');
+        }
+        $('count-badge').title = motivos.length ? motivos.join(' · ') : '';
       }
     }
 
