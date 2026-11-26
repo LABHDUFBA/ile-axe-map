@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-26T13:24:52+00:00",
+ "gerado_em": "2026-11-26T17:55:38+00:00",
  "base": {
   "arquivo": "v4_8",
   "n": 8036
@@ -92,19 +92,32 @@
    }
   }
  },
+ "mesclas_manuais": [
+  {
+   "manter": "e_6fbbaf562eba_RJ",
+   "remover": "e_0dd3d3527918_RJ",
+   "resultado": "fundido",
+   "motivo": "Mesma casa: 'Casa de Candomblé Ilê Axé Opô Afonjá' e 'Ilê Axé Opô Afonjá (Casa da Força sustentada por Xangô)', ambas da fonte CEAP, em São João de Meriti/RJ, a 1.096 m uma da outra. A ficha da casa (R. Florisbela 1325, Xangô, Ketu, 1886) identifica a mesma casa; manter o registro de nome mais simples e substituir a coordenada pela de rua da ficha."
+  }
+ ],
  "contribuicoes": {
   "aplicadas": [
-   "e_7a1d2d666e31_BA"
+   "e_7a1d2d666e31_BA",
+   "e_4aeaaad0beb2_BA",
+   "e_6fbbaf562eba_RJ"
   ],
   "criadas": [
-   "e_32944cc76d8b_SC"
+   "e_32944cc76d8b_SC",
+   "e_a7c255f3d824_RJ",
+   "e_b78ef4e8c95a_PR",
+   "e_1bba915ac7b1_RJ"
   ],
   "entity_id_ausente": []
  },
  "total": {
-  "v4_8": 8037,
+  "v4_8": 8039,
   "novos": 179,
-  "camada_v5": 8216,
+  "camada_v5": 8218,
   "sem_geometria": [],
   "por_uf_novos": {
    "AM": 172,

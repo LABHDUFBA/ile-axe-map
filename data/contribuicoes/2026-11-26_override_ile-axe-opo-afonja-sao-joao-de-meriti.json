@@ -1,0 +1,42 @@
+{
+ "tipo": "override",
+ "entity_id": "e_6fbbaf562eba_RJ",
+ "recebida_em": "2026-11-26",
+ "canal": "formulário (e-mail)",
+ "relacao": "membro",
+ "autorizacao": "sim, mas sem publicar o número do endereço",
+ "itens_nao_publicados": [
+  "nome civil de quem enviou",
+  "contato de retorno"
+ ],
+ "campos_publicos": {
+  "nome": "Ilê Axé Opô Afonjá",
+  "municipio": "São João de Meriti",
+  "uf": "RJ",
+  "tradicao": "Candomblé",
+  "nacao": "Ketu",
+  "nacoes": [
+   "Ketu"
+  ],
+  "raiz": "Mãe Aninha - Obá Biyí",
+  "linhas": [],
+  "regente": "Xangô",
+  "ano_fundacao": 1886,
+  "endereco": "R. Florisbela — Coelho da Rocha, São João de Meriti/RJ",
+  "instagram": "https://instagram.com/opo_afonjarj"
+ },
+ "coordenada": {
+  "lat": -22.7849097,
+  "lon": -43.3845164,
+  "fonte": "Nominatim/OSM (rua)",
+  "nivel": "rua",
+  "geo_status": "fonte_declarada_aproximada",
+  "confirmada_por": "endereco",
+  "cod_unico_endereco": null
+ },
+ "nota": "A base tinha dois registros CEAP da mesma casa, a 1,1 km um do outro. Eles foram unificados em um só (mesclas_manuais.json) e este override completa a ficha com os dados enviados pela casa. A coordenada é de rua porque a casa pediu que o número do endereço não fosse publicado.",
+ "pendencias": [
+  "foto da fachada",
+  "confirmar CEP e coordenada exata com a casa"
+ ]
+}

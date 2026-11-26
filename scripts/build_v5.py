@@ -230,6 +230,39 @@ def reparar_colapso_mossoro(base, auditoria):
     return base
 
 
+def mesclar_manuais(feats, auditoria):
+    """Mesclas explícitas, uma a uma, para casos que a deduplicação automática não resolve.
+
+    O arquivo `data/v5/mesclas_manuais.json` guarda pares (manter, remover) com motivo. Não é
+    heurística: cada linha foi conferida contra nome, município e fonte. Serve para duplicatas da
+    mesma fonte com coordenadas divergentes, onde aumentar o raio de deduplicação fundiria casas
+    diferentes.
+    """
+    caminho = os.path.join(OUT_DIR, "mesclas_manuais.json")
+    if not os.path.exists(caminho):
+        return feats
+    with open(caminho, encoding="utf-8") as fh:
+        regras = json.load(fh)
+    indice = {f["properties"].get("entity_id"): f for f in feats}
+    remover = set()
+    registros = []
+    for r in regras:
+        manter, tirar = r.get("manter"), r.get("remover")
+        if manter not in indice or tirar not in indice:
+            registros.append({"manter": manter, "remover": tirar, "resultado": "nao_encontrado"})
+            continue
+        a, b = indice[manter]["properties"], indice[tirar]["properties"]
+        for k, v in b.items():
+            if a.get(k) in (None, "", [], {}) and v not in (None, "", [], {}):
+                a[k] = v
+        remover.add(tirar)
+        registros.append({"manter": manter, "remover": tirar, "resultado": "fundido",
+                          "motivo": r.get("motivo")})
+    if registros:
+        auditoria["mesclas_manuais"] = registros
+    return [f for f in feats if f["properties"].get("entity_id") not in remover]
+
+
 def aplicar_contribuicoes(base, auditoria):
     """Aplica as fichas enviadas pelas casas, em data/contribuicoes/*.json.
 
@@ -283,7 +316,7 @@ def aplicar_contribuicoes(base, auditoria):
                 "fontes": ["contribuicao_casa"],
                 "num_fontes": 1,
                 "coord_origin": "cnefe_endereco",
-                "geo_status": "contribuicao_lideranca",
+                "geo_status": coord.get("geo_status") or "contribuicao_lideranca",
                 "fonte_label": "Contribuição da casa",
                 "nacao": campos.get("nacao"),
                 "categoria": "Não informado",
@@ -298,7 +331,7 @@ def aplicar_contribuicoes(base, auditoria):
                 "pratica": None,
                 "cruzamento": False,
                 "classificacao_origem": "contribuicao_casa",
-                "coord_confirmada_por": "lideranca",
+                "coord_confirmada_por": coord.get("confirmada_por") or "lideranca",
                 "contribuicao": meta,
                 "geo_cnefe": {"nivel": coord.get("nivel"), "fonte": coord.get("fonte"),
                               "cod_unico_endereco": coord.get("cod_unico_endereco")},
@@ -322,8 +355,19 @@ def aplicar_contribuicoes(base, auditoria):
         p = alvo["properties"]
         for campo, valor in campos.items():
             p[campo] = valor
-        p["geo_status"] = "contribuicao_lideranca"
-        p["coord_confirmada_por"] = "lideranca"
+        coord_override = c.get("coordenada") or {}
+        if coord_override.get("lat") is not None and coord_override.get("lon") is not None:
+            alvo["geometry"] = {"type": "Point",
+                                "coordinates": [coord_override["lon"], coord_override["lat"]]}
+            p["geo_status"] = coord_override.get("geo_status") or "contribuicao_lideranca"
+            p["coord_confirmada_por"] = coord_override.get("confirmada_por") or "lideranca"
+            p["coord_origin"] = "contribuicao_casa"
+            p["geo_cnefe"] = {"nivel": coord_override.get("nivel"),
+                              "fonte": coord_override.get("fonte"),
+                              "cod_unico_endereco": coord_override.get("cod_unico_endereco")}
+        else:
+            p["geo_status"] = "contribuicao_lideranca"
+            p["coord_confirmada_por"] = "lideranca"
         p["contribuicao"] = meta
         aplicadas.append(eid)
     if aplicadas or criadas or ausentes:
@@ -338,6 +382,7 @@ def main():
     novos, auditoria = [], {"gerado_em": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                             "base": {"arquivo": "v4_8", "n": len(base)}, "fontes": {}}
     base = reparar_colapso_mossoro(base, auditoria)
+    base = mesclar_manuais(base, auditoria)
 
     for fonte, path in FONTES.items():
         feats = json.load(open(path, encoding="utf-8"))["features"]

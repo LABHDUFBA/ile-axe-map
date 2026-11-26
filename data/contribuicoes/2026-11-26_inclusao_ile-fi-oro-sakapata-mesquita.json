@@ -1,0 +1,44 @@
+{
+ "tipo": "inclusao",
+ "chave": "ile-fi-oro-sakapata-mesquita",
+ "recebida_em": "2026-11-26",
+ "canal": "formulário (e-mail)",
+ "relacao": "membro",
+ "autorizacao": "sim, mas sem publicar o número do endereço",
+ "itens_nao_publicados": [
+  "nome civil de quem enviou",
+  "contato de retorno"
+ ],
+ "campos_publicos": {
+  "nome": "Ilê Fí Orô Sakapata",
+  "tradicao": "Candomblé",
+  "nacoes": [
+   "Ketu"
+  ],
+  "raiz": "Ilê Axé Opô Afonjá - RJ",
+  "linhas": [],
+  "regente": "Omolu",
+  "ano_fundacao": 1965,
+  "municipio": "Mesquita",
+  "uf": "RJ",
+  "endereco": "R. Bráulio — Estação de Juscelino, Mesquita/RJ",
+  "nacao": "Ketu",
+  "ponto_referencia": "Em frente à estação de trem de Juscelino",
+  "facebook": "https://web.facebook.com/ilefiorosakapata"
+ },
+ "coordenada": {
+  "lat": -22.7701045,
+  "lon": -43.4304245,
+  "fonte": "Nominatim/OSM (rua)",
+  "nivel": "rua",
+  "geo_status": "fonte_declarada_aproximada",
+  "confirmada_por": "endereco",
+  "cod_unico_endereco": null
+ },
+ "nota": "Coordenada de rua porque a casa pediu que o número do endereço não fosse publicado. O perfil do Facebook foi preservado, mas a ficha ainda não o exibe.",
+ "pendencias": [
+  "foto da fachada",
+  "confirmar coordenada exata com a casa",
+  "exibir o perfil do Facebook na ficha"
+ ]
+}

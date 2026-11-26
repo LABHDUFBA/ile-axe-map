@@ -1,0 +1,32 @@
+{
+ "tipo": "override",
+ "entity_id": "e_4aeaaad0beb2_BA",
+ "recebida_em": "2026-11-26",
+ "canal": "formulário (e-mail)",
+ "relacao": "membro",
+ "autorizacao": "sim — autoriza uso no mapa",
+ "itens_nao_publicados": [
+  "nome civil de quem enviou",
+  "contato de retorno"
+ ],
+ "campos_publicos": {
+  "nome": "Ilê Axé Jibomi",
+  "municipio": "Simões Filho",
+  "uf": "BA",
+  "tradicao": "Candomblé",
+  "nacao": "Ijexá",
+  "nacoes": [
+   "Ijexá"
+  ],
+  "raiz": null,
+  "linhas": [],
+  "regente": "Oxum",
+  "ano_fundacao": 2019,
+  "endereco": "Loteamento Lagoa Azul, Simões Filho/BA"
+ },
+ "nota": "A base já tinha “Ilê Asè Jibomi” na mesma coordenada, sem município. A contribuição corrige o nome e completa a ficha; por isso entra como override, não como inclusão.",
+ "pendencias": [
+  "foto da fachada não informada",
+  "raiz/família não informada"
+ ]
+}

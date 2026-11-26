@@ -11,6 +11,8 @@
 
 > **Nota de versão.** Este arquivo conserva o texto-base da versão 2.1, de recorte baiano e quatro fontes. A versão publicada e efetivamente atualizada é `metodologia.html` (conjunto de dados v5, escopo nacional). Para que a proveniência não dependa de metadados dispersos, as fontes incorporadas nas versões 3 e 4 estão documentadas nas Seções 3.5 a 3.10, com suas datas de coleta e limites, e a lista de referências da Seção 13 foi ampliada para incluir todos os sites consultados.
 
+> **Atualização de 26/11/2026.** A camada publicada tem **8.218 registros**, dos quais **5.670 visíveis por padrão**. O total inclui as contribuições das casas aplicadas até esta data e a fusão de dois registros CEAP da mesma casa. Este arquivo mantém o texto-base 2.1 e não substitui a metodologia vigente.
+
 > **Nota de leitura.** O Ilê Axé Map não constitui um censo, um cadastro oficial nem um inventário exaustivo das comunidades religiosas afro-brasileiras da Bahia. Trata-se de uma infraestrutura cartográfica de pesquisa que integra registros oriundos de fontes públicas heterogêneas. Cada ponto representa um **registro consolidado**, com diferentes graus de completude e validação — não a certificação definitiva da existência, da identidade religiosa ou da situação atual de uma comunidade.
 
 ---
@@ -275,7 +277,7 @@ município, UF e `geo_status`), tomado da camada v4_5 e pareado por ordem dentro
 reparado carrega `reparo: colapso_mossoro_v46`; a operação está em `data/v5/auditoria_v5.json` e é
 reproduzida por `scripts/build_v5.py` a cada execução — o GeoJSON não foi editado à mão.
 
-**Efeito nos totais.** A camada continua com 8.215 registros; os visíveis por padrão passam de 6.370
+**Efeito nos totais.** A camada tinha, então, 8.215 registros; os visíveis por padrão passaram de 6.370
 para 5.670. Nenhum outro registro foi alterado: ordem e coordenadas dos 7.515 restantes foram
 comparadas antes e depois.
 
