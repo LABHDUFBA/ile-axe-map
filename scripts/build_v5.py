@@ -293,6 +293,7 @@ def aplicar_contribuicoes(base, auditoria):
             "recebida_em": c.get("recebida_em"),
             "canal": c.get("canal"),
             "relacao": c.get("relacao"),
+            "representacao": c.get("representacao"),
             "autorizacao": c.get("autorizacao"),
             "itens_nao_publicados": c.get("itens_nao_publicados", []),
         }

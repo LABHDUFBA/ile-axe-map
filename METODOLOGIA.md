@@ -11,7 +11,7 @@
 
 > **Nota de versão.** Este arquivo conserva o texto-base da versão 2.1, de recorte baiano e quatro fontes. A versão publicada e efetivamente atualizada é `metodologia.html` (conjunto de dados v5, escopo nacional). Para que a proveniência não dependa de metadados dispersos, as fontes incorporadas nas versões 3 e 4 estão documentadas nas Seções 3.5 a 3.10, com suas datas de coleta e limites, e a lista de referências da Seção 13 foi ampliada para incluir todos os sites consultados.
 
-> **Atualização de 26/11/2026.** A camada publicada tem **8.218 registros**, dos quais **5.670 visíveis por padrão**. O total inclui as contribuições das casas aplicadas até esta data e a fusão de dois registros CEAP da mesma casa. Este arquivo mantém o texto-base 2.1 e não substitui a metodologia vigente.
+> **Atualização de 26/11/2026.** A camada publicada tem **8.219 registros**, dos quais **5.671 visíveis por padrão**. O total inclui as contribuições das casas aplicadas até esta data e a fusão de dois registros CEAP da mesma casa. Este arquivo mantém o texto-base 2.1 e não substitui a metodologia vigente.
 
 > **Nota de leitura.** O Ilê Axé Map não constitui um censo, um cadastro oficial nem um inventário exaustivo das comunidades religiosas afro-brasileiras da Bahia. Trata-se de uma infraestrutura cartográfica de pesquisa que integra registros oriundos de fontes públicas heterogêneas. Cada ponto representa um **registro consolidado**, com diferentes graus de completude e validação — não a certificação definitiva da existência, da identidade religiosa ou da situação atual de uma comunidade.
 

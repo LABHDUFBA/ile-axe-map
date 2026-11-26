@@ -14,7 +14,7 @@ Este é o *concept DOI* — cita a versão mais recente. Para citar exatamente a
 
 ## Dataset v5
 
-8.218 entidades, resultado da consolidação de fontes públicas heterogêneas. Os totais por
+8.219 entidades, resultado da consolidação de fontes públicas heterogêneas. Os totais por
 fonte contam registros por ocorrência: uma entidade presente em duas fontes aparece nas duas
 linhas, e por isso a soma excede o total.
 

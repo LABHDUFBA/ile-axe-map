@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-26T17:55:38+00:00",
+ "gerado_em": "2026-11-26T19:08:41+00:00",
  "base": {
   "arquivo": "v4_8",
   "n": 8036
@@ -110,14 +110,15 @@
    "e_32944cc76d8b_SC",
    "e_a7c255f3d824_RJ",
    "e_b78ef4e8c95a_PR",
+   "e_61aa7f0dde67_SP",
    "e_1bba915ac7b1_RJ"
   ],
   "entity_id_ausente": []
  },
  "total": {
-  "v4_8": 8039,
+  "v4_8": 8040,
   "novos": 179,
-  "camada_v5": 8218,
+  "camada_v5": 8219,
   "sem_geometria": [],
   "por_uf_novos": {
    "AM": 172,
