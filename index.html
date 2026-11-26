@@ -805,7 +805,6 @@
     }
 
     /* === Canal de contribuição: corrigir e completar a ficha === */
-    var CONTRIB_EMAIL = 'ileaxemap@gmail.com';
 
     function missingFields(p) {
       var out = [];
@@ -829,55 +828,6 @@
       return 'contribuir.html' + (params.length ? '?' + params.join('&') : '');
     }
 
-    function contribLink(p, kind) {
-      var nome = getName(p);
-      var id = String(p.entity_id || '');
-      var loc = [p.municipio, p.uf].filter(Boolean).join(' / ');
-      var fonte = p.fontes || p.fonte ? getFonteLabel(p) : '';
-      var L = [];
-      if (kind === 'retirar') {
-        L.push('Solicito a RETIRADA deste registro do mapa. A retirada não exige justificativa.', '');
-        L.push('Registro: ' + nome);
-        if (id) L.push('ID: ' + id);
-        if (loc) L.push('Localização no mapa: ' + loc);
-        if (fonte) L.push('Fonte atual: ' + fonte);
-        L.push('', 'Quem solicita: ( ) liderança ou membro da casa  ( ) familiar ou representante  ( ) outra pessoa');
-        L.push('Motivo (opcional):', '');
-        L.push('Nome para contato (não publicado):');
-      } else {
-        L.push('Quero ' + (kind === 'completar' ? 'COMPLETAR' : 'CORRIGIR') + ' a ficha deste registro no mapa.', '');
-        L.push('Registro: ' + nome);
-        if (id) L.push('ID: ' + id);
-        if (loc) L.push('Localização no mapa: ' + loc);
-        if (fonte) L.push('Fonte atual: ' + fonte);
-        var atual = [];
-        var tradTxt = String(p._tradicao || p.tradicao || '').trim();
-        if (tradTxt && tradTxt !== 'Não especificada') atual.push('Tradição: ' + tradTxt);
-        if (nacoesOf(p).length) atual.push('Nação: ' + nacoesOf(p).join(' · '));
-        if (String(p.raiz || '').trim()) atual.push('Raiz: ' + p.raiz);
-        if (String(p.ano_fundacao || '').trim()) atual.push('Ano de fundação: ' + p.ano_fundacao);
-        if (String(p.regente || '').trim()) atual.push('Orixá regente: ' + p.regente);
-        if (atual.length) L.push('', 'O que já está no mapa: ' + atual.join(' · '));
-        L.push('', 'Preencha só o que você souber — deixe em branco o que não se aplica.');
-        L.push('Os itens marcados (não publicado) não vão para o mapa.', '');
-        L.push('1. Seu nome (não publicado):');
-        L.push('2. Sua relação com a casa: ( ) liderança  ( ) membro  ( ) familiar  ( ) pesquisador(a)  ( ) outra');
-        L.push('3. Nome do terreiro, centro ou casa:');
-        L.push('4. Nome da liderança responsável (não publicado):');
-        L.push('5. Vertente religiosa (candomblé, umbanda, jurema, tambor de mina, outra):');
-        L.push('6. Nação, se houver:');
-        L.push('6b. Raiz ou família, se a casa declara (ex.: Alaketo, Savalu, Mahin):');
-        L.push('7. Ano de fundação:');
-        L.push('8. Endereço ou link do Google Maps:');
-        L.push('9. Ponto de referência:');
-        L.push('10. Redes sociais (link do perfil):');
-        L.push('11. O que está incorreto hoje na ficha:');
-        L.push('12. Foto da fachada: ( ) envio em anexo  ( ) não tenho');
-        L.push('', 'Autorizo o uso dessas informações no mapa, exceto os itens marcados (não publicado): ( ) sim');
-      }
-      var subject = 'Ilê Axé Map — ' + (kind === 'retirar' ? 'retirada de registro' : (kind === 'completar' ? 'completar ficha' : 'correção de ficha')) + ' — ' + nome;
-      return 'mailto:' + CONTRIB_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(L.join('\r\n'));
-    }
 
     function showDetail(feature, trigger) {
       if (popup) popup.remove();
