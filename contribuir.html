@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Formulário de contribuição do Ilê Axé Map: completar, corrigir, incluir ou retirar um registro.">
+  <meta name="color-scheme" content="light">
+  <title>Contribuir | Ilê Axé Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    (() => {
+      const saved = localStorage.getItem('ile-axe-theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #faf7f2; --surface: #fff; --text: #1c1917;
+      --muted: #6f675f; --faint: #786f67;
+      --border: #e7e0d6; --border-strong: #d4cbbe;
+      --accent: #29405b; --accent-hover: #1e3247;
+      --accent-soft: rgba(41,64,91,.08);
+      --warm: #a8460f; --warm-soft: rgba(168,70,15,.07);
+      --radius: 8px; --header-h: 60px;
+      --display: Fraunces, Georgia, serif;
+      --body: "Hanken Grotesk", system-ui, sans-serif;
+      --shadow: 0 1px 3px rgba(28,25,23,.08), 0 4px 16px rgba(28,25,23,.05);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        /* Tema escuro desabilitado — metodologia sempre clara */
+        color-scheme: light;
+        --bg: #faf7f2; --surface: #fff; --text: #1c1917;
+        --muted: #6b6358; --faint: #6f675f;
+        --border: #e0d8cd; --border-strong: #c9c0b3;
+        --accent: #29405b; --accent-hover: #1e3247;
+        --accent-soft: rgba(41,64,91,.08);
+        --warm: #a8460f; --warm-soft: rgba(168,70,15,.08);
+        --shadow: 0 1px 3px rgba(28,25,23,.08), 0 4px 16px rgba(28,25,23,.05);
+      }
+    }
+    [data-theme="light"] {
+      color-scheme: light;
+      --bg: #faf7f2; --surface: #fff; --text: #1c1917;
+      --muted: #6f675f; --faint: #786f67;
+      --border: #e7e0d6; --border-strong: #d4cbbe;
+      --accent: #29405b; --accent-hover: #1e3247;
+      --accent-soft: rgba(41,64,91,.08);
+      --warm: #a8460f; --warm-soft: rgba(168,70,15,.07);
+      --shadow: 0 1px 3px rgba(28,25,23,.08), 0 4px 16px rgba(28,25,23,.05);
+    }
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #14120f; --surface: #1e1b18; --text: #f2ede4;
+      --muted: #b6ada2; --faint: #8a8177;
+      --border: #2a2724; --border-strong: #3a3631;
+      --accent: #7a9bc0; --accent-hover: #9cb8d6;
+      --accent-soft: rgba(91,123,160,.14);
+      --warm: #e58a46; --warm-soft: rgba(217,118,43,.1);
+      --shadow: 0 1px 3px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.2);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 28px); }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.7 var(--body); -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-underline-offset: .18em; }
+    a:hover { color: var(--accent-hover); }
+    a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3px solid var(--warm); outline-offset: 3px; }
+    .skip-link { position: fixed; z-index: 100; top: 8px; left: 8px; transform: translateY(-160%); padding: 8px 12px; border-radius: 5px; background: var(--text); color: var(--bg); text-decoration: none; }
+    .skip-link:hover { color: var(--bg); background: var(--warm); }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header { position: sticky; z-index: 20; top: 0; height: var(--header-h); border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(12px); }
+    .site-header__inner { max-width: 1180px; height: 100%; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 16px; }
+    .brand { font: 600 19px/1 var(--display); letter-spacing: .02em; color: var(--text); text-decoration: none; white-space: nowrap; }
+    .brand span { color: var(--warm); }
+    .header-rule { width: 1px; height: 22px; background: var(--border-strong); }
+    .header-section { color: var(--faint); font-size: 13px; font-weight: 600; }
+    .header-spacer { flex: 1; }
+    .map-link, .theme-button { min-height: 38px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--muted); font: 600 13px/1 var(--body); }
+    .map-link { display: inline-flex; align-items: center; gap: 7px; padding: 0 12px; text-decoration: none; }
+    .theme-button { width: 38px; display: grid; place-items: center; cursor: pointer; font-size: 15px; }
+    .map-link:hover, .theme-button:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hero { border-bottom: 1px solid var(--border); }
+    .hero__inner { max-width: 1180px; margin: 0 auto; padding: 72px 24px 64px; }
+    .eyebrow { margin: 0 0 16px; color: var(--warm); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .hero h1 { max-width: 780px; margin: 0; font: 600 clamp(42px,6vw,68px)/1.02 var(--display); letter-spacing: -.025em; text-wrap: balance; }
+    .hero__subtitle { max-width: 860px; margin: 18px 0 0; color: var(--muted); font: 500 clamp(21px,3vw,29px)/1.35 var(--display); text-wrap: pretty; }
+    .document-meta { margin-top: 30px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+    .document-meta p { margin: 0; }
+    .document-meta strong { color: var(--text); font-weight: 600; }
+    .reading-note { max-width: 930px; margin: 36px 0 0; padding: 22px 24px; border: 1px solid color-mix(in srgb, var(--warm) 28%, var(--border)); border-radius: var(--radius); background: var(--warm-soft); color: var(--muted); }
+    .reading-note p { margin: 0; }
+    .reading-note strong { color: var(--text); }
+
+    .page-layout { max-width: 1180px; margin: 0 auto; padding: 64px 24px 96px; display: grid; grid-template-columns: 230px minmax(0,780px); gap: 72px; align-items: start; }
+    .toc { position: sticky; top: calc(var(--header-h) + 28px); max-height: calc(100vh - var(--header-h) - 56px); overflow: auto; padding-right: 12px; scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
+    .toc__label { margin: 0 0 14px; color: var(--faint); font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .toc-list { margin: 0; padding: 0; list-style: none; }
+    .toc-list li + li { margin-top: 4px; }
+    .toc-list a { display: block; padding: 6px 8px; border-radius: 5px; color: var(--muted); font-size: 13px; line-height: 1.35; text-decoration: none; transition: color .15s, background .15s; }
+    .toc-list a:hover, .toc-list a.is-active { background: var(--accent-soft); color: var(--accent); }
+    .mobile-toc { display: none; margin: 0 0 40px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+    .mobile-toc summary { min-height: 48px; padding: 11px 14px; cursor: pointer; color: var(--accent); font-weight: 700; }
+    .mobile-toc-list { margin: 0; padding: 0 14px 14px 34px; }
+    .mobile-toc-list li + li { margin-top: 5px; }
+    .mobile-toc-list a { color: var(--muted); font-size: 14px; }
+
+    .document { min-width: 0; }
+    .document > h2 { margin: 0 0 22px; padding-top: 58px; border-top: 1px solid var(--border); font: 600 clamp(28px,4vw,38px)/1.18 var(--display); letter-spacing: -.015em; text-wrap: balance; }
+    .document > h2:first-child { padding-top: 0; border-top: 0; }
+    .document h3 { margin: 42px 0 14px; font-size: 19px; line-height: 1.35; }
+    .document p { margin: 0 0 18px; color: var(--muted); text-wrap: pretty; }
+    .document strong { color: var(--text); font-weight: 650; }
+    .document ul, .document ol { margin: 0 0 22px; padding-left: 24px; color: var(--muted); }
+    .document li { padding-left: 5px; }
+    .document li + li { margin-top: 7px; }
+    .document li::marker { color: var(--warm); font-weight: 700; }
+    .document hr { height: 1px; margin: 56px 0 0; border: 0; background: var(--border); }
+    .document blockquote { margin: 24px 0; padding: 18px 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+    .document blockquote p:last-child { margin-bottom: 0; }
+    code { padding: .13em .38em; border: 1px solid var(--border); border-radius: 4px; background: var(--accent-soft); color: var(--text); font: 500 .88em/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; overflow-wrap: anywhere; }
+    pre { overflow: auto; margin: 0 0 24px; padding: 18px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+    pre code { padding: 0; border: 0; background: transparent; }
+    .table-wrap { max-width: 100%; overflow-x: auto; margin: 26px 0 34px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+    .table-wrap code { white-space: nowrap; overflow-wrap: normal; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 14px; line-height: 1.45; }
+    th, td { padding: 12px 14px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { color: var(--text); background: var(--accent-soft); font-size: 12px; font-weight: 700; letter-spacing: .025em; }
+    td { color: var(--muted); }
+    tr:last-child td { border-bottom: 0; }
+
+    .page-footer { border-top: 1px solid var(--border); }
+    .page-footer__inner { max-width: 1180px; margin: 0 auto; padding: 28px 24px 36px; display: flex; justify-content: space-between; gap: 20px; color: var(--faint); font-size: 13px; }
+    .page-footer a { color: var(--muted); }
+
+    @media (max-width: 900px) {
+      .page-layout { display: block; max-width: 820px; }
+      .toc { display: none; }
+      .mobile-toc { display: block; }
+      .hero__inner { padding-top: 54px; }
+    }
+    @media (max-width: 600px) {
+      :root { --header-h: 56px; }
+      .site-header__inner, .hero__inner, .page-layout, .page-footer__inner { padding-left: 18px; padding-right: 18px; }
+      .header-rule, .header-section { display: none; }
+      .map-link { width: 40px; padding: 0; justify-content: center; font-size: 0; }
+      .map-link span { font-size: 18px; }
+      .hero__inner { padding-top: 44px; padding-bottom: 46px; }
+      .hero h1 { font-size: 41px; }
+      .reading-note { padding: 18px; }
+      .page-layout { padding-top: 36px; padding-bottom: 70px; }
+      .document > h2 { padding-top: 44px; font-size: 29px; }
+      .document h3 { margin-top: 34px; }
+      .page-footer__inner { flex-direction: column; }
+    }
+    @media print {
+      .site-header, .toc, .mobile-toc, .page-footer { display: none; }
+      .hero, .page-layout { max-width: none; padding: 0; border: 0; }
+      .hero__inner { max-width: none; padding: 0 0 28px; }
+      .page-layout { display: block; }
+      .document { max-width: none; }
+      .document > h2 { break-after: avoid; }
+      .table-wrap { overflow: visible; box-shadow: none; }
+      a { color: inherit; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  
+    /* ---- formulário ---- */
+    .form-wrap { max-width: 800px; margin: 0 auto; padding: 0 24px 80px; }
+    fieldset { margin: 0 0 24px; padding: 22px 24px 6px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+    legend { padding: 0 10px; margin-left: -10px; font: 600 12px var(--body); letter-spacing: .1em; text-transform: uppercase; color: var(--warm); }
+    .field { margin: 0 0 18px; }
+    .field > label, .field > .label { display: block; margin-bottom: 6px; font-size: 14.5px; font-weight: 600; color: var(--text); }
+    .field .hint { display: block; margin: 0 0 8px; font-size: 13px; line-height: 1.55; color: var(--faint); }
+    .field input[type=text], .field input[type=email], .field input[type=url],
+    .field input[type=number], .field select, .field textarea {
+      width: 100%; box-sizing: border-box; padding: 10px 12px;
+      border: 1px solid var(--border-strong); border-radius: 6px;
+      background: var(--bg); color: var(--text); font: 16px var(--body); line-height: 1.45;  /* 16px evita o zoom automático do iOS ao focar */
+    }
+    .field textarea { min-height: 92px; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .choices { display: flex; flex-wrap: wrap; gap: 8px; }
+    .choice { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 9px 14px; border: 1px solid var(--border-strong); border-radius: 100px; background: var(--bg); cursor: pointer; font-size: 14px; color: var(--text); }
+    .choice input { margin: 0; accent-color: var(--accent); }
+    .choice:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+    @media (max-width: 640px) { .grid2 { grid-template-columns: 1fr; } fieldset { padding: 18px 16px 4px; } .form-wrap { padding: 0 16px 64px; } }
+    .priv { margin: 0 0 18px; padding: 11px 13px; border-left: 3px solid var(--warm); background: var(--warm-soft); border-radius: 0 6px 6px 0; font-size: 13.5px; line-height: 1.6; color: var(--muted); }
+    .priv strong { color: var(--warm); }
+    .required::after { content: " *"; color: var(--warm); }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 26px; }
+    .btn-primary { padding: 13px 24px; border: 0; border-radius: 6px; background: var(--accent); color: #fff; font: 600 15px var(--body); cursor: pointer; }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-primary:disabled { opacity: .55; cursor: not-allowed; }
+    .btn-ghost { padding: 10px 16px; border: 1px solid var(--border-strong); border-radius: 6px; background: var(--bg); color: var(--text); font: 600 14px var(--body); cursor: pointer; }
+    .actions__note { margin: 0; font-size: 13px; color: var(--faint); max-width: 380px; }
+    .ok { padding: 22px 24px; border: 1px solid var(--accent); border-radius: var(--radius); background: var(--accent-soft); }
+    .ok h2 { margin: 0 0 10px; font: 600 22px var(--display); color: var(--text); }
+    .ok p { margin: 0 0 12px; font-size: 14.5px; line-height: 1.65; color: var(--muted); }
+    .ok a { color: var(--accent); }
+    .ok textarea { width: 100%; box-sizing: border-box; min-height: 200px; font: 12.5px ui-monospace, monospace; padding: 10px; border: 1px solid var(--border-strong); border-radius: 6px; background: var(--bg); color: var(--text); }
+    [hidden] { display: none !important; }
+  </style>
+<body data-endpoint="">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="./" aria-label="Ilê Axé Map, página inicial">Ilê Axé <span>Map</span></a>
+      <span class="header-rule" aria-hidden="true"></span>
+      <span class="header-section">Contribuir</span>
+      <span class="header-spacer"></span>
+      <a class="map-link" href="./"><span aria-hidden="true">←</span> Voltar ao mapa</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="eyebrow">Contribuição</p>
+        <h1>Contribuir com uma ficha</h1>
+        <p class="hero__subtitle">Completar, corrigir, incluir ou retirar um registro do Ilê Axé Map</p>
+        <div class="document-meta">
+          <p>Quem conhece a casa é a própria casa. Preencha só o que souber — campo em branco não atrapalha.
+          Publicamos em até 30 dias; <strong>pedidos de retirada saem em até 7 dias, sem exigir justificativa</strong>.
+          O que acontece com cada informação está na <a href="politica-de-contribuicoes.html">política de contribuições</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="form-wrap">
+      <form id="form" novalidate>
+
+        <fieldset>
+          <legend>A casa</legend>
+          <p style="margin:0 0 14px;font-size:12.5px;color:var(--faint)">Os campos com <span style="color:var(--warm)">*</span> são obrigatórios. Todo o resto é opcional.</p>
+          <div class="field">
+            <span class="label required">A casa já está no mapa?</span>
+            <span class="hint">Em dúvida, procure o nome do terreiro no mapa antes de responder.</span>
+            <div class="choices" role="radiogroup" aria-label="A casa já está no mapa">
+              <label class="choice"><input type="radio" name="tipo_casa" value="no_mapa"> Sim, já está</label>
+              <label class="choice"><input type="radio" name="tipo_casa" value="fora_mapa"> Não, ainda não está</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <div id="bloco-no-mapa" hidden>
+          <fieldset>
+            <legend>Qual registro</legend>
+            <div class="field">
+              <label for="registro">Terreiro, centro ou casa</label>
+              <span class="hint">Lista com os registros publicados. Se não encontrar, escreva o nome no campo seguinte.</span>
+              <select id="registro" name="registro">
+                <option value="">— escolha na lista —</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="registro_manual">Ou escreva o nome, se não estiver na lista</label>
+              <input type="text" id="registro_manual" name="registro_manual" autocomplete="off">
+            </div>
+            <div class="field">
+              <span class="label required">O que você quer fazer</span>
+              <div class="choices" role="radiogroup" aria-label="O que você quer fazer">
+                <label class="choice"><input type="radio" name="acao" value="completar"> Completar dados que faltam</label>
+                <label class="choice"><input type="radio" name="acao" value="corrigir"> Corrigir algo errado</label>
+                <label class="choice"><input type="radio" name="acao" value="retirar"> Retirar do mapa</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div id="bloco-fora-mapa" hidden>
+          <fieldset>
+            <legend>Identificação da casa</legend>
+            <div class="field">
+              <label for="nome_casa" class="required">Nome do terreiro, centro ou casa</label>
+              <span class="hint">Como a casa é conhecida. Se houver nome na língua da tradição, use esse.</span>
+              <input type="text" id="nome_casa" name="nome_casa" autocomplete="off">
+            </div>
+          </fieldset>
+        </div>
+
+        <fieldset>
+          <legend>Quem está respondendo</legend>
+          <div class="priv">
+            <strong>Estes campos não são publicados.</strong> Servem para confirmar a contribuição e responder a você.
+            Não aparecem no mapa, não entram no repositório público e são apagados em até 12 meses.
+          </div>
+          <div class="grid2">
+            <div class="field">
+              <label for="nome_pessoa">Seu nome</label>
+              <input type="text" id="nome_pessoa" name="nome_pessoa" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="contato">E-mail ou telefone para retorno</label>
+              <input type="text" id="contato" name="contato" autocomplete="email">
+            </div>
+          </div>
+          <div class="field">
+            <span class="label required">Sua relação com a casa</span>
+            <div class="choices" role="radiogroup" aria-label="Sua relação com a casa">
+              <label class="choice"><input type="radio" name="relacao" value="lideranca"> Liderança</label>
+              <label class="choice"><input type="radio" name="relacao" value="membro"> Membro</label>
+              <label class="choice"><input type="radio" name="relacao" value="familiar"> Familiar</label>
+              <label class="choice"><input type="radio" name="relacao" value="pesquisador"> Pesquisador(a)</label>
+              <label class="choice"><input type="radio" name="relacao" value="outra"> Outra</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tradição</legend>
+          <div class="field">
+            <span class="label">Vertente religiosa</span>
+            <span class="hint">Pode marcar mais de uma, se a casa se reconhece em mais de uma.</span>
+            <div class="choices">
+              <label class="choice"><input type="checkbox" name="tradicao" value="Candomblé"> Candomblé</label>
+              <label class="choice"><input type="checkbox" name="tradicao" value="Umbanda"> Umbanda</label>
+              <label class="choice"><input type="checkbox" name="tradicao" value="Jurema"> Jurema</label>
+              <label class="choice"><input type="checkbox" name="tradicao" value="Tambor de Mina"> Tambor de Mina</label>
+              <label class="choice"><input type="checkbox" name="tradicao" value="Batuque"> Batuque</label>
+              <label class="choice"><input type="checkbox" name="tradicao" value="Omoloko"> Omoloko</label>
+              <label class="choice"><input type="checkbox" name="tradicao" value="Encantaria"> Encantaria</label>
+              <label class="choice"><input type="checkbox" name="tradicao" value="Xangô"> Xangô</label>
+              <label class="choice"><input type="checkbox" name="tradicao" value="Outra"> Outra</label>
+            </div>
+          </div>
+          <div class="grid2">
+            <div class="field">
+              <label for="nacao">Nação</label>
+              <span class="hint">No candomblé: Ketu, Jeje, Angola, Nagô-Vodun…</span>
+              <input type="text" id="nacao" name="nacao" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="raiz">Raiz ou família</label>
+              <span class="hint">Se a casa declara: Alaketo, Savalu, Mahin, Bogum…</span>
+              <input type="text" id="raiz" name="raiz" autocomplete="off">
+            </div>
+          </div>
+          <div class="grid2">
+            <div class="field">
+              <label for="linha">Linha</label>
+              <span class="hint">Na umbanda e em outras tradições, o equivalente à nação: Almas e Angola, Caboclo…</span>
+              <input type="text" id="linha" name="linha" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="regente">Orixá, inquice ou entidade regente</label>
+              <input type="text" id="regente" name="regente" autocomplete="off">
+            </div>
+          </div>
+          <div class="field">
+            <label for="fundacao">Ano de fundação</label>
+            <span class="hint">Só o ano. Se não souber, deixe em branco.</span>
+            <input type="number" id="fundacao" name="fundacao" min="1500" max="2026" inputmode="numeric" style="max-width:170px">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Onde fica</legend>
+          <div class="grid2">
+            <div class="field">
+              <label for="municipio">Município</label>
+              <input type="text" id="municipio" name="municipio" autocomplete="address-level2">
+            </div>
+            <div class="field">
+              <label for="uf">Estado</label>
+              <select id="uf" name="uf">
+                <option value="">—</option>
+                <option>AC</option><option>AL</option><option>AM</option><option>AP</option><option>BA</option>
+                <option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option>
+                <option>MG</option><option>MS</option><option>MT</option><option>PA</option><option>PB</option>
+                <option>PE</option><option>PI</option><option>PR</option><option>RJ</option><option>RN</option>
+                <option>RO</option><option>RR</option><option>RS</option><option>SC</option><option>SE</option>
+                <option>SP</option><option>TO</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <div class="field">
+              <label for="endereco">Endereço</label>
+              <span class="hint">Rua, número, bairro e CEP. Se preferir não publicar o número, escreva só a rua e o bairro.</span>
+              <input type="text" id="endereco" name="endereco" autocomplete="street-address">
+            </div>
+            <div class="field">
+              <label for="maps">Link do Google Maps</label>
+              <span class="hint">No celular: abra o mapa, toque em “Compartilhar” e cole o link aqui. É a forma mais segura de acertar o ponto.</span>
+              <input type="url" id="maps" name="maps" inputmode="url">
+            </div>
+          </div>
+          <div class="field">
+            <label for="referencia">Ponto de referência</label>
+            <span class="hint">Algo que ajude a chegar: “em frente ao campo”, “ao lado da escola”.</span>
+            <input type="text" id="referencia" name="referencia">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Mais informações</legend>
+          <div class="field">
+            <label for="social">Instagram ou outro perfil da casa</label>
+            <input type="url" id="social" name="social" inputmode="url" placeholder="https://instagram.com/…">
+          </div>
+          <div class="field">
+            <label for="mensagem">O que precisa ser corrigido ou informado</label>
+            <span class="hint">Se for correção, diga o que está errado hoje e como deveria ser.</span>
+            <textarea id="mensagem" name="mensagem"></textarea>
+          </div>
+          <div class="field">
+            <span class="label">Foto da fachada</span>
+            <span class="hint">De preferência sem pessoas. Fotos enviadas pelas casas têm prioridade.</span>
+            <div class="choices" role="radiogroup" aria-label="Foto da fachada">
+              <label class="choice"><input type="radio" name="foto" value="envio por e-mail"> Vou enviar por e-mail</label>
+              <label class="choice"><input type="radio" name="foto" value="não tenho"> Não tenho</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Autorização</legend>
+          <div class="field">
+            <span class="label required">Autorizo o uso destas informações no mapa, exceto os campos marcados como não publicados</span>
+            <div class="choices" role="radiogroup" aria-label="Autorização de uso">
+              <label class="choice"><input type="radio" name="autorizo" value="sim" required> Sim</label>
+              <label class="choice"><input type="radio" name="autorizo" value="sem número do endereço"> Sim, mas não publiquem o número</label>
+              <label class="choice"><input type="radio" name="autorizo" value="não"> Não autorizo</label>
+            </div>
+          </div>
+          <div class="field">
+            <span class="label required">Sou liderança, membro, familiar ou representante desta casa</span>
+            <div class="choices" role="radiogroup" aria-label="Você representa a casa">
+              <label class="choice"><input type="radio" name="represento" value="sim" required> Sim</label>
+              <label class="choice"><input type="radio" name="represento" value="não"> Não — envio como pesquisador(a) ou outra pessoa</label>
+            </div>
+          </div>
+          <div class="priv" style="margin-top:16px">
+            Ao enviar, você concorda com a <a href="politica-de-contribuicoes.html">política de contribuições</a>.
+            Seu nome e contato não são publicados e podem ser apagados a qualquer momento, a seu pedido.
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" class="btn-primary" id="enviar">Enviar contribuição</button>
+          <p class="actions__note">O envio abre seu aplicativo de e-mail com a mensagem já preenchida — e nada em branco.</p>
+        </div>
+      </form>
+
+      <div id="resultado" hidden></div>
+    </div>
+  </main>
+
+  <script src="data/contribuir.js"></script>
+</body>
+</html>

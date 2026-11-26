@@ -27,7 +27,8 @@ CAMADAS_PUBLICAS = (
     "nome", "municipio", "uf", "bairro", "localidade", "tradicao", "tradicoes_adicionais",
     "nacoes", "linhas", "raiz", "pratica", "cruzamento", "fonte_label", "fontes",
     "num_fontes", "geo_status", "ano_fundacao", "foto_thumb", "regente", "entity_id",
-    "nacao", "categoria",
+    "nacao", "categoria", "nome_anterior", "endereco", "ponto_referencia", "instagram",
+    "contribuicao", "coord_confirmada_por", "geo_cnefe",
 )
 
 

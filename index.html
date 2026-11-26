@@ -347,7 +347,7 @@
     <div class="topbar__count" id="count-badge" aria-live="polite">—</div>
     <span class="topbar__validation" title="Base nacional em processo de validação">dados em validação</span>
     <div class="topbar__spacer"></div>
-    <a class="topbar__btn contact-btn" href="mailto:ileaxemap@gmail.com?subject=Solicita%C3%A7%C3%A3o%20Il%C3%AA%20Ax%C3%A9%20Map%20%E2%80%94%20altera%C3%A7%C3%A3o%2C%20inclus%C3%A3o%20ou%20exclus%C3%A3o" title="Solicitar alteração, inclusão ou exclusão de terreiro — a exclusão não exige justificativa e sai em até 7 dias"><span class="contact-btn__full">Solicitar alteração / exclusão</span><span class="contact-btn__short">Solicitações</span></a>
+    <a class="topbar__btn contact-btn" href="contribuir.html" title="Contribuir com uma ficha: completar, corrigir, incluir ou retirar um registro"><span class="contact-btn__full">Contribuir</span><span class="contact-btn__short">Contribuir</span></a>
     <button class="topbar__btn" id="theme-btn" type="button" aria-label="Alternar tema" title="Tema">◐</button>
     <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Sobre o projeto" aria-expanded="false" aria-controls="info-panel">Sobre</button>
         <a class="topbar__btn info-btn" href="colaborar.html" style="text-decoration:none" title="Como colaborar: envie correção, foto da fachada, fundação, nação e histórico do terreiro">Colaborar</a>
@@ -427,8 +427,9 @@
         LABHD/UFBA · equipe na seção <em>Equipe</em> acima
       </p>
       <h3>Solicitações</h3>
-      <p><a href="mailto:ileaxemap@gmail.com?subject=Solicita%C3%A7%C3%A3o%20Il%C3%AA%20Ax%C3%A9%20Map%20%E2%80%94%20altera%C3%A7%C3%A3o%2C%20inclus%C3%A3o%20ou%20exclus%C3%A3o"><strong>Solicitar alteração, inclusão ou exclusão</strong></a><br>
-      Lideranças, membros e quaisquer pessoas afetadas podem pedir correção ou retirada de dados. A exclusão não exige justificativa (até 7 dias); alterações e inclusões em até 30 dias. E-mail: ileaxemap@gmail.com.</p>
+      <p><a href="contribuir.html"><strong>Formulário de contribuição</strong></a> — completar, corrigir, incluir ou retirar um registro.<br>
+      Lideranças, membros e quaisquer pessoas afetadas podem pedir correção ou retirada de dados. A exclusão não exige justificativa (até 7 dias); alterações e inclusões em até 30 dias.
+      O que é publicado, o que nunca é publicado e por quanto tempo o resto fica guardado está na <a href="politica-de-contribuicoes.html">política de contribuições</a>.</p>
       <h3>Aviso</h3>
       <p style="font-size: 12px; color: var(--text-faint)">
         Terreiros são alvo recorrente de intolerância religiosa. Os dados aqui consolidados são de fontes públicas, mas a agregação em interface consultável reduz o custo de coleta. Uma camada de consentimento e agregação por setor está em desenvolvimento.
@@ -819,6 +820,15 @@
       return out;
     }
 
+    // Links que levam ao formulário único de contribuição (contribuir.html), já com o registro
+    // e a ação pré-selecionados. O e-mail direto só permanece como alternativa dentro do formulário.
+    function formLink(p, acao) {
+      var params = [];
+      if (p && p.entity_id) params.push('registro=' + encodeURIComponent(String(p.entity_id)));
+      if (acao) params.push('acao=' + encodeURIComponent(acao));
+      return 'contribuir.html' + (params.length ? '?' + params.join('&') : '');
+    }
+
     function contribLink(p, kind) {
       var nome = getName(p);
       var id = String(p.entity_id || '');
@@ -932,14 +942,14 @@
           '<div class="detail__missing__title">Ficha incompleta</div>' +
           '<p class="detail__missing__text">Estes dados não foram declarados por nenhuma fonte. Quem conhece a casa pode completar — basta saber um item.</p>' +
           '<ul class="detail__missing__list">' + faltando.map(function(f) { return '<li>' + escapeHtml(f) + '</li>'; }).join('') + '</ul>' +
-          '<a class="detail__link detail__link--warm" href="' + contribLink(p, 'completar') + '">Completar estas informações ↗</a>' +
+          '<a class="detail__link detail__link--warm" href="' + formLink(p, 'completar') + '">Completar estas informações ↗</a>' +
           '</div>';
       } else {
-        html += '<a class="detail__link" href="' + contribLink(p, 'corrigir') + '">Corrigir alguma informação ↗</a>';
+        html += '<a class="detail__link" href="' + formLink(p, 'corrigir') + '">Corrigir alguma informação ↗</a>';
       }
       html += '<a class="detail__link" href="https://www.openstreetmap.org/?mlat=' + lat + '&mlon=' + lng + '#map=18/' + lat + '/' + lng + '" target="_blank" rel="noopener">Ver no OpenStreetMap ↗</a>';
       if (p.ceao_id) html += '<a class="detail__link detail__link--warm" href="https://terreiros.ceao.ufba.br/detalhe/' + p.ceao_id + '" target="_blank" rel="noopener">Ver no CEAO/UFBA ↗</a>';
-      html += '<a class="detail__link detail__link--warm" href="' + contribLink(p, 'retirar') + '">Solicitar retirada deste registro ↗</a>';
+      html += '<a class="detail__link detail__link--warm" href="contribuir.html?registro=' + encodeURIComponent(String(p.entity_id || '')) + '&acao=retirar">Solicitar retirada deste registro ↗</a>';
       $('detail-body').innerHTML = html;
       $('detail').classList.add('open'); $('detail').setAttribute('aria-hidden', 'false'); $('detail-close').focus();
       if (!reduceMotion) map.flyTo([lat, lng], Math.max(map.getZoom(), 13), { duration: .6 });

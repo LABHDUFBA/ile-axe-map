@@ -49,3 +49,9 @@ api/worker/.dev.vars
 data/cnefe/*.zip
 data/cnefe/*.part
 data/cnefe/progresso.json
+
+# Contribuições: o que é público fica em data/contribuicoes/*.json; nome civil, contato e
+# qualquer item marcado como "não publicado" ficam fora do controle de versão, porque o
+# repositório é público. Ver POLITICA_DE_CONTRIBUICOES.md.
+data/contribuicoes/_privado/
+!data/contribuicoes/_privado/.gitkeep
