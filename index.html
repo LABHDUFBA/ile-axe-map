@@ -106,7 +106,7 @@
     .topbar__validation { font-size: 11px; font-weight: 700; color: var(--text-muted); letter-spacing: .06em; text-transform: uppercase; padding: 3px 10px; border: 1px dashed var(--accent); border-radius: 99px; white-space: nowrap; }
     .topbar__spacer { flex: 1; }
     .topbar__btn {
-      display: grid; place-items: center; width: 34px; height: 34px;
+      display: grid; place-items: center; width: 34px; height: 34px; flex: 0 0 auto;
       border: 1px solid var(--border); border-radius: var(--radius-sm);
       background: var(--bg-elevated); color: var(--text-muted);
       cursor: pointer; font-size: 14px; font-weight: 700;
@@ -115,7 +115,7 @@
     .topbar__btn:hover { border-color: var(--accent); color: var(--accent); }
     .topbar__btn.info-btn { width: auto; padding: 0 12px; }
     .topbar__btn.contact-btn {
-      width: auto; padding: 0 12px; font-size: 12px; white-space: nowrap;
+      width: auto; min-width: 0; padding: 0 12px; font-size: 12px; white-space: nowrap;
       text-decoration: none; display: inline-flex; align-items: center;
       border-color: var(--accent); color: var(--accent); font-weight: 700;
     }
@@ -289,6 +289,14 @@
     .terreiro-cluster span { display: grid; place-items: center; width: 100%; height: 100%; border: 2px solid #567F49; border-radius: 50%; color: #fff; font: 700 12px var(--font-body); box-shadow: 0 1px 4px rgba(0,0,0,.35); opacity: .85; }
     .leaflet-interactive:focus { outline: 3px solid var(--accent); outline-offset: 2px; }
 
+    /* Entre 601 e 900 px a barra fica sem folga: o selo de validação sai antes de espremer os botões. */
+    @media (max-width: 900px) {
+      .topbar__validation { display: none; }
+    }
+    @media (max-width: 760px) {
+      .topbar__count { display: none; }
+    }
+
     /* === Mobile === */
     @media (max-width: 600px) {
       #map-loading { left: 0; bottom: 52px; }
@@ -347,10 +355,9 @@
     <div class="topbar__count" id="count-badge" aria-live="polite">—</div>
     <span class="topbar__validation" title="Base nacional em processo de validação">dados em validação</span>
     <div class="topbar__spacer"></div>
-    <a class="topbar__btn contact-btn" href="contribuir.html" title="Contribuir com uma ficha: completar, corrigir, incluir ou retirar um registro"><span class="contact-btn__full">Contribuir</span><span class="contact-btn__short">Contribuir</span></a>
+    <a class="topbar__btn contact-btn" href="contribuir.html" title="Enviar dados de uma casa: completar, corrigir, incluir ou retirar um registro"><span class="contact-btn__full">Enviar dados</span><span class="contact-btn__short">Enviar dados</span></a>
     <button class="topbar__btn" id="theme-btn" type="button" aria-label="Alternar tema" title="Tema">◐</button>
     <button class="topbar__btn info-btn" id="info-btn" type="button" aria-label="Sobre o projeto" aria-expanded="false" aria-controls="info-panel">Sobre</button>
-        <a class="topbar__btn info-btn" href="colaborar.html" style="text-decoration:none" title="Como colaborar: envie correção, foto da fachada, fundação, nação e histórico do terreiro">Colaborar</a>
   </header>
 
   <main id="main-content">
@@ -403,7 +410,7 @@
       <p style="font-size:12.5px;line-height:1.55"><strong>Keto (Queto)</strong> reúne casas ligadas sobretudo a matrizes iorubás, com centralidade dos orixás e repertórios próprios de língua, cantos e práticas. <strong>Angola</strong> vincula-se a matrizes bantu da África Central, com referências aos inquices e formas rituais transmitidas por suas comunidades. <strong>Jeje</strong> identifica linhagens relacionadas a matrizes ewe-fon e à reverência aos voduns. <strong>Keto Angola</strong> é adotada por casas que reconhecem a articulação entre as heranças Keto e Angola. A <strong>Umbanda</strong> aparece como categoria distinta: não é uma nação do candomblé, mas uma religião afro-brasileira com identidade própria.</p>
       <p style="font-size:12.5px;line-height:1.55">A classificação é autodeclarada, e o mapa respeita a maneira como cada casa se identifica.</p>
       <h3>Colabore</h3>
-      <p style="font-size:12.5px;line-height:1.55">Sua comunidade está no mapa? <a href="colaborar.html"><strong>Veja como colaborar</strong></a> — correção de localização, foto da fachada, ano de fundação, nação e histórico do terreiro. Contribuições das comunidades têm prioridade.</p>
+      <p style="font-size:12.5px;line-height:1.55">Sua comunidade está no mapa? <a href="contribuir.html"><strong>Envie os dados da casa</strong></a> (<a href="colaborar.html">o que pode ser enviado, campo a campo</a>) — correção de localização, foto da fachada, ano de fundação, nação e histórico do terreiro. Contribuições das comunidades têm prioridade.</p>
       <h3>Fontes</h3>
       <p style="font-size:12.5px;line-height:1.6">
         <a href="https://terreiros.ceao.ufba.br/" target="_blank" rel="noopener">CEAO/UFBA</a> — 2.228 ocorrências<br>

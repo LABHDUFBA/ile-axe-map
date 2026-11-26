@@ -223,7 +223,7 @@ Toda decisão vai para `data/solicitacoes_aplicadas.json` **sem dados pessoais**
 - [ ] Criar o Form com as seções §3–§8 e a planilha privada (§10)
 - [ ] Preencher os `entry.*` na tabela §9 e ajustar `contribLink()` no `index.html`
 - [ ] Substituir o `mailto` do topbar ("Solicitações") pelo Form — **nos três pontos de uma vez**: `index.html` (topbar + painel Sobre), `colaborar.html` e o destaque de `metodologia.html` §8.1
-- [ ] Trocar em `colaborar.html` a frase "em breve haverá um formulário online" pelo link direto
+- [x] Trocar em `colaborar.html` a frase "em breve haverá um formulário online" pelo link direto — feito: o formulário está no ar (`contribuir.html`)
 - [ ] Testar os cinco caminhos da pergunta 2 por celular (390px), incluindo o link pré-preenchido de um registro real
 - [ ] Confirmar que a planilha **não** está pública e que nenhuma resposta aparece no site
 
