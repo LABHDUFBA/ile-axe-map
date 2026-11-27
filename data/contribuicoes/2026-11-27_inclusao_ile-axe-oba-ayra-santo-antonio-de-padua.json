@@ -1,0 +1,40 @@
+{
+ "tipo": "inclusao",
+ "chave": "ile-axe-oba-ayra-santo-antonio-de-padua",
+ "recebida_em": "2026-11-27",
+ "canal": "formulário (e-mail)",
+ "relacao": "membro",
+ "autorizacao": "sim, mas sem publicar o número do endereço",
+ "itens_nao_publicados": [
+  "nome civil de quem enviou",
+  "contato de retorno"
+ ],
+ "campos_publicos": {
+  "nome": "Ilê Axé Obá Ayrá",
+  "tradicao": "Candomblé",
+  "nacoes": [
+   "Ketu"
+  ],
+  "raiz": null,
+  "linhas": [],
+  "regente": "Ayrá",
+  "municipio": "Santo Antônio de Pádua",
+  "uf": "RJ",
+  "endereco": "R. Farol — Bairro 17, Santo Antônio de Pádua/RJ, 28470-000",
+  "nacao": "Ketu"
+ },
+ "coordenada": {
+  "lat": -21.534126,
+  "lon": -42.194659,
+  "fonte": "CNEFE 2022 (média da face de quadra)",
+  "nivel": "rua",
+  "geo_status": "fonte_declarada_aproximada",
+  "confirmada_por": "endereco",
+  "cod_unico_endereco": null
+ },
+ "nota": "Declarou Candomblé e Umbanda; a tradição principal ficou Candomblé. Homônimos em PE (Recife, Olinda, Camaragibe) e PI são casas distintas — não se trata de duplicata.",
+ "pendencias": [
+  "ano de fundação",
+  "não há foto da fachada"
+ ]
+}

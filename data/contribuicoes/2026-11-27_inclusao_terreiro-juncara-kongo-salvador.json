@@ -1,0 +1,42 @@
+{
+ "tipo": "inclusao",
+ "chave": "terreiro-juncara-kongo-salvador",
+ "recebida_em": "2026-11-26",
+ "canal": "formulário (e-mail)",
+ "relacao": "membro",
+ "autorizacao": "sim — autoriza uso no mapa",
+ "itens_nao_publicados": [
+  "nome civil de quem enviou",
+  "contato de retorno"
+ ],
+ "campos_publicos": {
+  "nome": "Terreiro Junçara Kongo",
+  "tradicao": "Candomblé",
+  "nacoes": [
+   "Angola"
+  ],
+  "raiz": "Angola",
+  "linhas": [],
+  "regente": "Nkosi",
+  "municipio": "Salvador",
+  "uf": "BA",
+  "endereco": "Caminho 18, 6 — Mussurunga I, Gleba A, Salvador/BA, 41490-506",
+  "nacao": "Angola",
+  "ano_fundacao": 1982,
+  "ponto_referencia": "Ao lado do colégio Projeção",
+  "instagram": "https://www.instagram.com/terreirojuncarakongo"
+ },
+ "coordenada": {
+  "lat": -12.919914,
+  "lon": -38.367623,
+  "fonte": "CNEFE 2022 (IBGE)",
+  "nivel": "exato",
+  "geo_status": "contribuicao_lideranca",
+  "confirmada_por": "lideranca",
+  "cod_unico_endereco": "28087973"
+ },
+ "nota": "Chegaram duas submissões da mesma casa (23:52 e 23:55): a segunda acrescenta o regente Nkosi e muda a relação de membro para familiar. Vale a segunda, com o endereço da primeira.",
+ "pendencias": [
+  "foto da fachada (as duas submissões dizem envio por e-mail; nenhum anexo chegou)"
+ ]
+}

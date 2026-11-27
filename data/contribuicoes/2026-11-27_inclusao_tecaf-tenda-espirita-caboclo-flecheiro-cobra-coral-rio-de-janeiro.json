@@ -1,0 +1,41 @@
+{
+ "tipo": "inclusao",
+ "chave": "tecaf-tenda-espirita-caboclo-flecheiro-cobra-coral-rio-de-janeiro",
+ "recebida_em": "2026-11-26",
+ "canal": "formulário (e-mail)",
+ "relacao": "lideranca",
+ "autorizacao": "sim — autoriza uso no mapa",
+ "itens_nao_publicados": [
+  "nome civil de quem enviou",
+  "contato de retorno"
+ ],
+ "campos_publicos": {
+  "nome": "TECAF — Tenda Espírita Caboclo Flecheiro Cobra Coral",
+  "tradicao": "Umbanda",
+  "nacoes": [],
+  "raiz": null,
+  "linhas": [
+   "Caboclo"
+  ],
+  "regente": "Caboclo Flecheiro da Cobra Coral",
+  "municipio": "Rio de Janeiro",
+  "uf": "RJ",
+  "endereco": "R. Irene Bomboxe, 77 — Santíssimo, Rio de Janeiro/RJ",
+  "ano_fundacao": 1992,
+  "ponto_referencia": "Estrada dos Sete Riachos"
+ },
+ "coordenada": {
+  "lat": -22.863741,
+  "lon": -43.524725,
+  "fonte": "Google Maps (link enviado pela casa)",
+  "nivel": "ponto_maps",
+  "geo_status": "contribuicao_lideranca",
+  "confirmada_por": "lideranca",
+  "cod_unico_endereco": null
+ },
+ "nota": "A rua não aparece em nenhum município do Rio de Janeiro no CNEFE 2022 (varredura da UF inteira, inclusive por “Bomboche”); a coordenada vem do link do Google Maps enviado pela casa.",
+ "pendencias": [
+  "foto da fachada",
+  "confirmar a grafia da rua (não localizada no CNEFE)"
+ ]
+}

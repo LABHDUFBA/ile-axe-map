@@ -1,0 +1,39 @@
+{
+ "tipo": "inclusao",
+ "chave": "casa-de-cultura-ifakolapo-sao-paulo",
+ "recebida_em": "2026-11-26",
+ "canal": "formulário (e-mail)",
+ "relacao": "lideranca",
+ "autorizacao": "sim, mas sem publicar o número do endereço",
+ "itens_nao_publicados": [
+  "nome civil de quem enviou",
+  "contato de retorno"
+ ],
+ "campos_publicos": {
+  "nome": "Casa de Cultura Ifakolapo",
+  "tradicao": "Umbanda",
+  "nacoes": [],
+  "raiz": "Oduduwa - Templo dos Orixás",
+  "linhas": [],
+  "regente": "Caboclo 7 Espadas",
+  "municipio": "São Paulo",
+  "uf": "SP",
+  "endereco": "Av. Nossa Senhora de Sabará — Vila Emir, São Paulo/SP",
+  "ano_fundacao": 2019,
+  "ponto_referencia": "Em frente ao Bate Fundo (ponto de resistência negra)"
+ },
+ "coordenada": {
+  "lat": -23.691185,
+  "lon": -46.677726,
+  "fonte": "Google Maps (link enviado pela casa)",
+  "nivel": "ponto_maps",
+  "geo_status": "contribuicao_lideranca",
+  "confirmada_por": "lideranca",
+  "cod_unico_endereco": null
+ },
+ "nota": "A casa não informou número nem CEP; a coordenada é de rua. Declarou ainda praticar Quimbanda, Umbanda e culto aos orixás, texto registrado aqui porque não é nome de linha.",
+ "pendencias": [
+  "confirmar linha (declarou “Tocamos Quimbanda, Umbanda e Culto aos orixás”)",
+  "não há foto da fachada"
+ ]
+}

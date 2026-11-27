@@ -370,6 +370,12 @@ def aplicar_contribuicoes(base, auditoria):
             p["geo_status"] = "contribuicao_lideranca"
             p["coord_confirmada_por"] = "lideranca"
         p["contribuicao"] = meta
+        # A ficha da casa é fonte do registro: sem isso a legenda continua mostrando
+        # "Google Places"/"CEAP" para um dado que a casa corrigiu.
+        fontes = list(p.get("fontes") or [])
+        if "contribuicao_casa" not in fontes:
+            p["fontes"] = ["contribuicao_casa"] + fontes
+        p["fonte_label"] = "Contribuição da casa"
         aplicadas.append(eid)
     if aplicadas or criadas or ausentes:
         auditoria["contribuicoes"] = {"aplicadas": aplicadas, "criadas": criadas,

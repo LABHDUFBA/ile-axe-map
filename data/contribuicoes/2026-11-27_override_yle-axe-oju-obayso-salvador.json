@@ -1,0 +1,42 @@
+{
+ "tipo": "override",
+ "recebida_em": "2026-11-26",
+ "canal": "formulário (e-mail)",
+ "relacao": "lideranca",
+ "autorizacao": "sim — autoriza uso no mapa",
+ "itens_nao_publicados": [
+  "nome civil de quem enviou",
+  "contato de retorno"
+ ],
+ "campos_publicos": {
+  "nome": "Ylê Axé Ojú Obaysô",
+  "tradicao": "Candomblé",
+  "nacoes": [
+   "Ketu"
+  ],
+  "raiz": "Torrundê",
+  "linhas": [],
+  "regente": "Xangô",
+  "municipio": "Salvador",
+  "uf": "BA",
+  "endereco": "R. Adelino Moreira, 3 — São Tomé de Paripe, Salvador/BA",
+  "nacao": "Ketu",
+  "ponto_referencia": "Rua subindo o bar de Orelha",
+  "instagram": "https://www.instagram.com/ojuobayso/"
+ },
+ "entity_id": "e_4900b1ce9025_XX",
+ "coordenada": {
+  "lat": -12.82069,
+  "lon": -38.468631,
+  "fonte": "Google Maps (link enviado pela casa)",
+  "nivel": "ponto_maps",
+  "geo_status": "contribuicao_lideranca",
+  "confirmada_por": "lideranca",
+  "cod_unico_endereco": null
+ },
+ "nota": "A base já tinha esta casa como “Ylé Axé Ôju Obaysô”, com UF vazia e ponto de centróide suspeito (e_4900b1ce9025_XX). Entra como override: corrige a grafia, preenche UF e município e substitui o ponto. A rua não consta do CNEFE de Salvador; o ponto vem do link do Google Maps enviado pela casa e coincide em ~10 m com a rua no OpenStreetMap. O sufixo _XX do id é legado e não acompanha a UF — fica registrado.",
+ "pendencias": [
+  "foto da fachada (a casa disse enviar por e-mail; nenhum anexo chegou)",
+  "ano de fundação"
+ ]
+}

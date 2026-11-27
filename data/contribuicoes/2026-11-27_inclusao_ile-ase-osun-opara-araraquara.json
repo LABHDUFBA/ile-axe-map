@@ -1,0 +1,42 @@
+{
+ "tipo": "inclusao",
+ "chave": "ile-ase-osun-opara-araraquara",
+ "recebida_em": "2026-11-27",
+ "canal": "formulário (e-mail)",
+ "relacao": "lideranca",
+ "autorizacao": "sim — autoriza uso no mapa",
+ "itens_nao_publicados": [
+  "nome civil de quem enviou",
+  "contato de retorno"
+ ],
+ "campos_publicos": {
+  "nome": "Ilê Asé Osún Opará",
+  "tradicao": "Candomblé",
+  "nacoes": [
+   "Nagô Vodun"
+  ],
+  "raiz": null,
+  "linhas": [],
+  "regente": "Oxum Opará",
+  "municipio": "Araraquara",
+  "uf": "SP",
+  "endereco": "R. Emma Jorge Haddad, 443 — Araraquara/SP",
+  "nacao": "Nagô Vodun",
+  "ano_fundacao": 2017,
+  "ponto_referencia": "Pelo asfalto, segunda rua após a reserva"
+ },
+ "coordenada": {
+  "lat": -21.720626,
+  "lon": -48.179124,
+  "fonte": "Google Maps (link enviado pela casa)",
+  "nivel": "ponto_maps",
+  "geo_status": "contribuicao_lideranca",
+  "confirmada_por": "lideranca",
+  "cod_unico_endereco": null
+ },
+ "nota": "Homônimos em Belo Horizonte/MG e Itaparica são casas distintas (mesmo nome, municípios diferentes) — não são duplicatas desta.",
+ "pendencias": [
+  "foto da fachada",
+  "confirmar “Nagô Vodun” no vocabulário de nação"
+ ]
+}
