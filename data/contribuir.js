@@ -325,7 +325,8 @@
     L.push('== QUEM RESPONDE (NÃO PUBLICADO) ==');
     L.push('Nome: ' + (v('nome_pessoa') || '(não informado)'));
     L.push('Relação: ' + (radio('relacao') || '(não informada)'));
-    L.push('Contato: ' + (v('contato') || '(não informado)'));
+    L.push('E-mail: ' + (v('contato') || '(não informado)'));
+    L.push('Telefone: ' + (v('telefone') || '(não informado)'));
     L.push('');
     L.push('== TRADIÇÃO ==');
     L.push('Tradição: ' + (checks('tradicao').join(', ') || '(não informada)'));

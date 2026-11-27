@@ -180,6 +180,7 @@
     .field > label, .field > .label { display: block; margin-bottom: 6px; font-size: 14.5px; font-weight: 600; color: var(--text); }
     .field .hint { display: block; margin: 0 0 8px; font-size: 13px; line-height: 1.55; color: var(--faint); }
     .field input[type=text], .field input[type=email], .field input[type=url],
+    .field input[type=tel],
     .field input[type=number], .field select, .field textarea {
       width: 100%; box-sizing: border-box; padding: 10px 12px;
       border: 1px solid var(--border-strong); border-radius: 6px;
@@ -232,6 +233,7 @@
     .combo__vazio strong { color: var(--text); }
     [hidden] { display: none !important; }
   </style>
+  </head>
 <body data-endpoint="https://formspree.io/f/moedbljd" data-indice="22cdb1261d">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <header class="site-header">
@@ -328,9 +330,15 @@
               <input type="text" id="nome_pessoa" name="nome_pessoa" autocomplete="name">
             </div>
             <div class="field">
-              <label for="contato">E-mail ou telefone para retorno</label>
-              <input type="text" id="contato" name="contato" autocomplete="email">
+              <label for="contato" class="required">E-mail para retorno</label>
+              <span class="hint">É por aqui que respondemos, confirmando o que entrou no mapa. Não é publicado.</span>
+              <input type="email" id="contato" name="contato" autocomplete="email" required>
             </div>
+          </div>
+          <div class="field">
+            <label for="telefone">Telefone ou WhatsApp (opcional)</label>
+            <span class="hint">Só se preferir ser contatado por telefone. Não é publicado.</span>
+            <input type="tel" id="telefone" name="telefone" autocomplete="tel">
           </div>
           <div class="field">
             <span class="label required">Sua relação com a casa</span>
@@ -484,6 +492,6 @@
     </div>
   </main>
 
-  <script src="data/contribuir.js?v=fa6a2d22ef"></script>
+  <script src="data/contribuir.js?v=6428f1b327"></script>
 </body>
 </html>
