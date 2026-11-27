@@ -9,7 +9,7 @@
   "nome civil de quem enviou a mensagem"
  ],
  "campos_publicos": {
-  "nome": "Casa de Oxaguian e Cabocla Iara",
+  "nome": "Casa de Oxalá e Cabocla Iara",
   "tradicao": "Umbanda",
   "linhas": [
    "Almas e Angola"
@@ -32,7 +32,7 @@
   "observacao": "O endereço chegou como 'Eugênio Raulito da Silva, 397, CEP 88063-225'. O CNEFE traz 'Eugênio Raulino da Silva', número 397 exato, CEP 88063-255, e em 26/11 a casa confirmou que a forma correta é a do cadastro do IBGE. Município IBGE 4205407."
  },
  "entidades": "Oxaguian (orixá regente) e Cabocla Iara",
- "nota": "Tradição Almas e Angola, linha de Umbanda. Registrada em `linhas`, porque o mapa trata nação e raiz como vocabulário do candomblé; para a umbanda, a linha é o nível equivalente. Em 26/11 a casa confirmou a grafia do logradouro e o CEP do cadastro e informou o ano de fundação (2018).",
+ "nota": "Tradição Almas e Angola, linha de Umbanda. Registrada em `linhas`, porque o mapa trata nação e raiz como vocabulário do candomblé; para a umbanda, a linha é o nível equivalente. Em 26/11 a casa confirmou a grafia do logradouro e o CEP do cadastro e informou o ano de fundação (2018). Em 27/11/2026 a casa corrigiu o nome por e-mail: é regida por Oxaguian, mas o nome é \"Casa de Oxalá e Cabocla Iara\" — antes constava \"Casa de Oxaguian e Cabocla Iara\". A chave e o entity_id foram preservados.",
  "pendencias": [
   "nome da liderança responsável (não publicado)",
   "foto da fachada: arquivo recebido em 26/11 e guardado no cofre privado; publicar depende de onde hospedar"
