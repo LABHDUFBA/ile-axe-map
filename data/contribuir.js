@@ -378,17 +378,7 @@
     var corpo = montar();
 
     if (!ENDPOINT) {
-      // Dispara o cliente de e-mail num iframe: navegar a própria página para mailto: a
-      // deixaria em branco em vários navegadores, escondendo a instrução de enviar.
-      var link = 'mailto:' + EMAIL +
-        '?subject=' + encodeURIComponent(assunto()) +
-        '&body=' + encodeURIComponent(corpo);
-      var frame = document.createElement('iframe');
-      frame.style.display = 'none';
-      frame.setAttribute('aria-hidden', 'true');
-      document.body.appendChild(frame);
-      frame.src = link;
-      setTimeout(function () { frame.remove(); }, 4000);
+      abrirMailto(corpo);
       mostrarOk('mailto', corpo);
       return;
     }
@@ -399,15 +389,23 @@
     dados.append('_subject', assunto());
     dados.append('conteudo', corpo);
     fetch(ENDPOINT, { method: 'POST', body: dados, headers: { Accept: 'application/json' } })
-      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); })
+      .then(function (r) {
+        if (r.ok) return;
+        // O servidor respondeu e recusou. Isso NÃO é falha de conexão — e tratá-la como tal
+        // manda a pessoa reenviar à mão um erro que pode ser do próprio serviço.
+        var e = new Error('HTTP ' + r.status);
+        e.status = r.status;
+        throw e;
+      })
       .then(function () {
         form.reset(); atualizar(); limparSelecao();
         btn.disabled = false; btn.textContent = 'Enviar contribuição';
         mostrarOk('enviado', corpo);
       })
-      .catch(function () {
+      .catch(function (err) {
         btn.disabled = false; btn.textContent = 'Enviar contribuição';
-        mostrarOk('falhou', corpo);
+        // fetch só rejeita sozinho quando não houve resposta nenhuma; com status, houve resposta.
+        mostrarFalha(err && err.status, corpo);
       });
   });
 
@@ -429,11 +427,6 @@
         '<p><button type="button" class="btn-ghost" id="copiar">Copiar a mensagem</button></p>' +
         '<label for="resumo" style="display:block;margin:0 0 6px;font-size:12.5px;font-weight:600;color:var(--text)">Prévia da mensagem</label>' +
         '<textarea id="resumo" readonly style="min-height:280px">' + esc(corpo) + '</textarea></div>';
-    } else {
-      html = '<div class="ok"><h2>Não foi possível enviar</h2>' +
-        '<p>Houve uma falha de conexão. Copie o texto abaixo e envie para ' +
-        '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a>.</p>' +
-        '<textarea id="resumo" readonly>' + esc(corpo) + '</textarea></div>';
     }
     saida.innerHTML = html;
     var copiar = document.getElementById('copiar');
@@ -446,6 +439,67 @@
         }
       });
     }
+    saida.scrollIntoView({ block: 'start' });
+  }
+
+  // Dispara o cliente de e-mail num iframe: navegar a própria página para mailto: a deixaria
+  // em branco em vários navegadores, escondendo a instrução de enviar.
+  function abrirMailto(corpo) {
+    var link = 'mailto:' + EMAIL +
+      '?subject=' + encodeURIComponent(assunto()) +
+      '&body=' + encodeURIComponent(corpo);
+    var frame = document.createElement('iframe');
+    frame.style.display = 'none';
+    frame.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(frame);
+    frame.src = link;
+    setTimeout(function () { frame.remove(); }, 4000);
+  }
+
+  // Falha de envio: o formulário continua na tela, com o que a pessoa digitou — nada se perde.
+  // E o recado muda conforme a causa: servidor que recusou não é o mesmo problema que rede muda.
+  function mostrarFalha(status, corpo) {
+    var titulo, texto;
+    if (status) {
+      titulo = 'O servidor recusou o envio';
+      texto = 'A mensagem não foi registrada — o servidor respondeu com o código ' + status +
+        '. Costuma ser passageiro. Tente de novo em alguns minutos; se repetir, envie por e-mail, ' +
+        'com o texto já preenchido.';
+    } else {
+      titulo = 'Não conseguimos falar com o servidor';
+      texto = 'A mensagem não saiu: o navegador não recebeu resposta nenhuma. Pode ser conexão ' +
+        'interrompida, rede que bloqueia o envio ou extensão do navegador. Tente de novo ou envie ' +
+        'por e-mail, com o texto já preenchido.';
+    }
+    saida.hidden = false;
+    saida.innerHTML = '<div class="falha" role="alert">' +
+      '<h2>' + titulo + '</h2>' +
+      '<p>' + texto + '</p>' +
+      '<div class="acoes">' +
+        '<button type="button" class="btn-primary" id="retentar">Tentar de novo</button>' +
+        '<button type="button" class="btn-ghost" id="por-email">Enviar por e-mail</button>' +
+        '<button type="button" class="btn-ghost" id="copiar">Copiar a mensagem</button>' +
+      '</div>' +
+      '<label for="resumo" style="display:block;margin:0 0 6px;font-size:12.5px;font-weight:600;color:var(--text)">Prévia da mensagem</label>' +
+      '<textarea id="resumo" readonly>' + esc(corpo) + '</textarea>' +
+      '<p style="margin:12px 0 0;font-size:12.5px">Se nada funcionar, escreva para ' +
+      '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a>.</p></div>';
+    document.getElementById('retentar').addEventListener('click', function () {
+      saida.hidden = true; saida.innerHTML = '';
+      if (form.requestSubmit) form.requestSubmit(); else btn.click();
+    });
+    document.getElementById('por-email').addEventListener('click', function () {
+      abrirMailto(corpo);
+      this.textContent = 'Abrimos seu aplicativo de e-mail';
+    });
+    var copiar = document.getElementById('copiar');
+    copiar.addEventListener('click', function () {
+      var ta = document.getElementById('resumo');
+      ta.select();
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(ta.value).then(function () { copiar.textContent = 'Copiado'; });
+      }
+    });
     saida.scrollIntoView({ block: 'start' });
   }
 })();
