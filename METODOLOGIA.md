@@ -440,7 +440,7 @@ Pesquisadores e estudantes estão em ordem alfabética. A coordenação responde
 
 ### Citação sugerida
 
-> NASCIMENTO, Leonardo Fernandes; LABORATÓRIO DE HUMANIDADES DIGITAIS DA UFBA. **Ilê Axé Map: terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia**. Versão 5.0. Salvador: Universidade Federal da Bahia, 2026. Disponível em: <https://labhdufba.github.io/ile-axe-map/>. Acesso em: dia mês ano.
+> NASCIMENTO, Leonardo Fernandes et al. **Ilê Axé Map: terreiros de candomblé e espaços religiosos afro-brasileiros da Bahia**. Versão 5.0. Salvador: Universidade Federal da Bahia, 2026. Disponível em: <https://labhdufba.github.io/ile-axe-map/>. Acesso em: dia mês ano.
 
 Ao utilizar registros específicos, recomenda-se citar também a fonte de origem correspondente — OpenStreetMap, Google Places, CEAO/UFBA ou SEMUR/SEFAZ — e informar a versão do conjunto consultado.
 
